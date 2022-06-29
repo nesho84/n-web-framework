@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+
+    Options -Multiviews
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !-L
+    # l = last
+    RewriteCond $1 !^(public|js|gif|jpg|png|css|pdf|eot|svg|ttf|woff|woff2|map)
+    #RewriteRule ^(example|test|css|vendors|vendor|js|img|upload)($|/) - [L]
+    #RewriteRule ^(autorunGen.php|autoload.php)($|/) - [L]
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+    
+</IfModule>

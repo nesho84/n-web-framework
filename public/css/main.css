@@ -1,0 +1,406 @@
+/* /* W3C CSS Validator
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+ */
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(fonts/RobotoCondensed-Regular.ttf);
+}
+
+html,
+body {
+  color: #5a5a5a;
+  font-family: RobotoCondensed;
+  scroll-behavior: smooth;
+}
+
+/* Main (-header and -footer) */
+main {
+  min-height: calc(100vh - 109px);
+}
+
+/* All Links */
+a,
+a:focus,
+a:hover {
+  color: #000;
+  transition: 0.4s;
+}
+
+/* -------- About Page -------- */
+.card-overlay {
+  max-height: 500px;
+}
+
+.card-overlay img {
+  object-fit: cover;
+  min-height: 500px;
+}
+
+.card-img-overlay {
+  background: rgba(255, 255, 255, .6);
+}
+
+/* -------- Product Page -------- */
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+/* Extra utilities */
+.flex-equal>* {
+  flex: 1;
+}
+
+/* -------- Advantages Page --------- */
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+/* MARKETING CONTENT */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: 400;
+}
+
+/* Featurettes */
+.featurette-divider {
+  margin: 3rem 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+/*---------- LOADING SPINNER -------- */
+.loading-spinner {
+  position: absolute;
+  z-index: 2147483642;
+  overflow: show;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #9c41f2;
+  border-radius: 100%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+}
+
+.loading-spinner.display {
+  visibility: visible;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*---- CUSTOMIZE THE CAROUSEL ------------ */
+.carousel {
+  /* margin-bottom: 4rem; */
+  min-height: 100vh;
+}
+
+.carousel-inner {
+  min-height: calc(100vh - 70px);
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-indicators {
+  margin-bottom: 8rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+.carousel-item>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  /* height: 32rem; */
+  /* width: 1381px; */
+  height: 100vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* --- RESPONSIVE Carousel --- */
+@media (min-width: 40em) {
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+/* ----------------------------------------- */
+/* ------------------ Main ----------------- */
+/* ----------------------------------------- */
+/* NavBar */
+.navbar-collapse .nav-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-collapse .nav-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0.5em;
+}
+
+/* When burger menu is shown */
+.dropdown-menu.show {
+  margin-bottom: 14px;
+}
+
+#hr-divider {
+  border-top: 1px solid #ddd;
+  margin-bottom: 0.8rem;
+}
+
+/* Table with no text wrap */
+td,
+th {
+  /* width: 0.1%; */
+  white-space: nowrap;
+}
+
+/* Error pages */
+.error-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.error-actions {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.error-actions .btn {
+  margin-right: 10px;
+}
+
+/* Animating Navbar Icon START */
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.navbar-toggler .icon-bar {
+  width: 35px;
+  height: 3px;
+  display: block;
+  background-color: #333;
+  border-radius: 1px;
+  margin-bottom: 6px;
+  transition: ease all 0.2s;
+}
+
+.navbar-toggler .icon-bar:nth-child(3) {
+  /* Vertical center burger menu */
+  margin-bottom: 0;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none;
+  background: transparent !important;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+  transform: rotate(45deg) translateY(13px);
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-13px);
+}
+
+
+/* Button to Scroll TOP */
+#scrollTopBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 10px;
+  /* Place the button at the bottom of the page */
+  right: 10px;
+  /* Place the button 30px from the right */
+  z-index: 9999;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  /* background-color: #eb1b23; */
+  background-color: rgba(214, 15, 15, 0.7);
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 0.2em;
+  /* Increase font size */
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #333;
+}
+
+footer div img,
+span {
+  vertical-align: middle;
+  /* border: 1px solid; */
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #b1aaaa;
+}
+
+/* --------------------------------------------------- */
+/* ------------------ MEDIA QUERIES ------------------ */
+/* --------------------------------------------------- */
+
+/* Extra small devices (phones, 599px and down) */
+@media screen and (max-width: 599px) {
+  .g-recaptcha {
+    transform: scale(0.74);
+    transform-origin: 0;
+    -webkit-transform: scale(0.74);
+    -webkit-transform-origin: 0 0;
+    margin-bottom: -1em;
+  }
+
+  /* -------- About Page -------- */
+  .card-overlay {
+    min-height: 100vh;
+  }
+
+  .card-overlay img {
+    object-fit: cover;
+    min-height: 100vh;
+  }
+
+  .card-img-overlay {
+    background: rgba(255, 255, 255, .4);
+  }
+}
+
+/* Small devices (portrait tablets and large phones and up) */
+@media screen and (min-width: 576px) {}
+
+/* Medium devices (landscape tablets and up) */
+@media screen and (min-width: 768px) {}
+
+/* Medium devices (portrait tablets and Laptops and up) */
+@media screen and (min-width: 992px) {
+  .navbar-collapse .nav-item {
+    border-bottom: 0;
+  }
+
+  .navbar-collapse .nav-item:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Aktive links */
+  .nav-link.active {
+    border-bottom: solid #ED1C24;
+    padding: 0 !important;
+    margin: 0.5rem 0.5rem;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    left: -40%;
+  }
+
+  .rounded-lg-3 {
+    border-radius: .3rem;
+  }
+
+  .flex-md-equal>* {
+    flex: 1;
+  }
+}
+
+/* Extra large devices (large laptops and desktops and up) */
+@media screen and (min-width: 1200px) {}
