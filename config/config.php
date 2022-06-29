@@ -2,39 +2,33 @@
 session_start();
 
 // Just for Develop
-// error_reporting(E_ALL);
+error_reporting(E_ALL);
 
 //------------------------------------------------------------
 // DB 
 //------------------------------------------------------------
 define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8');
-define('DB_NAME', 'ibis_dsl_db');
+define('DB_NAME', 'n_web_framework_db');
 define('DB_USER', 'root');
 define('DB_PASS', '123456');
-
-// define('DB_HOST', 'w00cf111.kasserver.com');
-// define('DB_CHARSET', 'utf8');
-// define('DB_NAME', 'd039c845');
-// define('DB_USER', 'd039c845');
-// define('DB_PASS', 'Lapidarius##11');
 
 //------------------------------------------------------------
 // App 
 //------------------------------------------------------------
 defined("APPURL")
-    or define("APPURL", "http://localhost/ibis-dsl.ch");
-// or define("APPURL", "https://ibis-dsl.ch");
+    or define("APPURL", "http://localhost/n-web-framework");
+// or define("APPURL", "https://n-web-framework");
 
 defined("ADMURL")
     or define("ADMURL", APPURL . "/admin");
 
 defined("SITE_NAME")
-    or define("SITE_NAME", 'ibis-dsl.ch');
+    or define("SITE_NAME", 'n-web-framework');
 
 /* Email Address - for the Contact page */
 defined("CONTACT_FORM_EMAIL")
-    or define("CONTACT_FORM_EMAIL", 'office@ibis-dsl.ch');
+    or define("CONTACT_FORM_EMAIL", 'office@n-web-framework');
 
 defined("UPLOADURL")
     or define("UPLOADURL", APPURL . "/public/uploads");
