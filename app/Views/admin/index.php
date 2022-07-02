@@ -39,10 +39,6 @@
                     $tableName = 'Pages';
                     $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 }
-                if ($d['table_name'] == 'product') {
-                    $tableName = 'Product';
-                    $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
-                }
                 if ($d['table_name'] == 'user') {
                     $tableName = 'Users';
                     $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
