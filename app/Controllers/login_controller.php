@@ -13,7 +13,7 @@ function login(): void
         exit;
     }
 
-    $data['title'] = "Acaminetti - Login";
+    $data['title'] = "Login";
     $data['email'] = "";
     $data['password'] = "";
 
@@ -31,7 +31,7 @@ function logout(): void
     unset($_SESSION['last_visit']);
     session_destroy();
 
-    $data["title"] = "Logout Page";
+    $data["title"] = "Logout";
 
     App::renderSimpleView(VIEWS_PATH . "/login/logout.php", $data);
 }
