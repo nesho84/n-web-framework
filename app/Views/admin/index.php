@@ -39,25 +39,21 @@
                     $tableName = 'Pages';
                     $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 }
-                if ($d['table_name'] == 'product') {
-                    $tableName = 'Product';
-                    $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
-                }
                 if ($d['table_name'] == 'user') {
                     $tableName = 'Users';
                     $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
                 }
                 echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0 mb-4">
-                    <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none">
-                        <div class="card shadow-sm">
-                            <div class="card-body pb-5">
-                                <p class="display-3">' . $d['table_rows'] . '</p>
-                                <h4 class="card-text">' . strtoupper($tableName) . '</h4>
-                                ' . $icon . '
+                        <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none">
+                            <div class="card shadow-sm">
+                                <div class="card-body pb-5">
+                                    <p class="display-3">' . $d['table_rows'] . '</p>
+                                    <h4 class="card-text">' . strtoupper($tableName) . '</h4>
+                                    ' . $icon . '
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>';
+                        </a>
+                    </div>';
             }
         } else {
             echo '<div class="col mb-4 text-center alert alert-secondary" role="alert">
