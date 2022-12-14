@@ -2,11 +2,11 @@
 
 class App
 {
+    private string $url;
+
     private static array $routes = [];
 
     private array $params = [];
-
-    private string $url;
 
     private string $controller_path;
 

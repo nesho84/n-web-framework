@@ -9,7 +9,8 @@ function getPages(): array|string
     try {
         $sql = $db->prepare(
             "SELECT * FROM pages AS p
-            INNER JOIN (SELECT userID, userName FROM user) as u ON u.userID = p.userID
+            INNER JOIN (SELECT userID, userName FROM user) as u 
+            ON u.userID = p.userID
             WHERE p.pageID IS NOT NULL
             ORDER BY p.pageName ASC"
         );

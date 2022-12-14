@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 //------------------------------------------------------------
 define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8');
-define('DB_NAME', 'n_web_framework_db');
+define('DB_NAME', 'nwf_db');
 define('DB_USER', 'root');
 define('DB_PASS', '123456');
 
@@ -17,7 +17,7 @@ define('DB_PASS', '123456');
 // App 
 //------------------------------------------------------------
 defined("APPURL")
-    or define("APPURL", "http://localhost/n-web-framework");
+    or define("APPURL", "http://localhost:8080/n-web-framework");
 // or define("APPURL", "https://n-web-framework");
 
 defined("ADMURL")

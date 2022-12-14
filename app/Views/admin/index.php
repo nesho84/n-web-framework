@@ -29,6 +29,7 @@
         if (isset($data['rows'])) {
             $tableName = "";
             $icon = "";
+            $enabled = true;
 
             foreach ($data['rows'] as $d) {
                 if ($d['table_name'] == 'category') {
@@ -38,6 +39,14 @@
                 if ($d['table_name'] == 'pages') {
                     $tableName = 'Pages';
                     $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                }
+                if ($d['table_name'] == 'translations') {
+                    $tableName = 'Translations';
+                    $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                }
+                if ($d['table_name'] == 'services') {
+                    $tableName = 'Services';
+                    $icon = '<i class="fas fa-poll-h fa-3x mt-3"></i>';
                 }
                 if ($d['table_name'] == 'user') {
                     $tableName = 'Users';
