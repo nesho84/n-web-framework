@@ -51,7 +51,7 @@ function getActivePage(string $pageName): array|string
 }
 
 //------------------------------------------------------------
-function getLanguage(string $languageCode, int $translationCode): array|string
+function getLanguage(string $languageCode, int $translationCode): string|null
 //------------------------------------------------------------
 {
     global $db;

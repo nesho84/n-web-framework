@@ -14,6 +14,17 @@ function index(): void
 }
 
 //------------------------------------------------------------
+function ajax_test(): void
+//------------------------------------------------------------
+{
+    // Get data from the Model
+    // $data = getLanguage($_SESSION["language"], 111);
+    $data = getActivePage('about');
+
+    echo json_encode($data);
+}
+
+//------------------------------------------------------------
 function about_us(): void
 //------------------------------------------------------------
 {
