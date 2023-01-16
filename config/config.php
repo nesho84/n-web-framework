@@ -17,7 +17,7 @@ define('DB_PASS', '123456');
 // App 
 //------------------------------------------------------------
 defined("APPURL")
-    or define("APPURL", "http://localhost:8080/n-web-framework");
+    or define("APPURL", "http://localhost/n-web-framework");
 // or define("APPURL", "https://n-web-framework");
 
 defined("ADMURL")

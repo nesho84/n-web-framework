@@ -82,4 +82,6 @@
         exportPdf_tokenUrl: '<?php echo APPURL; ?>',
         uploadUrl: '<?php echo APPURL; ?>/public/uploads',
     });
+	// Update PageContent before submit (because ckEditor dosen't fire change event itself)
+    document.getElementById("pageContent").value = CKEDITOR.instances.pageContent.getData();
 </script>
