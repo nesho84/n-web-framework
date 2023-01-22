@@ -6,33 +6,29 @@
 
     // Page Header
     pageHeader([
-        'title' => 'Edit Category',
-        'title2' => '<strong>ID: </strong>' . $categoryID,
+        'title' => 'Edit Translation',
+        'title2' => '<strong>ID: </strong>' . $translationID,
     ]);
     ?>
 
     <div class="card">
         <div class="card-body">
-            <form id="formCategories" action="<?php echo ADMURL . '/categories/update/' . $categoryID; ?>" method="POST" enctype="multipart/form-data">
+            <form id="formCategories" action="<?php echo ADMURL . '/categories/update/' . $translationID; ?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label for="categoryType" class="form-label fw-bold">Category Type</label>
-                    <input type="text" class="form-control" id="categoryType" name="categoryType" placeholder="Category Type" value="<?php echo $categoryType; ?>">
+                    <label for="translationCode" class="form-label fw-bold">Translation Code</label>
+                    <input type="text" class="form-control" id="translationCode" name="translationCode" placeholder="Category Type" value="<?php echo $translationCode; ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="categoryLink" class="form-label fw-bold">Category Link</label>
-                    <input type="text" class="form-control" rows="5" id="categoryLink" name="categoryLink" placeholder="Category Link" value="<?php echo $categoryLink; ?>">
+                    <label for="languageCode" class="form-label fw-bold">Language Code</label>
+                    <input type="text" class="form-control" rows="5" id="languageCode" name="languageCode" placeholder="Category Link" value="<?php echo $languageCode; ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="categoryName" class="form-label fw-bold">Category Name</label>
-                    <input type="text" class="form-control" rows="5" id="categoryName" name="categoryName" placeholder="Category Name" value="<?php echo $categoryName; ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="pageName" class="form-label fw-bold">Category Description (optional)</label>
-                    <textarea class="form-control" rows="5" id="categoryDescription" name="categoryDescription" placeholder="Category Description"><?php echo $categoryDescription; ?></textarea>
+                    <label for="translationText" class="form-label fw-bold">Translation Text</label>
+                    <textarea class="form-control" rows="5" id="translationText" name="translationText" placeholder="Category Description"><?php echo $translationText; ?></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
                     <input type="submit" id="update_category" name="update_category" class="btn btn-primary btn-lg btn-block" value="Save" />
-                    <a href="<?php echo ADMURL . "/categories"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
+                    <a href="<?php echo ADMURL . "/translations"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
                 </div>
             </form>
         </div>

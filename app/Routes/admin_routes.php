@@ -22,7 +22,7 @@ App::route('/admin/categories/delete/{:id}', 'admin/categories_controller@delete
 App::route('/admin/translations', 'admin/translations_controller@index');
 App::route('/admin/translations/create', 'admin/translations_controller@create');
 App::route('/admin/translations/insert', 'admin/translations_controller@insert');
-// App::route('/admin/translations/edit/{:id}', 'admin/translations_controller@edit');
+App::route('/admin/translations/edit/{:id}', 'admin/translations_controller@edit');
 // App::route('/admin/translations/update/{:id}', 'admin/translations_controller@update');
 // App::route('/admin/translations/delete/{:id}', 'admin/translations_controller@delete');
 

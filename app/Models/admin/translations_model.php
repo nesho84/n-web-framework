@@ -46,13 +46,13 @@ function getCategoriesByName(string $cname): array|string
 }
 
 //------------------------------------------------------------
-function getCategoryById(int $id): array|string
+function getTranslationyById(int $id): array|string
 //------------------------------------------------------------
 {
     global $db;
 
     try {
-        $sql = $db->prepare("SELECT * FROM category WHERE categoryID = :id");
+        $sql = $db->prepare("SELECT * FROM translations WHERE translationID = :id");
         $sql->execute(['id' => $id]);
         return $sql->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {

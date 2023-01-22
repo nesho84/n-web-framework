@@ -27,7 +27,7 @@
                     <input type="text" class="form-control" rows="5" id="categoryName" name="categoryName" placeholder="Category Name" value="<?php echo $categoryName; ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="pageName" class="form-label fw-bold">Category Description (optional)</label>
+                    <label for="categoryDescription" class="form-label fw-bold">Category Description (optional)</label>
                     <textarea class="form-control" rows="5" id="categoryDescription" name="categoryDescription" placeholder="Category Description"><?php echo $categoryDescription; ?></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
