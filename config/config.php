@@ -42,6 +42,12 @@ defined('UPLOAD_PATH')
 defined("LIBRARY_PATH")
     or define("LIBRARY_PATH", APPROOT . '/app/Library');
 
+defined("SCRIPTS_PATH")
+    or define("SCRIPTS_PATH", APPROOT . '/app/Scripts');
+
+defined("SCRIPTS_URL")
+    or define("SCRIPTS_URL", APPROOT . '/app/Scripts');
+
 defined("ROUTES_PATH")
     or define("ROUTES_PATH", APPROOT . '/app/Routes');
 
