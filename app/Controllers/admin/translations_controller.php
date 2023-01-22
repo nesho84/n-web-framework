@@ -86,10 +86,10 @@ function edit(int $id): void
     // Require Login
     checkUserLoggedIn();
 
-    $data['rows'] = getCategoryById($id);
-    $data['title'] = 'Category Edit - ' . $id;
+    $data['rows'] = getTranslationyById($id);
+    $data['title'] = 'Translation Edit - ' . $id;
 
-    App::renderAdminView(VIEWS_PATH . '/admin/categories/edit.php', $data);
+    App::renderAdminView(VIEWS_PATH . '/admin/translations/edit.php', $data);
 }
 
 //------------------------------------------------------------
