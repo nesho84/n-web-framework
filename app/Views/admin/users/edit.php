@@ -9,6 +9,8 @@
         'title' => 'Edit User',
         'title2' => '<strong>ID: </strong>' . $userID,
     ]);
+
+    $pic = $userPicture !== "" ? '<img width="60" height="60" src="' . $userPicture . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
     ?>
 
     <div class="card">
@@ -34,6 +36,16 @@
                     <label for="userNewPassword2" class="form-label fw-bold">Confirm New Password</label>
                     <input type="password" class="form-control" id="userNewPassword2" name="userNewPassword2" placeholder="Confirm Password" value="">
                 </div>
+                <!-- User Picture -->
+                <div class="mb-3">
+                    <label for="userPicture" class="form-label fw-bold">Image (jpg", "jpeg", "gif", "png")</label>
+                    <input class="form-control" type="file" name="userPicture" id="userPicture">
+                    <div class="mt-2">
+                        <div id="preview_image" class="rounded-circle">
+                            <?php echo $pic; ?>
+                        </div>
+                    </div>
+                </div>
                 <!-- User Role -->
                 <div class="form-check mb-3">
                     <input type="checkbox" class="form-check-input" id="userRole" name="userRole" <?php echo $userRole == "admin" ? " checked" : "" ?>>
@@ -48,3 +60,36 @@
     </div>
 
 </div>
+
+<script>
+    // Preview Images before Upload START
+    document.querySelector('#userPicture').addEventListener("change", function() {
+        var preview = document.querySelector('#preview_image');
+        if (this.files) {
+            preview.innerHTML = "";
+            Array.prototype.forEach.call(this.files, function(file) {
+                readAndPreviewImage(file, preview);
+            });
+        }
+    });
+
+    function readAndPreviewImage(file, elem) {
+        // Make sure `file.name` matches our extensions criteria
+        if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
+            return alert(file.name + " is not an image");
+        }
+        var reader = new FileReader();
+        reader.addEventListener("load", function() {
+            var image = new Image();
+            image.height = 100;
+            image.width = 100;
+            image.style.margin = "5px";
+            image.classList.add("rounded-circle");
+            image.title = file.name;
+            image.src = this.result;
+            elem.appendChild(image);
+        });
+        reader.readAsDataURL(file);
+    }
+    // Preview Images before Upload END
+</script>

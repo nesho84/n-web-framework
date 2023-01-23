@@ -15,7 +15,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">User Name</th>
+                    <th scope="col" class="ps-3">User</th>
                     <th scope="col">User Email</th>
                     <th scope="col">User Role</th>
                     <th scope="col" class='text-center'>Action</th>
@@ -27,9 +27,10 @@
                     $counter = 0;
                     foreach ($data['rows'] as $d) {
                         $counter += 1;
+                        $pic = $d['userPicture'] !== "" ? '<img width="60" height="60" src="' . $d['userPicture'] . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
                         echo '<tr>
                                 <th scope="row">' . $counter . '</th>
-                                <td>' . $d['userName'] . '</td>
+                                <td>' . $pic . '&nbsp;&nbsp;' . $d['userName'] . '</td>
                                 <td>' . $d['userEmail'] . '</td>
                                 <td>' . $d['userRole'] . '</td>
                                 <td class="text-center">

@@ -17,6 +17,19 @@ function index(): void
 }
 
 //------------------------------------------------------------
+function profile(int $id): void
+//------------------------------------------------------------
+{
+    // Require Login
+    checkUserLoggedIn();
+
+    $data['rows'] = getUserById($id);
+    $data['title'] = 'User Profile - ' . $id;
+
+    App::renderAdminView(VIEWS_PATH . '/admin/users/profile.php', $data);
+}
+
+//------------------------------------------------------------
 function create(): void
 //------------------------------------------------------------
 {
@@ -40,6 +53,7 @@ function insert(): void
             'userName' => htmlspecialchars(trim($_POST['userName'])),
             'userEmail' => htmlspecialchars(trim($_POST['userEmail'])),
             'userPassword' => htmlspecialchars(trim($_POST['userPassword'])),
+            'userPicture' => $_FILES['userPicture'] ?? null,
             'userRole' => htmlspecialchars(trim(isset($_POST['userRole']))) ? 'admin' : 'default',
         ];
 
@@ -91,6 +105,21 @@ function insert(): void
             }
         }
 
+        // base64 Image Logic and Validation
+        if (!empty($postArray['userPicture']['name'])) {
+            // Make sure `file.name` matches our extensions criteria
+            $allowed_extensions = array("jpg", "jpeg", "png", "gif");
+            $extension = pathinfo($postArray['userPicture']['name'], PATHINFO_EXTENSION);
+            if (!in_array($extension, $allowed_extensions)) {
+                $validated = false;
+                $error .= "Only jpeg, png, and gif images are allowed.";
+            } else {
+                $image = file_get_contents($postArray['userPicture']['tmp_name']);
+                $image = base64_encode($image);
+                $postArray['userPicture'] = 'data:image/png;base64,' . $image;
+            }
+        }
+
         if ($validated === true) {
             // Insert in Database
             $result = insertUser($postArray);
@@ -136,7 +165,8 @@ function update(int $id): void
             'userID' => $id,
             'userName' => htmlspecialchars(trim($_POST['userName'])),
             'userEmail' => htmlspecialchars(trim($_POST['userEmail'])),
-            'userPassword' => htmlspecialchars(trim($_POST['userPassword'])),
+            'userPassword' => '',
+            'userPicture' => $_FILES['userPicture'] ?? null,
             'userRole' => htmlspecialchars(trim(isset($_POST['userRole']))) ? 'admin' : 'default',
         ];
 
@@ -199,6 +229,24 @@ function update(int $id): void
         } else {
             // else replace the existing
             $postArray['userPassword'] = $user['userPassword'];
+        }
+
+        // base64 Image Logic and Validation
+        if (empty($postArray['userPicture']['name'])) {
+            // If it was not changed then replace with existing
+            $postArray['userPicture'] = $user['userPicture'];
+        } else {
+            // Make sure `file.name` matches our extensions criteria
+            $allowed_extensions = array("jpg", "jpeg", "png", "gif");
+            $extension = pathinfo($postArray['userPicture']['name'], PATHINFO_EXTENSION);
+            if (!in_array($extension, $allowed_extensions)) {
+                $validated = false;
+                $error .= "Only jpeg, png, and gif images are allowed.";
+            } else {
+                $image = file_get_contents($postArray['userPicture']['tmp_name']);
+                $image = base64_encode($image);
+                $postArray['userPicture'] = 'data:image/png;base64,' . $image;
+            }
         }
 
         if ($validated === true) {

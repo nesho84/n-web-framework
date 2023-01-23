@@ -83,8 +83,9 @@ function create_user_session(array $user, array $postArray): void
 {
     // Set sessions
     $_SESSION['userID'] = $user['userID'];
-    $_SESSION['userEmail'] = $user['userEmail'];
     $_SESSION['userName'] = $user['userName'];
+    $_SESSION['userEmail'] = $user['userEmail'];
+    $_SESSION['userPicture'] = $user['userPicture'];
     $_SESSION['userRole'] = $user['userRole'];
 
     if (isset($_COOKIE['last_login'])) {

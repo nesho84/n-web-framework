@@ -1,6 +1,7 @@
 <?php
 $title = $data['title'] ?? "";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

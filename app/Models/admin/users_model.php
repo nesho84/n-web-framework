@@ -57,17 +57,20 @@ function insertUser(array $postArray): bool|string
             userName,
             userEmail, 
             userPassword, 
+            userPicture,
             userRole)
             VALUES (
             :userName, 
             :userEmail, 
-            :userPassword, 
+            :userPassword,
+            :userPicture,
             :userRole)"
         );
         $sql->execute([
             ':userName' => $postArray['userName'],
             ':userEmail' => $postArray['userEmail'],
             ':userPassword' => $postArray['userPassword'],
+            ':userPicture' => $postArray['userPicture'],
             ':userRole' => $postArray['userRole'],
         ]);
         // $lastInsertId = $db->lastInsertId();
@@ -89,6 +92,7 @@ function updateUser(array $postArray): bool|string
             SET userName = :userName,
                 userEmail = :userEmail,
                 userPassword = :userPassword,
+                userPicture = :userPicture,
                 userRole = :userRole
             WHERE userID = :userID"
         );
@@ -97,6 +101,7 @@ function updateUser(array $postArray): bool|string
             ':userName' => $postArray['userName'],
             ':userEmail' => $postArray['userEmail'],
             ':userPassword' => $postArray['userPassword'],
+            ':userPicture' => $postArray['userPicture'],
             ':userRole' => $postArray['userRole'],
         ]);
         return true;

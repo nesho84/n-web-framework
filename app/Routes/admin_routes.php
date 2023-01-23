@@ -36,6 +36,7 @@ App::route('/admin/translations/edit/{:id}', 'admin/translations_controller@edit
 
 // --- users --- //
 App::route('/admin/users', 'admin/users_controller@index');
+App::route('/admin/users/profile/{:id}', 'admin/users_controller@profile');
 App::route('/admin/users/create', 'admin/users_controller@create');
 App::route('/admin/users/insert', 'admin/users_controller@insert');
 App::route('/admin/users/edit/{:id}', 'admin/users_controller@edit');
