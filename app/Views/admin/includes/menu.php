@@ -1,6 +1,6 @@
 <?php
 // dd($data);
-$userPic = $_SESSION['userPicture'] ? '<img width="25" height="25" src="' . $_SESSION['userPicture'] . '" class="rounded-circle" alt="...">' : '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+$userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SESSION['user']['pic'] . '" class="rounded-circle" alt="...">' : '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 ?>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -25,11 +25,11 @@ $userPic = $_SESSION['userPicture'] ? '<img width="25" height="25" src="' . $_SE
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['userID']; ?>">Profile</a></li>
+                    <li><a class="dropdown-item" href="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['user']['id']; ?>">Profile</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/logout">LOGOUT</a></li>
+                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/logout">Logout</a></li>
                 </ul>
             </div>
         </li>

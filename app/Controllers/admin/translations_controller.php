@@ -8,7 +8,7 @@ function index(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['rows'] = getTranslations();
     $data['title'] = 'Translations';
@@ -21,7 +21,7 @@ function create(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['title'] = 'Translations Create';
 
@@ -33,7 +33,7 @@ function insert(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     if (isset($_POST['insert_translation'])) {
         $postArray = [
@@ -84,7 +84,7 @@ function edit(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['rows'] = getTranslationyById($id);
     $data['title'] = 'Translation Edit - ' . $id;
@@ -97,12 +97,12 @@ function update(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     if (isset($_POST['update_category'])) {
         $postArray = [
             'categoryID' => $id,
-            'userID' => $_SESSION['userID'],
+            'userID' => $_SESSION['user']['id'],
             'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
             'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
             'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
@@ -151,7 +151,7 @@ function delete(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     // Delete in Database
     $result = deleteCategory($id);

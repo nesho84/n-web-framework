@@ -7,7 +7,7 @@ function getCategories(): array|string
     global $db;
 
     try {
-        $sql = $db->prepare("SELECT * FROM category");
+        $sql = $db->prepare("SELECT * FROM category ORDER BY categoryDateCreated DESC");
         $sql->execute();
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -67,6 +67,7 @@ function insertCategory(array $postArray): bool|string
     global $db;
 
     try {
+
         $sql = $db->prepare(
             "INSERT INTO category (
             userID,
@@ -88,7 +89,9 @@ function insertCategory(array $postArray): bool|string
             ':categoryName' => $postArray['categoryName'],
             ':categoryDescription' => $postArray['categoryDescription'],
         ]);
+
         // $lastInsertId = $db->lastInsertId();
+
         return true;
     } catch (PDOException $e) {
         return $e->getMessage();

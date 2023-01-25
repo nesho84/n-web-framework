@@ -4,15 +4,15 @@
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title mb-1">
-                    Welcome back <strong><?php echo $_SESSION['userName']; ?></strong>
+                    Welcome back <strong><?php echo $_SESSION['user']['name']; ?></strong>
                 </h3>
                 <hr class="mb-3 mt-2">
-                <h5 class="card-text text-muted"><strong>Logged in as:</strong> <?php echo $_SESSION['userEmail'] ?? ''; ?></h5>
+                <h5 class="card-text text-muted"><strong>Logged in as:</strong> <?php echo $_SESSION['user']['email'] ?? ''; ?></h5>
                 <h6 class="card-text">
                     <!-- Show the last user visit -->
                     <?php
-                    if (isset($_SESSION['last_login'])) {
-                        echo '<small><strong>Last login:</strong> ' . date('d/m/Y H:i:s', $_SESSION['last_login']) . '</small>';
+                    if (isset($_SESSION['user']['last_login'])) {
+                        echo '<small><strong>Last login:</strong> ' . date('d/m/Y H:i:s', $_SESSION['user']['last_login']) . '</small>';
                     } else {
                         echo '<small>Welcome back</small>';
                     }
@@ -26,7 +26,7 @@
 
     <div class="row text-center">
         <?php
-        if (isset($data['rows'])) {
+        if (isset($data['rows']) && count($data['rows']) > 0) {
             $tableName = "";
             $icon = "";
             $enabled = true;
@@ -65,9 +65,11 @@
                 </div>';
             }
         } else {
-            echo '<div class="col mb-4 text-center alert alert-secondary" role="alert">
-                <i class="fas fa-info-circle fa-2x"></i><br/>No Data<br/> Available
-            </div>';
+            echo '<div class="container">
+                    <div class="col mb-4 text-center alert alert-secondary" role="alert">
+                        <i class="fas fa-info-circle fa-2x"></i><br/>No Data<br/> Available
+                    </div>
+                </div>';
         }
         ?>
     </div>

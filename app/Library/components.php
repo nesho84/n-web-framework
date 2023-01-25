@@ -10,7 +10,7 @@
  * $btnColor (optional) header button bootstrap color
  */
 //------------------------------------------------------------
-function pageHeader($args = [])
+function pageHeader(array $args = []): void
 //------------------------------------------------------------
 {
     $btnOrTitle2 = "";
@@ -38,4 +38,31 @@ function pageHeader($args = [])
                 </div>
             </div>';
     }
+}
+
+/**
+ * Display Message if no data
+ * @param string $text for showing the message
+ * @param string $backBtnUrl url for the button to navigate
+ * @return void
+ */
+//------------------------------------------------------------
+function ShowNoDataBox(string $text, string $backBtnUrl = ""): void
+//------------------------------------------------------------
+{
+    $btn = '<a href="' . $backBtnUrl . '" class="btn btn-secondary btn-bloc mt-4 mb-2"">
+            <i class="fas fa-angle-double-left ml-1"></i> Go Back
+        </a>';
+
+    echo '<div class="card text-center border-2 text-muted">
+            <div class="card-body bg-light h-100">
+                <h2 class="card-title">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                </h2>
+                <div class="card-text text-black-50 mt-3">
+                    <h2>' . $text . '</h2>
+                </div>
+                ' . ($backBtnUrl !== "" ? $btn : "") . '
+            </div>
+        </div>';
 }

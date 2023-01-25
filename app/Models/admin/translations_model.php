@@ -7,7 +7,7 @@ function getTranslations(): array|string
     global $db;
 
     try {
-        $sql = $db->prepare("SELECT * FROM translations");
+        $sql = $db->prepare("SELECT * FROM translations ORDER BY translationDateCreated DESC");
         $sql->execute();
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {

@@ -35,13 +35,13 @@
 <!-- <script src="<?= SCRIPTS_PATH . '/' ?>demo.js"></script> -->
 
 <?php
-$content = "";
-$js = SCRIPTS_PATH . '/demo.js';
+// $content = "";
+// $js = SCRIPTS_PATH . '/demo.js';
 
-if (file_exists($js)) {
-    $content = file_get_contents($js);
-    echo "<script>\n$content\n</script>";
-}
+// if (file_exists($js)) {
+//     $content = file_get_contents($js);
+//     echo "<script>\n$content\n</script>";
+// }
 
-echo "\n";
+// echo "\n";
 ?>

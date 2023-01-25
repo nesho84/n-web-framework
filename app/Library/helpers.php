@@ -1,19 +1,6 @@
 <?php
 
 /**
- * Redirects to Login Page, if User is not Logged In! 
- */
-//------------------------------------------------------------
-function checkUserLoggedIn()
-//------------------------------------------------------------
-{
-    if (empty($_SESSION["userID"])) {
-        header("Location:" . APPURL . "/login");
-        exit;
-    }
-}
-
-/**
  * Prints array in nicer format
  * @param array $var array to print
  */

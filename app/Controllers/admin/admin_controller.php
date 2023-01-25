@@ -8,7 +8,7 @@ function index(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['rows'] = getTables();
     $data["title"] = "Home";

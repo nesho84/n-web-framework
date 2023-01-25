@@ -8,7 +8,7 @@ function index(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['rows'] = getUsers();
     $data['title'] = 'Users';
@@ -21,7 +21,7 @@ function profile(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['rows'] = getUserById($id);
     $data['title'] = 'User Profile - ' . $id;
@@ -34,7 +34,7 @@ function create(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['title'] = 'Users Create';
 
@@ -46,7 +46,7 @@ function insert(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     if (isset($_POST['insert_user'])) {
         $postArray = [
@@ -145,7 +145,7 @@ function edit(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['rows'] = getUserById($id);
     $data['title'] = 'User Edit - ' . $id;
@@ -158,7 +158,7 @@ function update(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     if (isset($_POST['update_user'])) {
         $postArray = [
@@ -271,7 +271,7 @@ function delete(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     // Delete in Database
     $result = deleteUser($id);

@@ -1,6 +1,4 @@
-<?php
-$title = $data['title'] ?? "";
-?>
+<?php $title = $data['title'] ?? ""; ?>
 
 <!DOCTYPE html>
 <html lang="en">

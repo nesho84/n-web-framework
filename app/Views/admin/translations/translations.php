@@ -23,7 +23,7 @@
             </thead>
             <tbody>
                 <?php
-                if (isset($data['rows'])) {
+                if (isset($data['rows']) && count($data['rows']) > 0) {
                     $counter = 0;
                     foreach ($data['rows'] as $d) {
                         $counter += 1;

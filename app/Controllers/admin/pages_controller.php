@@ -8,7 +8,7 @@ function index(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['rows'] = getPages();
     $data['title'] = 'Pages';
@@ -21,7 +21,7 @@ function create(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['title'] = 'Pages Create';
 
@@ -33,11 +33,11 @@ function insert(): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     if (isset($_POST['insert_page'])) {
         $postArray = [
-            'userID' => $_SESSION['userID'],
+            'userID' => $_SESSION['user']['id'],
             'pageName' => htmlspecialchars(trim($_POST['pageName'])),
             'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
             'pageContent' => $_POST['pageContent'],
@@ -93,7 +93,7 @@ function edit(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     $data['rows'] = getPageById($id);
     $data['title'] = 'Pages Edit - ' . $id;
@@ -106,12 +106,12 @@ function update(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     if (isset($_POST['update_page'])) {
         $postArray = [
             'pageID' => $id,
-            'userID' => $_SESSION['userID'],
+            'userID' => $_SESSION['user']['id'],
             'pageName' => htmlspecialchars(trim($_POST['pageName'])),
             'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
             'pageLanguage' => htmlspecialchars(trim($_POST['pageLanguage'])),
@@ -164,7 +164,7 @@ function delete(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    checkUserLoggedIn();
+    IsUserLoggedIn();
 
     // Delete in Database
     $result = deletePage($id);

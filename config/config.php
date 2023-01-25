@@ -3,6 +3,9 @@ session_start();
 
 // Just for Develop
 error_reporting(E_ALL);
+ini_set('ignore_repeated_errors', TRUE); // always use TRUE
+ini_set('display_errors', TRUE); // Error/Exception display, use FALSE only in production environment or real server.
+ini_set('log_errors', TRUE); // Error/Exception file logging engine.
 
 //------------------------------------------------------------
 // DB 
@@ -44,6 +47,8 @@ defined("LIBRARY_PATH")
 
 defined("SCRIPTS_PATH")
     or define("SCRIPTS_PATH", APPROOT . '/app/Scripts');
+
+ini_set('error_log', APPROOT . "/error.log"); // Logging file path
 
 defined("SCRIPTS_URL")
     or define("SCRIPTS_URL", APPROOT . '/app/Scripts');
