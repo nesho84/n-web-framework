@@ -1,5 +1,4 @@
 <?php
-// dd($data);
 $userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SESSION['user']['pic'] . '" class="rounded-circle" alt="...">' : '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 ?>
 

@@ -44,6 +44,7 @@
                         <div id="preview_image" class="rounded-circle">
                             <?php echo $pic; ?>
                         </div>
+                        <div id="mySpinner" class="d-none">Loading...</div>
                     </div>
                 </div>
                 <!-- User Role -->
@@ -62,34 +63,8 @@
 </div>
 
 <script>
-    // Preview Images before Upload START
-    document.querySelector('#userPicture').addEventListener("change", function() {
-        var preview = document.querySelector('#preview_image');
-        if (this.files) {
-            preview.innerHTML = "";
-            Array.prototype.forEach.call(this.files, function(file) {
-                readAndPreviewImage(file, preview);
-            });
-        }
+    // Preview Uploaded Images
+    document.addEventListener("DOMContentLoaded", () => {
+        previewUploadedImages("userPicture", "preview_image", "mySpinner");
     });
-
-    function readAndPreviewImage(file, elem) {
-        // Make sure `file.name` matches our extensions criteria
-        if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
-            return alert(file.name + " is not an image");
-        }
-        var reader = new FileReader();
-        reader.addEventListener("load", function() {
-            var image = new Image();
-            image.height = 100;
-            image.width = 100;
-            image.style.margin = "5px";
-            image.classList.add("rounded-circle");
-            image.title = file.name;
-            image.src = this.result;
-            elem.appendChild(image);
-        });
-        reader.readAsDataURL(file);
-    }
-    // Preview Images before Upload END
 </script>

@@ -10,15 +10,18 @@
         'title2' => '<strong>ID: </strong>' . $userID,
     ]);
 
-    $pic = $userPicture !== "" ? '<img width="60" height="60" src="' . $userPicture . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+    $pic = !empty($userPicture) ? '<img width="60" height="60" src="' . $userPicture . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
     ?>
 
     <div class="card">
         <div class="card-body">
-            <?php echo '<p>' . $pic . '</p>'; ?>
-            <?php echo '<p class="text-secondary">UserName: ' . $userName . '</p>'; ?>
-            <?php echo '<p class="text-secondary">UserEmail: ' . $userEmail . '</p>'; ?>
-            <?php echo $userRole == 'admin' ? '<p class="text-secondary">UserRole: Admin</p>' : '<p class="text-secondary">UserRole: Default</p>'; ?>
+            <p><?= $pic; ?></p>
+            <p class="text-secondary"><span class="fw-bold">UserName:</span> <?= $userName; ?></p>
+            <p class="text-secondary"><span class="fw-bold">UserEmail:</span> <?= $userEmail; ?></p>
+            <?php echo $userRole == 'admin' ? '<p class="text-secondary"><span class="fw-bold">UserRole:</span> Admin</p>' : '<p class="text-secondary">UserRole: Default</p>'; ?>
+            <a class="btn btn-outline-secondary" href="<?= ADMURL . '/users/edit/' . $userID; ?>">
+                <i class="far fa-edit"></i> Edit
+            </a>
         </div>
     </div>
 
