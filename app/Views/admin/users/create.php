@@ -24,7 +24,7 @@
                 </div>
                 <!-- User Picture -->
                 <div class="mb-3">
-                    <label for="userPicture" class="form-label fw-bold">Image (jpg", "jpeg", "gif", "png")</label>
+                    <label for="userPicture" class="form-label fw-bold">Image (jpg", "jpeg", "gif", "png" and max. 150x150 pixels)</label>
                     <input class="form-control" type="file" name="userPicture" id="userPicture">
                     <div class="mt-2">
                         <div id="preview_image" class="rounded-circle">
@@ -66,6 +66,7 @@
         if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
             return alert(file.name + " is not an image");
         }
+
         var reader = new FileReader();
         reader.addEventListener("load", function() {
             var image = new Image();

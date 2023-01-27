@@ -107,17 +107,29 @@ function insert(): void
 
         // base64 Image Logic and Validation
         if (!empty($postArray['userPicture']['name'])) {
+            $file = $postArray['userPicture']['tmp_name'];
+            // Get the width and height of the image
+            [$width, $height] = getimagesize($file);
+            if ($width > 150 || $height > 150) {
+                $validated = false;
+                $error .= "Only images with max. 150x150 pixels are allowed.";
+            }
+            // // Get the size
+            // $size = filesize($file);
+            // $size_kb = round($size / 1024, 2);
+            // $size_mb = round($size / (1024 * 1024), 2);
+            // echo "The image size is: $size bytes, or $size_kb KB, or $size_mb MB";
             // Make sure `file.name` matches our extensions criteria
             $allowed_extensions = array("jpg", "jpeg", "png", "gif");
             $extension = pathinfo($postArray['userPicture']['name'], PATHINFO_EXTENSION);
             if (!in_array($extension, $allowed_extensions)) {
                 $validated = false;
                 $error .= "Only jpeg, png, and gif images are allowed.";
-            } else {
-                $image = file_get_contents($postArray['userPicture']['tmp_name']);
-                $image = base64_encode($image);
-                $postArray['userPicture'] = 'data:image/png;base64,' . $image;
             }
+
+            $image = file_get_contents($file);
+            $image = base64_encode($image);
+            $postArray['userPicture'] = 'data:image/png;base64,' . $image;
         }
 
         if ($validated === true) {
@@ -236,16 +248,34 @@ function update(int $id): void
             // If it was not changed then replace with existing
             $postArray['userPicture'] = $user['userPicture'];
         } else {
+            $file = $postArray['userPicture']['tmp_name'];
+
+            // Get the width and height of the image
+            [$width, $height] = getimagesize($file);
+            if ($width > 150 || $height > 150) {
+                $validated = false;
+                $error .= "Only images with max. 150x150 pixels are allowed.";
+            }
+            // // Get the size
+            // $size = filesize($file);
+            // $size_kb = round($size / 1024, 2);
+            // $size_mb = round($size / (1024 * 1024), 2);
+            // echo "The image size is: $size bytes, or $size_kb KB, or $size_mb MB";
             // Make sure `file.name` matches our extensions criteria
             $allowed_extensions = array("jpg", "jpeg", "png", "gif");
             $extension = pathinfo($postArray['userPicture']['name'], PATHINFO_EXTENSION);
             if (!in_array($extension, $allowed_extensions)) {
                 $validated = false;
                 $error .= "Only jpeg, png, and gif images are allowed.";
-            } else {
-                $image = file_get_contents($postArray['userPicture']['tmp_name']);
-                $image = base64_encode($image);
-                $postArray['userPicture'] = 'data:image/png;base64,' . $image;
+            }
+
+            $image = file_get_contents($file);
+            $image = base64_encode($image);
+            $postArray['userPicture'] = 'data:image/png;base64,' . $image;
+
+            // Set it also in the session(to refresh userPicture in the top menu)
+            if ($user['userID'] === $_SESSION['user']['id']) {
+                $_SESSION['user']['pic'] = $postArray['userPicture'];
             }
         }
 
