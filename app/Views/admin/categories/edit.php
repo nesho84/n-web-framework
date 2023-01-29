@@ -1,17 +1,16 @@
-<div class="container-lg py-4">
+<?php
+if ($data['rows'] > 0) {
+    // Convert array keys into variables
+    extract($data['rows']);
 
-    <?php
-    if ($data['rows'] > 0) {
-        // Extract array values into variables
-        extract($data['rows']);
+    // Page Heading
+    showHeading([
+        'title' => 'Edit Category',
+        'title2' => '<strong>ID: </strong>' . $categoryID,
+    ]);
+?>
 
-        // Page Header
-        pageHeader([
-            'title' => 'Edit Category',
-            'title2' => '<strong>ID: </strong>' . $categoryID,
-        ]);
-    ?>
-
+    <div class="container-lg">
         <div class="card">
             <div class="card-body">
                 <form id="formCategories" action="<?php echo ADMURL . '/categories/update/' . $categoryID; ?>" method="POST" enctype="multipart/form-data">
@@ -38,11 +37,10 @@
                 </form>
             </div>
         </div>
+    </div>
 
-    <?php
-    } else {
-        ShowNoDataBox("No results found", ADMURL . "/categories");
-    }
-    ?>
-
-</div>
+<?php
+} else {
+    showNoDataBox("No data found", ADMURL . "/categories");
+}
+?>

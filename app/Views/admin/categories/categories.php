@@ -1,15 +1,14 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php
+showHeading([
+    'title' => 'Categories',
+    'btnText' => 'Create New +',
+    'btnLink' => ADMURL . '/categories/create',
+    'btnClass' => 'success',
+]);
+?>
 
-    <!-- Page Header -->
-    <?php
-    pageHeader([
-        'title' => 'Categories', '',
-        'btnText' => 'Create New +',
-        'link' => ADMURL . '/categories/create',
-        'btnColor' => 'success',
-    ]);
-    ?>
-
+<div class="container-lg">
     <div class="table-responsive border-top mt-3">
         <table class="table table-hover">
             <thead>
@@ -49,11 +48,10 @@
             </tbody>
         </table>
     </div>
-
 </div>
 
 <script>
-    // Submit Delete
+    // Confirm Delete
     document.querySelectorAll(".btn-delete").forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();

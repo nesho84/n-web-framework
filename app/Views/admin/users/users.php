@@ -1,15 +1,14 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php
+showHeading([
+    'title' => 'Users',
+    'btnText' => 'Create New +',
+    'btnLink' => ADMURL . '/users/create',
+    'btnClass' => 'success',
+]);
+?>
 
-    <!-- Page Header -->
-    <?php
-    pageHeader([
-        'title' => 'Users', '',
-        'btnText' => 'Create New +',
-        'link' => ADMURL . '/users/create',
-        'btnColor' => 'success',
-    ]);
-    ?>
-
+<div class="container-lg">
     <div class="table-responsive border-top mt-3">
         <table class="table table-hover">
             <thead>
@@ -31,37 +30,35 @@
                         $pic = $d['userPicture'] !== "" ? '<img width="60" height="60" src="' . $d['userPicture'] . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 
                         echo '<tr>
-                                <th scope="row">' . $counter . '</th>
-                                <td>' . $pic . '&nbsp;&nbsp;' . $d['userName'] . '</td>
-                                <td>' . $d['userEmail'] . '</td>
-                                <td>' . $d['userRole'] . '</td>
-                                <td class="text-center">
-                                    <a class="btn btn-link" href="' . ADMURL . '/users/edit/' . $d['userID'] . '">
-                                    <i class="far fa-edit"></i>
-                                    </a>
-                                    ' . $deleteIcon . '
-                                </td>
-                            </tr>';
+                            <th scope="row">' . $counter . '</th>
+                            <td>' . $pic . '&nbsp;&nbsp;' . $d['userName'] . '</td>
+                            <td>' . $d['userEmail'] . '</td>
+                            <td>' . $d['userRole'] . '</td>
+                            <td class="text-center">
+                                <a class="btn btn-link" href="' . ADMURL . '/users/edit/' . $d['userID'] . '">
+                                <i class="far fa-edit"></i>
+                                </a>
+                                ' . $deleteIcon . '
+                            </td>
+                        </tr>';
                     }
                 } else {
                     echo '<tr>
-                            <td colspan="7"><h1 class="text-info text-center">No Records</h1></td>
-                        </tr>';
+                        <td colspan="7"><h1 class="text-info text-center">No Records</h1></td>
+                    </tr>';
                 }
                 ?>
             </tbody>
         </table>
     </div>
-
 </div>
 
 <script>
-    // Submit Delete
+    // Confirm Delete
     document.querySelectorAll(".btn-delete").forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
-
             // Show Confirm Dialog
             Swal.fire({
                 title: "Are you sure?",

@@ -99,50 +99,50 @@ function update(int $id): void
     // Require Login
     IsUserLoggedIn();
 
-    if (isset($_POST['update_category'])) {
-        $postArray = [
-            'categoryID' => $id,
-            'userID' => $_SESSION['user']['id'],
-            'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
-            'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-            'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
-            'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
-        ];
+    if (isset($_POST['update_translation'])) {
+        // $postArray = [
+        //     'categoryID' => $id,
+        //     'userID' => $_SESSION['user']['id'],
+        //     'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
+        //     'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
+        //     'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
+        //     'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
+        // ];
 
-        $validated = true;
-        $error = '';
+        // $validated = true;
+        // $error = '';
 
-        if (empty($postArray['categoryType'])) {
-            $validated = false;
-            $error .= 'Category Type can not be empty!<br>';
-        }
-        if (empty($postArray['categoryLink'])) {
-            $validated = false;
-            $error .= 'Please insert a Category Link!<br>';
-        }
-        if (empty($postArray['categoryName'])) {
-            $validated = false;
-            $error .= 'Please insert a Category Name!<br>';
-        }
-        // if (empty($postArray['categoryDescription'])) {
+        // if (empty($postArray['categoryType'])) {
         //     $validated = false;
-        //     $error .= 'Please insert a Category Description!<br>';
+        //     $error .= 'Category Type can not be empty!<br>';
         // }
+        // if (empty($postArray['categoryLink'])) {
+        //     $validated = false;
+        //     $error .= 'Please insert a Category Link!<br>';
+        // }
+        // if (empty($postArray['categoryName'])) {
+        //     $validated = false;
+        //     $error .= 'Please insert a Category Name!<br>';
+        // }
+        // // if (empty($postArray['categoryDescription'])) {
+        // //     $validated = false;
+        // //     $error .= 'Please insert a Category Description!<br>';
+        // // }
 
-        if ($validated === true) {
-            // Update in Database
-            $result = updateCategory($postArray);
-            if ($result === true) {
-                setFlashMsg('success', 'Update completed successfully.');
-                redirect(ADMURL . '/categories');
-            } else {
-                setFlashMsg('error', $result);
-                redirect(ADMURL . '/categories/edit/' . $id);
-            }
-        } else {
-            setFlashMsg('error', $error);
-            redirect(ADMURL . '/categories/edit/' . $id);
-        }
+        // if ($validated === true) {
+        //     // Update in Database
+        //     $result = updateCategory($postArray);
+        //     if ($result === true) {
+        //         setFlashMsg('success', 'Update completed successfully.');
+        //         redirect(ADMURL . '/categories');
+        //     } else {
+        //         setFlashMsg('error', $result);
+        //         redirect(ADMURL . '/categories/edit/' . $id);
+        //     }
+        // } else {
+        //     setFlashMsg('error', $error);
+        //     redirect(ADMURL . '/categories/edit/' . $id);
+        // }
     }
 }
 
@@ -154,13 +154,13 @@ function delete(int $id): void
     IsUserLoggedIn();
 
     // Delete in Database
-    $result = deleteCategory($id);
+    $result = deleteTranslation($id);
     if ($result === true) {
-        setFlashMsg('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
+        setFlashMsg('success', 'Translation with the ID: <strong>' . $id . '</strong> deleted successfully.');
     } else {
         setFlashMsg('error', $result);
     }
 
     // Allways redirect back
-    redirect(ADMURL . '/categories');
+    redirect(ADMURL . '/translations');
 }

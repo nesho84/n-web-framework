@@ -1,4 +1,0 @@
-[27-Jan-2023 19:53:05 Europe/Berlin] PHP Warning:  Undefined array key "userPicture" in D:\xampp\htdocs\n-web-framework\app\Controllers\login_controller.php on line 105
-[27-Jan-2023 20:47:54 Europe/Berlin] PHP Warning:  Undefined variable $d in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\profile.php on line 22
-[27-Jan-2023 20:47:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\profile.php on line 22
-[27-Jan-2023 21:04:39 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$pic" in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 31

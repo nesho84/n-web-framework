@@ -1,8 +1,7 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php showHeading(['title' => 'Create User']); ?>
 
-    <!-- Page Header -->
-    <?php pageHeader(['title' => 'Create User']); ?>
-
+<div class="container-lg">
     <div class="card">
         <div class="card-body">
             <form id="formUsers" action="<?php echo ADMURL . '/users/insert'; ?>" method="POST" enctype="multipart/form-data">
@@ -46,11 +45,10 @@
             </form>
         </div>
     </div>
-
 </div>
 
 <script>
-    // Preview Uploaded Images
+    // Preview Uploaded Images (function in main.js)
     document.addEventListener("DOMContentLoaded", () => {
         previewUploadedImages("userPicture", "preview_image", "mySpinner");
     });

@@ -1,8 +1,7 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php showHeading(['title' => 'Create Translation']); ?>
 
-    <!-- Page Header -->
-    <?php pageHeader(['title' => 'Create Translation']); ?>
-
+<div class="container-lg">
     <div class="card">
         <div class="card-body">
             <form id="formTranslations" action="<?php echo ADMURL . '/translations/insert'; ?>" method="POST" enctype="multipart/form-data">
@@ -25,5 +24,4 @@
             </form>
         </div>
     </div>
-
 </div>

@@ -1,8 +1,7 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php showHeading(['title' => 'Create Page']); ?>
 
-    <!-- Page Header -->
-    <?php pageHeader(['title' => 'Create Page']); ?>
-
+<div class="container-lg">
     <div class="card">
         <div class="card-body">
             <form id="formPages" action="<?php echo ADMURL . '/pages/insert'; ?>" method="POST" enctype="multipart/form-data">
@@ -21,7 +20,7 @@
                         <?php
                         $LangArray = ['EN', 'DE', 'FR', 'SQ'];
                         foreach ($LangArray as $lang) {
-                            if ($lang == $_SESSION['inputs']['pageLanguage']) {
+                            if ($lang == ($_SESSION['inputs']['pageLanguage'] ?? "")) {
                                 $selected = "selected";
                             } else {
                                 $selected = "";
@@ -56,7 +55,6 @@
             </form>
         </div>
     </div>
-
 </div>
 
 <!-- ckeditor 4 -->

@@ -24,36 +24,43 @@
 
     <hr>
 
-    <div class="row text-center">
-        <?php
-        if (isset($data['rows']) && count($data['rows']) > 0) {
-            $tableName = "";
-            $icon = "";
-            $enabled = true;
+    <?php
+    if (isset($data['rows']) && count($data['rows']) > 0) {
+        echo '<div class="row text-center">';
 
-            foreach ($data['rows'] as $d) {
-                if ($d['table_name'] == 'category') {
-                    $tableName = 'Categories';
-                    $icon = '<i class="fas fa-tasks fa-3x mt-3"></i>';
-                }
-                if ($d['table_name'] == 'pages') {
-                    $tableName = 'Pages';
-                    $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
-                }
-                if ($d['table_name'] == 'translations') {
-                    $tableName = 'Translations';
-                    $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
-                }
-                if ($d['table_name'] == 'services') {
-                    $tableName = 'Services';
-                    $icon = '<i class="fas fa-poll-h fa-3x mt-3"></i>';
-                }
-                if ($d['table_name'] == 'user') {
-                    $tableName = 'Users';
-                    $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
-                }
-                echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0 mb-4">
-                    <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none">
+        $tableName = "";
+        $icon = "";
+        $isDisabled = false;
+        $disabledStyle = 'style="pointer-events: none; color:#b9b8b8"';
+
+        foreach ($data['rows'] as $d) {
+            if ($d['table_name'] == 'category') {
+                $tableName = 'Categories';
+                $icon = '<i class="fas fa-tasks fa-3x mt-3"></i>';
+                $isDisabled = false;
+            }
+            if ($d['table_name'] == 'pages') {
+                $tableName = 'Pages';
+                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                $isDisabled = false;
+            }
+            if ($d['table_name'] == 'translations') {
+                $tableName = 'Translations';
+                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                $isDisabled = false;
+            }
+            if ($d['table_name'] == 'services') {
+                $tableName = 'Services';
+                $icon = '<i class="fas fa-poll-h fa-3x mt-3"></i>';
+                $isDisabled = true;
+            }
+            if ($d['table_name'] == 'user') {
+                $tableName = 'Users';
+                $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
+            }
+
+            echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0 mb-4">
+                    <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none" ' . ($isDisabled ? $disabledStyle : "") . '>
                         <div class="card shadow-sm">
                             <div class="card-body pb-5">
                                 <p class="display-3">' . $d['table_rows'] . '</p>
@@ -63,15 +70,11 @@
                         </div>
                     </a>
                 </div>';
-            }
-        } else {
-            echo '<div class="container">
-                    <div class="col mb-4 text-center alert alert-secondary" role="alert">
-                        <i class="fas fa-info-circle fa-2x"></i><br/>No Data<br/> Available
-                    </div>
-                </div>';
         }
-        ?>
-    </div>
+        echo '</div>'; // row end
+    } else {
+        showNoDataBox("No data found");
+    }
+    ?>
 
 </div>

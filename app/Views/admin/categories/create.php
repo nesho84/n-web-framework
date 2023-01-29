@@ -1,8 +1,7 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php showHeading(['title' => 'Create Category']); ?>
 
-    <!-- Page Header -->
-    <?php pageHeader(['title' => 'Create Category']); ?>
-
+<div class="container-lg">
     <div class="card">
         <div class="card-body">
             <form id="formCategories" action="<?php echo ADMURL . '/categories/insert'; ?>" method="POST" enctype="multipart/form-data">
@@ -29,19 +28,4 @@
             </form>
         </div>
     </div>
-
 </div>
-
-<!-- <script src="<?= SCRIPTS_PATH . '/' ?>demo.js"></script> -->
-
-<?php
-// $content = "";
-// $js = SCRIPTS_PATH . '/demo.js';
-
-// if (file_exists($js)) {
-//     $content = file_get_contents($js);
-//     echo "<script>\n$content\n</script>";
-// }
-
-// echo "\n";
-?>
