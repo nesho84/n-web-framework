@@ -8,7 +8,7 @@ ini_set('display_errors', TRUE); // Error/Exception display, use FALSE only in p
 ini_set('log_errors', TRUE); // Error/Exception file logging engine.
 
 //------------------------------------------------------------
-// DB 
+// DB Connection
 //------------------------------------------------------------
 define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8');
@@ -17,11 +17,18 @@ define('DB_USER', 'root');
 define('DB_PASS', '123456');
 
 //------------------------------------------------------------
+// User Admin
+//------------------------------------------------------------
+define('A_USERNAME', 'admin');
+define('A_USER_EMAIL', 'admin@company.com');
+define('A_USER_ROLE', 'admin');
+define('A_USER_PASSWORD', '010203');
+
+//------------------------------------------------------------
 // App 
 //------------------------------------------------------------
 defined("APPURL")
     or define("APPURL", "http://localhost/n-web-framework");
-// or define("APPURL", "https://n-web-framework");
 
 defined("ADMURL")
     or define("ADMURL", APPURL . "/admin");
@@ -53,11 +60,11 @@ ini_set('error_log', APPROOT . "/error.log"); // Logging file path
 defined("SCRIPTS_URL")
     or define("SCRIPTS_URL", APPROOT . '/app/Scripts');
 
+defined("CORE_PATH")
+    or define("CORE_PATH", APPROOT . '/app/Core');
+
 defined("ROUTES_PATH")
     or define("ROUTES_PATH", APPROOT . '/app/Routes');
-
-defined("DB_PATH")
-    or define("DB_PATH", APPROOT . '/config');
 
 defined("CONTROLLERS_PATH")
     or define("CONTROLLERS_PATH", APPROOT . '/app/Controllers');

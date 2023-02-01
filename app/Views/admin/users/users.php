@@ -27,7 +27,7 @@ showHeading([
                     foreach ($data['rows'] as $d) {
                         $counter += 1;
                         $deleteIcon = $d['userName'] === 'admin' ? '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>' : '<a class="btn btn-link btn-delete" href="' . ADMURL . '/users/delete/' . $d['userID'] . '"><i class="far fa-trash-alt"></i></a>';
-                        $pic = $d['userPicture'] !== "" ? '<img width="60" height="60" src="' . $d['userPicture'] . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+                        $pic = !empty($d['userPicture']) ? '<img width="60" height="60" src="' . $d['userPicture'] . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 
                         echo '<tr>
                             <th scope="row">' . $counter . '</th>

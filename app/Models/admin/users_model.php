@@ -4,10 +4,8 @@
 function getUsers(): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM user");
+        $sql = DB->prepare("SELECT * FROM user");
         $sql->execute();
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -19,10 +17,8 @@ function getUsers(): array|string
 function getUserById(int $id): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM user WHERE userID = :id");
+        $sql = DB->prepare("SELECT * FROM user WHERE userID = :id");
         $sql->execute(['id' => $id]);
         return $sql->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -34,10 +30,8 @@ function getUserById(int $id): array|string
 function getUsersExceptThis(int $id): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM user WHERE userID != :id");
+        $sql = DB->prepare("SELECT * FROM user WHERE userID != :id");
         $sql->execute(['id' => $id]);
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -49,10 +43,8 @@ function getUsersExceptThis(int $id): array|string
 function insertUser(array $postArray): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "INSERT INTO user (
             userName,
             userEmail, 
@@ -73,7 +65,7 @@ function insertUser(array $postArray): bool|string
             ':userPicture' => $postArray['userPicture'],
             ':userRole' => $postArray['userRole'],
         ]);
-        // $lastInsertId = $db->lastInsertId();
+        // $lastInsertId = DB->lastInsertId();
         return true;
     } catch (PDOException $e) {
         return $e->getMessage();
@@ -84,10 +76,8 @@ function insertUser(array $postArray): bool|string
 function updateUser(array $postArray): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "UPDATE user 
             SET userName = :userName,
                 userEmail = :userEmail,
@@ -114,10 +104,8 @@ function updateUser(array $postArray): bool|string
 function deleteUser(int $id): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("DELETE FROM user WHERE userID = :id");
+        $sql = DB->prepare("DELETE FROM user WHERE userID = :id");
         $sql->execute([':id' => $id]);
         return true;
     } catch (PDOException $e) {

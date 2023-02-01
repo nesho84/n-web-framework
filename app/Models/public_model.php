@@ -4,14 +4,12 @@
 function getActivePage(string $pageName): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     // TODO: test
     $_SESSION["language"] = "al";
     // unset($_SESSION["language"]);
 
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "SELECT * FROM pages 
             WHERE pageName = :pageName
             AND pageStatus = 1"
@@ -54,10 +52,8 @@ function getActivePage(string $pageName): array|string
 function getLanguage(string $languageCode, int $translationCode): string|null
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "SELECT * FROM translations 
             WHERE languageCode = :languageCode
             AND translationCode = :translationCode"

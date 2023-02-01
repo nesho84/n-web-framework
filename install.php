@@ -1,60 +1,117 @@
 <?php
-$servername = "localhost";
-$dbname = "nwf_db";
-$username = "root";
-$password = "123456";
+// Global config
+require_once __DIR__ . "/config/config.php";
 
+// MySQL Connection
+$host = DB_HOST;
+$db_user = DB_USER;
+$db_password = DB_PASS;
+$db_name = DB_NAME;
+$db_charset = DB_CHARSET;
+$ok = false;
+$pdo = null;
+
+//------------------------------------------------------------
+// Connect to the database
+//------------------------------------------------------------
 try {
-    $conn = new PDO("mysql:host=$servername;", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Check if database exists
-    $sql = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$dbname'";
-    $result = $conn->query($sql)->fetch(PDO::FETCH_ASSOC);
-    if (!$result) {
-        // Create database
-        $conn->beginTransaction();
-        $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
-        $conn->exec($sql);
-        $conn->commit();
-        echo "Database created successfully<br>";
-    } else {
-        echo "Database already exists<br>";
-    }
-
-    // Connect to database
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Check if users table exists
-    $sql = "SHOW TABLES LIKE 'user'";
-    $result = $conn->query($sql)->fetch(PDO::FETCH_ASSOC);
-    if (!$result) {
-        // Create user table
-        $conn->beginTransaction();
-        $sql = "CREATE TABLE IF NOT EXISTS user (
-        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        username VARCHAR(30) NOT NULL,
-        password VARCHAR(255) NOT NULL,
-        email VARCHAR(50)
-        )";
-        $conn->exec($sql);
-
-        // Insert static user
-        $passwordHash = password_hash("password", PASSWORD_BCRYPT);
-        $sql = "INSERT INTO user (username, password, email)
-        VALUES ('staticuser', '$passwordHash', 'staticuser@example.com')";
-        $conn->exec($sql);
-
-        $conn->commit();
-
-        echo "Table user created successfully<br>";
-        echo "Static user created successfully<br>";
-    } else {
-        echo "Table user already exists<br>";
-    }
+    $pdo = new PDO("mysql:host=$host", $db_user, $db_password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_AUTOCOMMIT, 0);
 } catch (PDOException $e) {
-    $conn->rollback();
-    echo "Error: " . $e->getMessage();
+    die("Connection to <strong>{$host}</strong> failed. Please ensure:
+        <ul>
+            <li>The PHP MySQL module is installed and enabled.</li>
+            <li>The database is running.</li>
+            <li>The credentials in config.php are valid.</li>
+        </ul>");
 }
-$conn = null;
+
+//------------------------------------------------------------
+// Create the database, tables and admin user
+//------------------------------------------------------------
+try {
+    // Start the transaction
+    $pdo->beginTransaction();
+
+    // Create the database
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db_name`");
+    // Connect to the newly created database
+    $pdo->exec("USE `$db_name`");
+
+    // Create tables
+    createTables($pdo);
+
+    // Create admin user
+    createUser($pdo);
+
+    // Commit the transaction
+    $pdo->commit();
+    $ok = true;
+} catch (PDOException $e) {
+    // If an exception is thrown, roll back the transaction
+    $pdo->rollBack();
+    $ok = false;
+
+    // Handle the exception
+    showDBError($e->getMessage());
+} finally {
+    // Close connection
+    $pdo = null;
+
+    // This means life is good :) -> // Redirect to Login
+    if ($ok === true) {
+        header('Location:' . APPURL . '/login');
+        exit();
+    }
+}
+
+//------------------------------------------------------------
+function createTables($conn)
+//------------------------------------------------------------
+{
+    $conn->exec("CREATE TABLE IF NOT EXISTS `user` (
+    `userID` int(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `userName` varchar(255) NOT NULL,
+    `userEmail` varchar(255) NOT NULL,
+    `userPassword` varchar(255) NOT NULL,
+    `userPicture` longtext DEFAULT NULL,
+    `userRole` varchar(255) NOT NULL DEFAULT 'default',
+    `userStatus` int(11) NOT NULL DEFAULT 1,
+    `userDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
+    `userDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
+}
+
+//------------------------------------------------------------
+function createUser($conn)
+//------------------------------------------------------------
+{
+    $userName = A_USERNAME;
+    $userEmail = A_USER_EMAIL;
+    $userRole = A_USER_ROLE;
+    $userPassword = A_USER_PASSWORD;
+
+    // Check if User exists first
+    $user_exist = $conn->prepare("SELECT * FROM `user` WHERE userName = :userName");
+    $user_exist->execute(array(':userName' => $userName));
+
+    // Create if dosen't
+    if ($user_exist->rowCount() === 0) {
+        $stmt = $conn->prepare("INSERT INTO `user` (`userName`, `userEmail`, `userPassword`, `userRole`) VALUES (:userName, :userEmail, :userPassword, :userRole)");
+        $passwordHashed = password_hash($userPassword, PASSWORD_BCRYPT, ['cost' => 10]);
+        $stmt->execute([
+            ':userName' => $userName,
+            ':userEmail' => $userEmail,
+            ':userPassword' => $passwordHashed,
+            ':userRole' => $userRole,
+        ]);
+    }
+}
+
+//------------------------------------------------------------
+function showDBError($message)
+//------------------------------------------------------------
+{
+    die("Install failed: {$message}<p><a href='install.php'>Try again...</a></p>");
+}

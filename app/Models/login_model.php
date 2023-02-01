@@ -4,13 +4,10 @@
 function findUserByEmail(string $email): array|string
 //------------------------------------------------------------
 {
-    // Connect to the database
-    global $db;
-
     try {
         // Prepare the select statement
         $sql = "SELECT * FROM user WHERE userEmail = :email";
-        $stmt = $db->prepare($sql);
+        $stmt = DB->prepare($sql);
         $stmt->bindParam(":email", $email, PDO::PARAM_STR);
         $stmt->execute();
 

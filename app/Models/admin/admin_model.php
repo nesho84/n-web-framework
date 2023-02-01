@@ -4,10 +4,8 @@
 function getTables(): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT `table_name`, `table_rows`
+        $sql = DB->prepare("SELECT `table_name`, `table_rows`
                 FROM information_schema.tables 
                 WHERE table_schema = '" . DB_NAME . "'
                 ORDER BY table_name ASC");

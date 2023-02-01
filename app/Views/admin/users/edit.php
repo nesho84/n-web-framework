@@ -9,7 +9,7 @@
             'title2' => '<strong>ID: </strong>' . $userID,
         ]);
 
-        $pic = $userPicture !== "" ? '<img width="60" height="60" src="' . $userPicture . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+        $pic = !empty($userPicture) ? '<img width="60" height="60" src="' . $userPicture . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
     ?>
 
         <div class="container-lg">
