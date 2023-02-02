@@ -54,7 +54,7 @@ try {
     $ok = false;
 
     // Handle the exception
-    showDBError($e->getMessage());
+    die('<p>Install failed: ' . $e->getMessage() . '</p><p><a href="' . APPURL . '/install.php">Try again...</a></p>');
 } finally {
     // Close connection
     $pdo = null;
@@ -67,7 +67,7 @@ try {
 }
 
 //------------------------------------------------------------
-function createTables($conn)
+function createTables(object $conn): void
 //------------------------------------------------------------
 {
     $conn->exec("CREATE TABLE IF NOT EXISTS `user` (
@@ -84,7 +84,7 @@ function createTables($conn)
 }
 
 //------------------------------------------------------------
-function createUser($conn)
+function createUser(object $conn): void
 //------------------------------------------------------------
 {
     $userName = A_USERNAME;
@@ -107,11 +107,4 @@ function createUser($conn)
             ':userRole' => $userRole,
         ]);
     }
-}
-
-//------------------------------------------------------------
-function showDBError($message)
-//------------------------------------------------------------
-{
-    die("Install failed: {$message}<p><a href='install.php'>Try again...</a></p>");
 }

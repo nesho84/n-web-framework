@@ -15,13 +15,20 @@ if ($data['rows'] > 0) {
     <div class="container-lg">
         <div class="card">
             <div class="card-body">
-                <p><?= $pic; ?></p>
-                <p class="text-secondary"><span class="fw-bold">UserName:</span> <?= $userName; ?></p>
-                <p class="text-secondary"><span class="fw-bold">UserEmail:</span> <?= $userEmail; ?></p>
-                <?php echo $userRole == 'admin' ? '<p class="text-secondary"><span class="fw-bold">UserRole:</span> Admin</p>' : '<p class="text-secondary">UserRole: Default</p>'; ?>
-                <a class="btn btn-outline-secondary" href="<?= ADMURL . '/users/edit/' . $userID; ?>">
-                    <i class="far fa-edit"></i> Edit
-                </a>
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="">
+                        <p><?= $pic; ?></p>
+                        <p class="text-secondary"><span class="fw-bold">UserName:</span> <?= $userName; ?></p>
+                        <p class="text-secondary"><span class="fw-bold">UserEmail:</span> <?= $userEmail; ?></p>
+                        <?php echo $userRole == 'admin' ? '<p class="text-secondary"><span class="fw-bold">UserRole:</span> Admin</p>' : '<p class="text-secondary">UserRole: Default</p>'; ?>
+                    </div>
+                    <div class="align-self-start">
+                        <a class="btn btn-outline-secondary" href="<?= ADMURL . '/users/edit/' . $userID; ?>">
+                            <i class="far fa-edit"></i> Edit
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

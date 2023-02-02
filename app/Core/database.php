@@ -59,5 +59,5 @@ try {
 
 function showDBError($message)
 {
-    die('<div><p>' . $message . '</p><p><a href="' . APPURL . '/install.php">or Install default configuration...</a></p></div>');
+    die('<p>' . $message . '</p><p><a href="' . APPURL . '/install.php">or Install default configuration...</a></p>');
 }
