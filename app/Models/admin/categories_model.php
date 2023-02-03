@@ -4,10 +4,8 @@
 function getCategories(): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM category ORDER BY categoryDateCreated DESC");
+        $sql = DB->prepare("SELECT * FROM category ORDER BY categoryDateCreated DESC");
         $sql->execute();
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -19,10 +17,8 @@ function getCategories(): array|string
 function getCategoriesByType(string $ctype): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM category WHERE categoryType = :ctype");
+        $sql = DB->prepare("SELECT * FROM category WHERE categoryType = :ctype");
         $sql->execute(['ctype' => $ctype]);
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -34,10 +30,8 @@ function getCategoriesByType(string $ctype): array|string
 function getCategoriesByName(string $cname): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM category WHERE categoryName = :cname");
+        $sql = DB->prepare("SELECT * FROM category WHERE categoryName = :cname");
         $sql->execute(['cname' => $cname]);
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -49,10 +43,8 @@ function getCategoriesByName(string $cname): array|string
 function getCategoryById(int $id): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM category WHERE categoryID = :id");
+        $sql = DB->prepare("SELECT * FROM category WHERE categoryID = :id");
         $sql->execute(['id' => $id]);
         return $sql->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -64,11 +56,9 @@ function getCategoryById(int $id): array|string
 function insertCategory(array $postArray): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
 
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "INSERT INTO category (
             userID,
             categoryType, 
@@ -90,7 +80,7 @@ function insertCategory(array $postArray): bool|string
             ':categoryDescription' => $postArray['categoryDescription'],
         ]);
 
-        // $lastInsertId = $db->lastInsertId();
+        // $lastInsertId = DB->lastInsertId();
 
         return true;
     } catch (PDOException $e) {
@@ -102,10 +92,8 @@ function insertCategory(array $postArray): bool|string
 function updateCategory(array $postArray): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "UPDATE category 
             SET userID = :userID,
                 categoryType = :categoryType,
@@ -132,10 +120,8 @@ function updateCategory(array $postArray): bool|string
 function deleteCategory(int $id): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("DELETE FROM category WHERE categoryID = :id");
+        $sql = DB->prepare("DELETE FROM category WHERE categoryID = :id");
         $sql->execute([':id' => $id]);
         return true;
     } catch (PDOException $e) {

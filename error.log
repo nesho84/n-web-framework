@@ -1,0 +1,21 @@
+[03-Feb-2023 12:17:38 Europe/Berlin] PHP Warning:  Undefined variable $db in C:\xampp\htdocs\n-web-framework\app\Models\admin\pages_model.php on line 8
+[03-Feb-2023 12:17:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\n-web-framework\app\Models\admin\pages_model.php:8
+Stack trace:
+#0 C:\xampp\htdocs\n-web-framework\app\Controllers\admin\pages_controller.php(13): getPages()
+#1 C:\xampp\htdocs\n-web-framework\app\app.php(124): index()
+#2 C:\xampp\htdocs\n-web-framework\app\app.php(58): App->loadController('index')
+#3 C:\xampp\htdocs\n-web-framework\index.php(24): App->init()
+#4 {main}
+  thrown in C:\xampp\htdocs\n-web-framework\app\Models\admin\pages_model.php on line 8
+[03-Feb-2023 12:22:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: activePage(): Argument #1 ($url) must be of type string, array given, called in C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 9 and defined in C:\xampp\htdocs\n-web-framework\app\Library\helpers.php:36
+Stack trace:
+#0 C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php(9): activePage(Array)
+#1 C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php(46): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\n-web-framework\app\app.php(174): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\n-web-framework\app\Controllers\admin\translations_controller.php(16): App::renderAdminView('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\n-web-framework\app\app.php(124): index()
+#5 C:\xampp\htdocs\n-web-framework\app\app.php(58): App->loadController('index')
+#6 C:\xampp\htdocs\n-web-framework\index.php(24): App->init()
+#7 {main}
+  thrown in C:\xampp\htdocs\n-web-framework\app\Library\helpers.php on line 36
+[03-Feb-2023 13:06:02 Europe/Berlin] PHP Warning:  Undefined variable $pageStatus in C:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 39

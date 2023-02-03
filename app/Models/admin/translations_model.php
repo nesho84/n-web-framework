@@ -4,10 +4,8 @@
 function getTranslations(): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM translations ORDER BY translationDateCreated DESC");
+        $sql = DB->prepare("SELECT * FROM translations ORDER BY translationDateCreated DESC");
         $sql->execute();
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -19,10 +17,8 @@ function getTranslations(): array|string
 function getTranslationyById(int $id): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM translations WHERE translationID = :id");
+        $sql = DB->prepare("SELECT * FROM translations WHERE translationID = :id");
         $sql->execute(['id' => $id]);
         return $sql->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -34,25 +30,26 @@ function getTranslationyById(int $id): array|string
 function insertTranslation(array $postArray): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "INSERT INTO translations (
+            userID,
             translationCode, 
             languageCode, 
             translationText)
             VALUES (
+            :userID, 
             :translationCode, 
             :languageCode,  
             :translationText)"
         );
         $sql->execute([
+            ':userID' => $postArray['userID'],
             ':translationCode' => $postArray['translationCode'],
             ':languageCode' => $postArray['languageCode'],
             ':translationText' => $postArray['translationText'],
         ]);
-        // $lastInsertId = $db->lastInsertId();
+        // $lastInsertId = DB->lastInsertId();
         return true;
     } catch (PDOException $e) {
         return $e->getMessage();
@@ -60,43 +57,38 @@ function insertTranslation(array $postArray): bool|string
 }
 
 //------------------------------------------------------------
-// function updateCategory(array $postArray): bool|string
-// //------------------------------------------------------------
-// {
-//     global $db;
+function updateTranslation(array $postArray): bool|string
+//------------------------------------------------------------
+{
 
-//     try {
-//         $sql = $db->prepare(
-//             "UPDATE category 
-//             SET userID = :userID,
-//                 categoryType = :categoryType,
-//                 categoryLink = :categoryLink,
-//                 categoryName = :categoryName,
-//                 categoryDescription = :categoryDescription
-//             WHERE categoryID = :categoryID"
-//         );
-//         $sql->execute([
-//             ':categoryID' => $postArray['categoryID'],
-//             ':userID' => $postArray['userID'],
-//             ':categoryType' => $postArray['categoryType'],
-//             ':categoryLink' => $postArray['categoryLink'],
-//             ':categoryName' => $postArray['categoryName'],
-//             ':categoryDescription' => $postArray['categoryDescription'],
-//         ]);
-//         return true;
-//     } catch (PDOException $e) {
-//         return $e->getMessage();
-//     }
-// }
+    try {
+        $sql = DB->prepare(
+            "UPDATE translations 
+            SET userID = :userID,
+                translationCode = :translationCode,
+                languageCode = :languageCode,
+                translationText = :translationText
+            WHERE translationID = :translationID"
+        );
+        $sql->execute([
+            ':translationID' => $postArray['translationID'],
+            ':userID' => $postArray['userID'],
+            ':translationCode' => $postArray['translationCode'],
+            ':languageCode' => $postArray['languageCode'],
+            ':translationText' => $postArray['translationText'],
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        return $e->getMessage();
+    }
+}
 
 //------------------------------------------------------------
 function deleteTranslation(int $id): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("DELETE FROM translations WHERE translationID = :id");
+        $sql = DB->prepare("DELETE FROM translations WHERE translationID = :id");
         $sql->execute([':id' => $id]);
         return true;
     } catch (PDOException $e) {

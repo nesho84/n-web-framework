@@ -28,7 +28,7 @@ define('A_USER_PASSWORD', '010203');
 // App 
 //------------------------------------------------------------
 defined("APPURL")
-    or define("APPURL", "http://localhost/n-web-framework");
+    or define("APPURL", "http://localhost:8080/n-web-framework");
 
 defined("ADMURL")
     or define("ADMURL", APPURL . "/admin");
@@ -38,7 +38,7 @@ defined("SITE_NAME")
 
 /* Email Address - for the Contact page */
 defined("CONTACT_FORM_EMAIL")
-    or define("CONTACT_FORM_EMAIL", 'office@n-web-framework');
+    or define("CONTACT_FORM_EMAIL", 'office@n-web-framework.com');
 
 defined("UPLOADURL")
     or define("UPLOADURL", APPURL . "/public/uploads");

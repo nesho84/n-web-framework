@@ -4,10 +4,8 @@
 function getPages(): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "SELECT * FROM pages AS p
             INNER JOIN (SELECT userID, userName FROM user) as u 
             ON u.userID = p.userID
@@ -25,10 +23,8 @@ function getPages(): array|string
 function getPageById(int $id): array|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("SELECT * FROM pages WHERE pageID = :id");
+        $sql = DB->prepare("SELECT * FROM pages WHERE pageID = :id");
         $sql->execute(['id' => $id]);
         return $sql->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
@@ -40,10 +36,8 @@ function getPageById(int $id): array|string
 function insertPage(array $postArray): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "INSERT INTO pages (
             userID,
             pageName, 
@@ -73,7 +67,7 @@ function insertPage(array $postArray): bool|string
             ':PageMetaDescription' => $postArray['PageMetaDescription'],
             ':PageMetaKeywords' => $postArray['PageMetaKeywords'],
         ]);
-        // $lastInsertId = $db->lastInsertId();
+        // $lastInsertId = DB->lastInsertId();
         return true;
     } catch (PDOException $e) {
         return $e->getMessage();
@@ -84,10 +78,8 @@ function insertPage(array $postArray): bool|string
 function updatePage(array $postArray): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare(
+        $sql = DB->prepare(
             "UPDATE pages 
             SET pageName = :pageName,
                 userID = :userID,
@@ -122,10 +114,8 @@ function updatePage(array $postArray): bool|string
 function deletePage(int $id): bool|string
 //------------------------------------------------------------
 {
-    global $db;
-
     try {
-        $sql = $db->prepare("DELETE FROM pages WHERE pageID = :id");
+        $sql = DB->prepare("DELETE FROM pages WHERE pageID = :id");
         $sql->execute([':id' => $id]);
         return true;
     } catch (PDOException $e) {

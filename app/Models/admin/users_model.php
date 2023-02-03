@@ -83,7 +83,8 @@ function updateUser(array $postArray): bool|string
                 userEmail = :userEmail,
                 userPassword = :userPassword,
                 userPicture = :userPicture,
-                userRole = :userRole
+                userRole = :userRole,
+                userStatus = :userStatus
             WHERE userID = :userID"
         );
         $sql->execute([
@@ -93,6 +94,7 @@ function updateUser(array $postArray): bool|string
             ':userPassword' => $postArray['userPassword'],
             ':userPicture' => $postArray['userPicture'],
             ':userRole' => $postArray['userRole'],
+            ':userStatus' => $postArray['userStatus'],
         ]);
         return true;
     } catch (PDOException $e) {
