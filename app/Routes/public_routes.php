@@ -11,3 +11,5 @@ App::route('/contact/validate', 'public_controller@contact_validate');
 
 // --- ajax test --- //
 App::route('/ajax_test', 'public_controller@ajax_test');
+// --- slug test --- //
+App::route('/slug-test/{slug}', 'public_controller@slug_test');

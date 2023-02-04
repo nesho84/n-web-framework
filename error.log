@@ -1,0 +1,190 @@
+[03-Feb-2023 22:03:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App::run() in D:\xampp\htdocs\n-web-framework\index.php:24
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 24
+[03-Feb-2023 22:09:40 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "foreach" in D:\xampp\htdocs\n-web-framework\app\app.php on line 96
+[03-Feb-2023 22:10:36 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function dd_print(), 0 passed in D:\xampp\htdocs\n-web-framework\app\app.php on line 94 and exactly 1 expected in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php:22
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(94): dd_print()
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php on line 22
+[03-Feb-2023 22:26:26 Europe/Berlin] PHP Fatal error:  Default value for property of type array may not be null. Use the nullable type ?array to allow null default value in D:\xampp\htdocs\n-web-framework\app\app.php on line 6
+[03-Feb-2023 22:26:36 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "?", expecting "," or ";" in D:\xampp\htdocs\n-web-framework\app\app.php on line 6
+[03-Feb-2023 22:26:36 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "?", expecting "," or ";" in D:\xampp\htdocs\n-web-framework\app\app.php on line 6
+[03-Feb-2023 22:26:46 Europe/Berlin] PHP Fatal error:  Default value for property of type array may not be null. Use the nullable type ?array to allow null default value in D:\xampp\htdocs\n-web-framework\app\app.php on line 6
+[03-Feb-2023 22:48:21 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:115
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 115
+[03-Feb-2023 22:49:45 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[03-Feb-2023 23:05:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 107
+[03-Feb-2023 23:07:27 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 107
+[03-Feb-2023 23:12:35 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:115
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 115
+[03-Feb-2023 23:13:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:116
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 116
+[03-Feb-2023 23:14:06 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:116
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 116
+[03-Feb-2023 23:18:28 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:116
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 116
+[03-Feb-2023 23:18:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:116
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 116
+[03-Feb-2023 23:32:17 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:117
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 117
+[03-Feb-2023 23:38:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:119
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 119
+[03-Feb-2023 23:38:40 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\app.php on line 112
+[03-Feb-2023 23:40:22 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 112
+[03-Feb-2023 23:41:47 Europe/Berlin] PHP Fatal error:  Cannot use [] for reading in D:\xampp\htdocs\n-web-framework\app\app.php on line 112
+[03-Feb-2023 23:41:55 Europe/Berlin] PHP Fatal error:  Cannot use [] for reading in D:\xampp\htdocs\n-web-framework\app\app.php on line 112
+[03-Feb-2023 23:41:58 Europe/Berlin] PHP Fatal error:  Cannot use [] for reading in D:\xampp\htdocs\n-web-framework\app\app.php on line 112
+[03-Feb-2023 23:41:59 Europe/Berlin] PHP Fatal error:  Cannot use [] for reading in D:\xampp\htdocs\n-web-framework\app\app.php on line 112
+[03-Feb-2023 23:48:15 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\app.php on line 113
+[03-Feb-2023 23:51:14 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:128
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 128
+[03-Feb-2023 23:58:40 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App::route_validate(): Return value must be of type array|bool, none returned in D:\xampp\htdocs\n-web-framework\app\app.php:119
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(49): App->route_validate('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\app.php on line 119
+[04-Feb-2023 00:00:37 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 112
+[04-Feb-2023 00:00:52 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 131 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(131): edit('dfgdfg')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89
+[04-Feb-2023 00:24:00 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 109
+[04-Feb-2023 00:24:54 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 128 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89
+[04-Feb-2023 00:25:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 128 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89
+[04-Feb-2023 00:28:28 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 128 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('/admin/categori...')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89
+[04-Feb-2023 00:35:41 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 109
+[04-Feb-2023 00:35:44 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 109
+[04-Feb-2023 00:35:45 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 109
+[04-Feb-2023 00:35:46 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 109
+[04-Feb-2023 00:36:26 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function edit(), 0 passed in D:\xampp\htdocs\n-web-framework\app\app.php on line 133 and exactly 1 expected in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(133): edit()
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89
+[04-Feb-2023 00:36:28 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 109
+[04-Feb-2023 00:37:13 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:37:21 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:37:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:37:30 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:37:31 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:37:32 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:38:33 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:38:35 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:38:48 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:38:49 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 110
+[04-Feb-2023 00:39:48 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\app.php on line 111
+[04-Feb-2023 00:43:43 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 128 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\users_controller.php:153
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('dfgfdg')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\users_controller.php on line 153
+[04-Feb-2023 00:43:57 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 128 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('dfgdfg')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89
+[04-Feb-2023 00:44:30 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: getCategoryById(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 95 and defined in D:\xampp\htdocs\n-web-framework\app\Models\admin\categories_model.php:49
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php(95): getCategoryById('dfgdfg')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('dfgdfg')
+#2 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#3 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\categories_model.php on line 49
+[04-Feb-2023 00:45:01 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: getCategoryById(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 95 and defined in D:\xampp\htdocs\n-web-framework\app\Models\admin\categories_model.php:49
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php(95): getCategoryById('dfgdfg')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('dfgdfg')
+#2 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#3 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\categories_model.php on line 49
+[04-Feb-2023 00:45:06 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 128 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('dfgdfg')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89
+[04-Feb-2023 00:45:08 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 128 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(128): edit('dfgdfg')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89
+[04-Feb-2023 01:04:58 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: edit(): Argument #1 ($id) must be of type int, array given, called in D:\xampp\htdocs\n-web-framework\app\app.php on line 141 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\app.php(141): edit(Array)
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('edit')
+#2 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\categories_controller.php on line 89

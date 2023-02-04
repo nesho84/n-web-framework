@@ -3,11 +3,8 @@
 class App
 {
     private string $url;
-
     private static array $routes = [];
-
     private array $params = [];
-
     private string $controller_path;
 
     //------------------------------------------------------------
@@ -32,7 +29,7 @@ class App
     }
 
     //------------------------------------------------------------
-    public function init(): void
+    public function run(): void
     //------------------------------------------------------------
     {
         // GET request url
@@ -57,11 +54,11 @@ class App
                 $this->controller_path = CONTROLLERS_PATH . "/" . $validRoute['controller'] . ".php";
                 $this->loadController($validRoute['action']);
             } else {
-                // Call the given callback function ("see test_routes.php")
+                // Call the given callback function 
                 echo call_user_func($validRoute['callback'], $this->url, $validRoute);
             }
         } else {
-            // die("'Route' not found '" . self::$url . "'");
+            // die("'Route' not found '" . $this->url . "'");
             header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found", true, 404);
             //Include custom message page.
             require_once VIEWS_PATH . '/errors/404.php';
@@ -73,32 +70,64 @@ class App
     private function route_validate(string $uri): array|bool
     //------------------------------------------------------------
     {
-        $uri_parts = explode("/", $uri);
+        // $uri_parts = explode("/", $uri);
+        // // Replace url parts to match the route
+        // foreach ($uri_parts as $u) {
+        //     // Route with {id} - Get the id from the url - (ex. post/33)
+        //     if (is_numeric($u)) {
+        //         // Set route params
+        //         array_push($this->params, $u);
+        //         // Replace it with {id} to match the route
+        //         // ex. post/1 will be post/{id}
+        //         $uri = str_replace($u, '{id}', $uri);
+        //     }
+        //     // Replace it with {slug} to match the route
+        //     // ex. post/this-is-a-post with be post/{slug} and ignore about-us
+        //     if (strpos($u, "-") && $u != "about-us") {
+        //         // Set route params
+        //         array_push($this->params, $u);
+        //         // replace it with {slug} to match the route - (ex. post/{slug})
+        //         $uri = str_replace($u, '{slug}', $uri);
+        //     }
+        // }
+        // // Check if the route matches
+        // foreach (self::$routes as $r) {
+        //     if ($uri === $r['route']) {
+        //         $r['params'] = $this->params;
+        //         return $r;
+        //     }
+        // }
 
-        // Replace url parts to match the route
-        foreach ($uri_parts as $u) {
-            // Route with {:id} - Get the id from the url - (ex. post/33)
-            if (is_numeric($u)) {
-                // Set route params
-                array_push($this->params, $u);
-                // Replace it with {:id} to match the route
-                // ex. post/1 will be post/{:id}
-                $uri = str_replace($u, '{:id}', $uri);
-            }
-            // Replace it with {:slug} to match the route
-            // ex. post/this-is-a-post with be post/{:slug} and ignore about-us
-            if (strpos($u, "-") && $u != "about-us") {
-                // Set route params
-                array_push($this->params, $u);
-                // replace it with {:slug} to match the route - (ex. post/{:slug})
-                $uri = str_replace($u, '{:slug}', $uri);
-            }
-        }
+        // // Advanced solution 1
+        // foreach (self::$routes as $r) {
+        //     $route_pattern = preg_replace("/\{[^\}]+\}/", "([^/]+)", $r['route']);
+        //     if (preg_match("#^$route_pattern$#", $uri, $matches)) {
+        //         // Only if $matches is set
+        //         if (count($matches) > 1) {
+        //             // Because $matches[0] is the route and $matches[1] is the param
+        //             array_push($this->params, $matches[1]);
+        //         }
+        //         return $r;
+        //     }
+        // }
 
-        // Check if the route matches
+        // Advanced solution 2
         foreach (self::$routes as $r) {
-            if ($uri === $r['route']) {
-                $r['params'] = $this->params;
+            $route_pattern = preg_quote($r['route'], '#');
+            // {id} musst be a number
+            if (preg_match('#^' . str_replace('\{id\}', '(\d+)', $route_pattern) . '$#', $uri, $matches)) {
+                // Only if $matches is set
+                if (count($matches) > 1) {
+                    // Because $matches[0] is the route and $matches[1] is the param
+                    array_push($this->params, $matches[1]);
+                }
+                return $r;
+            } elseif (preg_match('#^' . str_replace('\{slug\}', '([\w-]+)', $route_pattern) . '$#', $uri, $matches)) {
+                // Only if $matches is set
+                if (count($matches) > 1) {
+                    // Because $matches[0] is the route and $matches[1] is the param
+                    array_push($this->params, $matches[1]);
+                }
                 return $r;
             }
         }

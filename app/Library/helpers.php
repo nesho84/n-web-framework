@@ -43,15 +43,15 @@ function activePage($url)
     $page_parts = explode("/", $page);
 
     foreach ($page_parts as $u) {
-        // Route with {:id} - Get the id from the url - (ex. post/33)
+        // Route with {id} - Get the id from the url - (ex. post/33)
         if (is_numeric($u)) {
-            // replace it with {:id} to match the route - (ex. post/{:id})
-            $page = str_replace($u, '{:id}', $page);
+            // replace it with {id} to match the route - (ex. post/{id})
+            $page = str_replace($u, '{id}', $page);
         }
-        // Route with {:slug} - Get the url slug - (ex. post/this-is-a-post) but ignore about-us page
+        // Route with {slug} - Get the url slug - (ex. post/this-is-a-post) but ignore about-us page
         if (strpos($u, "-") && $u != "about-us") {
-            // replace it with {:slug} to match the route - (ex. post/{:slug})
-            $page = str_replace($u, '{:slug}', $page);
+            // replace it with {slug} to match the route - (ex. post/{slug})
+            $page = str_replace($u, '{slug}', $page);
         }
     }
 

@@ -21,4 +21,4 @@ require_once __DIR__ . "/app/app.php";
 
 // Initialize App
 $app = new App;
-$app->init();
+$app->run();
