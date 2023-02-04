@@ -177,6 +177,7 @@ function update(int $id): void
             'userPassword' => '',
             'userPicture' => $_FILES['userPicture'] ?? null,
             'userRole' => htmlspecialchars(trim(isset($_POST['userRole']))) ? 'admin' : 'default',
+            'userStatus' => isset($_POST['userStatus']) ? 1 : 0,
         ];
 
         // Get all users from the Model except this

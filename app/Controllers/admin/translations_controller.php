@@ -37,6 +37,7 @@ function insert(): void
 
     if (isset($_POST['insert_translation'])) {
         $postArray = [
+            'userID' => $_SESSION['user']['id'],
             'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
             'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
             'translationText' => htmlspecialchars(trim($_POST['translationText'])),
@@ -100,49 +101,44 @@ function update(int $id): void
     IsUserLoggedIn();
 
     if (isset($_POST['update_translation'])) {
-        // $postArray = [
-        //     'categoryID' => $id,
-        //     'userID' => $_SESSION['user']['id'],
-        //     'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
-        //     'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-        //     'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
-        //     'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
-        // ];
+        $postArray = [
+            'translationID' => $id,
+            'userID' => $_SESSION['user']['id'],
+            'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
+            'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
+            'translationText' => htmlspecialchars(trim($_POST['translationText'])),
+        ];
 
-        // $validated = true;
-        // $error = '';
+        $validated = true;
+        $error = '';
 
-        // if (empty($postArray['categoryType'])) {
-        //     $validated = false;
-        //     $error .= 'Category Type can not be empty!<br>';
-        // }
-        // if (empty($postArray['categoryLink'])) {
-        //     $validated = false;
-        //     $error .= 'Please insert a Category Link!<br>';
-        // }
-        // if (empty($postArray['categoryName'])) {
-        //     $validated = false;
-        //     $error .= 'Please insert a Category Name!<br>';
-        // }
-        // // if (empty($postArray['categoryDescription'])) {
-        // //     $validated = false;
-        // //     $error .= 'Please insert a Category Description!<br>';
-        // // }
+        if (empty($postArray['translationCode'])) {
+            $validated = false;
+            $error .= 'Translation Code can not be empty!<br>';
+        }
+        if (empty($postArray['languageCode'])) {
+            $validated = false;
+            $error .= 'Please insert a Language Code!<br>';
+        }
+        if (empty($postArray['translationText'])) {
+            $validated = false;
+            $error .= 'Please insert a translationText!<br>';
+        }
 
-        // if ($validated === true) {
-        //     // Update in Database
-        //     $result = updateCategory($postArray);
-        //     if ($result === true) {
-        //         setFlashMsg('success', 'Update completed successfully.');
-        //         redirect(ADMURL . '/categories');
-        //     } else {
-        //         setFlashMsg('error', $result);
-        //         redirect(ADMURL . '/categories/edit/' . $id);
-        //     }
-        // } else {
-        //     setFlashMsg('error', $error);
-        //     redirect(ADMURL . '/categories/edit/' . $id);
-        // }
+        if ($validated === true) {
+            // Update in Database
+            $result = updateTranslation($postArray);
+            if ($result === true) {
+                setFlashMsg('success', 'Update completed successfully.');
+                redirect(ADMURL . '/translations');
+            } else {
+                setFlashMsg('error', $result);
+                redirect(ADMURL . '/translations/edit/' . $id);
+            }
+        } else {
+            setFlashMsg('error', $error);
+            redirect(ADMURL . '/translations/edit/' . $id);
+        }
     }
 }
 

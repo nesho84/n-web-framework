@@ -47,10 +47,17 @@
                                 <div id="mySpinner" class="d-none">Loading...</div>
                             </div>
                         </div>
+                        <hr>
                         <!-- User Role -->
                         <div class="form-check mb-3">
                             <input type="checkbox" class="form-check-input" id="userRole" name="userRole" <?php echo $userRole == "admin" ? " checked" : "" ?>>
                             <label class="form-check-label fw-bold" for="userRole">Admin (unchecked is default)</label>
+                        </div>
+                        <hr>
+                        <!-- User Status-->
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="userStatus" name="userStatus" <?php echo $userStatus == 1 ? " checked" : "" ?>>
+                            <label class="form-check-label fw-bold" for="userStatus">User Status <?php echo $userStatus == 1 ? '<span class="badge bg-success fw-normal">active</span>' : '<span class="badge bg-danger">inactive</span>'; ?></label>
                         </div>
                         <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
                             <input type="submit" id="update_user" name="update_user" class="btn btn-primary btn-lg" value="Save" />

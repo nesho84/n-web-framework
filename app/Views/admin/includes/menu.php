@@ -6,7 +6,7 @@ $userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SE
     <hr id="hr-divider">
     <ul class="navbar-nav ms-auto pt-lg-3">
         <li class="nav-item">
-            <a class="nav-link <?= activePage(['admin']) ?>" href="<?php echo APPURL; ?>/admin">HOME</a>
+            <a class="nav-link <?= activePage(['admin', 'admin/']) ?>" href="<?php echo APPURL; ?>/admin">HOME</a>
         </li>
         <li class="nav-item">
             <a class="nav-link <?= activePage(['admin/pages', 'admin/pages/create', 'admin/pages/edit/{id}']); ?>" href="<?php echo APPURL; ?>/admin/pages">PAGES</a>

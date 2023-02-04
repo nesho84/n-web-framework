@@ -57,10 +57,11 @@ if ($data['rows'] > 0) {
                         <label for="pageName" class="form-label fw-bold">Content <small>(optional)</small></label>
                         <textarea class="form-control" rows="15" id="pageContent" name="pageContent" placeholder="Content"><?php echo $pageContent; ?></textarea>
                     </div>
+                    <hr>
                     <!-- Page Status-->
                     <div class="form-check mb-3">
                         <input type="checkbox" class="form-check-input" id="pageStatus" name="pageStatus" <?php echo $pageStatus == 1 ? " checked" : "" ?>>
-                        <label class="form-check-label fw-bold" for="pageStatus">Page status <?php echo $pageStatus == 1 ? '<span class="badge bg-success fw-normal">active</span>' : '<span class="badge bg-danger">inactive</span>'; ?></label>
+                        <label class="form-check-label fw-bold" for="pageStatus">Page Status <?php echo $pageStatus == 1 ? '<span class="badge bg-success fw-normal">active</span>' : '<span class="badge bg-danger">inactive</span>'; ?></label>
                     </div>
                     <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
                         <input type="submit" id="update_page" name="update_page" class="btn btn-primary btn-lg btn-block" value="Save" />

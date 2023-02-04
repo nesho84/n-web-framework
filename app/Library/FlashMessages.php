@@ -8,7 +8,7 @@
  * @return void
  */
 # -----------------------------------------------------------
-function setFlashMsg(string $status, string $msg)
+function setFlashMsg(string $status, string $msg): void
 # -----------------------------------------------------------
 {
     switch ($status) {
@@ -33,7 +33,7 @@ function setFlashMsg(string $status, string $msg)
  * @return void
  */
 # -----------------------------------------------------------
-function getFlashMsg()
+function getFlashMsg(): void
 # -----------------------------------------------------------
 {
     // Success Messages

@@ -5,7 +5,7 @@
  * @param array $var array to print
  */
 //------------------------------------------------------------
-function dd($var)
+function dd(array $var): void
 //------------------------------------------------------------
 {
     echo "<pre>";
@@ -19,7 +19,7 @@ function dd($var)
  * @param array $var array to print
  */
 //------------------------------------------------------------
-function dd_print($var)
+function dd_print(array $var): void
 //------------------------------------------------------------
 {
     echo "<pre>";
@@ -33,7 +33,7 @@ function dd_print($var)
  * @return string if the $url matches
  */
 //------------------------------------------------------------
-function activePage($url)
+function activePage(array $url): void
 //------------------------------------------------------------
 {
     // Get page url 
@@ -66,9 +66,9 @@ function activePage($url)
  * Force redirect to ignore php error 'headers already sent...'
  * @param string $url of the page
  */
-# -----------------------------------------------------------
-function redirect($url)
-# -----------------------------------------------------------
+//------------------------------------------------------------
+function redirect(string $url): void
+//------------------------------------------------------------
 {
     header("Location: $url");
 }
@@ -77,9 +77,9 @@ function redirect($url)
  * Force redirect to ignore php error 'headers already sent...'
  * @param string $url of the page
  */
-# -----------------------------------------------------------
-function forceRedirect($url)
-# -----------------------------------------------------------
+//------------------------------------------------------------
+function forceRedirect(string $url): void
+//------------------------------------------------------------
 {
     if (headers_sent()) {
         echo ("<script>location.href='$url'</script>");
@@ -98,7 +98,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 //------------------------------------------------------------
-function sendEmail($From, $FromName, $mailTitle, $mailText, $To, $CC = '', $BCC = '', $Attachments = '')
+function sendEmail(string $From, string $FromName, string $mailTitle, string $mailText, string $To, $CC = '', $BCC = '', $Attachments = ''): bool|string
 //------------------------------------------------------------
 {
     require LIBRARY_PATH . '/PHPMailer-master/src/Exception.php';

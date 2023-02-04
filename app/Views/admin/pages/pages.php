@@ -35,7 +35,9 @@ showHeading([
                     $counter = 0;
                     foreach ($data['rows'] as $d) {
                         $counter += 1;
+
                         $pageStatus = $d['pageStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
+
                         echo '<tr>
                             <th scope="row">' . $counter . '</th>
                             <td>' . $d['pageName'] . '</td>

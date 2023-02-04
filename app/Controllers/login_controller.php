@@ -72,9 +72,14 @@ function login_validate(): void
         if (is_array($result)) {
             // Validate Password
             if (password_verify($postArray["password"], $result["userPassword"])) {
-                // Create all needed Session
-                create_user_session($result, $postArray);
-                $output = "success";
+                // Check if the user is Active
+                if ($result["userStatus"] !== 1) {
+                    $output .= "Your Account is not active, please contact support.";
+                } else {
+                    // Success =>> Create all Sessions
+                    create_user_session($result, $postArray);
+                    $output = "success";
+                }
             } else {
                 $output .= "The Email or Password you entered was not valid.";
             }
