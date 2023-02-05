@@ -8,7 +8,7 @@ ini_set('display_errors', TRUE); // Error/Exception display, use FALSE only in p
 ini_set('log_errors', TRUE); // Error/Exception file logging engine.
 
 //------------------------------------------------------------
-// DB Connection
+// MySQL Connection
 //------------------------------------------------------------
 define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8');
@@ -50,27 +50,27 @@ defined('UPLOAD_PATH')
     or define('UPLOAD_PATH', APPROOT . '/public/uploads');
 
 defined("LIBRARY_PATH")
-    or define("LIBRARY_PATH", APPROOT . '/app/Library');
+    or define("LIBRARY_PATH", APPROOT . '/app/library');
 
 defined("SCRIPTS_PATH")
-    or define("SCRIPTS_PATH", APPROOT . '/app/Scripts');
+    or define("SCRIPTS_PATH", APPROOT . '/app/scripts');
+
+defined("SCRIPTS_URL")
+    or define("SCRIPTS_URL", APPROOT . '/app/scripts');
 
 ini_set('error_log', APPROOT . "/error.log"); // Logging file path
 
-defined("SCRIPTS_URL")
-    or define("SCRIPTS_URL", APPROOT . '/app/Scripts');
-
 defined("CORE_PATH")
-    or define("CORE_PATH", APPROOT . '/app/Core');
+    or define("CORE_PATH", APPROOT . '/app/core');
 
 defined("ROUTES_PATH")
-    or define("ROUTES_PATH", APPROOT . '/app/Routes');
+    or define("ROUTES_PATH", APPROOT . '/app/routes');
 
 defined("CONTROLLERS_PATH")
-    or define("CONTROLLERS_PATH", APPROOT . '/app/Controllers');
+    or define("CONTROLLERS_PATH", APPROOT . '/app/controllers');
 
 defined("MODELS_PATH")
-    or define("MODELS_PATH", APPROOT . '/app/Models');
+    or define("MODELS_PATH", APPROOT . '/app/models');
 
 defined("VIEWS_PATH")
-    or define("VIEWS_PATH", APPROOT . '/app/Views');
+    or define("VIEWS_PATH", APPROOT . '/app/views');

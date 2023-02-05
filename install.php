@@ -1,6 +1,6 @@
 <?php
-// Global config
-require_once __DIR__ . "/config/config.php";
+// Global settings
+require_once __DIR__ . "/config/settings.php";
 
 // MySQL Connection
 $host = DB_HOST;
@@ -23,7 +23,7 @@ try {
         <ul>
             <li>The PHP MySQL module is installed and enabled.</li>
             <li>The database is running.</li>
-            <li>The credentials in config.php are valid.</li>
+            <li>The credentials in settings.php are valid.</li>
         </ul>");
 }
 

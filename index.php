@@ -4,8 +4,8 @@
 // ------------------ Order is important! ------------------
 // ---------------------------------------------------------
 
-// Global config
-require_once __DIR__ . "/config/config.php";
+// Global settings
+require_once __DIR__ . "/config/settings.php";
 
 // MySQL Connection
 require_once CORE_PATH . "/database.php";

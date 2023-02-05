@@ -70,6 +70,7 @@ class App
     private function route_validate(string $uri): array|bool
     //------------------------------------------------------------
     {
+        // // Basic solution 1
         // $uri_parts = explode("/", $uri);
         // // Replace url parts to match the route
         // foreach ($uri_parts as $u) {
@@ -111,20 +112,19 @@ class App
         //     }
         // }
 
-        // Advanced solution 2
+        // Advanced solution 2 (supports {id} -> number and {slug} -> this-is-text)
         foreach (self::$routes as $r) {
             $route_pattern = preg_quote($r['route'], '#');
-            // {id} musst be a number
             if (preg_match('#^' . str_replace('\{id\}', '(\d+)', $route_pattern) . '$#', $uri, $matches)) {
-                // Only if $matches is set
-                if (count($matches) > 1) {
+                // {id} musst be a number
+                if (isset($matches[1])) {
                     // Because $matches[0] is the route and $matches[1] is the param
                     array_push($this->params, $matches[1]);
                 }
                 return $r;
             } elseif (preg_match('#^' . str_replace('\{slug\}', '([\w-]+)', $route_pattern) . '$#', $uri, $matches)) {
-                // Only if $matches is set
-                if (count($matches) > 1) {
+                // {slug} a string with '-'
+                if (isset($matches[1])) {
                     // Because $matches[0] is the route and $matches[1] is the param
                     array_push($this->params, $matches[1]);
                 }
