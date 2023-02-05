@@ -106,7 +106,10 @@ function insert(): void
         }
 
         // base64 Image Logic and Validation
-        if (!empty($postArray['userPicture']['name'])) {
+        if (empty($postArray['userPicture']['name'])) {
+            // If it is empty then replace with null
+            $postArray['userPicture'] = null;
+        } else {
             $file = $postArray['userPicture']['tmp_name'];
             // Get the width and height of the image
             [$width, $height] = getimagesize($file);
@@ -128,6 +131,8 @@ function insert(): void
                 $postArray['userPicture'] = 'data:image/png;base64,' . $image;
             }
         }
+
+        dd($postArray);
 
         if ($validated === true) {
             // Insert in Database
@@ -177,7 +182,7 @@ function update(int $id): void
             'userPassword' => '',
             'userPicture' => $_FILES['userPicture'] ?? null,
             'userRole' => htmlspecialchars(trim(isset($_POST['userRole']))) ? 'admin' : 'default',
-            'userStatus' => isset($_POST['userStatus']) ? 1 : 0,
+            'userStatus' => isset($_POST['userStatus']) ? true : false,
         ];
 
         // Get all users from the Model except this

@@ -1,0 +1,12 @@
+[05-Feb-2023 00:57:43 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Models\admin\users_model.php on line 61
+[05-Feb-2023 01:01:33 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd_print(): Argument #1 ($var) must be of type array, string given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 30 and defined in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php:22
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php(30): dd_print('data:image/png;...')
+#1 D:\xampp\htdocs\n-web-framework\app\app.php(204): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\users_controller.php(16): App::renderAdminView('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\n-web-framework\app\app.php(153): index()
+#4 D:\xampp\htdocs\n-web-framework\app\app.php(55): App->loadController('index')
+#5 D:\xampp\htdocs\n-web-framework\index.php(24): App->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php on line 22
+[05-Feb-2023 01:05:57 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Models\admin\users_model.php on line 61
