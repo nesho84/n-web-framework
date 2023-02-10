@@ -6,7 +6,8 @@
 <!-- sweetalert2 -->
 <script src="<?php echo APPURL; ?>/public/js/libs/sweetalert2.all.min.js"></script>
 <!-- My Scripts -->
-<script src="<?php echo APPURL; ?>/app/Scripts/main.js"></script>
+<script src="<?php echo APPURL; ?>/app/js/main.js"></script>
+<script src="<?php echo APPURL; ?>/app/js/request.js"></script>
 
 </body>
 

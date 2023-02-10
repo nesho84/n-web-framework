@@ -172,6 +172,16 @@ function update(int $id): void
     // Require Login
     IsUserLoggedIn();
 
+    // header("Content-Type: application/json");
+
+    // $request = json_decode(file_get_contents('php://input'), true);
+    // die($request);
+
+    // die(json_encode([
+    //     'status' => 'success',
+    //     'message' => 'Data inserted successfully'
+    // ]));
+
     if (isset($_POST['update_user'])) {
         $postArray = [
             'userID' => $id,
