@@ -44,6 +44,9 @@ function insertUser(array $postArray): bool|string
 //------------------------------------------------------------
 {
     try {
+        // start database transaction
+        DB->beginTransaction();
+
         $sql = DB->prepare(
             "INSERT INTO user (
             userName,
@@ -65,9 +68,16 @@ function insertUser(array $postArray): bool|string
             ':userPicture' => $postArray['userPicture'],
             ':userRole' => $postArray['userRole'],
         ]);
+
+        // commit database transaction
+        DB->commit();
+
         // $lastInsertId = DB->lastInsertId();
         return true;
     } catch (PDOException $e) {
+        // rollback database transaction
+        DB->rollback();
+
         return $e->getMessage();
     }
 }

@@ -64,7 +64,7 @@ if ($data['rows'] > 0) {
                         <label class="form-check-label fw-bold" for="pageStatus">Page Status <?php echo $pageStatus == 1 ? '<span class="badge bg-success fw-normal">active</span>' : '<span class="badge bg-danger">inactive</span>'; ?></label>
                     </div>
                     <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
-                        <input type="submit" id="update_page" name="update_page" class="btn btn-primary btn-lg btn-block" value="Save" />
+                        <button type="submit" id="update_page" name="update_page" class="btn btn-primary btn-lg">Save</button>
                         <a href="<?php echo ADMURL . "/pages"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
                     </div>
                 </form>

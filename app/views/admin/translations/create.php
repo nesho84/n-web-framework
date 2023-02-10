@@ -18,7 +18,7 @@
                     <textarea class="form-control" rows="5" id="translationText" name="translationText" placeholder="Translation Text"><?php echo $_SESSION['inputs']['translationText'] ?? ""; ?></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
-                    <input type="submit" id="insert_translation" name="insert_translation" class="btn btn-primary btn-lg" value="Save" />
+                    <button type="submit" id="insert_translation" name="insert_translation" class="btn btn-primary btn-lg">Save</button>
                     <a href="<?php echo ADMURL . "/translations"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
                 </div>
             </form>

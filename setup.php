@@ -54,7 +54,7 @@ try {
     $ok = false;
 
     // Handle the exception
-    die('<p>Install failed: ' . $e->getMessage() . '</p><p><a href="' . APPURL . '/install.php">Try again...</a></p>');
+    die('<p>Setup failed: ' . $e->getMessage() . '</p><p><a href="' . APPURL . '/setup.php">Try again...</a></p>');
 } finally {
     // Close connection
     $pdo = null;

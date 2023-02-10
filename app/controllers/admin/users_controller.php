@@ -132,8 +132,6 @@ function insert(): void
             }
         }
 
-        dd($postArray);
-
         if ($validated === true) {
             // Insert in Database
             $result = insertUser($postArray);

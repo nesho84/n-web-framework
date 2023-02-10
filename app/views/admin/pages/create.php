@@ -49,7 +49,7 @@
                     <textarea class="form-control" rows="15" id="pageContent" name="pageContent" placeholder="Content"><?php echo $_SESSION['inputs']['pageContent'] ?? ""; ?></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
-                    <input type="submit" id="insert_page" name="insert_page" class="btn btn-primary btn-lg" value="Save" />
+                    <button type="submit" id="insert_page" name="insert_page" class="btn btn-primary btn-lg">Save</button>
                     <a href="<?php echo ADMURL . "/pages"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
                 </div>
             </form>
