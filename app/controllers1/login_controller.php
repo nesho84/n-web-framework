@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-App::loadModel(MODELS_PATH . "/login_model.php");
+Router::loadModel(MODELS_PATH . "/login_model.php");
 
 //------------------------------------------------------------
 function login(): void
@@ -13,7 +13,7 @@ function login(): void
     $data['email'] = "";
     $data['password'] = "";
 
-    App::renderSimpleView(VIEWS_PATH . "/login/login.php", $data);
+    Router::renderSimpleView(VIEWS_PATH . "/login/login.php", $data);
 }
 
 //------------------------------------------------------------
@@ -44,7 +44,7 @@ function logout(): void
 
     $data["title"] = "Logout";
 
-    App::renderSimpleView(VIEWS_PATH . "/login/logout.php", $data);
+    Router::renderSimpleView(VIEWS_PATH . "/login/logout.php", $data);
 }
 
 //------------------------------------------------------------

@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-App::loadModel(MODELS_PATH . "/admin/admin_model.php");
+Router::loadModel(MODELS_PATH . "/admin/admin_model.php");
 
 //------------------------------------------------------------
 function index(): void
@@ -13,5 +13,5 @@ function index(): void
     $data['rows'] = getTables();
     $data["title"] = "Home";
 
-    App::renderAdminView(VIEWS_PATH . "/admin/index.php", $data);
+    Router::renderAdminView(VIEWS_PATH . "/admin/index.php", $data);
 }

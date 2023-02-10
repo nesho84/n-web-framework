@@ -28,7 +28,7 @@ define('A_USER_PASSWORD', '010203');
 // App 
 //------------------------------------------------------------
 defined("APPURL")
-    or define("APPURL", "http://localhost/n-web-framework");
+    or define("APPURL", "http://localhost:8080/n-web-framework");
 
 defined("ADMURL")
     or define("ADMURL", APPURL . "/admin");
@@ -50,27 +50,27 @@ defined('UPLOAD_PATH')
     or define('UPLOAD_PATH', APPROOT . '/public/uploads');
 
 defined("LIBRARY_PATH")
-    or define("LIBRARY_PATH", APPROOT . '/app/library');
+    or define("LIBRARY_PATH", APPROOT . '/app/Library');
 
 defined("SCRIPTS_PATH")
-    or define("SCRIPTS_PATH", APPROOT . '/app/scripts');
+    or define("SCRIPTS_PATH", APPROOT . '/app/js');
 
 defined("SCRIPTS_URL")
-    or define("SCRIPTS_URL", APPROOT . '/app/scripts');
+    or define("SCRIPTS_URL", APPROOT . '/app/js');
 
 ini_set('error_log', APPROOT . "/error.log"); // Logging file path
 
 defined("CORE_PATH")
-    or define("CORE_PATH", APPROOT . '/app/core');
+    or define("CORE_PATH", APPROOT . '/app/Core');
 
 defined("ROUTES_PATH")
-    or define("ROUTES_PATH", APPROOT . '/app/routes');
+    or define("ROUTES_PATH", APPROOT . '/app/Routes');
 
 defined("CONTROLLERS_PATH")
-    or define("CONTROLLERS_PATH", APPROOT . '/app/controllers');
+    or define("CONTROLLERS_PATH", APPROOT . '/app/Controllers');
 
 defined("MODELS_PATH")
-    or define("MODELS_PATH", APPROOT . '/app/models');
+    or define("MODELS_PATH", APPROOT . '/app/Models');
 
 defined("VIEWS_PATH")
-    or define("VIEWS_PATH", APPROOT . '/app/views');
+    or define("VIEWS_PATH", APPROOT . '/app/Views');

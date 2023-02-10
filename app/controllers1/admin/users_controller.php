@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-App::loadModel(MODELS_PATH . "/admin/users_model.php");
+Router::loadModel(MODELS_PATH . "/admin/users_model.php");
 
 //------------------------------------------------------------
 function index(): void
@@ -13,7 +13,7 @@ function index(): void
     $data['rows'] = getUsers();
     $data['title'] = 'Users';
 
-    App::renderAdminView(VIEWS_PATH . '/admin/users/users.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/users/users.php', $data);
 }
 
 //------------------------------------------------------------
@@ -26,7 +26,7 @@ function profile(int $id): void
     $data['rows'] = getUserById($id);
     $data['title'] = 'User Profile - ' . $id;
 
-    App::renderAdminView(VIEWS_PATH . '/admin/users/profile.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/users/profile.php', $data);
 }
 
 //------------------------------------------------------------
@@ -38,7 +38,7 @@ function create(): void
 
     $data['title'] = 'Users Create';
 
-    App::renderAdminView(VIEWS_PATH . '/admin/users/create.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/users/create.php', $data);
 }
 
 //------------------------------------------------------------
@@ -162,7 +162,7 @@ function edit(int $id): void
     $data['rows'] = getUserById($id);
     $data['title'] = 'User Edit - ' . $id;
 
-    App::renderAdminView(VIEWS_PATH . '/admin/users/edit.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/users/edit.php', $data);
 }
 
 //------------------------------------------------------------

@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-App::loadModel(MODELS_PATH . '/admin/pages_model.php');
+Router::loadModel(MODELS_PATH . '/admin/pages_model.php');
 
 //------------------------------------------------------------
 function index(): void
@@ -13,7 +13,7 @@ function index(): void
     $data['rows'] = getPages();
     $data['title'] = 'Pages';
 
-    App::renderAdminView(VIEWS_PATH . '/admin/pages/pages.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/pages/pages.php', $data);
 }
 
 //------------------------------------------------------------
@@ -25,7 +25,7 @@ function create(): void
 
     $data['title'] = 'Pages Create';
 
-    App::renderAdminView(VIEWS_PATH . '/admin/pages/create.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/pages/create.php', $data);
 }
 
 //------------------------------------------------------------
@@ -98,7 +98,7 @@ function edit(int $id): void
     $data['rows'] = getPageById($id);
     $data['title'] = 'Pages Edit - ' . $id;
 
-    App::renderAdminView(VIEWS_PATH . '/admin/pages/edit.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/pages/edit.php', $data);
 }
 
 //------------------------------------------------------------

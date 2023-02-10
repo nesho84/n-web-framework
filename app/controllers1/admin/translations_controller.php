@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-App::loadModel(MODELS_PATH . '/admin/translations_model.php');
+Router::loadModel(MODELS_PATH . '/admin/translations_model.php');
 
 //------------------------------------------------------------
 function index(): void
@@ -13,7 +13,7 @@ function index(): void
     $data['rows'] = getTranslations();
     $data['title'] = 'Translations';
 
-    App::renderAdminView(VIEWS_PATH . '/admin/translations/translations.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/translations/translations.php', $data);
 }
 
 //------------------------------------------------------------
@@ -25,7 +25,7 @@ function create(): void
 
     $data['title'] = 'Translations Create';
 
-    App::renderAdminView(VIEWS_PATH . '/admin/translations/create.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/translations/create.php', $data);
 }
 
 //------------------------------------------------------------
@@ -90,7 +90,7 @@ function edit(int $id): void
     $data['rows'] = getTranslationyById($id);
     $data['title'] = 'Translation Edit - ' . $id;
 
-    App::renderAdminView(VIEWS_PATH . '/admin/translations/edit.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/translations/edit.php', $data);
 }
 
 //------------------------------------------------------------

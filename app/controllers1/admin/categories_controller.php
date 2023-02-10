@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-App::loadModel(MODELS_PATH . '/admin/categories_model.php');
+Router::loadModel(MODELS_PATH . '/admin/categories_model.php');
 
 //------------------------------------------------------------
 function index(): void
@@ -13,7 +13,7 @@ function index(): void
     $data['rows'] = getCategories();
     $data['title'] = 'Categories';
 
-    App::renderAdminView(VIEWS_PATH . '/admin/categories/categories.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/categories/categories.php', $data);
 }
 
 //------------------------------------------------------------
@@ -25,7 +25,7 @@ function create(): void
 
     $data['title'] = 'Categories Create';
 
-    App::renderAdminView(VIEWS_PATH . '/admin/categories/create.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/categories/create.php', $data);
 }
 
 //------------------------------------------------------------
@@ -95,7 +95,7 @@ function edit(int $id): void
     $data['rows'] = getCategoryById($id);
     $data['title'] = 'Category Edit - ' . $id;
 
-    App::renderAdminView(VIEWS_PATH . '/admin/categories/edit.php', $data);
+    Router::renderAdminView(VIEWS_PATH . '/admin/categories/edit.php', $data);
 }
 
 //------------------------------------------------------------

@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-App::loadModel(MODELS_PATH . "/public_model.php");
+Router::loadModel(MODELS_PATH . "/public_model.php");
 
 //------------------------------------------------------------
 function index(): void
@@ -10,7 +10,7 @@ function index(): void
     // Get data from the Model
     $data['page'] = getActivePage('home');
 
-    App::renderView(VIEWS_PATH . "/public/index.php", $data);
+    Router::renderView(VIEWS_PATH . "/public/index.php", $data);
 }
 
 //------------------------------------------------------------
@@ -41,7 +41,7 @@ function about_us(): void
     // Get data from the Model
     $data['page'] = getActivePage('about');
 
-    App::renderView(VIEWS_PATH . "/public/about_us.php", $data);
+    Router::renderView(VIEWS_PATH . "/public/about_us.php", $data);
 }
 
 //------------------------------------------------------------
@@ -51,7 +51,7 @@ function contact(): void
     // Get data from the Model
     $data['page'] = getActivePage('contact');
 
-    App::renderView(VIEWS_PATH . "/public/contact/contact.php", $data);
+    Router::renderView(VIEWS_PATH . "/public/contact/contact.php", $data);
 }
 
 //------------------------------------------------------------
