@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-Router::loadModel(MODELS_PATH . "/admin/users_model.php");
+Router::loadModel(MODELS_PATH . "/admin/UsersModel.php");
 
 //------------------------------------------------------------
 function index(): void

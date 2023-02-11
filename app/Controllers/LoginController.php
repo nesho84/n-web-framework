@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-Router::loadModel(MODELS_PATH . "/login_model.php");
+Router::loadModel(MODELS_PATH . "/LoginModel.php");
 
 //------------------------------------------------------------
 function login(): void

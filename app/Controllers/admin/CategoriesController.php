@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-Router::loadModel(MODELS_PATH . '/admin/categories_model.php');
+Router::loadModel(MODELS_PATH . '/admin/CategoriesModel.php');
 
 //------------------------------------------------------------
 function index(): void
