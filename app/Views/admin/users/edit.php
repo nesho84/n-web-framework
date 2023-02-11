@@ -18,7 +18,7 @@
                     <form id="formUsers" action="<?php echo ADMURL . '/users/update/' . $userID ?>" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="userName" class="form-label fw-bold">Username</label>
-                            <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" value="<?php echo $userName; ?>">
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" value="<?php echo $userName; ?>" <?php echo $userName == 'admin' ? "readonly" : "" ?>>
                         </div>
                         <div class="mb-3">
                             <label for="userEmail" class="form-label fw-bold">Email</label>
@@ -50,13 +50,15 @@
                         <hr>
                         <!-- User Role -->
                         <div class="form-check mb-3">
-                            <input type="checkbox" class="form-check-input" id="userRole" name="userRole" <?php echo $userRole == "admin" ? " checked" : "" ?>>
+                            <input type="checkbox" class="form-check-input" id="userRole" name="userRole" <?php echo $userRole == "admin" ? " checked" : "" ?> <?php echo $userName == 'admin' ? ' disabled' : '' ?>>
+                            <input type="hidden" name="userRoleHidden" id="userRoleHidden" value="<?php echo $userRole ?>">
                             <label class="form-check-label fw-bold" for="userRole">Admin (unchecked is default)</label>
                         </div>
                         <hr>
                         <!-- User Status-->
                         <div class="form-check mb-3">
-                            <input type="checkbox" class="form-check-input" id="userStatus" name="userStatus" <?php echo $userStatus == 1 ? " checked" : "" ?>>
+                            <input type="checkbox" class="form-check-input" id="userStatus" name="userStatus" <?php echo $userStatus == 1 ? " checked" : "" ?> <?php echo $userName == 'admin' ? ' disabled' : '' ?>>
+                            <input type="hidden" name="userStatusHidden" id="userStatusHidden" value="<?php echo $userStatus ?>">
                             <label class="form-check-label fw-bold" for="userStatus">User Status <?php echo $userStatus == 1 ? '<span class="badge bg-success fw-normal">active</span>' : '<span class="badge bg-danger">inactive</span>'; ?></label>
                         </div>
                         <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
@@ -69,9 +71,31 @@
         </div>
 
         <script>
-            // Preview Uploaded Images
             document.addEventListener("DOMContentLoaded", () => {
+                // Preview Uploaded Images
                 previewUploadedImages("userPicture", "preview_image", "mySpinner");
+
+                // Checkbox userStatus change
+                const userStatusCheckbox = document.querySelector('input[name="userStatus"]');
+                const userStatusHiddenInput = document.querySelector('#userStatusHidden');
+                userStatusCheckbox.addEventListener('change', (event) => {
+                    if (event.target.checked) {
+                        userStatusHiddenInput.value = '1';
+                    } else {
+                        userStatusHiddenInput.value = '0';
+                    }
+                });
+
+                // Checkbox userRole change
+                const userRoleCheckbox = document.querySelector('input[name="userRole"]');
+                const userRoleHiddenInput = document.querySelector('#userRoleHidden');
+                userRoleCheckbox.addEventListener('change', (event) => {
+                    if (event.target.checked) {
+                        userRoleHiddenInput.value = 'admin';
+                    } else {
+                        userRoleHiddenInput.value = 'default';
+                    }
+                });
             });
         </script>
 

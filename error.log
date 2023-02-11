@@ -76,3 +76,11 @@ Stack trace:
   thrown in C:\xampp\htdocs\n-web-framework\index.php on line 11
 [10-Feb-2023 13:09:23 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\n-web-framework\app\Controllers\admin\users_controller.php on line 179
 [10-Feb-2023 13:09:36 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\n-web-framework\app\Controllers\admin\users_controller.php on line 179
+[11-Feb-2023 09:50:35 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, bool given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 203 and defined in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php(203): dd(false)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(149): update(1)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('update')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php on line 8

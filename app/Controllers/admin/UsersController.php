@@ -172,16 +172,6 @@ function update(int $id): void
     // Require Login
     IsUserLoggedIn();
 
-    // header("Content-Type: application/json");
-
-    // $request = json_decode(file_get_contents('php://input'), true);
-    // die($request);
-
-    // die(json_encode([
-    //     'status' => 'success',
-    //     'message' => 'Data inserted successfully'
-    // ]));
-
     if (isset($_POST['update_user'])) {
         $postArray = [
             'userID' => $id,
@@ -190,7 +180,7 @@ function update(int $id): void
             'userPassword' => '',
             'userPicture' => $_FILES['userPicture'] ?? null,
             'userRole' => htmlspecialchars(trim(isset($_POST['userRole']))) ? 'admin' : 'default',
-            'userStatus' => isset($_POST['userStatus']) ? true : false,
+            'userStatus' => htmlspecialchars(trim(isset($_POST['userStatus']))) ? 1 : 0,
         ];
 
         // Get all users from the Model except this
@@ -204,13 +194,36 @@ function update(int $id): void
         if (empty($postArray['userName'])) {
             $validated = false;
             $error .= 'Username can not be empty!<br>';
-        } else {
-            // Username exist Validation
-            foreach ($users as $u) {
-                if ($u['userName'] == $postArray['userName']) {
+        }
+        // Username 'admin' Validations
+        if ($user['userName'] == 'admin') {
+            // 'admin' Username can not be changed Validation
+            if ($postArray['userName'] != $user['userName']) {
+                $validated = false;
+                $error .= 'Admin Username can not be changed!<br>';
+            }
+            // 'admin' Role can not be changed Validation
+            if ($postArray['userRole'] == 'default' && isset($_POST['userRoleHidden'])) {
+                $postArray['userRole'] = htmlspecialchars($_POST['userRoleHidden']);
+                if ($postArray['userRole'] != $user['userRole']) {
                     $validated = false;
-                    $error .= "Username already exists!<br>";
+                    $error .= 'Admin Role can not be changed!<br>';
                 }
+            }
+            // 'admin' Status can not be changed Validation
+            if ($postArray['userStatus'] == 0 && isset($_POST['userStatusHidden'])) {
+                $postArray['userStatus'] = (int) $_POST['userStatusHidden'];
+                if ($postArray['userStatus'] != $user['userStatus']) {
+                    $validated = false;
+                    $error .= 'Admin Status can not be changed!<br>';
+                }
+            }
+        }
+        // Username exist Validation
+        foreach ($users as $u) {
+            if ($u['userName'] == $postArray['userName']) {
+                $validated = false;
+                $error .= "Username already exists!<br>";
             }
         }
         if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
@@ -309,12 +322,29 @@ function delete(int $id): void
     // Require Login
     IsUserLoggedIn();
 
-    // Delete in Database
-    $result = deleteUser($id);
-    if ($result === true) {
-        setFlashMsg('success', 'User with the ID: <strong>' . $id . '</strong> deleted successfully.');
+    // Get existing user from the Model
+    $user = getUserById($id);
+
+    $validated = true;
+    $error = '';
+
+    // 'admin' can not be deleted Validation
+    if ($user['userName'] == 'admin') {
+        $validated = false;
+        $error .= 'Admin can not be deleted!<br>';
+    }
+
+    if ($validated === true) {
+        // Delete in Database
+        $result = deleteUser($id);
+        if ($result === true) {
+            setFlashMsg('success', 'User with the ID: <strong>' . $id . '</strong> deleted successfully.');
+        } else {
+            setFlashMsg('error', $result);
+        }
     } else {
-        setFlashMsg('error', $result);
+        setFlashMsg('error', $error);
+        redirect(ADMURL . '/users');
     }
 
     // Allways redirect back
