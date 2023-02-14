@@ -84,3 +84,842 @@ Stack trace:
 #3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
 #4 {main}
   thrown in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php on line 8
+[12-Feb-2023 10:12:11 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 39
+[12-Feb-2023 10:12:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:39
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 39
+[12-Feb-2023 10:12:14 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 39
+[12-Feb-2023 10:12:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:39
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 39
+[12-Feb-2023 10:12:56 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 39
+[12-Feb-2023 10:12:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:39
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 39
+[12-Feb-2023 10:14:04 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 56
+[12-Feb-2023 10:14:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:56
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 56
+[12-Feb-2023 10:14:27 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 55
+[12-Feb-2023 10:14:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:55
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 55
+[12-Feb-2023 10:14:45 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 57
+[12-Feb-2023 10:14:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:57
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 57
+[12-Feb-2023 10:15:28 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 57
+[12-Feb-2023 10:15:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:57
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 57
+[12-Feb-2023 10:16:52 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 60
+[12-Feb-2023 10:16:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:60
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 60
+[12-Feb-2023 10:20:47 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 95
+[12-Feb-2023 10:20:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:95
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 95
+[12-Feb-2023 10:21:16 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 90
+[12-Feb-2023 10:21:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:90
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 90
+[12-Feb-2023 10:21:40 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 90
+[12-Feb-2023 10:21:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:90
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 90
+[12-Feb-2023 10:21:51 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 88
+[12-Feb-2023 10:21:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:88
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 88
+[12-Feb-2023 10:22:17 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 88
+[12-Feb-2023 10:22:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:88
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 88
+[12-Feb-2023 10:24:14 Europe/Berlin] PHP Warning:  Undefined variable $pdo in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 104
+[12-Feb-2023 10:24:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\xampp\htdocs\n-web-framework\app\Core\Database.php:104
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(11): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 104
+[12-Feb-2023 10:27:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB" in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 8
+[12-Feb-2023 10:27:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB" in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 8
+[12-Feb-2023 10:29:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB" in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(13): getCategories()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php on line 8
+[12-Feb-2023 10:29:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB" in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(13): getCategories()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php on line 8
+[12-Feb-2023 10:30:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB" in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(13): getCategories()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php on line 8
+[12-Feb-2023 10:31:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB" in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(13): getCategories()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php on line 8
+[12-Feb-2023 10:32:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Database::prepare() in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php:9
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 9
+[12-Feb-2023 10:32:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Database::prepare() in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php:9
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 9
+[12-Feb-2023 10:34:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot access private property Database::$pdo in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php:9
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(23): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 9
+[13-Feb-2023 08:41:59 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Error while fetching data: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'userIDuserName' in 'field list' in D:\xampp\htdocs\n-web-framework\app\Core\Model_working.php:55
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(17): Model->read('user', Array, 'userIDuserName,...')
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model_working.php on line 55
+[13-Feb-2023 09:04:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:04:30 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:05:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:05:28 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:05:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:05:29 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:08:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:08:07 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:08:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:08:50 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:08:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:08:52 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:09:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:09:00 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:09:02 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:09:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:09:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:09:33 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:10:02 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:10:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:20
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:10:49 Europe/Berlin] PHP Warning:  Undefined variable $user in D:\xampp\htdocs\n-web-framework\index.php on line 19
+[13-Feb-2023 09:23:17 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type int in D:\xampp\htdocs\n-web-framework\index.php on line 21
+[13-Feb-2023 09:23:17 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\index.php:21
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 21
+[13-Feb-2023 09:24:07 Europe/Berlin] PHP Warning:  Undefined variable $user in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:24:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:24:07 Europe/Berlin] PHP Warning:  Undefined variable $user in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:24:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:24:07 Europe/Berlin] PHP Warning:  Undefined variable $user in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:24:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\index.php on line 20
+[13-Feb-2023 09:27:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class PDOStatement could not be converted to string in D:\xampp\htdocs\n-web-framework\app\Core\Model_working.php:136
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(18): Model->readOne('user', Array)
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model_working.php on line 136
+[13-Feb-2023 09:30:16 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Core/Model.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\index.php on line 15
+[13-Feb-2023 09:30:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Core/Model.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\index.php:15
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 15
+[13-Feb-2023 09:33:18 Europe/Berlin] PHP Warning:  Undefined array key "userID" in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 21
+[13-Feb-2023 09:33:18 Europe/Berlin] PHP Warning:  Undefined array key "userName" in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 21
+[13-Feb-2023 09:33:18 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 21
+[13-Feb-2023 09:33:53 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:37
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(16): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 37
+[13-Feb-2023 09:34:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:37
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(16): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 37
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 37
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 42
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 52
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 57
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 37
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 42
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 52
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 57
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 37
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 42
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 52
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 57
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 37
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 42
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 52
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 57
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 37
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 42
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 52
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 57
+[13-Feb-2023 09:34:30 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[13-Feb-2023 09:35:05 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Error while fetching data: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '  FROM information_schema.tables WHERE table_schema = ?' at line 1 in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:62
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php(20): Model->read('information_sch...', Array, ', ')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 62
+[13-Feb-2023 09:41:46 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Error while fetching data: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY table_name ASC' at line 1 in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php(20): Model->read('information_sch...', Array, 'table_name, tab...', ' ORDER BY ORDER...')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 63
+[13-Feb-2023 09:42:45 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Error while fetching data: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY table_name ASC' at line 1 in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php(20): Model->read('information_sch...', Array, 'table_name, tab...', ' ORDER BY ORDER...')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 63
+[13-Feb-2023 09:43:17 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Error while fetching data: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY table_name ASC' at line 1 in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php(20): Model->read('information_sch...', Array, 'table_name, tab...', ' ORDER BY ORDER...')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 63
+[13-Feb-2023 09:49:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: getTables(): Return value must be of type array|string, none returned in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php:31
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(13): getTables()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 31
+[13-Feb-2023 09:50:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(16): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 09:50:27 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(16): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 15:47:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:5
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 5
+[13-Feb-2023 15:49:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getTables() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 14
+[13-Feb-2023 15:50:06 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Error: Error while fetching data: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'table_nam' in 'field list' in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php:60
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(15): AdminModel->getTables()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 60
+[13-Feb-2023 15:50:17 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(18): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 15:50:31 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Error: Error while fetching data: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'table_nam' in 'field list' in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php:60
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(15): AdminModel->getTables()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 60
+[13-Feb-2023 15:51:10 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Error: Error: Error while fetching data: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'table_nam' in 'field list' in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:18
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 18
+[13-Feb-2023 15:51:57 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 59 does not match ')' in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 60
+[13-Feb-2023 15:51:59 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 59 does not match ')' in D:\xampp\htdocs\n-web-framework\app\Models\admin\AdminModel.php on line 60
+[13-Feb-2023 15:52:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(18): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 15:52:58 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 36
+[13-Feb-2023 15:53:10 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(18): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 15:53:41 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(18): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 15:53:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(18): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 15:53:44 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(18): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 15:54:33 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(204): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(18): Router::renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#4 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[13-Feb-2023 16:02:41 Europe/Berlin] PHP Fatal error:  A void function must not return a value in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 171
+[13-Feb-2023 16:02:43 Europe/Berlin] PHP Fatal error:  A void function must not return a value in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 171
+[13-Feb-2023 16:05:00 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadModel(): Return value must be of type object, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:178
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 178
+[13-Feb-2023 16:06:16 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadModel(): Return value must be of type object|string, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:178
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 178
+[13-Feb-2023 16:06:32 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadModel(): Return value must be of type object|string, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:178
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 178
+[13-Feb-2023 16:06:33 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadModel(): Return value must be of type object|string, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:178
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 178
+[13-Feb-2023 16:06:38 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadModel(): Return value must be of type object|string, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:178
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 178
+[13-Feb-2023 16:07:21 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadModel(): Return value must be of type object|string, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:178
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 178
+[13-Feb-2023 16:08:13 Europe/Berlin] PHP Warning:  Undefined variable $model in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 15
+[13-Feb-2023 16:08:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getTables() on null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:15
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 15
+[14-Feb-2023 10:12:14 Europe/Berlin] PHP Warning:  Undefined variable $model in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 15
+[14-Feb-2023 10:12:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getTables() on null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:15
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 15
+[14-Feb-2023 10:12:15 Europe/Berlin] PHP Warning:  Undefined variable $model in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 15
+[14-Feb-2023 10:12:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getTables() on null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:15
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 15
+[14-Feb-2023 10:12:36 Europe/Berlin] PHP Warning:  Undefined variable $model in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 13
+[14-Feb-2023 10:12:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getTables() on null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 13
+[14-Feb-2023 10:12:37 Europe/Berlin] PHP Warning:  Undefined variable $model in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 13
+[14-Feb-2023 10:12:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getTables() on null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 13
+[14-Feb-2023 10:12:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getTables() on null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 13
+[14-Feb-2023 10:54:50 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Router::loadModel(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 11 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:164
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(11): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 164
+[14-Feb-2023 10:55:06 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Router::loadModel(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 11 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:164
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(11): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(153): index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 164
+[14-Feb-2023 10:57:38 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Router::loadModel(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 4 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:164
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(55): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 164
+[14-Feb-2023 11:00:02 Europe/Berlin] PHP Fatal error:  A void function must not return a value in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 147
+[14-Feb-2023 11:00:33 Europe/Berlin] PHP Warning:  Undefined variable $model in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 146
+[14-Feb-2023 11:00:33 Europe/Berlin] PHP Deprecated:  class_exists(): Passing null to parameter #1 ($class) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 146
+[14-Feb-2023 11:00:33 Europe/Berlin] PHP Warning:  Undefined variable $model_path in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 149
+[14-Feb-2023 11:00:33 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:169
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(56): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 169
+[14-Feb-2023 11:01:41 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Router::loadController(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 56 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:140
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(56): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 140
+[14-Feb-2023 11:02:56 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:169
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(56): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 169
+[14-Feb-2023 11:05:37 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ")", expecting variable in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 23
+[14-Feb-2023 11:05:56 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:169
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(56): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 169
+[14-Feb-2023 11:08:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:169
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(56): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 169
+[14-Feb-2023 11:17:08 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:169
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(56): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 169
+[14-Feb-2023 11:19:59 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:169
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(56): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 169
+[14-Feb-2023 11:55:12 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 15 and defined in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(15): dd('admin/AdminCont...')
+#1 D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php(3): Router::route('/admin', 'admin/AdminCont...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(44): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php on line 8
+[14-Feb-2023 11:55:26 Europe/Berlin] PHP Deprecated:  Creation of dynamic property Router::$controller_name is deprecated in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 57
+[14-Feb-2023 11:55:26 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:172
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(59): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 172
+[14-Feb-2023 11:55:51 Europe/Berlin] PHP Deprecated:  Creation of dynamic property Router::$controller_name is deprecated in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 57
+[14-Feb-2023 11:55:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:172
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(59): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 172
+[14-Feb-2023 11:56:52 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:173
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 173
+[14-Feb-2023 11:57:36 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:173
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 173
+[14-Feb-2023 12:00:41 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:173
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('admin/AdminCont...', 'index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 173
+[14-Feb-2023 12:02:38 Europe/Berlin] PHP Warning:  Undefined array key "callback" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:02:38 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, no array or string given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:02:49 Europe/Berlin] PHP Warning:  Undefined array key "callback" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:02:49 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, no array or string given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:04:38 Europe/Berlin] PHP Warning:  Undefined array key "callback" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:04:38 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, no array or string given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:05:24 Europe/Berlin] PHP Warning:  Undefined array key "callback" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:05:24 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, no array or string given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:05:25 Europe/Berlin] PHP Warning:  Undefined array key "callback" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:05:25 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, no array or string given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:05:27 Europe/Berlin] PHP Warning:  Undefined array key "callback" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:05:27 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, no array or string given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:63
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 63
+[14-Feb-2023 12:05:51 Europe/Berlin] PHP Warning:  Undefined variable $controller in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 150
+[14-Feb-2023 12:05:51 Europe/Berlin] PHP Deprecated:  class_exists(): Passing null to parameter #1 ($class) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 150
+[14-Feb-2023 12:05:51 Europe/Berlin] PHP Warning:  Undefined variable $controller in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 153
+[14-Feb-2023 12:05:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:173
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 173
+[14-Feb-2023 12:06:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:25
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 25
+[14-Feb-2023 12:07:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:25
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 25
+[14-Feb-2023 12:07:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:25
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 25
+[14-Feb-2023 12:15:18 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, function "index" not found or invalid function name in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:167
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 167
+[14-Feb-2023 12:17:01 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, function "index" not found or invalid function name in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:168
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 168
+[14-Feb-2023 12:17:47 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Router::loadController(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:177
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 177
+[14-Feb-2023 12:23:15 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, function "index" not found or invalid function name in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:167
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 167
+[14-Feb-2023 12:25:46 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, no array or string given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:167
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 167
+[14-Feb-2023 12:26:07 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, function "AdminController" not found or invalid function name in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:167
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#1 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 167
+[14-Feb-2023 12:28:54 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Router::loadModel(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 4 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:178
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(148): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 178
+[14-Feb-2023 13:06:21 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Router::loadModel(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 4 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:136
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(4): Router::loadModel('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(106): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#3 D:\xampp\htdocs\n-web-framework\index.php(25): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 136
+[14-Feb-2023 13:08:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:26
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(111): AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 26
+[14-Feb-2023 13:08:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:26
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(111): AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 26
+[14-Feb-2023 13:09:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:26
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(111): AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 26
+[14-Feb-2023 13:09:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::renderAdminView() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:37
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(125): AdminController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 37
+[14-Feb-2023 13:10:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::renderAdminView() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:41
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(125): AdminController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 41
+[14-Feb-2023 13:10:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::renderAdminView() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:41
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(125): AdminController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(60): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 41
+[14-Feb-2023 16:31:19 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 54
+[14-Feb-2023 16:39:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:4
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(105): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(59): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 4
+[14-Feb-2023 16:46:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php:4
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(105): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(59): Router->loadController('profile')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 4
+[14-Feb-2023 20:18:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:4
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(105): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(59): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 4

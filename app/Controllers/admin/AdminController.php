@@ -1,17 +1,27 @@
 <?php
 
-// Load Model
-Router::loadModel(MODELS_PATH . "/admin/AdminModel.php");
-
-//------------------------------------------------------------
-function index(): void
-//------------------------------------------------------------
+class AdminController extends Controller
 {
-    // Require Login
-    IsUserLoggedIn();
+    private $model;
 
-    $data['rows'] = getTables();
-    $data["title"] = "Home";
+    //------------------------------------------------------------
+    public function __construct()
+    //------------------------------------------------------------
+    {
+        // Load Model
+        $this->model = $this->loadModel(MODELS_PATH . "/admin/AdminModel.php", 'AdminModel');
+    }
 
-    Router::renderAdminView(VIEWS_PATH . "/admin/index.php", $data);
+    //------------------------------------------------------------
+    public function index(): void
+    //------------------------------------------------------------
+    {
+        // Require Login
+        IsUserLoggedIn();
+
+        $data['rows'] = $this->model->getTables();
+        $data["title"] = "Home";
+
+        $this->renderAdminView(VIEWS_PATH . "/admin/index.php", $data);
+    }
 }

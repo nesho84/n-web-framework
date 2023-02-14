@@ -8,6 +8,12 @@ ini_set('display_errors', TRUE); // Error/Exception display, use FALSE only in p
 ini_set('log_errors', TRUE); // Error/Exception file logging engine.
 
 //------------------------------------------------------------
+// Version
+//------------------------------------------------------------
+defined('APP_VERSION')
+    or define('APP_VERSION', '3.1.1');
+
+//------------------------------------------------------------
 // MySQL Connection
 //------------------------------------------------------------
 define('DB_HOST', 'localhost');
@@ -27,50 +33,50 @@ define('A_USER_PASSWORD', '010203');
 //------------------------------------------------------------
 // App 
 //------------------------------------------------------------
-defined("APPURL")
-    or define("APPURL", "http://localhost/n-web-framework");
+defined('APPURL')
+    or define('APPURL', 'http://localhost/n-web-framework');
 
-defined("ADMURL")
-    or define("ADMURL", APPURL . "/admin");
+defined('ADMURL')
+    or define('ADMURL', APPURL . '/admin');
 
-defined("SITE_NAME")
-    or define("SITE_NAME", 'n-web-framework');
+defined('SITE_NAME')
+    or define('SITE_NAME', 'n-web-framework');
 
 /* Email Address - for the Contact page */
-defined("CONTACT_FORM_EMAIL")
-    or define("CONTACT_FORM_EMAIL", 'office@n-web-framework.com');
+defined('CONTACT_FORM_EMAIL')
+    or define('CONTACT_FORM_EMAIL', 'office@n-web-framework.com');
 
-defined("UPLOADURL")
-    or define("UPLOADURL", APPURL . "/public/uploads");
+defined('UPLOADURL')
+    or define('UPLOADURL', APPURL . '/public/uploads');
 
-defined("APPROOT")
-    or define("APPROOT", dirname(__DIR__));
+defined('APPROOT')
+    or define('APPROOT', dirname(__DIR__));
 
 defined('UPLOAD_PATH')
     or define('UPLOAD_PATH', APPROOT . '/public/uploads');
 
-defined("LIBRARY_PATH")
-    or define("LIBRARY_PATH", APPROOT . '/app/Library');
+defined('LIBRARY_PATH')
+    or define('LIBRARY_PATH', APPROOT . '/app/Library');
 
-defined("SCRIPTS_PATH")
-    or define("SCRIPTS_PATH", APPROOT . '/app/js');
+defined('SCRIPTS_PATH')
+    or define('SCRIPTS_PATH', APPROOT . '/app/js');
 
-defined("SCRIPTS_URL")
-    or define("SCRIPTS_URL", APPROOT . '/app/js');
+defined('SCRIPTS_URL')
+    or define('SCRIPTS_URL', APPROOT . '/app/js');
 
-ini_set('error_log', APPROOT . "/error.log"); // Logging file path
+ini_set('error_log', APPROOT . '/error.log'); // Logging file path
 
-defined("CORE_PATH")
-    or define("CORE_PATH", APPROOT . '/app/Core');
+defined('CORE_PATH')
+    or define('CORE_PATH', APPROOT . '/app/Core');
 
-defined("ROUTES_PATH")
-    or define("ROUTES_PATH", APPROOT . '/app/Routes');
+defined('ROUTES_PATH')
+    or define('ROUTES_PATH', APPROOT . '/app/Routes');
 
-defined("CONTROLLERS_PATH")
-    or define("CONTROLLERS_PATH", APPROOT . '/app/Controllers');
+defined('CONTROLLERS_PATH')
+    or define('CONTROLLERS_PATH', APPROOT . '/app/Controllers');
 
-defined("MODELS_PATH")
-    or define("MODELS_PATH", APPROOT . '/app/Models');
+defined('MODELS_PATH')
+    or define('MODELS_PATH', APPROOT . '/app/Models');
 
-defined("VIEWS_PATH")
-    or define("VIEWS_PATH", APPROOT . '/app/Views');
+defined('VIEWS_PATH')
+    or define('VIEWS_PATH', APPROOT . '/app/Views');

@@ -1,15 +1,15 @@
 <?php
 // --- Home --- //
-Router::route('/', 'PublicController@index');
+Router::add('/', 'PublicController@index');
 
 // --- about-us --- //
-Router::route('/about-us', 'PublicController@about_us');
+Router::add('/about-us', 'PublicController@about_us');
 
 // --- contact --- //
-Router::route('/contact', 'PublicController@contact');
-Router::route('/contact/validate', 'PublicController@contact_validate');
+Router::add('/contact', 'PublicController@contact');
+Router::add('/contact/validate', 'PublicController@contact_validate');
 
 // --- ajax test --- //
-Router::route('/ajax_test', 'PublicController@ajax_test');
+Router::add('/ajax_test', 'PublicController@ajax_test');
 // --- slug test --- //
-Router::route('/slug-test/{slug}', 'PublicController@slug_test');
+Router::add('/slug-test/{slug}', 'PublicController@slug_test');

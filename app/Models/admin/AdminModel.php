@@ -1,17 +1,20 @@
 <?php
 
-//------------------------------------------------------------
-function getTables(): array|string
-//------------------------------------------------------------
+class AdminModel extends Model
 {
-    try {
-        $sql = DB->prepare("SELECT `table_name`, `table_rows`
-                FROM information_schema.tables 
-                WHERE table_schema = '" . DB_NAME . "'
-                ORDER BY table_name ASC");
-        $sql->execute();
-        return $sql->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        die($e->getMessage());
+    //------------------------------------------------------------
+    public function getTables(): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            return $this->read(
+                'information_schema.tables',
+                ['table_schema' => DB_NAME,],
+                ['table_name', 'table_rows'],
+                'table_name ASC',
+            );
+        } catch (Exception $e) {
+            return 'Error: ' . $e->getMessage();
+        }
     }
 }
