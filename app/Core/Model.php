@@ -18,7 +18,7 @@ class Model
     // $data = ['name' => 'John Doe', 'email' => 'john@example.com', 'phone' => '555-1234'];
     // $model->create('users', $data);
     //------------------------------------------------------------
-    public function create(string $table, array $data): bool|string
+    public function create(string $table, array $data): bool
     //------------------------------------------------------------
     {
         try {
@@ -51,7 +51,7 @@ class Model
     // $model = new Model();
     // $users = $model->read('user', ['userStatus' => 1], ['userID', 'userName', 'userEmail']);
     //------------------------------------------------------------
-    public function read(string $table, array $conditions = [], array $fields = ['*'], string $orderBy = ''): array|string
+    public function read(string $table, array $conditions = [], array $fields = ['*'], string $orderBy = ''): array
     //------------------------------------------------------------
     {
         try {
@@ -77,7 +77,7 @@ class Model
     // $conditions = ['id' => 1];
     // $model->update('users', $data, $conditions);
     //------------------------------------------------------------
-    public function update(string $table, array $data, array $conditions): int|string
+    public function update(string $table, array $data, array $conditions): int
     //------------------------------------------------------------
     {
         try {
@@ -107,7 +107,7 @@ class Model
     // $conditions = ['id' => 1];
     // $model->delete('users', $conditions);
     //------------------------------------------------------------
-    public function delete(string $table, array $conditions): int|string
+    public function delete(string $table, array $conditions): int
     //------------------------------------------------------------
     {
         try {
@@ -135,7 +135,7 @@ class Model
     // $conditions = ['id' => 1];
     // $user = $model->readOne('users', $conditions);
     //------------------------------------------------------------
-    public function readOne(string $table, array $conditions = [], array $fields = ['*']): array|string
+    public function readOne(string $table, array $conditions = [], array $fields = ['*']): array
     //------------------------------------------------------------
     {
         try {

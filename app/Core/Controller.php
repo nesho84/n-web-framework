@@ -3,7 +3,7 @@
 class Controller
 {
     //------------------------------------------------------------
-    public static function loadModel(string $model_path, string $model): mixed
+    public static function loadModel(string $model_path, string $model): ?object
     //------------------------------------------------------------
     {
         if (file_exists($model_path)) {

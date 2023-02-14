@@ -3,12 +3,12 @@
 class Database
 {
     // MySQL Connection
-    private $host = DB_HOST;
-    private $db_user = DB_USER;
-    private $db_password = DB_PASS;
-    private $db_name = DB_NAME;
-    private $db_charset = DB_CHARSET;
-    private $pdo;
+    private string $host = DB_HOST;
+    private string $db_user = DB_USER;
+    private string $db_password = DB_PASS;
+    private string $db_name = DB_NAME;
+    private string $db_charset = DB_CHARSET;
+    private PDO $pdo;
 
     //------------------------------------------------------------
     public function __construct()
@@ -89,42 +89,42 @@ class Database
     }
 
     //------------------------------------------------------------
-    public function query(string $query)
+    public function query(string $query): PDOStatement|false
     //------------------------------------------------------------
     {
         return $this->pdo->query($query);
     }
 
     //------------------------------------------------------------
-    public function prepare(string $query)
+    public function prepare(string $query): PDOStatement|false
     //------------------------------------------------------------
     {
         return $this->pdo->prepare($query);
     }
 
     //------------------------------------------------------------
-    public function lastInsertId(): int
+    public function lastInsertId(string $name = null): string|int
     //------------------------------------------------------------
     {
-        return $this->pdo->lastInsertId();
+        return $this->pdo->lastInsertId($name);
     }
 
     //------------------------------------------------------------
-    public function beginTransaction()
+    public function beginTransaction(): bool
     //------------------------------------------------------------
     {
         return $this->pdo->beginTransaction();
     }
 
     //------------------------------------------------------------
-    public function commit()
+    public function commit(): bool
     //------------------------------------------------------------
     {
         return $this->pdo->commit();
     }
 
     //------------------------------------------------------------
-    public function rollback()
+    public function rollback(): bool
     //------------------------------------------------------------
     {
         return $this->pdo->rollBack();

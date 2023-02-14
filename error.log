@@ -923,3 +923,26 @@ Stack trace:
 #2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
 #3 {main}
   thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 4
+[14-Feb-2023 20:44:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:4
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(105): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(59): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 4
+[14-Feb-2023 20:44:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php:4
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(105): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(59): Router->loadController('profile')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 4
+[14-Feb-2023 20:45:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:4
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(105): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(59): Router->loadController('index')
+#2 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 4
+[14-Feb-2023 21:17:42 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "{" in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 115
+[14-Feb-2023 21:19:56 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "{" in D:\xampp\htdocs\n-web-framework\app\Core\Database.php on line 115

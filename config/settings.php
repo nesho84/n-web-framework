@@ -6,12 +6,7 @@ error_reporting(E_ALL);
 ini_set('ignore_repeated_errors', TRUE); // always use TRUE
 ini_set('display_errors', TRUE); // Error/Exception display, use FALSE only in production environment or real server.
 ini_set('log_errors', TRUE); // Error/Exception file logging engine.
-
-//------------------------------------------------------------
-// Version
-//------------------------------------------------------------
-defined('APP_VERSION')
-    or define('APP_VERSION', '3.1.1');
+ini_set('error_log', dirname(__DIR__) . '/error.log'); // Logging file path
 
 //------------------------------------------------------------
 // MySQL Connection
@@ -21,6 +16,12 @@ define('DB_CHARSET', 'utf8');
 define('DB_NAME', 'nwf_db');
 define('DB_USER', 'root');
 define('DB_PASS', '123456');
+
+//------------------------------------------------------------
+// Version
+//------------------------------------------------------------
+defined('APP_VERSION')
+    or define('APP_VERSION', '3.1.1');
 
 //------------------------------------------------------------
 // User Admin
@@ -36,6 +37,9 @@ define('A_USER_PASSWORD', '010203');
 defined('APPURL')
     or define('APPURL', 'http://localhost/n-web-framework');
 
+defined('APPROOT')
+    or define('APPROOT', dirname(__DIR__));
+
 defined('ADMURL')
     or define('ADMURL', APPURL . '/admin');
 
@@ -49,9 +53,6 @@ defined('CONTACT_FORM_EMAIL')
 defined('UPLOADURL')
     or define('UPLOADURL', APPURL . '/public/uploads');
 
-defined('APPROOT')
-    or define('APPROOT', dirname(__DIR__));
-
 defined('UPLOAD_PATH')
     or define('UPLOAD_PATH', APPROOT . '/public/uploads');
 
@@ -63,8 +64,6 @@ defined('SCRIPTS_PATH')
 
 defined('SCRIPTS_URL')
     or define('SCRIPTS_URL', APPROOT . '/app/js');
-
-ini_set('error_log', APPROOT . '/error.log'); // Logging file path
 
 defined('CORE_PATH')
     or define('CORE_PATH', APPROOT . '/app/Core');
