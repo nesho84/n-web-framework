@@ -2,7 +2,7 @@
 
 class Model
 {
-    private $db;
+    private Database $db;
 
     // Initializes the database connection when creating an instance of the model
     //------------------------------------------------------------
@@ -16,9 +16,9 @@ class Model
     // Example: 
     // $model = new Model();
     // $data = ['name' => 'John Doe', 'email' => 'john@example.com', 'phone' => '555-1234'];
-    // $model->create('users', $data);
+    // $model->insert('users', $data);
     //------------------------------------------------------------
-    public function create(string $table, array $data): bool
+    protected function insert(string $table, array $data): bool
     //------------------------------------------------------------
     {
         try {
@@ -49,9 +49,9 @@ class Model
     // Reads records from the database table that match the specified conditions
     // Example: 
     // $model = new Model();
-    // $users = $model->read('user', ['userStatus' => 1], ['userID', 'userName', 'userEmail']);
+    // $users = $model->selectAll('user', ['userStatus' => 1], ['userID', 'userName', 'userEmail']);
     //------------------------------------------------------------
-    public function read(string $table, array $conditions = [], array $fields = ['*'], string $orderBy = ''): array
+    protected function selectAll(string $table, array $conditions = [], array $fields = ['*'], string $orderBy = ''): array
     //------------------------------------------------------------
     {
         try {
@@ -70,6 +70,30 @@ class Model
         }
     }
 
+    // Reads one record from the database table that match the specified conditions
+    // Example: 
+    // $model = new Model();
+    // $conditions = ['id' => 1];
+    // $user = $model->selectOne('users', $conditions);
+    //------------------------------------------------------------
+    protected function selectOne(string $table, array $conditions = [], array $fields = ['*']): array
+    //------------------------------------------------------------
+    {
+        try {
+            $fields = empty($fields) ? '*' : implode(', ', $fields);
+            $where = empty($conditions) ? '' : ' WHERE ' . implode(' AND ', array_map(fn ($key) => "$key = :$key", array_keys($conditions)));
+            $sql = "SELECT $fields FROM $table$where LIMIT 1";
+            $stmt = $this->db->prepare($sql);
+            if (!empty($conditions)) {
+                $this->bindParams($stmt, $conditions);
+            }
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            throw new Exception("Error while fetching data: " . $e->getMessage());
+        }
+    }
+
     // Updates records in the database table that match the specified conditions
     // Example: 
     // $model = new Model();
@@ -77,7 +101,7 @@ class Model
     // $conditions = ['id' => 1];
     // $model->update('users', $data, $conditions);
     //------------------------------------------------------------
-    public function update(string $table, array $data, array $conditions): int
+    protected function update(string $table, array $data, array $conditions): int
     //------------------------------------------------------------
     {
         try {
@@ -107,7 +131,7 @@ class Model
     // $conditions = ['id' => 1];
     // $model->delete('users', $conditions);
     //------------------------------------------------------------
-    public function delete(string $table, array $conditions): int
+    protected function delete(string $table, array $conditions): int
     //------------------------------------------------------------
     {
         try {
@@ -126,30 +150,6 @@ class Model
         } catch (PDOException $e) {
             $this->db->rollBack();
             throw new Exception("Error deleting record: " . $e->getMessage());
-        }
-    }
-
-    // Reads one record from the database table that match the specified conditions
-    // Example: 
-    // $model = new Model();
-    // $conditions = ['id' => 1];
-    // $user = $model->readOne('users', $conditions);
-    //------------------------------------------------------------
-    public function readOne(string $table, array $conditions = [], array $fields = ['*']): array
-    //------------------------------------------------------------
-    {
-        try {
-            $fields = empty($fields) ? '*' : implode(', ', $fields);
-            $where = empty($conditions) ? '' : ' WHERE ' . implode(' AND ', array_map(fn ($key) => "$key = :$key", array_keys($conditions)));
-            $sql = "SELECT $fields FROM $table$where LIMIT 1";
-            $stmt = $this->db->prepare($sql);
-            if (!empty($conditions)) {
-                $this->bindParams($stmt, $conditions);
-            }
-            $stmt->execute();
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            throw new Exception("Error while fetching data: " . $e->getMessage());
         }
     }
 

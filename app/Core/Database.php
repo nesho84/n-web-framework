@@ -2,7 +2,6 @@
 
 class Database
 {
-    // MySQL Connection
     private string $host = DB_HOST;
     private string $db_user = DB_USER;
     private string $db_password = DB_PASS;
@@ -16,7 +15,7 @@ class Database
     {
         // Connect to the database
         try {
-            $dsn = 'mysql:host=' . $this->host . ';charset=' . $this->db_charset;
+            $dsn = "mysql:host=$this->host;charset=$this->db_charset";
             $this->pdo = new PDO($dsn, $this->db_user, $this->db_password);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -89,21 +88,21 @@ class Database
     }
 
     //------------------------------------------------------------
-    public function query(string $query): PDOStatement|false
+    public function query(string $query): PDOStatement
     //------------------------------------------------------------
     {
         return $this->pdo->query($query);
     }
 
     //------------------------------------------------------------
-    public function prepare(string $query): PDOStatement|false
+    public function prepare(string $query): PDOStatement
     //------------------------------------------------------------
     {
         return $this->pdo->prepare($query);
     }
 
     //------------------------------------------------------------
-    public function lastInsertId(string $name = null): string|int
+    public function lastInsertId(string $name = null): int
     //------------------------------------------------------------
     {
         return $this->pdo->lastInsertId($name);

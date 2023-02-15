@@ -2,14 +2,14 @@
 
 class AdminController extends Controller
 {
-    private $model;
+    private AdminModel $adminModel;
 
     //------------------------------------------------------------
     public function __construct()
     //------------------------------------------------------------
     {
         // Load Model
-        $this->model = $this->loadModel(MODELS_PATH . "/admin/AdminModel.php", 'AdminModel');
+        $this->adminModel = $this->loadModel(MODELS_PATH . "/admin/AdminModel.php");
     }
 
     //------------------------------------------------------------
@@ -19,7 +19,7 @@ class AdminController extends Controller
         // Require Login
         IsUserLoggedIn();
 
-        $data['rows'] = $this->model->getTables();
+        $data['rows'] = $this->adminModel->getTables();
         $data["title"] = "Home";
 
         $this->renderAdminView(VIEWS_PATH . "/admin/index.php", $data);

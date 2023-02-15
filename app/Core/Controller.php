@@ -3,16 +3,18 @@
 class Controller
 {
     //------------------------------------------------------------
-    public static function loadModel(string $model_path, string $model): ?object
+    protected function loadModel(string $model_path): ?object
     //------------------------------------------------------------
     {
         if (file_exists($model_path)) {
             require_once $model_path;
 
+            $model = basename($model_path, '.php');
+
             if (class_exists($model)) {
                 return new $model();
             } else {
-                echo "Model class $model_path not found";
+                die("Model class $model not found");
             }
         } else {
             die("'Model' file not found '/" . $model_path . "'");
@@ -20,7 +22,7 @@ class Controller
     }
 
     //------------------------------------------------------------
-    public static function renderView(string $view_path, array $data = []): void
+    protected function renderView(string $view_path, array $data = []): void
     //------------------------------------------------------------
     {
         if (file_exists($view_path)) {
@@ -33,7 +35,7 @@ class Controller
     }
 
     //------------------------------------------------------------
-    public static function renderSimpleView(string $view_path, array $data = []): void
+    protected function renderSimpleView(string $view_path, array $data = []): void
     //------------------------------------------------------------
     {
         if (file_exists($view_path)) {
@@ -44,7 +46,7 @@ class Controller
     }
 
     //------------------------------------------------------------
-    public static function renderAdminView(string $view_path, array $data = []): void
+    protected function renderAdminView(string $view_path, array $data = []): void
     //------------------------------------------------------------
     {
         if (file_exists($view_path)) {
