@@ -1737,3 +1737,92 @@ Stack trace:
 [15-Feb-2023 16:56:39 Europe/Berlin] PHP Warning:  Undefined variable $categoryLink in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 23
 [15-Feb-2023 16:56:39 Europe/Berlin] PHP Warning:  Undefined variable $categoryName in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 27
 [15-Feb-2023 16:56:39 Europe/Berlin] PHP Warning:  Undefined variable $categoryDescription in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 31
+[15-Feb-2023 23:50:54 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(54): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(25): Controller->renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(130): AdminController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[15-Feb-2023 23:50:56 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(54): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(25): Controller->renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(130): AdminController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[15-Feb-2023 23:51:00 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(54): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(25): Controller->renderAdminView('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(130): AdminController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 28
+[15-Feb-2023 23:56:52 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, PDOStatement given, called in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 67 and defined in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Model.php(67): dd(Object(PDOStatement))
+#1 D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php(10): Model->read('category', '*', Array, ' ORDER BY categ...', ' LIMIT 2')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(22): CategoriesModel->getCategories()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(130): CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Library\helpers.php on line 8
+[16-Feb-2023 00:01:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesModel::selectOne() in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php:50
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(104): CategoriesModel->getCategoryById(57)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(126): CategoriesController->edit(57)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(27): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php on line 50
+[16-Feb-2023 00:02:08 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 9
+[16-Feb-2023 00:02:08 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 16
+[16-Feb-2023 00:02:08 Europe/Berlin] PHP Warning:  Undefined variable $categoryType in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 19
+[16-Feb-2023 00:02:08 Europe/Berlin] PHP Warning:  Undefined variable $categoryLink in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 23
+[16-Feb-2023 00:02:08 Europe/Berlin] PHP Warning:  Undefined variable $categoryName in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 27
+[16-Feb-2023 00:02:08 Europe/Berlin] PHP Warning:  Undefined variable $categoryDescription in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 31
+[16-Feb-2023 00:02:47 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 9
+[16-Feb-2023 00:02:47 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 16
+[16-Feb-2023 00:02:47 Europe/Berlin] PHP Warning:  Undefined variable $categoryType in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 19
+[16-Feb-2023 00:02:47 Europe/Berlin] PHP Warning:  Undefined variable $categoryLink in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 23
+[16-Feb-2023 00:02:47 Europe/Berlin] PHP Warning:  Undefined variable $categoryName in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 27
+[16-Feb-2023 00:02:47 Europe/Berlin] PHP Warning:  Undefined variable $categoryDescription in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 31
+[16-Feb-2023 00:02:48 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 9
+[16-Feb-2023 00:02:48 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 16
+[16-Feb-2023 00:02:48 Europe/Berlin] PHP Warning:  Undefined variable $categoryType in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 19
+[16-Feb-2023 00:02:48 Europe/Berlin] PHP Warning:  Undefined variable $categoryLink in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 23
+[16-Feb-2023 00:02:48 Europe/Berlin] PHP Warning:  Undefined variable $categoryName in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 27
+[16-Feb-2023 00:02:48 Europe/Berlin] PHP Warning:  Undefined variable $categoryDescription in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 31
+[16-Feb-2023 00:04:22 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 9
+[16-Feb-2023 00:04:22 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 16
+[16-Feb-2023 00:04:22 Europe/Berlin] PHP Warning:  Undefined variable $categoryType in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 19
+[16-Feb-2023 00:04:22 Europe/Berlin] PHP Warning:  Undefined variable $categoryLink in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 23
+[16-Feb-2023 00:04:22 Europe/Berlin] PHP Warning:  Undefined variable $categoryName in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 27
+[16-Feb-2023 00:04:22 Europe/Berlin] PHP Warning:  Undefined variable $categoryDescription in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 31
+[16-Feb-2023 00:04:35 Europe/Berlin] PHP Warning:  Undefined variable $limit in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 86
+[16-Feb-2023 00:04:35 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 9
+[16-Feb-2023 00:04:35 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 16
+[16-Feb-2023 00:04:35 Europe/Berlin] PHP Warning:  Undefined variable $categoryType in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 19
+[16-Feb-2023 00:04:35 Europe/Berlin] PHP Warning:  Undefined variable $categoryLink in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 23
+[16-Feb-2023 00:04:35 Europe/Berlin] PHP Warning:  Undefined variable $categoryName in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 27
+[16-Feb-2023 00:04:35 Europe/Berlin] PHP Warning:  Undefined variable $categoryDescription in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 31
+[16-Feb-2023 00:04:42 Europe/Berlin] PHP Warning:  Undefined variable $limit in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 86
+[16-Feb-2023 00:04:42 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 9
+[16-Feb-2023 00:04:42 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 16
+[16-Feb-2023 00:04:42 Europe/Berlin] PHP Warning:  Undefined variable $categoryType in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 19
+[16-Feb-2023 00:04:42 Europe/Berlin] PHP Warning:  Undefined variable $categoryLink in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 23
+[16-Feb-2023 00:04:42 Europe/Berlin] PHP Warning:  Undefined variable $categoryName in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 27
+[16-Feb-2023 00:04:42 Europe/Berlin] PHP Warning:  Undefined variable $categoryDescription in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 31
+[16-Feb-2023 00:05:06 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 9
+[16-Feb-2023 00:05:06 Europe/Berlin] PHP Warning:  Undefined variable $categoryID in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 16
+[16-Feb-2023 00:05:06 Europe/Berlin] PHP Warning:  Undefined variable $categoryType in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 19
+[16-Feb-2023 00:05:06 Europe/Berlin] PHP Warning:  Undefined variable $categoryLink in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 23
+[16-Feb-2023 00:05:06 Europe/Berlin] PHP Warning:  Undefined variable $categoryName in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 27
+[16-Feb-2023 00:05:06 Europe/Berlin] PHP Warning:  Undefined variable $categoryDescription in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 31

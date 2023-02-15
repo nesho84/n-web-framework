@@ -12,6 +12,54 @@ class Model
         $this->db = new Database();
     }
 
+    // Reads records from the database table that match the specified conditions
+    // Example: 
+    // $model = new Model();
+    // $users = $model->selectAll('user', ['userStatus' => 1], ['userID', 'userName', 'userEmail']);
+    //------------------------------------------------------------
+    protected function selectAll(string $table, array $fields = [], array $conditions = [], string $orderBy = '', int $limit = null): array
+    //------------------------------------------------------------
+    {
+        try {
+            $fields = empty($fields) ? '*' : implode(', ', $fields);
+            $where = empty($conditions) ? '' : ' WHERE ' . implode(' AND ', array_map(fn ($key) => "$key = :$key", array_keys($conditions)));
+            $orderBy = empty($orderBy) ? '' : " ORDER BY $orderBy";
+            $limit = ($limit === null) ? null : " LIMIT $limit";
+            $sql = "SELECT $fields FROM $table$where$orderBy$limit";
+            $stmt = $this->db->prepare($sql);
+            if (!empty($conditions)) {
+                $this->bindParams($stmt, $conditions);
+            }
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            throw new Exception("Error while fetching data: " . $e->getMessage());
+        }
+    }
+
+    // Reads records from the database table that match the specified conditions
+    // Example: 
+    // $model = new Model();
+    // $users = $model->selectOne('user', ['userID', 'userName', 'userEmail'], ['userStatus' => 1]);
+    //------------------------------------------------------------
+    protected function selectOne(string $table, array $fields = [], array $conditions = []): array
+    //------------------------------------------------------------
+    {
+        try {
+            $fields = empty($fields) ? '*' : implode(', ', $fields);
+            $where = empty($conditions) ? '' : ' WHERE ' . implode(' AND ', array_map(fn ($key) => "$key = :$key", array_keys($conditions)));
+            $sql = "SELECT $fields FROM $table$where";
+            $stmt = $this->db->prepare($sql);
+            if (!empty($conditions)) {
+                $this->bindParams($stmt, $conditions);
+            }
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            throw new Exception("Error while fetching data: " . $e->getMessage());
+        }
+    }
+
     // Creates a new record in the database table
     // Example: 
     // $model = new Model();
@@ -37,60 +85,13 @@ class Model
 
             // Commits the transaction and returns true to indicate success
             $this->db->commit();
+
             // return (int)$this->db->lastInsertId();
             return true;
         } catch (PDOException $e) {
             // Rolls back the transaction if an error occurs and throws an exception with an error message            
             $this->db->rollBack();
             throw new Exception("Error creating record: " . $e->getMessage());
-        }
-    }
-
-    // Reads records from the database table that match the specified conditions
-    // Example: 
-    // $model = new Model();
-    // $users = $model->selectAll('user', ['userStatus' => 1], ['userID', 'userName', 'userEmail']);
-    //------------------------------------------------------------
-    protected function selectAll(string $table, array $conditions = [], array $fields = ['*'], string $orderBy = ''): array
-    //------------------------------------------------------------
-    {
-        try {
-            $fields = empty($fields) ? '*' : implode(', ', $fields);
-            $where = empty($conditions) ? '' : ' WHERE ' . implode(' AND ', array_map(fn ($key) => "$key = :$key", array_keys($conditions)));
-            $orderBy = empty($orderBy) ? '' : " ORDER BY $orderBy";
-            $sql = "SELECT $fields FROM $table$where$orderBy";
-            $stmt = $this->db->prepare($sql);
-            if (!empty($conditions)) {
-                $this->bindParams($stmt, $conditions);
-            }
-            $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            throw new Exception("Error while fetching data: " . $e->getMessage());
-        }
-    }
-
-    // Reads one record from the database table that match the specified conditions
-    // Example: 
-    // $model = new Model();
-    // $conditions = ['id' => 1];
-    // $user = $model->selectOne('users', $conditions);
-    //------------------------------------------------------------
-    protected function selectOne(string $table, array $conditions = [], array $fields = ['*']): array
-    //------------------------------------------------------------
-    {
-        try {
-            $fields = empty($fields) ? '*' : implode(', ', $fields);
-            $where = empty($conditions) ? '' : ' WHERE ' . implode(' AND ', array_map(fn ($key) => "$key = :$key", array_keys($conditions)));
-            $sql = "SELECT $fields FROM $table$where LIMIT 1";
-            $stmt = $this->db->prepare($sql);
-            if (!empty($conditions)) {
-                $this->bindParams($stmt, $conditions);
-            }
-            $stmt->execute();
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            throw new Exception("Error while fetching data: " . $e->getMessage());
         }
     }
 

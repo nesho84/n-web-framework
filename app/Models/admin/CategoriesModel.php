@@ -47,7 +47,10 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            return $this->selectOne(table: 'category', conditions: ['categoryID' => $id]);
+            return $this->selectOne(
+                table: 'category',
+                conditions: ['categoryID' => $id]
+            );
         } catch (Exception $e) {
             return $e->getMessage();
         }

@@ -8,10 +8,10 @@ class AdminModel extends Model
     {
         try {
             return $this->selectAll(
-                'information_schema.tables',
-                ['table_schema' => DB_NAME,],
-                ['table_name', 'table_rows'],
-                'table_name ASC',
+                table: 'information_schema.tables',
+                fields: ['table_name', 'table_rows'],
+                conditions: ['table_schema' => DB_NAME,],
+                orderBy: 'table_name ASC',
             );
         } catch (Exception $e) {
             return $e->getMessage();
