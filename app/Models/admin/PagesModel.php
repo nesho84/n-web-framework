@@ -1,44 +1,47 @@
 <?php
 
-//------------------------------------------------------------
-function getPages(): array|string
-//------------------------------------------------------------
+class PagesModel extends Model
 {
-    try {
-        $sql = DB->prepare(
-            "SELECT * FROM pages AS p
-            INNER JOIN (SELECT userID, userName FROM user) as u 
-            ON u.userID = p.userID
-            WHERE p.pageID IS NOT NULL
-            ORDER BY p.pageName ASC"
-        );
-        $sql->execute();
-        return $sql->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        die($e->getMessage());
+    //------------------------------------------------------------
+    public function getPages(): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare(
+                "SELECT * FROM pages AS p
+                INNER JOIN (SELECT userID, userName FROM user) as u 
+                ON u.userID = p.userID
+                WHERE p.pageID IS NOT NULL
+                ORDER BY p.pageName ASC"
+            );
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
-}
-
-//------------------------------------------------------------
-function getPageById(int $id): array|string
-//------------------------------------------------------------
-{
-    try {
-        $sql = DB->prepare("SELECT * FROM pages WHERE pageID = :id");
-        $sql->execute(['id' => $id]);
-        return $sql->fetch(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        die($e->getMessage());
+    // ....continue here....
+    //------------------------------------------------------------
+    public function getPageById(int $id): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("SELECT * FROM pages WHERE pageID = :id");
+            $this->bindValues($stmt, ['id' => $id]);
+            $stmt->execute();
+            return $stmt->fetch();
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
-}
 
-//------------------------------------------------------------
-function insertPage(array $postArray): bool|string
-//------------------------------------------------------------
-{
-    try {
-        $sql = DB->prepare(
-            "INSERT INTO pages (
+    //------------------------------------------------------------
+    public function insertPage(array $postArray): bool|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare(
+                "INSERT INTO pages (
             userID,
             pageName, 
             pageTitle, 
@@ -56,31 +59,31 @@ function insertPage(array $postArray): bool|string
             :PageMetaTitle,
             :PageMetaDescription,
             :PageMetaKeywords)"
-        );
-        $sql->execute([
-            ':userID' => $postArray['userID'],
-            ':pageName' => $postArray['pageName'],
-            ':pageTitle' => $postArray['pageTitle'],
-            ':pageContent' => $postArray['pageContent'],
-            ':pageLanguage' => $postArray['pageLanguage'],
-            ':PageMetaTitle' => $postArray['PageMetaTitle'],
-            ':PageMetaDescription' => $postArray['PageMetaDescription'],
-            ':PageMetaKeywords' => $postArray['PageMetaKeywords'],
-        ]);
-        // $lastInsertId = DB->lastInsertId();
-        return true;
-    } catch (PDOException $e) {
-        return $e->getMessage();
+            );
+            $stmt->execute([
+                ':userID' => $postArray['userID'],
+                ':pageName' => $postArray['pageName'],
+                ':pageTitle' => $postArray['pageTitle'],
+                ':pageContent' => $postArray['pageContent'],
+                ':pageLanguage' => $postArray['pageLanguage'],
+                ':PageMetaTitle' => $postArray['PageMetaTitle'],
+                ':PageMetaDescription' => $postArray['PageMetaDescription'],
+                ':PageMetaKeywords' => $postArray['PageMetaKeywords'],
+            ]);
+            // $lastInsertId = $this->lastInsertId();
+            return true;
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
-}
 
-//------------------------------------------------------------
-function updatePage(array $postArray): bool|string
-//------------------------------------------------------------
-{
-    try {
-        $sql = DB->prepare(
-            "UPDATE pages 
+    //------------------------------------------------------------
+    public function updatePage(array $postArray): bool|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare(
+                "UPDATE pages 
             SET pageName = :pageName,
                 userID = :userID,
                 pageTitle = :pageTitle,
@@ -91,34 +94,35 @@ function updatePage(array $postArray): bool|string
                 pageStatus = :pageStatus,
                 pageContent = :pageContent
             WHERE pageID = :pageID"
-        );
-        $sql->execute([
-            ':pageID' => $postArray['pageID'],
-            ':userID' => $postArray['userID'],
-            ':pageName' => $postArray['pageName'],
-            ':pageTitle' => $postArray['pageTitle'],
-            ':pageLanguage' => $postArray['pageLanguage'],
-            ':PageMetaTitle' => $postArray['PageMetaTitle'],
-            ':PageMetaDescription' => $postArray['PageMetaDescription'],
-            ':PageMetaKeywords' => $postArray['PageMetaKeywords'],
-            ':pageStatus' => $postArray['pageStatus'],
-            ':pageContent' => $postArray['pageContent'],
-        ]);
-        return true;
-    } catch (PDOException $e) {
-        return $e->getMessage();
+            );
+            $stmt->execute([
+                ':pageID' => $postArray['pageID'],
+                ':userID' => $postArray['userID'],
+                ':pageName' => $postArray['pageName'],
+                ':pageTitle' => $postArray['pageTitle'],
+                ':pageLanguage' => $postArray['pageLanguage'],
+                ':PageMetaTitle' => $postArray['PageMetaTitle'],
+                ':PageMetaDescription' => $postArray['PageMetaDescription'],
+                ':PageMetaKeywords' => $postArray['PageMetaKeywords'],
+                ':pageStatus' => $postArray['pageStatus'],
+                ':pageContent' => $postArray['pageContent'],
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
-}
 
-//------------------------------------------------------------
-function deletePage(int $id): bool|string
-//------------------------------------------------------------
-{
-    try {
-        $sql = DB->prepare("DELETE FROM pages WHERE pageID = :id");
-        $sql->execute([':id' => $id]);
-        return true;
-    } catch (PDOException $e) {
-        return $e->getMessage();
+    //------------------------------------------------------------
+    public function deletePage(int $id): bool|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("DELETE FROM pages WHERE pageID = :id");
+            $stmt->execute([':id' => $id]);
+            return true;
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
 }

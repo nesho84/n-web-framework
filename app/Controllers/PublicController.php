@@ -1,7 +1,7 @@
 <?php
 
 // Load Model
-Router::loadModel(MODELS_PATH . "/PublicModel.php");
+Router::loadModel("/PublicModel.php");
 
 //------------------------------------------------------------
 function index(): void

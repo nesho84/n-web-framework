@@ -9,7 +9,7 @@ class AdminController extends Controller
     //------------------------------------------------------------
     {
         // Load Model
-        $this->adminModel = $this->loadModel(MODELS_PATH . "/admin/AdminModel.php");
+        $this->adminModel = $this->loadModel("/admin/AdminModel");
     }
 
     //------------------------------------------------------------
@@ -19,9 +19,15 @@ class AdminController extends Controller
         // Require Login
         IsUserLoggedIn();
 
-        $data['rows'] = $this->adminModel->getTables();
         $data["title"] = "Home";
 
-        $this->renderAdminView(VIEWS_PATH . "/admin/index.php", $data);
+        $result = $this->adminModel->getTables(DB_NAME);
+        if (is_array($result)) {
+            $data['rows'] = $result;
+        } else {
+            setFlashMsg('error', $result);
+        }
+
+        $this->renderAdminView("/admin/index", $data);
     }
 }

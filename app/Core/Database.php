@@ -7,7 +7,7 @@ class Database
     private string $db_password = DB_PASS;
     private string $db_name = DB_NAME;
     private string $db_charset = DB_CHARSET;
-    private PDO $pdo;
+    protected PDO $pdo;
 
     //------------------------------------------------------------
     public function __construct()
@@ -16,10 +16,13 @@ class Database
         // Connect to the database
         try {
             $dsn = "mysql:host=$this->host;charset=$this->db_charset";
+
             $this->pdo = new PDO($dsn, $this->db_user, $this->db_password);
+
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+
             // Define DB constant as Global
             defined("DB") or define("DB", $this->pdo);
         } catch (PDOException $e) {
@@ -85,47 +88,5 @@ class Database
     //------------------------------------------------------------
     {
         die('<p>' . $message . '</p><p><a href="' . APPURL . '/setup.php">or Setup default configuration...</a></p>');
-    }
-
-    //------------------------------------------------------------
-    public function query(string $query): PDOStatement
-    //------------------------------------------------------------
-    {
-        return $this->pdo->query($query);
-    }
-
-    //------------------------------------------------------------
-    public function prepare(string $query): PDOStatement
-    //------------------------------------------------------------
-    {
-        return $this->pdo->prepare($query);
-    }
-
-    //------------------------------------------------------------
-    public function lastInsertId(string $name = null): int
-    //------------------------------------------------------------
-    {
-        return $this->pdo->lastInsertId($name);
-    }
-
-    //------------------------------------------------------------
-    public function beginTransaction(): bool
-    //------------------------------------------------------------
-    {
-        return $this->pdo->beginTransaction();
-    }
-
-    //------------------------------------------------------------
-    public function commit(): bool
-    //------------------------------------------------------------
-    {
-        return $this->pdo->commit();
-    }
-
-    //------------------------------------------------------------
-    public function rollback(): bool
-    //------------------------------------------------------------
-    {
-        return $this->pdo->rollBack();
     }
 }

@@ -7,11 +7,10 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            return $this->selectAll(
-                table: 'category',
-                orderBy: 'categoryDateCreated DESC',
-            );
-        } catch (Exception $e) {
+            $stmt = $this->prepare("SELECT * FROM category ORDER BY categoryDateCreated DESC");
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
             return $e->getMessage();
         }
     }
@@ -20,26 +19,28 @@ class CategoriesModel extends Model
     public function getCategoriesByType(string $ctype): array|string
     //------------------------------------------------------------
     {
-        // try {
-        //     $sql = DB->prepare("SELECT * FROM category WHERE categoryType = :ctype");
-        //     $sql->execute(['ctype' => $ctype]);
-        //     return $sql->fetchAll(PDO::FETCH_ASSOC);
-        // } catch (Exception $e) {
-        //     return $e->getMessage();
-        // }
+        try {
+            $stmt = $this->prepare("SELECT * FROM category WHERE categoryType = :ctype");
+            $this->bindValues($stmt, ['ctype' => $ctype]);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
 
     //------------------------------------------------------------
     public function getCategoriesByName(string $cname): array|string
     //------------------------------------------------------------
     {
-        // try {
-        //     $sql = DB->prepare("SELECT * FROM category WHERE categoryName = :cname");
-        //     $sql->execute(['cname' => $cname]);
-        //     return $sql->fetchAll(PDO::FETCH_ASSOC);
-        // } catch (Exception $e) {
-        //     return $e->getMessage();
-        // }
+        try {
+            $stmt = $this->prepare("SELECT * FROM category WHERE categoryName = :cname");
+            $this->bindValues($stmt, ['cname' => $cname]);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
 
     //------------------------------------------------------------
@@ -47,11 +48,11 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            return $this->selectOne(
-                table: 'category',
-                conditions: ['categoryID' => $id]
-            );
-        } catch (Exception $e) {
+            $stmt = $this->prepare("SELECT * FROM category WHERE categoryID = :id");
+            $this->bindValues($stmt, ['id' => $id]);
+            $stmt->execute();
+            return $stmt->fetch();
+        } catch (PDOException $e) {
             return $e->getMessage();
         }
     }
@@ -60,76 +61,60 @@ class CategoriesModel extends Model
     public function insertCategory(array $postArray): bool|string
     //------------------------------------------------------------
     {
-        // try {
-
-        //     $sql = DB->prepare(
-        //         "INSERT INTO category (
-        //     userID,
-        //     categoryType, 
-        //     categoryLink, 
-        //     categoryName, 
-        //     categoryDescription)
-        //     VALUES (
-        //     :userID, 
-        //     :categoryType, 
-        //     :categoryLink, 
-        //     :categoryName,  
-        //     :categoryDescription)"
-        //     );
-        //     $sql->execute([
-        //         ':userID' => $postArray['userID'],
-        //         ':categoryType' => $postArray['categoryType'],
-        //         ':categoryLink' => $postArray['categoryLink'],
-        //         ':categoryName' => $postArray['categoryName'],
-        //         ':categoryDescription' => $postArray['categoryDescription'],
-        //     ]);
-
-        //     // $lastInsertId = DB->lastInsertId();
-
-        //     return true;
-        // } catch (Exception $e) {
-        //     return $e->getMessage();
-        // }
+        try {
+            $stmt = $this->prepare(
+                "INSERT INTO category (
+                userID,
+                categoryType, 
+                categoryLink, 
+                categoryName, 
+                categoryDescription)
+                VALUES (
+                :userID, 
+                :categoryType, 
+                :categoryLink, 
+                :categoryName,  
+                :categoryDescription)"
+            );
+            $this->bindValues($stmt, $postArray);
+            return $stmt->execute();
+            // // $lastInsertId = $this->lastInsertId();
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
 
     //------------------------------------------------------------
     public function updateCategory(array $postArray): bool|string
     //------------------------------------------------------------
     {
-        // try {
-        //     $sql = DB->prepare(
-        //         "UPDATE category 
-        //     SET userID = :userID,
-        //         categoryType = :categoryType,
-        //         categoryLink = :categoryLink,
-        //         categoryName = :categoryName,
-        //         categoryDescription = :categoryDescription
-        //     WHERE categoryID = :categoryID"
-        //     );
-        //     $sql->execute([
-        //         ':categoryID' => $postArray['categoryID'],
-        //         ':userID' => $postArray['userID'],
-        //         ':categoryType' => $postArray['categoryType'],
-        //         ':categoryLink' => $postArray['categoryLink'],
-        //         ':categoryName' => $postArray['categoryName'],
-        //         ':categoryDescription' => $postArray['categoryDescription'],
-        //     ]);
-        //     return true;
-        // } catch (Exception $e) {
-        //     return $e->getMessage();
-        // }
+        try {
+            $stmt = $this->prepare(
+                "UPDATE category 
+                SET userID = :userID,
+                    categoryType = :categoryType,
+                    categoryLink = :categoryLink,
+                    categoryName = :categoryName,
+                    categoryDescription = :categoryDescription
+                WHERE categoryID = :categoryID"
+            );
+            $this->bindValues($stmt, $postArray);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
 
     //------------------------------------------------------------
     public function deleteCategory(int $id): bool|string
     //------------------------------------------------------------
     {
-        // try {
-        //     $sql = DB->prepare("DELETE FROM category WHERE categoryID = :id");
-        //     $sql->execute([':id' => $id]);
-        //     return true;
-        // } catch (Exception $e) {
-        //     return $e->getMessage();
-        // }
+        try {
+            $stmt = $this->prepare("DELETE FROM category WHERE categoryID = :id");
+            $this->bindValues($stmt, ['id' => $id]);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
 }

@@ -1,5 +1,5 @@
 <?php
-if ($data['rows'] > 0) {
+if (isset($data['rows']) && count($data['rows']) > 0) {
     // Convert array keys into variables
     extract($data['rows']);
 

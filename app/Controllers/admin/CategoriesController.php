@@ -9,7 +9,7 @@ class CategoriesController extends Controller
     //------------------------------------------------------------
     {
         // Load Model
-        $this->categoriesModel = $this->loadModel(MODELS_PATH . "/admin/CategoriesModel.php");
+        $this->categoriesModel = $this->loadModel("/admin/CategoriesModel");
     }
 
     //------------------------------------------------------------
@@ -19,10 +19,16 @@ class CategoriesController extends Controller
         // Require Login
         IsUserLoggedIn();
 
-        $data['rows'] = $this->categoriesModel->getCategories();
         $data['title'] = 'Categories';
 
-        $this->renderAdminView(VIEWS_PATH . '/admin/categories/categories.php', $data);
+        $result = $this->categoriesModel->getCategories();
+        if (is_array($result)) {
+            $data['rows'] = $result;
+        } else {
+            setFlashMsg('error', $result);
+        }
+
+        $this->renderAdminView('/admin/categories/categories', $data);
     }
 
     //------------------------------------------------------------
@@ -34,7 +40,7 @@ class CategoriesController extends Controller
 
         $data['title'] = 'Categories Create';
 
-        $this->renderAdminView(VIEWS_PATH . '/admin/categories/create.php', $data);
+        $this->renderAdminView('/admin/categories/create', $data);
     }
 
     //------------------------------------------------------------
@@ -101,10 +107,16 @@ class CategoriesController extends Controller
         // Require Login
         IsUserLoggedIn();
 
-        $data['rows'] = $this->categoriesModel->getCategoryById($id);
         $data['title'] = 'Category Edit - ' . $id;
 
-        $this->renderAdminView(VIEWS_PATH . '/admin/categories/edit.php', $data);
+        $result = $this->categoriesModel->getCategoryById($id);
+        if (is_array($result)) {
+            $data['rows'] = $result;
+        } else {
+            setFlashMsg('error', $result);
+        }
+
+        $this->renderAdminView('/admin/categories/edit', $data);
     }
 
     //------------------------------------------------------------
