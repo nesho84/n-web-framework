@@ -8,7 +8,7 @@ class LoginModel extends Model
     {
         try {
             // Prepare the select statement
-            $stmt = $this->prepare("SELECT * FROM user WHERE userEmail = :email");
+            $stmt = $this->prepare("SELECT * FROM users WHERE userEmail = :email");
             $this->bindValues($stmt, array("email" => $email));
             $stmt->execute();
             // Fetch the result
@@ -16,7 +16,7 @@ class LoginModel extends Model
             // If a PDO query doesn't find any results, the PDOStatement::fetch() method will return false.
             return !$result ? "No account found with this email address." : $result;
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 }

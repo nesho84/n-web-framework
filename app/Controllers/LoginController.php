@@ -13,7 +13,8 @@ class LoginController extends Controller
     public function login(): void
     //------------------------------------------------------------
     {
-        IsUserLoggedIn(true);
+        // Redirect if logged in
+        $this->requireLogin(true);
 
         $data['title'] = "Login";
         $data['email'] = "";

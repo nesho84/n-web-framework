@@ -25,7 +25,8 @@
     <hr>
 
     <?php
-    if (isset($data['rows']) && count($data['rows']) > 0) {
+    $rows = $data['rows'];
+    if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
         echo '<div class="row text-center">';
 
         $tableName = "";
@@ -33,8 +34,8 @@
         $isDisabled = false;
         $disabledStyle = 'style="pointer-events: none; color:#b9b8b8"';
 
-        foreach ($data['rows'] as $d) {
-            if ($d['table_name'] == 'category') {
+        foreach ($rows as $d) {
+            if ($d['table_name'] == 'categories') {
                 $tableName = 'Categories';
                 $icon = '<i class="fas fa-tasks fa-3x mt-3"></i>';
                 $isDisabled = false;
@@ -54,7 +55,7 @@
                 $icon = '<i class="fas fa-poll-h fa-3x mt-3"></i>';
                 $isDisabled = true;
             }
-            if ($d['table_name'] == 'user') {
+            if ($d['table_name'] == 'users') {
                 $tableName = 'Users';
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
             }

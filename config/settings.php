@@ -35,7 +35,7 @@ define('A_USER_PASSWORD', '010203');
 // App 
 //------------------------------------------------------------
 defined('APPURL')
-    or define('APPURL', 'http://localhost:8080/n-web-framework');
+    or define('APPURL', 'http://localhost/n-web-framework');
 
 defined('APPROOT')
     or define('APPROOT', dirname(__DIR__));

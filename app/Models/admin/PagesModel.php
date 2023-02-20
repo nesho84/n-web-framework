@@ -9,7 +9,7 @@ class PagesModel extends Model
         try {
             $stmt = $this->prepare(
                 "SELECT * FROM pages AS p
-                INNER JOIN (SELECT userID, userName FROM user) as u 
+                INNER JOIN (SELECT userID, userName FROM users) as u 
                 ON u.userID = p.userID
                 WHERE p.pageID IS NOT NULL
                 ORDER BY p.pageName ASC"
@@ -17,10 +17,9 @@ class PagesModel extends Model
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
-    // ....continue here....
     //------------------------------------------------------------
     public function getPageById(int $id): array|string
     //------------------------------------------------------------
@@ -31,10 +30,11 @@ class PagesModel extends Model
             $stmt->execute();
             return $stmt->fetch();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 
+    // ....continue here....
     //------------------------------------------------------------
     public function insertPage(array $postArray): bool|string
     //------------------------------------------------------------
@@ -42,23 +42,23 @@ class PagesModel extends Model
         try {
             $stmt = $this->prepare(
                 "INSERT INTO pages (
-            userID,
-            pageName, 
-            pageTitle, 
-            pageContent, 
-            pageLanguage,
-            PageMetaTitle,
-            PageMetaDescription,
-            PageMetaKeywords)
-            VALUES (
-            :userID, 
-            :pageName, 
-            :pageTitle, 
-            :pageContent, 
-            :pageLanguage,
-            :PageMetaTitle,
-            :PageMetaDescription,
-            :PageMetaKeywords)"
+                userID,
+                pageName, 
+                pageTitle, 
+                pageContent, 
+                pageLanguage,
+                PageMetaTitle,
+                PageMetaDescription,
+                PageMetaKeywords)
+                VALUES (
+                :userID, 
+                :pageName, 
+                :pageTitle, 
+                :pageContent, 
+                :pageLanguage,
+                :PageMetaTitle,
+                :PageMetaDescription,
+                :PageMetaKeywords)"
             );
             $stmt->execute([
                 ':userID' => $postArray['userID'],
@@ -73,7 +73,7 @@ class PagesModel extends Model
             // $lastInsertId = $this->lastInsertId();
             return true;
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -84,16 +84,16 @@ class PagesModel extends Model
         try {
             $stmt = $this->prepare(
                 "UPDATE pages 
-            SET pageName = :pageName,
-                userID = :userID,
-                pageTitle = :pageTitle,
-                pageLanguage = :pageLanguage,
-                PageMetaTitle = :PageMetaTitle,
-                PageMetaDescription = :PageMetaDescription,
-                PageMetaKeywords = :PageMetaKeywords,
-                pageStatus = :pageStatus,
-                pageContent = :pageContent
-            WHERE pageID = :pageID"
+                SET pageName = :pageName,
+                    userID = :userID,
+                    pageTitle = :pageTitle,
+                    pageLanguage = :pageLanguage,
+                    PageMetaTitle = :PageMetaTitle,
+                    PageMetaDescription = :PageMetaDescription,
+                    PageMetaKeywords = :PageMetaKeywords,
+                    pageStatus = :pageStatus,
+                    pageContent = :pageContent
+                WHERE pageID = :pageID"
             );
             $stmt->execute([
                 ':pageID' => $postArray['pageID'],
@@ -109,7 +109,7 @@ class PagesModel extends Model
             ]);
             return true;
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -122,7 +122,7 @@ class PagesModel extends Model
             $stmt->execute([':id' => $id]);
             return true;
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 }

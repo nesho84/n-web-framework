@@ -7,11 +7,11 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM category ORDER BY categoryDateCreated DESC");
+            $stmt = $this->prepare("SELECT * FROM categories ORDER BY categoryDateCreated DESC");
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -20,12 +20,12 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM category WHERE categoryType = :ctype");
+            $stmt = $this->prepare("SELECT * FROM categories WHERE categoryType = :ctype");
             $this->bindValues($stmt, ['ctype' => $ctype]);
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -34,12 +34,12 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM category WHERE categoryName = :cname");
+            $stmt = $this->prepare("SELECT * FROM categories WHERE categoryName = :cname");
             $this->bindValues($stmt, ['cname' => $cname]);
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -48,12 +48,12 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM category WHERE categoryID = :id");
+            $stmt = $this->prepare("SELECT * FROM categories WHERE categoryID = :id");
             $this->bindValues($stmt, ['id' => $id]);
             $stmt->execute();
             return $stmt->fetch();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -62,25 +62,32 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare(
-                "INSERT INTO category (
-                userID,
-                categoryType, 
-                categoryLink, 
-                categoryName, 
-                categoryDescription)
-                VALUES (
-                :userID, 
-                :categoryType, 
-                :categoryLink, 
-                :categoryName,  
-                :categoryDescription)"
-            );
+            // Starts a database transaction
+            $this->beginTransaction();
+
+            // $stmt = $this->prepare(
+            //     "INSERT INTO categories (userID, categoryType, categoryLink, categoryName,categoryDescription) 
+            //     VALUES (
+            //     :userID, 
+            //     :categoryType, 
+            //     :categoryLink, 
+            //     :categoryName,  
+            //     :categoryDescription)"
+            // );
+
+            $columns = implode(',', array_keys($postArray));
+            $placeholders = ':' . implode(',:', array_keys($postArray));
+            $stmt = $this->prepare("INSERT INTO categories ($columns) VALUES ($placeholders)");
             $this->bindValues($stmt, $postArray);
-            return $stmt->execute();
-            // // $lastInsertId = $this->lastInsertId();
+            $stmt->execute();
+
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
+
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -89,19 +96,33 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare(
-                "UPDATE category 
-                SET userID = :userID,
-                    categoryType = :categoryType,
-                    categoryLink = :categoryLink,
-                    categoryName = :categoryName,
-                    categoryDescription = :categoryDescription
-                WHERE categoryID = :categoryID"
-            );
+            // Starts a database transaction
+            $this->beginTransaction();
+
+            // $stmt = $this->prepare(
+            //     "UPDATE categories 
+            //     SET userID = :userID,
+            //         categoryType = :categoryType,
+            //         categoryLink = :categoryLink,
+            //         categoryName = :categoryName,
+            //         categoryDescription = :categoryDescription
+            //     WHERE categoryID = :categoryID"
+            // );
+
+            // Keep all keys to set, except for 'categoryID'
+            $setArray = array_filter($postArray, fn ($key) => $key !== 'categoryID', ARRAY_FILTER_USE_KEY);
+            $set = implode(',', array_map(fn ($key) => "$key = :$key", array_keys($setArray)));
+            $stmt = $this->prepare("UPDATE categories SET $set WHERE categoryID = :categoryID");
             $this->bindValues($stmt, $postArray);
-            return $stmt->execute();
+            $stmt->execute();
+
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
+
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -110,11 +131,20 @@ class CategoriesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("DELETE FROM category WHERE categoryID = :id");
+            // Starts a database transaction
+            $this->beginTransaction();
+
+            $stmt = $this->prepare("DELETE FROM categories WHERE categoryID = :id");
             $this->bindValues($stmt, ['id' => $id]);
-            return $stmt->execute();
+            $stmt->execute();
+
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
+
+            throw new Exception($e->getMessage());
         }
     }
 }

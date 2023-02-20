@@ -8,6 +8,9 @@ class CategoriesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
+        // Require Login
+        $this->requireLogin();
+
         // Load Model
         $this->categoriesModel = $this->loadModel("/admin/CategoriesModel");
     }
@@ -16,17 +19,8 @@ class CategoriesController extends Controller
     public function index(): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         $data['title'] = 'Categories';
-
-        $result = $this->categoriesModel->getCategories();
-        if (is_array($result)) {
-            $data['rows'] = $result;
-        } else {
-            setFlashMsg('error', $result);
-        }
+        $data['rows'] = $this->categoriesModel->getCategories();
 
         $this->renderAdminView('/admin/categories/categories', $data);
     }
@@ -35,21 +29,15 @@ class CategoriesController extends Controller
     public function create(): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         $data['title'] = 'Categories Create';
 
         $this->renderAdminView('/admin/categories/create', $data);
     }
 
     //------------------------------------------------------------
-    function insert(): void
+    public function insert(): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         if (isset($_POST['insert_category'])) {
             $postArray = [
                 'userID' => $_SESSION['user']['id'],
@@ -81,14 +69,14 @@ class CategoriesController extends Controller
             // }
 
             if ($validated === true) {
-                // Insert in Database
-                $result = $this->categoriesModel->insertCategory($postArray);
-                if ($result === true) {
+                try {
+                    // Insert in Database
+                    $this->categoriesModel->insertCategory($postArray);
                     setFlashMsg('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/categories');
-                } else {
-                    setFlashMsg('error', $result);
+                } catch (Exception $e) {
+                    setFlashMsg('error', $e->getMessage());
                     $_SESSION['inputs'] = $postArray;
                     redirect(ADMURL . '/categories/create');
                 }
@@ -104,17 +92,8 @@ class CategoriesController extends Controller
     public function edit(int $id): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         $data['title'] = 'Category Edit - ' . $id;
-
-        $result = $this->categoriesModel->getCategoryById($id);
-        if (is_array($result)) {
-            $data['rows'] = $result;
-        } else {
-            setFlashMsg('error', $result);
-        }
+        $data['rows'] = $this->categoriesModel->getCategoryById($id);
 
         $this->renderAdminView('/admin/categories/edit', $data);
     }
@@ -123,9 +102,6 @@ class CategoriesController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         if (isset($_POST['update_category'])) {
             $postArray = [
                 'categoryID' => $id,
@@ -157,13 +133,13 @@ class CategoriesController extends Controller
             // }
 
             if ($validated === true) {
-                // Update in Database
-                $result = $this->categoriesModel->updateCategory($postArray);
-                if ($result === true) {
+                try {
+                    // Update in Database
+                    $this->categoriesModel->updateCategory($postArray);
                     setFlashMsg('success', 'Update completed successfully.');
                     redirect(ADMURL . '/categories');
-                } else {
-                    setFlashMsg('error', $result);
+                } catch (Exception $e) {
+                    setFlashMsg('error', $e->getMessage());
                     redirect(ADMURL . '/categories/edit/' . $id);
                 }
             } else {
@@ -177,15 +153,12 @@ class CategoriesController extends Controller
     public function delete(int $id): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
-        // Delete in Database
-        $result = $this->categoriesModel->deleteCategory($id);
-        if ($result === true) {
+        try {
+            // Delete in Database
+            $this->categoriesModel->deleteCategory($id);
             setFlashMsg('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
-        } else {
-            setFlashMsg('error', $result);
+        } catch (Exception $e) {
+            setFlashMsg('error', $e->getMessage());
         }
 
         // Allways redirect back

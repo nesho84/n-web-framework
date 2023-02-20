@@ -1,5 +1,5 @@
 <?php
 // --- Login --- //
-Router::add('/login', 'LoginController@login');
-Router::add('/logout', 'LoginController@logout');
-Router::add('/login/validate', 'LoginController@login_validate');
+Router::get('/login', 'LoginController@login');
+Router::get('/logout', 'LoginController@logout');
+Router::post('/login/validate', 'LoginController@login_validate');

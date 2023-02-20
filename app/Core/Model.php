@@ -2,12 +2,23 @@
 
 class Model extends Database
 {
-    // Initializes the database connection when creating an instance of the model
+    /**
+     * Binds the array keys with values
+     * * Example: 
+     * * $model = new Model();
+     * * $params = ['id' => $id];
+     * * $model->bindValues($stmt, ['id' => $id]);
+     * @param PDOStatement $stmt
+     * @param array $bindArray
+     * @return void
+     */
     //------------------------------------------------------------
-    public function __construct()
+    public function bindValues(PDOStatement $stmt, array $bindArray): void
     //------------------------------------------------------------
     {
-        parent::__construct();
+        foreach ($bindArray as $key => $value) {
+            $stmt->bindValue(":$key", $value);
+        }
     }
 
     //------------------------------------------------------------
@@ -50,24 +61,5 @@ class Model extends Database
     //------------------------------------------------------------
     {
         return $this->pdo->rollBack();
-    }
-
-    /**
-     * Binds the array keys with values
-     * * Example: 
-     * * $model = new Model();
-     * * $params = ['id' => $id];
-     * * $model->bindValues($stmt, ['id' => $id]);
-     * @param PDOStatement $stmt
-     * @param array $bindArray
-     * @return void
-     */
-    //------------------------------------------------------------
-    public function bindValues(PDOStatement $stmt, array $bindArray): void
-    //------------------------------------------------------------
-    {
-        foreach ($bindArray as $key => $value) {
-            $stmt->bindValue(":$key", $value);
-        }
     }
 }

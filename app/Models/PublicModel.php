@@ -44,7 +44,7 @@ function getActivePage(string $pageName): array|string
             ];
         }
     } catch (PDOException $e) {
-        die($e->getMessage());
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -71,6 +71,6 @@ function getLanguage(string $languageCode, int $translationCode): string|null
             return 'No translation found.';
         }
     } catch (PDOException $e) {
-        die($e->getMessage());
+        throw new Exception($e->getMessage());
     }
 }

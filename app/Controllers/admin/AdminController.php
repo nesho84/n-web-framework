@@ -8,6 +8,9 @@ class AdminController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
+        // Require Login
+        $this->requireLogin();
+
         // Load Model
         $this->adminModel = $this->loadModel("/admin/AdminModel");
     }
@@ -16,17 +19,8 @@ class AdminController extends Controller
     public function index(): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         $data["title"] = "Home";
-
-        $result = $this->adminModel->getTables(DB_NAME);
-        if (is_array($result)) {
-            $data['rows'] = $result;
-        } else {
-            setFlashMsg('error', $result);
-        }
+        $data['rows'] = $this->adminModel->getTables(DB_NAME);
 
         $this->renderAdminView("/admin/index", $data);
     }

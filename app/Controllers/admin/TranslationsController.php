@@ -8,10 +8,10 @@ function index(): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
-    $data['rows'] = getTranslations();
     $data['title'] = 'Translations';
+    $data['rows'] = getTranslations();
 
     Router::renderAdminView(VIEWS_PATH . '/admin/translations/translations.php', $data);
 }
@@ -21,7 +21,7 @@ function create(): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     $data['title'] = 'Translations Create';
 
@@ -33,7 +33,7 @@ function insert(): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     if (isset($_POST['insert_translation'])) {
         $postArray = [
@@ -85,7 +85,7 @@ function edit(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     $data['rows'] = getTranslationyById($id);
     $data['title'] = 'Translation Edit - ' . $id;
@@ -98,7 +98,7 @@ function update(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     if (isset($_POST['update_translation'])) {
         $postArray = [
@@ -147,7 +147,7 @@ function delete(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     // Delete in Database
     $result = deleteTranslation($id);

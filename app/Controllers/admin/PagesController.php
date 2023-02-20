@@ -8,6 +8,9 @@ class PagesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
+        // Require Login
+        $this->requireLogin();
+
         // Load Model
         $this->pagesModel = $this->loadModel("/admin/PagesModel");
     }
@@ -16,34 +19,25 @@ class PagesController extends Controller
     public function index(): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
-        $data['rows'] = $this->pagesModel->getPages();
         $data['title'] = 'Pages';
+        $data['rows'] = $this->pagesModel->getPages();
 
         $this->renderAdminView('/admin/pages/pages', $data);
     }
-    // ....continue here....
+
     //------------------------------------------------------------
     public function create(): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         $data['title'] = 'Pages Create';
 
-        Router::renderAdminView(VIEWS_PATH . '/admin/pages/create.php', $data);
+        $this->renderAdminView('/admin/pages/create', $data);
     }
 
     //------------------------------------------------------------
     public function insert(): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         if (isset($_POST['insert_page'])) {
             $postArray = [
                 'userID' => $_SESSION['user']['id'],
@@ -78,14 +72,14 @@ class PagesController extends Controller
             // }
 
             if ($validated === true) {
-                // Insert in Database
-                $result = insertPage($postArray);
-                if ($result === true) {
+                try {
+                    // Insert in Database
+                    $this->pagesModel->insertPage($postArray);
                     setFlashMsg('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/pages');
-                } else {
-                    setFlashMsg('error', $result);
+                } catch (Exception $e) {
+                    setFlashMsg('error', $e->getMessage());
                     $_SESSION['inputs'] = $postArray;
                     redirect(ADMURL . '/pages/create');
                 }
@@ -101,22 +95,16 @@ class PagesController extends Controller
     public function edit(int $id): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
-        $data['rows'] = getPageById($id);
         $data['title'] = 'Pages Edit - ' . $id;
+        $data['rows'] = $this->pagesModel->getPageById($id);
 
-        Router::renderAdminView(VIEWS_PATH . '/admin/pages/edit.php', $data);
+        $this->renderAdminView('/admin/pages/edit', $data);
     }
 
     //------------------------------------------------------------
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
         if (isset($_POST['update_page'])) {
             $postArray = [
                 'pageID' => $id,
@@ -152,13 +140,13 @@ class PagesController extends Controller
             // }
 
             if ($validated === true) {
-                // Update in Database
-                $result = updatePage($postArray);
-                if ($result === true) {
+                try {
+                    // Update in Database
+                    $this->pagesModel->updatePage($postArray);
                     setFlashMsg('success', 'Update completed successfully.');
                     redirect(ADMURL . '/pages');
-                } else {
-                    setFlashMsg('error', $result);
+                } catch (Exception $e) {
+                    setFlashMsg('error', $e->getMessage());
                     redirect(ADMURL . '/pages/edit/' . $id);
                 }
             } else {
@@ -172,15 +160,12 @@ class PagesController extends Controller
     public function delete(int $id): void
     //------------------------------------------------------------
     {
-        // Require Login
-        IsUserLoggedIn();
-
-        // Delete in Database
-        $result = deletePage($id);
-        if ($result === true) {
+        try {
+            // Delete in Database
+            $this->pagesModel->deletePage($id);
             setFlashMsg('success', 'Page with the ID: <strong>' . $id . '</strong> deleted successfully.');
-        } else {
-            setFlashMsg('error', $result);
+        } catch (Exception $e) {
+            setFlashMsg('error', $e->getMessage());
         }
 
         // Allways redirect back

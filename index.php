@@ -18,7 +18,6 @@ require_once CORE_PATH . "/Controller.php";
 
 // Custom Library
 require_once LIBRARY_PATH . "/helpers.php";
-require_once LIBRARY_PATH . "/userSession.php";
 require_once LIBRARY_PATH . "/components.php";
 require_once LIBRARY_PATH . "/flashMessages.php";
 

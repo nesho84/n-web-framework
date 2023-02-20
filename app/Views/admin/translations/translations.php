@@ -22,9 +22,10 @@
                 </thead>
                 <tbody>
                     <?php
-                    if (isset($data['rows']) && count($data['rows']) > 0) {
+                    $rows = $data['rows'];
+                    if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                         $counter = 0;
-                        foreach ($data['rows'] as $d) {
+                        foreach ($rows as $d) {
                             $counter += 1;
                             $translationText = strlen($d['translationText']) > 38 ? substr($d['translationText'], 0, 38) . '...' : $d['translationText'];
                             echo '<tr>

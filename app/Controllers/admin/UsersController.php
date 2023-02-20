@@ -8,10 +8,10 @@ function index(): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
-    $data['rows'] = getUsers();
     $data['title'] = 'Users';
+    $data['rows'] = getUsers();
 
     Router::renderAdminView(VIEWS_PATH . '/admin/users/users.php', $data);
 }
@@ -21,10 +21,10 @@ function profile(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
-    $data['rows'] = getUserById($id);
     $data['title'] = 'User Profile - ' . $id;
+    $data['rows'] = getUserById($id);
 
     Router::renderAdminView(VIEWS_PATH . '/admin/users/profile.php', $data);
 }
@@ -34,7 +34,7 @@ function create(): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     $data['title'] = 'Users Create';
 
@@ -46,7 +46,7 @@ function insert(): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     if (isset($_POST['insert_user'])) {
         $postArray = [
@@ -157,7 +157,7 @@ function edit(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     $data['rows'] = getUserById($id);
     $data['title'] = 'User Edit - ' . $id;
@@ -170,7 +170,7 @@ function update(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     if (isset($_POST['update_user'])) {
         $postArray = [
@@ -320,7 +320,7 @@ function delete(int $id): void
 //------------------------------------------------------------
 {
     // Require Login
-    IsUserLoggedIn();
+    $this->requireLogin();
 
     // Get existing user from the Model
     $user = getUserById($id);

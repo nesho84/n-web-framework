@@ -7,6 +7,7 @@ class Database
     private string $db_password = DB_PASS;
     private string $db_name = DB_NAME;
     private string $db_charset = DB_CHARSET;
+
     protected PDO $pdo;
 
     //------------------------------------------------------------
@@ -63,9 +64,9 @@ class Database
     //------------------------------------------------------------
     {
         try {
-            $this->pdo->query("SELECT 1 FROM `user` LIMIT 1");
+            $this->pdo->query("SELECT 1 FROM `users` LIMIT 1");
         } catch (PDOException $e) {
-            $this->showDBError("Table <strong>user</strong> doesn't exist");
+            $this->showDBError("Table <strong>users</strong> doesn't exist");
         }
     }
 
@@ -74,7 +75,7 @@ class Database
     //------------------------------------------------------------
     {
         try {
-            $user_check = $this->pdo->query("SELECT * FROM `user`");
+            $user_check = $this->pdo->query("SELECT * FROM `users`");
             if ($user_check->rowCount() == 0) {
                 $this->showDBError("Static user <strong>admin@company.com</strong> doesn't exist<br>");
             }

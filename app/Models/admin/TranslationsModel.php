@@ -9,7 +9,7 @@ function getTranslations(): array|string
         $sql->execute();
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-        die($e->getMessage());
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -22,7 +22,7 @@ function getTranslationyById(int $id): array|string
         $sql->execute(['id' => $id]);
         return $sql->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-        die($e->getMessage());
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -52,7 +52,7 @@ function insertTranslation(array $postArray): bool|string
         // $lastInsertId = DB->lastInsertId();
         return true;
     } catch (PDOException $e) {
-        return $e->getMessage();
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -79,7 +79,7 @@ function updateTranslation(array $postArray): bool|string
         ]);
         return true;
     } catch (PDOException $e) {
-        return $e->getMessage();
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -92,6 +92,6 @@ function deleteTranslation(int $id): bool|string
         $sql->execute([':id' => $id]);
         return true;
     } catch (PDOException $e) {
-        return $e->getMessage();
+        throw new Exception($e->getMessage());
     }
 }

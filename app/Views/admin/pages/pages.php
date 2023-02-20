@@ -31,11 +31,12 @@ showHeading([
             </thead>
             <tbody>
                 <?php
-                if (isset($data['rows']) && (count($data['rows']) > 0)) {
+                // dd($data);
+                $rows = $data['rows'];
+                if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                     $counter = 0;
-                    foreach ($data['rows'] as $d) {
+                    foreach ($rows as $d) {
                         $counter += 1;
-
                         $pageStatus = $d['pageStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
 
                         echo '<tr>

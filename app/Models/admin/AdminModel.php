@@ -15,7 +15,7 @@ class AdminModel extends Model
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
-            return $e->getMessage();
+            throw new Exception($e->getMessage());
         }
     }
 }

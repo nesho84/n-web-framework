@@ -10,13 +10,30 @@ class Router
     private string $action;
 
     //------------------------------------------------------------
-    public static function add(string $route, $callback): void
+    public static function get(string $route, callable|string $callback): ?object
+    //------------------------------------------------------------
+    {
+        self::add('GET', $route, $callback);
+        return new self;
+    }
+
+    //------------------------------------------------------------
+    public static function post($route, callable|string $callback): ?object
+    //------------------------------------------------------------
+    {
+        self::add('POST', $route, $callback);
+        return new self;
+    }
+
+    //------------------------------------------------------------
+    private static function add(string $method, string $route, callable|string $callback): void
     //------------------------------------------------------------
     {
         if (is_string($callback)) {
             if (strpos($callback, '@')) {
                 $exp = explode('@', $callback);
                 self::$routes[] = [
+                    "method" => $method,
                     "route" => $route,
                     "controller" => $exp[0],
                     "action" => $exp[1],
@@ -24,6 +41,7 @@ class Router
             }
         } else {
             self::$routes[] = [
+                "method" => $method,
                 "route" => $route,
                 "callback" => $callback,
             ];
@@ -52,11 +70,10 @@ class Router
         $validRoute = $this->validate($this->url);
 
         if ($validRoute) {
-            $cf = $validRoute['controller'];
+            $cf = $validRoute['controller'] ?? null;
             if (isset($cf)) {
                 // Load Controller
                 $this->controller_path = CONTROLLERS_PATH . "/" . $cf . ".php";
-                // $this->controller_class = basename(explode('.php', $this->controller_path)[0]);
                 $this->controller_class = basename($this->controller_path, '.php');
                 $this->action = $validRoute['action'];
                 $this->loadController();

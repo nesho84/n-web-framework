@@ -5,11 +5,11 @@ function getUsers(): array|string
 //------------------------------------------------------------
 {
     try {
-        $sql = DB->prepare("SELECT * FROM user");
+        $sql = DB->prepare("SELECT * FROM users");
         $sql->execute();
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-        die($e->getMessage());
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -18,11 +18,11 @@ function getUserById(int $id): array|string
 //------------------------------------------------------------
 {
     try {
-        $sql = DB->prepare("SELECT * FROM user WHERE userID = :id");
+        $sql = DB->prepare("SELECT * FROM users WHERE userID = :id");
         $sql->execute(['id' => $id]);
         return $sql->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-        die($e->getMessage());
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -31,11 +31,11 @@ function getUsersExceptThis(int $id): array|string
 //------------------------------------------------------------
 {
     try {
-        $sql = DB->prepare("SELECT * FROM user WHERE userID != :id");
+        $sql = DB->prepare("SELECT * FROM users WHERE userID != :id");
         $sql->execute(['id' => $id]);
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-        die($e->getMessage());
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -48,7 +48,7 @@ function insertUser(array $postArray): bool|string
         DB->beginTransaction();
 
         $sql = DB->prepare(
-            "INSERT INTO user (
+            "INSERT INTO users (
             userName,
             userEmail, 
             userPassword, 
@@ -78,7 +78,7 @@ function insertUser(array $postArray): bool|string
         // rollback database transaction
         DB->rollback();
 
-        return $e->getMessage();
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -88,7 +88,7 @@ function updateUser(array $postArray): bool|string
 {
     try {
         $sql = DB->prepare(
-            "UPDATE user 
+            "UPDATE users 
             SET userName = :userName,
                 userEmail = :userEmail,
                 userPassword = :userPassword,
@@ -108,7 +108,7 @@ function updateUser(array $postArray): bool|string
         ]);
         return true;
     } catch (PDOException $e) {
-        return $e->getMessage();
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -117,10 +117,10 @@ function deleteUser(int $id): bool|string
 //------------------------------------------------------------
 {
     try {
-        $sql = DB->prepare("DELETE FROM user WHERE userID = :id");
+        $sql = DB->prepare("DELETE FROM users WHERE userID = :id");
         $sql->execute([':id' => $id]);
         return true;
     } catch (PDOException $e) {
-        return $e->getMessage();
+        throw new Exception($e->getMessage());
     }
 }
