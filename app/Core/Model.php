@@ -17,8 +17,33 @@ class Model extends Database
     //------------------------------------------------------------
     {
         foreach ($bindArray as $key => $value) {
-            $stmt->bindValue(":$key", $value);
+            if (str_starts_with($key, ':')) {
+                $placeholder = "$key";
+            } else {
+                $placeholder = ":$key";
+            }
+
+            $stmt->bindValue($placeholder, $value);
         }
+    }
+
+    //------------------------------------------------------------
+    public function prepareInsert(string $table, array $postArray): PDOStatement
+    //------------------------------------------------------------
+    {
+        $columns = implode(',', array_keys($postArray));
+        $placeholders = ':' . implode(',:', array_keys($postArray));
+        return $this->prepare("INSERT INTO $table ($columns) VALUES ($placeholders)");
+    }
+
+    //------------------------------------------------------------
+    public function prepareUpdate(string $table, string $primaryKey, array $postArray): PDOStatement
+    //------------------------------------------------------------
+    {
+        // Keep all keys to set, except for 'primaryKey'
+        $setArray = array_filter($postArray, fn ($key) => $key !== $primaryKey, ARRAY_FILTER_USE_KEY);
+        $set = implode(',', array_map(fn ($key) => "$key = :$key", array_keys($setArray)));
+        return $this->prepare("UPDATE $table SET $set WHERE $primaryKey = :$primaryKey");
     }
 
     //------------------------------------------------------------

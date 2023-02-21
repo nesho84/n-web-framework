@@ -50,11 +50,6 @@
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
             }
-            if ($d['table_name'] == 'services') {
-                $tableName = 'Services';
-                $icon = '<i class="fas fa-poll-h fa-3x mt-3"></i>';
-                $isDisabled = true;
-            }
             if ($d['table_name'] == 'users') {
                 $tableName = 'Users';
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';

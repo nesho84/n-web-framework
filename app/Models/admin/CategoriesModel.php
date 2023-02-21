@@ -86,7 +86,6 @@ class CategoriesModel extends Model
         } catch (PDOException $e) {
             // Rolls back the transaction if an error occurs
             $this->rollBack();
-
             throw new Exception($e->getMessage());
         }
     }
@@ -121,7 +120,6 @@ class CategoriesModel extends Model
         } catch (PDOException $e) {
             // Rolls back the transaction if an error occurs
             $this->rollBack();
-
             throw new Exception($e->getMessage());
         }
     }
@@ -143,7 +141,6 @@ class CategoriesModel extends Model
         } catch (PDOException $e) {
             // Rolls back the transaction if an error occurs
             $this->rollBack();
-
             throw new Exception($e->getMessage());
         }
     }

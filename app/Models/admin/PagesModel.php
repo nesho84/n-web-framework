@@ -34,45 +34,25 @@ class PagesModel extends Model
         }
     }
 
-    // ....continue here....
     //------------------------------------------------------------
     public function insertPage(array $postArray): bool|string
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare(
-                "INSERT INTO pages (
-                userID,
-                pageName, 
-                pageTitle, 
-                pageContent, 
-                pageLanguage,
-                PageMetaTitle,
-                PageMetaDescription,
-                PageMetaKeywords)
-                VALUES (
-                :userID, 
-                :pageName, 
-                :pageTitle, 
-                :pageContent, 
-                :pageLanguage,
-                :PageMetaTitle,
-                :PageMetaDescription,
-                :PageMetaKeywords)"
-            );
-            $stmt->execute([
-                ':userID' => $postArray['userID'],
-                ':pageName' => $postArray['pageName'],
-                ':pageTitle' => $postArray['pageTitle'],
-                ':pageContent' => $postArray['pageContent'],
-                ':pageLanguage' => $postArray['pageLanguage'],
-                ':PageMetaTitle' => $postArray['PageMetaTitle'],
-                ':PageMetaDescription' => $postArray['PageMetaDescription'],
-                ':PageMetaKeywords' => $postArray['PageMetaKeywords'],
-            ]);
-            // $lastInsertId = $this->lastInsertId();
-            return true;
+            // Starts a database transaction
+            $this->beginTransaction();
+
+            $columns = implode(',', array_keys($postArray));
+            $placeholders = ':' . implode(',:', array_keys($postArray));
+            $stmt = $this->prepare("INSERT INTO pages ($columns) VALUES ($placeholders)");
+            $this->bindValues($stmt, $postArray);
+            $stmt->execute();
+
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
         } catch (PDOException $e) {
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
             throw new Exception($e->getMessage());
         }
     }
@@ -82,33 +62,21 @@ class PagesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare(
-                "UPDATE pages 
-                SET pageName = :pageName,
-                    userID = :userID,
-                    pageTitle = :pageTitle,
-                    pageLanguage = :pageLanguage,
-                    PageMetaTitle = :PageMetaTitle,
-                    PageMetaDescription = :PageMetaDescription,
-                    PageMetaKeywords = :PageMetaKeywords,
-                    pageStatus = :pageStatus,
-                    pageContent = :pageContent
-                WHERE pageID = :pageID"
-            );
-            $stmt->execute([
-                ':pageID' => $postArray['pageID'],
-                ':userID' => $postArray['userID'],
-                ':pageName' => $postArray['pageName'],
-                ':pageTitle' => $postArray['pageTitle'],
-                ':pageLanguage' => $postArray['pageLanguage'],
-                ':PageMetaTitle' => $postArray['PageMetaTitle'],
-                ':PageMetaDescription' => $postArray['PageMetaDescription'],
-                ':PageMetaKeywords' => $postArray['PageMetaKeywords'],
-                ':pageStatus' => $postArray['pageStatus'],
-                ':pageContent' => $postArray['pageContent'],
-            ]);
-            return true;
+            // Starts a database transaction
+            $this->beginTransaction();
+
+            // Keep all keys to set, except for 'pageID'
+            $setArray = array_filter($postArray, fn ($key) => $key !== 'pageID', ARRAY_FILTER_USE_KEY);
+            $set = implode(',', array_map(fn ($key) => "$key = :$key", array_keys($setArray)));
+            $stmt = $this->prepare("UPDATE pages SET $set WHERE pageID = :pageID");
+            $this->bindValues($stmt, $postArray);
+            $stmt->execute();
+
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
         } catch (PDOException $e) {
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
             throw new Exception($e->getMessage());
         }
     }
@@ -118,10 +86,18 @@ class PagesModel extends Model
     //------------------------------------------------------------
     {
         try {
+            // Starts a database transaction
+            $this->beginTransaction();
+
             $stmt = $this->prepare("DELETE FROM pages WHERE pageID = :id");
-            $stmt->execute([':id' => $id]);
-            return true;
+            $this->bindValues($stmt, [':id' => $id]);
+            $stmt->execute();
+
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
         } catch (PDOException $e) {
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
             throw new Exception($e->getMessage());
         }
     }

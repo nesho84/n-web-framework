@@ -63,10 +63,6 @@ class CategoriesController extends Controller
                 $validated = false;
                 $error .= 'Please insert a Category Name!<br>';
             }
-            // if (empty($postArray['categoryDescription'])) {
-            //     $validated = false;
-            //     $error .= 'Please insert a Category Description!<br>';
-            // }
 
             if ($validated === true) {
                 try {
@@ -127,10 +123,6 @@ class CategoriesController extends Controller
                 $validated = false;
                 $error .= 'Please insert a Category Name!<br>';
             }
-            // if (empty($postArray['categoryDescription'])) {
-            //     $validated = false;
-            //     $error .= 'Please insert a Category Description!<br>';
-            // }
 
             if ($validated === true) {
                 try {

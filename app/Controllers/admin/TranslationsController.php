@@ -1,162 +1,157 @@
 <?php
 
-// Load Model
-Router::loadModel(MODELS_PATH . '/admin/TranslationsModel.php');
-
-//------------------------------------------------------------
-function index(): void
-//------------------------------------------------------------
+class TranslationsController extends Controller
 {
-    // Require Login
-    $this->requireLogin();
+    private TranslationsModel $translationsModel;
 
-    $data['title'] = 'Translations';
-    $data['rows'] = getTranslations();
+    //------------------------------------------------------------
+    public function __construct()
+    //------------------------------------------------------------
+    {
+        // Require Login
+        $this->requireLogin();
 
-    Router::renderAdminView(VIEWS_PATH . '/admin/translations/translations.php', $data);
-}
+        // Load Model
+        $this->translationsModel = $this->loadModel("/admin/TranslationsModel");
+    }
 
-//------------------------------------------------------------
-function create(): void
-//------------------------------------------------------------
-{
-    // Require Login
-    $this->requireLogin();
+    //------------------------------------------------------------
+    public function index(): void
+    //------------------------------------------------------------
+    {
+        $data['title'] = 'Translations';
+        $data['rows'] = $this->translationsModel->getTranslations();
 
-    $data['title'] = 'Translations Create';
+        $this->renderAdminView('/admin/translations/translations', $data);
+    }
 
-    Router::renderAdminView(VIEWS_PATH . '/admin/translations/create.php', $data);
-}
+    //------------------------------------------------------------
+    public function create(): void
+    //------------------------------------------------------------
+    {
+        $data['title'] = 'Translations Create';
 
-//------------------------------------------------------------
-function insert(): void
-//------------------------------------------------------------
-{
-    // Require Login
-    $this->requireLogin();
+        $this->renderAdminView('/admin/translations/create', $data);
+    }
 
-    if (isset($_POST['insert_translation'])) {
-        $postArray = [
-            'userID' => $_SESSION['user']['id'],
-            'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
-            'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
-            'translationText' => htmlspecialchars(trim($_POST['translationText'])),
-        ];
+    //------------------------------------------------------------
+    public function insert(): void
+    //------------------------------------------------------------
+    {
+        if (isset($_POST['insert_translation'])) {
+            $postArray = [
+                'userID' => $_SESSION['user']['id'],
+                'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
+                'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
+                'translationText' => htmlspecialchars(trim($_POST['translationText'])),
+            ];
 
-        $_SESSION['inputs'] = [];
-        $validated = true;
-        $error = '';
+            $_SESSION['inputs'] = [];
+            $validated = true;
+            $error = '';
 
-        if (empty($postArray['translationCode'])) {
-            $validated = false;
-            $error .= 'Translation Code can not be empty!<br>';
-        }
-        if (empty($postArray['languageCode'])) {
-            $validated = false;
-            $error .= 'Please insert a Language Code!<br>';
-        }
-        if (empty($postArray['translationText'])) {
-            $validated = false;
-            $error .= 'Please insert a Translation Text!<br>';
-        }
+            if (empty($postArray['translationCode'])) {
+                $validated = false;
+                $error .= 'Translation Code can not be empty!<br>';
+            }
+            if (empty($postArray['languageCode'])) {
+                $validated = false;
+                $error .= 'Please insert a Language Code!<br>';
+            }
+            if (empty($postArray['translationText'])) {
+                $validated = false;
+                $error .= 'Please insert a Translation Text!<br>';
+            }
 
-        if ($validated === true) {
-            // Insert in Database
-            $result = insertTranslation($postArray);
-            if ($result === true) {
-                setFlashMsg('success', 'Insert completed successfully.');
-                unset($_SESSION['inputs']);
-                redirect(ADMURL . '/translations');
+            if ($validated === true) {
+                try {
+                    // Insert in Database
+                    $this->translationsModel->insertTranslation($postArray);
+                    setFlashMsg('success', 'Insert completed successfully.');
+                    unset($_SESSION['inputs']);
+                    redirect(ADMURL . '/translations');
+                } catch (Exception $e) {
+                    setFlashMsg('error', $e->getMessage());
+                    $_SESSION['inputs'] = $postArray;
+                    redirect(ADMURL . '/translations/create');
+                }
             } else {
-                setFlashMsg('error', $result);
+                setFlashMsg('error', $error);
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/translations/create');
             }
-        } else {
-            setFlashMsg('error', $error);
-            $_SESSION['inputs'] = $postArray;
-            redirect(ADMURL . '/translations/create');
         }
     }
-}
 
-//------------------------------------------------------------
-function edit(int $id): void
-//------------------------------------------------------------
-{
-    // Require Login
-    $this->requireLogin();
+    //------------------------------------------------------------
+    public function edit(int $id): void
+    //------------------------------------------------------------
+    {
+        $data['title'] = 'Translation Edit - ' . $id;
+        $data['rows'] = $this->translationsModel->getTranslationyById($id);
 
-    $data['rows'] = getTranslationyById($id);
-    $data['title'] = 'Translation Edit - ' . $id;
+        $this->renderAdminView('/admin/translations/edit', $data);
+    }
 
-    Router::renderAdminView(VIEWS_PATH . '/admin/translations/edit.php', $data);
-}
+    //------------------------------------------------------------
+    public function update(int $id): void
+    //------------------------------------------------------------
+    {
+        if (isset($_POST['update_translation'])) {
+            $postArray = [
+                'translationID' => $id,
+                'userID' => $_SESSION['user']['id'],
+                'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
+                'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
+                'translationText' => htmlspecialchars(trim($_POST['translationText'])),
+            ];
 
-//------------------------------------------------------------
-function update(int $id): void
-//------------------------------------------------------------
-{
-    // Require Login
-    $this->requireLogin();
+            $validated = true;
+            $error = '';
 
-    if (isset($_POST['update_translation'])) {
-        $postArray = [
-            'translationID' => $id,
-            'userID' => $_SESSION['user']['id'],
-            'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
-            'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
-            'translationText' => htmlspecialchars(trim($_POST['translationText'])),
-        ];
+            if (empty($postArray['translationCode'])) {
+                $validated = false;
+                $error .= 'Translation Code can not be empty!<br>';
+            }
+            if (empty($postArray['languageCode'])) {
+                $validated = false;
+                $error .= 'Please insert a Language Code!<br>';
+            }
+            if (empty($postArray['translationText'])) {
+                $validated = false;
+                $error .= 'Please insert a translationText!<br>';
+            }
 
-        $validated = true;
-        $error = '';
-
-        if (empty($postArray['translationCode'])) {
-            $validated = false;
-            $error .= 'Translation Code can not be empty!<br>';
-        }
-        if (empty($postArray['languageCode'])) {
-            $validated = false;
-            $error .= 'Please insert a Language Code!<br>';
-        }
-        if (empty($postArray['translationText'])) {
-            $validated = false;
-            $error .= 'Please insert a translationText!<br>';
-        }
-
-        if ($validated === true) {
-            // Update in Database
-            $result = updateTranslation($postArray);
-            if ($result === true) {
-                setFlashMsg('success', 'Update completed successfully.');
-                redirect(ADMURL . '/translations');
+            if ($validated === true) {
+                try {
+                    // Update in Database
+                    $this->translationsModel->updateTranslation($postArray);
+                    setFlashMsg('success', 'Update completed successfully.');
+                    redirect(ADMURL . '/translations');
+                } catch (Exception $e) {
+                    setFlashMsg('error', $e->getMessage());
+                    redirect(ADMURL . '/translations/edit/' . $id);
+                }
             } else {
-                setFlashMsg('error', $result);
+                setFlashMsg('error', $error);
                 redirect(ADMURL . '/translations/edit/' . $id);
             }
-        } else {
-            setFlashMsg('error', $error);
-            redirect(ADMURL . '/translations/edit/' . $id);
         }
     }
-}
 
-//------------------------------------------------------------
-function delete(int $id): void
-//------------------------------------------------------------
-{
-    // Require Login
-    $this->requireLogin();
+    //------------------------------------------------------------
+    public function delete(int $id): void
+    //------------------------------------------------------------
+    {
+        try {
+            // Delete in Database
+            $this->translationsModel->deleteTranslation($id);
+            setFlashMsg('success', 'Translation with the ID: <strong>' . $id . '</strong> deleted successfully.');
+        } catch (Exception $e) {
+            setFlashMsg('error', $e->getMessage());
+        }
 
-    // Delete in Database
-    $result = deleteTranslation($id);
-    if ($result === true) {
-        setFlashMsg('success', 'Translation with the ID: <strong>' . $id . '</strong> deleted successfully.');
-    } else {
-        setFlashMsg('error', $result);
+        // Allways redirect back
+        redirect(ADMURL . '/translations');
     }
-
-    // Allways redirect back
-    redirect(ADMURL . '/translations');
 }

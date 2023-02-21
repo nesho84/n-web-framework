@@ -66,10 +66,6 @@ class PagesController extends Controller
                 $validated = false;
                 $error .= 'Please choose a Language!<br>';
             }
-            // if (empty($postArray['pageContent'])) {
-            //     $validated = false;
-            //     $error .= 'Please insert a Page Content!<br>';
-            // }
 
             if ($validated === true) {
                 try {
@@ -134,10 +130,6 @@ class PagesController extends Controller
                 $validated = false;
                 $error .= 'Please choose a Language!<br>';
             }
-            // if (empty($postArray['pageContent'])) {
-            //     $validated = false;
-            //     $error .= 'Please insert a Page Content!<br>';
-            // }
 
             if ($validated === true) {
                 try {

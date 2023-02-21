@@ -32,10 +32,10 @@ showHeading([
                                 <td>' . $d['categoryType'] . '</td>
                                 <td class="text-center">
                                     <a class="btn btn-link" href="' . ADMURL . '/categories/edit/' . $d['categoryID'] . '">
-                                    <i class="far fa-edit"></i>
+                                        <i class="far fa-edit"></i>
                                     </a>
                                     <a class="btn btn-link btn-delete" href="' . ADMURL . '/categories/delete/' . $d['categoryID'] . '">
-                                    <i class="far fa-trash-alt"></i>
+                                        <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>
                             </tr>';

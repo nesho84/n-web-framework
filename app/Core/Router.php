@@ -7,6 +7,7 @@ class Router
     private array $params = [];
     private string $controller_path;
     private string $controller_class;
+    private string $method;
     private string $action;
 
     //------------------------------------------------------------
@@ -70,11 +71,12 @@ class Router
         $validRoute = $this->validate($this->url);
 
         if ($validRoute) {
-            $cf = $validRoute['controller'] ?? null;
-            if (isset($cf)) {
+            $ct = $validRoute['controller'] ?? null;
+            if (isset($ct)) {
                 // Load Controller
-                $this->controller_path = CONTROLLERS_PATH . "/" . $cf . ".php";
+                $this->controller_path = CONTROLLERS_PATH . "/" . $ct . ".php";
                 $this->controller_class = basename($this->controller_path, '.php');
+                $this->method = $validRoute['method'];
                 $this->action = $validRoute['action'];
                 $this->loadController();
             } else {
@@ -136,6 +138,14 @@ class Router
             }
 
             if (method_exists($controller_object, $this->action)) {
+                // Make sure the server request method is correct
+                if ($_SERVER['REQUEST_METHOD'] !== $this->method) {
+                    // This is not a POST request, send a 405 error
+                    http_response_code(405);
+                    header('Allow: ' . $this->method);
+                    die("Request method '" . $_SERVER['REQUEST_METHOD'] . "' not supported");
+                }
+                // Call controller functions with or without params
                 if ($this->params) {
                     // Example: post/1 or post/edit/2
                     // Where 1 or 2 is the param 

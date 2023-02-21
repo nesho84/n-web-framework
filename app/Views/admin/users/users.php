@@ -43,7 +43,7 @@ showHeading([
                                 <td class="text-center">' . $userStatus . '</td>
                                 <td class="text-center">
                                     <a class="btn btn-link" href="' . ADMURL . '/users/edit/' . $d['userID'] . '">
-                                    <i class="far fa-edit"></i>
+                                        <i class="far fa-edit"></i>
                                     </a>
                                     ' . $deleteIcon . '
                                 </td>
@@ -51,8 +51,8 @@ showHeading([
                     }
                 } else {
                     echo '<tr>
-                        <td colspan="7"><h1 class="text-info text-center">No Records</h1></td>
-                    </tr>';
+                            <td colspan="7"><h1 class="text-info text-center">No Records</h1></td>
+                        </tr>';
                 }
                 ?>
             </tbody>

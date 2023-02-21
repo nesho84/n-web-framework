@@ -1,126 +1,108 @@
 <?php
 
-//------------------------------------------------------------
-function getUsers(): array|string
-//------------------------------------------------------------
+class UsersModel extends Model
 {
-    try {
-        $sql = DB->prepare("SELECT * FROM users");
-        $sql->execute();
-        return $sql->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        throw new Exception($e->getMessage());
+    //------------------------------------------------------------
+    public function getUsers(): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("SELECT * FROM users");
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
     }
-}
 
-//------------------------------------------------------------
-function getUserById(int $id): array|string
-//------------------------------------------------------------
-{
-    try {
-        $sql = DB->prepare("SELECT * FROM users WHERE userID = :id");
-        $sql->execute(['id' => $id]);
-        return $sql->fetch(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        throw new Exception($e->getMessage());
+    //------------------------------------------------------------
+    public function getUserById(int $id): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("SELECT * FROM users WHERE userID = :id");
+            $this->bindValues($stmt, ['id' => $id]);
+            $stmt->execute();
+            return $stmt->fetch();
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
     }
-}
 
-//------------------------------------------------------------
-function getUsersExceptThis(int $id): array|string
-//------------------------------------------------------------
-{
-    try {
-        $sql = DB->prepare("SELECT * FROM users WHERE userID != :id");
-        $sql->execute(['id' => $id]);
-        return $sql->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        throw new Exception($e->getMessage());
+    //------------------------------------------------------------
+    public function getUsersExceptThis(int $id): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("SELECT * FROM users WHERE userID != :id");
+            $this->bindValues($stmt, ['id' => $id]);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
     }
-}
 
-//------------------------------------------------------------
-function insertUser(array $postArray): bool|string
-//------------------------------------------------------------
-{
-    try {
-        // start database transaction
-        DB->beginTransaction();
+    //------------------------------------------------------------
+    public function insertUser(array $postArray): bool|string
+    //------------------------------------------------------------
+    {
+        try {
+            // start database transaction
+            $this->beginTransaction();
 
-        $sql = DB->prepare(
-            "INSERT INTO users (
-            userName,
-            userEmail, 
-            userPassword, 
-            userPicture,
-            userRole)
-            VALUES (
-            :userName, 
-            :userEmail, 
-            :userPassword,
-            :userPicture,
-            :userRole)"
-        );
-        $sql->execute([
-            ':userName' => $postArray['userName'],
-            ':userEmail' => $postArray['userEmail'],
-            ':userPassword' => $postArray['userPassword'],
-            ':userPicture' => $postArray['userPicture'],
-            ':userRole' => $postArray['userRole'],
-        ]);
+            $stmt = $this->prepareInsert('users', $postArray);
+            $this->bindValues($stmt, $postArray);
+            $stmt->execute();
 
-        // commit database transaction
-        DB->commit();
-
-        // $lastInsertId = DB->lastInsertId();
-        return true;
-    } catch (PDOException $e) {
-        // rollback database transaction
-        DB->rollback();
-
-        throw new Exception($e->getMessage());
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
+        } catch (PDOException $e) {
+            // rollback database transaction
+            $this->rollback();
+            throw new Exception($e->getMessage());
+        }
     }
-}
 
-//------------------------------------------------------------
-function updateUser(array $postArray): bool|string
-//------------------------------------------------------------
-{
-    try {
-        $sql = DB->prepare(
-            "UPDATE users 
-            SET userName = :userName,
-                userEmail = :userEmail,
-                userPassword = :userPassword,
-                userPicture = :userPicture,
-                userRole = :userRole,
-                userStatus = :userStatus
-            WHERE userID = :userID"
-        );
-        $sql->execute([
-            ':userID' => $postArray['userID'],
-            ':userName' => $postArray['userName'],
-            ':userEmail' => $postArray['userEmail'],
-            ':userPassword' => $postArray['userPassword'],
-            ':userPicture' => $postArray['userPicture'],
-            ':userRole' => $postArray['userRole'],
-            ':userStatus' => $postArray['userStatus'],
-        ]);
-        return true;
-    } catch (PDOException $e) {
-        throw new Exception($e->getMessage());
+    //------------------------------------------------------------
+    public function updateUser(array $postArray): bool|string
+    //------------------------------------------------------------
+    {
+        try {
+            // Starts a database transaction
+            $this->beginTransaction();
+
+            $stmt = $this->prepareUpdate('users', 'userID', $postArray);
+            $this->bindValues($stmt, $postArray);
+            $stmt->execute();
+
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
+        } catch (PDOException $e) {
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
+            throw new Exception($e->getMessage());
+        }
     }
-}
 
-//------------------------------------------------------------
-function deleteUser(int $id): bool|string
-//------------------------------------------------------------
-{
-    try {
-        $sql = DB->prepare("DELETE FROM users WHERE userID = :id");
-        $sql->execute([':id' => $id]);
-        return true;
-    } catch (PDOException $e) {
-        throw new Exception($e->getMessage());
+    //------------------------------------------------------------
+    public function deleteUser(int $id): bool|string
+    //------------------------------------------------------------
+    {
+        try {
+            // Starts a database transaction
+            $this->beginTransaction();
+
+            $stmt = $this->prepare("DELETE FROM users WHERE userID = :id");
+            $this->bindValues($stmt, [':id' => $id]);
+            $stmt->execute();
+
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
+        } catch (PDOException $e) {
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
+            throw new Exception($e->getMessage());
+        }
     }
 }

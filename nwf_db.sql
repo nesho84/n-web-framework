@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2023 at 02:39 PM
+-- Generation Time: Feb 21, 2023 at 01:35 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -47,8 +47,7 @@ INSERT INTO `categories` (`categoryID`, `userID`, `categoryType`, `categoryLink`
 (54, 1, 'test1', 'test1', 'test1', 'test1', 0, '2023-01-29 10:41:18', '2023-01-29 09:41:18'),
 (55, 1, 'test2', 'test2', 'test2', 'test2', 0, '2023-01-29 10:41:28', '2023-01-29 09:41:28'),
 (56, 1, 'test3', 'test3', 'test3', 'test3', 0, '2023-01-29 10:41:36', '2023-01-29 09:41:36'),
-(60, 1, '111111', '111111', '111111', '111111\r\nfghfh\r\ndgdfhfdf', 0, '2023-02-17 19:18:34', '2023-02-17 20:52:39'),
-(64, 1, 'aaaaaaaaaa', 'aaaaaaaaaaaaa', 'aaaaaaaaaaaaaa', 'sdfsdfdsf', 0, '2023-02-20 00:32:12', '2023-02-20 12:42:03');
+(60, 1, '111111', '111111', '111111', '111111\r\nfghfh\r\ndgdfhfdf', 0, '2023-02-17 19:18:34', '2023-02-17 20:52:39');
 
 -- --------------------------------------------------------
 
@@ -77,25 +76,9 @@ CREATE TABLE `pages` (
 
 INSERT INTO `pages` (`pageID`, `userID`, `pageName`, `pageTitle`, `pageContent`, `pageLanguage`, `PageMetaTitle`, `PageMetaDescription`, `PageMetaKeywords`, `pageStatus`, `pageDateCreated`, `pageDateUpdated`) VALUES
 (22, 1, 'about', 'ABOUT US', '<h2><strong>Abous Us</strong></h2>\r\n\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos veniam optio dolorem. Mollitia, perferendis officia. Dignissimos pariatur quidem quos commodi a! Error soluta velit at recusandae quae esse illo magni earum asperiores id, itaque vel sint, voluptatibus magnam cupiditate quis eum adipisci dignissimos minima ipsam sapiente cumque nostrum necessitatibus nihil. Impedit at beatae dicta doloribus quasi natus amet illo mollitia ad tempora rem asperiores, laboriosam saepe, unde, molestias dolore. Ea facilis recusandae optio, doloribus, architecto voluptatum voluptatibus, minus aliquam excepturi tempore omnis culpa nam incidunt vero natus labore nobis aspernatur exercitationem! Nobis illo a in, laborum voluptate dolorum aliquid repudiandae.</p>\r\n', 'EN', '', '', '', 1, '2020-04-10 13:04:03', '2023-02-07 22:18:40'),
-(26, 1, 'home', 'HOME', '<h2><strong>HOME</strong></h2>\r\n\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, unde magni. Magni saepe expedita autem quam inventore veritatis eum omnis! Sapiente a vel, maxime fugit in dolor, est accusantium libero, nesciunt perferendis inventore! Molestias assumenda magnam eius praesentium dolor ipsa excepturi libero quia eaque? Nobis exercitationem repudiandae perferendis. Inventore recusandae, corrupti commodi ab eveniet nesciunt cum. Corporis cum cupiditate est ullam debitis laudantium ipsam reprehenderit similique, molestiae explicabo officiis itaque totam, quaerat, minus dolore sed et tempore eveniet beatae! Voluptas nemo ex numquam esse autem officia illo, voluptatibus hic modi, error, laboriosam rem. Dignissimos, id accusantium numquam delectus ullam iusto?</p>\r\n', 'EN', '', '', '', 1, '2020-04-13 13:43:10', '2023-02-10 07:16:01'),
-(31, 1, 'contact', 'CONTACT', '<p><span style=\"font-size:2em;\"><i class=\"fas fa-map-marker-alt\"></span><br />\r\n<span style=\"font-size:20px;\">company<br />\r\naddress,<br />\r\npostalcode city,<br />\r\nCountry<br />\r\n<br />\r\n<i class=\"fas fa-phone-square-alt\"> <strong class=\"pl-1\">Tel: </strong><a href=\"tel:+00 000 00 00 00\">+00 000 00 00 00</a><br />\r\n<i class=\"fas fa-phone-square-alt\"> <strong class=\"pl-1\">Tel: </strong><a href=\"tel:+00 000 00 00 00\">+00 000 00 00 00</a><br />\r\n<i class=\"fas fa-envelope\"> <small class=\"pl-1\"><strong>E-Mail:</strong> <a href=\"mailto:office@company.com\">office@company.com</a></small></span></p>\r\n', 'EN', '', '', '', 0, '2020-04-13 17:15:46', '2023-02-20 13:26:38');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `services`
---
-
-CREATE TABLE `services` (
-  `serviceID` int(11) NOT NULL,
-  `userID` int(11) NOT NULL,
-  `serviceTitle` varchar(250) NOT NULL,
-  `serviceDescription` text NOT NULL,
-  `serviceImage` varchar(250) NOT NULL,
-  `serviceStatus` tinyint(1) NOT NULL DEFAULT 0,
-  `serviceDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
-  `serviceDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+(26, 1, 'home', 'HOME', '<h2><strong>HOME</strong></h2>\r\n\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, unde magni. Magni saepe expedita autem quam inventore veritatis eum omnis! Sapiente a vel, maxime fugit in dolor, est accusantium libero, nesciunt perferendis inventore! Molestias assumenda magnam eius praesentium dolor ipsa excepturi libero quia eaque? Nobis exercitationem repudiandae perferendis. Inventore recusandae, corrupti commodi ab eveniet nesciunt cum. Corporis cum cupiditate est ullam debitis laudantium ipsam reprehenderit similique, molestiae explicabo officiis itaque totam, quaerat, minus dolore sed et tempore eveniet beatae! Voluptas nemo ex numquam esse autem officia illo, voluptatibus hic modi, error, laboriosam rem. Dignissimos, id accusantium numquam delectus ullam iusto?</p>\r\n', 'EN', '', '', '', 0, '2020-04-13 13:43:10', '2023-02-21 12:23:45'),
+(31, 1, 'contact', 'CONTACT', '<p><span style=\"font-size:2em;\"><i class=\"fas fa-map-marker-alt\"></span><br />\r\n<span style=\"font-size:20px;\">company<br />\r\naddress,<br />\r\npostalcode city,<br />\r\nCountry<br />\r\n<br />\r\n<i class=\"fas fa-phone-square-alt\"> <strong class=\"pl-1\">Tel: </strong><a href=\"tel:+00 000 00 00 00\">+00 000 00 00 00</a><br />\r\n<i class=\"fas fa-phone-square-alt\"> <strong class=\"pl-1\">Tel: </strong><a href=\"tel:+00 000 00 00 00\">+00 000 00 00 00</a><br />\r\n<i class=\"fas fa-envelope\"> <small class=\"pl-1\"><strong>E-Mail:</strong> <a href=\"mailto:office@company.com\">office@company.com</a></small></span></p>\r\n', 'EN', '', '', '', 1, '2020-04-13 17:15:46', '2023-02-21 12:23:38'),
+(67, 1, 'sdfsdf', 'sdf', '<p>sdfsdfsdfsdf</p>\r\n', 'EN', 'sdfsdf', 'sdfsdf', 'sdfsdf', 1, '2023-02-21 13:26:21', '2023-02-21 12:26:27');
 
 -- --------------------------------------------------------
 
@@ -173,12 +156,6 @@ ALTER TABLE `pages`
   ADD PRIMARY KEY (`pageID`);
 
 --
--- Indexes for table `services`
---
-ALTER TABLE `services`
-  ADD PRIMARY KEY (`serviceID`);
-
---
 -- Indexes for table `translations`
 --
 ALTER TABLE `translations`
@@ -198,19 +175,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `pageID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
-
---
--- AUTO_INCREMENT for table `services`
---
-ALTER TABLE `services`
-  MODIFY `serviceID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `pageID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `translations`

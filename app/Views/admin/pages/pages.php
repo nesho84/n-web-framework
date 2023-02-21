@@ -45,18 +45,18 @@ showHeading([
                             <td class="text-center">' . $pageStatus . '</td>
                             <td class="text-center">
                                 <a class="btn btn-link" href="' . ADMURL . '/pages/edit/' . $d['pageID'] . '">
-                                <i class="far fa-edit"></i>
+                                    <i class="far fa-edit"></i>
                                 </a>
                                 <a class="btn btn-link btn-delete" href="' . ADMURL . '/pages/delete/' . $d['pageID'] . '">
-                                <i class="far fa-trash-alt"></i>
+                                    <i class="far fa-trash-alt"></i>
                                 </a>
                             </td>
                         </tr>';
                     }
                 } else {
                     echo '<tr>
-                        <td colspan="7"><h1 class="text-info text-center">No Records</h1></td>
-                    </tr>';
+                            <td colspan="7"><h1 class="text-info text-center">No Records</h1></td>
+                        </tr>';
                 }
                 ?>
             </tbody>
