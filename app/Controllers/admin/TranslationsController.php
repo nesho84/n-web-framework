@@ -22,10 +22,11 @@ class TranslationsController extends Controller
         $data['title'] = 'Translations';
         $data['rows'] = $this->translationsModel->getTranslations();
 
-        $this->includeHeader('admin', $data);
-        $this->renderView('/admin/translations/create', $data);
-        $this->renderView('/admin/translations/translations', $data);
-        $this->includeFooter('admin');
+        // TODO: here should be languages section
+        $this->renderAdminView([
+            '/admin/translations/create.php',
+            '/admin/translations/translations'
+        ], $data);
     }
 
     //------------------------------------------------------------

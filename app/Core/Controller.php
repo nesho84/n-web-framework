@@ -29,91 +29,91 @@ class Controller
     }
 
     //------------------------------------------------------------
-    protected function renderView(string $view_path, array $data = []): void
-    //------------------------------------------------------------
-    {
-        // Set full view path
-        $view = VIEWS_PATH . $view_path;
-
-        // Set .php extenstion, if is not set
-        if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
-            $view = VIEWS_PATH . $view_path . ".php";
-        }
-
-        if (file_exists($view)) {
-            require_once $view;
-        } else {
-            die("'View' file not found '" . $view . "'");
-        }
-    }
-
-    //------------------------------------------------------------
-    protected function renderPublicView(string $view_path, array $data = []): void
-    //------------------------------------------------------------
-    {
-        // Set full view path
-        $view = VIEWS_PATH . $view_path;
-
-        // Set .php extenstion, if is not set
-        if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
-            $view = VIEWS_PATH . $view_path . ".php";
-        }
-
-        if (file_exists($view)) {
-            require_once VIEWS_PATH . "/public/includes/header.php";
-            require_once $view;
-            require_once VIEWS_PATH . "/public/includes/footer.php";
-        } else {
-            die("'View' file not found '" . $view . "'");
-        }
-    }
-
-    //------------------------------------------------------------
     protected function renderAdminView(string|array $view_path, array $data = []): void
     //------------------------------------------------------------
     {
-        // Set full view path
-        $view = VIEWS_PATH . $view_path;
+        require_once VIEWS_PATH . "/admin/includes/header.php";
 
-        // Set .php extenstion, if is not set
-        if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
-            $view = VIEWS_PATH . $view_path . ".php";
+        $view_paths = is_array($view_path) ? $view_path : [$view_path];
+        foreach ($view_paths as $view_path) {
+            // Set full view path
+            $view = VIEWS_PATH . $view_path;
+            // Set .php extenstion, if is not set
+            if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
+                $view .= ".php";
+            }
+            if (file_exists($view)) {
+                require_once $view;
+            } else {
+                die("'View' file not found '" . $view . "'");
+            }
         }
 
-        if (file_exists($view)) {
-            require_once VIEWS_PATH . "/admin/includes/header.php";
-            require_once $view;
-            require_once VIEWS_PATH . "/admin/includes/footer.php";
-        } else {
-            die("'View' file not found '" . $view . "'");
-        }
+        require_once VIEWS_PATH . "/admin/includes/footer.php";
     }
 
     //------------------------------------------------------------
-    protected function includeHeader(string $section, array $data = []): void
+    protected function renderSimpleView(string|array $view_path, array $data = []): void
     //------------------------------------------------------------
     {
-        // Set full header path
-        $header = VIEWS_PATH . "/$section/includes/header.php";;
-
-        if (file_exists($header)) {
-            require_once $header;
-        } else {
-            die("'Header' file not found '" . $header . "'");
+        $view_paths = is_array($view_path) ? $view_path : [$view_path];
+        foreach ($view_paths as $view_path) {
+            // Set full view path
+            $view = VIEWS_PATH . $view_path;
+            // Set .php extenstion, if is not set
+            if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
+                $view .= ".php";
+            }
+            if (file_exists($view)) {
+                require_once $view;
+            } else {
+                die("'View' file not found '" . $view . "'");
+            }
         }
     }
 
     //------------------------------------------------------------
-    protected function includeFooter(string $section, array $data = []): void
+    protected function renderPublicView(string|array $view_path, array $data = []): void
     //------------------------------------------------------------
     {
-        // Set full header path
-        $footer = VIEWS_PATH . "/$section/includes/footer.php";;
+        require_once VIEWS_PATH . "/public/includes/header.php";
 
-        if (file_exists($footer)) {
-            require_once $footer;
-        } else {
-            die("'footer' file not found '" . $footer . "'");
+        $view_paths = is_array($view_path) ? $view_path : [$view_path];
+        foreach ($view_paths as $view_path) {
+            // Set full view path
+            $view = VIEWS_PATH . $view_path;
+            // Set .php extenstion, if is not set
+            if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
+                $view .= ".php";
+            }
+            if (file_exists($view)) {
+                require_once $view;
+            } else {
+                die("'View' file not found '" . $view . "'");
+            }
         }
+
+        require_once VIEWS_PATH . "/public/includes/footer.php";
     }
+
+    // protected function renderView(string|array $view_path, array $data = []): void
+    // {
+    //     $content = '';
+    //     foreach ($view_paths as $view_path) {
+    //         $view = VIEWS_PATH . $view_path;
+    //         if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
+    //             $view .= ".php";
+    //         }
+    //         if (file_exists($view)) {
+    //             ob_start();
+    //             require_once $view;
+    //             $content .= ob_get_clean();
+    //         } else {
+    //             die("'View' file not found '" . $view . "'");
+    //         }
+    //     }
+    //     require_once VIEWS_PATH . "/admin/includes/header.php";
+    //     echo $content;
+    //     require_once VIEWS_PATH . "/admin/includes/footer.php";
+    // }
 }

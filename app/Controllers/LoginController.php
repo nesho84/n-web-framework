@@ -22,7 +22,7 @@ class LoginController extends Controller
             'password' => '',
         ];
 
-        $this->renderView("/login/login", $data);
+        $this->renderSimpleView("/login/login", $data);
     }
 
 
@@ -54,7 +54,7 @@ class LoginController extends Controller
         // Finally, destroy the session
         session_destroy();
 
-        $this->renderView("/login/logout", $data);
+        $this->renderSimpleView("/login/logout", $data);
     }
 
     //------------------------------------------------------------

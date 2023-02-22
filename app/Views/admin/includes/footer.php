@@ -1,9 +1,9 @@
 </main> <!-- main end -->
 
-<!-- App Version -->
-<div class="text-center border-top">
-    <p class="mt-2">Version <strong><?php echo APP_VERSION; ?></strong></p>
-</div>
+<footer class="text-center border-top mt-3">
+    <!-- App Version -->
+    <p class="mt-3">Version <strong><?php echo APP_VERSION; ?></strong></p>
+</footer>
 
 </div> <!-- wrapper end -->
 
