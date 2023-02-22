@@ -9,7 +9,7 @@ class PagesController extends Controller
     //------------------------------------------------------------
     {
         // Require Login
-        $this->requireLogin();
+        Sessions::requireLogin();
 
         // Load Model
         $this->pagesModel = $this->loadModel("/admin/PagesModel");

@@ -1,0 +1,8 @@
+[22-Feb-2023 15:39:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method LoginController::renderView() in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:57
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): LoginController->logout()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 57
+[22-Feb-2023 15:40:26 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "," in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 25

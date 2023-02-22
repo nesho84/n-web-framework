@@ -9,6 +9,8 @@ require_once __DIR__ . "/config/settings.php";
 
 // MySQL Connection
 require_once CORE_PATH . "/Database.php";
+// Sessions Handler
+require_once CORE_PATH . "/Sessions.php";
 // Routing
 require_once CORE_PATH . "/Router.php";
 // Base Model

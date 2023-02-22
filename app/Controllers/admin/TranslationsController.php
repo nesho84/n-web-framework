@@ -9,7 +9,7 @@ class TranslationsController extends Controller
     //------------------------------------------------------------
     {
         // Require Login
-        $this->requireLogin();
+        Sessions::requireLogin();
 
         // Load Model
         $this->translationsModel = $this->loadModel("/admin/TranslationsModel");
@@ -22,7 +22,10 @@ class TranslationsController extends Controller
         $data['title'] = 'Translations';
         $data['rows'] = $this->translationsModel->getTranslations();
 
-        $this->renderAdminView('/admin/translations/translations', $data);
+        $this->includeHeader('admin', $data);
+        $this->renderView('/admin/translations/create', $data);
+        $this->renderView('/admin/translations/translations', $data);
+        $this->includeFooter('admin');
     }
 
     //------------------------------------------------------------

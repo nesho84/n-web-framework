@@ -41,16 +41,14 @@ class Controller
         }
 
         if (file_exists($view)) {
-            require_once VIEWS_PATH . "/public/includes/header.php";
             require_once $view;
-            require_once VIEWS_PATH . "/public/includes/footer.php";
         } else {
             die("'View' file not found '" . $view . "'");
         }
     }
 
     //------------------------------------------------------------
-    protected function renderSimpleView(string $view_path, array $data = []): void
+    protected function renderPublicView(string $view_path, array $data = []): void
     //------------------------------------------------------------
     {
         // Set full view path
@@ -62,14 +60,16 @@ class Controller
         }
 
         if (file_exists($view)) {
+            require_once VIEWS_PATH . "/public/includes/header.php";
             require_once $view;
+            require_once VIEWS_PATH . "/public/includes/footer.php";
         } else {
             die("'View' file not found '" . $view . "'");
         }
     }
 
     //------------------------------------------------------------
-    protected function renderAdminView(string $view_path, array $data = []): void
+    protected function renderAdminView(string|array $view_path, array $data = []): void
     //------------------------------------------------------------
     {
         // Set full view path
@@ -89,31 +89,31 @@ class Controller
         }
     }
 
-    /**
-     * Redirects to Login Page, if User is not Logged In! 
-     * @param bool $isLoginPage redirect from login page if already logged in
-     * @return void
-     */
     //------------------------------------------------------------
-    function requireLogin(bool $isLoginPage = false): void
+    protected function includeHeader(string $section, array $data = []): void
     //------------------------------------------------------------
     {
-        // TODO: Check this user id session against the database to ensure that the user is still valid and exist, this will ensure a secure way of handling sessions and user validation.
+        // Set full header path
+        $header = VIEWS_PATH . "/$section/includes/header.php";;
 
-        if (!isset($_SESSION['user']["id"]) || empty($_SESSION['user']["id"])) {
-            if ($isLoginPage === false) {
-                // User is not logged in, redirect to login page
-                redirect(APPURL . "/login");
-                exit;
-            }
+        if (file_exists($header)) {
+            require_once $header;
+        } else {
+            die("'Header' file not found '" . $header . "'");
         }
+    }
 
-        // Login Page: if User is logged in, redirect to Admin page
-        if (isset($_SESSION['user']["id"]) || !empty($_SESSION['user']["id"])) {
-            if ($isLoginPage === true) {
-                redirect(APPURL . "/admin");
-                exit;
-            }
+    //------------------------------------------------------------
+    protected function includeFooter(string $section, array $data = []): void
+    //------------------------------------------------------------
+    {
+        // Set full header path
+        $footer = VIEWS_PATH . "/$section/includes/footer.php";;
+
+        if (file_exists($footer)) {
+            require_once $footer;
+        } else {
+            die("'footer' file not found '" . $footer . "'");
         }
     }
 }

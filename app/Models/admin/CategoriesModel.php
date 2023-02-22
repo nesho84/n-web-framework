@@ -75,9 +75,7 @@ class CategoriesModel extends Model
             //     :categoryDescription)"
             // );
 
-            $columns = implode(',', array_keys($postArray));
-            $placeholders = ':' . implode(',:', array_keys($postArray));
-            $stmt = $this->prepare("INSERT INTO categories ($columns) VALUES ($placeholders)");
+            $stmt = $this->prepareInsert('categories', $postArray);
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 
@@ -108,10 +106,7 @@ class CategoriesModel extends Model
             //     WHERE categoryID = :categoryID"
             // );
 
-            // Keep all keys to set, except for 'categoryID'
-            $setArray = array_filter($postArray, fn ($key) => $key !== 'categoryID', ARRAY_FILTER_USE_KEY);
-            $set = implode(',', array_map(fn ($key) => "$key = :$key", array_keys($setArray)));
-            $stmt = $this->prepare("UPDATE categories SET $set WHERE categoryID = :categoryID");
+            $stmt = $this->prepareUpdate('categories', 'categoryID', $postArray);
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 

@@ -14,13 +14,15 @@ class LoginController extends Controller
     //------------------------------------------------------------
     {
         // Redirect if logged in
-        $this->requireLogin(true);
+        Sessions::requireLogin(true);
 
-        $data['title'] = "Login";
-        $data['email'] = "";
-        $data['password'] = "";
+        $data = [
+            'title' => 'Login',
+            'email' => '',
+            'password' => '',
+        ];
 
-        $this->renderSimpleView("/login/login", $data);
+        $this->renderView("/login/login", $data);
     }
 
 
@@ -28,6 +30,8 @@ class LoginController extends Controller
     public function logout(): void
     //------------------------------------------------------------
     {
+        $data["title"] = "Logout";
+
         // Unset all of the session variables
         $_SESSION = array();
 
@@ -50,57 +54,49 @@ class LoginController extends Controller
         // Finally, destroy the session
         session_destroy();
 
-        $data["title"] = "Logout";
-
-        $this->renderSimpleView("/login/logout", $data);
+        $this->renderView("/login/logout", $data);
     }
 
     //------------------------------------------------------------
     public function login_validate(): void
     //------------------------------------------------------------
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $postArray = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $postArray = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $output = "";
+        $output = "";
 
-            if (empty($postArray["email"])) {
-                $output .= "Please enter your Email";
-            }
-            if (filter_var($postArray["email"], FILTER_VALIDATE_EMAIL) === false) {
-                $output .= "The email you entered was not valid.";
-            }
-            if (empty($postArray["password"])) {
-                $output .= "Please enter your password";
-            }
+        if (empty($postArray["email"])) {
+            $output .= "Please enter your Email";
+        }
+        if (filter_var($postArray["email"], FILTER_VALIDATE_EMAIL) === false) {
+            $output .= "The email you entered was not valid.";
+        }
+        if (empty($postArray["password"])) {
+            $output .= "Please enter your password";
+        }
 
-            $result = $this->loginModel->findUserByEmail($postArray['email']);
-            // We check for array because: the $stmt->fetch() method is used to retrieve a single row(array assoc) from the result set, otherwise will return false, If a PDO query doesn't find any results 
-            if (is_array($result)) {
-                // Validate Password
-                if (password_verify($postArray["password"], $result["userPassword"])) {
-                    // Check if the user is Active
-                    if ($result["userStatus"] !== 1) {
-                        $output .= "Your Account is not active, please contact support.";
-                    } else {
-                        // Success =>> Create all Sessions
-                        $this->create_user_session($result, $postArray);
-                        $output = "success";
-                    }
+        $result = $this->loginModel->findUserByEmail($postArray['email']);
+        // We check for array because: the $stmt->fetch() method is used to retrieve a single row(array assoc) from the result set, otherwise will return false, If a PDO query doesn't find any results 
+        if (is_array($result) && count($result) > 0) {
+            // Validate Password
+            if (password_verify($postArray["password"], $result["userPassword"])) {
+                // Check if the user is Active
+                if ($result["userStatus"] !== 1) {
+                    $output .= "Your Account is not active, please contact support.";
                 } else {
-                    $output .= "The Email or Password you entered was not valid.";
+                    // Success =>> Create all Sessions
+                    $this->create_user_session($result, $postArray);
+                    $output = "success";
                 }
             } else {
-                // print query errors
-                $output .= $result;
+                $output .= "The Email or Password you entered was not valid.";
             }
-
-            echo $output;
-            exit;
         } else {
-            redirect(APPURL . '/login');
-            exit;
+            $output .= !$result ? "No account found with this email address." : $result;
         }
+
+        echo $output;
+        exit;
     }
 
     //------------------------------------------------------------
@@ -112,11 +108,13 @@ class LoginController extends Controller
 
         // Set User Session array
         $_SESSION['user'] = [
+            'session_token' => session_id(),
             'id' => $user['userID'],
             'name' => $user['userName'],
             'email' => $user['userEmail'],
             'pic' => $user['userPicture'],
             'role' => $user['userRole'],
+            'loggedin_time' => time(),
         ];
 
         if (isset($_COOKIE['last_login'])) {

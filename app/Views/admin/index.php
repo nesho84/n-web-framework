@@ -16,6 +16,7 @@
                     } else {
                         echo '<small>Welcome back</small>';
                     }
+                    // echo "<p class='mt-2'><strong>Session token:</strong> " . $_SESSION['user']['session_token'] . '</p>';
                     ?>
                 </h6>
             </div>

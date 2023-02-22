@@ -40,7 +40,7 @@ class Model extends Database
     public function prepareUpdate(string $table, string $primaryKey, array $postArray): PDOStatement
     //------------------------------------------------------------
     {
-        // Keep all keys to set, except for 'primaryKey'
+        // Keep all keys for set, except for 'primaryKey'
         $setArray = array_filter($postArray, fn ($key) => $key !== $primaryKey, ARRAY_FILTER_USE_KEY);
         $set = implode(',', array_map(fn ($key) => "$key = :$key", array_keys($setArray)));
         return $this->prepare("UPDATE $table SET $set WHERE $primaryKey = :$primaryKey");

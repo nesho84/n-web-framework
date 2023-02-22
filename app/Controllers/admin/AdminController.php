@@ -9,7 +9,7 @@ class AdminController extends Controller
     //------------------------------------------------------------
     {
         // Require Login
-        // $this->requireLogin();
+        Sessions::requireLogin();
 
         // Load Model
         $this->adminModel = $this->loadModel("/admin/AdminModel");

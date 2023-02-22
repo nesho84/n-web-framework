@@ -9,7 +9,7 @@ class CategoriesController extends Controller
     //------------------------------------------------------------
     {
         // Require Login
-        $this->requireLogin();
+        Sessions::requireLogin();
 
         // Load Model
         $this->categoriesModel = $this->loadModel("/admin/CategoriesModel");

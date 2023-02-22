@@ -69,19 +69,24 @@ class Router
 
         // Validate Routes
         $validRoute = $this->validate($this->url);
-
         if ($validRoute) {
+            // First check server request method
+            $mt = $validRoute['method'] ?? null;
+            if ($_SERVER['REQUEST_METHOD'] !== $mt) {
+                // This is not a POST request, send a 405 error
+                http_response_code(405);
+                header('Allow: ' . $mt);
+                die("Request method '" . $_SERVER['REQUEST_METHOD'] . "' not supported");
+            }
+            // Load Controller
             $ct = $validRoute['controller'] ?? null;
             if (isset($ct)) {
-                // Load Controller
                 $this->controller_path = CONTROLLERS_PATH . "/" . $ct . ".php";
                 $this->controller_class = basename($this->controller_path, '.php');
-                $this->method = $validRoute['method'];
                 $this->action = $validRoute['action'];
                 $this->loadController();
             } else {
-                // Call the given callback function 
-                echo call_user_func($validRoute['callback'], $this->url, $validRoute);
+                call_user_func($validRoute['callback'], $this->url, $validRoute);
             }
         } else {
             // die("'Route' not found '" . $this->url . "'");
@@ -138,13 +143,6 @@ class Router
             }
 
             if (method_exists($controller_object, $this->action)) {
-                // Make sure the server request method is correct
-                if ($_SERVER['REQUEST_METHOD'] !== $this->method) {
-                    // This is not a POST request, send a 405 error
-                    http_response_code(405);
-                    header('Allow: ' . $this->method);
-                    die("Request method '" . $_SERVER['REQUEST_METHOD'] . "' not supported");
-                }
                 // Call controller functions with or without params
                 if ($this->params) {
                     // Example: post/1 or post/edit/2

@@ -9,7 +9,7 @@ class UsersController extends Controller
     //------------------------------------------------------------
     {
         // Require Login
-        $this->requireLogin();
+        Sessions::requireLogin();
 
         // Load Model
         $this->usersModel = $this->loadModel("/admin/UsersModel");

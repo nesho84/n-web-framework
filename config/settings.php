@@ -1,10 +1,11 @@
 <?php
+ob_start();
 session_start();
 
 // Just for Develop
 error_reporting(E_ALL);
 ini_set('ignore_repeated_errors', TRUE); // always use TRUE
-ini_set('display_errors', TRUE); // Error/Exception display, use FALSE only in production environment or real server.
+ini_set('display_errors', TRUE); // Error/Exception display, use FALSE only in production
 ini_set('log_errors', TRUE); // Error/Exception file logging engine.
 ini_set('error_log', dirname(__DIR__) . '/error.log'); // Logging file path
 
@@ -20,8 +21,7 @@ define('DB_PASS', '123456');
 //------------------------------------------------------------
 // Version
 //------------------------------------------------------------
-defined('APP_VERSION')
-    or define('APP_VERSION', '3.1.1');
+define('APP_VERSION', '3.1.1');
 
 //------------------------------------------------------------
 // User Admin
@@ -30,6 +30,8 @@ define('A_USERNAME', 'admin');
 define('A_USER_EMAIL', 'admin@company.com');
 define('A_USER_ROLE', 'admin');
 define('A_USER_PASSWORD', '010203');
+//sets time for the session to expire. 
+define('SESSION_DURATION', 1800); // the time is in seconds
 
 //------------------------------------------------------------
 // App 
