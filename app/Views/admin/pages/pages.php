@@ -25,6 +25,7 @@ showHeading([
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Language</th>
                     <th scope="col" class='text-center'>Status</th>
                     <th scope="col" class='text-center'>Action</th>
                 </tr>
@@ -42,6 +43,7 @@ showHeading([
                         echo '<tr>
                             <th scope="row">' . $counter . '</th>
                             <td>' . $d['pageName'] . '</td>
+                            <td>' . $d['languageName'] . '</td>
                             <td class="text-center">' . $pageStatus . '</td>
                             <td class="text-center">
                                 <a class="btn btn-link" href="' . ADMURL . '/pages/edit/' . $d['pageID'] . '">

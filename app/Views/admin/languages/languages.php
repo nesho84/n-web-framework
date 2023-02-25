@@ -1,9 +1,9 @@
     <!-- Page Header -->
     <?php
     showHeading([
-        'title' => 'Translations',
+        'title' => 'Languages',
         'btnText' => 'Create New +',
-        'btnLink' => ADMURL . '/translations/create',
+        'btnLink' => ADMURL . '/languages/create',
         'btnClass' => 'success',
     ]);
     ?>
@@ -14,9 +14,8 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Translation Code</th>
-                        <th scope="col">Language</th>
-                        <th scope="col">Translation Text</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Code</th>
                         <th scope="col" class='text-center'>Action</th>
                     </tr>
                 </thead>
@@ -27,17 +26,18 @@
                         $counter = 0;
                         foreach ($rows as $d) {
                             $counter += 1;
-                            $translationText = strlen($d['translationText']) > 38 ? substr($d['translationText'], 0, 38) . '...' : $d['translationText'];
+
+                            $flag = !empty($d['languageFlag']) ? '<img src="' . $d['languageFlag'] . '" alt="...">' : '<img src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+
                             echo '<tr>
                                     <th scope="row">' . $counter . '</th>
-                                    <td>' . $d['translationCode'] . '</td>
-                                    <td>' . $d['languageName'] . '</td>
-                                    <td>' . $translationText . '</td>
+                                    <td>' . $flag . '&nbsp;&nbsp;' . $d['languageName'] . '</td>
+                                    <td>' . $d['languageCode']  . '</td>
                                     <td class="text-center">
-                                        <a class="btn btn-link" href="' . ADMURL . '/translations/edit/' . $d['translationID'] . '">
+                                        <a class="btn btn-link" href="' . ADMURL . '/languages/edit/' . $d['languageID'] . '">
                                             <i class="far fa-edit"></i>
                                         </a>
-                                        <a class="btn btn-link btn-delete" href="' . ADMURL . '/translations/delete/' . $d['translationID'] . '">
+                                        <a class="btn btn-link btn-delete" href="' . ADMURL . '/languages/delete/' . $d['languageID'] . '">
                                             <i class="far fa-trash-alt"></i>
                                         </a>
                                     </td>

@@ -1,178 +1,550 @@
-[22-Feb-2023 15:39:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method LoginController::renderSimpleView() in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:57
+[25-Feb-2023 10:12:52 Europe/Berlin] PHP Warning:  Undefined array key "translationID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\languages.php on line 39
+[25-Feb-2023 10:12:52 Europe/Berlin] PHP Warning:  Undefined array key "translationID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\languages.php on line 42
+[25-Feb-2023 10:18:46 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 9
+[25-Feb-2023 10:18:46 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 16
+[25-Feb-2023 10:18:46 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 19
+[25-Feb-2023 10:18:46 Europe/Berlin] PHP Warning:  Undefined variable $translationText in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 27
+[25-Feb-2023 10:19:09 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 16
+[25-Feb-2023 10:19:09 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 19
+[25-Feb-2023 10:19:09 Europe/Berlin] PHP Warning:  Undefined variable $translationText in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 27
+[25-Feb-2023 10:20:46 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 16
+[25-Feb-2023 10:20:46 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 19
+[25-Feb-2023 10:20:46 Europe/Berlin] PHP Warning:  Undefined variable $translationText in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 27
+[25-Feb-2023 10:24:02 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:24:02 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:24:25 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:24:25 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:24:25 Europe/Berlin] PHP Warning:  Undefined variable $flag in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 32
+[25-Feb-2023 10:24:39 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:24:39 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:24:45 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:24:45 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:24:53 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:24:53 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:26:00 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:26:00 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:26:07 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:26:07 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:26:09 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:26:09 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:26:14 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:26:14 Europe/Berlin] PHP Warning:  Undefined variable $translationCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 21
+[25-Feb-2023 10:26:52 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:27:36 Europe/Berlin] PHP Warning:  Undefined variable $translationID in D:\xampp\htdocs\n-web-framework\app\Views\admin\languages\edit.php on line 18
+[25-Feb-2023 10:37:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method LanguagesModel::getUserById() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php:151
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): LoginController->logout()
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): LanguagesController->update(1)
 #1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
 #3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 57
-[22-Feb-2023 15:40:26 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "," in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 25
-[22-Feb-2023 20:08:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::includeHeader() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 151
+[25-Feb-2023 11:06:04 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 11:09:07 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 11:15:20 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 11:16:15 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 11:18:05 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 11:18:35 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY translationCode DESC' at line 4 in D:\xampp\htdocs\n-web-framework\app\Models\admin\TranslationsModel.php:19
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 20:09:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::includeHeader() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
-Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 20:09:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::includeHeader() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
-Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 20:13:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::includeHeader() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
-Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 20:15:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::includeHeader() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
-Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 20:23:46 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "This", expecting "function" or "const" in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 127
-[22-Feb-2023 20:47:58 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 115
-[22-Feb-2023 20:47:58 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 127
-[22-Feb-2023 20:47:58 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 115
-[22-Feb-2023 20:47:58 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 127
-[22-Feb-2023 20:49:43 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 115
-[22-Feb-2023 20:49:43 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 127
-[22-Feb-2023 20:49:43 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 115
-[22-Feb-2023 20:49:43 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 127
-[22-Feb-2023 20:49:46 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 115
-[22-Feb-2023 20:49:46 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 127
-[22-Feb-2023 20:49:46 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 115
-[22-Feb-2023 20:49:46 Europe/Berlin] PHP Warning:  Undefined variable $include_header_footer in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 127
-[22-Feb-2023 20:55:21 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Controller::renderAdminView(): Argument #1 ($view_paths) must be of type array, string given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25 and defined in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:92
-Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php(25): Controller->renderAdminView('/admin/translat...', Array)
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php(23): TranslationsModel->getTranslations()
 #1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
 #2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#3 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
 #4 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 92
-[22-Feb-2023 20:57:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::renderMultipleViews() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\TranslationsModel.php on line 19
+[25-Feb-2023 11:20:28 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 11:20:51 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 11:29:07 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:30:14 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:33:57 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:35:43 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 21
+[25-Feb-2023 11:35:43 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 22
+[25-Feb-2023 11:35:44 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:37:39 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 28
+[25-Feb-2023 11:37:39 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:40:30 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 28
+[25-Feb-2023 11:40:30 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:40:53 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 28
+[25-Feb-2023 11:40:54 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:41:24 Europe/Berlin] PHP Warning:  Undefined array key "pageLanguage" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 53
+[25-Feb-2023 11:41:24 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 53
+[25-Feb-2023 11:41:24 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 28
+[25-Feb-2023 11:41:25 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:42:29 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:42:38 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:42:42 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:44:49 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:45:08 Europe/Berlin] PHP Warning:  Undefined array key "languages" in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 21
+[25-Feb-2023 11:45:08 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 22
+[25-Feb-2023 11:45:08 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:45:20 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:48:27 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php:23
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(46): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php(40): Controller->renderAdminView('/admin/pages/cr...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PagesController->create()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 23
+[25-Feb-2023 11:48:55 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 11:49:25 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:27:45 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:28:28 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:28:35 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:28:48 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:28:51 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:28:55 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:28:58 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:29:05 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:29:11 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:29:27 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:42:53 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.languageID' in 'on clause' in D:\xampp\htdocs\n-web-framework\app\Models\admin\TranslationsModel.php:19
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php(27): TranslationsModel->getTranslations()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\TranslationsModel.php on line 19
+[25-Feb-2023 12:48:38 Europe/Berlin] PHP Warning:  Undefined array key "translationLanguages" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 17
+[25-Feb-2023 12:48:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 18
+[25-Feb-2023 12:49:44 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 12:50:34 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 12:51:05 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 12:51:24 Europe/Berlin] PHP Warning:  Undefined array key "languageCode" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 12:52:04 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 12:54:26 Europe/Berlin] PHP Warning:  Undefined variable $languageCode in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 23
+[25-Feb-2023 12:55:13 Europe/Berlin] PHP Warning:  Undefined array key "languageCodes" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 26
+[25-Feb-2023 12:55:13 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 27
+[25-Feb-2023 13:18:58 Europe/Berlin] PHP Warning:  Undefined array key "translationLanguage" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 13:19:04 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:19:05 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:19:08 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:19:08 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:19:26 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:19:37 Europe/Berlin] PHP Warning:  Undefined array key "translationLanguage" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 13:20:24 Europe/Berlin] PHP Warning:  Undefined array key "translationLanguage" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 13:22:29 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:22:30 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:22:32 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:22:35 Europe/Berlin] PHP Warning:  Undefined array key "translationLanguage" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 13:23:01 Europe/Berlin] PHP Warning:  Undefined array key "translationLanguage" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\translations.php on line 34
+[25-Feb-2023 13:27:30 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 24
+[25-Feb-2023 13:28:05 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 24
+[25-Feb-2023 13:28:11 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 24
+[25-Feb-2023 13:28:58 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 24
+[25-Feb-2023 13:30:18 Europe/Berlin] PHP Warning:  Undefined array key "languageName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 24
+[25-Feb-2023 13:30:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "languageID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php:24
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(46): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php(45): Controller->renderAdminView('/admin/translat...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->create()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 24
+[25-Feb-2023 13:30:50 Europe/Berlin] PHP Warning:  Undefined array key "languageName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 24
+[25-Feb-2023 13:30:59 Europe/Berlin] PHP Warning:  Undefined array key "languageName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 24
+[25-Feb-2023 13:32:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method LanguagesModel::getLanguageCodes() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:43
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->create()
 #1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
 #3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 20:59:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::renderMultipleViews() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 43
+[25-Feb-2023 13:33:03 Europe/Berlin] PHP Warning:  Undefined variable $translationLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 28
+[25-Feb-2023 13:33:03 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 33
+[25-Feb-2023 13:33:03 Europe/Berlin] PHP Warning:  Undefined variable $translationLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 28
+[25-Feb-2023 13:33:03 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 33
+[25-Feb-2023 13:33:03 Europe/Berlin] PHP Warning:  Undefined variable $translationLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 28
+[25-Feb-2023 13:33:03 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 33
+[25-Feb-2023 13:34:34 Europe/Berlin] PHP Warning:  Undefined array key "languageCodes" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 17
+[25-Feb-2023 13:34:34 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\create.php on line 18
+[25-Feb-2023 13:38:43 Europe/Berlin] PHP Warning:  Undefined array key "languageCodes" in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 26
+[25-Feb-2023 13:38:43 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 27
+[25-Feb-2023 13:38:52 Europe/Berlin] PHP Warning:  Undefined variable $translationLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 28
+[25-Feb-2023 13:38:52 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 33
+[25-Feb-2023 13:38:52 Europe/Berlin] PHP Warning:  Undefined variable $translationLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 28
+[25-Feb-2023 13:38:52 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 33
+[25-Feb-2023 13:38:52 Europe/Berlin] PHP Warning:  Undefined variable $translationLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 28
+[25-Feb-2023 13:38:52 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 33
+[25-Feb-2023 13:39:34 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\translations\edit.php on line 33
+[25-Feb-2023 13:42:06 Europe/Berlin] PHP Warning:  Undefined array key "languageName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php on line 46
+[25-Feb-2023 13:45:12 Europe/Berlin] PHP Warning:  Undefined array key "languageCodes" in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 21
+[25-Feb-2023 13:45:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 22
+[25-Feb-2023 13:45:12 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 21:00:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::renderArrayView() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:45:31 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 28
+[25-Feb-2023 13:45:32 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 21:00:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::renderArrayView() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:45:37 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 28
+[25-Feb-2023 13:45:37 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 21:54:30 Europe/Berlin] PHP Warning:  Undefined variable $view_paths in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 97
-[22-Feb-2023 21:54:30 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 97
-[22-Feb-2023 21:54:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method LoginController::renderSimpleView() in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:57
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:46:04 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\create.php on line 28
+[25-Feb-2023 13:46:04 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): LoginController->logout()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 57
-[22-Feb-2023 21:54:55 Europe/Berlin] PHP Warning:  Undefined variable $view_paths in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 97
-[22-Feb-2023 21:54:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 97
-[22-Feb-2023 21:55:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TranslationsController::renderAdminMultiView() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php:25
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:46:24 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): TranslationsController->index()
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#2 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 25
-[22-Feb-2023 22:07:41 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:07:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:54
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:46:48 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(22): Controller->renderPublicView('/public/index', Array)
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#3 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#4 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:07:51 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:07:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:54
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:46:52 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:46:52 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 37
+[25-Feb-2023 13:46:52 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:46:52 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 37
+[25-Feb-2023 13:46:52 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:46:52 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 37
+[25-Feb-2023 13:46:52 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(22): Controller->renderPublicView('/public/index', Array)
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#3 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#4 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:08:04 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:08:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:54
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:47:10 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:47:10 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(22): Controller->renderPublicView('/public/index', Array)
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#3 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#4 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:10:10 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:10:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:54
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:47:18 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:47:18 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(22): Controller->renderPublicView('/public/index', Array)
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#3 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#4 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:10:21 Europe/Berlin] PHP Warning:  include(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:10:21 Europe/Berlin] PHP Warning:  include(): Failed opening 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:10:21 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/footer.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 71
-[22-Feb-2023 22:10:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/footer.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:71
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:47:53 Europe/Berlin] PHP Warning:  Undefined variable $pageLanguage in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 32
+[25-Feb-2023 13:47:53 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(22): Controller->renderPublicView('/public/index', Array)
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#3 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#4 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 71
-[22-Feb-2023 22:10:32 Europe/Berlin] PHP Warning:  include_once(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:10:32 Europe/Berlin] PHP Warning:  include_once(): Failed opening 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:10:32 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/footer.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 71
-[22-Feb-2023 22:10:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/footer.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:71
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:48:02 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(22): Controller->renderPublicView('/public/index', Array)
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#3 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#4 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 71
-[22-Feb-2023 22:12:28 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:12:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Views/publi/includes/header.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:54
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77
+[25-Feb-2023 13:48:13 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'languageCode' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php:77
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(22): Controller->renderPublicView('/public/index', Array)
-#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
-#3 D:\xampp\htdocs\n-web-framework\index.php(28): Router->run()
-#4 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 54
-[22-Feb-2023 22:20:01 Europe/Berlin] PHP Parse error:  Unclosed '[' on line 25 does not match ')' in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\TranslationsController.php on line 28
+#0 D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php(25): PublicModel->getLanguage('al', 111)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php(20): PublicModel->getActivePage('home')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PublicController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PublicModel.php on line 77

@@ -3,6 +3,7 @@
 class TranslationsController extends Controller
 {
     private TranslationsModel $translationsModel;
+    private LanguagesModel $languagesModel;
 
     //------------------------------------------------------------
     public function __construct()
@@ -13,6 +14,9 @@ class TranslationsController extends Controller
 
         // Load Model
         $this->translationsModel = $this->loadModel("/admin/TranslationsModel");
+
+        // Load LanguagesModel
+        $this->languagesModel = $this->loadModel("/admin/LanguagesModel");
     }
 
     //------------------------------------------------------------
@@ -22,11 +26,13 @@ class TranslationsController extends Controller
         $data['title'] = 'Translations';
         $data['rows'] = $this->translationsModel->getTranslations();
 
-        // TODO: here should be languages section
-        $this->renderAdminView([
-            '/admin/translations/create.php',
-            '/admin/translations/translations'
-        ], $data);
+        $this->renderAdminView('/admin/translations/translations', $data);
+
+        // // Render multiple pages example
+        // $this->renderAdminView([
+        //     '/admin/translations/create.php',
+        //     '/admin/translations/translations'
+        // ], $data);
     }
 
     //------------------------------------------------------------
@@ -34,6 +40,7 @@ class TranslationsController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Translations Create';
+        $data['languages'] = $this->languagesModel->getLanguages();
 
         $this->renderAdminView('/admin/translations/create', $data);
     }
@@ -45,8 +52,8 @@ class TranslationsController extends Controller
         if (isset($_POST['insert_translation'])) {
             $postArray = [
                 'userID' => $_SESSION['user']['id'],
+                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
                 'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
-                'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
                 'translationText' => htmlspecialchars(trim($_POST['translationText'])),
             ];
 
@@ -58,9 +65,9 @@ class TranslationsController extends Controller
                 $validated = false;
                 $error .= 'Translation Code can not be empty!<br>';
             }
-            if (empty($postArray['languageCode'])) {
+            if (empty($postArray['languageID'])) {
                 $validated = false;
-                $error .= 'Please insert a Language Code!<br>';
+                $error .= 'Please select a Language!<br>';
             }
             if (empty($postArray['translationText'])) {
                 $validated = false;
@@ -92,7 +99,8 @@ class TranslationsController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Translation Edit - ' . $id;
-        $data['rows'] = $this->translationsModel->getTranslationyById($id);
+        $data['rows'] = $this->translationsModel->getTranslationById($id);
+        $data['languages'] = $this->languagesModel->getLanguages();
 
         $this->renderAdminView('/admin/translations/edit', $data);
     }
@@ -105,8 +113,8 @@ class TranslationsController extends Controller
             $postArray = [
                 'translationID' => $id,
                 'userID' => $_SESSION['user']['id'],
+                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
                 'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
-                'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
                 'translationText' => htmlspecialchars(trim($_POST['translationText'])),
             ];
 
@@ -117,9 +125,9 @@ class TranslationsController extends Controller
                 $validated = false;
                 $error .= 'Translation Code can not be empty!<br>';
             }
-            if (empty($postArray['languageCode'])) {
+            if (empty($postArray['languageID'])) {
                 $validated = false;
-                $error .= 'Please insert a Language Code!<br>';
+                $error .= 'Please select a Language!<br>';
             }
             if (empty($postArray['translationText'])) {
                 $validated = false;

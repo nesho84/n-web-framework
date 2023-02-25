@@ -31,7 +31,7 @@ define('A_USER_EMAIL', 'admin@company.com');
 define('A_USER_ROLE', 'admin');
 define('A_USER_PASSWORD', '010203');
 //sets time for the session to expire. 
-define('SESSION_DURATION', 1800); // the time is in seconds
+define('SESSION_DURATION', 3600); // the time is in seconds
 
 //------------------------------------------------------------
 // App 
@@ -60,6 +60,9 @@ defined('UPLOAD_PATH')
 
 defined('LIBRARY_PATH')
     or define('LIBRARY_PATH', APPROOT . '/app/Library');
+
+defined('HELPERS_PATH')
+    or define('HELPERS_PATH', APPROOT . '/app/helpers');
 
 defined('SCRIPTS_PATH')
     or define('SCRIPTS_PATH', APPROOT . '/app/js');

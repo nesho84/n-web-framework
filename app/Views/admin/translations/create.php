@@ -10,8 +10,21 @@
                     <input type="text" class="form-control" id="translationCode" name="translationCode" placeholder="Translation Code" value="<?php echo $_SESSION['inputs']['translationCode'] ?? ""; ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="languageCode" class="form-label fw-bold">Language Code</label>
-                    <input type="text" class="form-control" id="languageCode" name="languageCode" placeholder="Language Code" value="<?php echo $_SESSION['inputs']['languageCode'] ?? ""; ?>">
+                    <label for="languageID" class="form-label fw-bold">Language</label>
+                    <select id="languageID" name="languageID" class="form-select">
+                        <option class="select_hide" disabled selected>Select Language</option>
+                        <?php
+                        $LangArray = $data['languages'];
+                        foreach ($LangArray as $lang) {
+                            if ($lang['languageID'] == ($_SESSION['inputs']['languageID'] ?? "")) {
+                                $selected = "selected";
+                            } else {
+                                $selected = "";
+                            }
+                            echo "<option value='{$lang['languageID']}' $selected>{$lang['languageName']}</option>";
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class=" mb-3">
                     <label for="translationText" class="form-label fw-bold">Translation Text</label>

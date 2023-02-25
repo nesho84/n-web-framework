@@ -32,7 +32,7 @@ function previewUploadedImages(fileInputId, previewId, spinnerId) {
             image.height = 100;
             image.width = 100;
             image.style.margin = "5px";
-            image.classList.add("rounded-circle");
+            // image.classList.add("rounded-circle");
             // Append the image element to the preview div
             preview.appendChild(image);
             i++;

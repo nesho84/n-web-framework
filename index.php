@@ -9,14 +9,16 @@ require_once __DIR__ . "/config/settings.php";
 
 // MySQL Connection
 require_once CORE_PATH . "/Database.php";
-// Sessions Handler
-require_once CORE_PATH . "/Sessions.php";
 // Routing
 require_once CORE_PATH . "/Router.php";
 // Base Model
 require_once CORE_PATH . "/Model.php";
 // Base Controller
 require_once CORE_PATH . "/Controller.php";
+
+// Helpers
+require_once HELPERS_PATH . "/Sessions.php";
+require_once HELPERS_PATH . "/FileHandler.php";
 
 // Custom Library
 require_once LIBRARY_PATH . "/helpers.php";

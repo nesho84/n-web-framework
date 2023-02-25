@@ -7,7 +7,12 @@ class TranslationsModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM translations ORDER BY translationDateCreated DESC");
+            $stmt = $this->prepare(
+                "SELECT * FROM translations as t
+                INNER JOIN languages as l
+                ON l.languageID = t.languageID
+                ORDER BY translationCode DESC"
+            );
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
@@ -16,7 +21,7 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getTranslationyById(int $id): array|string
+    public function getTranslationById(int $id): array|string
     //------------------------------------------------------------
     {
         try {

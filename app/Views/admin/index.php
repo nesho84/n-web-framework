@@ -28,7 +28,7 @@
     <?php
     $rows = $data['rows'];
     if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
-        echo '<div class="row text-center">';
+        echo '<div class="row text-center g-3">';
 
         $tableName = "";
         $icon = "";
@@ -46,6 +46,11 @@
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
             }
+            if ($d['table_name'] == 'languages') {
+                $tableName = 'Languages';
+                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                $isDisabled = false;
+            }
             if ($d['table_name'] == 'translations') {
                 $tableName = 'Translations';
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
@@ -56,7 +61,7 @@
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
             }
 
-            echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0 mb-4">
+            echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0">
                     <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none" ' . ($isDisabled ? $disabledStyle : "") . '>
                         <div class="card shadow-sm">
                             <div class="card-body pb-5">

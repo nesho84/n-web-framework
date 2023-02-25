@@ -3,6 +3,7 @@
 class PagesController extends Controller
 {
     private PagesModel $pagesModel;
+    private LanguagesModel $languagesModel;
 
     //------------------------------------------------------------
     public function __construct()
@@ -13,6 +14,9 @@ class PagesController extends Controller
 
         // Load Model
         $this->pagesModel = $this->loadModel("/admin/PagesModel");
+
+        // Load LanguagesModel
+        $this->languagesModel = $this->loadModel("/admin/LanguagesModel");
     }
 
     //------------------------------------------------------------
@@ -30,6 +34,7 @@ class PagesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Pages Create';
+        $data['languages'] = $this->languagesModel->getLanguages();
 
         $this->renderAdminView('/admin/pages/create', $data);
     }
@@ -41,10 +46,10 @@ class PagesController extends Controller
         if (isset($_POST['insert_page'])) {
             $postArray = [
                 'userID' => $_SESSION['user']['id'],
+                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
                 'pageName' => htmlspecialchars(trim($_POST['pageName'])),
                 'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
                 'pageContent' => $_POST['pageContent'],
-                'pageLanguage' => htmlspecialchars(trim($_POST['pageLanguage'])),
                 'PageMetaTitle' => htmlspecialchars(trim($_POST['PageMetaTitle'])),
                 'PageMetaDescription' => htmlspecialchars(trim($_POST['PageMetaDescription'])),
                 'PageMetaKeywords' => htmlspecialchars(trim($_POST['PageMetaKeywords'])),
@@ -62,7 +67,7 @@ class PagesController extends Controller
                 $validated = false;
                 $error .= 'Please insert a Page Title!<br>';
             }
-            if (empty($postArray['pageLanguage'])) {
+            if (empty($postArray['languageID'])) {
                 $validated = false;
                 $error .= 'Please choose a Language!<br>';
             }
@@ -93,6 +98,7 @@ class PagesController extends Controller
     {
         $data['title'] = 'Pages Edit - ' . $id;
         $data['rows'] = $this->pagesModel->getPageById($id);
+        $data['languages'] = $this->languagesModel->getLanguages();
 
         $this->renderAdminView('/admin/pages/edit', $data);
     }
@@ -105,9 +111,9 @@ class PagesController extends Controller
             $postArray = [
                 'pageID' => $id,
                 'userID' => $_SESSION['user']['id'],
+                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
                 'pageName' => htmlspecialchars(trim($_POST['pageName'])),
                 'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
-                'pageLanguage' => htmlspecialchars(trim($_POST['pageLanguage'])),
                 'PageMetaTitle' => htmlspecialchars(trim($_POST['PageMetaTitle'])),
                 'PageMetaDescription' => htmlspecialchars(trim($_POST['PageMetaDescription'])),
                 'PageMetaKeywords' => htmlspecialchars(trim($_POST['PageMetaKeywords'])),
@@ -126,7 +132,7 @@ class PagesController extends Controller
                 $validated = false;
                 $error .= 'Please insert a Page Title!<br>';
             }
-            if (empty($postArray['pageLanguage'])) {
+            if (empty($postArray['languageID'])) {
                 $validated = false;
                 $error .= 'Please choose a Language!<br>';
             }

@@ -1,33 +1,39 @@
 <?php
 
-class PagesModel extends Model
+class LanguagesModel extends Model
 {
     //------------------------------------------------------------
-    public function getPages(): array|string
+    public function getLanguages(): array|string
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare(
-                "SELECT * FROM pages AS p
-                INNER JOIN (SELECT userID, userName FROM users) as u 
-                ON u.userID = p.userID
-                INNER JOIN languages as l
-                ON l.languageID = p.languageID
-                WHERE p.pageID IS NOT NULL
-                ORDER BY p.pageName ASC"
-            );
+            $stmt = $this->prepare("SELECT * FROM languages ORDER BY languageCode ASC");
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
             throw new Exception($e->getMessage());
         }
     }
+
     //------------------------------------------------------------
-    public function getPageById(int $id): array|string
+    public function getLanguageNames(): array|string
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM pages WHERE pageID = :id");
+            $stmt = $this->prepare("SELECT languageName FROM languages");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_COLUMN);
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    //------------------------------------------------------------
+    public function getLanguageById(int $id): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("SELECT * FROM languages WHERE languageID = :id");
             $this->bindValues($stmt, ['id' => $id]);
             $stmt->execute();
             return $stmt->fetch();
@@ -37,14 +43,14 @@ class PagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertPage(array $postArray): bool|string
+    public function insertLanguage(array $postArray): bool|string
     //------------------------------------------------------------
     {
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepareInsert('pages', $postArray);
+            $stmt = $this->prepareInsert('languages', $postArray);
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 
@@ -58,14 +64,15 @@ class PagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updatePage(array $postArray): bool|string
+    public function updateLanguage(array $postArray): bool|string
     //------------------------------------------------------------
     {
+
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepareUpdate('pages', 'pageID', $postArray);
+            $stmt = $this->prepareUpdate('languages', 'languageID', $postArray);
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 
@@ -79,15 +86,15 @@ class PagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deletePage(int $id): bool|string
+    public function deleteLanguage(int $id): bool|string
     //------------------------------------------------------------
     {
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepare("DELETE FROM pages WHERE pageID = :id");
-            $this->bindValues($stmt, [':id' => $id]);
+            $stmt = $this->prepare("DELETE FROM languages WHERE languageID = :id");
+            $this->bindValues($stmt, ['id' => $id]);
             $stmt->execute();
 
             // Commits the transaction and returns true to indicate success

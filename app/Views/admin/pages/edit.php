@@ -23,18 +23,18 @@ if (isset($data['rows']) && count($data['rows']) > 0) {
                         <input type="text" class="form-control" rows="5" id="pageTitle" name="pageTitle" placeholder="Title" value="<?php echo $pageTitle; ?>">
                     </div>
                     <div class="mb-3">
-                        <label for="pageLanguage" class="form-label fw-bold">Language</label>
-                        <select id="pageLanguage" name="pageLanguage" class="form-select">
+                        <label for="languageID" class="form-label fw-bold">Language</label>
+                        <select id="languageID" name="languageID" class="form-select">
                             <option class="select_hide" disabled selected>Select Language</option>
                             <?php
-                            $LangArray = ['EN', 'DE', 'FR', 'SQ'];
+                            $LangArray = $data['languages'];
                             foreach ($LangArray as $lang) {
-                                if ($lang == $pageLanguage) {
+                                if ($lang['languageID'] == $languageID) {
                                     $selected = "selected";
                                 } else {
                                     $selected = "";
                                 }
-                                echo "<option value='$lang' $selected>$lang</option>";
+                                echo "<option value='{$lang['languageID']}' $selected>{$lang['languageName']}</option>";
                             }
                             ?>
                         </select>
