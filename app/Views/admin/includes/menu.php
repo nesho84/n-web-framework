@@ -23,10 +23,14 @@ $userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SE
                     <?php echo $userPic; ?>
                 </a>
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" href="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['user']['id']; ?>">Profile</a></li>
+                    <!-- <li><a class="dropdown-item" href="<?php echo APPURL; ?>/admin/settings">Settings</a></li> -->
+                    <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#settingsModal" data-bs-title="Settings" data-bs-page="<?php echo APPURL; ?>/admin/settings">
+                        Settings
+                    </button>
                     <li>
-                        <hr class="dropdown-divider">
+                        <hr class="dropdown-divider my-0">
                     </li>
                     <li><a class="dropdown-item" href="<?php echo APPURL; ?>/logout">Logout</a></li>
                 </ul>

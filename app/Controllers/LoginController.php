@@ -75,24 +75,26 @@ class LoginController extends Controller
             $output .= "Please enter your password";
         }
 
-        $result = $this->loginModel->findUserByEmail($postArray['email']);
+        $user = $this->loginModel->findUserByEmail($postArray['email']);
         // We check for array because: the $stmt->fetch() method is used to retrieve a single row(array assoc) from the result set, otherwise will return false, If a PDO query doesn't find any results 
-        if (is_array($result) && count($result) > 0) {
+        if (is_array($user) && count($user) > 0) {
             // Validate Password
-            if (password_verify($postArray["password"], $result["userPassword"])) {
+            if (password_verify($postArray["password"], $user["userPassword"])) {
                 // Check if the user is Active
-                if ($result["userStatus"] !== 1) {
+                if ($user["userStatus"] !== 1) {
                     $output .= "Your Account is not active, please contact support.";
                 } else {
                     // Success =>> Create all Sessions
-                    $this->create_user_session($result, $postArray);
+                    $this->create_user_session($user, $postArray);
+                    // $this->create_settings_session($settings, $postArray);
+
                     $output = "success";
                 }
             } else {
                 $output .= "The Email or Password you entered was not valid.";
             }
         } else {
-            $output .= !$result ? "No account found with this email address." : $result;
+            $output .= !$user ? "No account found with this email address." : $result;
         }
 
         echo $output;
@@ -134,5 +136,17 @@ class LoginController extends Controller
                 // setcookie("password", "", time() - 3600);
             }
         }
+    }
+
+    //------------------------------------------------------------
+    private function create_settings_session(array $settings, array $postArray): void
+    //------------------------------------------------------------
+    {
+        // // Set User Settings Session array
+        // $_SESSION['setings'] = [
+        //     'id' => $settings['settingsID'],
+        //     'name' => $settings['userName'],
+        //     'email' => $settings['userEmail'],
+        // ];
     }
 }

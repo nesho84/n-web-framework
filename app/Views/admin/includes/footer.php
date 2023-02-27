@@ -1,6 +1,6 @@
 </main> <!-- main end -->
 
-<footer class="text-center border-top mt-3">
+<footer class="bg-dark text-light border-top mt-3">
     <!-- App Version -->
     <p class="mt-3">Version <strong><?php echo APP_VERSION; ?></strong></p>
 </footer>
