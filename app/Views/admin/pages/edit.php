@@ -1,7 +1,8 @@
 <?php
-if (isset($data['rows']) && count($data['rows']) > 0) {
+$rows = $data['rows'];
+if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
     // Convert array keys into variables
-    extract($data['rows']);
+    extract($rows);
 
     // Page Heading
     showHeading([

@@ -22,17 +22,21 @@ $userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SE
                 <a class="btn btn-link text-secondary text-decoration-none px-1 px-lg-3 py-2 border-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                     <?php echo $userPic; ?>
                 </a>
-
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['user']['id']; ?>">Profile</a></li>
-                    <!-- <li><a class="dropdown-item" href="<?php echo APPURL; ?>/admin/settings">Settings</a></li> -->
-                    <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#settingsModal" data-bs-title="Settings" data-bs-page="<?php echo APPURL; ?>/admin/settings">
-                        Settings
-                    </button>
+                    <li>
+                        <button class="dropdown-item" data-title="User Profile" data-link="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['user']['id']; ?>" onclick="showModal(this)">Profile</button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item" data-title="Settings" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings'); ?>" data-buttons="true" onclick="showModal(this)">
+                            Settings
+                        </button>
+                    </li>
                     <li>
                         <hr class="dropdown-divider my-0">
                     </li>
-                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/logout">Logout</a></li>
+                    <li>
+                        <a class="dropdown-item" href="<?php echo APPURL; ?>/logout">Logout</a>
+                    </li>
                 </ul>
             </div>
         </li>

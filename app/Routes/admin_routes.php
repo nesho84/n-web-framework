@@ -42,3 +42,11 @@ Router::post('/admin/users/insert', 'admin/UsersController@insert');
 Router::get('/admin/users/edit/{id}', 'admin/UsersController@edit');
 Router::post('/admin/users/update/{id}', 'admin/UsersController@update');
 Router::get('/admin/users/delete/{id}', 'admin/UsersController@delete');
+
+// --- Settings --- //
+Router::get('/admin/settings', 'admin/SettingsController@index');
+Router::get('/admin/settings/create', 'admin/SettingsController@create');
+Router::post('/admin/settings/insert', 'admin/SettingsController@insert');
+// Router::get('/admin/settings/edit/{id}', 'admin/SettingsController@edit');
+Router::post('/admin/settings/update/{id}', 'admin/SettingsController@update');
+Router::get('/admin/settings/delete/{id}', 'admin/SettingsController@delete');

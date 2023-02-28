@@ -49,10 +49,6 @@
             </nav>
         </header>
 
-        <!-- Settings Modal -->
-        <?php require_once VIEWS_PATH . "/admin/includes/modal.php"; ?>
-
         <main>
-
             <!-- Flash Messages from the Session -->
             <?php getFlashMsg(); ?>

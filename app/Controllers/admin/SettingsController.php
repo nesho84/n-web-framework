@@ -1,8 +1,8 @@
 <?php
 
-class UsersController extends Controller
+class SettingsController extends Controller
 {
-    private UsersModel $usersModel;
+    private SettingsModel $setingsModel;
 
     //------------------------------------------------------------
     public function __construct()
@@ -12,17 +12,19 @@ class UsersController extends Controller
         Sessions::requireLogin();
 
         // Load Model
-        $this->usersModel = $this->loadModel("/admin/UsersModel");
+        $this->setingsModel = $this->loadModel("/admin/SettingsModel");
     }
 
     //------------------------------------------------------------
     public function index(): void
     //------------------------------------------------------------
     {
-        $data['title'] = 'Users';
-        $data['rows'] = $this->usersModel->getUsers();
+        $id = $_SESSION['user']['id'];
 
-        $this->renderAdminView('/admin/users/users', $data);
+        $data['title'] = 'Users';
+        $data['rows'] = $this->setingsModel->getSettingsByUserId($id);
+
+        $this->renderSimpleView('/admin/settings/settings', $data);
     }
 
     //------------------------------------------------------------
@@ -30,9 +32,19 @@ class UsersController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'User Profile - ' . $id;
-        $data['rows'] = $this->usersModel->getUserById($id);
+        $data['rows'] = $this->setingsModel->getUserById($id);
 
-        $this->renderSimpleView('/admin/users/profile', $data);
+        $this->renderAdminView('/admin/users/profile', $data);
+    }
+
+    //------------------------------------------------------------
+    public function settings(int $id): void
+    //------------------------------------------------------------
+    {
+        $data['title'] = 'User Settings - ' . $id;
+        $data['rows'] = $this->setingsModel->getSettingsByUserId($id);
+
+        $this->renderSimpleView('/admin/users/settings', $data);
     }
 
     //------------------------------------------------------------
@@ -58,7 +70,7 @@ class UsersController extends Controller
             ];
 
             // Get all users from the Model
-            $users = $this->usersModel->getUsers();
+            $users = $this->setingsModel->getUsers();
 
             $_SESSION['inputs'] = [];
             $validated = true;
@@ -135,7 +147,7 @@ class UsersController extends Controller
             if ($validated === true) {
                 try {
                     // Insert in Database
-                    $this->usersModel->insertUser($postArray);
+                    $this->setingsModel->insertUser($postArray);
                     setFlashMsg('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/users');
@@ -157,7 +169,7 @@ class UsersController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'User Edit - ' . $id;
-        $data['rows'] = $this->usersModel->getUserById($id);
+        $data['rows'] = $this->setingsModel->getUserById($id);
 
         $this->renderAdminView('/admin/users/edit', $data);
     }
@@ -178,9 +190,9 @@ class UsersController extends Controller
             ];
 
             // Get all users from the Model except this
-            $users = $this->usersModel->getUsersExceptThis($id);
+            $users = $this->setingsModel->getUsersExceptThis($id);
             // Get existing user from the Model
-            $user = $this->usersModel->getUserById($id);
+            $user = $this->setingsModel->getUserById($id);
 
             $validated = true;
             $error = '';
@@ -295,7 +307,7 @@ class UsersController extends Controller
             if ($validated === true) {
                 try {
                     // Update in Database
-                    $this->usersModel->updateUser($postArray);
+                    $this->setingsModel->updateUser($postArray);
                     setFlashMsg('success', 'Update completed successfully.');
                     redirect(ADMURL . '/users');
                 } catch (Exception $e) {
@@ -314,7 +326,7 @@ class UsersController extends Controller
     //------------------------------------------------------------
     {
         // Get existing user from the Model
-        $user = $this->usersModel->getUserById($id);
+        $user = $this->setingsModel->getUserById($id);
 
         $validated = true;
         $error = '';
@@ -328,7 +340,7 @@ class UsersController extends Controller
         if ($validated === true) {
             try {
                 // Delete in Database
-                $this->usersModel->deleteUser($id);
+                $this->setingsModel->deleteUser($id);
                 setFlashMsg('success', 'User with the ID: <strong>' . $id . '</strong> deleted successfully.');
             } catch (Exception $e) {
                 setFlashMsg('error', $e->getMessage());

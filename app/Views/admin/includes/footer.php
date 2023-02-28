@@ -14,6 +14,7 @@
 <!-- My Scripts -->
 <script src="<?php echo APPURL; ?>/app/js/main.js"></script>
 <script src="<?php echo APPURL; ?>/app/js/request.js"></script>
+<script src="<?php echo APPURL; ?>/app/js/modal.js"></script>
 
 </body>
 

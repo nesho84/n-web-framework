@@ -78,7 +78,6 @@
                         } else {
                             login_result.innerHTML = "<div class='text-danger bg-light rounded border p-3 mb-4'>" + xhr.responseText + "</div>";
                         }
-
                     }
                 } else {
                     // Failed
@@ -89,6 +88,7 @@
         });
     </script>
     <!-- Login Ajax END -->
+
 </body>
 
 </html>
