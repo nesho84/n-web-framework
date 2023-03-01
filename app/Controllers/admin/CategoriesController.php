@@ -20,6 +20,7 @@ class CategoriesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Categories';
+        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->categoriesModel->getCategories();
 
         $this->renderAdminView('/admin/categories/categories', $data);

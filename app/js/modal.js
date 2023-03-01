@@ -15,7 +15,7 @@ function showModal(element) {
                     <div class="dynamic-content"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
                 </div>
             </div>
         </div>
@@ -24,15 +24,18 @@ function showModal(element) {
     modalContainer.insertAdjacentHTML("afterbegin", modalHTML);
     document.body.insertAdjacentElement("afterbegin", modalContainer);
 
-    modalEl = document.getElementById("dynamic-modal");
+    const modalEl = document.getElementById("dynamic-modal");
 
     // Add an event listener to the modal instance
     modalEl.addEventListener('show.bs.modal', async function (event) {
+        // Get modalHTML elements
+        const modalTitle = modalEl.querySelector('.modal-title');
+        const modalContent = modalEl.querySelector('.dynamic-content');
+        const modalFooter = modalEl.querySelector('.modal-footer');
         // Extract info from data-bs-* attributes
-        let modalTitle = modalEl.querySelector('.modal-title');
         modalTitle.textContent = element.getAttribute('data-title');
-
-        let modalContent = modalEl.querySelector('.dynamic-content');
+        const actionButton = element.getAttribute('data-submit');
+        const actionUrl = element.getAttribute('data-link');
 
         // Create and show a loading spinner
         let spinner = document.createElement('div');
@@ -45,13 +48,29 @@ function showModal(element) {
 
         // Use fetch to load the content of the page
         try {
-            let response = await fetch(element.getAttribute('data-link'));
+            let response = await fetch(actionUrl);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             let data = await response.text();
             setTimeout(() => {
+                // Set the modal content's HTML
                 modalContent.innerHTML = data;
+                // Insert submit button if the caller requires
+                if (actionButton && actionButton === 'true') {
+                    modalFooter.insertAdjacentHTML("afterbegin", `<button type="button" class="btn btn-sm btn-secondary px-3" data-bs-dismiss="modal">CANCEL</button>`);
+                    modalFooter.insertAdjacentHTML("afterbegin", `<button type="submit" class="btn btn-sm btn-success px-4" id="submit-btn" name="submit-btn">SAVE</button>`);
+                    // Get the form element
+                    const form = modalContent.querySelector('form');
+                    if (form) {
+                        // Add event listener to submit the form
+                        modalFooter.querySelector('#submit-btn').addEventListener('click', function () {
+                            form.submit();
+                        });
+                    }
+                } else {
+                    modalFooter.remove();
+                }
             }, 500);
         } catch (error) {
             console.error(error);
@@ -59,23 +78,9 @@ function showModal(element) {
             modalContent.innerHTML = '<p>Failed to load content.</p>';
         } finally {
             // Remove the loading spinner
-            modalContent.addEventListener('load', function () {
+            modalContent.addEventListener('DOMContentLoaded', function () {
                 spinner.remove();
             });
-        }
-        // continue... why we cant select the form
-        let form = modalContent.querySelector('form');
-        console.log(form);
-        let modalFooter = modalEl.querySelector('.modal-footer');
-        // Action button
-        let actionButtons = element.getAttribute('data-buttons');
-        // Insert submit button if the caller requires
-        if (actionButtons && actionButtons === 'true') {
-            if (form) {
-                modalFooter.insertAdjacentHTML("afterbegin", `<button type="submit" class="btn btn-success px-4" id="action-btn" name="action-btn">Save</button>`);
-            }
-        } else {
-            modalFooter.remove();
         }
     });
 
@@ -85,7 +90,7 @@ function showModal(element) {
     });
 
     // Initialize the modal component and show it
-    let myModal = new bootstrap.Modal(modalEl, {
+    const myModal = new bootstrap.Modal(modalEl, {
         backdrop: 'static',
         keyboard: false
     });

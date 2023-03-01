@@ -1,5 +1,0 @@
-[28-Feb-2023 13:54:08 Europe/Berlin] PHP Warning:  Undefined variable $pic in D:\xampp\htdocs\n-web-framework\app\Views\admin\settings\settings.php on line 36
-[28-Feb-2023 13:54:08 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\settings\settings.php on line 37
-[28-Feb-2023 13:54:08 Europe/Berlin] PHP Warning:  Undefined variable $userEmail in D:\xampp\htdocs\n-web-framework\app\Views\admin\settings\settings.php on line 38
-[28-Feb-2023 13:54:08 Europe/Berlin] PHP Warning:  Undefined variable $userRole in D:\xampp\htdocs\n-web-framework\app\Views\admin\settings\settings.php on line 39
-[28-Feb-2023 13:54:08 Europe/Berlin] PHP Warning:  Undefined variable $userID in D:\xampp\htdocs\n-web-framework\app\Views\admin\settings\settings.php on line 42

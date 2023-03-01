@@ -1,6 +1,12 @@
 </main> <!-- main end -->
 
-<footer class="bg-dark text-light border-top mt-3">
+<?php
+// Set Dashboard Footer Theme
+$footerTheme = $_SESSION['settings']['settingTheme'] ?? "dark";
+$textTheme = $footerTheme === "dark" ? "light" : "dark";
+?>
+
+<footer class="bg-<?= $footerTheme ?> text-<?= $textTheme ?> border-top mt-3">
     <!-- App Version -->
     <p class="mt-3">Version <strong><?php echo APP_VERSION; ?></strong></p>
 </footer>

@@ -27,7 +27,7 @@ $userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SE
                         <button class="dropdown-item" data-title="User Profile" data-link="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['user']['id']; ?>" onclick="showModal(this)">Profile</button>
                     </li>
                     <li>
-                        <button type="button" class="dropdown-item" data-title="Settings" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings'); ?>" data-buttons="true" onclick="showModal(this)">
+                        <button type="button" class="dropdown-item" data-title="Settings" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings'); ?>" data-submit="true" onclick="showModal(this)">
                             Settings
                         </button>
                     </li>

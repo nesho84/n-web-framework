@@ -81,6 +81,16 @@ function createTables(object $conn): void
     `userDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
     `userDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
+
+    $conn->exec("CREATE TABLE `settings` (
+    `settingID` int(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `userID` int(11) NOT NULL,
+    `languageID` int(11) NOT NULL,
+    `settingTheme` varchar(255) NOT NULL,
+    `settingStatus` tinyint(1) NOT NULL DEFAULT 1,
+    `settingDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
+    `settingDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
 }
 
 //------------------------------------------------------------
@@ -105,6 +115,36 @@ function createUser(object $conn): void
             ':userEmail' => $userEmail,
             ':userPassword' => $passwordHashed,
             ':userRole' => $userRole,
+        ]);
+        $lastId = $stmt->lastInsertId();
+        // @TODO: create at least one language and get the last inserted id
+        // createSettings($conn, $lastId, 111);
+    }
+}
+
+//------------------------------------------------------------
+// @TODO: function to create at least one language required for the settings
+//------------------------------------------------------------
+
+//------------------------------------------------------------
+function createSettings(object $conn, int $lastUserId, int $lastLanguageId): void
+//------------------------------------------------------------
+{
+    $userId = $lastUserId;
+    $languageId = $lastLanguageId;
+    $settingTheme = 'light';
+
+    // Check if User exists first
+    $user_exist = $conn->prepare("SELECT * FROM `settings`");
+    $user_exist->execute();
+
+    // Create if dosen't
+    if ($user_exist->rowCount() === 0) {
+        $stmt = $conn->prepare("INSERT INTO `settings` (`userID`, `languageID`, `settingTheme`) VALUES (:userID, :languageID, :settingTheme)");
+        $stmt->execute([
+            ':userID' => $userId,
+            ':languageID' => $languageId,
+            ':settingTheme' => $settingTheme,
         ]);
     }
 }

@@ -1,5 +1,12 @@
-<?php $title = $data['title'] ?? ""; ?>
-
+<?php
+// Set title
+$title = $data['title'] ?? "";
+// Set Theme
+$baseTheme = $_SESSION['settings']['settingTheme'] ?? "dark";
+$navbarTheme = $baseTheme == "dark" ? "dark" : "light";
+$menuSpanTheme = $baseTheme == "dark" ? "light" : "dark";
+$bodyTheme = $baseTheme == "dark" ? "dark" : "white";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,12 +28,12 @@
     <link rel="manifest" href="<?php echo APPURL; ?>/public/favicon/site.webmanifest">
 </head>
 
-<body>
+<body class="bg-<?= $bodyTheme ?>">
 
     <div class="wrapper">
 
-        <header class="sticky-top">
-            <nav class="navbar shadow-sm navbar-expand-lg navbar-dark bg-dark py-2">
+        <header class="sticky-top border-bottom">
+            <nav class="navbar shadow-sm navbar-expand-lg navbar-<?= $navbarTheme ?> bg-<?= $navbarTheme ?> py-2">
                 <div class="container-lg">
                     <div class="navbar-brand">
                         <!-- <a href="<?php echo ADMURL; ?>/">
@@ -37,9 +44,9 @@
                         </a>
                     </div>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar bg-light"></span>
-                        <span class="icon-bar bg-light"></span>
-                        <span class="icon-bar bg-light"></span>
+                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
+                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
+                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
                     </button>
 
                     <!-- Navigation Menu Links -->

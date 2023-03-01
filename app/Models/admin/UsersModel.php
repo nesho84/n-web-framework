@@ -55,8 +55,12 @@ class UsersModel extends Model
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 
+            $lastId = $this->lastInsertId();
+
             // Commits the transaction and returns true to indicate success
-            return $this->commit();
+            $this->commit();
+
+            return $lastId;
         } catch (PDOException $e) {
             // rollback database transaction
             $this->rollback();

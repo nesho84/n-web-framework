@@ -20,6 +20,7 @@ class LanguagesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Languages';
+        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->languagesModel->getLanguages();
 
         // TODO: here should be languages section

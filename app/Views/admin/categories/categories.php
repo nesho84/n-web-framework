@@ -10,7 +10,7 @@ showHeading([
 
 <div class="container-lg">
     <div class="table-responsive border-top mt-3">
-        <table class="table table-hover">
+        <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>

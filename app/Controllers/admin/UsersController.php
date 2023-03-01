@@ -3,6 +3,7 @@
 class UsersController extends Controller
 {
     private UsersModel $usersModel;
+    private SettingsModel $settingsModel;
 
     //------------------------------------------------------------
     public function __construct()
@@ -13,6 +14,9 @@ class UsersController extends Controller
 
         // Load Model
         $this->usersModel = $this->loadModel("/admin/UsersModel");
+
+        // Load SettingsModel
+        $this->settingsModel = $this->loadModel("/admin/SettingsModel");
     }
 
     //------------------------------------------------------------
@@ -20,6 +24,7 @@ class UsersController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Users';
+        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->usersModel->getUsers();
 
         $this->renderAdminView('/admin/users/users', $data);
@@ -135,7 +140,15 @@ class UsersController extends Controller
             if ($validated === true) {
                 try {
                     // Insert in Database
-                    $this->usersModel->insertUser($postArray);
+                    $lastInsertId = $this->usersModel->insertUser($postArray);
+
+                    // Insert default User Settings
+                    $this->settingsModel->insertSettings([
+                        'userID' => $lastInsertId,
+                        'languageID' => 2,
+                        'settingTheme' => 'light'
+                    ]);
+
                     setFlashMsg('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/users');
@@ -327,9 +340,11 @@ class UsersController extends Controller
 
         if ($validated === true) {
             try {
-                // Delete in Database
+                // Delete User in Database
                 $this->usersModel->deleteUser($id);
-                setFlashMsg('success', 'User with the ID: <strong>' . $id . '</strong> deleted successfully.');
+                // Delete User Settings in Database
+                $this->settingsModel->deleteSettings($id);
+                setFlashMsg('success', 'User with the ID: <strong>' . $id . '</strong> and settings deleted successfully.');
             } catch (Exception $e) {
                 setFlashMsg('error', $e->getMessage());
             }

@@ -37,7 +37,7 @@ function showHeading(array $args = []): void
                 $btnOrTitle2 .= '<p class="m-0">' . $title2 . '</p>';
             }
             echo '<div class="container-lg pt-4">
-                    <div class="bg-light border-top border-bottom p-1 mb-3">
+                    <div class="bg-light border-top border-bottom rounded-1 p-2 mb-3">
                         <div class="d-flex flex-wrap align-items-center justify-content-between">
                             <h3 class="mb-0 me-2 text-muted">' . (isset($title) ? $title : "") . '</h3>
                             ' . $btnOrTitle2 . '

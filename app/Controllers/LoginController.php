@@ -3,10 +3,15 @@
 class LoginController extends Controller
 {
     private LoginModel $loginModel;
+    private SettingsModel $settingsModel;
 
     public function __construct()
     {
+        // Load Model
         $this->loginModel = $this->loadModel("/LoginModel.php");
+
+        // Load SettingsModel
+        $this->settingsModel = $this->loadModel("/admin/SettingsModel");
     }
 
     //------------------------------------------------------------
@@ -86,7 +91,9 @@ class LoginController extends Controller
                 } else {
                     // Success =>> Create all Sessions
                     $this->create_user_session($user, $postArray);
-                    // $this->create_settings_session($settings, $postArray);
+                    // Get the settings
+                    $settings = $this->settingsModel->getSettingsByUserId($user['userID']);
+                    $this->create_settings_session($settings);
 
                     $output = "success";
                 }
@@ -94,7 +101,7 @@ class LoginController extends Controller
                 $output .= "The Email or Password you entered was not valid.";
             }
         } else {
-            $output .= !$user ? "No account found with this email address." : $result;
+            $output .= !$user ? "No account found with this email address." : $user;
         }
 
         echo $output;
@@ -139,14 +146,14 @@ class LoginController extends Controller
     }
 
     //------------------------------------------------------------
-    private function create_settings_session(array $settings, array $postArray): void
+    private function create_settings_session(array $settings): void
     //------------------------------------------------------------
     {
-        // // Set User Settings Session array
-        // $_SESSION['setings'] = [
-        //     'id' => $settings['settingsID'],
-        //     'name' => $settings['userName'],
-        //     'email' => $settings['userEmail'],
-        // ];
+        // Set User Settings Session array
+        $_SESSION['settings'] = [
+            'settingID' => $settings['settingID'],
+            'languageID' => $settings['languageID'],
+            'settingTheme' => $settings['settingTheme'],
+        ];
     }
 }
