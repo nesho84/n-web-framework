@@ -1,4 +1,4 @@
-function showModal(element) {
+function dynamicModal(element) {
     // Create a new modal element and set its content
     const modalContainer = document.createElement('div');
     modalContainer.id = "modal-container";
@@ -58,14 +58,21 @@ function showModal(element) {
                 modalContent.innerHTML = data;
                 // Insert submit button if the caller requires
                 if (actionButton && actionButton === 'true') {
+                    modalFooter.insertAdjacentHTML("afterbegin", `<button type="submit" class="btn btn-sm btn-success d-flex align-items-center px-4" id="submit-btn">SAVE</button>`);
                     modalFooter.insertAdjacentHTML("afterbegin", `<button type="button" class="btn btn-sm btn-secondary px-3" data-bs-dismiss="modal">CANCEL</button>`);
-                    modalFooter.insertAdjacentHTML("afterbegin", `<button type="submit" class="btn btn-sm btn-success px-4" id="submit-btn" name="submit-btn">SAVE</button>`);
-                    // Get the form element
+                    // Get the form and button element
                     const form = modalContent.querySelector('form');
+                    const submitBtn = modalFooter.querySelector('#submit-btn');
                     if (form) {
                         // Add event listener to submit the form
-                        modalFooter.querySelector('#submit-btn').addEventListener('click', function () {
-                            form.submit();
+                        submitBtn.addEventListener('click', function () {
+                            submitBtn.disabled = true;
+                            submitBtn.insertAdjacentHTML("afterbegin", `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>`);
+                            // Simulate timeout
+                            setTimeout(() => {
+                                // Submit the form
+                                // form.submit();
+                            }, 1000);
                         });
                     }
                 } else {
