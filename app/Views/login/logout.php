@@ -31,7 +31,7 @@
                         <script>
                             setTimeout(function() {
                                 window.location.replace('<?php echo APPURL . '/login'; ?>');
-                            }, 2000);
+                            }, 1000);
                         </script>
                     </div>
                 </div>

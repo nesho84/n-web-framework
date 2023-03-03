@@ -24,10 +24,10 @@ $userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SE
                 </a>
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuLink">
                     <li>
-                        <button class="dropdown-item" data-title="User Profile" data-link="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['user']['id']; ?>" onclick="dynamicModal(this)">Profile</button>
+                        <a href="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['user']['id']; ?>" class="dropdown-item" data-title="User Profile" onclick="dynamicModal(event)">Profile</a>
                     </li>
                     <li>
-                        <button type="button" class="dropdown-item" data-title="Settings" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings'); ?>" data-submit="true" onclick="dynamicModal(this)">
+                        <button type="button" class="dropdown-item" data-title="Settings" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings'); ?>" data-submit="true" onclick="dynamicModal(event)">
                             Settings
                         </button>
                     </li>

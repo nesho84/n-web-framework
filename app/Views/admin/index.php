@@ -30,42 +30,54 @@
 
         $tableName = "";
         $icon = "";
+
         $isDisabled = false;
         $disabledStyle = 'style="pointer-events: none; color:#b9b8b8"';
+
+        $isModal = false;
+        $modalParams = '';
 
         foreach ($rows as $d) {
             if ($d['table_name'] == 'categories') {
                 $tableName = 'Categories';
                 $icon = '<i class="fas fa-tasks fa-3x mt-3"></i>';
                 $isDisabled = false;
+                $isModal = false;
             }
             if ($d['table_name'] == 'pages') {
                 $tableName = 'Pages';
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
+                $isModal = false;
             }
             if ($d['table_name'] == 'languages') {
                 $tableName = 'Languages';
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
-            }
-            if ($d['table_name'] == 'translations') {
-                $tableName = 'Translations';
-                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
-                $isDisabled = false;
+                $isModal = false;
             }
             if ($d['table_name'] == 'settings') {
                 $tableName = 'Settings';
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
+                $isModal = true;
+                $modalParams = ' data-submit="true" data-title="Settings" onclick="dynamicModal(event)"';
+            }
+            if ($d['table_name'] == 'translations') {
+                $tableName = 'Translations';
+                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                $isDisabled = false;
+                $isModal = false;
             }
             if ($d['table_name'] == 'users') {
                 $tableName = 'Users';
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
+                $isDisabled = false;
+                $isModal = false;
             }
 
             echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0">
-                    <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none" ' . ($isDisabled ? $disabledStyle : "") . '>
+                    <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none" ' . ($isDisabled ? $disabledStyle : "") . ($isModal ? $modalParams : "") . '>
                         <div class="card shadow-sm">
                             <div class="card-body pb-5">
                                 <p class="display-3">' . $d['table_rows'] . '</p>

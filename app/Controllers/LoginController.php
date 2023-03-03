@@ -25,6 +25,7 @@ class LoginController extends Controller
             'title' => 'Login',
             'email' => '',
             'password' => '',
+            'last_page' => Sessions::getLastPage(),
         ];
 
         $this->renderSimpleView("/login/login", $data);

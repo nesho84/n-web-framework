@@ -27,7 +27,7 @@ class PublicController extends Controller
     //------------------------------------------------------------
     {
         // Get data from the Model
-        // $data = getLanguage($_SESSION["language"], 111);
+        // $data = getLanguage($_SESSION["languageID"], 111);
         $data = $this->publicModel->getActivePage('about');
 
         echo json_encode($data);

@@ -1,6 +1,23 @@
 <?php
-ob_start();
-session_start();
+// Set session name
+session_name('NWF_SESSION');
+// Use SSL/TLS encryption
+ini_set('session.cookie_secure', 1);
+ini_set('session.cookie_httponly', 1);
+// Set session cookie parameters
+session_set_cookie_params([
+    'lifetime' => 3600, // 1 hour
+    'path' => '/n-web-framework',
+    // 'domain' => 'http://localhost:8080/n-web-framework',
+    'secure' => true,
+    'httponly' => true,
+]);
+// Set session timeout
+ini_set('session.gc_maxlifetime', 3600);
+if (session_status() === PHP_SESSION_NONE) {
+    ob_start();
+    session_start();
+}
 
 // Just for Develop
 error_reporting(E_ALL);
@@ -30,14 +47,15 @@ define('A_USERNAME', 'admin');
 define('A_USER_EMAIL', 'admin@company.com');
 define('A_USER_ROLE', 'admin');
 define('A_USER_PASSWORD', '010203');
-//sets time for the session to expire. 
+//Session and Cookie duration
 define('SESSION_DURATION', 3600); // the time is in seconds
+define('COOKIE_DURATION', 60 * 60 * 24 * 30); // 30 days
 
 //------------------------------------------------------------
 // App 
 //------------------------------------------------------------
 defined('APPURL')
-    or define('APPURL', 'http://localhost/n-web-framework');
+    or define('APPURL', 'http://localhost:8080/n-web-framework');
 
 defined('APPROOT')
     or define('APPROOT', dirname(__DIR__));

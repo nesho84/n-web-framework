@@ -1,4 +1,10 @@
-function dynamicModal(element) {
+function dynamicModal(event) {
+    event.preventDefault();
+
+    // Get the element that triggered the modal
+    const element = event.currentTarget;
+    // console.log(event.currentTarget.tagName);
+
     // Create a new modal element and set its content
     const modalContainer = document.createElement('div');
     modalContainer.id = "modal-container";
@@ -35,7 +41,15 @@ function dynamicModal(element) {
         // Extract info from data-bs-* attributes
         modalTitle.textContent = element.getAttribute('data-title');
         const actionButton = element.getAttribute('data-submit');
-        const actionUrl = element.getAttribute('data-link');
+
+        // Get href attribute if anchor tag or data-link if button
+        let actionUrl = '';
+        if (element.tagName === 'A') {
+            actionUrl = element.getAttribute('href');
+        }
+        if (element.tagName === 'BUTTON') {
+            actionUrl = element.getAttribute('data-link');
+        }
 
         // Create and show a loading spinner
         let spinner = document.createElement('div');
@@ -67,11 +81,11 @@ function dynamicModal(element) {
                         // Add event listener to submit the form
                         submitBtn.addEventListener('click', function () {
                             submitBtn.disabled = true;
-                            submitBtn.insertAdjacentHTML("afterbegin", `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>`);
+                            submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Saving...`;
                             // Simulate timeout
                             setTimeout(() => {
                                 // Submit the form
-                                // form.submit();
+                                form.submit();
                             }, 1000);
                         });
                     }

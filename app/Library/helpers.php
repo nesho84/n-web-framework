@@ -30,7 +30,7 @@ function dd_print(array $var): void
 /**
  * Get's the current page(url) from the url
  * @param array $url url of the page
- * @return string if the $url matches
+ * @return void if the $url matches
  */
 //------------------------------------------------------------
 function activePage(array $url): void
@@ -55,8 +55,8 @@ function activePage(array $url): void
         }
     }
 
-    foreach ($url as $ur) {
-        if ($ur === $page) {
+    foreach ($url as $u) {
+        if ($u === $page) {
             echo 'active';
         }
     }
@@ -65,6 +65,7 @@ function activePage(array $url): void
 /**
  * Force redirect to ignore php error 'headers already sent...'
  * @param string $url of the page
+ * @return void
  */
 //------------------------------------------------------------
 function redirect(string $url): void
@@ -76,6 +77,7 @@ function redirect(string $url): void
 /**
  * Force redirect to ignore php error 'headers already sent...'
  * @param string $url of the page
+ * @return void
  */
 //------------------------------------------------------------
 function forceRedirect(string $url): void

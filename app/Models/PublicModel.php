@@ -6,8 +6,9 @@ class PublicModel extends Model
     public function getActivePage(string $pageName): array|string
     //------------------------------------------------------------
     {
-        // TODO: test
-        $_SESSION["language"] = "al";
+        // @TODO: test
+        // $_SESSION["language"] = "al";
+        $_SESSION["languageID"] = 2;
         // unset($_SESSION["language"]);
 
         try {
@@ -21,13 +22,13 @@ class PublicModel extends Model
 
             $row = $stmt->fetch();
 
-            // TODO: test
-            $pageContentTranslated = $this->getLanguage($_SESSION["language"], 111);
+            // @TODO: test
+            $pageContentTranslated = $this->getLanguage($_SESSION["languageID"], 111);
 
             if ($stmt->rowCount() > 0) {
                 return [
                     'pageTitle' => $row['pageTitle'],
-                    'pageContent' => isset($_SESSION["language"]) ? $pageContentTranslated : $row['pageContent'],
+                    'pageContent' => isset($_SESSION["languageID"]) ? $pageContentTranslated : $row['pageContent'],
                     'PageMetaTitle' => $row['PageMetaTitle'],
                     'PageMetaDescription' => $row['PageMetaDescription'],
                     'PageMetaKeywords' => $row['PageMetaKeywords'],
@@ -52,17 +53,17 @@ class PublicModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getLanguage(string $languageCode, int $translationCode): string|null
+    public function getLanguage(string $languageID, int $translationCode): string|null
     //------------------------------------------------------------
     {
         try {
             $stmt = $this->prepare(
                 "SELECT * FROM translations 
-                WHERE languageCode = :languageCode
+                WHERE languageID = :languageID
                 AND translationCode = :translationCode"
             );
             $this->bindValues($stmt, [
-                'languageCode' => $languageCode,
+                'languageID' => $languageID,
                 'translationCode' => $translationCode
             ]);
             $stmt->execute();
