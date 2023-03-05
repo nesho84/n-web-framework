@@ -6,16 +6,16 @@
         <div class="card-body">
             <form id="formCategories" action="<?php echo ADMURL . '/categories/insert'; ?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
+                    <label for="categoryName" class="form-label fw-bold">Category Name</label>
+                    <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Category Name" value="<?php echo $_SESSION['inputs']['categoryName'] ?? ""; ?>">
+                </div>
+                <div class="mb-3">
                     <label for="categoryType" class="form-label fw-bold">Category Type</label>
                     <input type="text" class="form-control" id="categoryType" name="categoryType" placeholder="Category Type" value="<?php echo $_SESSION['inputs']['categoryType'] ?? ""; ?>">
                 </div>
                 <div class="mb-3">
                     <label for="categoryLink" class="form-label fw-bold">Category Link</label>
                     <input type="text" class="form-control" id="categoryLink" name="categoryLink" placeholder="Category Link" value="<?php echo $_SESSION['inputs']['categoryLink'] ?? ""; ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="categoryName" class="form-label fw-bold">Category Name</label>
-                    <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Category Name" value="<?php echo $_SESSION['inputs']['categoryName'] ?? ""; ?>">
                 </div>
                 <div class=" mb-3">
                     <label for="categoryDescription" class="form-label fw-bold">Category Description (optional)</label>

@@ -1,13 +1,31 @@
-function dynamicModal(event) {
-    event.preventDefault();
+(function () {
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all elements with the class 'd-modal' 
+        document.querySelectorAll('.d-modal').forEach(el => {
+            // Add event listener for each element
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // Show the Modal
+                dynamicModal(el);
+            });
+        });
 
-    // Get the element that triggered the modal
-    const element = event.currentTarget;
-    // console.log(event.currentTarget.tagName);
+        // Get all elements with the attribute 'd-modal="true"' 
+        document.querySelectorAll("[d-modal='true']").forEach(el => {
+            // Add event listener for each element
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // Show the Modal
+                dynamicModal(el);
+            });
+        });
+    });
+})();
 
+function dynamicModal(element) {
     // Create a new modal element and set its content
-    const modalContainer = document.createElement('div');
-    modalContainer.id = "modal-container";
     let modalHTML = `
     <div class="modal fade" id="dynamic-modal" tabindex="-1" aria-labelledby="dynamic-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -16,19 +34,12 @@ function dynamicModal(event) {
                     <h5 class="modal-title" id="dynamic-modal-label"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <!-- Modal content goes here... -->
-                    <div class="dynamic-content"></div>
-                </div>
-                <div class="modal-footer">
-                    <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-                </div>
+                <div class="modal-body" style="min-height:100px;"></div>
+                <div class="modal-footer"></div>
             </div>
         </div>
-    </div>
-    `;
-    modalContainer.insertAdjacentHTML("afterbegin", modalHTML);
-    document.body.insertAdjacentElement("afterbegin", modalContainer);
+    </div>`;
+    document.body.insertAdjacentHTML("afterbegin", modalHTML);
 
     const modalEl = document.getElementById("dynamic-modal");
 
@@ -36,11 +47,18 @@ function dynamicModal(event) {
     modalEl.addEventListener('show.bs.modal', async function (event) {
         // Get modalHTML elements
         const modalTitle = modalEl.querySelector('.modal-title');
-        const modalContent = modalEl.querySelector('.dynamic-content');
-        const modalFooter = modalEl.querySelector('.modal-footer');
-        // Extract info from data-bs-* attributes
         modalTitle.textContent = element.getAttribute('data-title');
-        const actionButton = element.getAttribute('data-submit');
+        const modalBody = modalEl.querySelector('.modal-body');
+        const modalFooter = modalEl.querySelector('.modal-footer');
+
+        // Create and show a loading spinner
+        let spinnerHTML = `
+        <div id="modal-spinner" class="position-absolute top-50 start-50 translate-middle mt-1">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>`;
+        modalBody.insertAdjacentHTML('afterbegin', spinnerHTML);
 
         // Get href attribute if anchor tag or data-link if button
         let actionUrl = '';
@@ -51,15 +69,6 @@ function dynamicModal(event) {
             actionUrl = element.getAttribute('data-link');
         }
 
-        // Create and show a loading spinner
-        let spinner = document.createElement('div');
-        spinner.classList.add('spinner-border', 'text-secondary');
-        spinner.style.display = 'table';
-        spinner.style.margin = '0 auto';
-        spinner.setAttribute('role', 'status');
-        spinner.innerHTML = '<span class="visually-hidden">Loading...</span>';
-        modalContent.appendChild(spinner);
-
         // Use fetch to load the content of the page
         try {
             let response = await fetch(actionUrl);
@@ -68,14 +77,16 @@ function dynamicModal(event) {
             }
             let data = await response.text();
             setTimeout(() => {
-                // Set the modal content's HTML
-                modalContent.innerHTML = data;
+                // Replace the modal content's HTML(spinner will be removed)
+                modalBody.innerHTML = data;
+
                 // Insert submit button if the caller requires
+                const actionButton = element.getAttribute('data-submit');
                 if (actionButton && actionButton === 'true') {
                     modalFooter.insertAdjacentHTML("afterbegin", `<button type="submit" class="btn btn-sm btn-success d-flex align-items-center px-4" id="submit-btn">SAVE</button>`);
                     modalFooter.insertAdjacentHTML("afterbegin", `<button type="button" class="btn btn-sm btn-secondary px-3" data-bs-dismiss="modal">CANCEL</button>`);
                     // Get the form and button element
-                    const form = modalContent.querySelector('form');
+                    const form = modalBody.querySelector('form');
                     const submitBtn = modalFooter.querySelector('#submit-btn');
                     if (form) {
                         // Add event listener to submit the form
@@ -86,7 +97,7 @@ function dynamicModal(event) {
                             setTimeout(() => {
                                 // Submit the form
                                 form.submit();
-                            }, 1000);
+                            }, 500);
                         });
                     }
                 } else {
@@ -96,18 +107,13 @@ function dynamicModal(event) {
         } catch (error) {
             console.error(error);
             // Show an error message to the user
-            modalContent.innerHTML = '<p>Failed to load content.</p>';
-        } finally {
-            // Remove the loading spinner
-            modalContent.addEventListener('DOMContentLoaded', function () {
-                spinner.remove();
-            });
-        }
+            modalBody.innerHTML = '<p>Failed to load content.</p>';
+        } finally { }
     });
 
     // Remove the modal from the DOM once it has been hidden
     modalEl.addEventListener('hidden.bs.modal', () => {
-        modalContainer.remove();
+        modalEl.remove();
     });
 
     // Initialize the modal component and show it
@@ -115,5 +121,8 @@ function dynamicModal(event) {
         backdrop: 'static',
         keyboard: false
     });
+    // Show the modal
     myModal.show();
+    // Call handleUpdate to adjust the position of the modal if necessary
+    myModal.handleUpdate();
 }

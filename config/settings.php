@@ -55,7 +55,7 @@ define('COOKIE_DURATION', 60 * 60 * 24 * 30); // 30 days
 // App 
 //------------------------------------------------------------
 defined('APPURL')
-    or define('APPURL', 'http://localhost:8080/n-web-framework');
+    or define('APPURL', 'http://localhost/n-web-framework');
 
 defined('APPROOT')
     or define('APPROOT', dirname(__DIR__));

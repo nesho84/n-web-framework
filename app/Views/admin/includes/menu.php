@@ -1,5 +1,8 @@
 <?php
 $userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SESSION['user']['pic'] . '" class="rounded-circle" alt="...">' : '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+
+$userId = $_SESSION['user']['id'];
+$settingId = $_SESSION['settings']['settingID'];
 ?>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -24,10 +27,12 @@ $userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SE
                 </a>
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuLink">
                     <li>
-                        <a href="<?php echo APPURL . '/admin/users/profile/' . $_SESSION['user']['id']; ?>" class="dropdown-item" data-title="User Profile" onclick="dynamicModal(event)">Profile</a>
+                        <!-- Modal Page -->
+                        <a href="<?php echo APPURL . '/admin/users/profile/' . $userId; ?>" class="d-modal dropdown-item" data-title="User Profile">Profile</a>
                     </li>
                     <li>
-                        <button type="button" class="dropdown-item" data-title="Settings" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings'); ?>" data-submit="true" onclick="dynamicModal(event)">
+                        <!-- Modal Page -->
+                        <button type="button" class="d-modal dropdown-item" data-title="Settings" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings/edit_modal/' . $settingId); ?>" data-submit="true">
                             Settings
                         </button>
                     </li>

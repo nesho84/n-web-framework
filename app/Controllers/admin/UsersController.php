@@ -143,7 +143,7 @@ class UsersController extends Controller
                     $lastInsertId = $this->usersModel->insertUser($postArray);
 
                     // Insert default User Settings
-                    $this->settingsModel->insertSettings([
+                    $this->settingsModel->insertSetting([
                         'userID' => $lastInsertId,
                         'languageID' => 2,
                         'settingTheme' => 'light'
@@ -309,7 +309,7 @@ class UsersController extends Controller
                 try {
                     // Update in Database
                     $this->usersModel->updateUser($postArray);
-                    setFlashMsg('success', 'Update completed successfully.');
+                    setFlashMsg('success', 'Update completed successfully');
                     redirect(ADMURL . '/users');
                 } catch (Exception $e) {
                     setFlashMsg('error', $e->getMessage());
@@ -328,6 +328,8 @@ class UsersController extends Controller
     {
         // Get existing user from the Model
         $user = $this->usersModel->getUserById($id);
+        // Get existing setting from the SettingsModel
+        $setting = $this->settingsModel->getSettingsByUserId($id);
 
         $validated = true;
         $error = '';
@@ -343,7 +345,7 @@ class UsersController extends Controller
                 // Delete User in Database
                 $this->usersModel->deleteUser($id);
                 // Delete User Settings in Database
-                $this->settingsModel->deleteSettings($id);
+                $this->settingsModel->deleteSetting($setting['settingID']);
                 setFlashMsg('success', 'User with the ID: <strong>' . $id . '</strong> and settings deleted successfully.');
             } catch (Exception $e) {
                 setFlashMsg('error', $e->getMessage());

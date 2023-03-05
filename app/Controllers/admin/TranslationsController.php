@@ -139,7 +139,7 @@ class TranslationsController extends Controller
                 try {
                     // Update in Database
                     $this->translationsModel->updateTranslation($postArray);
-                    setFlashMsg('success', 'Update completed successfully.');
+                    setFlashMsg('success', 'Update completed successfully');
                     redirect(ADMURL . '/translations');
                 } catch (Exception $e) {
                     setFlashMsg('error', $e->getMessage());

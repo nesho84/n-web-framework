@@ -177,7 +177,7 @@ class LanguagesController extends Controller
                 try {
                     // Update in Database
                     $this->languagesModel->updateLanguage($postArray);
-                    setFlashMsg('success', 'Update completed successfully.');
+                    setFlashMsg('success', 'Update completed successfully');
                     redirect(ADMURL . '/languages');
                 } catch (Exception $e) {
                     setFlashMsg('error', $e->getMessage());

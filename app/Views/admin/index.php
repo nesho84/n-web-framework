@@ -60,8 +60,8 @@
                 $tableName = 'Settings';
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
-                $isModal = true;
-                $modalParams = ' data-submit="true" data-title="Settings" onclick="dynamicModal(event)"';
+                // $isModal = true;
+                // $modalParams = ' d-modal="true" data-submit="true" data-title="Settings"';
             }
             if ($d['table_name'] == 'translations') {
                 $tableName = 'Translations';

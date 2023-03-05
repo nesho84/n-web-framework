@@ -4,6 +4,7 @@ class SettingsController extends Controller
 {
     private SettingsModel $settingsModel;
     private LanguagesModel $languagesModel;
+    private UsersModel $usersModel;
 
     //------------------------------------------------------------
     public function __construct()
@@ -17,20 +18,32 @@ class SettingsController extends Controller
 
         // Load LanguagesModel
         $this->languagesModel = $this->loadModel("/admin/LanguagesModel");
+        // Load UsersModel
+        $this->usersModel = $this->loadModel("/admin/UsersModel");
     }
 
     //------------------------------------------------------------
     public function index(): void
     //------------------------------------------------------------
     {
+        $data['title'] = 'Settings';
+        $data['rows'] = $this->settingsModel->getSettings();
+
+        $this->renderAdminView('/admin/settings/settings', $data);
+    }
+
+    //------------------------------------------------------------
+    public function edit_modal(int $id): void
+    //------------------------------------------------------------
+    {
         $userId = $_SESSION['user']['id'];
 
-        $data['title'] = 'Users';
+        $data['title'] = 'Settings';
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['languages'] = $this->languagesModel->getLanguages();
-        $data['rows'] = $this->settingsModel->getSettingsByUserId($userId);
+        $data['rows'] = $this->settingsModel->getSettingById($id);
 
-        $this->renderSimpleView('/admin/settings/settings', $data);
+        $this->renderSimpleView('/admin/settings/edit_modal', $data);
     }
 
     //------------------------------------------------------------
@@ -60,17 +73,19 @@ class SettingsController extends Controller
                 try {
                     // Update in Database
                     $this->settingsModel->updateSetting($postArray);
-                    // Update Settings Session
-                    $this->updateSessions($postArray);
-                    setFlashMsg('success', 'Update completed successfully.');
-                    redirect(ADMURL);
+                    // Update Settings Session (only for logged in User)
+                    if ($postArray['settingID'] === $_SESSION['settings']['settingID']) {
+                        $this->updateSessions($postArray);
+                    }
+                    setFlashMsg('success', 'Update completed successfully');
+                    redirect(ADMURL . '/settings');
                 } catch (Exception $e) {
                     setFlashMsg('error', $e->getMessage());
-                    redirect(ADMURL);
+                    redirect(ADMURL . '/settings');
                 }
             } else {
                 setFlashMsg('error', $error);
-                redirect(ADMURL);
+                redirect(ADMURL . '/settings');
             }
         }
     }

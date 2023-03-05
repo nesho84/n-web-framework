@@ -1,53 +1,51 @@
+<!-- Page Header -->
 <?php
-$rows = $data['rows'];
-if (isset($rows) && is_array($rows)) {
-    // Convert array keys into variables
-    extract($rows);
+showHeading(['title' => 'Settings']);
 ?>
 
-    <div class="card">
-        <div class="card-body">
-            <form id="formUsers" action="<?php echo ADMURL . '/settings/update/' . $settingID ?>" method="POST" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="settingTheme" class="form-label fw-bold">Theme</label>
-                    <select id="settingTheme" name="settingTheme" class="form-select">
-                        <?php
-                        $themesArray = array('dark', 'light');
-                        foreach ($themesArray as $theme) {
-                            if ($theme == $settingTheme) {
-                                $selected = "selected";
-                            } else {
-                                $selected = "";
-                            }
-                            echo "<option value='$theme' $selected>$theme</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="languageID" class="form-label fw-bold">Language</label>
-                    <select id="languageID" name="languageID" class="form-select">
-                        <option class="select_hide" disabled selected>Select Language</option>
-                        <?php
-                        $LangArray = $data['languages'];
-                        foreach ($LangArray as $lang) {
-                            if ($lang['languageID'] == $languageID) {
-                                $selected = "selected";
-                            } else {
-                                $selected = "";
-                            }
-                            echo "<option value='{$lang['languageID']}' $selected>{$lang['languageName']}</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
-                <input type="hidden" name="update_setting">
-            </form>
-        </div>
+<div class="container-lg">
+    <div class="table-responsive border-top mt-3">
+        <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" class="ps-3">User</th>
+                    <th scope="col">Language</th>
+                    <th scope="col">Theme</th>
+                    <th scope="col" class='text-center'>Status</th>
+                    <th scope="col" class='text-center'>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $rows = $data['rows'];
+                if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
+                    $counter = 0;
+                    foreach ($rows as $d) {
+                        $counter += 1;
+
+                        $settingStatus = $d['settingStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
+
+                        $editIcon = ($d['userName'] === 'admin' && $_SESSION['user']['name'] !== 'admin') ? '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></button>' : '<a class="d-modal btn btn-link" href="' . ADMURL . '/settings/edit_modal/' . $d['settingID'] . '" data-title="Settings" data-submit="true"><i class="far fa-edit"></i></a>';
+
+                        echo '<tr>
+                                <th scope="row">' . $counter . '</th>
+                                <td>' . $d['userName'] . '</td>
+                                <td>' . $d['languageName'] . '</td>
+                                <td>' . $d['settingTheme'] . '</td>
+                                <td class="text-center">' . $settingStatus . '</td>
+                                <td class="text-center">
+                                ' . $editIcon . '
+                                </td>
+                            </tr>';
+                    }
+                } else {
+                    echo '<tr>
+                            <td colspan="7"><h1 class="text-info text-center">No Records</h1></td>
+                        </tr>';
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
-
-<?php
-} else {
-    showNoDataBox("No Settings found", ADMURL);
-}
-?>
+</div>

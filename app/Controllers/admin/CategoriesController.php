@@ -42,9 +42,9 @@ class CategoriesController extends Controller
         if (isset($_POST['insert_category'])) {
             $postArray = [
                 'userID' => $_SESSION['user']['id'],
+                'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
                 'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
                 'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-                'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
                 'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
             ];
 
@@ -52,18 +52,18 @@ class CategoriesController extends Controller
             $validated = true;
             $error = '';
 
-            if (empty($postArray['categoryType'])) {
-                $validated = false;
-                $error .= 'Category Type can not be empty!<br>';
-            }
-            if (empty($postArray['categoryLink'])) {
-                $validated = false;
-                $error .= 'Please insert a Category Link!<br>';
-            }
             if (empty($postArray['categoryName'])) {
                 $validated = false;
                 $error .= 'Please insert a Category Name!<br>';
             }
+            if (empty($postArray['categoryType'])) {
+                $validated = false;
+                $error .= 'Category Type can not be empty!<br>';
+            }
+            // if (empty($postArray['categoryLink'])) {
+            //     $validated = false;
+            //     $error .= 'Please insert a Category Link!<br>';
+            // }
 
             if ($validated === true) {
                 try {
@@ -103,33 +103,33 @@ class CategoriesController extends Controller
             $postArray = [
                 'categoryID' => $id,
                 'userID' => $_SESSION['user']['id'],
+                'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
                 'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
                 'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-                'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
                 'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
             ];
 
             $validated = true;
             $error = '';
 
-            if (empty($postArray['categoryType'])) {
-                $validated = false;
-                $error .= 'Category Type can not be empty!<br>';
-            }
-            if (empty($postArray['categoryLink'])) {
-                $validated = false;
-                $error .= 'Please insert a Category Link!<br>';
-            }
             if (empty($postArray['categoryName'])) {
                 $validated = false;
                 $error .= 'Please insert a Category Name!<br>';
             }
+            if (empty($postArray['categoryType'])) {
+                $validated = false;
+                $error .= 'Category Type can not be empty!<br>';
+            }
+            // if (empty($postArray['categoryLink'])) {
+            //     $validated = false;
+            //     $error .= 'Please insert a Category Link!<br>';
+            // }
 
             if ($validated === true) {
                 try {
                     // Update in Database
                     $this->categoriesModel->updateCategory($postArray);
-                    setFlashMsg('success', 'Update completed successfully.');
+                    setFlashMsg('success', 'Update completed successfully');
                     redirect(ADMURL . '/categories');
                 } catch (Exception $e) {
                     setFlashMsg('error', $e->getMessage());

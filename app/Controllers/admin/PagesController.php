@@ -142,7 +142,7 @@ class PagesController extends Controller
                 try {
                     // Update in Database
                     $this->pagesModel->updatePage($postArray);
-                    setFlashMsg('success', 'Update completed successfully.');
+                    setFlashMsg('success', 'Update completed successfully');
                     redirect(ADMURL . '/pages');
                 } catch (Exception $e) {
                     setFlashMsg('error', $e->getMessage());
