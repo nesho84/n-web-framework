@@ -74,7 +74,7 @@
                     } else {
                         // Success
                         if (xhr.responseText.trim() === 'success') {
-                            window.location.replace("<?php echo $data["last_page"]; ?>");
+                            window.location.replace("<?php echo APPURL . "/login"; ?>");
                         } else {
                             login_result.innerHTML = "<div class='text-danger bg-light rounded border p-3 mb-4'>" + xhr.responseText + "</div>";
                         }

@@ -18,6 +18,9 @@ if (session_status() === PHP_SESSION_NONE) {
     ob_start();
     session_start();
 }
+// Session and Cookie duration
+define('SESSION_DURATION', 10); // the time is in seconds (60min)
+define('COOKIE_DURATION', 60 * 60 * 24 * 30); // 30 days
 
 // Just for Develop
 error_reporting(E_ALL);
@@ -47,9 +50,6 @@ define('A_USERNAME', 'admin');
 define('A_USER_EMAIL', 'admin@company.com');
 define('A_USER_ROLE', 'admin');
 define('A_USER_PASSWORD', '010203');
-//Session and Cookie duration
-define('SESSION_DURATION', 3600); // the time is in seconds
-define('COOKIE_DURATION', 60 * 60 * 24 * 30); // 30 days
 
 //------------------------------------------------------------
 // App 

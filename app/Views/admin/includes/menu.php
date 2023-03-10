@@ -1,8 +1,9 @@
 <?php
-$userPic = $_SESSION['user']['pic'] ? '<img width="25" height="25" src="' . $_SESSION['user']['pic'] . '" class="rounded-circle" alt="...">' : '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+$userId = $_SESSION['user']['id'] ?? null;
+$settingId = $_SESSION['settings']['settingID'] ?? null;
+$userPic = $_SESSION['user']['pic'] ?? null;
 
-$userId = $_SESSION['user']['id'];
-$settingId = $_SESSION['settings']['settingID'];
+$userPicHtml = $userPic ? '<img width="25" height="25" src="' . $userPic . '" class="rounded-circle" alt="...">' : '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 ?>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -23,7 +24,7 @@ $settingId = $_SESSION['settings']['settingID'];
         <li class="nav-item">
             <div class="dropdown mt-2 mt-lg-0">
                 <a class="btn btn-link text-secondary text-decoration-none px-1 px-lg-3 py-2 border-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    <?php echo $userPic; ?>
+                    <?php echo $userPicHtml; ?>
                 </a>
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuLink">
                     <li>

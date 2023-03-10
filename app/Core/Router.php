@@ -7,7 +7,6 @@ class Router
     private array $params = [];
     private string $controller_path;
     private string $controller_class;
-    private string $method;
     private string $action;
 
     //------------------------------------------------------------

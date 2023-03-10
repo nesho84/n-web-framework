@@ -1,0 +1,31 @@
+[10-Mar-2023 12:43:44 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";", expecting "function" or "const" in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:43:49 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:44:50 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:46:49 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:46:55 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:47:22 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:47:29 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:47:37 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:47:42 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:49:51 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:49:54 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:50:14 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:50:34 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
+[10-Mar-2023 12:52:37 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "getPage", expecting variable in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 40
+[10-Mar-2023 13:01:33 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 33
+[10-Mar-2023 13:01:33 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 78
+[10-Mar-2023 13:01:38 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:04:17 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:06:04 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:07:11 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:08:17 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:08:19 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:08:20 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:11:54 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:12:00 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
+[10-Mar-2023 13:22:10 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 6
+[10-Mar-2023 13:22:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 6
+[10-Mar-2023 13:23:15 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 6
+[10-Mar-2023 13:23:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 6
+[10-Mar-2023 13:25:00 Europe/Berlin] PHP Warning:  Undefined array key "settings" in C:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 77
+[10-Mar-2023 13:25:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 77

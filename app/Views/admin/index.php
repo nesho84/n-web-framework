@@ -3,7 +3,7 @@
     <div class="card">
         <div class="card-body">
             <h3 class="card-title mb-1">
-                Welcome back <strong><?php echo $_SESSION['user']['name']; ?></strong>
+                Welcome back <strong><?php echo $_SESSION['user']['name'] ?? ""; ?></strong>
             </h3>
             <hr class="mb-3 mt-2">
             <h5 class="card-text text-muted"><strong>Logged in as:</strong> <?php echo $_SESSION['user']['email'] ?? ''; ?></h5>

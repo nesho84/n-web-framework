@@ -37,11 +37,23 @@ class Sessions
     }
 
     //------------------------------------------------------------
+    private static function getPage(): string
+    //------------------------------------------------------------
+    {
+        return isset($_GET['url']) ? APPURL . '/' . $_GET['url'] : '/';
+    }
+
+    //------------------------------------------------------------
     private static function sessionExpire(): void
     //------------------------------------------------------------
     {
         if (isset($_SESSION['user']['loggedin_time'])) {
             if (((time() - $_SESSION['user']['loggedin_time']) > SESSION_DURATION)) {
+                // Remove all sessions
+                self::removeAllSessions();
+                // // @TODO: Set the last_page cookie (should be fixed)
+                // self::setLastPageCookie();
+
                 // Show the alert (sweetalert2)
                 echo "<script>
                         document.addEventListener('DOMContentLoaded', function() {
@@ -52,13 +64,40 @@ class Sessions
                                 footer: '<small>You will be redirected to the Login page.</small>'
                             }).then((result) => {
                                 if (result) {
-                                    window.location.replace('" . APPURL . "/logout');
+                                    window.location.replace('" . APPURL . "/login');
                                 }
                             });
                         });
                     </script>";
             }
         }
+    }
+
+    //------------------------------------------------------------
+    public static function removeAllSessions(): void
+    //------------------------------------------------------------
+    {
+        // Unset all of the session variables
+        $_SESSION = array();
+
+        // If it's desired to kill the session, also delete the session cookie
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(
+                session_name(),
+                '',
+                time() - 42000,
+                $params["path"],
+                $params["domain"],
+                $params["secure"],
+                $params["httponly"]
+            );
+        }
+
+        unset($_SESSION["user"]);
+
+        // Finally, destroy the session
+        session_destroy();
     }
 
     /**
@@ -71,7 +110,7 @@ class Sessions
     //------------------------------------------------------------
     {
         // Get page url 
-        $page = isset($_GET['url']) ? APPURL . '/' . $_GET['url'] : '/';
+        $page = self::getPage();
 
         // Check if the user is logged in
         if (isset($_SESSION['user']["id"]) && $_SESSION['user']["id"]) {
@@ -98,10 +137,17 @@ class Sessions
             return $last_page;
         }
 
-        // Set the last_page cookie if user is logged out
-        setcookie('last_page', htmlspecialchars($page, ENT_QUOTES, 'UTF-8'), time() + COOKIE_DURATION, '/');
-
         // Return the current page URL
         return htmlspecialchars($page, ENT_QUOTES, 'UTF-8');
+    }
+
+    //------------------------------------------------------------
+    public static function setLastPageCookie(): void
+    //------------------------------------------------------------
+    {
+        // Get page url 
+        $page = self::getPage();
+
+        setcookie('last_page', htmlspecialchars($page, ENT_QUOTES, 'UTF-8'), time() + COOKIE_DURATION, '/');
     }
 }
