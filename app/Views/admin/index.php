@@ -75,6 +75,12 @@
                 $isDisabled = false;
                 $isModal = false;
             }
+            if ($d['table_name'] == 'files') {
+                $tableName = 'Files';
+                $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
+                $isDisabled = false;
+                $isModal = false;
+            }
 
             echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0">
                     <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none" ' . ($isDisabled ? $disabledStyle : "") . ($isModal ? $modalParams : "") . '>

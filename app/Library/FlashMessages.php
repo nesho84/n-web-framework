@@ -13,13 +13,13 @@ function setFlashMsg(string $status, string $msg): void
 {
     switch ($status) {
         case 'success':
-            $_SESSION['success'] = $msg;
+            $_SESSION['success'] .= $msg;
             break;
         case 'error':
-            $_SESSION['error'] = $msg;
+            $_SESSION['error'] .= $msg;
             break;
         case 'warning':
-            $_SESSION['warning'] = $msg;
+            $_SESSION['warning'] .= $msg;
             break;
         default:
             # code...

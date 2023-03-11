@@ -1,31 +1,32 @@
-[10-Mar-2023 12:43:44 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";", expecting "function" or "const" in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:43:49 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:44:50 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:46:49 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:46:55 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:47:22 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:47:29 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:47:37 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:47:42 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:49:51 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:49:54 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:50:14 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:50:34 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 5
-[10-Mar-2023 12:52:37 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "getPage", expecting variable in C:\xampp\htdocs\n-web-framework\app\helpers\Sessions.php on line 40
-[10-Mar-2023 13:01:33 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 33
-[10-Mar-2023 13:01:33 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 78
-[10-Mar-2023 13:01:38 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:04:17 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:06:04 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:07:11 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:08:17 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:08:19 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:08:20 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:11:54 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:12:00 Europe/Berlin] PHP Warning:  Undefined array key "last_page" in C:\xampp\htdocs\n-web-framework\app\Views\login\login.php on line 77
-[10-Mar-2023 13:22:10 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 6
-[10-Mar-2023 13:22:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 6
-[10-Mar-2023 13:23:15 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 6
-[10-Mar-2023 13:23:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 6
-[10-Mar-2023 13:25:00 Europe/Berlin] PHP Warning:  Undefined array key "settings" in C:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 77
-[10-Mar-2023 13:25:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 77
+[11-Mar-2023 12:37:09 Europe/Berlin] PHP Warning:  Undefined array key "tmp" in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
+[11-Mar-2023 12:37:09 Europe/Berlin] PHP Deprecated:  finfo::file(): Passing null to parameter #1 ($filename) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
+[11-Mar-2023 12:37:09 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php(34): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(73): FileUpload::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
+[11-Mar-2023 12:42:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: finfo::file(): Argument #1 ($filename) must be of type string, array given in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php(34): finfo->file(Array)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(73): FileUpload::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
+[11-Mar-2023 12:43:19 Europe/Berlin] PHP Warning:  finfo::file(jcpicker.ini): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 36
+[11-Mar-2023 12:43:32 Europe/Berlin] PHP Warning:  finfo::file(jcpicker.ini): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 36
+[11-Mar-2023 12:44:02 Europe/Berlin] PHP Warning:  finfo::file(jcpicker.ini): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 36
+[11-Mar-2023 12:44:42 Europe/Berlin] PHP Warning:  finfo::file(pic2.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
+[11-Mar-2023 12:45:08 Europe/Berlin] PHP Warning:  finfo::file(pic2.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
+[11-Mar-2023 12:45:51 Europe/Berlin] PHP Warning:  finfo::file(pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
+[11-Mar-2023 12:46:43 Europe/Berlin] PHP Warning:  finfo::file(pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 40
+[11-Mar-2023 12:47:22 Europe/Berlin] PHP Warning:  finfo::file(pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 45
+[11-Mar-2023 12:47:35 Europe/Berlin] PHP Warning:  finfo::file(D:\xampp\htdocs\n-web-framework/public/uploads/files/640c6a5753cb2_pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 45
+[11-Mar-2023 12:48:44 Europe/Berlin] PHP Warning:  finfo::file(pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 40
+[11-Mar-2023 13:11:51 Europe/Berlin] PHP Warning:  Undefined array key "success" in D:\xampp\htdocs\n-web-framework\app\Library\flashMessages.php on line 16
+[11-Mar-2023 13:12:51 Europe/Berlin] PHP Warning:  Undefined array key "success" in D:\xampp\htdocs\n-web-framework\app\Library\flashMessages.php on line 16

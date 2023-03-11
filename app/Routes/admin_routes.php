@@ -50,3 +50,11 @@ Router::get('/admin/settings', 'admin/SettingsController@index');
 Router::get('/admin/settings/edit_modal/{id}', 'admin/SettingsController@edit_modal');
 Router::post('/admin/settings/update/{id}', 'admin/SettingsController@update');
 // Router::get('/admin/settings/delete/{id}', 'admin/SettingsController@delete');
+
+// --- Files --- //
+Router::get('/admin/files', 'admin/FilesController@index');
+Router::get('/admin/files/create', 'admin/FilesController@create');
+Router::post('/admin/files/insert', 'admin/FilesController@insert');
+Router::get('/admin/files/edit/{id}', 'admin/FilesController@edit');
+Router::post('/admin/files/update/{id}', 'admin/FilesController@update');
+Router::get('/admin/files/delete/{id}', 'admin/FilesController@delete');

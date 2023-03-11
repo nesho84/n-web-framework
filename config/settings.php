@@ -19,7 +19,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 // Session and Cookie duration
-define('SESSION_DURATION', 10); // the time is in seconds (60min)
+define('SESSION_DURATION', 3600); // the time is in seconds (60min)
 define('COOKIE_DURATION', 60 * 60 * 24 * 30); // 30 days
 
 // Just for Develop

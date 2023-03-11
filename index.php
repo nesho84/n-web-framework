@@ -18,7 +18,7 @@ require_once CORE_PATH . "/Controller.php";
 
 // Helpers
 require_once HELPERS_PATH . "/Sessions.php";
-require_once HELPERS_PATH . "/FileHandler.php";
+require_once HELPERS_PATH . "/FileUpload.php";
 
 // Custom Library
 require_once LIBRARY_PATH . "/helpers.php";
