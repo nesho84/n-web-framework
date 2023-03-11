@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2023 at 08:36 PM
+-- Generation Time: Mar 11, 2023 at 01:14 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -46,6 +46,41 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`categoryID`, `userID`, `categoryName`, `categoryType`, `categoryLink`, `categoryDescription`, `categoryStatus`, `categoryDateCreated`, `categoryDateUpdated`) VALUES
 (67, 1, 'Images', 'Gallery', '', 'Images uploaded using the Dashboard', 0, '2023-03-03 23:01:45', '2023-03-03 22:01:45'),
 (68, 1, 'Files', 'Documents', '', 'Files as Documents uploaded using the Dashboard', 0, '2023-03-03 23:03:14', '2023-03-03 22:03:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `files`
+--
+
+CREATE TABLE `files` (
+  `fileID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `categoryID` int(11) NOT NULL,
+  `fileName` varchar(255) DEFAULT NULL,
+  `fileType` varchar(255) DEFAULT NULL,
+  `filePath` varchar(255) NOT NULL,
+  `fileStatus` tinyint(1) NOT NULL DEFAULT 1,
+  `fileDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `fileDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `files`
+--
+
+INSERT INTO `files` (`fileID`, `userID`, `categoryID`, `fileName`, `fileType`, `filePath`, `fileStatus`, `fileDateCreated`, `fileDateUpdated`) VALUES
+(1, 1, 67, '640c659ab5f0b_albania.png', 'image/png', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/images/640c659ab5f0b_albania.png', 1, '2023-03-11 12:27:22', '2023-03-11 11:28:54'),
+(5, 1, 68, '640c664b79260_united.png', 'png', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c664b79260_united.png', 1, '2023-03-11 12:30:19', '2023-03-11 11:30:19'),
+(6, 1, 68, '640c66951c720_germany', 'png', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c66951c720_germany.png', 1, '2023-03-11 12:31:33', '2023-03-11 11:31:33'),
+(7, 1, 67, '640c66c00fe64_pic2140px.jpg', 'jpg', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/images/640c66c00fe64_pic2140px.jpg', 1, '2023-03-11 12:32:16', '2023-03-11 11:32:16'),
+(8, 1, 68, '640c6ad23c979_pic2140px.jpg', 'jpg', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c6ad23c979_pic2140px.jpg', 1, '2023-03-11 12:49:38', '2023-03-11 11:49:38'),
+(9, 1, 67, '640c6af83163c_profile150px.png', 'png', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/images/640c6af83163c_profile150px.png', 1, '2023-03-11 12:50:16', '2023-03-11 11:50:16'),
+(10, 1, 68, '640c6b746a099_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c6b746a099_pdf-test.pdf', 1, '2023-03-11 12:52:20', '2023-03-11 11:52:20'),
+(11, 1, 68, '640c6f50d11ee_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c6f50d11ee_pdf-test.pdf', 1, '2023-03-11 13:08:48', '2023-03-11 12:08:48'),
+(12, 1, 68, '640c6f8e25a2f_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c6f8e25a2f_pdf-test.pdf', 1, '2023-03-11 13:09:50', '2023-03-11 12:09:50'),
+(13, 1, 68, '640c7007e6a9b_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c7007e6a9b_pdf-test.pdf', 1, '2023-03-11 13:11:51', '2023-03-11 12:11:51'),
+(14, 1, 68, '640c70435c5aa_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c70435c5aa_pdf-test.pdf', 1, '2023-03-11 13:12:51', '2023-03-11 12:12:51');
 
 -- --------------------------------------------------------
 
@@ -197,6 +232,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`categoryID`);
 
 --
+-- Indexes for table `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`fileID`);
+
+--
 -- Indexes for table `languages`
 --
 ALTER TABLE `languages`
@@ -235,6 +276,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `categories`
   MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
+--
+-- AUTO_INCREMENT for table `files`
+--
+ALTER TABLE `files`
+  MODIFY `fileID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `languages`
