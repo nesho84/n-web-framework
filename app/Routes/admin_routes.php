@@ -45,16 +45,20 @@ Router::get('/admin/users/delete/{id}', 'admin/UsersController@delete');
 
 // --- Settings --- //
 Router::get('/admin/settings', 'admin/SettingsController@index');
-// Router::get('/admin/settings/create', 'admin/SettingsController@create');
-// Router::post('/admin/settings/insert', 'admin/SettingsController@insert');
 Router::get('/admin/settings/edit_modal/{id}', 'admin/SettingsController@edit_modal');
 Router::post('/admin/settings/update/{id}', 'admin/SettingsController@update');
-// Router::get('/admin/settings/delete/{id}', 'admin/SettingsController@delete');
 
 // --- Files --- //
 Router::get('/admin/files', 'admin/FilesController@index');
 Router::get('/admin/files/create', 'admin/FilesController@create');
 Router::post('/admin/files/insert', 'admin/FilesController@insert');
-Router::get('/admin/files/edit/{id}', 'admin/FilesController@edit');
-Router::post('/admin/files/update/{id}', 'admin/FilesController@update');
 Router::get('/admin/files/delete/{id}', 'admin/FilesController@delete');
+Router::get('/admin/files/pdf_output', 'admin/FilesController@pdf_output'); // test pdf output
+
+// --- Invoices --- //
+Router::get('/admin/invoices', 'admin/InvoicesController@index');
+Router::get('/admin/invoices/create', 'admin/InvoicesController@create');
+Router::post('/admin/invoices/insert', 'admin/InvoicesController@insert');
+Router::get('/admin/invoices/edit/{id}', 'admin/InvoicesController@edit');
+Router::post('/admin/invoices/update/{id}', 'admin/InvoicesController@update');
+Router::get('/admin/invoices/delete/{id}', 'admin/InvoicesController@delete');

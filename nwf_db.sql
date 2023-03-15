@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2023 at 01:14 PM
+-- Generation Time: Mar 15, 2023 at 09:25 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -50,6 +50,35 @@ INSERT INTO `categories` (`categoryID`, `userID`, `categoryName`, `categoryType`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `companies`
+--
+
+CREATE TABLE `companies` (
+  `companyID` int(11) UNSIGNED NOT NULL,
+  `companyName` varchar(255) NOT NULL,
+  `companyAddress` varchar(255) NOT NULL,
+  `companyCity` varchar(255) NOT NULL,
+  `companyState` varchar(2) NOT NULL,
+  `companyZip` varchar(10) NOT NULL,
+  `companyPhone` varchar(20) NOT NULL,
+  `companyEmail` varchar(255) NOT NULL,
+  `companyStatus` tinyint(1) NOT NULL DEFAULT 1,
+  `companyDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `companyDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+
+--
+-- Dumping data for table `companies`
+--
+
+INSERT INTO `companies` (`companyID`, `companyName`, `companyAddress`, `companyCity`, `companyState`, `companyZip`, `companyPhone`, `companyEmail`, `companyStatus`, `companyDateCreated`, `companyDateUpdated`) VALUES
+(1, 'Google', '123 Main Street', 'USA', '', '123', '5544655', 'google@gmail.com', 1, '2023-03-15 12:00:04', '2023-03-15 11:00:04'),
+(2, 'Amazon', '123 Main Street', 'Germany', '', '123', '65456464564', 'amazon@amazon.com', 1, '2023-03-15 12:00:04', '2023-03-15 11:00:04'),
+(3, 'Sage', '123 Main Street', 'Vienna', '', '1020', '56456465465', 'sage@sage.com', 1, '2023-03-15 12:03:15', '2023-03-15 11:03:15');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `files`
 --
 
@@ -59,7 +88,7 @@ CREATE TABLE `files` (
   `categoryID` int(11) NOT NULL,
   `fileName` varchar(255) DEFAULT NULL,
   `fileType` varchar(255) DEFAULT NULL,
-  `filePath` varchar(255) NOT NULL,
+  `fileLink` varchar(255) NOT NULL,
   `fileStatus` tinyint(1) NOT NULL DEFAULT 1,
   `fileDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
   `fileDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -69,18 +98,38 @@ CREATE TABLE `files` (
 -- Dumping data for table `files`
 --
 
-INSERT INTO `files` (`fileID`, `userID`, `categoryID`, `fileName`, `fileType`, `filePath`, `fileStatus`, `fileDateCreated`, `fileDateUpdated`) VALUES
-(1, 1, 67, '640c659ab5f0b_albania.png', 'image/png', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/images/640c659ab5f0b_albania.png', 1, '2023-03-11 12:27:22', '2023-03-11 11:28:54'),
-(5, 1, 68, '640c664b79260_united.png', 'png', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c664b79260_united.png', 1, '2023-03-11 12:30:19', '2023-03-11 11:30:19'),
-(6, 1, 68, '640c66951c720_germany', 'png', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c66951c720_germany.png', 1, '2023-03-11 12:31:33', '2023-03-11 11:31:33'),
-(7, 1, 67, '640c66c00fe64_pic2140px.jpg', 'jpg', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/images/640c66c00fe64_pic2140px.jpg', 1, '2023-03-11 12:32:16', '2023-03-11 11:32:16'),
-(8, 1, 68, '640c6ad23c979_pic2140px.jpg', 'jpg', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c6ad23c979_pic2140px.jpg', 1, '2023-03-11 12:49:38', '2023-03-11 11:49:38'),
-(9, 1, 67, '640c6af83163c_profile150px.png', 'png', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/images/640c6af83163c_profile150px.png', 1, '2023-03-11 12:50:16', '2023-03-11 11:50:16'),
-(10, 1, 68, '640c6b746a099_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c6b746a099_pdf-test.pdf', 1, '2023-03-11 12:52:20', '2023-03-11 11:52:20'),
-(11, 1, 68, '640c6f50d11ee_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c6f50d11ee_pdf-test.pdf', 1, '2023-03-11 13:08:48', '2023-03-11 12:08:48'),
-(12, 1, 68, '640c6f8e25a2f_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c6f8e25a2f_pdf-test.pdf', 1, '2023-03-11 13:09:50', '2023-03-11 12:09:50'),
-(13, 1, 68, '640c7007e6a9b_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c7007e6a9b_pdf-test.pdf', 1, '2023-03-11 13:11:51', '2023-03-11 12:11:51'),
-(14, 1, 68, '640c70435c5aa_pdf-test.pdf', 'pdf', 'D:\\xampp\\htdocs\\n-web-framework/public/uploads/files/640c70435c5aa_pdf-test.pdf', 1, '2023-03-11 13:12:51', '2023-03-11 12:12:51');
+INSERT INTO `files` (`fileID`, `userID`, `categoryID`, `fileName`, `fileType`, `fileLink`, `fileStatus`, `fileDateCreated`, `fileDateUpdated`) VALUES
+(21, 1, 68, '640cd13ff22b0_pdf-test.pdf', 'pdf', 'http://localhost/n-web-framework/public/uploads/files/640cd13ff22b0_pdf-test.pdf', 1, '2023-03-11 20:06:39', '2023-03-11 19:06:39'),
+(22, 1, 67, '640cd148b97b9_albania.png', 'png', 'http://localhost/n-web-framework/public/uploads/images/640cd148b97b9_albania.png', 1, '2023-03-11 20:06:48', '2023-03-11 19:06:48'),
+(24, 1, 67, '640cd15c66e05_germany.png', 'png', 'http://localhost/n-web-framework/public/uploads/images/640cd15c66e05_germany.png', 1, '2023-03-11 20:07:08', '2023-03-11 19:07:08'),
+(25, 1, 68, '640cd19cb10ad_pdf-test.pdf', 'pdf', 'http://localhost/n-web-framework/public/uploads/files/640cd19cb10ad_pdf-test.pdf', 1, '2023-03-11 20:08:12', '2023-03-11 19:08:12'),
+(26, 1, 68, '640cd4d7161d7_pdf-test.pdf', 'pdf', 'http://localhost/n-web-framework/public/uploads/files/640cd4d7161d7_pdf-test.pdf', 1, '2023-03-11 20:21:59', '2023-03-11 19:21:59'),
+(27, 1, 67, '640cd4f83f2a8_pic2140px.jpg', 'jpg', 'http://localhost/n-web-framework/public/uploads/images/640cd4f83f2a8_pic2140px.jpg', 1, '2023-03-11 20:22:32', '2023-03-11 19:22:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `invoices`
+--
+
+CREATE TABLE `invoices` (
+  `invoiceID` int(11) UNSIGNED NOT NULL,
+  `companyID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `invoiceTotalPrice` float(10,2) NOT NULL,
+  `invoiceStatus` tinyint(1) NOT NULL DEFAULT 1,
+  `invoiceDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `invoiceDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+
+--
+-- Dumping data for table `invoices`
+--
+
+INSERT INTO `invoices` (`invoiceID`, `companyID`, `userID`, `invoiceTotalPrice`, `invoiceStatus`, `invoiceDateCreated`, `invoiceDateUpdated`) VALUES
+(1, 1, 1, 100.00, 1, '2023-03-15 11:57:17', '2023-03-15 10:57:17'),
+(2, 2, 1, 199.00, 1, '2023-03-15 11:57:17', '2023-03-15 10:57:17'),
+(3, 3, 1, 599.00, 1, '2023-03-15 11:57:52', '2023-03-15 10:57:52');
 
 -- --------------------------------------------------------
 
@@ -138,6 +187,24 @@ INSERT INTO `pages` (`pageID`, `userID`, `languageID`, `pageName`, `pageTitle`, 
 (26, 1, 2, 'home', 'HOME', '<h2><strong>HOME</strong></h2>\r\n\r\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, unde magni. Magni saepe expedita autem quam inventore veritatis eum omnis! Sapiente a vel, maxime fugit in dolor, est accusantium libero, nesciunt perferendis inventore! Molestias assumenda magnam eius praesentium dolor ipsa excepturi libero quia eaque? Nobis exercitationem repudiandae perferendis. Inventore recusandae, corrupti commodi ab eveniet nesciunt cum. Corporis cum cupiditate est ullam debitis laudantium ipsam reprehenderit similique, molestiae explicabo officiis itaque totam, quaerat, minus dolore sed et tempore eveniet beatae! Voluptas nemo ex numquam esse autem officia illo, voluptatibus hic modi, error, laboriosam rem. Dignissimos, id accusantium numquam delectus ullam iusto?</p>\r\n', '', '', '', 1, '2020-04-13 13:43:10', '2023-02-25 12:44:07'),
 (31, 1, 3, 'contact', 'CONTACT', '<p><span style=\"font-size:2em;\"><i class=\"fas fa-map-marker-alt\"></span><br />\r\n<span style=\"font-size:20px;\">company<br />\r\naddress,<br />\r\npostalcode city,<br />\r\nCountry<br />\r\n<br />\r\n<i class=\"fas fa-phone-square-alt\"> <strong class=\"pl-1\">Tel: </strong><a href=\"tel:+00 000 00 00 00\">+00 000 00 00 00</a><br />\r\n<i class=\"fas fa-phone-square-alt\"> <strong class=\"pl-1\">Tel: </strong><a href=\"tel:+00 000 00 00 00\">+00 000 00 00 00</a><br />\r\n<i class=\"fas fa-envelope\"> <small class=\"pl-1\"><strong>E-Mail:</strong> <a href=\"mailto:office@company.com\">office@company.com</a></small></span></p>\r\n', '', '', '', 1, '2020-04-13 17:15:46', '2023-02-25 12:44:11'),
 (68, 1, 0, 'test', '222', '<p>222222</p>\r\n', '222', '222', '2222', 0, '2023-02-21 19:56:51', '2023-02-25 11:29:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `serviceID` int(11) UNSIGNED NOT NULL,
+  `invoiceID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `serviceName` varchar(255) NOT NULL,
+  `serviceDescription` text DEFAULT NULL,
+  `servicePrice` float(10,2) NOT NULL,
+  `serviceStatus` tinyint(1) NOT NULL DEFAULT 0,
+  `serviceDateCreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `serviceDateUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -232,10 +299,22 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`categoryID`);
 
 --
+-- Indexes for table `companies`
+--
+ALTER TABLE `companies`
+  ADD PRIMARY KEY (`companyID`);
+
+--
 -- Indexes for table `files`
 --
 ALTER TABLE `files`
   ADD PRIMARY KEY (`fileID`);
+
+--
+-- Indexes for table `invoices`
+--
+ALTER TABLE `invoices`
+  ADD PRIMARY KEY (`invoiceID`);
 
 --
 -- Indexes for table `languages`
@@ -248,6 +327,12 @@ ALTER TABLE `languages`
 --
 ALTER TABLE `pages`
   ADD PRIMARY KEY (`pageID`);
+
+--
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`serviceID`);
 
 --
 -- Indexes for table `settings`
@@ -278,10 +363,22 @@ ALTER TABLE `categories`
   MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
+-- AUTO_INCREMENT for table `companies`
+--
+ALTER TABLE `companies`
+  MODIFY `companyID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `fileID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `fileID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `invoices`
+--
+ALTER TABLE `invoices`
+  MODIFY `invoiceID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `languages`
@@ -294,6 +391,12 @@ ALTER TABLE `languages`
 --
 ALTER TABLE `pages`
   MODIFY `pageID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `serviceID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `settings`

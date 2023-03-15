@@ -1,32 +1,38 @@
-[11-Mar-2023 12:37:09 Europe/Berlin] PHP Warning:  Undefined array key "tmp" in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
-[11-Mar-2023 12:37:09 Europe/Berlin] PHP Deprecated:  finfo::file(): Passing null to parameter #1 ($filename) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
-[11-Mar-2023 12:37:09 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php:34
+[15-Mar-2023 11:52:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method InvoicesModel::getInvoices() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php:24
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php(34): finfo->file('')
-#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(73): FileUpload::upload(Array, 'files')
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): FilesController->insert()
-#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
-#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
-#5 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
-[11-Mar-2023 12:42:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: finfo::file(): Argument #1 ($filename) must be of type string, array given in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php:34
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): InvoicesController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 24
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 31
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryType" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 32
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 31
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryType" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 32
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 31
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryType" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 32
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[15-Mar-2023 12:07:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: date_format(): Argument #1 ($object) must be of type DateTimeInterface, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php:34
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php(34): finfo->file(Array)
-#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(73): FileUpload::upload(Array, 'files')
-#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): FilesController->insert()
-#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
-#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
-#5 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
-[11-Mar-2023 12:43:19 Europe/Berlin] PHP Warning:  finfo::file(jcpicker.ini): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 36
-[11-Mar-2023 12:43:32 Europe/Berlin] PHP Warning:  finfo::file(jcpicker.ini): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 36
-[11-Mar-2023 12:44:02 Europe/Berlin] PHP Warning:  finfo::file(jcpicker.ini): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 36
-[11-Mar-2023 12:44:42 Europe/Berlin] PHP Warning:  finfo::file(pic2.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
-[11-Mar-2023 12:45:08 Europe/Berlin] PHP Warning:  finfo::file(pic2.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
-[11-Mar-2023 12:45:51 Europe/Berlin] PHP Warning:  finfo::file(pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 34
-[11-Mar-2023 12:46:43 Europe/Berlin] PHP Warning:  finfo::file(pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 40
-[11-Mar-2023 12:47:22 Europe/Berlin] PHP Warning:  finfo::file(pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 45
-[11-Mar-2023 12:47:35 Europe/Berlin] PHP Warning:  finfo::file(D:\xampp\htdocs\n-web-framework/public/uploads/files/640c6a5753cb2_pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 45
-[11-Mar-2023 12:48:44 Europe/Berlin] PHP Warning:  finfo::file(pic2140px.jpg): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\helpers\FileUpload.php on line 40
-[11-Mar-2023 13:11:51 Europe/Berlin] PHP Warning:  Undefined array key "success" in D:\xampp\htdocs\n-web-framework\app\Library\flashMessages.php on line 16
-[11-Mar-2023 13:12:51 Europe/Berlin] PHP Warning:  Undefined array key "success" in D:\xampp\htdocs\n-web-framework\app\Library\flashMessages.php on line 16
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php(34): date_format('2023-03-15 11:5...', 'd.m.Y')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(46): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(26): Controller->renderAdminView('/admin/invoices...', Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): InvoicesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[15-Mar-2023 21:07:50 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44
+[15-Mar-2023 21:10:17 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44
+[15-Mar-2023 21:11:01 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44

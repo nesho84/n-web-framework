@@ -31,6 +31,17 @@ class FilesController extends Controller
     }
 
     //------------------------------------------------------------
+    public function pdf_output(): void
+    //------------------------------------------------------------
+    {
+        $data['title'] = 'Files';
+        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
+        $data['rows'] = $this->filesModel->getFiles();
+
+        $this->renderAdminView('/admin/files/pdf_output', $data);
+    }
+
+    //------------------------------------------------------------
     public function create(): void
     //------------------------------------------------------------
     {
@@ -50,7 +61,7 @@ class FilesController extends Controller
                 'categoryID' => htmlspecialchars($_POST['categoryID'] ?? ""),
                 // 'fileName' => htmlspecialchars(trim($_POST['fileName'])),
                 // 'fileType' => htmlspecialchars(trim($_POST['fileType'])),
-                'filePath' => $_FILES['filePath'] ?? null,
+                'fileLink' => $_FILES['fileLink'] ?? null,
             ];
             // dd($postArray);
 
@@ -62,7 +73,7 @@ class FilesController extends Controller
                 $validated = false;
                 $error .= 'Please insert a File Category!<br>';
             }
-            if (empty($postArray['filePath']['name'])) {
+            if (empty($postArray['fileLink']['name'])) {
                 $validated = false;
                 $error .= 'Please insert a File Link!<br>';
             }
@@ -70,16 +81,16 @@ class FilesController extends Controller
             // --- File Upload and Validation START --- //
             if ($validated === true) {
                 $category = $this->categoriesModel->getCategoryById((int)$postArray['categoryID']);
-                [$uploadError, $targetPath] = FileUpload::upload($postArray['filePath'], strtolower($category['categoryName']));
+                $folder = trim(strtolower($category['categoryName']));
+                [$uploadError, $targetPath] = FileUpload::upload($postArray['fileLink'], $folder);
                 // First Check if there was an error
                 if ($uploadError !== "") {
                     $validated = false;
                     $error .= "$uploadError <br>";
                 } else {
-                    setFlashMsg('success', 'Upload completed successfully.<br>');
                     $postArray['fileName'] = pathinfo($targetPath, PATHINFO_BASENAME);
                     $postArray['fileType'] = pathinfo($targetPath, PATHINFO_EXTENSION);
-                    $postArray['filePath'] = $targetPath;
+                    $postArray['fileLink'] = UPLOADURL . '/' . $folder . '/' . $postArray['fileName'];
                 }
             }
             // --- File Upload and Validation END --- //
@@ -105,76 +116,26 @@ class FilesController extends Controller
         }
     }
 
-    // //------------------------------------------------------------
-    // public function edit(int $id): void
-    // //------------------------------------------------------------
-    // {
-    //     $data['title'] = 'Category Edit - ' . $id;
-    //     $data['rows'] = $this->categoriesModel->getCategoryById($id);
+    //------------------------------------------------------------
+    public function delete(int $id): void
+    //------------------------------------------------------------
+    {
+        // Get existing file from Model
+        $file = $this->filesModel->getFileById($id);
+        // Get category Name as folder Name
+        $cat = $this->categoriesModel->getCategoryById($file['categoryID']);
 
-    //     $this->renderAdminView('/admin/categories/edit', $data);
-    // }
+        try {
+            // Delete in Database
+            $this->filesModel->deleteFile($id);
+            // Delete the existing files
+            FileUpload::removeFiles(strtolower($cat['categoryName']), $file['fileName']);
+            setFlashMsg('success', 'File with the ID: <strong>' . $id . '</strong> deleted successfully.');
+        } catch (Exception $e) {
+            setFlashMsg('error', $e->getMessage());
+        }
 
-    // //------------------------------------------------------------
-    // public function update(int $id): void
-    // //------------------------------------------------------------
-    // {
-    //     if (isset($_POST['update_category'])) {
-    //         $postArray = [
-    //             'categoryID' => $id,
-    //             'userID' => $_SESSION['user']['id'],
-    //             'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
-    //             'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
-    //             'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-    //             'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
-    //         ];
-
-    //         $validated = true;
-    //         $error = '';
-
-    //         if (empty($postArray['categoryName'])) {
-    //             $validated = false;
-    //             $error .= 'Please insert a Category Name!<br>';
-    //         }
-    //         if (empty($postArray['categoryType'])) {
-    //             $validated = false;
-    //             $error .= 'Category Type can not be empty!<br>';
-    //         }
-    //         // if (empty($postArray['categoryLink'])) {
-    //         //     $validated = false;
-    //         //     $error .= 'Please insert a Category Link!<br>';
-    //         // }
-
-    //         if ($validated === true) {
-    //             try {
-    //                 // Update in Database
-    //                 $this->categoriesModel->updateCategory($postArray);
-    //                 setFlashMsg('success', 'Update completed successfully');
-    //                 redirect(ADMURL . '/categories');
-    //             } catch (Exception $e) {
-    //                 setFlashMsg('error', $e->getMessage());
-    //                 redirect(ADMURL . '/categories/edit/' . $id);
-    //             }
-    //         } else {
-    //             setFlashMsg('error', $error);
-    //             redirect(ADMURL . '/categories/edit/' . $id);
-    //         }
-    //     }
-    // }
-
-    // //------------------------------------------------------------
-    // public function delete(int $id): void
-    // //------------------------------------------------------------
-    // {
-    //     try {
-    //         // Delete in Database
-    //         $this->categoriesModel->deleteCategory($id);
-    //         setFlashMsg('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
-    //     } catch (Exception $e) {
-    //         setFlashMsg('error', $e->getMessage());
-    //     }
-
-    //     // Allways redirect back
-    //     redirect(ADMURL . '/categories');
-    // }
+        // Allways redirect back
+        redirect(ADMURL . '/files');
+    }
 }

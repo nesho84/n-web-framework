@@ -77,7 +77,7 @@ class FileUpload
     }
 
     //------------------------------------------------------------
-    function removeUpload(string $folder, string|array $file): void
+    public static function removeFiles(string $folder, string|array $file): void
     //------------------------------------------------------------
     {
         $dir = UPLOAD_PATH . "/$folder/";

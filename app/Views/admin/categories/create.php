@@ -17,7 +17,7 @@
                     <label for="categoryLink" class="form-label fw-bold">Category Link</label>
                     <input type="text" class="form-control" id="categoryLink" name="categoryLink" placeholder="Category Link" value="<?php echo $_SESSION['inputs']['categoryLink'] ?? ""; ?>">
                 </div>
-                <div class=" mb-3">
+                <div class="mb-3">
                     <label for="categoryDescription" class="form-label fw-bold">Category Description (optional)</label>
                     <textarea class="form-control" rows="5" id="categoryDescription" name="categoryDescription" placeholder="Category Description"><?php echo $_SESSION['inputs']['categoryDescription'] ?? ""; ?></textarea>
                 </div>

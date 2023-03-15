@@ -11,19 +11,19 @@ require_once __DIR__ . "/config/settings.php";
 require_once CORE_PATH . "/Database.php";
 // Routing
 require_once CORE_PATH . "/Router.php";
-// Base Model
-require_once CORE_PATH . "/Model.php";
 // Base Controller
 require_once CORE_PATH . "/Controller.php";
+// Base Model
+require_once CORE_PATH . "/Model.php";
 
 // Helpers
 require_once HELPERS_PATH . "/Sessions.php";
 require_once HELPERS_PATH . "/FileUpload.php";
+require_once HELPERS_PATH . "/helpers.php";
+require_once HELPERS_PATH . "/components.php";
+require_once HELPERS_PATH . "/flashMessages.php";
 
-// Custom Library
-require_once LIBRARY_PATH . "/helpers.php";
-require_once LIBRARY_PATH . "/components.php";
-require_once LIBRARY_PATH . "/flashMessages.php";
+// Library
 
 // Initialize Router
 $router = new Router;

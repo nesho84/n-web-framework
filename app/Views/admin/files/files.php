@@ -9,6 +9,9 @@ showHeading([
 ?>
 
 <div class="container-lg">
+    <!-- Test pdf output -->
+    <a class="btn btn-warning" href="<?php echo ADMURL . '/files/pdf_output?id=99'; ?>">Generate PDF Test</a>
+
     <div class="table-responsive border-top mt-3">
         <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
             <thead>
@@ -28,13 +31,13 @@ showHeading([
                         $counter += 1;
                         echo '<tr>
                                 <th scope="row">' . $counter . '</th>
-                                <td>' . $d['fileName'] . '</td>
+                                <td><a class="link-success" target="_blank" href="' . $d['fileLink'] . '">' . $d['fileName'] . '</a></td>
                                 <td>' . $d['fileType'] . '</td>
                                 <td class="text-center">
-                                    <a class="btn btn-link" href="' . ADMURL . '/categories/edit/' . $d['fileID'] . '">
-                                        <i class="far fa-edit"></i>
+                                    <a class="btn btn-link" target="_blank" href="' . $d['fileLink'] . '">
+                                        <i class="far fa-share-square"></i>
                                     </a>
-                                    <a class="btn btn-link btn-delete" href="' . ADMURL . '/categories/delete/' . $d['fileID'] . '">
+                                    <a class="btn btn-link btn-delete" href="' . ADMURL . '/files/delete/' . $d['fileID'] . '">
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>

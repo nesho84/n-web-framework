@@ -29,11 +29,12 @@ class Sessions
             }
         }
 
-        // Set last visited page
-        self::getLastPage();
-
         // Session expire 
         self::sessionExpire();
+
+        // // Set last visited page
+        // self::getLastPage();
+
     }
 
     //------------------------------------------------------------
@@ -49,11 +50,6 @@ class Sessions
     {
         if (isset($_SESSION['user']['loggedin_time'])) {
             if (((time() - $_SESSION['user']['loggedin_time']) > SESSION_DURATION)) {
-                // Remove all sessions
-                self::removeAllSessions();
-                // // @TODO: Set the last_page cookie (should be fixed)
-                // self::setLastPageCookie();
-
                 // Show the alert (sweetalert2)
                 echo "<script>
                         document.addEventListener('DOMContentLoaded', function() {
@@ -69,6 +65,11 @@ class Sessions
                             });
                         });
                     </script>";
+
+                // // Remove all sessions
+                // self::removeAllSessions();
+                // // @TODO: Set the last_page cookie (should be fixed)
+                // self::setLastPageCookie();
             }
         }
     }

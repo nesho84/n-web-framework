@@ -26,7 +26,7 @@
                         ?>
                     </select>
                 </div>
-                <div class=" mb-3">
+                <div class="mb-3">
                     <label for="translationText" class="form-label fw-bold">Translation Text</label>
                     <textarea class="form-control" rows="5" id="translationText" name="translationText" placeholder="Translation Text"><?php echo $_SESSION['inputs']['translationText'] ?? ""; ?></textarea>
                 </div>

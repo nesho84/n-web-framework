@@ -32,9 +32,9 @@
                 </div> -->
                 <!-- File Link -> Upload -->
                 <div class="mb-3">
-                    <label for="filePath" class="form-label fw-bold">File Path</label>
-                    <input class="form-control" type="file" name="filePath" id="filePath">
-                    <!-- <input class="form-control" type="file" name="filePath[]" id="filePath" multiple> -->
+                    <label for="fileLink" class="form-label fw-bold">Choose File</label>
+                    <input class="form-control" type="file" name="fileLink" id="fileLink">
+                    <!-- <input class="form-control" type="file" name="fileLink[]" id="fileLink" multiple> -->
                     <div class="mt-2">
                         <div id="preview_image"></div>
                         <div id="mySpinner" class="d-none">Loading...</div>
@@ -52,6 +52,6 @@
 <script>
     // Preview Uploaded Images (function in main.js)
     document.addEventListener("DOMContentLoaded", () => {
-        previewUploadedImages("filePath", "preview_image", "mySpinner");
+        previewUploadedImages("fileLink", "preview_image", "mySpinner");
     });
 </script>
