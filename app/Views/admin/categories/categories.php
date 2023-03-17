@@ -77,3 +77,6 @@ showHeading([
         });
     });
 </script>
+
+<!-- <script src="/n-web-framework/app/views/admin/categories/test.js"></script> -->
+<script src="test.js"></script>

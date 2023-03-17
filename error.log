@@ -36,3 +36,21 @@ Stack trace:
 [15-Mar-2023 21:07:50 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44
 [15-Mar-2023 21:10:17 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44
 [15-Mar-2023 21:11:01 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44
+[17-Mar-2023 09:34:14 Europe/Berlin] PHP Warning:  Undefined variable $baseUrl in C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 18
+[17-Mar-2023 09:45:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "VIEWS_URL" in C:\xampp\htdocs\n-web-framework\app\Core\Controller.php:35
+Stack trace:
+#0 C:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(26): Controller->renderAdminView('/admin/categori...', Array)
+#1 C:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): CategoriesController->index()
+#2 C:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
+#3 C:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in C:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 35
+[17-Mar-2023 10:03:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "ADM_VIEWS_URL" in C:\xampp\htdocs\n-web-framework\app\Core\Controller.php:35
+Stack trace:
+#0 C:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php(32): Controller->renderAdminView('/admin/settings...', Array)
+#1 C:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): SettingsController->index()
+#2 C:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
+#3 C:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in C:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 35
+[17-Mar-2023 10:04:15 Europe/Berlin] PHP Warning:  Undefined variable $baseUrl in C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 18

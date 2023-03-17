@@ -54,13 +54,16 @@ define('A_USER_PASSWORD', '010203');
 // App 
 //------------------------------------------------------------
 defined('APPURL')
-    or define('APPURL', 'http://localhost/n-web-framework');
+    or define('APPURL', 'http://localhost:8080/n-web-framework');
 
 defined('APPROOT')
     or define('APPROOT', dirname(__DIR__));
 
 defined('ADMURL')
     or define('ADMURL', APPURL . '/admin');
+
+defined('ADM_VIEWS')
+    or define('ADM_VIEWS', APPURL . '/app/Views/admin');
 
 defined('SITE_NAME')
     or define('SITE_NAME', 'n-web-framework');
