@@ -119,6 +119,9 @@ class TranslationsController extends Controller
                 'translationText' => htmlspecialchars(trim($_POST['translationText'])),
             ];
 
+            // Get existing category from the Model
+            $translation = $this->translationsModel->getTranslationById($id);
+
             $validated = true;
             $error = '';
 
@@ -136,13 +139,25 @@ class TranslationsController extends Controller
             }
 
             if ($validated === true) {
-                try {
-                    // Update in Database
-                    $this->translationsModel->updateTranslation($postArray);
-                    setFlashMsg('success', 'Update completed successfully');
-                    redirect(ADMURL . '/translations');
-                } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                // Remove unchanged postArray keys but keep the 'id'
+                foreach ($postArray as $key => $value) {
+                    if (isset($postArray[$key]) && $translation[$key] == $value && $key !== 'translationID') {
+                        unset($postArray[$key]);
+                    }
+                }
+
+                if (count($postArray) > 1) {
+                    try {
+                        // Update in Database
+                        $this->translationsModel->updateTranslation($postArray);
+                        setFlashMsg('success', 'Update completed successfully');
+                        redirect(ADMURL . '/translations');
+                    } catch (Exception $e) {
+                        setFlashMsg('error', $e->getMessage());
+                        redirect(ADMURL . '/translations/edit/' . $id);
+                    }
+                } else {
+                    setFlashMsg('warning', 'No fields were changed');
                     redirect(ADMURL . '/translations/edit/' . $id);
                 }
             } else {

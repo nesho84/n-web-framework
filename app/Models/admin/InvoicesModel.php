@@ -20,33 +20,18 @@ class InvoicesModel extends Model
         }
     }
 
-    // //------------------------------------------------------------
-    // public function getCategoriesByType(string $ctype): array|string
-    // //------------------------------------------------------------
-    // {
-    //     try {
-    //         $stmt = $this->prepare("SELECT * FROM categories WHERE categoryType = :ctype");
-    //         $this->bindValues($stmt, ['ctype' => $ctype]);
-    //         $stmt->execute();
-    //         return $stmt->fetchAll();
-    //     } catch (PDOException $e) {
-    //         throw new Exception($e->getMessage());
-    //     }
-    // }
-
-    // //------------------------------------------------------------
-    // public function getCategoriesByName(string $cname): array|string
-    // //------------------------------------------------------------
-    // {
-    //     try {
-    //         $stmt = $this->prepare("SELECT * FROM categories WHERE categoryName = :cname");
-    //         $this->bindValues($stmt, ['cname' => $cname]);
-    //         $stmt->execute();
-    //         return $stmt->fetchAll();
-    //     } catch (PDOException $e) {
-    //         throw new Exception($e->getMessage());
-    //     }
-    // }
+    //------------------------------------------------------------
+    public function getCompanies(): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("SELECT * FROM companies ORDER BY companyName ASC");
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 
     // //------------------------------------------------------------
     // public function getCategoryById(int $id): array|string
@@ -62,36 +47,53 @@ class InvoicesModel extends Model
     //     }
     // }
 
-    // //------------------------------------------------------------
-    // public function insertCategory(array $postArray): bool|string
-    // //------------------------------------------------------------
-    // {
-    //     try {
-    //         // Starts a database transaction
-    //         $this->beginTransaction();
+    //------------------------------------------------------------
+    public function insertInvoice(array $postArray): bool|string
+    //------------------------------------------------------------
+    {
+        try {
+            // start database transaction 
+            $this->beginTransaction();
 
-    //         // $stmt = $this->prepare(
-    //         //     "INSERT INTO categories (userID, categoryType, categoryLink, categoryName,categoryDescription) 
-    //         //     VALUES (
-    //         //     :userID, 
-    //         //     :categoryType, 
-    //         //     :categoryLink, 
-    //         //     :categoryName,  
-    //         //     :categoryDescription)"
-    //         // );
+            // If companyArray is not empty Insert data into company table
+            // ... and set $postArray['invoice']['companyID'] with lastInsertId
+            if (!empty($postArray['company'])) {
+                $stmt = $this->prepareInsert('companies', $postArray['company']);
+                $this->bindValues($stmt, $postArray['company']);
+                $stmt->execute();
+                // Get the last inserted ID from the invoices table                
+                $companyId = $this->lastInsertId();
 
-    //         $stmt = $this->prepareInsert('categories', $postArray);
-    //         $this->bindValues($stmt, $postArray);
-    //         $stmt->execute();
+                $postArray['invoice']['companyID'] = $companyId;
+            }
 
-    //         // Commits the transaction and returns true to indicate success
-    //         return $this->commit();
-    //     } catch (PDOException $e) {
-    //         // Rolls back the transaction if an error occurs
-    //         $this->rollBack();
-    //         throw new Exception($e->getMessage());
-    //     }
-    // }
+            // dd($postArray);
+
+            // Insert data into invoices table
+            // get companyID if is not empty, or get the last insertedID of new company
+            $stmt = $this->prepareInsert('invoices', $postArray['invoice']);
+            $this->bindValues($stmt, $postArray['invoice']);
+            $stmt->execute();
+            // Get the last inserted ID from the invoices table
+            $invoiceId = $this->lastInsertId();
+
+            // Insert data into services table
+            foreach ($postArray['services'] as $service) {
+                $service['invoiceID'] = $invoiceId;
+                $service['userID'] = $postArray['invoice']['userID'];
+                $stmt = $this->prepareInsert('services', $service);
+                $this->bindValues($stmt, $service);
+                $stmt->execute();
+            }
+
+            // Commits the transaction and returns true to indicate success 
+            return $this->commit();
+        } catch (PDOException $e) {
+            // rollback database transaction 
+            $this->rollback();
+            throw new Exception($e->getMessage());
+        }
+    }
 
     // //------------------------------------------------------------
     // public function updateCategory(array $postArray): bool|string

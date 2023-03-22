@@ -122,6 +122,9 @@ class PagesController extends Controller
                 'pageContent' => $_POST['pageContent'],
             ];
 
+            // Get existing page from the Model
+            $page = $this->pagesModel->getPageById($id);
+
             $validated = true;
             $error = '';
 
@@ -139,13 +142,25 @@ class PagesController extends Controller
             }
 
             if ($validated === true) {
-                try {
-                    // Update in Database
-                    $this->pagesModel->updatePage($postArray);
-                    setFlashMsg('success', 'Update completed successfully');
-                    redirect(ADMURL . '/pages');
-                } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                // Update only changed fields and skip the 'id'
+                foreach ($postArray as $key => $value) {
+                    if (isset($postArray[$key]) && $page[$key] == $value && $key !== 'pageID') {
+                        unset($postArray[$key]);
+                    }
+                }
+
+                if (count($postArray) > 1) {
+                    try {
+                        // Update in Database
+                        $this->pagesModel->updatePage($postArray);
+                        setFlashMsg('success', 'Update completed successfully');
+                        redirect(ADMURL . '/pages');
+                    } catch (Exception $e) {
+                        setFlashMsg('error', $e->getMessage());
+                        redirect(ADMURL . '/pages/edit/' . $id);
+                    }
+                } else {
+                    setFlashMsg('warning', 'No fields were changed');
                     redirect(ADMURL . '/pages/edit/' . $id);
                 }
             } else {

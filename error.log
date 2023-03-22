@@ -1,56 +1,61 @@
-[15-Mar-2023 11:52:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method InvoicesModel::getInvoices() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php:24
+[20-Mar-2023 13:46:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method InvoicesModel::getCompanies() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php:34
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): InvoicesController->index()
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): InvoicesController->create()
 #1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
 #2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
 #3 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 24
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 31
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryType" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 32
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 31
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryType" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 32
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 31
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryType" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 32
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
-[15-Mar-2023 12:03:30 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
-[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
-[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
-[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
-[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
-[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
-[15-Mar-2023 12:04:13 Europe/Berlin] PHP Warning:  Undefined array key "categoryID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
-[15-Mar-2023 12:07:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: date_format(): Argument #1 ($object) must be of type DateTimeInterface, string given in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php:34
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 34
+[20-Mar-2023 13:53:53 Europe/Berlin] PHP Warning:  Undefined array key "languages" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 19
+[20-Mar-2023 13:53:53 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 20
+[20-Mar-2023 13:54:06 Europe/Berlin] PHP Warning:  Undefined array key "languages" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 19
+[20-Mar-2023 13:54:06 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 20
+[20-Mar-2023 13:55:28 Europe/Berlin] PHP Warning:  Undefined array key "languageName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 26
+[20-Mar-2023 15:23:19 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 56
+[20-Mar-2023 15:23:19 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 56
+[20-Mar-2023 15:23:59 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 56
+[20-Mar-2023 15:23:59 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 56
+[20-Mar-2023 15:25:35 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 56
+[20-Mar-2023 15:25:35 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 56
+[20-Mar-2023 15:26:00 Europe/Berlin] PHP Warning:  Undefined array key "companyID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 55
+[20-Mar-2023 15:26:00 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 55
+[20-Mar-2023 15:28:52 Europe/Berlin] PHP Warning:  Undefined array key "companyID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 55
+[20-Mar-2023 15:28:52 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 55
+[20-Mar-2023 15:41:13 Europe/Berlin] PHP Warning:  Undefined array key "companyID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 55
+[20-Mar-2023 15:41:13 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 55
+[22-Mar-2023 08:51:22 Europe/Berlin] PHP Warning:  Undefined array key "user" in D:\xampp\htdocs\n-web-framework\app\Views\admin\settings\settings.php on line 29
+[22-Mar-2023 08:51:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Views\admin\settings\settings.php on line 29
+[22-Mar-2023 16:37:21 Europe/Berlin] PHP Warning:  Undefined array key "company" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 49
+[22-Mar-2023 16:42:33 Europe/Berlin] PHP Warning:  Undefined array key "company" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 49
+[22-Mar-2023 16:47:51 Europe/Berlin] PHP Warning:  Undefined array key "companyID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:47:51 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:49:37 Europe/Berlin] PHP Warning:  Undefined array key "companyID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:49:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:49:38 Europe/Berlin] PHP Warning:  Undefined array key "companyID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:49:38 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:49:50 Europe/Berlin] PHP Warning:  Undefined array key "companyID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:49:50 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:50:39 Europe/Berlin] PHP Warning:  Undefined variable $companyID in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:50:55 Europe/Berlin] PHP Warning:  Undefined variable $companyID in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:51:05 Europe/Berlin] PHP Warning:  Undefined variable $companyID in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:51:32 Europe/Berlin] PHP Warning:  Undefined array key "user" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 16:51:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 73
+[22-Mar-2023 22:58:30 Europe/Berlin] PHP Warning:  Undefined array key "companyID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 53
+[22-Mar-2023 22:58:30 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 53
+[22-Mar-2023 23:10:05 Europe/Berlin] PHP Warning:  Undefined variable $postArray in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 10
+[22-Mar-2023 23:10:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd_print(): Argument #1 ($var) must be of type array, null given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 10 and defined in D:\xampp\htdocs\n-web-framework\app\helpers\helpers.php:22
 Stack trace:
-#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php(34): date_format('2023-03-15 11:5...', 'd.m.Y')
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php(10): dd_print(NULL)
 #1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(46): require_once('D:\\xampp\\htdocs...')
-#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(26): Controller->renderAdminView('/admin/invoices...', Array)
-#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): InvoicesController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(36): Controller->renderAdminView('/admin/invoices...', Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): InvoicesController->create()
 #4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
 #5 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
 #6 {main}
-  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
-[15-Mar-2023 21:07:50 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44
-[15-Mar-2023 21:10:17 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44
-[15-Mar-2023 21:11:01 Europe/Berlin] PHP Warning:  Undefined array key "serviceName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 44
-[17-Mar-2023 09:34:14 Europe/Berlin] PHP Warning:  Undefined variable $baseUrl in C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 18
-[17-Mar-2023 09:45:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "VIEWS_URL" in C:\xampp\htdocs\n-web-framework\app\Core\Controller.php:35
-Stack trace:
-#0 C:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(26): Controller->renderAdminView('/admin/categori...', Array)
-#1 C:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): CategoriesController->index()
-#2 C:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
-#3 C:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
-#4 {main}
-  thrown in C:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 35
-[17-Mar-2023 10:03:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "ADM_VIEWS_URL" in C:\xampp\htdocs\n-web-framework\app\Core\Controller.php:35
-Stack trace:
-#0 C:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php(32): Controller->renderAdminView('/admin/settings...', Array)
-#1 C:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): SettingsController->index()
-#2 C:\xampp\htdocs\n-web-framework\app\Core\Router.php(86): Router->loadController()
-#3 C:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
-#4 {main}
-  thrown in C:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 35
-[17-Mar-2023 10:04:15 Europe/Berlin] PHP Warning:  Undefined variable $baseUrl in C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 18
+  thrown in D:\xampp\htdocs\n-web-framework\app\helpers\helpers.php on line 22
+[22-Mar-2023 23:11:41 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "inputs", expecting "]" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 47
+[22-Mar-2023 23:22:24 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 91
+[22-Mar-2023 23:22:41 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 91
+[22-Mar-2023 23:23:00 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 91
+[22-Mar-2023 23:53:31 Europe/Berlin] PHP Warning:  Undefined array key "user" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 103
+[22-Mar-2023 23:53:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 103
+[22-Mar-2023 23:57:35 Europe/Berlin] PHP Warning:  Undefined variable $4 in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 69

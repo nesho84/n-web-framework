@@ -1,3 +1,4 @@
+'use strict';
 
 // // This is example how it should be called in the view
 // const form = document.getElementById('form');

@@ -57,6 +57,9 @@ class SettingsController extends Controller
                 'settingTheme' => htmlspecialchars(trim($_POST['settingTheme'])),
             ];
 
+            // Get existing setting from the Model
+            $setting = $this->settingsModel->getSettingById($id);
+
             $validated = true;
             $error = '';
 
@@ -70,17 +73,29 @@ class SettingsController extends Controller
             }
 
             if ($validated === true) {
-                try {
-                    // Update in Database
-                    $this->settingsModel->updateSetting($postArray);
-                    // Update Settings Session (only for logged in User)
-                    if ($postArray['settingID'] === $_SESSION['settings']['settingID']) {
-                        $this->updateSessions($postArray);
+                // Remove unchanged postArray keys but keep the 'id'
+                foreach ($postArray as $key => $value) {
+                    if (isset($postArray[$key]) && $setting[$key] == $value && $key !== 'settingID') {
+                        unset($postArray[$key]);
                     }
-                    setFlashMsg('success', 'Update completed successfully');
-                    redirect(ADMURL . '/settings');
-                } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                }
+
+                if (count($postArray) > 1) {
+                    try {
+                        // Update in Database
+                        $this->settingsModel->updateSetting($postArray);
+                        // Update Settings Session (only for logged in User)
+                        if ($postArray['settingID'] === $_SESSION['settings']['settingID']) {
+                            $this->updateSessions($postArray);
+                        }
+                        setFlashMsg('success', 'Update completed successfully');
+                        redirect(ADMURL . '/settings');
+                    } catch (Exception $e) {
+                        setFlashMsg('error', $e->getMessage());
+                        redirect(ADMURL . '/settings');
+                    }
+                } else {
+                    setFlashMsg('warning', 'No fields were changed');
                     redirect(ADMURL . '/settings');
                 }
             } else {

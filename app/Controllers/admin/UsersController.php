@@ -81,6 +81,7 @@ class UsersController extends Controller
                     }
                 }
             }
+
             if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
                 $validated = false;
                 $error .= "The email you entered was not valid!<br>";
@@ -93,6 +94,7 @@ class UsersController extends Controller
                     }
                 }
             }
+
             if (empty($postArray['userPassword'])) {
                 $validated = false;
                 $error .= 'Password can not be empty!<br>';
@@ -143,6 +145,7 @@ class UsersController extends Controller
                     $lastInsertId = $this->usersModel->insertUser($postArray);
 
                     // Insert default User Settings
+                    // @TODO: change the hardcoded languageID value
                     $this->settingsModel->insertSetting([
                         'userID' => $lastInsertId,
                         'languageID' => 2,
@@ -201,7 +204,28 @@ class UsersController extends Controller
             if (empty($postArray['userName'])) {
                 $validated = false;
                 $error .= 'Username can not be empty!<br>';
+            } else {
+                // Username exist Validation
+                foreach ($users as $u) {
+                    if ($u['userName'] == $postArray['userName']) {
+                        $validated = false;
+                        $error .= "Username already exists!<br>";
+                    }
+                }
             }
+            if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
+                $validated = false;
+                $error .= "The email you entered was not valid!<br>";
+            } else {
+                // Email exist Validation
+                foreach ($users as $u) {
+                    if ($u['userEmail'] == $postArray['userEmail']) {
+                        $validated = false;
+                        $error .= "Email already exists!<br>";
+                    }
+                }
+            }
+
             // Username 'admin' Validations
             if ($user['userName'] == 'admin') {
                 // 'admin' Username can not be changed Validation
@@ -226,25 +250,7 @@ class UsersController extends Controller
                     }
                 }
             }
-            // Username exist Validation
-            foreach ($users as $u) {
-                if ($u['userName'] == $postArray['userName']) {
-                    $validated = false;
-                    $error .= "Username already exists!<br>";
-                }
-            }
-            if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
-                $validated = false;
-                $error .= "The email you entered was not valid!<br>";
-            } else {
-                // Email exist Validation
-                foreach ($users as $u) {
-                    if ($u['userEmail'] == $postArray['userEmail']) {
-                        $validated = false;
-                        $error .= "Email already exists!<br>";
-                    }
-                }
-            }
+
 
             // Password change Validation - If the new password is set
             if ($_POST['userOldPassword'] !== "" || $_POST['userNewPassword'] !== "" || $_POST['userNewPassword2'] !== "") {
@@ -294,7 +300,7 @@ class UsersController extends Controller
                     $error .= "Only jpeg, png, and gif images are allowed.";
                 }
                 // Set Image only if validation passed
-                if ($validated) {
+                if ($validated === true) {
                     $image = file_get_contents($file);
                     $image = base64_encode($image);
                     $postArray['userPicture'] = 'data:image/png;base64,' . $image;
@@ -306,13 +312,25 @@ class UsersController extends Controller
             }
 
             if ($validated === true) {
-                try {
-                    // Update in Database
-                    $this->usersModel->updateUser($postArray);
-                    setFlashMsg('success', 'Update completed successfully');
-                    redirect(ADMURL . '/users');
-                } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                // Remove unchanged postArray keys but keep the 'id'
+                foreach ($postArray as $key => $value) {
+                    if (isset($postArray[$key]) && $user[$key] == $value && $key !== 'userID') {
+                        unset($postArray[$key]);
+                    }
+                }
+
+                if (count($postArray) > 1) {
+                    try {
+                        // Update in Database
+                        $this->usersModel->updateUser($postArray);
+                        setFlashMsg('success', 'Update completed successfully');
+                        redirect(ADMURL . '/users');
+                    } catch (Exception $e) {
+                        setFlashMsg('error', $e->getMessage());
+                        redirect(ADMURL . '/users/edit/' . $id);
+                    }
+                } else {
+                    setFlashMsg('warning', 'No fields were changed');
                     redirect(ADMURL . '/users/edit/' . $id);
                 }
             } else {

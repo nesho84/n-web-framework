@@ -1,3 +1,5 @@
+'use strict';
+
 function previewUploadedImages(fileInputId, previewId, spinnerId) {
     // Get the file input element
     var fileInput = document.getElementById(fileInputId);

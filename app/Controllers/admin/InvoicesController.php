@@ -31,6 +31,7 @@ class InvoicesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Invoices Create';
+        $data['companies'] = $this->invoicesModel->getCompanies();
 
         $this->renderAdminView('/admin/invoices/create', $data);
     }
@@ -40,54 +41,92 @@ class InvoicesController extends Controller
     //------------------------------------------------------------
     {
         if (isset($_POST['insert_invoice'])) {
+            $_SESSION['inputs'] = [];
+            $validated = true;
+            $error = '';
 
-            foreach ($_POST['services'] as $service) {
-                echo $service['serviceName'] . '<br>';
+            // Get Company Information and validate data
+            $companyType = htmlspecialchars(trim($_POST['company-type']));
+            $companyID = "";
+            $companyArray = [];
+            if ($companyType === 'existing') {
+                $companyID = isset($_POST['companyID']) ? htmlspecialchars(trim($_POST['companyID'])) : "";
+                if (empty($companyID)) {
+                    $validated = false;
+                    $error .= 'Please choose Company or create a new!<br>';
+                }
             }
-            dd($_POST);
+            if ($companyType === 'new') {
+                $companyArray = [
+                    'userID' => $_SESSION['user']['id'],
+                    'companyName' => htmlspecialchars(trim($_POST['companyName'])),
+                    'companyAddress' => htmlspecialchars(trim($_POST['companyAddress'])),
+                    'companyCity' => htmlspecialchars(trim($_POST['companyCity'])),
+                    'companyState' => htmlspecialchars(trim($_POST['companyState'])),
+                    'companyZip' => htmlspecialchars(trim($_POST['companyZip'])),
+                    'companyPhone' => htmlspecialchars(trim($_POST['companyPhone'])),
+                    'companyEmail' => htmlspecialchars(trim($_POST['companyEmail'])),
+                ];
+                if (empty($companyArray['companyName'])) {
+                    $validated = false;
+                    $error .= 'Please insert a Company Name!<br>';
+                }
+                if (empty($companyArray['companyAddress'])) {
+                    $validated = false;
+                    $error .= 'Please insert a Company Address!<br>';
+                }
+                if (empty($companyArray['companyEmail'])) {
+                    $validated = false;
+                    $error .= 'Please insert a Company Email!<br>';
+                }
+            }
 
-            // $postArray = [
-            //     'userID' => $_SESSION['user']['id'],
-            //     'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
-            //     'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
-            //     'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-            //     'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
-            // ];
+            // Secure services POST Array and Validate
+            $servicesArray = $_POST['services'];
+            $errorServices = 0;
+            foreach ($servicesArray as $key => $service) {
+                foreach ($service as $innerKey => $innerValue) {
+                    $servicesArray[$key][$innerKey] = htmlspecialchars($innerValue);
+                    // Validate values
+                    if (empty($servicesArray[$key][$innerKey])) {
+                        $errorServices++;
+                    }
+                }
+            }
+            if ($errorServices > 0) {
+                $validated = false;
+                $error .= 'Services fields can not be empty!<br>';
+            }
 
-            // $_SESSION['inputs'] = [];
-            // $validated = true;
-            // $error = '';
+            $postArray = [
+                'company' => $companyArray,
+                'invoice' => [
+                    'userID' => $_SESSION['user']['id'],
+                    'companyID' => $companyID,
+                    'invoiceTotalPrice' => htmlspecialchars(trim($_POST['invoiceTotalPrice'])),
 
-            // if (empty($postArray['categoryName'])) {
-            //     $validated = false;
-            //     $error .= 'Please insert a Category Name!<br>';
-            // }
-            // if (empty($postArray['categoryType'])) {
-            //     $validated = false;
-            //     $error .= 'Category Type can not be empty!<br>';
-            // }
-            // // if (empty($postArray['categoryLink'])) {
-            // //     $validated = false;
-            // //     $error .= 'Please insert a Category Link!<br>';
-            // // }
+                ],
+                'services' => $servicesArray
+            ];
 
-            // if ($validated === true) {
-            //     try {
-            //         // Insert in Database
-            //         $this->invoicesModel->insertCategory($postArray);
-            //         setFlashMsg('success', 'Insert completed successfully.');
-            //         unset($_SESSION['inputs']);
-            //         redirect(ADMURL . '/categories');
-            //     } catch (Exception $e) {
-            //         setFlashMsg('error', $e->getMessage());
-            //         $_SESSION['inputs'] = $postArray;
-            //         redirect(ADMURL . '/categories/create');
-            //     }
-            // } else {
-            //     setFlashMsg('error', $error);
-            //     $_SESSION['inputs'] = $postArray;
-            //     redirect(ADMURL . '/categories/create');
-            // }
+
+            if ($validated === true) {
+                try {
+                    // Insert in Database
+                    $this->invoicesModel->insertInvoice($postArray);
+                    setFlashMsg('success', 'Insert completed successfully.');
+                    unset($_SESSION['inputs']);
+                    redirect(ADMURL . '/invoices');
+                } catch (Exception $e) {
+                    setFlashMsg('error', $e->getMessage());
+                    $_SESSION['inputs'] = $postArray;
+                    redirect(ADMURL . '/invoices/create');
+                }
+            } else {
+                setFlashMsg('error', $error);
+                $_SESSION['inputs'] = $postArray;
+                redirect(ADMURL . '/invoices/create');
+            }
         }
     }
 

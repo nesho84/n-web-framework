@@ -4,9 +4,10 @@ session_name('NWF_SESSION');
 // Use SSL/TLS encryption
 ini_set('session.cookie_secure', 1);
 ini_set('session.cookie_httponly', 1);
+// ini_set('session.gc_maxlifetime', 3600);
 // Set session cookie parameters
 session_set_cookie_params([
-    'lifetime' => 3600, // 1 hour
+    // 'lifetime' => 3600, // 1 hour
     'path' => '/n-web-framework',
     // 'domain' => 'http://localhost:8080/n-web-framework',
     'secure' => true,
@@ -15,7 +16,6 @@ session_set_cookie_params([
 // Session and Cookie duration
 define('SESSION_DURATION', 3600); // the time is in seconds (60min)
 define('COOKIE_DURATION', 60 * 60 * 24 * 30); // 30 days
-// ini_set('session.gc_maxlifetime', 3600);
 if (session_status() === PHP_SESSION_NONE) {
     ob_start();
     session_start();
@@ -54,7 +54,7 @@ define('A_USER_PASSWORD', '010203');
 // App 
 //------------------------------------------------------------
 defined('APPURL')
-    or define('APPURL', 'http://localhost:8080/n-web-framework');
+    or define('APPURL', 'http://localhost/n-web-framework');
 
 defined('APPROOT')
     or define('APPROOT', dirname(__DIR__));

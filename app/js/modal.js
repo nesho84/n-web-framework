@@ -1,3 +1,5 @@
+'use strict';
+
 (function () {
     document.addEventListener("DOMContentLoaded", () => {
         // Get all elements with the class 'd-modal' 

@@ -18,6 +18,9 @@ function setFlashMsg(string $status, string $msg): void
         case 'error':
             $_SESSION['error'] = $msg;
             break;
+        case 'info':
+            $_SESSION['info'] = $msg;
+            break;
         case 'warning':
             $_SESSION['warning'] = $msg;
             break;
@@ -55,6 +58,16 @@ function getFlashMsg(): void
                 </div>
             </div>';
         unset($_SESSION['error']);
+    }
+    // Info Messages
+    if (isset($_SESSION['info'])) {
+        echo '<div class="container" style="margin-bottom:-20px;">
+                <div class="alert alert-info alert-dismissible fade show rounded-0" role="alert">
+                    ' . $_SESSION['info'] . '
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>';
+        unset($_SESSION['info']);
     }
     // Warning Messages
     if (isset($_SESSION['warning'])) {

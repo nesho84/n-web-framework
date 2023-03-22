@@ -60,10 +60,6 @@ class CategoriesController extends Controller
                 $validated = false;
                 $error .= 'Category Type can not be empty!<br>';
             }
-            // if (empty($postArray['categoryLink'])) {
-            //     $validated = false;
-            //     $error .= 'Please insert a Category Link!<br>';
-            // }
 
             if ($validated === true) {
                 try {
@@ -109,6 +105,9 @@ class CategoriesController extends Controller
                 'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
             ];
 
+            // Get existing category from the Model
+            $category = $this->categoriesModel->getCategoryById($id);
+
             $validated = true;
             $error = '';
 
@@ -120,19 +119,33 @@ class CategoriesController extends Controller
                 $validated = false;
                 $error .= 'Category Type can not be empty!<br>';
             }
-            // if (empty($postArray['categoryLink'])) {
-            //     $validated = false;
-            //     $error .= 'Please insert a Category Link!<br>';
-            // }
 
             if ($validated === true) {
-                try {
-                    // Update in Database
-                    $this->categoriesModel->updateCategory($postArray);
-                    setFlashMsg('success', 'Update completed successfully');
-                    redirect(ADMURL . '/categories');
-                } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                // Remove unchanged postArray keys but keep the 'id'
+                foreach ($postArray as $key => $value) {
+                    if (isset($postArray[$key]) && $category[$key] == $value && $key !== 'categoryID') {
+                        unset($postArray[$key]);
+                    }
+                }
+                // echo "array from db";
+                // dd_print($category);
+                // echo "<br>";
+                // echo "PostArray";
+                // dd_print($postArray);
+                // echo "<br>";
+                // die;
+                if (count($postArray) > 1) {
+                    try {
+                        // Update in Database
+                        $this->categoriesModel->updateCategory($postArray);
+                        setFlashMsg('success', 'Update completed successfully');
+                        redirect(ADMURL . '/categories');
+                    } catch (Exception $e) {
+                        setFlashMsg('error', $e->getMessage());
+                        redirect(ADMURL . '/categories/edit/' . $id);
+                    }
+                } else {
+                    setFlashMsg('warning', 'No fields were changed');
                     redirect(ADMURL . '/categories/edit/' . $id);
                 }
             } else {

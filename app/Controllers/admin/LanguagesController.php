@@ -166,7 +166,7 @@ class LanguagesController extends Controller
                     $error .= "Only jpeg, png, and gif images are allowed.";
                 }
                 // Set Image only if validation passed
-                if ($validated) {
+                if ($validated === true) {
                     $image = file_get_contents($file);
                     $image = base64_encode($image);
                     $postArray['languageFlag'] = 'data:image/png;base64,' . $image;
@@ -174,13 +174,25 @@ class LanguagesController extends Controller
             }
 
             if ($validated === true) {
-                try {
-                    // Update in Database
-                    $this->languagesModel->updateLanguage($postArray);
-                    setFlashMsg('success', 'Update completed successfully');
-                    redirect(ADMURL . '/languages');
-                } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                // Remove unchanged postArray keys but keep the 'id'
+                foreach ($postArray as $key => $value) {
+                    if (isset($postArray[$key]) && $language[$key] == $value && $key !== 'languageID') {
+                        unset($postArray[$key]);
+                    }
+                }
+
+                if (count($postArray) > 1) {
+                    try {
+                        // Update in Database
+                        $this->languagesModel->updateLanguage($postArray);
+                        setFlashMsg('success', 'Update completed successfully');
+                        redirect(ADMURL . '/languages');
+                    } catch (Exception $e) {
+                        setFlashMsg('error', $e->getMessage());
+                        redirect(ADMURL . '/languages/edit/' . $id);
+                    }
+                } else {
+                    setFlashMsg('warning', 'No fields were changed');
                     redirect(ADMURL . '/languages/edit/' . $id);
                 }
             } else {
