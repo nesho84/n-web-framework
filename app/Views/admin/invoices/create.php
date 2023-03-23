@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
                             <h4>Company Information</h4>
-                            <button type="button" id="add-company-btn" class="btn btn-sm btn-success">Add Company +</button>
+                            <button type="button" id="btn-add-company" class="btn btn-sm btn-success">Add Company +</button>
                         </div>
                         <hr class="mt-1">
 
@@ -69,7 +69,7 @@
                         </div>
                         <div class="">
                             <label for="invoiceTotalPrice" class="form-label fw-bold">Total Price</label>
-                            <input type="number" step="0.00" class="form-control form-control-sm" id="invoiceTotalPrice" name="invoiceTotalPrice" placeholder="this will be dynamic, the sum of services price" value="">
+                            <input type="number" step="0.00" class="form-control form-control-sm" id="invoiceTotalPrice" name="invoiceTotalPrice" placeholder="" value="">
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
                             <h4>Services</h4>
-                            <button type="button" class="btn btn-sm btn-success" onclick="addService()">Add Service +</button>
+                            <button type="button" id="btn-add-service" class="btn btn-sm btn-success">Add Service +</button>
                         </div>
                         <hr class="mt-1">
                         <div id="services" class="overflow-auto" style="max-height: 350px;">
@@ -120,20 +120,50 @@
 </div>
 
 <script>
+    // Services
+    const btnAddService = document.getElementById('btn-add-service');
     const services = document.getElementById('services');
-    let sCounter = Number(document.querySelector('.service-count').textContent);
     let sIndex = 0;
+    // Company
+    const btnAddCompany = document.getElementById('btn-add-company');
+    const newCompanyGroup = document.getElementById('new-company-group');
+    const companySelect = document.getElementById('companyID');
+    const companyTypeInput = document.getElementById('company-type');
 
-    // Add new Service
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add new Company
+        btnAddCompany.addEventListener('click', addCompany);
+        // Select Company
+        companySelect.addEventListener('change', selectCompany);
+
+        // Add new Service
+        btnAddService.addEventListener('click', addService);
+        // Delete Service
+        services.addEventListener('click', deleteService);
+
+        // Set/Refresh Total Price
+        setTotalPrice();
+    });
+
+    function addCompany() {
+        newCompanyGroup.style.display = newCompanyGroup.style.display === 'none' ? 'block' : 'none';
+        companySelect.selectedIndex = 0; // reset the select input
+        companyTypeInput.value = 'new'; // set the company type to 'new'
+    }
+
+    function selectCompany() {
+        newCompanyGroup.style.display = 'none';
+        companyTypeInput.value = 'existing'; // set the company type to 'existing'
+    }
+
     function addService() {
-        sCounter++;
         sIndex++;
         const serviceDiv = document.createElement('div');
         serviceDiv.classList.add('service');
         serviceDiv.innerHTML = `
         <div class="service bg-light position-relative border px-2 pb-2 pt-5 mt-2">
             <h5 class="service-number border-bottom position-absolute top-0 start-0 m-0 p-1">
-                #<span class="service-count">${sCounter}</span>
+                #<span class="service-count">2</span>
             </h5>
             <div class="border-bottom position-absolute top-0 end-0" style="color: #dc3545; padding: 4px; cursor: pointer;">
                 <i class="deleteService fas fa-trash-alt"></i>
@@ -157,29 +187,37 @@
         services.appendChild(serviceDiv);
         serviceDiv.scrollIntoView(false);
 
-        calculateTotal();
-        updateTotal();
+        // Update Service Counter
+        updateServiceCounter();
+        // Set/Refresh Total Price
+        setTotalPrice();
     }
 
-    // Delete Service
-    document.addEventListener('DOMContentLoaded', function() {
-        services.addEventListener('click', function(e) {
-            if (e.target.classList.contains('deleteService')) {
-                e.target.closest('.service').remove();
-                calculateTotal();
-                updateTotal();
+    function deleteService(event) {
+        if (event.target.classList.contains('deleteService')) {
+            event.target.closest('.service').remove();
+            // Update Service Counter
+            updateServiceCounter();
+            // Set/Refresh Total Price
+            setTotalPrice();
+        }
+    }
+
+    function updateServiceCounter() {
+        let counter = 1;
+        const counterItems = document.querySelectorAll('.service-count');
+        counterItems.forEach((item) => {
+            if (item !== null) {
+                item.textContent = counter++;
             }
         });
-    });
+    }
 
-    // Calculate Total Price
-    function calculateTotal() {
+    function calculateTotalPrice() {
         let total = 0;
         document.querySelectorAll(".service-price").forEach(function(input) {
             let value = parseFloat(input.value);
-
             if (isNaN(value) || value.length === 0) {
-                // console.log("Invalid value, setting to 0");
                 value = 0;
             }
             total += value;
@@ -187,36 +225,13 @@
         document.getElementById('invoiceTotalPrice').value = total.toFixed(2);
     }
 
-    // Update Total Price
-    function updateTotal() {
+    function setTotalPrice() {
+        calculateTotalPrice();
         document.querySelectorAll(".service-price").forEach(function(input) {
             input.addEventListener("input", function() {
-                calculateTotal();
+                // Calculate also on input event
+                calculateTotalPrice();
             });
         });
     }
-
-    // Select or Add new Company
-    document.addEventListener('DOMContentLoaded', function() {
-        const addCompanyBtn = document.getElementById('add-company-btn');
-        const newCompanyGroup = document.getElementById('new-company-group');
-        const companySelect = document.getElementById('companyID');
-        const companyTypeInput = document.getElementById('company-type');
-
-        // Add new Company
-        addCompanyBtn.addEventListener('click', function() {
-            newCompanyGroup.style.display = newCompanyGroup.style.display === 'none' ? 'block' : 'none';
-            companySelect.selectedIndex = 0; // reset the select input
-            companyTypeInput.value = 'new'; // set the company type to 'new'
-        });
-        // Select Company
-        companySelect.addEventListener('change', function() {
-            newCompanyGroup.style.display = 'none';
-            companyTypeInput.value = 'existing'; // set the company type to 'existing'
-        });
-    });
-
-    // Invoke functions
-    calculateTotal();
-    updateTotal();
 </script>

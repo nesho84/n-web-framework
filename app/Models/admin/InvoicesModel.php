@@ -67,7 +67,7 @@ class InvoicesModel extends Model
                 $postArray['invoice']['companyID'] = $companyId;
             }
 
-            // dd($postArray);
+            dd($postArray);
 
             // Insert data into invoices table
             // get companyID if is not empty, or get the last insertedID of new company
