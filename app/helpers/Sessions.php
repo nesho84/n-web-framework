@@ -50,9 +50,6 @@ class Sessions
     {
         if (isset($_SESSION['user']['loggedin_time'])) {
             if (((time() - $_SESSION['user']['loggedin_time']) > SESSION_DURATION)) {
-                // Remove all sessions
-                self::removeAllSessions();
-
                 // // @TODO: Set the last_page cookie
                 // self::setLastPageCookie();
 
@@ -66,7 +63,7 @@ class Sessions
                                 footer: '<small>You will be redirected to the Login page.</small>'
                             }).then((result) => {
                                 if (result) {
-                                    window.location.replace('" . APPURL . "/login');
+                                    window.location.replace('" . APPURL . "/logout?expire=1');
                                 }
                             });
                         });

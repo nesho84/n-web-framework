@@ -109,7 +109,6 @@ class InvoicesController extends Controller
                 'services' => $servicesArray
             ];
 
-
             if ($validated === true) {
                 try {
                     // Insert in Database
@@ -193,13 +192,13 @@ class InvoicesController extends Controller
     // {
     //     try {
     //         // Delete in Database
-    //         $this->invoicesModel->deleteCategory($id);
-    //         setFlashMsg('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
+    //         $this->invoicesModel->deleteInvoice($id);
+    //         setFlashMsg('success', 'Invoice with the ID: <strong>' . $id . '</strong> deleted successfully.');
     //     } catch (Exception $e) {
     //         setFlashMsg('error', $e->getMessage());
     //     }
 
     //     // Allways redirect back
-    //     redirect(ADMURL . '/categories');
+    //     redirect(ADMURL . '/invoices');
     // }
 }

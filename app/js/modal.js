@@ -1,30 +1,28 @@
 'use strict';
 
-(function () {
-    document.addEventListener("DOMContentLoaded", () => {
-        // Get all elements with the class 'd-modal' 
-        document.querySelectorAll('.d-modal').forEach(el => {
-            // Add event listener for each element
-            el.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                // Show the Modal
-                dynamicModal(el);
-            });
-        });
-
-        // Get all elements with the attribute 'd-modal="true"' 
-        document.querySelectorAll("[d-modal='true']").forEach(el => {
-            // Add event listener for each element
-            el.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                // Show the Modal
-                dynamicModal(el);
-            });
+document.addEventListener("DOMContentLoaded", () => {
+    // Get all elements with the class 'd-modal' 
+    document.querySelectorAll('.d-modal').forEach(el => {
+        // Add event listener for each element
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            // Show the Modal
+            dynamicModal(el);
         });
     });
-})();
+
+    // Get all elements with the attribute 'd-modal="true"' 
+    document.querySelectorAll("[d-modal='true']").forEach(el => {
+        // Add event listener for each element
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            // Show the Modal
+            dynamicModal(el);
+        });
+    });
+});
 
 function dynamicModal(element) {
     // Create a new modal element and set its content

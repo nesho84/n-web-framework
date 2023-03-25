@@ -67,8 +67,6 @@ class InvoicesModel extends Model
                 $postArray['invoice']['companyID'] = $companyId;
             }
 
-            dd($postArray);
-
             // Insert data into invoices table
             // get companyID if is not empty, or get the last insertedID of new company
             $stmt = $this->prepareInsert('invoices', $postArray['invoice']);
@@ -127,16 +125,18 @@ class InvoicesModel extends Model
     // }
 
     // //------------------------------------------------------------
-    // public function deleteCategory(int $id): bool|string
+    // public function deleteInvoice(int $id): bool|string
     // //------------------------------------------------------------
     // {
     //     try {
     //         // Starts a database transaction
     //         $this->beginTransaction();
 
-    //         $stmt = $this->prepare("DELETE FROM categories WHERE categoryID = :id");
+    //         $stmt = $this->prepare("DELETE FROM invoices WHERE invoiceID = :id");
     //         $this->bindValues($stmt, ['id' => $id]);
     //         $stmt->execute();
+
+    //          // @TODO: also delete services related to this invoice
 
     //         // Commits the transaction and returns true to indicate success
     //         return $this->commit();

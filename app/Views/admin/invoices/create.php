@@ -92,16 +92,16 @@
                                 </div>
                                 <div class="row gy-2 gx-3 align-items-center">
                                     <div class="col-sm-4">
-                                        <label for="serviceName" class="form-label fw-bold">Service Name</label>
-                                        <input type="text" class="form-control form-control-sm" id="serviceName" name="services[0][serviceName]" value="">
+                                        <label for="serviceName_0" class="form-label fw-bold">Service Name</label>
+                                        <input type="text" class="form-control form-control-sm" id="serviceName_0" name="services[0][serviceName]" value="">
                                     </div>
                                     <div class="col-sm-5">
-                                        <label for="serviceDescription" class="form-label fw-bold">Service Description</label>
-                                        <textarea class="form-control form-control-sm" rows="1" id="serviceDescription" name="services[0][serviceDescription]"></textarea>
+                                        <label for="serviceDescription_0" class="form-label fw-bold">Service Description</label>
+                                        <textarea class="form-control form-control-sm" rows="1" id="serviceDescription_0" name="services[0][serviceDescription]"></textarea>
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="servicePrice" class="form-label fw-bold">Service Price</label>
-                                        <input type="number" step="0.00" class="service-price form-control form-control-sm" id="servicePrice" name="services[0][servicePrice]" value="">
+                                        <label for="servicePrice_0" class="form-label fw-bold">Service Price</label>
+                                        <input type="number" step="0.00" class="service-price form-control form-control-sm" id="servicePrice_0" name="services[0][servicePrice]" value="">
                                     </div>
                                 </div>
                             </div>
@@ -120,6 +120,8 @@
 </div>
 
 <script>
+    'use strict';
+
     // Services
     const btnAddService = document.getElementById('btn-add-service');
     const services = document.getElementById('services');
@@ -158,10 +160,11 @@
 
     function addService() {
         sIndex++;
+
         const serviceDiv = document.createElement('div');
         serviceDiv.classList.add('service');
         serviceDiv.innerHTML = `
-        <div class="service bg-light position-relative border px-2 pb-2 pt-5 mt-2">
+        <div class="bg-light position-relative border px-2 pb-2 pt-5 mt-2">
             <h5 class="service-number border-bottom position-absolute top-0 start-0 m-0 p-1">
                 #<span class="service-count">2</span>
             </h5>
@@ -170,16 +173,16 @@
             </div>
             <div class="row gy-2 gx-3 align-items-center">
                 <div class="col-sm-4">
-                    <label for="serviceName${sIndex}" class="form-label fw-bold">Service Name</label>
-                    <input type="text" class="form-control form-control-sm" id="serviceName${sIndex}" name="services[${sIndex}][serviceName]" value="">
+                    <label for="serviceName_${sIndex}" class="form-label fw-bold">Service Name</label>
+                    <input type="text" class="form-control form-control-sm" id="serviceName_${sIndex}" name="services[${sIndex}][serviceName]" value="">
                 </div>
                 <div class="col-sm-5">
-                    <label for="serviceDescription${sIndex}" class="form-label fw-bold">Service Description</label>
-                    <textarea class="form-control form-control-sm" rows="1" id="serviceDescription${sIndex}" name="services[${sIndex}][serviceDescription]"></textarea>
+                    <label for="serviceDescription_${sIndex}" class="form-label fw-bold">Service Description</label>
+                    <textarea class="form-control form-control-sm" rows="1" id="serviceDescription_${sIndex}" name="services[${sIndex}][serviceDescription]"></textarea>
                 </div>
                 <div class="col-sm-3">
-                    <label for="servicePrice${sIndex}" class="form-label fw-bold">Service Price</label>
-                    <input type="number" step="0.00" class="service-price form-control form-control-sm" id="servicePrice${sIndex}" name="services[${sIndex}][servicePrice]">
+                    <label for="servicePrice_${sIndex}" class="form-label fw-bold">Service Price</label>
+                    <input type="number" step="0.00" class="service-price form-control form-control-sm" id="servicePrice_${sIndex}" name="services[${sIndex}][servicePrice]">
                 </div>
             </div>
         </div>
@@ -204,11 +207,11 @@
     }
 
     function updateServiceCounter() {
-        let counter = 1;
-        const counterItems = document.querySelectorAll('.service-count');
-        counterItems.forEach((item) => {
+        // Update # counter
+        const serviceCount = document.querySelectorAll('.service-count');
+        serviceCount.forEach(function(item, index) {
             if (item !== null) {
-                item.textContent = counter++;
+                item.textContent = index + 1;
             }
         });
     }

@@ -28,11 +28,20 @@
                             <h5 class="text-success">You have successfully logged out.</h5>
                         </div>
 
-                        <script>
-                            setTimeout(function() {
-                                window.location.replace('<?php echo APPURL . '/login'; ?>');
-                            }, 1000);
-                        </script>
+                        <?php
+                        // Direct logout if session expired or with Timeout
+                        $expire = filter_input(INPUT_GET, 'expire', FILTER_VALIDATE_INT);
+                        if (isset($expire) && $expire === 1) {
+                            redirect(APPURL . '/login');
+                        } else {
+                            echo '<script>
+                                    setTimeout(function() {
+                                        window.location.replace("' . APPURL . '/login");
+                                    }, 1500);
+                                </script>';
+                        }
+                        ?>
+
                     </div>
                 </div>
             </div>
