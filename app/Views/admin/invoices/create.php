@@ -6,7 +6,7 @@
         <div class="card-body">
             <form id="formInvoices" action="<?php echo ADMURL . '/invoices/insert'; ?>" method="POST" enctype="multipart/form-data">
 
-                <!-- Company -->
+                <!-- Company Information -->
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
@@ -131,6 +131,8 @@
     const newCompanyGroup = document.getElementById('new-company-group');
     const companySelect = document.getElementById('companyID');
     const companyTypeInput = document.getElementById('company-type');
+    // Form
+    const form = document.querySelector("#formInvoices");
 
     document.addEventListener('DOMContentLoaded', function() {
         // Add new Company
@@ -145,6 +147,9 @@
 
         // Set/Refresh Total Price
         setTotalPrice();
+
+        // Attach the submit event handler to the form
+        form.addEventListener("submit", handleSubmit);
     });
 
     function addCompany() {

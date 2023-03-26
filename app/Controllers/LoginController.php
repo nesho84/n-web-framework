@@ -112,6 +112,9 @@ class LoginController extends Controller
         }
         setcookie('last_login', time(), 2147483647);
 
+        // Save csrf_token in the session
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
         // Remember me checkBox
         if (!empty($postArray['loginRemember'])) {
             setcookie('email', $postArray['email'], time() + 30 * 24 * 60 * 60);

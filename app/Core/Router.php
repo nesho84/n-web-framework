@@ -75,7 +75,8 @@ class Router
                 // This is not a POST request, send a 405 error
                 http_response_code(405);
                 header('Allow: ' . $mt);
-                die("Request method '" . $_SERVER['REQUEST_METHOD'] . "' not supported");
+                echo json_encode(["message" => "Request method '" . $_SERVER['REQUEST_METHOD'] . "' not supported"]);
+                exit();
             }
             // Load Controller
             $ct = $validRoute['controller'] ?? null;

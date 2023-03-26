@@ -40,91 +40,104 @@ class InvoicesController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['insert_invoice'])) {
-            $_SESSION['inputs'] = [];
-            $validated = true;
-            $error = '';
+        header("Content-Type: application/json");
+        header("X-Content-Type-Options: nosniff");
+        header("X-Frame-Options: DENY");
+        header("X-XSS-Protection: 1; mode=block");
+        header("Referrer-Policy: same-origin");
+        header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
 
-            // Get Company Information and validate data
-            $companyType = htmlspecialchars(trim($_POST['company-type']));
-            $companyID = "";
-            $companyArray = [];
-            if ($companyType === 'existing') {
-                $companyID = isset($_POST['companyID']) ? htmlspecialchars(trim($_POST['companyID'])) : "";
-                if (empty($companyID)) {
-                    $validated = false;
-                    $error .= 'Please choose Company or create a new!<br>';
-                }
-            }
-            if ($companyType === 'new') {
-                $companyArray = [
-                    'userID' => $_SESSION['user']['id'],
-                    'companyName' => htmlspecialchars(trim($_POST['companyName'])),
-                    'companyAddress' => htmlspecialchars(trim($_POST['companyAddress'])),
-                    'companyCity' => htmlspecialchars(trim($_POST['companyCity'])),
-                    'companyState' => htmlspecialchars(trim($_POST['companyState'])),
-                    'companyZip' => htmlspecialchars(trim($_POST['companyZip'])),
-                    'companyPhone' => htmlspecialchars(trim($_POST['companyPhone'])),
-                    'companyEmail' => htmlspecialchars(trim($_POST['companyEmail'])),
-                ];
-                if (empty($companyArray['companyName'])) {
-                    $validated = false;
-                    $error .= 'Please insert a Company Name!<br>';
-                }
-                if (empty($companyArray['companyAddress'])) {
-                    $validated = false;
-                    $error .= 'Please insert a Company Address!<br>';
-                }
-                if (empty($companyArray['companyEmail'])) {
-                    $validated = false;
-                    $error .= 'Please insert a Company Email!<br>';
-                }
-            }
+        // Validate CSRF token
+        $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
+        if ($csrfToken !== $_SESSION['csrf_token']) {
+            http_response_code(419);
+            echo json_encode(['message' => 'Invalid CSRF token']);
+            exit();
+        }
 
-            // Secure services POST Array and Validate
-            $servicesArray = $_POST['services'];
-            $errorServices = 0;
-            foreach ($servicesArray as $key => $service) {
-                foreach ($service as $innerKey => $innerValue) {
-                    $servicesArray[$key][$innerKey] = htmlspecialchars($innerValue);
-                    // Validate values
-                    if (empty($servicesArray[$key][$innerKey])) {
-                        $errorServices++;
-                    }
-                }
-            }
-            if ($errorServices > 0) {
+        $validated = true;
+        $errors = [];
+
+        // Get Company Information and validate data
+        $companyType = htmlspecialchars(trim($_POST['company-type']));
+        $companyID = "";
+        $companyArray = [];
+        if ($companyType === 'existing') {
+            $companyID = isset($_POST['companyID']) ? htmlspecialchars(trim($_POST['companyID'])) : "";
+            if (empty($companyID)) {
                 $validated = false;
-                $error .= 'Services fields can not be empty!<br>';
+                $errors[] = 'Please choose Company or create a new!';
             }
-
-            $postArray = [
-                'company' => $companyArray,
-                'invoice' => [
-                    'userID' => $_SESSION['user']['id'],
-                    'companyID' => $companyID,
-                    'invoiceTotalPrice' => htmlspecialchars(trim($_POST['invoiceTotalPrice'])),
-
-                ],
-                'services' => $servicesArray
+        }
+        if ($companyType === 'new') {
+            $companyArray = [
+                'userID' => $_SESSION['user']['id'],
+                'companyName' => htmlspecialchars(trim($_POST['companyName'])),
+                'companyAddress' => htmlspecialchars(trim($_POST['companyAddress'])),
+                'companyCity' => htmlspecialchars(trim($_POST['companyCity'])),
+                'companyState' => htmlspecialchars(trim($_POST['companyState'])),
+                'companyZip' => htmlspecialchars(trim($_POST['companyZip'])),
+                'companyPhone' => htmlspecialchars(trim($_POST['companyPhone'])),
+                'companyEmail' => htmlspecialchars(trim($_POST['companyEmail'])),
             ];
+            if (empty($companyArray['companyName'])) {
+                $validated = false;
+                $errors[] = 'Please insert a Company Name!';
+            }
+            if (empty($companyArray['companyAddress'])) {
+                $validated = false;
+                $errors[] = 'Please insert a Company Address!';
+            }
+            if (empty($companyArray['companyEmail'])) {
+                $validated = false;
+                $errors[] = 'Please insert a Company Email!';
+            }
+        }
 
-            if ($validated === true) {
-                try {
-                    // Insert in Database
-                    $this->invoicesModel->insertInvoice($postArray);
-                    setFlashMsg('success', 'Insert completed successfully.');
-                    unset($_SESSION['inputs']);
-                    redirect(ADMURL . '/invoices');
-                } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
-                    $_SESSION['inputs'] = $postArray;
-                    redirect(ADMURL . '/invoices/create');
+        // Secure services POST Array and Validate
+        $servicesArray = $_POST['services'];
+        $errorServices = 0;
+        foreach ($servicesArray as $key => $service) {
+            foreach ($service as $innerKey => $innerValue) {
+                $servicesArray[$key][$innerKey] = htmlspecialchars($innerValue);
+                // Validate values
+                if (empty($servicesArray[$key][$innerKey])) {
+                    $errorServices++;
                 }
-            } else {
-                setFlashMsg('error', $error);
-                $_SESSION['inputs'] = $postArray;
-                redirect(ADMURL . '/invoices/create');
+            }
+        }
+        if ($errorServices > 0) {
+            $validated = false;
+            $errors[] = 'Services fields can not be empty!';
+        }
+
+        $postArray = [
+            'company' => $companyArray,
+            'invoice' => [
+                'userID' => $_SESSION['user']['id'],
+                'companyID' => $companyID,
+                'invoiceTotalPrice' => htmlspecialchars(trim($_POST['invoiceTotalPrice'])),
+
+            ],
+            'services' => $servicesArray
+        ];
+
+        if ($validated === true) {
+            try {
+                // Insert in Database
+                $this->invoicesModel->insertInvoice($postArray);
+                setFlashMsg('success', 'Insert completed successfully.');
+                echo json_encode(["status" => "success"]);
+            } catch (Exception $e) {
+                http_response_code(500);
+                echo json_encode(["status" => "error", "message" => $e->getMessage()]);
+                exit();
+            }
+        } else {
+            if (count($errors) > 0) {
+                // http_response_code(422);
+                echo json_encode(["status" => "error", "message" => $errors]);
+                exit();
             }
         }
     }
