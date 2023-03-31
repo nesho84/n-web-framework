@@ -27,6 +27,20 @@ class InvoicesController extends Controller
     }
 
     //------------------------------------------------------------
+    public function invoice_pdf(): void
+    //------------------------------------------------------------
+    {
+        $data['title'] = 'PDF Invoice';
+        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
+
+        // Get the customer ID from the URL query string
+        $data['id'] = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+        $data['rows'] = $this->invoicesModel->getInvoiceById((int)$data['id']);
+
+        $this->renderAdminView('/admin/invoices/invoice_pdf', $data);
+    }
+
+    //------------------------------------------------------------
     public function create(): void
     //------------------------------------------------------------
     {
@@ -199,19 +213,19 @@ class InvoicesController extends Controller
     //     }
     // }
 
-    // //------------------------------------------------------------
-    // public function delete(int $id): void
-    // //------------------------------------------------------------
-    // {
-    //     try {
-    //         // Delete in Database
-    //         $this->invoicesModel->deleteInvoice($id);
-    //         setFlashMsg('success', 'Invoice with the ID: <strong>' . $id . '</strong> deleted successfully.');
-    //     } catch (Exception $e) {
-    //         setFlashMsg('error', $e->getMessage());
-    //     }
+    //------------------------------------------------------------
+    public function delete(int $id): void
+    //------------------------------------------------------------
+    {
+        try {
+            // Delete in Database
+            $this->invoicesModel->deleteInvoice($id);
+            setFlashMsg('success', 'Invoice with the ID: <strong>' . $id . '</strong> and it\'s services deleted successfully.');
+        } catch (Exception $e) {
+            setFlashMsg('error', $e->getMessage());
+        }
 
-    //     // Allways redirect back
-    //     redirect(ADMURL . '/invoices');
-    // }
+        // Allways redirect back
+        redirect(ADMURL . '/invoices');
+    }
 }

@@ -33,19 +33,19 @@ class InvoicesModel extends Model
         }
     }
 
-    // //------------------------------------------------------------
-    // public function getCategoryById(int $id): array|string
-    // //------------------------------------------------------------
-    // {
-    //     try {
-    //         $stmt = $this->prepare("SELECT * FROM categories WHERE categoryID = :id");
-    //         $this->bindValues($stmt, ['id' => $id]);
-    //         $stmt->execute();
-    //         return $stmt->fetch();
-    //     } catch (PDOException $e) {
-    //         throw new Exception($e->getMessage());
-    //     }
-    // }
+    //------------------------------------------------------------
+    public function getInvoiceById(int $id): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("SELECT * FROM invoices WHERE invoiceID = :id");
+            $this->bindValues($stmt, ['id' => $id]);
+            $stmt->execute();
+            return $stmt->fetch();
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 
     //------------------------------------------------------------
     public function insertInvoice(array $postArray): bool|string
@@ -124,26 +124,30 @@ class InvoicesModel extends Model
     //     }
     // }
 
-    // //------------------------------------------------------------
-    // public function deleteInvoice(int $id): bool|string
-    // //------------------------------------------------------------
-    // {
-    //     try {
-    //         // Starts a database transaction
-    //         $this->beginTransaction();
+    //------------------------------------------------------------
+    public function deleteInvoice(int $id): bool|string
+    //------------------------------------------------------------
+    {
+        try {
+            // Starts a database transaction
+            $this->beginTransaction();
 
-    //         $stmt = $this->prepare("DELETE FROM invoices WHERE invoiceID = :id");
-    //         $this->bindValues($stmt, ['id' => $id]);
-    //         $stmt->execute();
+            // Delete Invoice
+            $stmt = $this->prepare("DELETE FROM invoices WHERE invoiceID = :id");
+            $this->bindValues($stmt, ['id' => $id]);
+            $stmt->execute();
 
-    //          // @TODO: also delete services related to this invoice
+            // Delete all Services related to this Invoice
+            $stmt = $this->prepare("DELETE FROM services WHERE invoiceID = :id");
+            $this->bindValues($stmt, ['id' => $id]);
+            $stmt->execute();
 
-    //         // Commits the transaction and returns true to indicate success
-    //         return $this->commit();
-    //     } catch (PDOException $e) {
-    //         // Rolls back the transaction if an error occurs
-    //         $this->rollBack();
-    //         throw new Exception($e->getMessage());
-    //     }
-    // }
+            // Commits the transaction and returns true to indicate success
+            return $this->commit();
+        } catch (PDOException $e) {
+            // Rolls back the transaction if an error occurs
+            $this->rollBack();
+            throw new Exception($e->getMessage());
+        }
+    }
 }

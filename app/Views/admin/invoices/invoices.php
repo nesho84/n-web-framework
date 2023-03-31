@@ -34,8 +34,8 @@ showHeading([
                                 <td>' . $d['companyName'] . '</td>
                                 <td>' . date_format($date, 'd.m.Y') . '</td>
                                 <td class="text-center">
-                                    <a class="btn btn-link" href="#">
-                                        <i class="far fa-file-alt"></i>
+                                    <a class="d-modal-pdf btn btn-link" href="' . ADMURL . '/invoices/pdf_output?id=' . $d['invoiceID'] . '" data-title="' . $d['companyName'] . ' - ' . date('d.m.Y', strtotime($d['invoiceDateCreated'])) . '" >
+                                        <i class="far fa-file-pdf"></i>
                                     </a>
                                     <a class="btn btn-link" href="' . ADMURL . '/invoices/edit/' . $d['invoiceID'] . '">
                                         <i class="far fa-edit"></i>

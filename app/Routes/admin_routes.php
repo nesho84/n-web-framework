@@ -53,7 +53,6 @@ Router::get('/admin/files', 'admin/FilesController@index');
 Router::get('/admin/files/create', 'admin/FilesController@create');
 Router::post('/admin/files/insert', 'admin/FilesController@insert');
 Router::get('/admin/files/delete/{id}', 'admin/FilesController@delete');
-Router::get('/admin/files/pdf_output', 'admin/FilesController@pdf_output'); // test pdf output
 
 // --- Invoices --- //
 Router::get('/admin/invoices', 'admin/InvoicesController@index');
@@ -62,3 +61,4 @@ Router::post('/admin/invoices/insert', 'admin/InvoicesController@insert');
 Router::get('/admin/invoices/edit/{id}', 'admin/InvoicesController@edit');
 Router::post('/admin/invoices/update/{id}', 'admin/InvoicesController@update');
 Router::get('/admin/invoices/delete/{id}', 'admin/InvoicesController@delete');
+Router::get('/admin/invoices/pdf_output', 'admin/InvoicesController@invoice_pdf');

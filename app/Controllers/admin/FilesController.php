@@ -31,17 +31,6 @@ class FilesController extends Controller
     }
 
     //------------------------------------------------------------
-    public function pdf_output(): void
-    //------------------------------------------------------------
-    {
-        $data['title'] = 'Files';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
-        $data['rows'] = $this->filesModel->getFiles();
-
-        $this->renderAdminView('/admin/files/pdf_output', $data);
-    }
-
-    //------------------------------------------------------------
     public function create(): void
     //------------------------------------------------------------
     {

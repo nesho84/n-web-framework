@@ -108,7 +108,7 @@ function dynamicModal(element) {
             console.error(error);
             // Show an error message to the user
             modalBody.innerHTML = '<p>Failed to load content.</p>';
-        } finally { }
+        }
     });
 
     // Remove the modal from the DOM once it has been hidden

@@ -9,9 +9,6 @@ showHeading([
 ?>
 
 <div class="container-lg">
-    <!-- Test pdf output -->
-    <a class="btn btn-warning" href="<?php echo ADMURL . '/files/pdf_output?id=99'; ?>">Generate PDF Test</a>
-
     <div class="table-responsive border-top mt-3">
         <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
             <thead>
