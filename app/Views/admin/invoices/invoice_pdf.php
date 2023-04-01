@@ -6,23 +6,13 @@ require_once(LIBRARY_PATH . '/dompdf/autoload.inc.php');
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-$rows = $data['rows'];
-if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
+$invoice = $data['invoice'];
+if (isset($invoice) && is_array($invoice) && (count($invoice) > 0)) {
     // Convert array keys into variables
-    extract($rows);
+    extract($invoice);
 
-    // Hardcoded values
-    $customer_name = "Neshat Ademi";
-    $customer_email = "ademi.neshat@gmail.com";
-    $customer_address = "some address";
-    $total = 900;
-
-    // Orders array
-    $orders = array(
-        array("product_name" => "Cookies", "quantity" => 3, "price" => 33),
-        array("product_name" => "Milk", "quantity" => 2, "price" => 45),
-        array("product_name" => "Bread", "quantity" => 1, "price" => 12),
-    );
+    // services array
+    $services = $data['services'];
 
     // Start HTML output
     $HTML = '<!DOCTYPE html>';
@@ -30,7 +20,7 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
     $HTML .= '<head>';
     $HTML .= '<meta charset="utf-8" />';
     $HTML .= '<meta name="viewport" content="width=device-width, initial-scale=1" />';
-    $HTML .= '<title>A simple, clean, and responsive HTML invoice template</title>';
+    $HTML .= '<title>Invoice ID: ' . $invoiceID . '</title>';
     $HTML .= '<style>';
     $HTML .= '
     * {
@@ -126,15 +116,15 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
 
     $HTML .= '<div class="invoice-info">';
     $HTML .= '<div class="invoice-info__left">';
-    $HTML .= '<p>Date: ' . date('d-m-Y') . '</p>';
+    $HTML .= '<p>Date: ' . date('d.m.Y', strtotime($invoiceDateCreated)) . '</p>';
     $HTML .= '<p>Invoice Number: INV - ' . $data['id'] . '</p>';
     $HTML .= '</div>';
 
     $HTML .= '<div class="customer-info invoice-info__right">';
     $HTML .= '<h2 class="customer-info__heading">Customer Information</h2>';
-    $HTML .= '<p>' . $customer_name . '</p>';
-    $HTML .= '<p>' . $customer_email . '</p>';
-    $HTML .= '<p>' . $customer_address . '</p>';
+    $HTML .= '<p>' . $companyName . '</p>';
+    $HTML .= '<p>' . $companyEmail . '</p>';
+    $HTML .= '<p>' . $companyAddress . '</p>';
     $HTML .= '</div>';
     $HTML .= '</div>';
 
@@ -144,27 +134,28 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
     $HTML .= '<th>Product</th>';
     $HTML .= '<th>Quantity</th>';
     $HTML .= '<th>Price</th>';
-    $HTML .= '<th>Total</th>';
+    $HTML .= '<th>Price Total</th>';
     $HTML .= '</tr>';
     $HTML .= '</thead>';
     $HTML .= '<tbody>';
 
     $total = 0;
 
-    foreach ($orders as $order) {
-        $product_name = $order["product_name"];
-        $quantity = $order["quantity"];
-        $price = $order["price"];
-        $total_price = $quantity * $price;
+    foreach ($services as $service) {
+        $serviceName = $service["serviceName"];
+        $serviceQuantity = $service["serviceQuantity"];
+        $servicePrice = $service["servicePrice"];
+
+        $price_total = $serviceQuantity * $servicePrice;
 
         $HTML .= '<tr>';
-        $HTML .= '<td>' . $product_name . '</td>';
-        $HTML .= '<td>' . $quantity . '</td>';
-        $HTML .= '<td>' . $price . '</td>';
-        $HTML .= '<td>' . $total_price . '</td>';
+        $HTML .= '<td>' . $serviceName . '</td>';
+        $HTML .= '<td>' . $serviceQuantity . '</td>';
+        $HTML .= '<td>' . $servicePrice . '</td>';
+        $HTML .= '<td>' . $price_total . '</td>';
         $HTML .= '</tr>';
 
-        $total += $total_price;
+        $total += $price_total;
     }
 
     $HTML .= '<tr>';
@@ -194,20 +185,21 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
     // Generate the PDF file
     $dompdf = new Dompdf($options);
     $dompdf->loadHtml($HTML);
-    // $dompdf->setPaper('A4', 'portrait');
-
-    // Output the PDF directly to the browser
-    $dompdf->render();
+    $dompdf->setPaper('A4', 'portrait');
 
     // Output the PDF as Stream
+    $dompdf->render();
     ob_end_clean();
-    $dompdf->stream("invoice.pdf", array("Attachment" => 0));
+    $pdfFileName = 'Invoice: ' . $companyName . '_' . date('d.m.Y', strtotime($invoiceDateCreated));
+    $dompdf->stream("$pdfFileName.pdf", array("Attachment" => 0));
+    exit();
 
     // or
 
     // // Output the PDF as a base64-encoded data URI
     // $pdfContent = $dompdf->output();
     // $pdfDataUri = 'data:application/pdf;base64,' . base64_encode($pdfContent);
+    // exit();
 } else {
     showNoDataBox("No data found", ADMURL . "/invoices");
 }

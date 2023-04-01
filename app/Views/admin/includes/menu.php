@@ -1,5 +1,6 @@
 <?php
 $userId = $_SESSION['user']['id'] ?? null;
+$userName = $_SESSION['user']['name'] ?? null;
 $settingId = $_SESSION['settings']['settingID'] ?? null;
 $userPic = $_SESSION['user']['pic'] ?? null;
 
@@ -28,12 +29,12 @@ $userPicHtml = $userPic ? '<img width="25" height="25" src="' . $userPic . '" cl
                 </a>
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuLink">
                     <li>
-                        <!-- Modal Page -->
+                        <!-- Modal -->
                         <a href="<?php echo APPURL . '/admin/users/profile/' . $userId; ?>" class="d-modal dropdown-item" data-title="User Profile">Profile</a>
                     </li>
                     <li>
-                        <!-- Modal Page -->
-                        <button type="button" class="d-modal dropdown-item" data-title="Settings" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings/edit_modal/' . $settingId); ?>" data-submit="true">
+                        <!-- Modal -->
+                        <button type="button" class="d-modal dropdown-item" data-title="Settings - <?php echo $userName; ?>" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings/edit_modal/' . $settingId); ?>" data-submit="true">
                             Settings
                         </button>
                     </li>

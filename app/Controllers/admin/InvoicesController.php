@@ -35,9 +35,10 @@ class InvoicesController extends Controller
 
         // Get the customer ID from the URL query string
         $data['id'] = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
-        $data['rows'] = $this->invoicesModel->getInvoiceById((int)$data['id']);
+        $data['invoice'] = $this->invoicesModel->getInvoiceById((int)$data['id']);
+        $data['services'] = $this->invoicesModel->getServicesByInvoiceId((int)$data['id']);
 
-        $this->renderAdminView('/admin/invoices/invoice_pdf', $data);
+        $this->renderSimpleView('/admin/invoices/invoice_pdf', $data);
     }
 
     //------------------------------------------------------------
@@ -122,7 +123,7 @@ class InvoicesController extends Controller
         }
         if ($errorServices > 0) {
             $validated = false;
-            $errors[] = 'Services fields can not be empty!';
+            $errors[] = 'Service fields can not be empty!';
         }
 
         $postArray = [

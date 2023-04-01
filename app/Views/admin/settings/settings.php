@@ -26,7 +26,7 @@ showHeading(['title' => 'Settings']);
 
                         $settingStatus = $d['settingStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
 
-                        $editIcon = ($d['userName'] === 'admin' && $_SESSION['user']['name'] !== 'admin') ? '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></button>' : '<a class="d-modal btn btn-link" href="' . ADMURL . '/settings/edit_modal/' . $d['settingID'] . '" data-title="Settings" data-submit="true"><i class="far fa-edit"></i></a>';
+                        $editIcon = ($d['userName'] === 'admin' && $_SESSION['user']['name'] !== 'admin') ? '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></button>' : '<a class="d-modal btn btn-link" href="' . ADMURL . '/settings/edit_modal/' . $d['settingID'] . '" data-title="Settings - ' . $d['userName'] . '" data-submit="true"><i class="far fa-edit"></i></a>';
 
                         echo '<tr>
                                 <th scope="row">' . $counter . '</th>

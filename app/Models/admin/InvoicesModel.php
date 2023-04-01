@@ -38,10 +38,31 @@ class InvoicesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM invoices WHERE invoiceID = :id");
+            $stmt = $this->prepare(
+                "SELECT * FROM invoices AS i
+                INNER JOIN companies AS c ON c.companyID = i.companyID
+                WHERE i.invoiceID = :id"
+            );
             $this->bindValues($stmt, ['id' => $id]);
             $stmt->execute();
             return $stmt->fetch();
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    //------------------------------------------------------------
+    public function getServicesByInvoiceId(int $id): array|string
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare(
+                "SELECT * FROM services
+                WHERE invoiceID = :id"
+            );
+            $this->bindValues($stmt, ['id' => $id]);
+            $stmt->execute();
+            return $stmt->fetchAll();
         } catch (PDOException $e) {
             throw new Exception($e->getMessage());
         }

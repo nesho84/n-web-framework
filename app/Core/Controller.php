@@ -29,6 +29,26 @@ class Controller
     }
 
     //------------------------------------------------------------
+    protected function renderSimpleView(string|array $view_path, array $data = []): void
+    //------------------------------------------------------------
+    {
+        $view_paths = is_array($view_path) ? $view_path : [$view_path];
+        foreach ($view_paths as $view_path) {
+            // Set full view path
+            $view = VIEWS_PATH . $view_path;
+            // Set .php extenstion, if is not set
+            if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
+                $view .= ".php";
+            }
+            if (file_exists($view)) {
+                require_once $view;
+            } else {
+                die("'View' file not found '" . $view . "'");
+            }
+        }
+    }
+
+    //------------------------------------------------------------
     protected function renderAdminView(string|array $view_path, array $data = []): void
     //------------------------------------------------------------
     {
@@ -50,26 +70,6 @@ class Controller
         }
 
         require_once VIEWS_PATH . "/admin/includes/footer.php";
-    }
-
-    //------------------------------------------------------------
-    protected function renderSimpleView(string|array $view_path, array $data = []): void
-    //------------------------------------------------------------
-    {
-        $view_paths = is_array($view_path) ? $view_path : [$view_path];
-        foreach ($view_paths as $view_path) {
-            // Set full view path
-            $view = VIEWS_PATH . $view_path;
-            // Set .php extenstion, if is not set
-            if (pathinfo($view_path, PATHINFO_EXTENSION) === "") {
-                $view .= ".php";
-            }
-            if (file_exists($view)) {
-                require_once $view;
-            } else {
-                die("'View' file not found '" . $view . "'");
-            }
-        }
     }
 
     //------------------------------------------------------------

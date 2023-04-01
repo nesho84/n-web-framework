@@ -1,20 +1,65 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Get all elements with the class 'd-modal' 
-    document.querySelectorAll('.d-modal-pdf').forEach(el => {
-        // Add event listener for each element
-        el.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            // Show the Modal
-            pdfModal(el);
+    // Get all elements with the class 'd-modal-pdf' 
+    document.querySelectorAll('.d-modal-pdf').forEach(link => {
+        // Add click event listener to each element
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            // Show the modal for the clicked element
+            showPdfModal(link);
         });
     });
 });
 
-function pdfModal(element) {
-    // Create a new modal element and set its content
+function showPdfModal(element) {
+    const modalEl = createPdfModal();
+    const pdfUrl = getPdfUrl(element);
+
+    // Get modalHTML elements
+    const modalBody = modalEl.querySelector('.modal-body');
+    const modalTitle = modalEl.querySelector('.modal-title');
+    const pdfObject = document.getElementById('pdf-object');
+
+    // Add an event listener to the modal instance
+    modalEl.addEventListener('show.bs.modal', async function (event) {
+        // Show a loading spinner
+        isLoading(true);
+
+        // Load the PDF content
+        try {
+            pdfObject.setAttribute('data', pdfUrl);
+            // Set the modal's title
+            modalTitle.textContent = element.getAttribute('data-title');
+        } catch (error) {
+            console.error(error);
+            modalBody.innerHTML = '<p>Failed to load content.</p>';
+        }
+
+        // Remove loading spinner when PDF has finished loading
+        pdfObject.addEventListener('load', () => {
+            isLoading(false);
+        });
+
+    });
+
+    // Remove the modal from the DOM once it has been hidden
+    modalEl.addEventListener('hidden.bs.modal', () => {
+        modalEl.remove();
+    });
+
+    // Initialize the modal component and show it
+    const dModal = new bootstrap.Modal(modalEl, {
+        backdrop: 'static',
+        keyboard: false
+    });
+    dModal.show();
+    // Call handleUpdate to adjust the position of the modal if necessary
+    dModal.handleUpdate();
+}
+
+function createPdfModal() {
     let modalHTML = `
     <div class="modal fade" id="pdf-modal" tabindex="-1" aria-labelledby="pdf-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -31,79 +76,34 @@ function pdfModal(element) {
             </div>
         </div>
     </div>`;
-
-    // <object id="pdf-object" type="application/pdf" width="100%" height="100%" data="" style="min-height: 400px;"></object>
-    // or
-    // <iframe id="pdf-iframe" src="" frameborder="0" width="100%" height="500"></iframe>
-
     document.body.insertAdjacentHTML("afterbegin", modalHTML);
+    return document.getElementById("pdf-modal");
+}
 
-    // Get modalHTML elements
-    const modalEl = document.getElementById("pdf-modal");
-    const modalTitle = modalEl.querySelector('.modal-title');
-    modalTitle.textContent = element.getAttribute('data-title');
-    const modalBody = modalEl.querySelector('.modal-body');
-    const pdfObject = document.getElementById('pdf-object');
-    const pdfIframe = document.getElementById('pdf-iframe');
-    const modalFooter = modalEl.querySelector('.modal-footer');
+function getPdfUrl(element) {
+    if (element.tagName === 'A') {
+        return element.getAttribute('href');
+    } else if (element.tagName === 'BUTTON') {
+        return element.getAttribute('data-link');
+    } else {
+        return '';
+    }
+}
 
-    // Add an event listener to the modal instance
-    modalEl.addEventListener('show.bs.modal', async function (event) {
-        // Create and show a loading spinner
-        let spinnerHTML = `
-        <div id="modal-spinner" class="position-absolute top-50 start-50 translate-middle mt-1">
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>`;
+function isLoading(show) {
+    let spinnerHTML = `
+    <div id="modal-spinner" class="position-absolute top-50 start-50 translate-middle mt-1">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>`;
+
+    const modalBody = document.querySelector('.modal-body');
+    const spinner = modalBody.querySelector('#modal-spinner');
+
+    if (show === true) {
         modalBody.insertAdjacentHTML('afterbegin', spinnerHTML);
-
-        // Get href attribute if anchor tag or data-link if button
-        let pdfUrl = '';
-        if (element.tagName === 'A') {
-            pdfUrl = element.getAttribute('href');
-        }
-        if (element.tagName === 'BUTTON') {
-            pdfUrl = element.getAttribute('data-link');
-        }
-
-        // Load the content of the PDF
-        try {
-            pdfObject.setAttribute('data', pdfUrl);
-            // pdfIframe.setAttribute('src', pdfUrl);
-        } catch (error) {
-            console.error(error);
-            modalBody.innerHTML = '<p>Failed to load content.</p>';
-        }
-
-        // Remove Loading Spinner
-        pdfObject.addEventListener('load', () => {
-            const spinner = modalEl.querySelector('#modal-spinner');
-            spinner.remove();
-
-            // Set the height of the modal body to match the height of the PDF
-            // pdfObject.style.height = document.body.scrollHeight + 'px';
-        });
-        // pdfIframe.addEventListener('load', () => {
-        //     const spinner = modalEl.querySelector('#modal-spinner');
-        //     spinner.remove();
-        // });
-
-    });
-
-    // Remove the modal from the DOM once it has been hidden
-    modalEl.addEventListener('hidden.bs.modal', () => {
-        // pdfObject.removeAttribute('data');
-        modalEl.remove();
-    });
-
-    // Initialize the modal component and show it
-    const myModal = new bootstrap.Modal(modalEl, {
-        backdrop: 'static',
-        keyboard: false
-    });
-    // Show the modal
-    myModal.show();
-    // Call handleUpdate to adjust the position of the modal if necessary
-    myModal.handleUpdate();
+    } else {
+        if (spinner) spinner.remove();
+    }
 }

@@ -92,15 +92,19 @@
                                 </div>
                                 <div class="row gy-2 gx-3 align-items-center">
                                     <div class="col-sm-4">
-                                        <label for="serviceName_0" class="form-label fw-bold">Service Name</label>
+                                        <label for="serviceName_0" class="form-label fw-bold">Name</label>
                                         <input type="text" class="form-control form-control-sm" id="serviceName_0" name="services[0][serviceName]" value="">
                                     </div>
-                                    <div class="col-sm-5">
-                                        <label for="serviceDescription_0" class="form-label fw-bold">Service Description</label>
+                                    <div class="col-sm-4">
+                                        <label for="serviceDescription_0" class="form-label fw-bold">Description</label>
                                         <textarea class="form-control form-control-sm" rows="1" id="serviceDescription_0" name="services[0][serviceDescription]"></textarea>
                                     </div>
-                                    <div class="col-sm-3">
-                                        <label for="servicePrice_0" class="form-label fw-bold">Service Price</label>
+                                    <div class="col-sm-2">
+                                        <label for="serviceQuantity_0" class="form-label fw-bold">Quantity</label>
+                                        <input type="number" class="service-quantity form-control form-control-sm" id="serviceQuantity_0" name="services[0][serviceQuantity]" value="">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="servicePrice_0" class="form-label fw-bold">Price</label>
                                         <input type="number" step="0.00" class="service-price form-control form-control-sm" id="servicePrice_0" name="services[0][servicePrice]" value="">
                                     </div>
                                 </div>
@@ -148,7 +152,7 @@
         // Set/Refresh Total Price
         setTotalPrice();
 
-        // Attach the submit event handler to the form
+        // Attach the submit event handler to the form (ajax.js)
         form.addEventListener("submit", handleSubmit);
     });
 
@@ -178,15 +182,19 @@
             </div>
             <div class="row gy-2 gx-3 align-items-center">
                 <div class="col-sm-4">
-                    <label for="serviceName_${sIndex}" class="form-label fw-bold">Service Name</label>
+                    <label for="serviceName_${sIndex}" class="form-label fw-bold">Name</label>
                     <input type="text" class="form-control form-control-sm" id="serviceName_${sIndex}" name="services[${sIndex}][serviceName]" value="">
                 </div>
-                <div class="col-sm-5">
-                    <label for="serviceDescription_${sIndex}" class="form-label fw-bold">Service Description</label>
+                <div class="col-sm-4">
+                    <label for="serviceDescription_${sIndex}" class="form-label fw-bold">Description</label>
                     <textarea class="form-control form-control-sm" rows="1" id="serviceDescription_${sIndex}" name="services[${sIndex}][serviceDescription]"></textarea>
                 </div>
-                <div class="col-sm-3">
-                    <label for="servicePrice_${sIndex}" class="form-label fw-bold">Service Price</label>
+                <div class="col-sm-2">
+                    <label for="serviceQuantity_${sIndex}" class="form-label fw-bold">Quantity</label>
+                    <input type="number" class="service-quantity form-control form-control-sm" id="serviceQuantity_${sIndex}" name="services[${sIndex}][serviceQuantity]">
+                </div>
+                <div class="col-sm-2">
+                    <label for="servicePrice_${sIndex}" class="form-label fw-bold">Price</label>
                     <input type="number" step="0.00" class="service-price form-control form-control-sm" id="servicePrice_${sIndex}" name="services[${sIndex}][servicePrice]">
                 </div>
             </div>
@@ -223,19 +231,25 @@
 
     function calculateTotalPrice() {
         let total = 0;
-        document.querySelectorAll(".service-price").forEach(function(input) {
-            let value = parseFloat(input.value);
-            if (isNaN(value) || value.length === 0) {
-                value = 0;
+        document.querySelectorAll(".service").forEach(function(row) {
+            let quantityInput = row.querySelector(".service-quantity");
+            let quantity = parseFloat(row.querySelector(".service-quantity").value);
+            let price = parseFloat(row.querySelector(".service-price").value);
+            if (isNaN(quantity) || quantity < 1) {
+                quantity = 1;
+                quantityInput.value = 1;
             }
-            total += value;
+            if (isNaN(price) || price.length === 0) {
+                price = 0;
+            }
+            total += quantity * price;
         });
         document.getElementById('invoiceTotalPrice').value = total.toFixed(2);
     }
 
     function setTotalPrice() {
         calculateTotalPrice();
-        document.querySelectorAll(".service-price").forEach(function(input) {
+        document.querySelectorAll(".service").forEach(function(input) {
             input.addEventListener("input", function() {
                 // Calculate also on input event
                 calculateTotalPrice();
