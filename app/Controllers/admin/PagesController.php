@@ -47,7 +47,7 @@ class PagesController extends Controller
         if (isset($_POST['insert_page'])) {
             $postArray = [
                 'userID' => $_SESSION['user']['id'],
-                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
+                'languageID' => htmlspecialchars(trim($_POST['languageID'] ?? '')),
                 'pageName' => htmlspecialchars(trim($_POST['pageName'])),
                 'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
                 'pageContent' => $_POST['pageContent'],

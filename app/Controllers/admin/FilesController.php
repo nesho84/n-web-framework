@@ -71,7 +71,7 @@ class FilesController extends Controller
             if ($validated === true) {
                 $category = $this->categoriesModel->getCategoryById((int)$postArray['categoryID']);
                 $folder = trim(strtolower($category['categoryName']));
-                [$uploadError, $targetPath] = FileUpload::upload($postArray['fileLink'], $folder);
+                [$uploadError, $targetPath] = FileHandler::upload($postArray['fileLink'], $folder);
                 // First Check if there was an error
                 if ($uploadError !== "") {
                     $validated = false;
@@ -118,7 +118,7 @@ class FilesController extends Controller
             // Delete in Database
             $this->filesModel->deleteFile($id);
             // Delete the existing files
-            FileUpload::removeFiles(strtolower($cat['categoryName']), $file['fileName']);
+            FileHandler::removeUploadedFiles(strtolower($cat['categoryName']), $file['fileName']);
             setFlashMsg('success', 'File with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
             setFlashMsg('error', $e->getMessage());

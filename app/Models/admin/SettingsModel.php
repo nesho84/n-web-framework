@@ -112,4 +112,43 @@ class SettingsModel extends Model
             throw new Exception($e->getMessage());
         }
     }
+
+    //------------------------------------------------------------
+    public function backupDatabase(string $directory): bool|string
+    //------------------------------------------------------------
+    {
+        // Generate a random file name
+        $dumpfile = BACKUPS_PATH . '/' . date('dmY') . '_' . substr(md5(rand()), 0, 10) . '_backup.sql';
+
+        try {
+            // MySQL Connection
+            $db_host = DB_HOST;
+            $db_user = DB_USER;
+            $db_password = DB_PASS;
+            $db_name = DB_NAME;
+
+            // Build the command to execute mysqldump
+            // $command = "mysqldump --host={$db_host} --user={$db_user} --password={$db_password} {$db_name} > {$dumpfile} 2>&1";
+            // $command = "mysqldump --host={$db_host} --user={$db_user} --password={$db_password} {$db_name} > {$dumpfile} 2> {$dumpfile}.error";
+
+            $command = "mysqldump --host={$db_host} --user={$db_user} --password={$db_password} $db_name > $dumpfile";
+
+            // Execute the command
+            exec($command, $output, $return);
+
+            // Check if the backup file was created
+            if ($return === 0 && file_exists($dumpfile) && filesize($dumpfile) > 0) {
+                return true;
+            } else {
+                // Delete the backup file from the server
+                if (file_exists($dumpfile)) {
+                    unlink($dumpfile);
+                }
+                // Throw an exception with the error message
+                throw new Exception("Backup failed. Please Check Your Database Configuration." . implode("\n", $output), $return);
+            }
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 }

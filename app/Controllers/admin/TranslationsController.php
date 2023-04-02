@@ -53,7 +53,7 @@ class TranslationsController extends Controller
         if (isset($_POST['insert_translation'])) {
             $postArray = [
                 'userID' => $_SESSION['user']['id'],
-                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
+                'languageID' => htmlspecialchars(trim($_POST['languageID'] ?? '')),
                 'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
                 'translationText' => htmlspecialchars(trim($_POST['translationText'])),
             ];

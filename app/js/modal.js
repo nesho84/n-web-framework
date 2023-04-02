@@ -52,30 +52,32 @@ function showDynamicModal(element) {
                 modalBody.innerHTML = data;
                 // Set the modal's title
                 modalTitle.textContent = element.getAttribute('data-title');
-            }, 500);
 
-            // Insert submit button if the caller requires
-            const actionButton = element.getAttribute('data-submit');
-            if (actionButton && actionButton === 'true') {
-                // Create buttons for the Modal
-                createModalButtons(modalFooter);
-                // Get the form and the submit button
-                const form = modalBody.querySelector('form');
-                const submitBtn = modalFooter.querySelector('#submit-btn');
-                if (form) {
-                    // Add event listener to submit the form
-                    submitBtn.addEventListener('click', function () {
-                        submitBtn.disabled = true;
-                        submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Saving...`;
-                        // Simulate timeout
-                        setTimeout(() => {
-                            form.submit();
-                        }, 500);
-                    });
+                // Insert submit button if the caller requires
+                const actionButton = element.getAttribute('data-submit');
+                if (actionButton && actionButton === 'true') {
+                    // Create buttons for the Modal
+                    createModalButtons(modalFooter);
+                    // Get the form and the submit button
+                    const form = modalBody.querySelector('form');
+                    const submitBtn = modalFooter.querySelector('#submit-btn');
+                    if (form) {
+                        // Add event listener to submit the form
+                        submitBtn.addEventListener('click', function () {
+                            submitBtn.disabled = true;
+                            submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Saving...`;
+                            // Simulate timeout
+                            setTimeout(() => {
+                                form.submit();
+                            }, 500);
+                        });
+                    } else {
+                        console.error("Failed to load the form.");
+                    }
+                } else {
+                    modalFooter.remove();
                 }
-            } else {
-                modalFooter.remove();
-            }
+            }, 500);
         } catch (error) {
             console.error(error);
             // Show an error message to the user
@@ -107,7 +109,7 @@ function createDynamicModal() {
                     <h5 class="modal-title" id="dynamic-modal-label"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="min-height:100px;"></div>
+                <div class="modal-body p-0" style="min-height:100px;"></div>
                 <div class="modal-footer"></div>
             </div>
         </div>

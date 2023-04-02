@@ -47,6 +47,9 @@ Router::get('/admin/users/delete/{id}', 'admin/UsersController@delete');
 Router::get('/admin/settings', 'admin/SettingsController@index');
 Router::get('/admin/settings/edit_modal/{id}', 'admin/SettingsController@edit_modal');
 Router::post('/admin/settings/update/{id}', 'admin/SettingsController@update');
+Router::post('/admin/settings/db_backup', 'admin/SettingsController@db_backup');
+Router::get('/admin/settings/db_list_backups', 'admin/SettingsController@db_list_backups');
+Router::get('/admin/settings/db_backup_delete', 'admin/SettingsController@db_backup_delete');
 
 // --- Files --- //
 Router::get('/admin/files', 'admin/FilesController@index');

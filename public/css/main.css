@@ -111,7 +111,7 @@ a:hover {
 /*---------- LOADING SPINNER -------- */
 .loading-spinner {
   position: absolute;
-  z-index: 2147483642;
+  z-index: 9999;
   overflow: show;
   top: 0;
   left: 0;
@@ -296,7 +296,7 @@ th {
   /* Place the button at the bottom of the page */
   right: 10px;
   /* Place the button 30px from the right */
-  z-index: 9999;
+  z-index: 99;
   /* Make sure it does not overlap */
   border: none;
   /* Remove borders */

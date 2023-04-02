@@ -4,6 +4,22 @@ showHeading(['title' => 'Settings']);
 ?>
 
 <div class="container-lg">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Database Backup</h5>
+            <p class="card-text">This will backup the Database and store it in a file.</p>
+            <!-- <a href="#" class="btn btn-success"><i class="far fa-save"></i> Backup</a> -->
+            <form id="formBackup" action="<?php echo ADMURL . '/settings/db_backup'; ?>" method="POST" enctype="multipart/form-data">
+                <button type="submit" id="backup_db" name="backup_db" class="btn btn-success"><i class="far fa-save"></i> Backup</button>
+            </form>
+
+            <br>
+
+            <!-- Modal -->
+            <a href="<?php echo APPURL . '/admin/settings/db_list_backups/'; ?>" class="d-modal btn btn-info" data-title="Database Backups">See Backups</a>
+        </div>
+    </div>
+
     <div class="table-responsive border-top mt-3">
         <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
             <thead>
@@ -49,3 +65,17 @@ showHeading(['title' => 'Settings']);
         </table>
     </div>
 </div>
+
+<script>
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Attach the submit event handler to the form (ajax.js)
+        const form = document.querySelector("#formBackup");
+        if (form) {
+            form.addEventListener("submit", (event) => {
+                handleFormSubmit(event);
+            });
+        }
+    });
+</script>

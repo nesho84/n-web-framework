@@ -34,6 +34,7 @@ $bodyTheme = $baseTheme == "dark" ? "dark" : "white";
 
 <body class="bg-<?= $bodyTheme ?>">
 
+
     <div class="wrapper">
 
         <header class="sticky-top border-bottom">
@@ -60,8 +61,9 @@ $bodyTheme = $baseTheme == "dark" ? "dark" : "white";
             </nav>
         </header>
 
+        <!-- Flash/Toast Messages from Sessions or JS -->
+        <div id="alert-container">
+            <?php getFlashMsg(); ?>
+        </div>
+
         <main>
-            <!-- Flash Messages from Sessions or JS -->
-            <div id="alert-container">
-                <?php getFlashMsg(); ?>
-            </div>

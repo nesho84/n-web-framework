@@ -78,6 +78,12 @@ defined('UPLOADURL')
 defined('UPLOAD_PATH')
     or define('UPLOAD_PATH', APPROOT . '/public/uploads');
 
+defined('BACKUPURL')
+    or define('BACKUPURL', APPURL . '/public/backups');
+
+defined('BACKUPS_PATH')
+    or define('BACKUPS_PATH', APPROOT . '/public/backups');
+
 defined('LIBRARY_PATH')
     or define('LIBRARY_PATH', APPROOT . '/app/Library');
 

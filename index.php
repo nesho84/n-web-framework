@@ -18,7 +18,7 @@ require_once CORE_PATH . "/Model.php";
 
 // Helpers
 require_once HELPERS_PATH . "/Sessions.php";
-require_once HELPERS_PATH . "/FileUpload.php";
+require_once HELPERS_PATH . "/FileHandler.php";
 require_once HELPERS_PATH . "/helpers.php";
 require_once HELPERS_PATH . "/components.php";
 require_once HELPERS_PATH . "/flashMessages.php";

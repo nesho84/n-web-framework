@@ -153,7 +153,7 @@
         setTotalPrice();
 
         // Attach the submit event handler to the form (ajax.js)
-        form.addEventListener("submit", handleSubmit);
+        form.addEventListener("submit", handleFormSubmit);
     });
 
     function addCompany() {
@@ -230,11 +230,13 @@
     }
 
     function calculateTotalPrice() {
+        let totalInput = document.getElementById('invoiceTotalPrice');
         let total = 0;
         document.querySelectorAll(".service").forEach(function(row) {
             let quantityInput = row.querySelector(".service-quantity");
             let quantity = parseFloat(row.querySelector(".service-quantity").value);
-            let price = parseFloat(row.querySelector(".service-price").value);
+            let priceInput = row.querySelector(".service-price");
+            let price = parseFloat(priceInput.value);
             if (isNaN(quantity) || quantity < 1) {
                 quantity = 1;
                 quantityInput.value = 1;
@@ -242,9 +244,10 @@
             if (isNaN(price) || price.length === 0) {
                 price = 0;
             }
+            priceInput.value = price.toFixed(2);
             total += quantity * price;
         });
-        document.getElementById('invoiceTotalPrice').value = total.toFixed(2);
+        totalInput.value = total.toFixed(2);
     }
 
     function setTotalPrice() {

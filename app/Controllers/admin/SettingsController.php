@@ -4,7 +4,6 @@ class SettingsController extends Controller
 {
     private SettingsModel $settingsModel;
     private LanguagesModel $languagesModel;
-    private UsersModel $usersModel;
 
     //------------------------------------------------------------
     public function __construct()
@@ -18,8 +17,6 @@ class SettingsController extends Controller
 
         // Load LanguagesModel
         $this->languagesModel = $this->loadModel("/admin/LanguagesModel");
-        // Load UsersModel
-        $this->usersModel = $this->loadModel("/admin/UsersModel");
     }
 
     //------------------------------------------------------------
@@ -36,8 +33,6 @@ class SettingsController extends Controller
     public function edit_modal(int $id): void
     //------------------------------------------------------------
     {
-        $userId = $_SESSION['user']['id'];
-
         $data['title'] = 'Settings';
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['languages'] = $this->languagesModel->getLanguages();
@@ -53,7 +48,7 @@ class SettingsController extends Controller
         if (isset($_POST['update_setting'])) {
             $postArray = [
                 'settingID' => $id,
-                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
+                'languageID' => htmlspecialchars(trim($_POST['languageID'] ?? '')),
                 'settingTheme' => htmlspecialchars(trim($_POST['settingTheme'])),
             ];
 
@@ -112,5 +107,75 @@ class SettingsController extends Controller
         // Set User Settings Session array
         $_SESSION['settings']['languageID'] = $postArray['languageID'];
         $_SESSION['settings']['settingTheme'] = $postArray['settingTheme'];
+    }
+
+    //------------------------------------------------------------
+    public function db_backup(): void
+    //------------------------------------------------------------
+    {
+        header("Content-Type: application/json");
+        header("X-Content-Type-Options: nosniff");
+        header("X-Frame-Options: DENY");
+        header("X-XSS-Protection: 1; mode=block");
+        header("Referrer-Policy: same-origin");
+        header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
+
+        // Validate CSRF token
+        $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
+        if ($csrfToken !== $_SESSION['csrf_token']) {
+            http_response_code(419);
+            echo json_encode(['message' => 'Invalid CSRF token']);
+            exit();
+        }
+
+        try {
+            // Insert in Database
+            $this->settingsModel->backupDatabase(BACKUPS_PATH);
+            setFlashMsg('success', 'Backup completed successfully.');
+            echo json_encode(["status" => "success"]);
+            exit();
+        } catch (Exception $e) {
+            http_response_code(500);
+            echo json_encode(["status" => "error", "message" => $e->getMessage()]);
+            exit();
+        }
+    }
+
+    //------------------------------------------------------------
+    public function db_list_backups(): void
+    //------------------------------------------------------------
+    {
+        $data['title'] = 'Database Backups';
+        // $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
+
+        try {
+            $directory = BACKUPS_PATH . "/";
+            $data['rows'] = FileHandler::get_files_in_directory($directory);
+        } catch (Exception $e) {
+            setFlashMsg('error', $e->getMessage());
+        }
+
+        $this->renderSimpleView('/admin/settings/db_list_backups_modal', $data);
+    }
+
+    //------------------------------------------------------------
+    public function db_backup_delete(): void
+    //------------------------------------------------------------
+    {
+        // Get the customer ID from the URL query string
+        $file = filter_input(INPUT_GET, 'file', FILTER_SANITIZE_URL);
+
+        $directory = BACKUPS_PATH . "/";
+
+        try {
+            // Delete the existing files
+            FileHandler::remove_files_from_directory($directory, $file);
+            setFlashMsg('success', 'File: <strong>' . $file . '</strong> deleted successfully.');
+        } catch (Exception $e) {
+            setFlashMsg('error', $e->getMessage());
+        }
+
+        // Allways redirect back
+        redirect(ADMURL . '/settings');
     }
 }
