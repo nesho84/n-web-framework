@@ -3,7 +3,7 @@
 class TranslationsModel extends Model
 {
     //------------------------------------------------------------
-    public function getTranslations(): array|string
+    public function getTranslations(): array
     //------------------------------------------------------------
     {
         try {
@@ -21,7 +21,7 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getTranslationById(int $id): array|string
+    public function getTranslationById(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -35,7 +35,7 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertTranslation(array $postArray): bool|string
+    public function insertTranslation(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -56,7 +56,7 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updateTranslation(array $postArray): bool|string
+    public function updateTranslation(array $postArray): bool
     //------------------------------------------------------------
     {
 
@@ -78,7 +78,7 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteTranslation(int $id): bool|string
+    public function deleteTranslation(int $id): bool
     //------------------------------------------------------------
     {
         try {

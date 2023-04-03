@@ -3,7 +3,7 @@
 class FilesModel extends Model
 {
     //------------------------------------------------------------
-    public function getFiles(): array|string
+    public function getFiles(): array
     //------------------------------------------------------------
     {
         try {
@@ -16,7 +16,7 @@ class FilesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getFileById(int $id): array|string
+    public function getFileById(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -30,7 +30,7 @@ class FilesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertFile(array $postArray): bool|string
+    public function insertFile(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -51,7 +51,7 @@ class FilesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteFile(int $id): bool|string
+    public function deleteFile(int $id): bool
     //------------------------------------------------------------
     {
         try {

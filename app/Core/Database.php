@@ -32,7 +32,7 @@ class Database
                 <ul>
                     <li>The PHP MySQL module is installed and enabled.</li>
                     <li>The database is running.</li>
-                    <li>The credentials in settings.php are valid.</li>
+                    <li>The credentials in config.php are valid.</li>
                 </ul>");
         }
 

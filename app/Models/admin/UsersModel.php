@@ -3,7 +3,7 @@
 class UsersModel extends Model
 {
     //------------------------------------------------------------
-    public function getUsers(): array|string
+    public function getUsers(): array
     //------------------------------------------------------------
     {
         try {
@@ -16,7 +16,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getUserById(int $id): array|string
+    public function getUserById(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -30,7 +30,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getUsersExceptThis(int $id): array|string
+    public function getUsersExceptThis(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -44,7 +44,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertUser(array $postArray): bool|string
+    public function insertUser(array $postArray): int
     //------------------------------------------------------------
     {
         try {
@@ -69,7 +69,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updateUser(array $postArray): bool|string
+    public function updateUser(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -90,7 +90,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteUser(int $id): bool|string
+    public function deleteUser(int $id): bool
     //------------------------------------------------------------
     {
         try {

@@ -3,7 +3,7 @@
 class SettingsModel extends Model
 {
     //------------------------------------------------------------
-    public function getSettings(): array|string
+    public function getSettings(): array
     //------------------------------------------------------------
     {
         try {
@@ -21,7 +21,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getSettingById(int $id): array|string
+    public function getSettingById(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -35,7 +35,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getSettingsByUserId(int $id): array|string
+    public function getSettingsByUserId(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -49,7 +49,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertSetting(array $postArray): bool|string
+    public function insertSetting(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -72,7 +72,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updateSetting(array $postArray): bool|string
+    public function updateSetting(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -93,7 +93,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteSetting(int $id): bool|string
+    public function deleteSetting(int $id): bool
     //------------------------------------------------------------
     {
         try {
@@ -114,7 +114,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function backupDatabase(string $directory): bool|string
+    public function backupDatabase(string $directory): bool
     //------------------------------------------------------------
     {
         // Generate a random file name

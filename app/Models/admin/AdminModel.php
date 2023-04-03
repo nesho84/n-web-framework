@@ -3,7 +3,7 @@
 class AdminModel extends Model
 {
     //------------------------------------------------------------
-    public function getTables(string $db_name): array|string
+    public function getTables(string $db_name): array
     //------------------------------------------------------------
     {
         try {

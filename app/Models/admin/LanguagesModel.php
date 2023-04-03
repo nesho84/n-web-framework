@@ -3,7 +3,7 @@
 class LanguagesModel extends Model
 {
     //------------------------------------------------------------
-    public function getLanguages(): array|string
+    public function getLanguages(): array
     //------------------------------------------------------------
     {
         try {
@@ -16,7 +16,7 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getLanguageNames(): array|string
+    public function getLanguageNames(): array
     //------------------------------------------------------------
     {
         try {
@@ -29,7 +29,7 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getLanguageById(int $id): array|string
+    public function getLanguageById(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -43,7 +43,7 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertLanguage(array $postArray): bool|string
+    public function insertLanguage(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -64,7 +64,7 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updateLanguage(array $postArray): bool|string
+    public function updateLanguage(array $postArray): bool
     //------------------------------------------------------------
     {
 
@@ -86,7 +86,7 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteLanguage(int $id): bool|string
+    public function deleteLanguage(int $id): bool
     //------------------------------------------------------------
     {
         try {

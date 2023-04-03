@@ -3,7 +3,7 @@
 class PagesModel extends Model
 {
     //------------------------------------------------------------
-    public function getPages(): array|string
+    public function getPages(): array
     //------------------------------------------------------------
     {
         try {
@@ -23,7 +23,7 @@ class PagesModel extends Model
         }
     }
     //------------------------------------------------------------
-    public function getPageById(int $id): array|string
+    public function getPageById(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -37,7 +37,7 @@ class PagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertPage(array $postArray): bool|string
+    public function insertPage(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -58,7 +58,7 @@ class PagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updatePage(array $postArray): bool|string
+    public function updatePage(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -79,7 +79,7 @@ class PagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deletePage(int $id): bool|string
+    public function deletePage(int $id): bool
     //------------------------------------------------------------
     {
         try {

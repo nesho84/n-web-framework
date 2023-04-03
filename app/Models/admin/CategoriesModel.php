@@ -3,7 +3,7 @@
 class CategoriesModel extends Model
 {
     //------------------------------------------------------------
-    public function getCategories(): array|string
+    public function getCategories(): array
     //------------------------------------------------------------
     {
         try {
@@ -16,7 +16,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getCategoriesByType(string $ctype): array|string
+    public function getCategoriesByType(string $ctype): array
     //------------------------------------------------------------
     {
         try {
@@ -30,7 +30,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getCategoriesByName(string $cname): array|string
+    public function getCategoriesByName(string $cname): array
     //------------------------------------------------------------
     {
         try {
@@ -44,7 +44,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getCategoryById(int $id): array|string
+    public function getCategoryById(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -58,7 +58,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertCategory(array $postArray): bool|string
+    public function insertCategory(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -89,7 +89,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updateCategory(array $postArray): bool|string
+    public function updateCategory(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -120,7 +120,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteCategory(int $id): bool|string
+    public function deleteCategory(int $id): bool
     //------------------------------------------------------------
     {
         try {

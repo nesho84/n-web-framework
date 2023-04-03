@@ -4,8 +4,8 @@
 // ------------------ Order is important! ------------------
 // ---------------------------------------------------------
 
-// App Settings
-require_once __DIR__ . "/config/settings.php";
+// App Configuration
+require_once __DIR__ . "/config/config.php";
 
 // MySQL Connection
 require_once CORE_PATH . "/Database.php";

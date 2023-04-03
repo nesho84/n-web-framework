@@ -3,7 +3,7 @@
 class InvoicesModel extends Model
 {
     //------------------------------------------------------------
-    public function getInvoices(): array|string
+    public function getInvoices(): array
     //------------------------------------------------------------
     {
         try {
@@ -21,7 +21,7 @@ class InvoicesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getCompanies(): array|string
+    public function getCompanies(): array
     //------------------------------------------------------------
     {
         try {
@@ -34,7 +34,7 @@ class InvoicesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getInvoiceById(int $id): array|string
+    public function getInvoiceById(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -52,7 +52,7 @@ class InvoicesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getServicesByInvoiceId(int $id): array|string
+    public function getServicesByInvoiceId(int $id): array
     //------------------------------------------------------------
     {
         try {
@@ -69,7 +69,7 @@ class InvoicesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertInvoice(array $postArray): bool|string
+    public function insertInvoice(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
@@ -115,7 +115,7 @@ class InvoicesModel extends Model
     }
 
     // //------------------------------------------------------------
-    // public function updateCategory(array $postArray): bool|string
+    // public function updateCategory(array $postArray): bool
     // //------------------------------------------------------------
     // {
     //     try {
@@ -146,7 +146,7 @@ class InvoicesModel extends Model
     // }
 
     //------------------------------------------------------------
-    public function deleteInvoice(int $id): bool|string
+    public function deleteInvoice(int $id): bool
     //------------------------------------------------------------
     {
         try {

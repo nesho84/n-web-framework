@@ -25,7 +25,7 @@
                                 <a class="btn btn-link" target="_blank" href="' . BACKUPURL . '/' . $d['fileName'] . '" download>
                                     <i class="fas fa-download"></i>
                                 </a>
-                                <a class="btn btn-link btn-delete" href="' . ADMURL . '/settings/db_backup_delete?file=' . $d['fileName'] . '">
+                                <a class="btn btn-link btn-delete" href="' . ADMURL . '/settings/dbbackup_delete?file=' . $d['fileName'] . '">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
                             </td>

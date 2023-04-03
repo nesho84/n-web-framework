@@ -3,7 +3,7 @@
 class PublicModel extends Model
 {
     //------------------------------------------------------------
-    public function getActivePage(string $pageName): array|string
+    public function getActivePage(string $pageName): array
     //------------------------------------------------------------
     {
         // @TODO: test
@@ -53,7 +53,7 @@ class PublicModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getLanguage(string $languageID, int $translationCode): string|null
+    public function getLanguage(string $languageID, int $translationCode): string
     //------------------------------------------------------------
     {
         try {

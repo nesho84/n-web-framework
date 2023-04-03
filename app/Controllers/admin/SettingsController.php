@@ -110,7 +110,7 @@ class SettingsController extends Controller
     }
 
     //------------------------------------------------------------
-    public function db_backup(): void
+    public function dbbackup(): void
     //------------------------------------------------------------
     {
         header("Content-Type: application/json");
@@ -142,7 +142,7 @@ class SettingsController extends Controller
     }
 
     //------------------------------------------------------------
-    public function db_list_backups(): void
+    public function dbbackups_modal(): void
     //------------------------------------------------------------
     {
         $data['title'] = 'Database Backups';
@@ -155,15 +155,15 @@ class SettingsController extends Controller
             setFlashMsg('error', $e->getMessage());
         }
 
-        $this->renderSimpleView('/admin/settings/db_list_backups_modal', $data);
+        $this->renderSimpleView('/admin/settings/dbbackups_modal', $data);
     }
 
     //------------------------------------------------------------
-    public function db_backup_delete(): void
+    public function dbbackup_delete(): void
     //------------------------------------------------------------
     {
         // Get the customer ID from the URL query string
-        $file = filter_input(INPUT_GET, 'file', FILTER_SANITIZE_URL);
+        $file = filter_input(INPUT_GET, 'file', FILTER_SANITIZE_SPECIAL_CHARS);
 
         $directory = BACKUPS_PATH . "/";
 
