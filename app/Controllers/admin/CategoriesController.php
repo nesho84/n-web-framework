@@ -65,16 +65,16 @@ class CategoriesController extends Controller
                 try {
                     // Insert in Database
                     $this->categoriesModel->insertCategory($postArray);
-                    setFlashMsg('success', 'Insert completed successfully.');
+                    setAlert('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/categories');
                 } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                    setAlert('error', $e->getMessage());
                     $_SESSION['inputs'] = $postArray;
                     redirect(ADMURL . '/categories/create');
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/categories/create');
             }
@@ -138,18 +138,18 @@ class CategoriesController extends Controller
                     try {
                         // Update in Database
                         $this->categoriesModel->updateCategory($postArray);
-                        setFlashMsg('success', 'Update completed successfully');
+                        setAlert('success', 'Update completed successfully');
                         redirect(ADMURL . '/categories');
                     } catch (Exception $e) {
-                        setFlashMsg('error', $e->getMessage());
+                        setAlert('error', $e->getMessage());
                         redirect(ADMURL . '/categories/edit/' . $id);
                     }
                 } else {
-                    setFlashMsg('warning', 'No fields were changed');
+                    setAlert('warning', 'No fields were changed');
                     redirect(ADMURL . '/categories/edit/' . $id);
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 redirect(ADMURL . '/categories/edit/' . $id);
             }
         }
@@ -162,9 +162,9 @@ class CategoriesController extends Controller
         try {
             // Delete in Database
             $this->categoriesModel->deleteCategory($id);
-            setFlashMsg('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
+            setAlert('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setFlashMsg('error', $e->getMessage());
+            setAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

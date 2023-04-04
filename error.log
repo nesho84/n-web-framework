@@ -1,0 +1,20 @@
+[04-Apr-2023 14:05:57 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\files\files.php on line 34
+[04-Apr-2023 14:36:16 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 59
+[04-Apr-2023 14:39:56 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 59
+[04-Apr-2023 14:47:13 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 59
+[04-Apr-2023 14:53:07 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 61
+[04-Apr-2023 14:53:45 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 61
+[04-Apr-2023 15:23:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB_BACKUPS_PATH" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php:133
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): SettingsController->dbbackup()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(29): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 133
+[04-Apr-2023 15:24:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB_BACKUPS_PATH" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php:133
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): SettingsController->dbbackup()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(29): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 133

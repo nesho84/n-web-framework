@@ -1,6 +1,6 @@
 <!-- Page Header -->
 <?php
-showHeading([
+displayHeader([
     'title' => 'Categories',
     'btnText' => 'Create New +',
     'btnLink' => ADMURL . '/categories/create',

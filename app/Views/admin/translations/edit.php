@@ -5,7 +5,7 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
     extract($rows);
 
     // Page Heading
-    showHeading([
+    displayHeader([
         'title' => 'Edit Translation',
         'title2' => '<strong>ID: </strong>' . $translationID,
     ]);
@@ -51,6 +51,6 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
 
 <?php
 } else {
-    showNoDataBox("No data found", ADMURL . "/translations");
+    displayNoDataBox("No data found", ADMURL . "/translations");
 }
 ?>

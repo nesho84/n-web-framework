@@ -1,1 +1,1 @@
-console.log("I'm Loaded...");
+console.log("Javascript file was loaded...");

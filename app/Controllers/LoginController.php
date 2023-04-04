@@ -47,6 +47,13 @@ class LoginController extends Controller
     public function login_validate(): void
     //------------------------------------------------------------
     {
+        header("Content-Type: application/json");
+        header("X-Content-Type-Options: nosniff");
+        header("X-Frame-Options: DENY");
+        header("X-XSS-Protection: 1; mode=block");
+        header("Referrer-Policy: same-origin");
+        header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
+
         $postArray = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         $output = "";
@@ -70,9 +77,9 @@ class LoginController extends Controller
                 if ($user["userStatus"] !== 1) {
                     $output .= "Your Account is not active, please contact support.";
                 } else {
-                    // Success =>> Create all Sessions
+                    // Success =>> Create User Sessions
                     $this->create_user_session($user, $postArray);
-                    // Get the settings
+                    // Success =>> Create User Settings Sessions
                     $settings = $this->settingsModel->getSettingsByUserId($user['userID']);
                     $this->create_settings_session($settings);
 
@@ -85,8 +92,8 @@ class LoginController extends Controller
             $output .= !$user ? "No account found with this email address." : $user;
         }
 
-        echo $output;
-        exit;
+        echo json_encode(["message" => $output]);
+        exit();
     }
 
     //------------------------------------------------------------

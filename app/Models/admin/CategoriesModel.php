@@ -44,7 +44,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getCategoryById(int $id): array
+    public function getCategoryById(int $id): array|bool
     //------------------------------------------------------------
     {
         try {

@@ -16,7 +16,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getUserById(int $id): array
+    public function getUserById(int $id): array|bool
     //------------------------------------------------------------
     {
         try {

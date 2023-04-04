@@ -16,7 +16,7 @@ class FilesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getFileById(int $id): array
+    public function getFileById(int $id): array|bool
     //------------------------------------------------------------
     {
         try {

@@ -22,30 +22,43 @@ async function handleRequest(url, method, data) {
 }
 
 // Function to handle form submission
-async function handleFormSubmit(event) {
+async function handleFormSubmit(event, successMessage = "Success!") {
     event.preventDefault();
+
     const form = event.target;
+    const submitButton = form.querySelector('button[type="submit"]');
     const url = form.action;
     const method = form.method;
     const formData = new FormData(form);
+
     try {
+        // Disable submit button
+        submitButton.disabled = true;
+
         const result = await handleRequest(url, method, formData);
+
         if (result.status === "success") {
-            // showResponseMessage("bg-success", "Operation was successful.");
-            // form.reset();
-            // or
-            window.location.reload();
+            showResponseMessage("bg-success", successMessage);
+            // Hide toast message or refresh the page after 5 seconds
+            setTimeout(() => {
+                // hideResponseMessage();
+                window.location.reload();
+            }, 5000);
         } else {
             if (result.message) {
                 showResponseMessage("bg-danger", result.message);
             } else {
                 showResponseMessage("bg-danger", "An error occurred. Please try again.");
             }
+            // Enable submit button
+            submitButton.disabled = false;
         }
     } catch (error) {
         console.error(error);
         // Show error message
         showResponseMessage("bg-danger", error);
+        // Enable submit button
+        submitButton.disabled = false;
     }
 }
 
@@ -74,6 +87,15 @@ function showResponseMessage(className, message) {
         toast.show();
     }
     alertContainer.scrollIntoView(false);
+}
+
+// Function to hide response message
+function hideResponseMessage() {
+    const toastElement = document.getElementById("liveToast");
+    if (toastElement) {
+        const toast = bootstrap.Toast.getOrCreateInstance(toastElement);
+        toast.hide();
+    }
 }
 
 

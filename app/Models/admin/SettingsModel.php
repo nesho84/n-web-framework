@@ -21,7 +21,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getSettingById(int $id): array
+    public function getSettingById(int $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -35,7 +35,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getSettingsByUserId(int $id): array
+    public function getSettingsByUserId(int $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -118,7 +118,7 @@ class SettingsModel extends Model
     //------------------------------------------------------------
     {
         // Generate a random file name
-        $dumpfile = BACKUPS_PATH . '/' . date('dmY') . '_' . substr(md5(rand()), 0, 10) . '_backup.sql';
+        $dumpfile = DB_BACKUPS_PATH . '/' . date('dmY') . '_' . substr(md5(rand()), 0, 10) . '_backup.sql';
 
         try {
             // MySQL Connection

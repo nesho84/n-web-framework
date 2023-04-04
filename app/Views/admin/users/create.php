@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<?php showHeading(['title' => 'Create User']); ?>
+<?php displayHeader(['title' => 'Create User']); ?>
 
 <div class="container-lg">
     <div class="card">

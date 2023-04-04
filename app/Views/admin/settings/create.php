@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<?php showHeading(['title' => 'Create Settings']); ?>
+<?php displayHeader(['title' => 'Create Settings']); ?>
 
 <div class="container-lg">
     <div class="card">

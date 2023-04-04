@@ -21,7 +21,7 @@ $textTheme = $footerTheme === "dark" ? "light" : "dark";
 <script src="<?php echo APPURL; ?>/app/js/ajax.js"></script>
 <script src="<?php echo APPURL; ?>/app/js/main.js"></script>
 <script src="<?php echo APPURL; ?>/app/js/modal.js"></script>
-<script src="<?php echo APPURL; ?>/app/js/modal_pdf.js"></script>
+<script src="<?php echo APPURL; ?>/app/js/modal_files.js"></script>
 
 </body>
 

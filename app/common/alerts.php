@@ -2,13 +2,12 @@
 
 /**
  * Save success, error or warning message in the SESSION
- *
  * @param string $status
  * @param string $msg
  * @return void
  */
 # -----------------------------------------------------------
-function setFlashMsg(string $status, string $msg): void
+function setAlert(string $status, string $msg): void
 # -----------------------------------------------------------
 {
     switch ($status) {
@@ -32,11 +31,10 @@ function setFlashMsg(string $status, string $msg): void
 
 /**
  * Get's the success, error and warning message from SESSION
- *
  * @return void
  */
 # -----------------------------------------------------------
-function getFlashMsg(): void
+function showAlert(): void
 # -----------------------------------------------------------
 {
     // data-bs-autohide="false" => to disable autohide

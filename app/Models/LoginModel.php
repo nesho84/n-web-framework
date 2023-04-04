@@ -3,7 +3,7 @@
 class LoginModel extends Model
 {
     //------------------------------------------------------------
-    public function findUserByEmail(string $email): array
+    public function findUserByEmail(string $email): array|bool
     //------------------------------------------------------------
     {
         try {

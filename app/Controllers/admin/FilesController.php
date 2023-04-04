@@ -88,17 +88,17 @@ class FilesController extends Controller
                 try {
                     // Insert in Database
                     $this->filesModel->insertFile($postArray);
-                    setFlashMsg('success', 'Insert completed successfully.');
+                    setAlert('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/files');
                 } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                    setAlert('error', $e->getMessage());
                     // @TODO: remove uploaded files
                     $_SESSION['inputs'] = $postArray;
                     redirect(ADMURL . '/files/create');
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/files/create');
             }
@@ -119,9 +119,9 @@ class FilesController extends Controller
             $this->filesModel->deleteFile($id);
             // Delete the existing files
             FileHandler::removeUploadedFiles(strtolower($cat['categoryName']), $file['fileName']);
-            setFlashMsg('success', 'File with the ID: <strong>' . $id . '</strong> deleted successfully.');
+            setAlert('success', 'File with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setFlashMsg('error', $e->getMessage());
+            setAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

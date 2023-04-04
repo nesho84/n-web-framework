@@ -20,6 +20,7 @@
 <body class="text-center">
     <main class="form-signin">
         <form id="formLogin" method="POST">
+            <input type="hidden" id="csrf_token" name="csrf_token" value="<?php echo bin2hex(random_bytes(32)); ?>">
             <div class="text-center">
                 <img class="mb-4" src="<?php echo APPURL; ?>/public/images/logo1.png" alt="" height="72">
                 <h4 class="mb-3">Please sign in</h4>
@@ -66,22 +67,24 @@
             xhr.onload = () => {
                 // Process our return data
                 if (xhr.status >= 200 && xhr.status < 400) {
-                    console.log(xhr.responseText);
+                    const result = JSON.parse(xhr.response);
+                    console.log(result);
+                    const message = result.message;
                     // Check for cookies first
                     if (navigator.cookieEnabled == false) {
                         login_result.innerHTML = "<p class='text-danger fw-bold bg-light rounded border p-3 mb-4'>Please enable Cookies and try again to Continue.</p>";
                         return false;
                     } else {
                         // Success
-                        if (xhr.responseText.trim() === 'success') {
-                            window.location.replace("<?php echo APPURL . "/login"; ?>");
+                        if (message.trim() === 'success') {
+                            window.location.reload();
                         } else {
-                            login_result.innerHTML = "<div class='text-danger bg-light rounded border p-3 mb-4'>" + xhr.responseText + "</div>";
+                            login_result.innerHTML = "<div class='text-danger bg-light rounded border p-3 mb-4'>" + message + "</div>";
                         }
                     }
                 } else {
                     // Failed
-                    console.log('error: ', xhr);
+                    console.log('error: ', message);
                 }
             };
             xhr.send(formLogin);

@@ -48,6 +48,7 @@ if (isset($rows) && is_array($rows)) {
 
 <?php
 } else {
-    showNoDataBox("No Settings found", ADMURL);
+    displayNoDataBox("No Settings found", ADMURL);
+    echo "<br>";
 }
 ?>

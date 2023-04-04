@@ -141,7 +141,7 @@ class InvoicesController extends Controller
             try {
                 // Insert in Database
                 $this->invoicesModel->insertInvoice($postArray);
-                setFlashMsg('success', 'Insert completed successfully.');
+                // setAlert('success', 'Invoice created successfully');
                 echo json_encode(["status" => "success"]);
             } catch (Exception $e) {
                 http_response_code(500);
@@ -201,14 +201,14 @@ class InvoicesController extends Controller
     //             try {
     //                 // Update in Database
     //                 $this->invoicesModel->updateCategory($postArray);
-    //                 setFlashMsg('success', 'Update completed successfully');
+    //                 setAlert('success', 'Update completed successfully');
     //                 redirect(ADMURL . '/categories');
     //             } catch (Exception $e) {
-    //                 setFlashMsg('error', $e->getMessage());
+    //                 setAlert('error', $e->getMessage());
     //                 redirect(ADMURL . '/categories/edit/' . $id);
     //             }
     //         } else {
-    //             setFlashMsg('error', $error);
+    //             setAlert('error', $error);
     //             redirect(ADMURL . '/categories/edit/' . $id);
     //         }
     //     }
@@ -221,9 +221,9 @@ class InvoicesController extends Controller
         try {
             // Delete in Database
             $this->invoicesModel->deleteInvoice($id);
-            setFlashMsg('success', 'Invoice with the ID: <strong>' . $id . '</strong> and it\'s services deleted successfully.');
+            setAlert('success', 'Invoice with the ID: <strong>' . $id . '</strong> and it\'s services deleted successfully.');
         } catch (Exception $e) {
-            setFlashMsg('error', $e->getMessage());
+            setAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

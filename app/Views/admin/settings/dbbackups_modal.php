@@ -22,7 +22,7 @@
                             <td>' . $d['fileCreatedAt'] . '</td>
                             <td>' . $d['fileSize'] . '</td>
                             <td class="text-center">
-                                <a class="btn btn-link" target="_blank" href="' . BACKUPURL . '/' . $d['fileName'] . '" download>
+                                <a class="btn btn-link" target="_blank" href="' . DB_BACKUPURL . '/' . $d['fileName'] . '" download>
                                     <i class="fas fa-download"></i>
                                 </a>
                                 <a class="btn btn-link btn-delete" href="' . ADMURL . '/settings/dbbackup_delete?file=' . $d['fileName'] . '">

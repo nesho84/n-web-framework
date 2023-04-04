@@ -201,5 +201,5 @@ if (isset($invoice) && is_array($invoice) && (count($invoice) > 0)) {
     // $pdfDataUri = 'data:application/pdf;base64,' . base64_encode($pdfContent);
     // exit();
 } else {
-    showNoDataBox("No data found", ADMURL . "/invoices");
+    displayNoDataBox("No data found", ADMURL . "/invoices");
 }

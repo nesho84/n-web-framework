@@ -114,7 +114,7 @@
         }
         echo '</div>'; // row end
     } else {
-        showNoDataBox("No data found");
+        displayNoDataBox("No data found");
     }
     ?>
 

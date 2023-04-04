@@ -79,16 +79,16 @@ class TranslationsController extends Controller
                 try {
                     // Insert in Database
                     $this->translationsModel->insertTranslation($postArray);
-                    setFlashMsg('success', 'Insert completed successfully.');
+                    setAlert('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/translations');
                 } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                    setAlert('error', $e->getMessage());
                     $_SESSION['inputs'] = $postArray;
                     redirect(ADMURL . '/translations/create');
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/translations/create');
             }
@@ -150,18 +150,18 @@ class TranslationsController extends Controller
                     try {
                         // Update in Database
                         $this->translationsModel->updateTranslation($postArray);
-                        setFlashMsg('success', 'Update completed successfully');
+                        setAlert('success', 'Update completed successfully');
                         redirect(ADMURL . '/translations');
                     } catch (Exception $e) {
-                        setFlashMsg('error', $e->getMessage());
+                        setAlert('error', $e->getMessage());
                         redirect(ADMURL . '/translations/edit/' . $id);
                     }
                 } else {
-                    setFlashMsg('warning', 'No fields were changed');
+                    setAlert('warning', 'No fields were changed');
                     redirect(ADMURL . '/translations/edit/' . $id);
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 redirect(ADMURL . '/translations/edit/' . $id);
             }
         }
@@ -174,9 +174,9 @@ class TranslationsController extends Controller
         try {
             // Delete in Database
             $this->translationsModel->deleteTranslation($id);
-            setFlashMsg('success', 'Translation with the ID: <strong>' . $id . '</strong> deleted successfully.');
+            setAlert('success', 'Translation with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setFlashMsg('error', $e->getMessage());
+            setAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

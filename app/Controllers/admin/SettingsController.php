@@ -83,18 +83,18 @@ class SettingsController extends Controller
                         if ($postArray['settingID'] === $_SESSION['settings']['settingID']) {
                             $this->updateSessions($postArray);
                         }
-                        setFlashMsg('success', 'Update completed successfully');
+                        setAlert('success', 'Update completed successfully');
                         redirect(ADMURL . '/settings');
                     } catch (Exception $e) {
-                        setFlashMsg('error', $e->getMessage());
+                        setAlert('error', $e->getMessage());
                         redirect(ADMURL . '/settings');
                     }
                 } else {
-                    setFlashMsg('warning', 'No fields were changed');
+                    setAlert('warning', 'No fields were changed');
                     redirect(ADMURL . '/settings');
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 redirect(ADMURL . '/settings');
             }
         }
@@ -130,8 +130,8 @@ class SettingsController extends Controller
 
         try {
             // Insert in Database
-            $this->settingsModel->backupDatabase(BACKUPS_PATH);
-            setFlashMsg('success', 'Backup completed successfully.');
+            $this->settingsModel->backupDatabase(DB_BACKUPS_PATH);
+            // setAlert('success', 'Backup completed successfully');
             echo json_encode(["status" => "success"]);
             exit();
         } catch (Exception $e) {
@@ -149,10 +149,10 @@ class SettingsController extends Controller
         // $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
 
         try {
-            $directory = BACKUPS_PATH . "/";
+            $directory = DB_BACKUPS_PATH . "/";
             $data['rows'] = FileHandler::get_files_in_directory($directory);
         } catch (Exception $e) {
-            setFlashMsg('error', $e->getMessage());
+            setAlert('error', $e->getMessage());
         }
 
         $this->renderSimpleView('/admin/settings/dbbackups_modal', $data);
@@ -165,14 +165,14 @@ class SettingsController extends Controller
         // Get the customer ID from the URL query string
         $file = filter_input(INPUT_GET, 'file', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $directory = BACKUPS_PATH . "/";
+        $directory = DB_BACKUPS_PATH . "/";
 
         try {
             // Delete the existing files
             FileHandler::remove_files_from_directory($directory, $file);
-            setFlashMsg('success', 'File: <strong>' . $file . '</strong> deleted successfully.');
+            setAlert('success', 'File: <strong>' . $file . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setFlashMsg('error', $e->getMessage());
+            setAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

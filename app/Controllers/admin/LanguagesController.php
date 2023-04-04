@@ -92,16 +92,16 @@ class LanguagesController extends Controller
                 try {
                     // Insert in Database
                     $this->languagesModel->insertLanguage($postArray);
-                    setFlashMsg('success', 'Insert completed successfully.');
+                    setAlert('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/languages');
                 } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                    setAlert('error', $e->getMessage());
                     $_SESSION['inputs'] = $postArray;
                     redirect(ADMURL . '/languages/create');
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/languages/create');
             }
@@ -185,18 +185,18 @@ class LanguagesController extends Controller
                     try {
                         // Update in Database
                         $this->languagesModel->updateLanguage($postArray);
-                        setFlashMsg('success', 'Update completed successfully');
+                        setAlert('success', 'Update completed successfully');
                         redirect(ADMURL . '/languages');
                     } catch (Exception $e) {
-                        setFlashMsg('error', $e->getMessage());
+                        setAlert('error', $e->getMessage());
                         redirect(ADMURL . '/languages/edit/' . $id);
                     }
                 } else {
-                    setFlashMsg('warning', 'No fields were changed');
+                    setAlert('warning', 'No fields were changed');
                     redirect(ADMURL . '/languages/edit/' . $id);
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 redirect(ADMURL . '/languages/edit/' . $id);
             }
         }
@@ -209,9 +209,9 @@ class LanguagesController extends Controller
         try {
             // Delete in Database
             $this->languagesModel->deleteLanguage($id);
-            setFlashMsg('success', 'Language with the ID: <strong>' . $id . '</strong> deleted successfully.');
+            setAlert('success', 'Language with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setFlashMsg('error', $e->getMessage());
+            setAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

@@ -1,5 +1,7 @@
 <?php
-// Set session name
+//------------------------------------------------------------
+// Sessions
+//------------------------------------------------------------
 session_name('NWF_SESSION');
 // Use SSL/TLS encryption
 ini_set('session.cookie_secure', 1);
@@ -21,8 +23,10 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Just for Develop
-error_reporting(E_ALL);
+//------------------------------------------------------------
+// Error Reporting
+//------------------------------------------------------------
+error_reporting(E_ALL); // Just for Develop
 ini_set('ignore_repeated_errors', TRUE); // always use TRUE
 ini_set('display_errors', TRUE); // Error/Exception display, use FALSE only in production
 ini_set('log_errors', TRUE); // Error/Exception file logging engine.
@@ -74,25 +78,22 @@ defined('CONTACT_FORM_EMAIL')
 
 defined('UPLOADURL')
     or define('UPLOADURL', APPURL . '/public/uploads');
-
 defined('UPLOAD_PATH')
     or define('UPLOAD_PATH', APPROOT . '/public/uploads');
 
-defined('BACKUPURL')
-    or define('BACKUPURL', APPURL . '/public/backups');
-
-defined('BACKUPS_PATH')
-    or define('BACKUPS_PATH', APPROOT . '/public/backups');
+defined('DB_BACKUPURL')
+    or define('DB_BACKUPURL', APPURL . '/public/backups/database');
+defined('DB_BACKUPS_PATH')
+    or define('DB_BACKUPS_PATH', APPROOT . '/public/backups/database');
 
 defined('LIBRARY_PATH')
-    or define('LIBRARY_PATH', APPROOT . '/app/Library');
+    or define('LIBRARY_PATH', APPROOT . '/app/library');
 
-defined('HELPERS_PATH')
-    or define('HELPERS_PATH', APPROOT . '/app/helpers');
+defined('COMMON_PATH')
+    or define('COMMON_PATH', APPROOT . '/app/common');
 
 defined('SCRIPTS_PATH')
     or define('SCRIPTS_PATH', APPROOT . '/app/js');
-
 defined('SCRIPTS_URL')
     or define('SCRIPTS_URL', APPROOT . '/app/js');
 

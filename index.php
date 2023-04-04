@@ -16,14 +16,13 @@ require_once CORE_PATH . "/Controller.php";
 // Base Model
 require_once CORE_PATH . "/Model.php";
 
-// Helpers
-require_once HELPERS_PATH . "/Sessions.php";
-require_once HELPERS_PATH . "/FileHandler.php";
-require_once HELPERS_PATH . "/helpers.php";
-require_once HELPERS_PATH . "/components.php";
-require_once HELPERS_PATH . "/flashMessages.php";
-
-// Library
+// Common
+require_once COMMON_PATH . "/Sessions.php";
+require_once COMMON_PATH . "/FileHandler.php";
+require_once COMMON_PATH . "/EmailService.php";
+require_once COMMON_PATH . "/utilities.php";
+require_once COMMON_PATH . "/alerts.php";
+require_once COMMON_PATH . "/templates.php";
 
 // Initialize Router
 $router = new Router;

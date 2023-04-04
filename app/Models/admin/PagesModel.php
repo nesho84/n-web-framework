@@ -23,7 +23,7 @@ class PagesModel extends Model
         }
     }
     //------------------------------------------------------------
-    public function getPageById(int $id): array
+    public function getPageById(int $id): array|bool
     //------------------------------------------------------------
     {
         try {

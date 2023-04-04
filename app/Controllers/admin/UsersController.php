@@ -152,16 +152,16 @@ class UsersController extends Controller
                         'settingTheme' => 'light'
                     ]);
 
-                    setFlashMsg('success', 'Insert completed successfully.');
+                    setAlert('success', 'Insert completed successfully.');
                     unset($_SESSION['inputs']);
                     redirect(ADMURL . '/users');
                 } catch (Exception $e) {
-                    setFlashMsg('error', $e->getMessage());
+                    setAlert('error', $e->getMessage());
                     $_SESSION['inputs'] = $postArray;
                     redirect(ADMURL . '/users/create');
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/users/create');
             }
@@ -323,18 +323,18 @@ class UsersController extends Controller
                     try {
                         // Update in Database
                         $this->usersModel->updateUser($postArray);
-                        setFlashMsg('success', 'Update completed successfully');
+                        setAlert('success', 'Update completed successfully');
                         redirect(ADMURL . '/users');
                     } catch (Exception $e) {
-                        setFlashMsg('error', $e->getMessage());
+                        setAlert('error', $e->getMessage());
                         redirect(ADMURL . '/users/edit/' . $id);
                     }
                 } else {
-                    setFlashMsg('warning', 'No fields were changed');
+                    setAlert('warning', 'No fields were changed');
                     redirect(ADMURL . '/users/edit/' . $id);
                 }
             } else {
-                setFlashMsg('error', $error);
+                setAlert('error', $error);
                 redirect(ADMURL . '/users/edit/' . $id);
             }
         }
@@ -364,12 +364,12 @@ class UsersController extends Controller
                 $this->usersModel->deleteUser($id);
                 // Delete User Settings in Database
                 $this->settingsModel->deleteSetting($setting['settingID']);
-                setFlashMsg('success', 'User with the ID: <strong>' . $id . '</strong> and settings deleted successfully.');
+                setAlert('success', 'User with the ID: <strong>' . $id . '</strong> and settings deleted successfully.');
             } catch (Exception $e) {
-                setFlashMsg('error', $e->getMessage());
+                setAlert('error', $e->getMessage());
             }
         } else {
-            setFlashMsg('error', $error);
+            setAlert('error', $error);
             redirect(ADMURL . '/users');
         }
 

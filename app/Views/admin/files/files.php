@@ -1,6 +1,6 @@
 <!-- Page Header -->
 <?php
-showHeading([
+displayHeader([
     'title' => 'Files',
     'btnText' => 'Create New +',
     'btnLink' => ADMURL . '/files/create',
@@ -31,7 +31,7 @@ showHeading([
                                 <td><a class="link-success" target="_blank" href="' . $d['fileLink'] . '">' . $d['fileName'] . '</a></td>
                                 <td>' . $d['fileType'] . '</td>
                                 <td class="text-center">
-                                    <a class="btn btn-link" target="_blank" href="' . $d['fileLink'] . '">
+                                    <a class="d-modal-file btn btn-link" href="' . $d['fileLink'] . '" data-title="' . $d['fileName'] . '">
                                         <i class="far fa-share-square"></i>
                                     </a>
                                     <a class="btn btn-link btn-delete" href="' . ADMURL . '/files/delete/' . $d['fileID'] . '">

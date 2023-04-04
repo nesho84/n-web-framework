@@ -1,6 +1,6 @@
 <!-- Page Header -->
 <?php
-showHeading(['title' => 'Settings']);
+displayHeader(['title' => 'Settings']);
 ?>
 
 <div class="container-lg">
@@ -14,7 +14,7 @@ showHeading(['title' => 'Settings']);
                     <i class="far fa-list-alt"></i> All Backups
                 </a>
             </div>
-            <p class="card-text text-muted"><small>backup is the process of creating, managing, and storing copies of data <br> in case it's lost, corrupted, or damaged.</small></p>
+            <p class="card-text text-muted"><small>Backup is the process of creating, managing, and storing copies of data <br> in case it's lost, corrupted, or damaged.</small></p>
             <!-- Backup Form -->
             <form id="formBackup" action="<?php echo ADMURL . '/settings/dbbackup'; ?>" method="POST" enctype="multipart/form-data">
                 <button type="submit" id="dbbackup" name="dbbackup" class="btn btn-outline-dark">
@@ -88,8 +88,8 @@ showHeading(['title' => 'Settings']);
         // Attach the submit event handler to the form (ajax.js)
         const form = document.querySelector("#formBackup");
         if (form) {
-            form.addEventListener("submit", (event) => {
-                handleFormSubmit(event);
+            form.addEventListener("submit", async (event) => {
+                await handleFormSubmit(event, "Backup completed successfully");
             });
         }
     });

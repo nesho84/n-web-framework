@@ -63,7 +63,7 @@ $bodyTheme = $baseTheme == "dark" ? "dark" : "white";
 
         <!-- Flash/Toast Messages from Sessions or JS -->
         <div id="alert-container">
-            <?php getFlashMsg(); ?>
+            <?php showAlert(); ?>
         </div>
 
         <main>

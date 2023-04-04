@@ -1,6 +1,6 @@
 <!-- Page Header -->
 <?php
-showHeading([
+displayHeader([
     'title' => 'Pages',
     'btnText' => 'Create New +',
     'btnLink' => ADMURL . '/pages/create',

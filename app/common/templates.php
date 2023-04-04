@@ -2,7 +2,7 @@
 
 /**
  * Prints a page header 
- * @param array $args assotiative array with elements: 
+ * @param array $options assotiative array with elements: 
  * $title header title,
  * $title2 (optional) header title2,
  * $btnLink (optional) header button link,
@@ -10,24 +10,24 @@
  * $btnClass (optional) header button bootstrap color
  */
 //------------------------------------------------------------
-function showHeading(array $args = []): void
+function displayHeader(array $options = []): void
 //------------------------------------------------------------
 {
     $allowed_keys = array('title' => '', 'title2' => '', 'btnLink' => '', 'btnText' => '', 'btnClass' => '');
 
 
-    if ($args) {
-        extract($args);
+    if ($options) {
+        extract($options);
 
         $keyExists = true;
-        foreach ($args as $key => $value) {
+        foreach ($options as $key => $value) {
             if (!in_array($key, array_keys($allowed_keys))) {
                 // echo "key: $key is not allowed<br>";
                 $keyExists = false;
             }
         }
 
-        // Show only if $args key exist
+        // Show only if $options key exist
         if ($keyExists == true) {
             $btnOrTitle2 = "";
             if (isset($btnText)) {
@@ -55,13 +55,13 @@ function showHeading(array $args = []): void
 }
 
 /**
- * Display Message if no data
+ * Display Message if data was not found
  * @param string $text for showing the message
  * @param string $backBtnUrl url for the button to navigate
  * @return void
  */
 //------------------------------------------------------------
-function showNoDataBox(string $text, string $backBtnUrl = ""): void
+function displayNoDataBox(string $text, string $backBtnUrl = ""): void
 //------------------------------------------------------------
 {
     $btn = '<a href="' . $backBtnUrl . '" class="btn btn-secondary btn-bloc mt-4 mb-2"">

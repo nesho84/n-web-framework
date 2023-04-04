@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<?php showHeading(['title' => 'Create Translation']); ?>
+<?php displayHeader(['title' => 'Create Translation']); ?>
 
 <div class="container-lg">
     <div class="card">

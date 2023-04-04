@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<?php showHeading(['title' => 'Create Invoice']); ?>
+<?php displayHeader(['title' => 'Create Invoice']); ?>
 
 <div class="container-lg">
     <div class="card">
@@ -135,8 +135,6 @@
     const newCompanyGroup = document.getElementById('new-company-group');
     const companySelect = document.getElementById('companyID');
     const companyTypeInput = document.getElementById('company-type');
-    // Form
-    const form = document.querySelector("#formInvoices");
 
     document.addEventListener('DOMContentLoaded', function() {
         // Add new Company
@@ -153,7 +151,12 @@
         setTotalPrice();
 
         // Attach the submit event handler to the form (ajax.js)
-        form.addEventListener("submit", handleFormSubmit);
+        const form = document.querySelector("#formInvoices");
+        if (form) {
+            form.addEventListener("submit", async (event) => {
+                await handleFormSubmit(event, "Invoice created successfully");
+            });
+        }
     });
 
     function addCompany() {

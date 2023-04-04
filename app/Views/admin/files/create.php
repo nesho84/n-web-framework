@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<?php showHeading(['title' => 'Create/Upload File']); ?>
+<?php displayHeader(['title' => 'Create/Upload File']); ?>
 
 <div class="container-lg">
     <div class="card">

@@ -29,7 +29,7 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getLanguageById(int $id): array
+    public function getLanguageById(int $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -67,7 +67,6 @@ class LanguagesModel extends Model
     public function updateLanguage(array $postArray): bool
     //------------------------------------------------------------
     {
-
         try {
             // Starts a database transaction
             $this->beginTransaction();

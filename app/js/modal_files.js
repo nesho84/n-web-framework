@@ -1,26 +1,26 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Get all elements with the class 'd-modal-pdf' 
-    document.querySelectorAll('.d-modal-pdf').forEach(link => {
+    // Get all elements with the class 'd-modal-file' 
+    document.querySelectorAll('.d-modal-file').forEach(link => {
         // Add click event listener to each element
         link.addEventListener('click', (event) => {
             event.preventDefault();
             event.stopPropagation();
             // Show the modal for the clicked element
-            showPdfModal(link);
+            showFilesModal(link);
         });
     });
 });
 
-function showPdfModal(element) {
-    const modalEl = createPdfModal();
+function showFilesModal(element) {
+    const modalEl = createFileModal();
     const pdfUrl = getPdfUrl(element);
 
     // Get modalHTML elements
     const modalBody = modalEl.querySelector('.modal-body');
     const modalTitle = modalEl.querySelector('.modal-title');
-    const pdfObject = document.getElementById('pdf-object');
+    const pdfObject = document.getElementById('file-object');
 
     // Add an event listener to the modal instance
     modalEl.addEventListener('show.bs.modal', async function (event) {
@@ -59,7 +59,7 @@ function showPdfModal(element) {
     dModal.handleUpdate();
 }
 
-function createPdfModal() {
+function createFileModal() {
     let modalHTML = `
     <div class="modal fade" id="pdf-modal" tabindex="-1" aria-labelledby="pdf-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -68,8 +68,8 @@ function createPdfModal() {
                     <h5 class="modal-title" id="pdf-modal-label"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-0">
-                    <object id="pdf-object" type="application/pdf" width="100%" height="100%" data="" style="min-height: 700px;">
+                <div class="modal-body align-items-center justify-content-center p-0">
+                    <object id="file-object" type="application/pdf" width="100%" height="100%" data="" style="min-height: 700px;">
                     </object>
                 </div>
                 <!--<div class="modal-footer"></div>-->

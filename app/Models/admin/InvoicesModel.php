@@ -34,7 +34,7 @@ class InvoicesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getInvoiceById(int $id): array
+    public function getInvoiceById(int $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -115,24 +115,14 @@ class InvoicesModel extends Model
     }
 
     // //------------------------------------------------------------
-    // public function updateCategory(array $postArray): bool
+    // public function updateInvoice(array $postArray): bool
     // //------------------------------------------------------------
     // {
     //     try {
     //         // Starts a database transaction
     //         $this->beginTransaction();
 
-    //         // $stmt = $this->prepare(
-    //         //     "UPDATE categories 
-    //         //     SET userID = :userID,
-    //         //         categoryType = :categoryType,
-    //         //         categoryLink = :categoryLink,
-    //         //         categoryName = :categoryName,
-    //         //         categoryDescription = :categoryDescription
-    //         //     WHERE categoryID = :categoryID"
-    //         // );
-
-    //         $stmt = $this->prepareUpdate('categories', 'categoryID', $postArray);
+    //         $stmt = $this->prepareUpdate('invoices', 'invoiceID', $postArray);
     //         $this->bindValues($stmt, $postArray);
     //         $stmt->execute();
 

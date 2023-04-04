@@ -1,6 +1,6 @@
     <!-- Page Header -->
     <?php
-    showHeading([
+    displayHeader([
         'title' => 'Languages',
         'btnText' => 'Create New +',
         'btnLink' => ADMURL . '/languages/create',

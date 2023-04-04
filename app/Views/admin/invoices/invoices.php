@@ -1,6 +1,6 @@
 <!-- Page Header -->
 <?php
-showHeading([
+displayHeader([
     'title' => 'Invoices',
     'btnText' => 'Create New +',
     'btnLink' => ADMURL . '/invoices/create',
@@ -34,7 +34,7 @@ showHeading([
                                 <td>' . $d['companyName'] . '</td>
                                 <td>' . date_format($date, 'd.m.Y') . '</td>
                                 <td class="text-center">
-                                    <a class="d-modal-pdf btn btn-link" href="' . ADMURL . '/invoices/pdf_output?id=' . $d['invoiceID'] . '" data-title="Customer: ' . $d['companyName'] . '" >
+                                    <a class="d-modal-file btn btn-link" href="' . ADMURL . '/invoices/pdf_output?id=' . $d['invoiceID'] . '" data-title="Customer: ' . $d['companyName'] . '">
                                         <i class="far fa-file-pdf"></i>
                                     </a>
                                     <a class="btn btn-link" href="' . ADMURL . '/invoices/edit/' . $d['invoiceID'] . '">

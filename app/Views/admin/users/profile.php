@@ -28,6 +28,6 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
 
 <?php
 } else {
-    showNoDataBox("No data found", ADMURL . "/users");
+    displayNoDataBox("No data found", ADMURL . "/users");
 }
 ?>

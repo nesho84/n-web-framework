@@ -21,7 +21,7 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getTranslationById(int $id): array
+    public function getTranslationById(int $id): array|bool
     //------------------------------------------------------------
     {
         try {

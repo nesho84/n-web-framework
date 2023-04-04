@@ -5,7 +5,7 @@
         extract($rows);
 
         // Page Heading
-        showHeading([
+        displayHeader([
             'title' => 'Edit User',
             'title2' => '<strong>ID: </strong>' . $userID,
         ]);
@@ -102,6 +102,6 @@
 
     <?php
     } else {
-        showNoDataBox("No data found", ADMURL . "/users");
+        displayNoDataBox("No data found", ADMURL . "/users");
     }
     ?>

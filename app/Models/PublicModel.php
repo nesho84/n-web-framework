@@ -3,13 +3,13 @@
 class PublicModel extends Model
 {
     //------------------------------------------------------------
-    public function getActivePage(string $pageName): array
+    public function getActivePage(string $pageName): array|bool
     //------------------------------------------------------------
     {
         // @TODO: test
         // $_SESSION["language"] = "al";
-        $_SESSION["languageID"] = 2;
         // unset($_SESSION["language"]);
+        $_SESSION["languageID"] = 2;
 
         try {
             $stmt = $this->prepare(
@@ -53,7 +53,7 @@ class PublicModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getLanguage(string $languageID, int $translationCode): string
+    public function getLanguage(string $languageID, int $translationCode): string|bool
     //------------------------------------------------------------
     {
         try {

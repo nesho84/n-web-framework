@@ -5,7 +5,7 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
     extract($rows);
 
     // Page Heading
-    showHeading([
+    displayHeader([
         'title' => 'Edit Page',
         'title2' => '<strong>ID: </strong>' . $pageID,
     ]);
@@ -89,6 +89,6 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
 
 <?php
 } else {
-    showNoDataBox("No data found", ADMURL . "/pages");
+    displayNoDataBox("No data found", ADMURL . "/pages");
 }
 ?>
