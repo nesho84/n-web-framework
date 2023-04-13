@@ -56,24 +56,24 @@ class PagesController extends Controller
                 'PageMetaKeywords' => htmlspecialchars(trim($_POST['PageMetaKeywords'])),
             ];
 
-            $_SESSION['inputs'] = [];
-            $validated = true;
-            $error = '';
+            // Get all existing language ids from the Model
+            $languages = $this->languagesModel->getLanguages();
+            $valid_ids = array();
+            foreach ($languages as $lang) {
+                $valid_ids[] = $lang['languageID'];
+            }
 
-            if (empty($postArray['pageName'])) {
-                $validated = false;
-                $error .= 'Page Name can not be empty!<br>';
-            }
-            if (empty($postArray['pageTitle'])) {
-                $validated = false;
-                $error .= 'Please insert a Page Title!<br>';
-            }
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Page Name', $postArray['pageName'])->required()->min(3)->max(20);
+            $validator('Page Title', $postArray['pageTitle'])->required()->min(3)->max(20);
             if (empty($postArray['languageID'])) {
-                $validated = false;
-                $error .= 'Please choose a Language!<br>';
+                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
             }
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 try {
                     // Insert in Database
                     $this->pagesModel->insertPage($postArray);
@@ -86,7 +86,7 @@ class PagesController extends Controller
                     redirect(ADMURL . '/pages/create');
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/pages/create');
             }
@@ -124,24 +124,24 @@ class PagesController extends Controller
 
             // Get existing page from the Model
             $page = $this->pagesModel->getPageById($id);
-
-            $validated = true;
-            $error = '';
-
-            if (empty($postArray['pageName'])) {
-                $validated = false;
-                $error .= 'Page Name can not be empty!<br>';
+            // Get all existing language ids from the Model
+            $languages = $this->languagesModel->getLanguages();
+            $valid_ids = array();
+            foreach ($languages as $lang) {
+                $valid_ids[] = $lang['languageID'];
             }
-            if (empty($postArray['pageTitle'])) {
-                $validated = false;
-                $error .= 'Please insert a Page Title!<br>';
-            }
+
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Page Name', $postArray['pageName'])->required()->min(3)->max(20);
+            $validator('Page Title', $postArray['pageTitle'])->required()->min(3)->max(20);
             if (empty($postArray['languageID'])) {
-                $validated = false;
-                $error .= 'Please choose a Language!<br>';
+                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
             }
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 // Update only changed fields and skip the 'id'
                 foreach ($postArray as $key => $value) {
                     if (isset($postArray[$key]) && $page[$key] == $value && $key !== 'pageID') {
@@ -164,7 +164,7 @@ class PagesController extends Controller
                     redirect(ADMURL . '/pages/edit/' . $id);
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 redirect(ADMURL . '/pages/edit/' . $id);
             }
         }

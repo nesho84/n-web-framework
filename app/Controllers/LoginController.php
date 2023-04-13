@@ -103,6 +103,9 @@ class LoginController extends Controller
         // Regenerates the session ID and creates a new session
         session_regenerate_id(true);
 
+        // Save CSRF_TOKEN in the session
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
         // Set User Session array
         $_SESSION['user'] = [
             'session_token' => session_id(),
@@ -118,9 +121,6 @@ class LoginController extends Controller
             $_SESSION['user']['last_login'] = $_COOKIE['last_login'];
         }
         setcookie('last_login', time(), 2147483647);
-
-        // Save csrf_token in the session
-        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
         // Remember me checkBox
         if (!empty($postArray['loginRemember'])) {

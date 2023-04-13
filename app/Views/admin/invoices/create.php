@@ -154,7 +154,7 @@
         const form = document.querySelector("#formInvoices");
         if (form) {
             form.addEventListener("submit", async (event) => {
-                await handleFormSubmit(event, "Invoice created successfully");
+                await handleFormSubmit(event);
             });
         }
     });
@@ -162,7 +162,11 @@
     function addCompany() {
         newCompanyGroup.style.display = newCompanyGroup.style.display === 'none' ? 'block' : 'none';
         companySelect.selectedIndex = 0; // reset the select input
-        companyTypeInput.value = 'new'; // set the company type to 'new'
+        if (companyTypeInput.value === 'existing') {
+            companyTypeInput.value = 'new'; // set the company type to 'new'            
+        } else {
+            companyTypeInput.value = 'existing';
+        }
     }
 
     function selectCompany() {

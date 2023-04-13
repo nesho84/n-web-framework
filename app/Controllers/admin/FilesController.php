@@ -52,30 +52,20 @@ class FilesController extends Controller
                 // 'fileType' => htmlspecialchars(trim($_POST['fileType'])),
                 'fileLink' => $_FILES['fileLink'] ?? null,
             ];
-            // dd($postArray);
 
-            $_SESSION['inputs'] = [];
-            $validated = true;
-            $error = '';
-
-            if (empty($postArray['categoryID'])) {
-                $validated = false;
-                $error .= 'Please insert a File Category!<br>';
-            }
-            if (empty($postArray['fileLink']['name'])) {
-                $validated = false;
-                $error .= 'Please insert a File Link!<br>';
-            }
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('File Category', $postArray['categoryID'])->required()->number();
+            $validator('File Link', $postArray['fileLink']['name'])->required();
 
             // --- File Upload and Validation START --- //
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 $category = $this->categoriesModel->getCategoryById((int)$postArray['categoryID']);
                 $folder = trim(strtolower($category['categoryName']));
                 [$uploadError, $targetPath] = FileHandler::upload($postArray['fileLink'], $folder);
                 // First Check if there was an error
                 if ($uploadError !== "") {
-                    $validated = false;
-                    $error .= "$uploadError <br>";
+                    $validator->addError('Upload', $uploadError)->setValidated(false);
                 } else {
                     $postArray['fileName'] = pathinfo($targetPath, PATHINFO_BASENAME);
                     $postArray['fileType'] = pathinfo($targetPath, PATHINFO_EXTENSION);
@@ -84,7 +74,7 @@ class FilesController extends Controller
             }
             // --- File Upload and Validation END --- //
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 try {
                     // Insert in Database
                     $this->filesModel->insertFile($postArray);
@@ -98,7 +88,7 @@ class FilesController extends Controller
                     redirect(ADMURL . '/files/create');
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/files/create');
             }

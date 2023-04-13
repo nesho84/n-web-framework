@@ -66,12 +66,15 @@ class InvoicesController extends Controller
         $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
         if ($csrfToken !== $_SESSION['csrf_token']) {
             http_response_code(419);
-            echo json_encode(['message' => 'Invalid CSRF token']);
+            echo json_encode([
+                "status" => "error",
+                'message' => 'Invalid CSRF token'
+            ]);
             exit();
         }
 
-        $validated = true;
-        $errors = [];
+        // Validate inputs
+        $validator = new DataValidator();
 
         // Get Company Information and validate data
         $companyType = htmlspecialchars(trim($_POST['company-type']));
@@ -80,8 +83,8 @@ class InvoicesController extends Controller
         if ($companyType === 'existing') {
             $companyID = isset($_POST['companyID']) ? htmlspecialchars(trim($_POST['companyID'])) : "";
             if (empty($companyID)) {
-                $validated = false;
-                $errors[] = 'Please choose Company or create a new!';
+                $validator->addError('Company', 'Please choose Company or create a new')
+                    ->setValidated(false);
             }
         }
         if ($companyType === 'new') {
@@ -95,18 +98,9 @@ class InvoicesController extends Controller
                 'companyPhone' => htmlspecialchars(trim($_POST['companyPhone'])),
                 'companyEmail' => htmlspecialchars(trim($_POST['companyEmail'])),
             ];
-            if (empty($companyArray['companyName'])) {
-                $validated = false;
-                $errors[] = 'Please insert a Company Name!';
-            }
-            if (empty($companyArray['companyAddress'])) {
-                $validated = false;
-                $errors[] = 'Please insert a Company Address!';
-            }
-            if (empty($companyArray['companyEmail'])) {
-                $validated = false;
-                $errors[] = 'Please insert a Company Email!';
-            }
+            $validator('Company Name', $companyArray['companyName'])->required()->min(3)->max(20);
+            $validator('Company Address', $companyArray['companyAddress'])->required()->min(3)->max(20);
+            $validator('Company Email', $companyArray['companyEmail'])->required()->min(3)->max(20);
         }
 
         // Secure services POST Array and Validate
@@ -122,8 +116,7 @@ class InvoicesController extends Controller
             }
         }
         if ($errorServices > 0) {
-            $validated = false;
-            $errors[] = 'Service fields can not be empty!';
+            $validator->addError('Services', 'Service fields can not be empty')->setValidated(false);
         }
 
         $postArray = [
@@ -137,23 +130,27 @@ class InvoicesController extends Controller
             'services' => $servicesArray
         ];
 
-        if ($validated === true) {
+        if ($validator->isValidated()) {
             try {
                 // Insert in Database
                 $this->invoicesModel->insertInvoice($postArray);
                 // setAlert('success', 'Invoice created successfully');
-                echo json_encode(["status" => "success"]);
+                echo json_encode([
+                    "status" => "success",
+                    'message' => 'Invoice created successfully',
+                ]);
             } catch (Exception $e) {
                 http_response_code(500);
-                echo json_encode(["status" => "error", "message" => $e->getMessage()]);
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $e->getMessage()
+                ]);
                 exit();
             }
         } else {
-            if (count($errors) > 0) {
-                // http_response_code(422);
-                echo json_encode(["status" => "error", "message" => $errors]);
-                exit();
-            }
+            // http_response_code(422);
+            echo json_encode(["status" => "error", "message" => $validator->getErrors()]);
+            exit();
         }
     }
 

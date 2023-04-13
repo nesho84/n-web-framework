@@ -60,7 +60,9 @@ use PHPMailer\PHPMailer\Exception;
 
 class EmailService
 {
+    //------------------------------------------------------------
     public static function send(array $options): void
+    //------------------------------------------------------------
     {
         require LIBRARY_PATH . '/PHPMailer/src/PHPMailer.php';
         require LIBRARY_PATH . '/PHPMailer/src/SMTP.php';

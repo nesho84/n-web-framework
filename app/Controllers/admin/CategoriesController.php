@@ -48,20 +48,12 @@ class CategoriesController extends Controller
                 'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
             ];
 
-            $_SESSION['inputs'] = [];
-            $validated = true;
-            $error = '';
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Category Name', $postArray['categoryName'])->required()->min(3)->max(20);
+            $validator('Category Type', $postArray['categoryType'])->required()->min(3)->max(20);
 
-            if (empty($postArray['categoryName'])) {
-                $validated = false;
-                $error .= 'Please insert a Category Name!<br>';
-            }
-            if (empty($postArray['categoryType'])) {
-                $validated = false;
-                $error .= 'Category Type can not be empty!<br>';
-            }
-
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 try {
                     // Insert in Database
                     $this->categoriesModel->insertCategory($postArray);
@@ -74,7 +66,7 @@ class CategoriesController extends Controller
                     redirect(ADMURL . '/categories/create');
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/categories/create');
             }
@@ -108,32 +100,19 @@ class CategoriesController extends Controller
             // Get existing category from the Model
             $category = $this->categoriesModel->getCategoryById($id);
 
-            $validated = true;
-            $error = '';
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Category Name', $postArray['categoryName'])->required()->min(3)->max(20);
+            $validator('Category Type', $postArray['categoryType'])->required()->min(3)->max(20);
 
-            if (empty($postArray['categoryName'])) {
-                $validated = false;
-                $error .= 'Please insert a Category Name!<br>';
-            }
-            if (empty($postArray['categoryType'])) {
-                $validated = false;
-                $error .= 'Category Type can not be empty!<br>';
-            }
-
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 // Remove unchanged postArray keys but keep the 'id'
                 foreach ($postArray as $key => $value) {
                     if (isset($postArray[$key]) && $category[$key] == $value && $key !== 'categoryID') {
                         unset($postArray[$key]);
                     }
                 }
-                // echo "array from db";
-                // dd_print($category);
-                // echo "<br>";
-                // echo "PostArray";
-                // dd_print($postArray);
-                // echo "<br>";
-                // die;
+
                 if (count($postArray) > 1) {
                     try {
                         // Update in Database
@@ -149,7 +128,7 @@ class CategoriesController extends Controller
                     redirect(ADMURL . '/categories/edit/' . $id);
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 redirect(ADMURL . '/categories/edit/' . $id);
             }
         }

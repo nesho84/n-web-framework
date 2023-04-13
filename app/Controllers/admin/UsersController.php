@@ -65,51 +65,34 @@ class UsersController extends Controller
             // Get all users from the Model
             $users = $this->usersModel->getUsers();
 
-            $_SESSION['inputs'] = [];
-            $validated = true;
-            $error = '';
-
-            if (empty($postArray['userName'])) {
-                $validated = false;
-                $error .= 'Username can not be empty!<br>';
-            } else {
-                // Username exist Validation
-                foreach ($users as $u) {
-                    if ($u['userName'] == $postArray['userName']) {
-                        $validated = false;
-                        $error .= "Username already exists!<br>";
-                    }
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Username', $postArray['userName'])->required()->min(3)->max(20);
+            // Username exist Validation
+            foreach ($users as $u) {
+                if ($u['userName'] == $postArray['userName']) {
+                    $validator->addError('Username', 'Username already exists!')->setValidated(false);
                 }
             }
 
             if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
-                $validated = false;
-                $error .= "The email you entered was not valid!<br>";
+                $validator->addError('userEmail', 'The email you entered was not valid!')->setValidated(false);
             } else {
                 // Email exist Validation
                 foreach ($users as $u) {
                     if ($u['userEmail'] == $postArray['userEmail']) {
-                        $validated = false;
-                        $error .= "Email already exists!<br>";
+                        $validator->addError('userEmail', 'Email already exists!')->setValidated(false);
                     }
                 }
             }
 
-            if (empty($postArray['userPassword'])) {
-                $validated = false;
-                $error .= 'Password can not be empty!<br>';
+            $validator('Password', $postArray['userPassword'])->required()->min(6)->max(20);
+            if ($postArray['userPassword'] !== $_POST['userPassword2']) {
+                $validator->addError('userPassword', 'Passwords do not match!')->setValidated(false);
             } else {
-                if (strlen($postArray['userPassword']) < 6) {
-                    $validated = false;
-                    $error .= "The password must have at least 6 characters!<br>";
-                } elseif ($postArray['userPassword'] !== $_POST['userPassword2']) {
-                    $validated = false;
-                    $error .= "Passwords do not match!<br>";
-                } else {
-                    // Hash the password
-                    $options = ['cost' => 10];
-                    $postArray['userPassword'] = password_hash($postArray['userPassword'], PASSWORD_BCRYPT, $options);
-                }
+                // Hash the password
+                $options = ['cost' => 10];
+                $postArray['userPassword'] = password_hash($postArray['userPassword'], PASSWORD_BCRYPT, $options);
             }
 
             // base64 Image Logic and Validation
@@ -121,25 +104,23 @@ class UsersController extends Controller
                 // Get the width and height of the image
                 [$width, $height] = getimagesize($file);
                 if ($width > 150 || $height > 150) {
-                    $validated = false;
-                    $error .= "Only images with max. 150x150 pixels are allowed.";
+                    $validator->addError('userPicture', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
                 }
                 // Make sure `file.name` matches our extensions criteria
                 $allowed_extensions = array("jpg", "jpeg", "png", "gif");
                 $extension = pathinfo($postArray['userPicture']['name'], PATHINFO_EXTENSION);
                 if (!in_array($extension, $allowed_extensions)) {
-                    $validated = false;
-                    $error .= "Only jpeg, png, and gif images are allowed.";
+                    $validator->addError('userPicture', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
                 }
                 // Set Image only if validation passed
-                if ($validated) {
+                if ($validator->isValidated()) {
                     $image = file_get_contents($file);
                     $image = base64_encode($image);
                     $postArray['userPicture'] = 'data:image/png;base64,' . $image;
                 }
             }
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 try {
                     // Insert in Database
                     $lastInsertId = $this->usersModel->insertUser($postArray);
@@ -161,7 +142,7 @@ class UsersController extends Controller
                     redirect(ADMURL . '/users/create');
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/users/create');
             }
@@ -198,30 +179,23 @@ class UsersController extends Controller
             // Get existing user from the Model
             $user = $this->usersModel->getUserById($id);
 
-            $validated = true;
-            $error = '';
-
-            if (empty($postArray['userName'])) {
-                $validated = false;
-                $error .= 'Username can not be empty!<br>';
-            } else {
-                // Username exist Validation
-                foreach ($users as $u) {
-                    if ($u['userName'] == $postArray['userName']) {
-                        $validated = false;
-                        $error .= "Username already exists!<br>";
-                    }
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Username', $postArray['userName'])->required()->min(3)->max(20);
+            // Username exist Validation
+            foreach ($users as $u) {
+                if ($u['userName'] == $postArray['userName']) {
+                    $validator->addError('Username', 'Username already exists!')->setValidated(false);
                 }
             }
+
             if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
-                $validated = false;
-                $error .= "The email you entered was not valid!<br>";
+                $validator->addError('userEmail', 'The email you entered was not valid!')->setValidated(false);
             } else {
                 // Email exist Validation
                 foreach ($users as $u) {
                     if ($u['userEmail'] == $postArray['userEmail']) {
-                        $validated = false;
-                        $error .= "Email already exists!<br>";
+                        $validator->addError('userEmail', 'Email already exists!')->setValidated(false);
                     }
                 }
             }
@@ -230,49 +204,36 @@ class UsersController extends Controller
             if ($user['userName'] == 'admin') {
                 // 'admin' Username can not be changed Validation
                 if ($postArray['userName'] != $user['userName']) {
-                    $validated = false;
-                    $error .= 'Admin Username can not be changed!<br>';
+                    $validator->addError('userName', 'Admin Username can not be changed!')->setValidated(false);
                 }
                 // 'admin' Role can not be changed Validation
                 if ($postArray['userRole'] == 'default' && isset($_POST['userRoleHidden'])) {
                     $postArray['userRole'] = htmlspecialchars($_POST['userRoleHidden']);
                     if ($postArray['userRole'] != $user['userRole']) {
-                        $validated = false;
-                        $error .= 'Admin Role can not be changed!<br>';
+                        $validator->addError('userRole', 'Admin Role can not be changed!')->setValidated(false);
                     }
                 }
                 // 'admin' Status can not be changed Validation
                 if ($postArray['userStatus'] == 0 && isset($_POST['userStatusHidden'])) {
                     $postArray['userStatus'] = (int) $_POST['userStatusHidden'];
                     if ($postArray['userStatus'] != $user['userStatus']) {
-                        $validated = false;
-                        $error .= 'Admin Status can not be changed!<br>';
+                        $validator->addError('userStatus', 'Admin Status can not be changed!')->setValidated(false);
                     }
                 }
             }
 
-
             // Password change Validation - If the new password is set
             if ($_POST['userOldPassword'] !== "" || $_POST['userNewPassword'] !== "" || $_POST['userNewPassword2'] !== "") {
                 if (!password_verify($_POST['userOldPassword'], $user["userPassword"])) {
-                    $validated = false;
-                    $error .= "The old Password is wrong!<br>";
+                    $validator->addError('userOldPassword', 'The old Password is wrong!')->setValidated(false);
                 } else {
-                    if (empty($_POST['userNewPassword'])) {
-                        $validated = false;
-                        $error .= 'New Password can not be empty!<br>';
+                    $validator('New Password', $_POST['userNewPassword'])->required()->min(6)->max(20);
+                    if ($_POST['userNewPassword'] !== $_POST['userNewPassword2']) {
+                        $validator->addError('userOldPassword', 'New Passwords do not match!')->setValidated(false);
                     } else {
-                        if (strlen($_POST['userNewPassword']) < 6) {
-                            $validated = false;
-                            $error .= "The new password must have at least 6 characters!<br>";
-                        } elseif ($_POST['userNewPassword'] !== $_POST['userNewPassword2']) {
-                            $validated = false;
-                            $error .= "New Passwords do not match!<br>";
-                        } else {
-                            // Hash the password
-                            $options = ['cost' => 10];
-                            $postArray['userPassword'] = password_hash($_POST['userNewPassword'], PASSWORD_BCRYPT, $options);
-                        }
+                        // Hash the password
+                        $options = ['cost' => 10];
+                        $postArray['userPassword'] = password_hash($_POST['userNewPassword'], PASSWORD_BCRYPT, $options);
                     }
                 }
             } else {
@@ -289,18 +250,16 @@ class UsersController extends Controller
                 // Get the width and height of the image
                 [$width, $height] = getimagesize($file);
                 if ($width > 150 || $height > 150) {
-                    $validated = false;
-                    $error .= "Only images with max. 150x150 pixels are allowed.";
+                    $validator->addError('userPicture', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
                 }
                 // Make sure `file.name` matches our extensions criteria
                 $allowed_extensions = array("jpg", "jpeg", "png", "gif");
                 $extension = pathinfo($postArray['userPicture']['name'], PATHINFO_EXTENSION);
                 if (!in_array($extension, $allowed_extensions)) {
-                    $validated = false;
-                    $error .= "Only jpeg, png, and gif images are allowed.";
+                    $validator->addError('userPicture', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
                 }
                 // Set Image only if validation passed
-                if ($validated === true) {
+                if ($validator->isValidated()) {
                     $image = file_get_contents($file);
                     $image = base64_encode($image);
                     $postArray['userPicture'] = 'data:image/png;base64,' . $image;
@@ -311,7 +270,7 @@ class UsersController extends Controller
                 }
             }
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 // Remove unchanged postArray keys but keep the 'id'
                 foreach ($postArray as $key => $value) {
                     if (isset($postArray[$key]) && $user[$key] == $value && $key !== 'userID') {
@@ -334,7 +293,7 @@ class UsersController extends Controller
                     redirect(ADMURL . '/users/edit/' . $id);
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 redirect(ADMURL . '/users/edit/' . $id);
             }
         }

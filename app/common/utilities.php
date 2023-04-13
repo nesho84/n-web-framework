@@ -89,3 +89,18 @@ function activePage(array $url): void
         }
     }
 }
+
+//------------------------------------------------------------
+function convertBytes(string $size, string $unit): string
+//------------------------------------------------------------
+{
+    if ($unit == "KB") {
+        return $fileSize = round($size / 1024, 4) . 'KB';
+    }
+    if ($unit == "MB") {
+        return $fileSize = round($size / 1024 / 1024, 4) . 'MB';
+    }
+    if ($unit == "GB") {
+        return $fileSize = round($size / 1024 / 1024 / 1024, 4) . 'GB';
+    }
+}

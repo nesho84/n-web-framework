@@ -54,20 +54,23 @@ class SettingsController extends Controller
 
             // Get existing setting from the Model
             $setting = $this->settingsModel->getSettingById($id);
+            // Get all existing language ids from the Model
+            $languages = $this->languagesModel->getLanguages();
+            $valid_ids = array();
+            foreach ($languages as $lang) {
+                $valid_ids[] = $lang['languageID'];
+            }
 
-            $validated = true;
-            $error = '';
-
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Theme', $postArray['settingTheme'])->required();
             if (empty($postArray['languageID'])) {
-                $validated = false;
-                $error .= 'Language can not be empty!<br>';
-            }
-            if (empty($postArray['settingTheme'])) {
-                $validated = false;
-                $error .= 'Theme can not be empty!<br>';
+                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
             }
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 // Remove unchanged postArray keys but keep the 'id'
                 foreach ($postArray as $key => $value) {
                     if (isset($postArray[$key]) && $setting[$key] == $value && $key !== 'settingID') {
@@ -94,7 +97,7 @@ class SettingsController extends Controller
                     redirect(ADMURL . '/settings');
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 redirect(ADMURL . '/settings');
             }
         }
@@ -124,7 +127,10 @@ class SettingsController extends Controller
         $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
         if ($csrfToken !== $_SESSION['csrf_token']) {
             http_response_code(419);
-            echo json_encode(['message' => 'Invalid CSRF token']);
+            echo json_encode([
+                "status" => "error",
+                'message' => 'Invalid CSRF token'
+            ]);
             exit();
         }
 
@@ -132,11 +138,17 @@ class SettingsController extends Controller
             // Insert in Database
             $this->settingsModel->backupDatabase(DB_BACKUPS_PATH);
             // setAlert('success', 'Backup completed successfully');
-            echo json_encode(["status" => "success"]);
+            echo json_encode([
+                "status" => "success",
+                'message' => 'Backup completed successfully'
+            ]);
             exit();
         } catch (Exception $e) {
             http_response_code(500);
-            echo json_encode(["status" => "error", "message" => $e->getMessage()]);
+            echo json_encode([
+                "status" => "error",
+                "message" => $e->getMessage()
+            ]);
             exit();
         }
     }

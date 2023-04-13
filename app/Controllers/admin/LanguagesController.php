@@ -48,18 +48,10 @@ class LanguagesController extends Controller
                 'languageFlag' => $_FILES['languageFlag'] ?? null,
             ];
 
-            $_SESSION['inputs'] = [];
-            $validated = true;
-            $error = '';
-
-            if (empty($postArray['languageName'])) {
-                $validated = false;
-                $error .= 'Language Name can not be empty!<br>';
-            }
-            if (empty($postArray['languageCode'])) {
-                $validated = false;
-                $error .= 'Please insert a Language Code!<br>';
-            }
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Language Name', $postArray['languageName'])->required()->min(3)->max(20);
+            $validator('Language Code', $postArray['languageCode'])->required()->min(2)->max(20);
 
             // base64 Image Logic and Validation
             if (empty($postArray['languageFlag']['name'])) {
@@ -70,25 +62,23 @@ class LanguagesController extends Controller
                 // Get the width and height of the image
                 [$width, $height] = getimagesize($file);
                 if ($width > 150 || $height > 150) {
-                    $validated = false;
-                    $error .= "Only images with max. 150x150 pixels are allowed.";
+                    $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
                 }
                 // Make sure `file.name` matches our extensions criteria
                 $allowed_extensions = array("jpg", "jpeg", "png", "gif");
                 $extension = pathinfo($postArray['languageFlag']['name'], PATHINFO_EXTENSION);
                 if (!in_array($extension, $allowed_extensions)) {
-                    $validated = false;
-                    $error .= "Only jpeg, png, and gif images are allowed.";
+                    $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
                 }
                 // Set Image only if validation passed
-                if ($validated) {
+                if ($validator->isValidated()) {
                     $image = file_get_contents($file);
                     $image = base64_encode($image);
                     $postArray['languageFlag'] = 'data:image/png;base64,' . $image;
                 }
             }
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 try {
                     // Insert in Database
                     $this->languagesModel->insertLanguage($postArray);
@@ -101,7 +91,7 @@ class LanguagesController extends Controller
                     redirect(ADMURL . '/languages/create');
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/languages/create');
             }
@@ -134,17 +124,10 @@ class LanguagesController extends Controller
             // Get existing language from the Model
             $language = $this->languagesModel->getLanguageById($id);
 
-            $validated = true;
-            $error = '';
-
-            if (empty($postArray['languageName'])) {
-                $validated = false;
-                $error .= 'Language Name can not be empty!<br>';
-            }
-            if (empty($postArray['languageCode'])) {
-                $validated = false;
-                $error .= 'Please insert a Language Code!<br>';
-            }
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Language Name', $postArray['languageName'])->required()->min(3)->max(20);
+            $validator('Language Code', $postArray['languageCode'])->required()->min(2)->max(20);
 
             // base64 Image Logic and Validation
             if (empty($postArray['languageFlag']['name'])) {
@@ -155,25 +138,23 @@ class LanguagesController extends Controller
                 // Get the width and height of the image
                 [$width, $height] = getimagesize($file);
                 if ($width > 150 || $height > 150) {
-                    $validated = false;
-                    $error .= "Only images with max. 150x150 pixels are allowed.";
+                    $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
                 }
                 // Make sure `file.name` matches our extensions criteria
                 $allowed_extensions = array("jpg", "jpeg", "png", "gif");
                 $extension = pathinfo($postArray['languageFlag']['name'], PATHINFO_EXTENSION);
                 if (!in_array($extension, $allowed_extensions)) {
-                    $validated = false;
-                    $error .= "Only jpeg, png, and gif images are allowed.";
+                    $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
                 }
                 // Set Image only if validation passed
-                if ($validated === true) {
+                if ($validator->isValidated()) {
                     $image = file_get_contents($file);
                     $image = base64_encode($image);
                     $postArray['languageFlag'] = 'data:image/png;base64,' . $image;
                 }
             }
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 // Remove unchanged postArray keys but keep the 'id'
                 foreach ($postArray as $key => $value) {
                     if (isset($postArray[$key]) && $language[$key] == $value && $key !== 'languageID') {
@@ -196,7 +177,7 @@ class LanguagesController extends Controller
                     redirect(ADMURL . '/languages/edit/' . $id);
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 redirect(ADMURL . '/languages/edit/' . $id);
             }
         }

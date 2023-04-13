@@ -89,7 +89,7 @@ displayHeader(['title' => 'Settings']);
         const form = document.querySelector("#formBackup");
         if (form) {
             form.addEventListener("submit", async (event) => {
-                await handleFormSubmit(event, "Backup completed successfully");
+                await handleFormSubmit(event);
             });
         }
     });

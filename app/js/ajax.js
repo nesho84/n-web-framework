@@ -1,15 +1,20 @@
 'use strict';
 
 // Function to handle both GET and POST requests
-async function handleRequest(url, method, data) {
+async function handleRequest(url, method, data = null) {
     try {
-        const response = await fetch(url, {
+        let options = {
             method: method,
             headers: {
                 "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             },
-            body: data
-        });
+        };
+
+        if (method.toLowerCase() === 'post') {
+            options.body = data;
+        }
+
+        const response = await fetch(url, options);
         const result = await response.json();
         if (response.ok) {
             return result;
@@ -22,7 +27,7 @@ async function handleRequest(url, method, data) {
 }
 
 // Function to handle form submission
-async function handleFormSubmit(event, successMessage = "Success!") {
+async function handleFormSubmit(event) {
     event.preventDefault();
 
     const form = event.target;
@@ -38,20 +43,22 @@ async function handleFormSubmit(event, successMessage = "Success!") {
         const result = await handleRequest(url, method, formData);
 
         if (result.status === "success") {
-            showResponseMessage("bg-success", successMessage);
-            // Hide toast message or refresh the page after 5 seconds
-            setTimeout(() => {
-                // hideResponseMessage();
-                window.location.reload();
-            }, 5000);
-        } else {
+            if (result.message) {
+                showResponseMessage("bg-success", result.message);
+                // Hide toast message or refresh the page after 5 seconds
+                setTimeout(() => {
+                    // hideResponseMessage();
+                    window.location.reload();
+                }, 5000);
+            }
+        } else if (result.status === "error") {
             if (result.message) {
                 showResponseMessage("bg-danger", result.message);
-            } else {
-                showResponseMessage("bg-danger", "An error occurred. Please try again.");
             }
             // Enable submit button
             submitButton.disabled = false;
+        } else {
+            showResponseMessage("bg-danger", "An error occurred. Please try again.");
         }
     } catch (error) {
         console.error(error);

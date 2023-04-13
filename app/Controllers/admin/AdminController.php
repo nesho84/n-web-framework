@@ -21,7 +21,18 @@ class AdminController extends Controller
     {
         $data["title"] = "Home";
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
-        $data['rows'] = $this->adminModel->getTables(DB_NAME);
+        $data['rows'] = $this->adminModel->getTables(DB_NAME, [
+            "categories",
+            "files",
+            "invoices",
+            "languages",
+            "pages",
+            "settings",
+            "translations",
+            "users",
+        ]);
+
+        // dd($data['rows']);
 
         $this->renderAdminView("/admin/index", $data);
     }

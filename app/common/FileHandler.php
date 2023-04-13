@@ -11,7 +11,9 @@ class FileHandler
     ];
     public const MAX_SIZE = 5 * 1024 * 1024; // 5 MB in bytes
 
+    //------------------------------------------------------------
     public static function upload(array $file, string $targetDir): array
+    //------------------------------------------------------------
     {
         $validated = true;
         $uploadError = '';
@@ -40,7 +42,7 @@ class FileHandler
         $mimeType = $finfo->file($file['tmp_name']);
         if (!in_array($mimeType, array_values(self::ALLOWED_TYPES))) {
             $validated = false;
-            $uploadError .= "Invalid file type: {$file['type']}";
+            $uploadError .= "<br>Invalid MIME type: {$file['type']}";
         }
 
         // Generate a unique file name
@@ -64,7 +66,9 @@ class FileHandler
         return [$uploadError, $targetPath];
     }
 
+    //------------------------------------------------------------
     public static function uploadMultiple(array $files, string $targetDir): array
+    //------------------------------------------------------------
     {
         $results = [];
 
@@ -99,7 +103,9 @@ class FileHandler
      * @return array An array of files with their links, filenames, file sizes, and delete links.
      * @throws Exception If the directory does not exist or cannot be read.
      */
+    //------------------------------------------------------------
     public static function get_files_in_directory(string $directory): array
+    //------------------------------------------------------------
     {
         // Verify that the directory exists and is readable
         if (!is_dir($directory) || !is_readable($directory)) {

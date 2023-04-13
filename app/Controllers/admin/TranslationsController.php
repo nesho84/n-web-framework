@@ -58,24 +58,24 @@ class TranslationsController extends Controller
                 'translationText' => htmlspecialchars(trim($_POST['translationText'])),
             ];
 
-            $_SESSION['inputs'] = [];
-            $validated = true;
-            $error = '';
-
-            if (empty($postArray['translationCode'])) {
-                $validated = false;
-                $error .= 'Translation Code can not be empty!<br>';
+            // Get all existing language ids from the Model
+            $languages = $this->languagesModel->getLanguages();
+            $valid_ids = array();
+            foreach ($languages as $lang) {
+                $valid_ids[] = $lang['languageID'];
             }
+
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Translation Code', $postArray['translationCode'])->required()->number();
             if (empty($postArray['languageID'])) {
-                $validated = false;
-                $error .= 'Please select a Language!<br>';
+                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
             }
-            if (empty($postArray['translationText'])) {
-                $validated = false;
-                $error .= 'Please insert a Translation Text!<br>';
-            }
+            $validator('Translation Text', $postArray['translationText'])->required()->min(3)->max(50);
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 try {
                     // Insert in Database
                     $this->translationsModel->insertTranslation($postArray);
@@ -88,7 +88,7 @@ class TranslationsController extends Controller
                     redirect(ADMURL . '/translations/create');
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 $_SESSION['inputs'] = $postArray;
                 redirect(ADMURL . '/translations/create');
             }
@@ -121,24 +121,24 @@ class TranslationsController extends Controller
 
             // Get existing category from the Model
             $translation = $this->translationsModel->getTranslationById($id);
-
-            $validated = true;
-            $error = '';
-
-            if (empty($postArray['translationCode'])) {
-                $validated = false;
-                $error .= 'Translation Code can not be empty!<br>';
+            // Get all existing language ids from the Model
+            $languages = $this->languagesModel->getLanguages();
+            $valid_ids = array();
+            foreach ($languages as $lang) {
+                $valid_ids[] = $lang['languageID'];
             }
+
+            // Validate inputs
+            $validator = new DataValidator();
+            $validator('Translation Code', $postArray['translationCode'])->required()->number();
             if (empty($postArray['languageID'])) {
-                $validated = false;
-                $error .= 'Please select a Language!<br>';
+                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
             }
-            if (empty($postArray['translationText'])) {
-                $validated = false;
-                $error .= 'Please insert a translationText!<br>';
-            }
+            $validator('Translation Text', $postArray['translationText'])->required()->min(3)->max(50);
 
-            if ($validated === true) {
+            if ($validator->isValidated()) {
                 // Remove unchanged postArray keys but keep the 'id'
                 foreach ($postArray as $key => $value) {
                     if (isset($postArray[$key]) && $translation[$key] == $value && $key !== 'translationID') {
@@ -161,7 +161,7 @@ class TranslationsController extends Controller
                     redirect(ADMURL . '/translations/edit/' . $id);
                 }
             } else {
-                setAlert('error', $error);
+                setAlert('error', $validator->getErrors());
                 redirect(ADMURL . '/translations/edit/' . $id);
             }
         }

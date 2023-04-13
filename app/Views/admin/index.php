@@ -21,14 +21,13 @@
         </div>
     </div>
 
-    <hr>
+    <hr class="mb-2">
 
     <?php
     $rows = $data['rows'];
     if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
         echo '<div class="row text-center g-3">';
 
-        $tableName = "";
         $icon = "";
 
         $isDisabled = false;
@@ -38,74 +37,65 @@
         $modalParams = '';
 
         foreach ($rows as $d) {
-            if ($d['table_name'] == 'categories') {
-                $tableName = 'Categories';
+            if ($d['Name'] == 'categories') {
                 $icon = '<i class="fas fa-tasks fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
-            if ($d['table_name'] == 'pages') {
-                $tableName = 'Pages';
+            if ($d['Name'] == 'pages') {
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
-            if ($d['table_name'] == 'languages') {
-                $tableName = 'Languages';
+            if ($d['Name'] == 'languages') {
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
-            if ($d['table_name'] == 'settings') {
-                $tableName = 'Settings';
+            if ($d['Name'] == 'settings') {
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
                 // $isModal = true;
                 // $modalParams = ' d-modal="true" data-submit="true" data-title="Settings"';
             }
-            if ($d['table_name'] == 'translations') {
-                $tableName = 'Translations';
+            if ($d['Name'] == 'translations') {
                 $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
-            if ($d['table_name'] == 'users') {
-                $tableName = 'Users';
+            if ($d['Name'] == 'users') {
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
-            if ($d['table_name'] == 'files') {
-                $tableName = 'Files';
+            if ($d['Name'] == 'files') {
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
-            if ($d['table_name'] == 'invoices') {
-                $tableName = 'Invoices';
+            if ($d['Name'] == 'invoices') {
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
-            if ($d['table_name'] == 'companies') {
-                $tableName = 'Companies';
+            if ($d['Name'] == 'companies') {
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
                 $isDisabled = true;
                 $isModal = false;
             }
-            if ($d['table_name'] == 'services') {
-                $tableName = 'Services';
+            if ($d['Name'] == 'services') {
                 $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
                 $isDisabled = true;
                 $isModal = false;
             }
 
             echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0">
-                    <a href="' . APPURL . '/admin/' . strtolower($tableName) . '" class="text-decoration-none" ' . ($isDisabled ? $disabledStyle : "") . ($isModal ? $modalParams : "") . '>
+                    <a href="' . APPURL . '/admin/' . strtolower($d['Name']) . '" class="text-decoration-none" ' . ($isDisabled ? $disabledStyle : "") . ($isModal ? $modalParams : "") . '>
                         <div class="card shadow-sm">
-                            <div class="card-body pb-5">
-                                <p class="display-3">' . $d['table_rows'] . '</p>
-                                <h4 class="card-text">' . strtoupper($tableName) . '</h4>
+                            <div class="card-body position-relative pb-5">
+                                <p class="display-3">' . $d['Rows'] . '</p>
+                                <span class="badge bg-light text-muted m-2 position-absolute top-0 end-0">' . convertBytes($d['Data_length'], "KB") . '</span>
+                                <h4 class="card-text">' . strtoupper($d['Name']) . '</h4>
                                 ' . $icon . '
                             </div>
                         </div>
