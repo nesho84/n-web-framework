@@ -1,0 +1,12 @@
+PHP7 Or PHP8 For Windows:
+
+Check if in your php.ini file has the following line:
+
+;extension=gd
+if exists, change it to
+
+extension=gd
+if not found, Add this
+
+extension=gd
+and restart apache

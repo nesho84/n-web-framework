@@ -1,0 +1,762 @@
+[04-Apr-2023 14:05:57 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\files\files.php on line 34
+[04-Apr-2023 14:36:16 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 59
+[04-Apr-2023 14:39:56 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 59
+[04-Apr-2023 14:47:13 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 59
+[04-Apr-2023 14:53:07 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 61
+[04-Apr-2023 14:53:45 Europe/Berlin] PHP Warning:  Undefined array key "csrf_token" in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 61
+[04-Apr-2023 15:23:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB_BACKUPS_PATH" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php:133
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): SettingsController->dbbackup()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(29): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 133
+[04-Apr-2023 15:24:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "DB_BACKUPS_PATH" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php:133
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): SettingsController->dbbackup()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(29): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 133
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 41
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 53
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 59
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 72
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 78
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 84
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 90
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 96
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 107
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 41
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 53
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 59
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 72
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 78
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 84
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 90
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 96
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 107
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 41
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 53
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 59
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 72
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 78
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 84
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 90
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 96
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 107
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 41
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 53
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 59
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 72
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 78
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 84
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 90
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 96
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 107
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 41
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 53
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 59
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 72
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 78
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 84
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 90
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 96
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 107
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 41
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 53
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 59
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 72
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 78
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 84
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 90
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 96
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 107
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 41
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 53
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 59
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 72
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 78
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 84
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 90
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 96
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 107
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 41
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 47
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 53
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 59
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 66
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 72
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 78
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 84
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 90
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_name" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 96
+[09-Apr-2023 00:14:55 Europe/Berlin] PHP Warning:  Undefined array key "table_rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 107
+[09-Apr-2023 20:21:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validator() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:56
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 56
+[09-Apr-2023 20:23:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validator() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:56
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 56
+[09-Apr-2023 20:26:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property Controller::$validator must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:33
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->create()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 33
+[09-Apr-2023 20:32:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot call constructor in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(140): CategoriesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 14
+[09-Apr-2023 20:32:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot call constructor in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(140): CategoriesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 14
+[09-Apr-2023 20:33:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot call constructor in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(140): CategoriesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 14
+[09-Apr-2023 20:33:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot call constructor in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:15
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(140): CategoriesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 15
+[09-Apr-2023 20:52:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validate() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:53:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validate() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:54:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validate() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:54:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validate() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:54:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validate() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:54:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validate() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:55:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validator() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:55:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validator() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:56:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validator() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 20:56:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method CategoriesController::validator() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 21:26:38 Europe/Berlin] PHP Fatal error:  Cannot use array as default value for property DataValidator::$errors of type string in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 7
+[09-Apr-2023 21:26:46 Europe/Berlin] PHP Fatal error:  Cannot use array as default value for property DataValidator::$errors of type string in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 7
+[09-Apr-2023 21:50:48 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::showErrors(): Return value must be of type string, none returned in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(82): DataValidator->showErrors()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 77
+[09-Apr-2023 22:08:23 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:84
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php(84): implode('<br>', 'Category Type i...')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(82): DataValidator->showErrors()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 84
+[09-Apr-2023 22:09:56 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 84
+[09-Apr-2023 22:11:22 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 90
+[09-Apr-2023 22:11:31 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 90
+[09-Apr-2023 22:25:52 Europe/Berlin] PHP Parse error:  Unmatched '}' in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 96
+[09-Apr-2023 22:37:09 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: strpos(): Argument #1 ($haystack) must be of type string, array given in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php(77): strpos(Array, 'Category Type')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(82): DataValidator->showErrors()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 77
+[09-Apr-2023 22:37:49 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 83
+[09-Apr-2023 22:38:47 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: strpos(): Argument #1 ($haystack) must be of type string, array given in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php(77): strpos(Array, 'C')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(82): DataValidator->showErrors()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 77
+[09-Apr-2023 22:39:15 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 82
+[09-Apr-2023 22:39:37 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: strpos(): Argument #1 ($haystack) must be of type string, array given in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:77
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php(77): strpos(Array, 'Category Type')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(82): DataValidator->showErrors()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 77
+[09-Apr-2023 22:40:38 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 84
+[09-Apr-2023 22:43:24 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 76
+[09-Apr-2023 22:44:29 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 76
+[09-Apr-2023 22:50:12 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 80
+[09-Apr-2023 22:51:06 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 80
+[09-Apr-2023 22:51:43 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::showErrors(): Return value must be of type string, none returned in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:93
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(82): DataValidator->showErrors()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 93
+[09-Apr-2023 23:10:13 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$this" in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 26
+[09-Apr-2023 23:11:02 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "public" in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 79
+[09-Apr-2023 23:56:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method DataValidator::validate() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:59
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 59
+[09-Apr-2023 23:57:17 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "=" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 53
+[09-Apr-2023 23:57:36 Europe/Berlin] PHP Warning:  Undefined property: CategoriesController::$validator in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 57
+[09-Apr-2023 23:57:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function validate() on null in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:57
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 57
+[09-Apr-2023 23:58:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of type DataValidator is not callable in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:60
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 60
+[09-Apr-2023 23:58:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of type DataValidator is not callable in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:58
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 58
+[09-Apr-2023 23:59:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of type DataValidator is not callable in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:58
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 58
+[09-Apr-2023 23:59:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of type DataValidator is not callable in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:58
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 58
+[10-Apr-2023 00:00:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of type DataValidator is not callable in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:58
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 58
+[10-Apr-2023 00:00:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of type DataValidator is not callable in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:58
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): CategoriesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 58
+[10-Apr-2023 11:55:42 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 86
+[10-Apr-2023 11:56:13 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 86
+[10-Apr-2023 11:57:51 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 86
+[10-Apr-2023 11:58:43 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 86
+[10-Apr-2023 11:58:47 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 86
+[10-Apr-2023 11:58:59 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 86
+[10-Apr-2023 12:03:25 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 90
+[10-Apr-2023 12:03:28 Europe/Berlin] PHP Warning:  Undefined array key 0 in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 90
+[10-Apr-2023 12:23:26 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:25:40 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:26:32 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:26:49 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:27:00 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:34:38 Europe/Berlin] PHP Fatal error:  A function with return type must return a value in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 23
+[10-Apr-2023 12:34:54 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:47
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(47): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 47
+[10-Apr-2023 12:35:06 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:47
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(47): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 47
+[10-Apr-2023 12:35:13 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:47
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(47): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 47
+[10-Apr-2023 12:35:28 Europe/Berlin] PHP Fatal error:  A function with return type must return a value in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 23
+[10-Apr-2023 12:36:08 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:48
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(48): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 48
+[10-Apr-2023 12:36:44 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:48
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(48): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 48
+[10-Apr-2023 12:36:53 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:37:06 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:37:11 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:39:11 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:39:26 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(80): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:39:30 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(80): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:40:37 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:41:36 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:41:47 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:42:15 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: finfo::file(): Argument #1 ($filename) cannot be empty in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php(42): finfo->file('')
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(79): FileHandler::upload(Array, 'files')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 42
+[10-Apr-2023 12:45:33 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 26
+[10-Apr-2023 12:46:30 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: FileHandler::removeUploadedFiles(): Argument #2 ($file) must be of type array|string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php on line 126 and defined in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php:84
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(126): FileHandler::removeUploadedFiles('files', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): FilesController->delete(28)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\FileHandler.php on line 84
+[10-Apr-2023 14:29:53 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 131
+[10-Apr-2023 14:29:55 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 131
+[10-Apr-2023 14:30:02 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 131
+[10-Apr-2023 14:30:03 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 131
+[10-Apr-2023 14:30:04 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 131
+[10-Apr-2023 14:40:06 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::getErrors(): Return value must be of type string, array returned in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:95
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(145): DataValidator->getErrors()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): InvoicesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 95
+[10-Apr-2023 14:40:09 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::getErrors(): Return value must be of type string, array returned in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:95
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(145): DataValidator->getErrors()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): InvoicesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 95
+[10-Apr-2023 14:40:20 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::getErrors(): Return value must be of type string, array returned in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:95
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(145): DataValidator->getErrors()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): InvoicesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 95
+[10-Apr-2023 14:47:25 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 98
+[10-Apr-2023 15:27:14 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 107
+[10-Apr-2023 15:27:20 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 107
+[10-Apr-2023 15:27:55 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 107
+[10-Apr-2023 15:28:15 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 107
+[10-Apr-2023 15:29:48 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 107
+[10-Apr-2023 15:29:49 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 107
+[10-Apr-2023 15:30:06 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 107
+[10-Apr-2023 16:03:26 Europe/Berlin] PHP Warning:  Undefined array key "categoryName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[10-Apr-2023 16:03:26 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::__invoke(): Argument #2 ($inputValue) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127 and defined in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:11
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(127): DataValidator->__invoke('', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): InvoicesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 11
+[10-Apr-2023 16:03:31 Europe/Berlin] PHP Warning:  Undefined array key "categoryName" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[10-Apr-2023 16:03:31 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::__invoke(): Argument #2 ($inputValue) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127 and defined in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:11
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(127): DataValidator->__invoke('', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): InvoicesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 11
+[10-Apr-2023 16:04:53 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::__invoke(): Argument #2 ($inputValue) must be of type string, array given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127 and defined in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:11
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(127): DataValidator->__invoke('', Array)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): InvoicesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 11
+[10-Apr-2023 16:15:03 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function DataValidator::addError(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 123 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php(123): DataValidator->addError('Service fields ...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): InvoicesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 89
+[10-Apr-2023 16:34:22 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function DataValidator::addError(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php on line 68 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:89
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php(68): DataValidator->addError('Invalid file fo...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): FilesController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 89
+[10-Apr-2023 16:52:07 Europe/Berlin] PHP Warning:  Undefined variable $error in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 180
+[10-Apr-2023 16:52:07 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: setAlert(): Argument #2 ($msg) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 180 and defined in D:\xampp\htdocs\n-web-framework\app\common\alerts.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php(180): setAlert('error', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): LanguagesController->update(1)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\alerts.php on line 10
+[12-Apr-2023 09:25:59 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 124
+[12-Apr-2023 09:25:59 Europe/Berlin] PHP Warning:  Undefined variable $error in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 146
+[12-Apr-2023 09:25:59 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: setAlert(): Argument #2 ($msg) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 146 and defined in D:\xampp\htdocs\n-web-framework\app\common\alerts.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php(146): setAlert('error', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): UsersController->insert()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\alerts.php on line 10
+[12-Apr-2023 09:27:06 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 117
+[12-Apr-2023 09:27:11 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 117
+[12-Apr-2023 09:28:54 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 117
+[12-Apr-2023 09:28:54 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 26
+[12-Apr-2023 09:30:28 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 117
+[12-Apr-2023 09:30:28 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 26
+[12-Apr-2023 13:52:51 Europe/Berlin] PHP Warning:  Undefined variable $validated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 281
+[12-Apr-2023 13:52:51 Europe/Berlin] PHP Warning:  Undefined variable $error in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 304
+[12-Apr-2023 13:52:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: setAlert(): Argument #2 ($msg) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 304 and defined in D:\xampp\htdocs\n-web-framework\app\common\alerts.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php(304): setAlert('error', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): UsersController->update(67)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\alerts.php on line 10
+[12-Apr-2023 13:57:53 Europe/Berlin] PHP Warning:  Undefined array key "userNewPassword" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 230
+[12-Apr-2023 13:57:53 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: DataValidator::__invoke(): Argument #2 ($inputValue) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 230 and defined in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php:11
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php(230): DataValidator->__invoke('New Password', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): UsersController->update(67)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\DataValidator.php on line 11
+[12-Apr-2023 13:58:40 Europe/Berlin] PHP Warning:  Undefined variable $error in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 296
+[12-Apr-2023 13:58:40 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: setAlert(): Argument #2 ($msg) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 296 and defined in D:\xampp\htdocs\n-web-framework\app\common\alerts.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php(296): setAlert('error', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): UsersController->update(67)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\alerts.php on line 10
+[12-Apr-2023 13:58:41 Europe/Berlin] PHP Warning:  Undefined variable $error in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 296
+[12-Apr-2023 13:58:41 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: setAlert(): Argument #2 ($msg) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 296 and defined in D:\xampp\htdocs\n-web-framework\app\common\alerts.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php(296): setAlert('error', NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): UsersController->update(67)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\alerts.php on line 10
+[13-Apr-2023 22:28:20 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:28:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:28:20 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:28:20 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:28:20 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:28:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:28:20 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:29:31 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:29:31 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:29:31 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:29:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:29:31 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:29:31 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:29:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:34:12 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:34:12 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:34:12 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:34:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:34:12 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:34:12 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:34:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:38:21 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:38:21 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:38:21 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:38:21 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:38:21 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:38:21 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:38:21 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:39:09 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:39:09 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:39:09 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:39:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:39:09 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:39:09 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:39:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:39:30 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:39:30 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:39:30 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:39:30 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:39:30 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:39:30 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:39:30 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:39:46 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:39:46 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:39:46 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:39:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:39:46 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:39:46 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:39:46 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:41:47 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:41:47 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:41:47 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:41:47 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:41:47 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:41:47 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:41:47 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:43:20 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:43:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:43:20 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:43:20 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:43:20 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:43:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:43:20 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100
+[13-Apr-2023 22:44:55 Europe/Berlin] PHP Warning:  Undefined array key "company-type" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:44:55 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 80
+[13-Apr-2023 22:44:55 Europe/Berlin] PHP Warning:  Undefined array key "services" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[13-Apr-2023 22:44:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 109
+[13-Apr-2023 22:44:55 Europe/Berlin] PHP Warning:  Undefined array key "invoiceTotalPrice" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:44:55 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 127
+[13-Apr-2023 22:44:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Models\admin\InvoicesModel.php on line 100

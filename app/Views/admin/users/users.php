@@ -1,44 +1,51 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php
+displayHeader([
+    'title' => 'Users',
+    'btnText' => 'Create New +',
+    'btnLink' => ADMURL . '/users/create',
+    'btnClass' => 'success',
+]);
+?>
 
-    <!-- Page Header -->
-    <?php
-    pageHeader([
-        'title' => 'Users', '',
-        'btnText' => 'Create New +',
-        'link' => ADMURL . '/users/create',
-        'btnColor' => 'success',
-    ]);
-    ?>
-
+<div class="container-lg">
     <div class="table-responsive border-top mt-3">
-        <table class="table table-hover">
+        <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">User Name</th>
+                    <th scope="col" class="ps-3">User</th>
                     <th scope="col">User Email</th>
                     <th scope="col">User Role</th>
+                    <th scope="col" class='text-center'>Status</th>
                     <th scope="col" class='text-center'>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                if (isset($data['rows'])) {
+                $rows = $data['rows'];
+                if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                     $counter = 0;
-                    foreach ($data['rows'] as $d) {
+                    foreach ($rows as $d) {
                         $counter += 1;
+
+                        $userStatus = $d['userStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
+
+                        $deleteIcon = $d['userName'] === 'admin' ? '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>' : '<a class="btn btn-link btn-delete" href="' . ADMURL . '/users/delete/' . $d['userID'] . '"><i class="far fa-trash-alt"></i></a>';
+
+                        $pic = !empty($d['userPicture']) ? '<img width="60" height="60" src="' . $d['userPicture'] . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+
                         echo '<tr>
                                 <th scope="row">' . $counter . '</th>
-                                <td>' . $d['userName'] . '</td>
+                                <td>' . $pic . '&nbsp;&nbsp;' . $d['userName'] . '</td>
                                 <td>' . $d['userEmail'] . '</td>
                                 <td>' . $d['userRole'] . '</td>
+                                <td class="text-center">' . $userStatus . '</td>
                                 <td class="text-center">
                                     <a class="btn btn-link" href="' . ADMURL . '/users/edit/' . $d['userID'] . '">
-                                    <i class="far fa-edit"></i>
+                                        <i class="far fa-edit"></i>
                                     </a>
-                                    <a class="btn btn-link btn-delete" href="' . ADMURL . '/users/delete/' . $d['userID'] . '">
-                                    <i class="far fa-trash-alt"></i>
-                                    </a>
+                                    ' . $deleteIcon . '
                                 </td>
                             </tr>';
                     }
@@ -51,16 +58,14 @@
             </tbody>
         </table>
     </div>
-
 </div>
 
 <script>
-    // Submit Delete
+    // Confirm Delete
     document.querySelectorAll(".btn-delete").forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
-
             // Show Confirm Dialog
             Swal.fire({
                 title: "Are you sure?",

@@ -1,10 +1,10 @@
 <?php
 // --- Home --- //
-App::route('/', 'public_controller@index');
+Router::get('/', 'PublicController@index');
 
 // --- about-us --- //
-App::route('/about-us', 'public_controller@about_us');
+Router::get('/about-us', 'PublicController@about_us');
 
 // --- contact --- //
-App::route('/contact', 'public_controller@contact');
-App::route('/contact/validate', 'public_controller@contact_validate');
+Router::get('/contact', 'PublicController@contact');
+Router::post('/contact/validate', 'PublicController@contact_validate');

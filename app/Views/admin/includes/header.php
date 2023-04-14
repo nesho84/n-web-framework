@@ -1,5 +1,13 @@
 <?php
+// Set title
 $title = $data['title'] ?? "";
+// Set base url - $view_path comes from the controller
+$baseUrl = ADM_VIEWS . '/' . basename(dirname($view_path)) . '/';
+// Set Theme
+$baseTheme = $_SESSION['settings']['settingTheme'] ?? "dark";
+$navbarTheme = $baseTheme == "dark" ? "dark" : "light";
+$menuSpanTheme = $baseTheme == "dark" ? "light" : "dark";
+$bodyTheme = $baseTheme == "dark" ? "dark" : "white";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +16,8 @@ $title = $data['title'] ?? "";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="<?= $_SESSION['csrf_token'] ?? "" ?>">
+    <base href="<?php echo $baseUrl; ?>">
     <title><?php echo $title != "" ? $title : "undefined"; ?></title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="<?php echo APPURL; ?>/public/css/libs/bootstrap.min.css" />
@@ -22,12 +32,13 @@ $title = $data['title'] ?? "";
     <link rel="manifest" href="<?php echo APPURL; ?>/public/favicon/site.webmanifest">
 </head>
 
-<body>
+<body class="bg-<?= $bodyTheme ?>">
+
 
     <div class="wrapper">
 
-        <header class="sticky-top">
-            <nav class="navbar shadow-sm navbar-expand-lg navbar-dark bg-dark py-2">
+        <header class="sticky-top border-bottom">
+            <nav class="navbar shadow-sm navbar-expand-lg navbar-<?= $navbarTheme ?> bg-<?= $navbarTheme ?> py-2">
                 <div class="container-lg">
                     <div class="navbar-brand">
                         <!-- <a href="<?php echo ADMURL; ?>/">
@@ -38,9 +49,9 @@ $title = $data['title'] ?? "";
                         </a>
                     </div>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar bg-light"></span>
-                        <span class="icon-bar bg-light"></span>
-                        <span class="icon-bar bg-light"></span>
+                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
+                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
+                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
                     </button>
 
                     <!-- Navigation Menu Links -->
@@ -50,7 +61,9 @@ $title = $data['title'] ?? "";
             </nav>
         </header>
 
-        <main>
+        <!-- Flash/Toast Messages from Sessions or JS -->
+        <div id="alert-container">
+            <?php showAlert(); ?>
+        </div>
 
-            <!-- Flash Messages from the Session -->
-            <?php getFlashMsg(); ?>
+        <main>

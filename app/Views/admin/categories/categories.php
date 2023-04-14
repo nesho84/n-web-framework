@@ -1,17 +1,16 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php
+displayHeader([
+    'title' => 'Categories',
+    'btnText' => 'Create New +',
+    'btnLink' => ADMURL . '/categories/create',
+    'btnClass' => 'success',
+]);
+?>
 
-    <!-- Page Header -->
-    <?php
-    pageHeader([
-        'title' => 'Categories', '',
-        'btnText' => 'Create New +',
-        'link' => ADMURL . '/categories/create',
-        'btnColor' => 'success',
-    ]);
-    ?>
-
+<div class="container-lg">
     <div class="table-responsive border-top mt-3">
-        <table class="table table-hover">
+        <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -22,9 +21,10 @@
             </thead>
             <tbody>
                 <?php
-                if (isset($data['rows'])) {
+                $rows = $data['rows'];
+                if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                     $counter = 0;
-                    foreach ($data['rows'] as $d) {
+                    foreach ($rows as $d) {
                         $counter += 1;
                         echo '<tr>
                                 <th scope="row">' . $counter . '</th>
@@ -32,10 +32,10 @@
                                 <td>' . $d['categoryType'] . '</td>
                                 <td class="text-center">
                                     <a class="btn btn-link" href="' . ADMURL . '/categories/edit/' . $d['categoryID'] . '">
-                                    <i class="far fa-edit"></i>
+                                        <i class="far fa-edit"></i>
                                     </a>
                                     <a class="btn btn-link btn-delete" href="' . ADMURL . '/categories/delete/' . $d['categoryID'] . '">
-                                    <i class="far fa-trash-alt"></i>
+                                        <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>
                             </tr>';
@@ -49,11 +49,10 @@
             </tbody>
         </table>
     </div>
-
 </div>
 
 <script>
-    // Submit Delete
+    // Confirm Delete
     document.querySelectorAll(".btn-delete").forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
@@ -78,3 +77,6 @@
         });
     });
 </script>
+
+<!-- <script src="/n-web-framework/app/views/admin/categories/test.js"></script> -->
+<script src="categories.js"></script>

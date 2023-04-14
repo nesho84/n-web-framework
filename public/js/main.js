@@ -21,10 +21,12 @@
     }
   };
   // On button click
-  scrollTopBtn.addEventListener('click', () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  })
+  if (typeof (scrollTopBtn) != 'undefined' && scrollTopBtn != null) {
+    scrollTopBtn.addEventListener('click', () => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    })
+  }
 })();
 
 //------------------------------------------------------------
@@ -56,17 +58,21 @@
   });
 
   // Hide Spinner when Image is fully loaded
-  modalImg.addEventListener('load', function () {
-    spinner.classList.remove("display")
-  })
+  if (typeof (modalImg) != 'undefined' && modalImg != null) {
+    modalImg.addEventListener('load', function () {
+      spinner.classList.remove("display")
+    })
+  }
 
   // Get the <span> element that closes the modal
   let xBtn = document.querySelector(".closeModal");
   // When the user clicks on <span> (x), close the modal
-  xBtn.addEventListener("click", () => {
-    document.body.style.overflow = 'auto';
-    modal.style.display = "none";
-  });
+  if (typeof (xBtn) != 'undefined' && xBtn != null) {
+    xBtn.addEventListener("click", () => {
+      document.body.style.overflow = 'auto';
+      modal.style.display = "none";
+    });
+  }
   // Close with ESC key
   document.addEventListener("keydown", (e) => {
     e = e || window.e;

@@ -1,8 +1,7 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php displayHeader(['title' => 'Create Page']); ?>
 
-    <!-- Page Header -->
-    <?php pageHeader(['title' => 'Create Page']); ?>
-
+<div class="container-lg">
     <div class="card">
         <div class="card-body">
             <form id="formPages" action="<?php echo ADMURL . '/pages/insert'; ?>" method="POST" enctype="multipart/form-data">
@@ -15,18 +14,18 @@
                     <input type="text" class="form-control" rows="5" id="pageTitle" name="pageTitle" placeholder="Title" value="<?php echo $_SESSION['inputs']['pageTitle'] ?? ""; ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="pageLanguage" class="form-label fw-bold">Language</label>
-                    <select id="pageLanguage" name="pageLanguage" class="form-select">
+                    <label for="languageID" class="form-label fw-bold">Language</label>
+                    <select id="languageID" name="languageID" class="form-select">
                         <option class="select_hide" disabled selected>Select Language</option>
                         <?php
-                        $LangArray = ['EN', 'DE', 'FR', 'SQ'];
+                        $LangArray = $data['languages'];
                         foreach ($LangArray as $lang) {
-                            if ($lang == $_SESSION['inputs']['pageLanguage']) {
+                            if ($lang['languageID'] == ($_SESSION['inputs']['languageID'] ?? "")) {
                                 $selected = "selected";
                             } else {
                                 $selected = "";
                             }
-                            echo "<option value='$lang' $selected>$lang</option>";
+                            echo "<option value='{$lang['languageID']}' $selected>{$lang['languageName']}</option>";
                         }
                         ?>
                     </select>
@@ -50,13 +49,12 @@
                     <textarea class="form-control" rows="15" id="pageContent" name="pageContent" placeholder="Content"><?php echo $_SESSION['inputs']['pageContent'] ?? ""; ?></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
-                    <input type="submit" id="insert_page" name="insert_page" class="btn btn-primary btn-lg" value="Save" />
+                    <button type="submit" id="insert_page" name="insert_page" class="btn btn-primary btn-lg me-1">Save</button>
                     <a href="<?php echo ADMURL . "/pages"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
                 </div>
             </form>
         </div>
     </div>
-
 </div>
 
 <!-- ckeditor 4 -->

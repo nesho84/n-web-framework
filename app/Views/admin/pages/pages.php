@@ -1,15 +1,14 @@
-<div class="container-lg py-4">
+<!-- Page Header -->
+<?php
+displayHeader([
+    'title' => 'Pages',
+    'btnText' => 'Create New +',
+    'btnLink' => ADMURL . '/pages/create',
+    'btnClass' => 'success',
+]);
+?>
 
-    <!-- Page Header -->
-    <?php
-    pageHeader([
-        'title' => 'Pages', '',
-        'btnText' => 'Create New +',
-        'link' => ADMURL . '/pages/create',
-        'btnColor' => 'success',
-    ]);
-    ?>
-
+<div class="container-lg">
     <div class="card">
         <div class="card-header">
             <i class="fas fa-info-circle fa-lg"></i> Info
@@ -21,35 +20,40 @@
     </div>
 
     <div class="table-responsive border-top mt-3">
-        <table class="table table-hover">
+        <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Language</th>
                     <th scope="col" class='text-center'>Status</th>
                     <th scope="col" class='text-center'>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                if (isset($data['rows'])) {
+                // dd($data);
+                $rows = $data['rows'];
+                if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                     $counter = 0;
-                    foreach ($data['rows'] as $d) {
+                    foreach ($rows as $d) {
                         $counter += 1;
                         $pageStatus = $d['pageStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
+
                         echo '<tr>
-                                <th scope="row">' . $counter . '</th>
-                                <td>' . $d['pageName'] . '</td>
-                                <td class="text-center">' . $pageStatus . '</td>
-                                <td class="text-center">
-                                    <a class="btn btn-link" href="' . ADMURL . '/pages/edit/' . $d['pageID'] . '">
+                            <th scope="row">' . $counter . '</th>
+                            <td>' . $d['pageName'] . '</td>
+                            <td>' . $d['languageName'] . '</td>
+                            <td class="text-center">' . $pageStatus . '</td>
+                            <td class="text-center">
+                                <a class="btn btn-link" href="' . ADMURL . '/pages/edit/' . $d['pageID'] . '">
                                     <i class="far fa-edit"></i>
-                                    </a>
-                                    <a class="btn btn-link btn-delete" href="' . ADMURL . '/pages/delete/' . $d['pageID'] . '">
+                                </a>
+                                <a class="btn btn-link btn-delete" href="' . ADMURL . '/pages/delete/' . $d['pageID'] . '">
                                     <i class="far fa-trash-alt"></i>
-                                    </a>
-                                </td>
-                            </tr>';
+                                </a>
+                            </td>
+                        </tr>';
                     }
                 } else {
                     echo '<tr>
@@ -60,11 +64,10 @@
             </tbody>
         </table>
     </div>
-
 </div>
 
 <script>
-    // Submit Delete
+    // Confirm Delete
     document.querySelectorAll(".btn-delete").forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();

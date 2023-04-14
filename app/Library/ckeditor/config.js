@@ -14,7 +14,8 @@ CKEDITOR.editorConfig = function (config) {
 	config.protectedSource.push(/<i class[\s\S]*?\>/g);
 	// php tags
 	// config.protectedSource.push(/<\?[\s\S]*?\?>/g);
-	config.protectedSource.push(/<\/i>/g);
+	// config.protectedSource.push(/<\/i>/g);
+	config.protectedSource.push(/<\?[\s\S]*?\?>/g);   // Accept PHP Code - Working...
 	// <?php> tags.
 
 	// config.toolbar = [
