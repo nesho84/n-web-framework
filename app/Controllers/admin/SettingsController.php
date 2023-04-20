@@ -45,6 +45,9 @@ class SettingsController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF(htmlspecialchars($_POST['csrf_token']));
+
         if (isset($_POST['update_setting'])) {
             $postArray = [
                 'settingID' => $id,
@@ -77,6 +80,8 @@ class SettingsController extends Controller
                         unset($postArray[$key]);
                     }
                 }
+                // remove empty keys
+                $postArray = array_filter($postArray, 'strlen');
 
                 if (count($postArray) > 1) {
                     try {
@@ -86,7 +91,7 @@ class SettingsController extends Controller
                         if ($postArray['settingID'] === $_SESSION['settings']['settingID']) {
                             $this->updateSessions($postArray);
                         }
-                        setAlert('success', 'Update completed successfully');
+                        setAlert('success', 'Settings updated successfully');
                         redirect(ADMURL . '/settings');
                     } catch (Exception $e) {
                         setAlert('error', $e->getMessage());
@@ -116,23 +121,8 @@ class SettingsController extends Controller
     public function dbbackup(): void
     //------------------------------------------------------------
     {
-        header("Content-Type: application/json");
-        header("X-Content-Type-Options: nosniff");
-        header("X-Frame-Options: DENY");
-        header("X-XSS-Protection: 1; mode=block");
-        header("Referrer-Policy: same-origin");
-        header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
-
-        // Validate CSRF token
-        $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
-        if ($csrfToken !== $_SESSION['csrf_token']) {
-            http_response_code(419);
-            echo json_encode([
-                "status" => "error",
-                'message' => 'Invalid CSRF token'
-            ]);
-            exit();
-        }
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
         try {
             // Insert in Database

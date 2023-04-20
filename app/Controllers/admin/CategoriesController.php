@@ -39,37 +39,47 @@ class CategoriesController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['insert_category'])) {
-            $postArray = [
-                'userID' => $_SESSION['user']['id'],
-                'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
-                'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
-                'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-                'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
-            ];
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
-            // Validate inputs
-            $validator = new DataValidator();
-            $validator('Category Name', $postArray['categoryName'])->required()->min(3)->max(20);
-            $validator('Category Type', $postArray['categoryType'])->required()->min(3)->max(20);
+        $postArray = [
+            'userID' => $_SESSION['user']['id'],
+            'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
+            'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
+            'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
+            'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
+        ];
 
-            if ($validator->isValidated()) {
-                try {
-                    // Insert in Database
-                    $this->categoriesModel->insertCategory($postArray);
-                    setAlert('success', 'Insert completed successfully.');
-                    unset($_SESSION['inputs']);
-                    redirect(ADMURL . '/categories');
-                } catch (Exception $e) {
-                    setAlert('error', $e->getMessage());
-                    $_SESSION['inputs'] = $postArray;
-                    redirect(ADMURL . '/categories/create');
-                }
-            } else {
-                setAlert('error', $validator->getErrors());
-                $_SESSION['inputs'] = $postArray;
-                redirect(ADMURL . '/categories/create');
+        // Validate inputs
+        $validator = new DataValidator();
+
+        $validator('Category Name', $postArray['categoryName'])->required()->min(3)->max(20);
+        $validator('Category Type', $postArray['categoryType'])->required()->min(3)->max(20);
+
+        if ($validator->isValidated()) {
+            try {
+                // Insert in Database
+                $this->categoriesModel->insertCategory($postArray);
+                // setAlert('success', 'Insert completed successfully.');
+                echo json_encode([
+                    "status" => "success",
+                    'message' => 'Category created successfully',
+                ]);
+            } catch (Exception $e) {
+                http_response_code(500);
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $e->getMessage()
+                ]);
+                exit();
             }
+        } else {
+            // http_response_code(422);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
+            exit();
         }
     }
 
@@ -87,50 +97,69 @@ class CategoriesController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['update_category'])) {
-            $postArray = [
-                'categoryID' => $id,
-                'userID' => $_SESSION['user']['id'],
-                'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
-                'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
-                'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-                'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
-            ];
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
-            // Get existing category from the Model
-            $category = $this->categoriesModel->getCategoryById($id);
+        $postArray = [
+            'categoryID' => $id,
+            'userID' => $_SESSION['user']['id'],
+            'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
+            'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
+            'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
+            'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
+        ];
 
-            // Validate inputs
-            $validator = new DataValidator();
-            $validator('Category Name', $postArray['categoryName'])->required()->min(3)->max(20);
-            $validator('Category Type', $postArray['categoryType'])->required()->min(3)->max(20);
+        // Get existing category from the Model
+        $category = $this->categoriesModel->getCategoryById($id);
 
-            if ($validator->isValidated()) {
-                // Remove unchanged postArray keys but keep the 'id'
-                foreach ($postArray as $key => $value) {
-                    if (isset($postArray[$key]) && $category[$key] == $value && $key !== 'categoryID') {
-                        unset($postArray[$key]);
-                    }
+        // Validate inputs
+        $validator = new DataValidator();
+
+        $validator('Category Name', $postArray['categoryName'])->required()->min(3)->max(20);
+        $validator('Category Type', $postArray['categoryType'])->required()->min(3)->max(20);
+
+        if ($validator->isValidated()) {
+            // Remove unchanged postArray keys but keep the 'id'
+            foreach ($postArray as $key => $value) {
+                if (isset($postArray[$key]) && $category[$key] == $value && $key !== 'categoryID') {
+                    unset($postArray[$key]);
                 }
+            }
+            // remove empty keys
+            $postArray = array_filter($postArray, 'strlen');
 
-                if (count($postArray) > 1) {
-                    try {
-                        // Update in Database
-                        $this->categoriesModel->updateCategory($postArray);
-                        setAlert('success', 'Update completed successfully');
-                        redirect(ADMURL . '/categories');
-                    } catch (Exception $e) {
-                        setAlert('error', $e->getMessage());
-                        redirect(ADMURL . '/categories/edit/' . $id);
-                    }
-                } else {
-                    setAlert('warning', 'No fields were changed');
-                    redirect(ADMURL . '/categories/edit/' . $id);
+            if (count($postArray) > 1) {
+                try {
+                    // Update in Database
+                    $this->categoriesModel->updateCategory($postArray);
+                    // setAlert('success', 'Update completed successfully');
+                    echo json_encode([
+                        "status" => "success",
+                        'message' => 'Category updated successfully',
+                    ]);
+                } catch (Exception $e) {
+                    http_response_code(500);
+                    echo json_encode([
+                        "status" => "error",
+                        "message" => $e->getMessage()
+                    ]);
+                    exit();
                 }
             } else {
-                setAlert('error', $validator->getErrors());
-                redirect(ADMURL . '/categories/edit/' . $id);
+                // setAlert('warning', 'No fields were changed');
+                echo json_encode([
+                    "status" => "warning",
+                    "message" => 'No fields were changed'
+                ]);
+                exit();
             }
+        } else {
+            // http_response_code(422);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
+            exit();
         }
     }
 

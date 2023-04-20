@@ -55,23 +55,8 @@ class InvoicesController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        header("Content-Type: application/json");
-        header("X-Content-Type-Options: nosniff");
-        header("X-Frame-Options: DENY");
-        header("X-XSS-Protection: 1; mode=block");
-        header("Referrer-Policy: same-origin");
-        header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
-
-        // Validate CSRF token
-        $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
-        if ($csrfToken !== $_SESSION['csrf_token']) {
-            http_response_code(419);
-            echo json_encode([
-                "status" => "error",
-                'message' => 'Invalid CSRF token'
-            ]);
-            exit();
-        }
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
         // Validate inputs
         $validator = new DataValidator();
@@ -149,7 +134,10 @@ class InvoicesController extends Controller
             }
         } else {
             // http_response_code(422);
-            echo json_encode(["status" => "error", "message" => $validator->getErrors()]);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
             exit();
         }
     }

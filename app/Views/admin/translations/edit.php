@@ -49,6 +49,20 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
         </div>
     </div>
 
+    <script>
+        'use strict';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Attach the submit event handler to the form (ajax.js)
+            const form = document.querySelector("#formTranslations");
+            if (form) {
+                form.addEventListener("submit", async (event) => {
+                    await handleFormSubmit(event);
+                });
+            }
+        });
+    </script>
+
 <?php
 } else {
     displayNoDataBox("No data found", ADMURL . "/translations");

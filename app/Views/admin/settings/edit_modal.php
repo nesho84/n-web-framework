@@ -7,7 +7,7 @@ if (isset($rows) && is_array($rows)) {
 
     <div class="card">
         <div class="card-body">
-            <form id="formUsers" action="<?php echo ADMURL . '/settings/update/' . $settingID ?>" method="POST" enctype="multipart/form-data">
+            <form id="formSettings" action="<?php echo ADMURL . '/settings/update/' . $settingID ?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="settingTheme" class="form-label fw-bold">Theme</label>
                     <select id="settingTheme" name="settingTheme" class="form-select">
@@ -41,6 +41,7 @@ if (isset($rows) && is_array($rows)) {
                         ?>
                     </select>
                 </div>
+                <input type="hidden" value="<?= $_SESSION['csrf_token'] ?>" name="csrf_token">
                 <input type="hidden" name="update_setting">
             </form>
         </div>

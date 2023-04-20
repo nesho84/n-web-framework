@@ -46,7 +46,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="pageContent" class="form-label fw-bold">Content <small>(optional)</small></label>
-                    <textarea class="form-control" rows="15" id="pageContent" name="pageContent" placeholder="Content"><?php echo $_SESSION['inputs']['pageContent'] ?? ""; ?></textarea>
+                    <textarea class="form-control" rows="10" id="pageContent" name="pageContent" placeholder="Content"><?php echo $_SESSION['inputs']['pageContent'] ?? ""; ?></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
                     <button type="submit" id="insert_page" name="insert_page" class="btn btn-primary btn-lg me-1">Save</button>
@@ -62,9 +62,26 @@
 <script>
     // Initialize CKEditor
     CKEDITOR.replace('pageContent', {
-        height: "500px",
+        height: "350px",
         cloudServices_tokenUrl: '<?php echo APPURL; ?>',
         exportPdf_tokenUrl: '<?php echo APPURL; ?>',
         uploadUrl: '<?php echo APPURL; ?>/public/uploads',
+    });
+    // Update PageContent before submit (because ckEditor dosen't fire change event itself)
+    async function updateCKEDITOR() {
+        for (instance in CKEDITOR.instances) {
+            CKEDITOR.instances[instance].updateElement();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Attach the submit event handler to the form (ajax.js)
+        const form = document.querySelector("#formPages");
+        if (form) {
+            form.addEventListener("submit", async (event) => {
+                await updateCKEDITOR();
+                await handleFormSubmit(event);
+            });
+        }
     });
 </script>

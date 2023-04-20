@@ -47,6 +47,14 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
         document.addEventListener("DOMContentLoaded", () => {
             // Preview Uploaded Images
             previewUploadedImages("languageFlag", "preview_image", "mySpinner");
+
+            // Attach the submit event handler to the form (ajax.js)
+            const form = document.querySelector("#formLanguages");
+            if (form) {
+                form.addEventListener("submit", async (event) => {
+                    await handleFormSubmit(event);
+                });
+            }
         });
     </script>
 

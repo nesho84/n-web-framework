@@ -1,12 +1,16 @@
 'use strict';
 
 // Function to handle both GET and POST requests
-async function handleRequest(url, method, data = null) {
+//------------------------------------------------------------
+async function handleRequest(url, method, data = null)
+//------------------------------------------------------------
+{
     try {
         let options = {
             method: method,
             headers: {
-                "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                "Cache-Control": "no-cache"
             },
         };
 
@@ -27,7 +31,10 @@ async function handleRequest(url, method, data = null) {
 }
 
 // Function to handle form submission
-async function handleFormSubmit(event) {
+//------------------------------------------------------------
+async function handleFormSubmit(event)
+//------------------------------------------------------------
+{
     event.preventDefault();
 
     const form = event.target;
@@ -44,34 +51,57 @@ async function handleFormSubmit(event) {
 
         if (result.status === "success") {
             if (result.message) {
-                showResponseMessage("bg-success", result.message);
                 // Hide toast message or refresh the page after 5 seconds
-                setTimeout(() => {
-                    // hideResponseMessage();
-                    window.location.reload();
-                }, 5000);
+                reloadWithTimeout(submitButton);
+                showAlert("bg-success", result.message);
             }
         } else if (result.status === "error") {
             if (result.message) {
-                showResponseMessage("bg-danger", result.message);
+                showAlert("bg-danger", result.message);
+            }
+            // Enable submit button
+            submitButton.disabled = false;
+        } else if (result.status === "warning") {
+            if (result.message) {
+                showAlert("bg-warning", result.message);
+                // Hide toast message after 5 seconds
+                setTimeout(() => hideAlert(), 5000);
             }
             // Enable submit button
             submitButton.disabled = false;
         } else {
-            showResponseMessage("bg-danger", "An error occurred. Please try again.");
+            showAlert("bg-danger", "An error occurred. Please try again.");
+            // Enable submit button
+            submitButton.disabled = false;
         }
     } catch (error) {
-        console.error(error);
         // Show error message
-        showResponseMessage("bg-danger", error);
+        showAlert("bg-danger", error);
+        console.error(error);
         // Enable submit button
         submitButton.disabled = false;
     }
 }
 
 // Function to show response message in a toast element
-function showResponseMessage(className, message) {
-    const msg = Array.isArray(message) ? message.map(msg => `<span>${msg}</span>`).join("<br>") : message;
+//------------------------------------------------------------
+function showAlert(className, message)
+//------------------------------------------------------------
+{
+    let msg = "";
+
+    // Multiple Messages
+    if (message.toString().includes("<br>")) {
+        msg = Array.isArray(message)
+            ? '<ul class="m-0 px-3">' + message.map(msg => `<li>${msg}</li>`).join('') + '</ul>'
+            : '<ul class="m-0 px-3">' + message.split("<br>").map(msg => `<li>${msg}</li>`).join('') + '</ul>'
+    } else {
+        // Single Message
+        msg = Array.isArray(message)
+            ? message.map(msg => `<span>${msg}</span>`).join('')
+            : `<span>${message}</span>`;
+    }
+
     const alertContainer = document.getElementById("alert-container");
     alertContainer.innerHTML = '';
     const alertElement = document.createElement("div");
@@ -97,7 +127,10 @@ function showResponseMessage(className, message) {
 }
 
 // Function to hide response message
-function hideResponseMessage() {
+//------------------------------------------------------------
+function hideAlert()
+//------------------------------------------------------------
+{
     const toastElement = document.getElementById("liveToast");
     if (toastElement) {
         const toast = bootstrap.Toast.getOrCreateInstance(toastElement);
@@ -105,6 +138,36 @@ function hideResponseMessage() {
     }
 }
 
+// Function to update the button every second reload the page after 5 seconds
+//------------------------------------------------------------
+function reloadWithTimeout(btn)
+//------------------------------------------------------------
+{
+    // Save the original button text
+    const originalText = btn.textContent;
+    // Set the countdown to 5 seconds
+    let countdown = 3;
+
+    const x = setInterval(function () {
+        // Update the button text with the remaining time
+        btn.textContent = originalText + " (" + countdown + ")";
+
+        // Decrement the countdown
+        countdown--;
+
+        // If the countdown is over, enable the button and stop the timer
+        if (countdown < 0) {
+            clearInterval(x);
+            btn.textContent = originalText; // restore the original button text
+            // btn.disabled = false;
+            // hideAlert();
+            // or
+            // window.location.reload();
+            // or
+            window.history.go(-1);
+        }
+    }, 1000);
+}
 
 // Example how to Attach the submit event handler to the form
 // const form = document.querySelector("form");

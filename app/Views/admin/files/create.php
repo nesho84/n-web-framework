@@ -50,8 +50,18 @@
 </div>
 
 <script>
+    'use strict';
+
     // Preview Uploaded Images (function in main.js)
     document.addEventListener("DOMContentLoaded", () => {
         previewUploadedImages("fileLink", "preview_image", "mySpinner");
+
+        // Attach the submit event handler to the form (ajax.js)
+        const form = document.querySelector("#formFiles");
+        if (form) {
+            form.addEventListener("submit", async (event) => {
+                await handleFormSubmit(event);
+            });
+        }
     });
 </script>

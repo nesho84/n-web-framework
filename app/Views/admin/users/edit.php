@@ -98,6 +98,14 @@
                     }
                 });
             });
+
+            // Attach the submit event handler to the form (ajax.js)
+            const form = document.querySelector("#formUsers");
+            if (form) {
+                form.addEventListener("submit", async (event) => {
+                    await handleFormSubmit(event);
+                });
+            }
         </script>
 
     <?php

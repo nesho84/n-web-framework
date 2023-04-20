@@ -44,52 +44,62 @@ class PagesController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['insert_page'])) {
-            $postArray = [
-                'userID' => $_SESSION['user']['id'],
-                'languageID' => htmlspecialchars(trim($_POST['languageID'] ?? '')),
-                'pageName' => htmlspecialchars(trim($_POST['pageName'])),
-                'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
-                'pageContent' => $_POST['pageContent'],
-                'PageMetaTitle' => htmlspecialchars(trim($_POST['PageMetaTitle'])),
-                'PageMetaDescription' => htmlspecialchars(trim($_POST['PageMetaDescription'])),
-                'PageMetaKeywords' => htmlspecialchars(trim($_POST['PageMetaKeywords'])),
-            ];
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
-            // Get all existing language ids from the Model
-            $languages = $this->languagesModel->getLanguages();
-            $valid_ids = array();
-            foreach ($languages as $lang) {
-                $valid_ids[] = $lang['languageID'];
-            }
+        $postArray = [
+            'userID' => $_SESSION['user']['id'],
+            'languageID' => htmlspecialchars(trim($_POST['languageID'] ?? '')),
+            'pageName' => htmlspecialchars(trim($_POST['pageName'])),
+            'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
+            'pageContent' => $_POST['pageContent'],
+            'PageMetaTitle' => htmlspecialchars(trim($_POST['PageMetaTitle'])),
+            'PageMetaDescription' => htmlspecialchars(trim($_POST['PageMetaDescription'])),
+            'PageMetaKeywords' => htmlspecialchars(trim($_POST['PageMetaKeywords'])),
+        ];
 
-            // Validate inputs
-            $validator = new DataValidator();
-            $validator('Page Name', $postArray['pageName'])->required()->min(3)->max(20);
-            $validator('Page Title', $postArray['pageTitle'])->required()->min(3)->max(20);
-            if (empty($postArray['languageID'])) {
-                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
-            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
-                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
-            }
+        // Get all existing language ids from the Model
+        $languages = $this->languagesModel->getLanguages();
+        $valid_ids = array();
+        foreach ($languages as $lang) {
+            $valid_ids[] = $lang['languageID'];
+        }
 
-            if ($validator->isValidated()) {
-                try {
-                    // Insert in Database
-                    $this->pagesModel->insertPage($postArray);
-                    setAlert('success', 'Insert completed successfully.');
-                    unset($_SESSION['inputs']);
-                    redirect(ADMURL . '/pages');
-                } catch (Exception $e) {
-                    setAlert('error', $e->getMessage());
-                    $_SESSION['inputs'] = $postArray;
-                    redirect(ADMURL . '/pages/create');
-                }
-            } else {
-                setAlert('error', $validator->getErrors());
-                $_SESSION['inputs'] = $postArray;
-                redirect(ADMURL . '/pages/create');
+        // Validate inputs
+        $validator = new DataValidator();
+
+        $validator('Page Name', $postArray['pageName'])->required()->min(3)->max(20);
+        $validator('Page Title', $postArray['pageTitle'])->required()->min(3)->max(20);
+        if (empty($postArray['languageID'])) {
+            $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+        } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+            $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
+        }
+
+        if ($validator->isValidated()) {
+            try {
+                // Insert in Database
+                $this->pagesModel->insertPage($postArray);
+                // setAlert('success', 'Page created successfully.');
+                echo json_encode([
+                    "status" => "success",
+                    'message' => 'Page created successfully',
+                ]);
+            } catch (Exception $e) {
+                http_response_code(500);
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $e->getMessage()
+                ]);
+                exit();
             }
+        } else {
+            // http_response_code(422);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
+            exit();
         }
     }
 
@@ -108,65 +118,84 @@ class PagesController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['update_page'])) {
-            $postArray = [
-                'pageID' => $id,
-                'userID' => $_SESSION['user']['id'],
-                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
-                'pageName' => htmlspecialchars(trim($_POST['pageName'])),
-                'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
-                'PageMetaTitle' => htmlspecialchars(trim($_POST['PageMetaTitle'])),
-                'PageMetaDescription' => htmlspecialchars(trim($_POST['PageMetaDescription'])),
-                'PageMetaKeywords' => htmlspecialchars(trim($_POST['PageMetaKeywords'])),
-                'pageStatus' => isset($_POST['pageStatus']) ? 1 : 0,
-                'pageContent' => $_POST['pageContent'],
-            ];
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
-            // Get existing page from the Model
-            $page = $this->pagesModel->getPageById($id);
-            // Get all existing language ids from the Model
-            $languages = $this->languagesModel->getLanguages();
-            $valid_ids = array();
-            foreach ($languages as $lang) {
-                $valid_ids[] = $lang['languageID'];
-            }
+        $postArray = [
+            'pageID' => $id,
+            'userID' => $_SESSION['user']['id'],
+            'languageID' => htmlspecialchars(trim($_POST['languageID'])),
+            'pageName' => htmlspecialchars(trim($_POST['pageName'])),
+            'pageTitle' => htmlspecialchars(trim($_POST['pageTitle'])),
+            'PageMetaTitle' => htmlspecialchars(trim($_POST['PageMetaTitle'])),
+            'PageMetaDescription' => htmlspecialchars(trim($_POST['PageMetaDescription'])),
+            'PageMetaKeywords' => htmlspecialchars(trim($_POST['PageMetaKeywords'])),
+            'pageStatus' => isset($_POST['pageStatus']) ? 1 : 0,
+            'pageContent' => $_POST['pageContent'],
+        ];
 
-            // Validate inputs
-            $validator = new DataValidator();
-            $validator('Page Name', $postArray['pageName'])->required()->min(3)->max(20);
-            $validator('Page Title', $postArray['pageTitle'])->required()->min(3)->max(20);
-            if (empty($postArray['languageID'])) {
-                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
-            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
-                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
-            }
+        // Get existing page from the Model
+        $page = $this->pagesModel->getPageById($id);
+        // Get all existing language ids from the Model
+        $languages = $this->languagesModel->getLanguages();
+        $valid_ids = array();
+        foreach ($languages as $lang) {
+            $valid_ids[] = $lang['languageID'];
+        }
 
-            if ($validator->isValidated()) {
-                // Update only changed fields and skip the 'id'
-                foreach ($postArray as $key => $value) {
-                    if (isset($postArray[$key]) && $page[$key] == $value && $key !== 'pageID') {
-                        unset($postArray[$key]);
-                    }
+        // Validate inputs
+        $validator = new DataValidator();
+
+        $validator('Page Name', $postArray['pageName'])->required()->min(3)->max(20);
+        $validator('Page Title', $postArray['pageTitle'])->required()->min(3)->max(20);
+        if (empty($postArray['languageID'])) {
+            $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+        } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+            $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
+        }
+
+        if ($validator->isValidated()) {
+            // Update only changed fields and skip the 'id'
+            foreach ($postArray as $key => $value) {
+                if (isset($postArray[$key]) && $page[$key] == $value && $key !== 'pageID') {
+                    unset($postArray[$key]);
                 }
+            }
+            // remove empty keys
+            $postArray = array_filter($postArray, 'strlen');
 
-                if (count($postArray) > 1) {
-                    try {
-                        // Update in Database
-                        $this->pagesModel->updatePage($postArray);
-                        setAlert('success', 'Update completed successfully');
-                        redirect(ADMURL . '/pages');
-                    } catch (Exception $e) {
-                        setAlert('error', $e->getMessage());
-                        redirect(ADMURL . '/pages/edit/' . $id);
-                    }
-                } else {
-                    setAlert('warning', 'No fields were changed');
-                    redirect(ADMURL . '/pages/edit/' . $id);
+            if (count($postArray) > 1) {
+                try {
+                    // Update in Database
+                    $this->pagesModel->updatePage($postArray);
+                    // setAlert('success', 'Update completed successfully');
+                    echo json_encode([
+                        "status" => "success",
+                        'message' => 'Page updated successfully',
+                    ]);
+                } catch (Exception $e) {
+                    http_response_code(500);
+                    echo json_encode([
+                        "status" => "error",
+                        "message" => $e->getMessage()
+                    ]);
+                    exit();
                 }
             } else {
-                setAlert('error', $validator->getErrors());
-                redirect(ADMURL . '/pages/edit/' . $id);
+                // setAlert('warning', 'No fields were changed');
+                echo json_encode([
+                    "status" => "warning",
+                    "message" => 'No fields were changed'
+                ]);
+                exit();
             }
+        } else {
+            // http_response_code(422);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
+            exit();
         }
     }
 

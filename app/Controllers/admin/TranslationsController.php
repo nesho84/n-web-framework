@@ -50,48 +50,57 @@ class TranslationsController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['insert_translation'])) {
-            $postArray = [
-                'userID' => $_SESSION['user']['id'],
-                'languageID' => htmlspecialchars(trim($_POST['languageID'] ?? '')),
-                'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
-                'translationText' => htmlspecialchars(trim($_POST['translationText'])),
-            ];
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
-            // Get all existing language ids from the Model
-            $languages = $this->languagesModel->getLanguages();
-            $valid_ids = array();
-            foreach ($languages as $lang) {
-                $valid_ids[] = $lang['languageID'];
-            }
+        $postArray = [
+            'userID' => $_SESSION['user']['id'],
+            'languageID' => htmlspecialchars(trim($_POST['languageID'] ?? '')),
+            'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
+            'translationText' => htmlspecialchars(trim($_POST['translationText'])),
+        ];
 
-            // Validate inputs
-            $validator = new DataValidator();
-            $validator('Translation Code', $postArray['translationCode'])->required()->number();
-            if (empty($postArray['languageID'])) {
-                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
-            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
-                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
-            }
-            $validator('Translation Text', $postArray['translationText'])->required()->min(3)->max(50);
+        // Get all existing language ids from the Model
+        $languages = $this->languagesModel->getLanguages();
+        $valid_ids = array();
+        foreach ($languages as $lang) {
+            $valid_ids[] = $lang['languageID'];
+        }
 
-            if ($validator->isValidated()) {
-                try {
-                    // Insert in Database
-                    $this->translationsModel->insertTranslation($postArray);
-                    setAlert('success', 'Insert completed successfully.');
-                    unset($_SESSION['inputs']);
-                    redirect(ADMURL . '/translations');
-                } catch (Exception $e) {
-                    setAlert('error', $e->getMessage());
-                    $_SESSION['inputs'] = $postArray;
-                    redirect(ADMURL . '/translations/create');
-                }
-            } else {
-                setAlert('error', $validator->getErrors());
-                $_SESSION['inputs'] = $postArray;
-                redirect(ADMURL . '/translations/create');
+        // Validate inputs
+        $validator = new DataValidator();
+        $validator('Translation Code', $postArray['translationCode'])->required()->number();
+        if (empty($postArray['languageID'])) {
+            $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+        } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+            $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
+        }
+        $validator('Translation Text', $postArray['translationText'])->required()->min(3)->max(50);
+
+        if ($validator->isValidated()) {
+            try {
+                // Insert in Database
+                $this->translationsModel->insertTranslation($postArray);
+                // setAlert('success', 'Translation created successfully.');
+                echo json_encode([
+                    "status" => "success",
+                    'message' => 'Translation created successfully',
+                ]);
+            } catch (Exception $e) {
+                http_response_code(500);
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $e->getMessage()
+                ]);
+                exit();
             }
+        } else {
+            // http_response_code(422);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
+            exit();
         }
     }
 
@@ -110,60 +119,77 @@ class TranslationsController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['update_translation'])) {
-            $postArray = [
-                'translationID' => $id,
-                'userID' => $_SESSION['user']['id'],
-                'languageID' => htmlspecialchars(trim($_POST['languageID'])),
-                'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
-                'translationText' => htmlspecialchars(trim($_POST['translationText'])),
-            ];
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
-            // Get existing category from the Model
-            $translation = $this->translationsModel->getTranslationById($id);
-            // Get all existing language ids from the Model
-            $languages = $this->languagesModel->getLanguages();
-            $valid_ids = array();
-            foreach ($languages as $lang) {
-                $valid_ids[] = $lang['languageID'];
-            }
+        $postArray = [
+            'translationID' => $id,
+            'userID' => $_SESSION['user']['id'],
+            'languageID' => htmlspecialchars(trim($_POST['languageID'])),
+            'translationCode' => htmlspecialchars(trim($_POST['translationCode'])),
+            'translationText' => htmlspecialchars(trim($_POST['translationText'])),
+        ];
 
-            // Validate inputs
-            $validator = new DataValidator();
-            $validator('Translation Code', $postArray['translationCode'])->required()->number();
-            if (empty($postArray['languageID'])) {
-                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
-            } elseif (!in_array($postArray['languageID'], $valid_ids)) {
-                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
-            }
-            $validator('Translation Text', $postArray['translationText'])->required()->min(3)->max(50);
+        // Get existing category from the Model
+        $translation = $this->translationsModel->getTranslationById($id);
+        // Get all existing language ids from the Model
+        $languages = $this->languagesModel->getLanguages();
+        $valid_ids = array();
+        foreach ($languages as $lang) {
+            $valid_ids[] = $lang['languageID'];
+        }
 
-            if ($validator->isValidated()) {
-                // Remove unchanged postArray keys but keep the 'id'
-                foreach ($postArray as $key => $value) {
-                    if (isset($postArray[$key]) && $translation[$key] == $value && $key !== 'translationID') {
-                        unset($postArray[$key]);
-                    }
+        // Validate inputs
+        $validator = new DataValidator();
+        $validator('Translation Code', $postArray['translationCode'])->required()->number();
+        if (empty($postArray['languageID'])) {
+            $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+        } elseif (!in_array($postArray['languageID'], $valid_ids)) {
+            $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
+        }
+        $validator('Translation Text', $postArray['translationText'])->required()->min(3)->max(50);
+
+        if ($validator->isValidated()) {
+            // Remove unchanged postArray keys but keep the 'id'
+            foreach ($postArray as $key => $value) {
+                if (isset($postArray[$key]) && $translation[$key] == $value && $key !== 'translationID') {
+                    unset($postArray[$key]);
                 }
+            }
+            // remove empty keys
+            $postArray = array_filter($postArray, 'strlen');
 
-                if (count($postArray) > 1) {
-                    try {
-                        // Update in Database
-                        $this->translationsModel->updateTranslation($postArray);
-                        setAlert('success', 'Update completed successfully');
-                        redirect(ADMURL . '/translations');
-                    } catch (Exception $e) {
-                        setAlert('error', $e->getMessage());
-                        redirect(ADMURL . '/translations/edit/' . $id);
-                    }
-                } else {
-                    setAlert('warning', 'No fields were changed');
-                    redirect(ADMURL . '/translations/edit/' . $id);
+            if (count($postArray) > 1) {
+                try {
+                    // Update in Database
+                    $this->translationsModel->updateTranslation($postArray);
+                    // setAlert('success', 'Translation updated successfully');
+                    echo json_encode([
+                        "status" => "success",
+                        'message' => 'Translation updated successfully',
+                    ]);
+                } catch (Exception $e) {
+                    http_response_code(500);
+                    echo json_encode([
+                        "status" => "error",
+                        "message" => $e->getMessage()
+                    ]);
+                    exit();
                 }
             } else {
-                setAlert('error', $validator->getErrors());
-                redirect(ADMURL . '/translations/edit/' . $id);
+                echo json_encode([
+                    "status" => "warning",
+                    "message" => 'No fields were changed'
+                ]);
+                exit();
             }
+        } else {
+            // http_response_code(422);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
+            exit();
         }
     }
 

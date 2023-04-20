@@ -1,6 +1,9 @@
 'use strict';
 
-function previewUploadedImages(fileInputId, previewId, spinnerId) {
+//------------------------------------------------------------
+function previewUploadedImages(fileInputId, previewId, spinnerId)
+//------------------------------------------------------------
+{
     // Get the file input element
     const fileInput = document.getElementById(fileInputId);
     // Get the preview div element

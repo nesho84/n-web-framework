@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function showFilesModal(element) {
+//------------------------------------------------------------
+function showFilesModal(element)
+//------------------------------------------------------------
+{
     const modalEl = createFileModal();
     const pdfUrl = getPdfUrl(element);
 
@@ -59,7 +62,10 @@ function showFilesModal(element) {
     dModal.handleUpdate();
 }
 
-function createFileModal() {
+//------------------------------------------------------------
+function createFileModal()
+//------------------------------------------------------------
+{
     let modalHTML = `
     <div class="modal fade" id="pdf-modal" tabindex="-1" aria-labelledby="pdf-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -80,7 +86,10 @@ function createFileModal() {
     return document.getElementById("pdf-modal");
 }
 
-function getPdfUrl(element) {
+//------------------------------------------------------------
+function getPdfUrl(element)
+//------------------------------------------------------------
+{
     if (element.tagName === 'A') {
         return element.getAttribute('href');
     } else if (element.tagName === 'BUTTON') {
@@ -90,7 +99,10 @@ function getPdfUrl(element) {
     }
 }
 
-function isLoading(show) {
+//------------------------------------------------------------
+function isLoading(show)
+//------------------------------------------------------------
+{
     let spinnerHTML = `
     <div id="modal-spinner" class="position-absolute top-50 start-50 translate-middle mt-1">
         <div class="spinner-border" role="status">

@@ -24,7 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function showDynamicModal(element) {
+//------------------------------------------------------------
+function showDynamicModal(element)
+//------------------------------------------------------------
+{
     const modalEl = createDynamicModal();
     const actionUrl = getActionUrl(element);
 
@@ -100,7 +103,10 @@ function showDynamicModal(element) {
     dModal.handleUpdate();
 }
 
-function createDynamicModal() {
+//------------------------------------------------------------
+function createDynamicModal()
+//------------------------------------------------------------
+{
     let modalHTML = `
     <div class="modal fade" id="dynamic-modal" tabindex="-1" aria-labelledby="dynamic-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -118,7 +124,10 @@ function createDynamicModal() {
     return document.getElementById("dynamic-modal");
 }
 
-function getActionUrl(element) {
+//------------------------------------------------------------
+function getActionUrl(element)
+//------------------------------------------------------------
+{
     if (element.tagName === 'A') {
         return element.getAttribute('href');
     } else if (element.tagName === 'BUTTON') {
@@ -128,7 +137,10 @@ function getActionUrl(element) {
     }
 }
 
-function isLoading(show) {
+//------------------------------------------------------------
+function isLoading(show)
+//------------------------------------------------------------
+{
     let spinnerHTML = `
     <div id="modal-spinner" class="position-absolute top-50 start-50 translate-middle mt-1">
         <div class="spinner-border" role="status">
@@ -146,7 +158,10 @@ function isLoading(show) {
     }
 }
 
-function createModalButtons(modalFooter) {
+//------------------------------------------------------------
+function createModalButtons(modalFooter)
+//------------------------------------------------------------
+{
     modalFooter.insertAdjacentHTML("afterbegin", `<button type="submit" class="btn btn-sm btn-success d-flex align-items-center px-4" id="submit-btn">SAVE</button>`);
     modalFooter.insertAdjacentHTML("afterbegin", `<button type="button" class="btn btn-sm btn-secondary px-3" data-bs-dismiss="modal">CANCEL</button>`);
 }

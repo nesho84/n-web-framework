@@ -144,4 +144,43 @@ class Sessions
 
         setcookie('last_page', htmlspecialchars($page, ENT_QUOTES, 'UTF-8'), time() + COOKIE_DURATION, '/');
     }
+
+    /**
+     * Validates CSRF Token sent by header or from the form input
+     * @param string $csrfToken [optional]
+     * @return void
+     */
+    //------------------------------------------------------------
+    public static function requireCSRF(string $csrfToken = ""): void
+    //------------------------------------------------------------
+    {
+        header("Content-Type: application/json");
+        header("X-Content-Type-Options: nosniff");
+        header("X-Frame-Options: DENY");
+        header("X-XSS-Protection: 1; mode=block");
+        header("Referrer-Policy: same-origin");
+        header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
+
+        // Validate CSRF token
+        if ($csrfToken !== "") {
+            if ($csrfToken !== $_SESSION['csrf_token']) {
+                http_response_code(419);
+                echo json_encode([
+                    "status" => "error",
+                    'message' => 'Invalid or missing CSRF token'
+                ]);
+                exit();
+            }
+        } else {
+            $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
+            if ($csrfToken !== $_SESSION['csrf_token']) {
+                http_response_code(419);
+                echo json_encode([
+                    "status" => "error",
+                    'message' => 'Invalid or missing CSRF token'
+                ]);
+                exit();
+            }
+        }
+    }
 }

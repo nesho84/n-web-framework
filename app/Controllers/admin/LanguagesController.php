@@ -40,61 +40,71 @@ class LanguagesController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['insert_language'])) {
-            $postArray = [
-                'userID' => $_SESSION['user']['id'],
-                'languageName' => htmlspecialchars(trim($_POST['languageName'])),
-                'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
-                'languageFlag' => $_FILES['languageFlag'] ?? null,
-            ];
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
-            // Validate inputs
-            $validator = new DataValidator();
-            $validator('Language Name', $postArray['languageName'])->required()->min(3)->max(20);
-            $validator('Language Code', $postArray['languageCode'])->required()->min(2)->max(20);
+        $postArray = [
+            'userID' => $_SESSION['user']['id'],
+            'languageName' => htmlspecialchars(trim($_POST['languageName'])),
+            'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
+            'languageFlag' => $_FILES['languageFlag'] ?? null,
+        ];
 
-            // base64 Image Logic and Validation
-            if (empty($postArray['languageFlag']['name'])) {
-                // If it is empty then replace with null
-                $postArray['languageFlag'] = null;
-            } else {
-                $file = $postArray['languageFlag']['tmp_name'];
-                // Get the width and height of the image
-                [$width, $height] = getimagesize($file);
-                if ($width > 150 || $height > 150) {
-                    $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
-                }
-                // Make sure `file.name` matches our extensions criteria
-                $allowed_extensions = array("jpg", "jpeg", "png", "gif");
-                $extension = pathinfo($postArray['languageFlag']['name'], PATHINFO_EXTENSION);
-                if (!in_array($extension, $allowed_extensions)) {
-                    $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
-                }
-                // Set Image only if validation passed
-                if ($validator->isValidated()) {
-                    $image = file_get_contents($file);
-                    $image = base64_encode($image);
-                    $postArray['languageFlag'] = 'data:image/png;base64,' . $image;
-                }
+        // Validate inputs
+        $validator = new DataValidator();
+
+        $validator('Language Name', $postArray['languageName'])->required()->min(3)->max(20);
+        $validator('Language Code', $postArray['languageCode'])->required()->min(2)->max(20);
+
+        // base64 Image Logic and Validation
+        if (empty($postArray['languageFlag']['name'])) {
+            // If it is empty then replace with null
+            $postArray['languageFlag'] = null;
+        } else {
+            $file = $postArray['languageFlag']['tmp_name'];
+            // Get the width and height of the image
+            [$width, $height] = getimagesize($file);
+            if ($width > 150 || $height > 150) {
+                $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
             }
-
+            // Make sure `file.name` matches our extensions criteria
+            $allowed_extensions = array("jpg", "jpeg", "png", "gif");
+            $extension = pathinfo($postArray['languageFlag']['name'], PATHINFO_EXTENSION);
+            if (!in_array($extension, $allowed_extensions)) {
+                $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
+            }
+            // Set Image only if validation passed
             if ($validator->isValidated()) {
-                try {
-                    // Insert in Database
-                    $this->languagesModel->insertLanguage($postArray);
-                    setAlert('success', 'Insert completed successfully.');
-                    unset($_SESSION['inputs']);
-                    redirect(ADMURL . '/languages');
-                } catch (Exception $e) {
-                    setAlert('error', $e->getMessage());
-                    $_SESSION['inputs'] = $postArray;
-                    redirect(ADMURL . '/languages/create');
-                }
-            } else {
-                setAlert('error', $validator->getErrors());
-                $_SESSION['inputs'] = $postArray;
-                redirect(ADMURL . '/languages/create');
+                $image = file_get_contents($file);
+                $image = base64_encode($image);
+                $postArray['languageFlag'] = 'data:image/png;base64,' . $image;
             }
+        }
+
+        if ($validator->isValidated()) {
+            try {
+                // Insert in Database
+                $this->languagesModel->insertLanguage($postArray);
+                // setAlert('success', 'Language created successfully');
+                echo json_encode([
+                    "status" => "success",
+                    'message' => 'Language created successfully',
+                ]);
+            } catch (Exception $e) {
+                http_response_code(500);
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $e->getMessage()
+                ]);
+                exit();
+            }
+        } else {
+            // http_response_code(422);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
+            exit();
         }
     }
 
@@ -112,74 +122,93 @@ class LanguagesController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        if (isset($_POST['update_language'])) {
-            $postArray = [
-                'languageID' => $id,
-                'userID' => $_SESSION['user']['id'],
-                'languageName' => htmlspecialchars(trim($_POST['languageName'])),
-                'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
-                'languageFlag' => $_FILES['languageFlag'] ?? null,
-            ];
+        // Require CSRF_TOKEN
+        Sessions::requireCSRF();
 
-            // Get existing language from the Model
-            $language = $this->languagesModel->getLanguageById($id);
+        $postArray = [
+            'languageID' => $id,
+            'userID' => $_SESSION['user']['id'],
+            'languageName' => htmlspecialchars(trim($_POST['languageName'])),
+            'languageCode' => htmlspecialchars(trim($_POST['languageCode'])),
+            'languageFlag' => $_FILES['languageFlag'] ?? null,
+        ];
 
-            // Validate inputs
-            $validator = new DataValidator();
-            $validator('Language Name', $postArray['languageName'])->required()->min(3)->max(20);
-            $validator('Language Code', $postArray['languageCode'])->required()->min(2)->max(20);
+        // Get existing language from the Model
+        $language = $this->languagesModel->getLanguageById($id);
 
-            // base64 Image Logic and Validation
-            if (empty($postArray['languageFlag']['name'])) {
-                // If it was not changed then replace with existing
-                $postArray['languageFlag'] = $language['languageFlag'];
-            } else {
-                $file = $postArray['languageFlag']['tmp_name'];
-                // Get the width and height of the image
-                [$width, $height] = getimagesize($file);
-                if ($width > 150 || $height > 150) {
-                    $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
-                }
-                // Make sure `file.name` matches our extensions criteria
-                $allowed_extensions = array("jpg", "jpeg", "png", "gif");
-                $extension = pathinfo($postArray['languageFlag']['name'], PATHINFO_EXTENSION);
-                if (!in_array($extension, $allowed_extensions)) {
-                    $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
-                }
-                // Set Image only if validation passed
-                if ($validator->isValidated()) {
-                    $image = file_get_contents($file);
-                    $image = base64_encode($image);
-                    $postArray['languageFlag'] = 'data:image/png;base64,' . $image;
-                }
+        // Validate inputs
+        $validator = new DataValidator();
+
+        $validator('Language Name', $postArray['languageName'])->required()->min(3)->max(20);
+        $validator('Language Code', $postArray['languageCode'])->required()->min(2)->max(20);
+
+        // base64 Image Logic and Validation
+        if (empty($postArray['languageFlag']['name'])) {
+            // If it was not changed then replace with existing
+            $postArray['languageFlag'] = $language['languageFlag'];
+        } else {
+            $file = $postArray['languageFlag']['tmp_name'];
+            // Get the width and height of the image
+            [$width, $height] = getimagesize($file);
+            if ($width > 150 || $height > 150) {
+                $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
             }
-
+            // Make sure `file.name` matches our extensions criteria
+            $allowed_extensions = array("jpg", "jpeg", "png", "gif");
+            $extension = pathinfo($postArray['languageFlag']['name'], PATHINFO_EXTENSION);
+            if (!in_array($extension, $allowed_extensions)) {
+                $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
+            }
+            // Set Image only if validation passed
             if ($validator->isValidated()) {
-                // Remove unchanged postArray keys but keep the 'id'
-                foreach ($postArray as $key => $value) {
-                    if (isset($postArray[$key]) && $language[$key] == $value && $key !== 'languageID') {
-                        unset($postArray[$key]);
-                    }
-                }
+                $image = file_get_contents($file);
+                $image = base64_encode($image);
+                $postArray['languageFlag'] = 'data:image/png;base64,' . $image;
+            }
+        }
 
-                if (count($postArray) > 1) {
-                    try {
-                        // Update in Database
-                        $this->languagesModel->updateLanguage($postArray);
-                        setAlert('success', 'Update completed successfully');
-                        redirect(ADMURL . '/languages');
-                    } catch (Exception $e) {
-                        setAlert('error', $e->getMessage());
-                        redirect(ADMURL . '/languages/edit/' . $id);
-                    }
-                } else {
-                    setAlert('warning', 'No fields were changed');
-                    redirect(ADMURL . '/languages/edit/' . $id);
+        if ($validator->isValidated()) {
+            // Remove unchanged postArray keys but keep the 'id'
+            foreach ($postArray as $key => $value) {
+                if (isset($postArray[$key]) && $language[$key] == $value && $key !== 'languageID') {
+                    unset($postArray[$key]);
+                }
+            }
+            // remove empty keys
+            $postArray = array_filter($postArray, 'strlen');
+
+            if (count($postArray) > 1) {
+                try {
+                    // Update in Database
+                    $this->languagesModel->updateLanguage($postArray);
+                    // setAlert('success', 'Language Updated successfully');
+                    echo json_encode([
+                        "status" => "success",
+                        'message' => 'Language updated successfully',
+                    ]);
+                } catch (Exception $e) {
+                    http_response_code(500);
+                    echo json_encode([
+                        "status" => "error",
+                        "message" => $e->getMessage()
+                    ]);
+                    exit();
                 }
             } else {
-                setAlert('error', $validator->getErrors());
-                redirect(ADMURL . '/languages/edit/' . $id);
+                // setAlert('warning', 'No fields were changed');
+                echo json_encode([
+                    "status" => "warning",
+                    "message" => 'No fields were changed'
+                ]);
+                exit();
             }
+        } else {
+            // http_response_code(422);
+            echo json_encode([
+                "status" => "error",
+                "message" => $validator->getErrors()
+            ]);
+            exit();
         }
     }
 
