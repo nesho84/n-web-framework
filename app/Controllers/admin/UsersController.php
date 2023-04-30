@@ -53,8 +53,8 @@ class UsersController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        // Require CSRF_TOKEN
-        Sessions::requireCSRF();
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
         $postArray = [
             'userName' => htmlspecialchars(trim($_POST['userName'])),
@@ -171,8 +171,8 @@ class UsersController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        // Require CSRF_TOKEN
-        Sessions::requireCSRF();
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
         $postArray = [
             'userID' => $id,

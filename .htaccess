@@ -1,15 +1,30 @@
-<IfModule mod_rewrite.c>
+# Disable directory listing for all directories
+Options -Indexes
 
+# Deny directory listing and access to files inside the directory
+<FilesMatch "(^\.|\/\.|config\.php|public\/|app\/)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to specific file types
+<FilesMatch "(^\.|\/\.|\.(htaccess|htpasswd|gitignore|ini|log|sql|bak|sh|phps)$)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
     Options -Multiviews
 
     RewriteEngine On
+
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_URI} !-L
-    # l = last
+
+    # Exclude requests for files and directories in the specified directories
     RewriteCond $1 !^(public|js|gif|jpg|png|css|pdf|eot|svg|ttf|woff|woff2|map)
-    #RewriteRule ^(example|test|css|vendors|vendor|js|img|upload)($|/) - [L]
-    #RewriteRule ^(autorunGen.php|autoload.php)($|/) - [L]
-    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
-    
+
+    # Redirects all requests to index.php with the requested URL as a parameter
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]  
 </IfModule>

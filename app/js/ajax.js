@@ -83,11 +83,17 @@ async function handleFormSubmit(event)
     }
 }
 
-// Function to show response message in a toast element
+// Function to show response message in a sweetalert2 toast element
 //------------------------------------------------------------
-function showAlert(className, message)
+function showAlert(bgClass, message)
 //------------------------------------------------------------
 {
+    let status = bgClass.split('-')[1];
+
+    if (status === 'danger') {
+        status = 'error';
+    }
+
     let msg = "";
 
     // Multiple Messages
@@ -102,29 +108,69 @@ function showAlert(className, message)
             : `<span>${message}</span>`;
     }
 
-    const alertContainer = document.getElementById("alert-container");
-    alertContainer.innerHTML = '';
-    const alertElement = document.createElement("div");
-    alertElement.innerHTML = `
-    <div id="toast-container" class="position-fixed start-50 translate-middle-x p-3">
-        <div id="liveToast" class="toast align-items-center text-white ${className} border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
-            <div class="d-flex">
-                <div class="toast-body">${msg}</div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-        </div>
-    </div>`;
-    alertContainer.prepend(alertElement);
-    // Show toast
-    const toastContainer = document.getElementById("toast-container");
-    const toastElement = document.getElementById("liveToast");
-    if (toastElement) {
-        toastContainer.style.zIndex = "99999";
-        const toast = new bootstrap.Toast(toastElement);
-        toast.show();
-    }
-    alertContainer.scrollIntoView(false);
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: status === 'error' ? 0 : 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+
+    Toast.fire({
+        // background: "#fff",
+        // color: '',
+        icon: status,
+        title: '',
+        html: msg
+    });
 }
+
+// // Function to show response message in a bootstrap toast element
+// //------------------------------------------------------------
+// function showAlert(bgClass, message)
+// //------------------------------------------------------------
+// {
+//     let msg = "";
+
+//     // Multiple Messages
+//     if (message.toString().includes("<br>")) {
+//         msg = Array.isArray(message)
+//             ? '<ul class="m-0 px-3">' + message.map(msg => `<li>${msg}</li>`).join('') + '</ul>'
+//             : '<ul class="m-0 px-3">' + message.split("<br>").map(msg => `<li>${msg}</li>`).join('') + '</ul>'
+//     } else {
+//         // Single Message
+//         msg = Array.isArray(message)
+//             ? message.map(msg => `<span>${msg}</span>`).join('')
+//             : `<span>${message}</span>`;
+//     }
+
+//     const alertContainer = document.getElementById("alert-container");
+//     alertContainer.innerHTML = '';
+//     const alertElement = document.createElement("div");
+//     alertElement.innerHTML = `
+//     <div id="toast-container" class="position-fixed start-50 translate-middle-x p-3">
+//         <div id="liveToast" class="toast align-items-center text-white ${bgClass} border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+//             <div class="d-flex">
+//                 <div class="toast-body">${msg}</div>
+//                 <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+//             </div>
+//         </div>
+//     </div>`;
+//     alertContainer.prepend(alertElement);
+//     // Show toast
+//     const toastContainer = document.getElementById("toast-container");
+//     const toastElement = document.getElementById("liveToast");
+//     if (toastElement) {
+//         toastContainer.style.zIndex = "99999";
+//         const toast = new bootstrap.Toast(toastElement);
+//         toast.show();
+//     }
+//     alertContainer.scrollIntoView(false);
+// }
 
 // Function to hide response message
 //------------------------------------------------------------

@@ -1,2 +1,0 @@
-[20-Apr-2023 23:05:39 Europe/Berlin] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in D:\xampp\htdocs\n-web-framework\app\common\Sessions.php on line 160
-[20-Apr-2023 23:08:35 Europe/Berlin] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 49

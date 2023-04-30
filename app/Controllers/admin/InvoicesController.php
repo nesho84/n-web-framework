@@ -55,8 +55,8 @@ class InvoicesController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        // Require CSRF_TOKEN
-        Sessions::requireCSRF();
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
         // Validate inputs
         $validator = new DataValidator();

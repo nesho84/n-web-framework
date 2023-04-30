@@ -10,7 +10,7 @@ class Router
     private string $action;
 
     //------------------------------------------------------------
-    public static function get(string $route, callable|string $callback): ?object
+    public static function get(string $route, callable|string $callback): self
     //------------------------------------------------------------
     {
         self::add('GET', $route, $callback);
@@ -18,7 +18,7 @@ class Router
     }
 
     //------------------------------------------------------------
-    public static function post($route, callable|string $callback): ?object
+    public static function post($route, callable|string $callback): self
     //------------------------------------------------------------
     {
         self::add('POST', $route, $callback);

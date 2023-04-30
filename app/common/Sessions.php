@@ -2,6 +2,23 @@
 
 class Sessions
 {
+    // The static instance variable stores a reference to the single instance of the class.
+    protected static self $instance;
+
+    /**
+     * This method creates a new instance of the class if one does not already exist, and returns it.
+     * @return self the current instance of the class.
+     */
+    public static function getInstance(): self
+    {
+        // If the instance variable is not set, create a new instance of the class.
+        if (!isset(self::$instance)) {
+            self::$instance = new self();
+        }
+        // Return the instance variable.
+        return self::$instance;
+    }
+
     /**
      * Redirects to Login Page, if User is not Logged In! 
      * @param bool $isLoginPage redirect from login page if already logged in
@@ -34,14 +51,6 @@ class Sessions
 
         // // Set last visited page
         // self::getLastPage();
-
-    }
-
-    //------------------------------------------------------------
-    private static function getPage(): string
-    //------------------------------------------------------------
-    {
-        return isset($_GET['url']) ? APPURL . '/' . $_GET['url'] : '/';
     }
 
     //------------------------------------------------------------
@@ -94,9 +103,19 @@ class Sessions
         }
 
         unset($_SESSION["user"]);
+        unset($_SESSION['csrf_token']);
 
-        // Finally, destroy the session
+        // regenerate session ID and remove any active sessions
+        session_unset();
         session_destroy();
+        session_write_close();
+    }
+
+    //------------------------------------------------------------
+    private static function getPage(): string
+    //------------------------------------------------------------
+    {
+        return isset($_GET['url']) ? APPURL . '/' . $_GET['url'] : '/';
     }
 
     //------------------------------------------------------------
@@ -146,12 +165,11 @@ class Sessions
     }
 
     /**
-     * Validates CSRF Token sent by header or from the form input
-     * @param string $csrfToken [optional]
-     * @return void
+     * This method sets the required headers for the session
+     * @return self the current instance of the class.
      */
     //------------------------------------------------------------
-    public static function requireCSRF(string $csrfToken = ""): void
+    public static function setHeaders(): self
     //------------------------------------------------------------
     {
         header("Content-Type: application/json");
@@ -161,6 +179,19 @@ class Sessions
         header("Referrer-Policy: same-origin");
         header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
 
+        // Return the current instance of the class.
+        return self::getInstance();
+    }
+
+    /**
+     * Validates CSRF Token sent by header or from the form input
+     * @param string $csrfToken [optional]
+     * @return self the current instance of the class.
+     */
+    //------------------------------------------------------------
+    public static function requireCSRF(string $csrfToken = ""): self
+    //------------------------------------------------------------
+    {
         // Validate CSRF token
         if ($csrfToken !== "") {
             if ($csrfToken !== $_SESSION['csrf_token']) {
@@ -182,5 +213,7 @@ class Sessions
                 exit();
             }
         }
+
+        return self::getInstance();
     }
 }

@@ -40,8 +40,8 @@ class LanguagesController extends Controller
     public function insert(): void
     //------------------------------------------------------------
     {
-        // Require CSRF_TOKEN
-        Sessions::requireCSRF();
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
         $postArray = [
             'userID' => $_SESSION['user']['id'],
@@ -122,8 +122,8 @@ class LanguagesController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        // Require CSRF_TOKEN
-        Sessions::requireCSRF();
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
         $postArray = [
             'languageID' => $id,

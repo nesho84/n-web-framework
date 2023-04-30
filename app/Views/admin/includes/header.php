@@ -16,6 +16,9 @@ $bodyTheme = $baseTheme == "dark" ? "dark" : "white";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <noscript>
+        <meta http-equiv="refresh" runat="server" id="mtaJSCheck" content="0; <?php echo APPURL; ?>/noscript">
+    </noscript>
     <meta name="csrf-token" content="<?= $_SESSION['csrf_token'] ?? "" ?>">
     <base href="<?php echo $baseUrl; ?>">
     <title><?php echo $title != "" ? $title : "undefined"; ?></title>

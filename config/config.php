@@ -6,12 +6,9 @@ session_name('NWF_SESSION');
 // Use SSL/TLS encryption
 ini_set('session.cookie_secure', 1);
 ini_set('session.cookie_httponly', 1);
-// ini_set('session.gc_maxlifetime', 3600);
 // Set session cookie parameters
 session_set_cookie_params([
-    // 'lifetime' => 3600, // 1 hour
     'path' => '/n-web-framework',
-    // 'domain' => 'http://localhost:8080/n-web-framework',
     'secure' => true,
     'httponly' => true,
 ]);
@@ -57,57 +54,22 @@ define('A_USER_PASSWORD', '010203');
 //------------------------------------------------------------
 // App 
 //------------------------------------------------------------
-defined('APPURL')
-    or define('APPURL', 'http://localhost/n-web-framework');
-
-defined('APPROOT')
-    or define('APPROOT', dirname(__DIR__));
-
-defined('ADMURL')
-    or define('ADMURL', APPURL . '/admin');
-
-defined('ADM_VIEWS')
-    or define('ADM_VIEWS', APPURL . '/app/Views/admin');
-
-defined('SITE_NAME')
-    or define('SITE_NAME', 'n-web-framework');
-
-/* Email Address - for the Contact page */
-defined('CONTACT_FORM_EMAIL')
-    or define('CONTACT_FORM_EMAIL', 'office@n-web-framework.com');
-
-defined('UPLOADURL')
-    or define('UPLOADURL', APPURL . '/public/uploads');
-defined('UPLOAD_PATH')
-    or define('UPLOAD_PATH', APPROOT . '/public/uploads');
-
-defined('DB_BACKUPURL')
-    or define('DB_BACKUPURL', APPURL . '/public/backups/database');
-defined('DB_BACKUPS_PATH')
-    or define('DB_BACKUPS_PATH', APPROOT . '/public/backups/database');
-
-defined('LIBRARY_PATH')
-    or define('LIBRARY_PATH', APPROOT . '/app/library');
-
-defined('COMMON_PATH')
-    or define('COMMON_PATH', APPROOT . '/app/common');
-
-defined('SCRIPTS_PATH')
-    or define('SCRIPTS_PATH', APPROOT . '/app/js');
-defined('SCRIPTS_URL')
-    or define('SCRIPTS_URL', APPROOT . '/app/js');
-
-defined('CORE_PATH')
-    or define('CORE_PATH', APPROOT . '/app/Core');
-
-defined('ROUTES_PATH')
-    or define('ROUTES_PATH', APPROOT . '/app/Routes');
-
-defined('CONTROLLERS_PATH')
-    or define('CONTROLLERS_PATH', APPROOT . '/app/Controllers');
-
-defined('MODELS_PATH')
-    or define('MODELS_PATH', APPROOT . '/app/Models');
-
-defined('VIEWS_PATH')
-    or define('VIEWS_PATH', APPROOT . '/app/Views');
+define('SITE_NAME', 'n-web-framework');
+define('APPURL', 'http://localhost/n-web-framework');
+define('APPROOT', dirname(__DIR__));
+define('ADMURL', APPURL . '/admin');
+define('ADM_VIEWS', APPURL . '/app/Views/admin');
+define('CONTACT_FORM_EMAIL', 'office@n-web-framework.com');
+define('UPLOADURL', APPURL . '/public/uploads');
+define('UPLOAD_PATH', APPROOT . '/public/uploads');
+define('DB_BACKUPURL', APPURL . '/public/backups/database');
+define('DB_BACKUPS_PATH', APPROOT . '/public/backups/database');
+define('ROUTES_PATH', APPROOT . '/app/Routes');
+define('MODELS_PATH', APPROOT . '/app/Models');
+define('VIEWS_PATH', APPROOT . '/app/Views');
+define('CONTROLLERS_PATH', APPROOT . '/app/Controllers');
+define('CORE_PATH', APPROOT . '/app/Core');
+define('COMMON_PATH', APPROOT . '/app/common');
+define('LIBRARY_PATH', APPROOT . '/app/library');
+define('SCRIPTS_PATH', APPROOT . '/app/js');
+define('SCRIPTS_URL', APPURL . '/app/js');

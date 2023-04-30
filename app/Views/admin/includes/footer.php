@@ -13,10 +13,12 @@ $textTheme = $footerTheme === "dark" ? "light" : "dark";
 
 </div> <!-- wrapper end -->
 
-<!-- Bootstrap core JS -->
+<!-- Bootstrap 5 core JS -->
 <script src="<?php echo APPURL; ?>/public/js/libs/bootstrap.bundle.min.js"></script>
 <!-- sweetalert2 -->
 <script src="<?php echo APPURL; ?>/public/js/libs/sweetalert2.all.min.js"></script>
+<!-- fullcalendar 6 -->
+<script src="<?php echo APPURL; ?>/public/js/libs/fullcalendar/index.global.min.js"></script>
 <!-- My Scripts -->
 <script src="<?php echo APPURL; ?>/app/js/ajax.js"></script>
 <script src="<?php echo APPURL; ?>/app/js/main.js"></script>

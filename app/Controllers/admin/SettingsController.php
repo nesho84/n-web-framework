@@ -121,8 +121,8 @@ class SettingsController extends Controller
     public function dbbackup(): void
     //------------------------------------------------------------
     {
-        // Require CSRF_TOKEN
-        Sessions::requireCSRF();
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
         try {
             // Insert in Database

@@ -28,6 +28,9 @@ $pageTitle = $data['page']["pageTitle"] ?? "";
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <noscript>
+        <meta http-equiv="refresh" runat="server" id="mtaJSCheck" content="0; <?php echo APPURL; ?>/noscript">
+    </noscript>
     <title><?php echo $pageTitle != "" ? $pageTitle . " - " . SITE_NAME : 'undefined'; ?></title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="<?php echo APPURL; ?>/public/css/libs/bootstrap.min.css" />
