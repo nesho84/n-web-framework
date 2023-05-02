@@ -7,19 +7,19 @@
             <form id="formCategories" action="<?php echo ADMURL . '/categories/insert'; ?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="categoryName" class="form-label fw-bold">Category Name</label>
-                    <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Category Name" value="<?php echo $_SESSION['inputs']['categoryName'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Category Name" value="">
                 </div>
                 <div class="mb-3">
                     <label for="categoryType" class="form-label fw-bold">Category Type</label>
-                    <input type="text" class="form-control" id="categoryType" name="categoryType" placeholder="Category Type" value="<?php echo $_SESSION['inputs']['categoryType'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="categoryType" name="categoryType" placeholder="Category Type" value="">
                 </div>
                 <div class="mb-3">
                     <label for="categoryLink" class="form-label fw-bold">Category Link</label>
-                    <input type="text" class="form-control" id="categoryLink" name="categoryLink" placeholder="Category Link" value="<?php echo $_SESSION['inputs']['categoryLink'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="categoryLink" name="categoryLink" placeholder="Category Link" value="">
                 </div>
                 <div class="mb-3">
                     <label for="categoryDescription" class="form-label fw-bold">Category Description (optional)</label>
-                    <textarea class="form-control" rows="5" id="categoryDescription" name="categoryDescription" placeholder="Category Description"><?php echo $_SESSION['inputs']['categoryDescription'] ?? ""; ?></textarea>
+                    <textarea class="form-control" rows="5" id="categoryDescription" name="categoryDescription" placeholder="Category Description"></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
                     <button type="submit" id="insert_category" name="insert_category" class="btn btn-primary btn-lg me-1">Save</button>

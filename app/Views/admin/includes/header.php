@@ -19,7 +19,7 @@ $bodyTheme = $baseTheme == "dark" ? "dark" : "white";
     <noscript>
         <meta http-equiv="refresh" runat="server" id="mtaJSCheck" content="0; <?php echo APPURL; ?>/noscript">
     </noscript>
-    <meta name="csrf-token" content="<?= $_SESSION['csrf_token'] ?? "" ?>">
+    <meta name="csrf-token" content="<?php echo $_SESSION['csrf_token'] ?? ""; ?>">
     <base href="<?php echo $baseUrl; ?>">
     <title><?php echo $title != "" ? $title : "undefined"; ?></title>
     <!-- Bootstrap core CSS -->
@@ -35,13 +35,13 @@ $bodyTheme = $baseTheme == "dark" ? "dark" : "white";
     <link rel="manifest" href="<?php echo APPURL; ?>/public/favicon/site.webmanifest">
 </head>
 
-<body class="bg-<?= $bodyTheme ?>">
+<body class="bg-<?php echo $bodyTheme; ?>">
 
 
     <div class="wrapper">
 
         <header class="sticky-top border-bottom">
-            <nav class="navbar shadow-sm navbar-expand-lg navbar-<?= $navbarTheme ?> bg-<?= $navbarTheme ?> py-2">
+            <nav class="navbar shadow-sm navbar-expand-lg navbar-<?php echo $navbarTheme; ?> bg-<?php echo $navbarTheme; ?> py-2">
                 <div class="container-lg">
                     <div class="navbar-brand">
                         <!-- <a href="<?php echo ADMURL; ?>/">
@@ -52,9 +52,9 @@ $bodyTheme = $baseTheme == "dark" ? "dark" : "white";
                         </a>
                     </div>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
-                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
-                        <span class="icon-bar bg-<?= $menuSpanTheme ?>"></span>
+                        <span class="icon-bar bg-<?php echo $menuSpanTheme; ?>"></span>
+                        <span class="icon-bar bg-<?php echo $menuSpanTheme; ?>"></span>
+                        <span class="icon-bar bg-<?php echo $menuSpanTheme; ?>"></span>
                     </button>
 
                     <!-- Navigation Menu Links -->

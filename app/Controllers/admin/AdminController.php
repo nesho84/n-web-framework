@@ -30,6 +30,7 @@ class AdminController extends Controller
             "settings",
             "translations",
             "users",
+            "events",
         ]);
 
         // dd($data['rows']);

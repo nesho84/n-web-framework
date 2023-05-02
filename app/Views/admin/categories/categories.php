@@ -10,7 +10,7 @@ displayHeader([
 
 <div class="container-lg">
     <div class="table-responsive border-top mt-3">
-        <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
+        <table class="table table-<?php echo $data['theme'] ?? 'light'; ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -51,6 +51,8 @@ displayHeader([
     </div>
 </div>
 
+<script src="categories.js"></script>
+
 <script>
     // Confirm Delete
     document.querySelectorAll(".btn-delete").forEach((link) => {
@@ -77,6 +79,3 @@ displayHeader([
         });
     });
 </script>
-
-<!-- <script src="/n-web-framework/app/views/admin/categories/test.js"></script> -->
-<script src="categories.js"></script>

@@ -65,3 +65,11 @@ Router::get('/admin/invoices/edit/{id}', 'admin/InvoicesController@edit');
 Router::post('/admin/invoices/update/{id}', 'admin/InvoicesController@update');
 Router::get('/admin/invoices/delete/{id}', 'admin/InvoicesController@delete');
 Router::get('/admin/invoices/pdf_output', 'admin/InvoicesController@invoice_pdf');
+
+// --- Events --- //
+Router::get('/admin/events', 'admin/EventsController@index');
+Router::get('/admin/events/create_modal', 'admin/EventsController@create_modal');
+Router::post('/admin/events/insert', 'admin/EventsController@insert');
+Router::get('/admin/events/edit/{id}', 'admin/EventsController@edit');
+Router::post('/admin/events/update/{id}', 'admin/EventsController@update');
+Router::get('/admin/events/delete/{id}', 'admin/EventsController@delete');

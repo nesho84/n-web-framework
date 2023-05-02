@@ -3,7 +3,7 @@
 <footer class="bg-light p-3 text-muted border-top">
     <div class="row text-center">
         <div class="col">
-            <img class="mb-2" src="<?php echo APPURL; ?>/public/images/logo1.png" alt="<?= SITE_NAME ?>" width="80"> <br>
+            <img class="mb-2" src="<?php echo APPURL; ?>/public/images/logo1.png" alt="<?php echo SITE_NAME; ?>" width="80"> <br>
             <small class="text-muted">&copy; Copyright <?php echo date("Y") . " " . SITE_NAME; ?> <br> All Rights Reserved</small>
         </div>
     </div>

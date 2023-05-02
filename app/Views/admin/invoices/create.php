@@ -23,12 +23,7 @@
                                 <?php
                                 $compArray = $data['companies'];
                                 foreach ($compArray as $comp) {
-                                    if ($comp['companyID'] == ($_SESSION['inputs']['companyID'] ?? "")) {
-                                        $selected = "selected";
-                                    } else {
-                                        $selected = "";
-                                    }
-                                    echo "<option value='{$comp['companyID']}' $selected>{$comp['companyName']}</option>";
+                                    echo "<option value='{$comp['companyID']}'>{$comp['companyName']}</option>";
                                 }
                                 ?>
                             </select>
@@ -38,31 +33,31 @@
                         <div id="new-company-group" class="mb-3 border p-2" style="display: none;">
                             <div class="mb-3">
                                 <label for="companyName" class="form-label fw-bold">Company Name</label>
-                                <input type="text" class="form-control form-control-sm" id="companyName" name="companyName" value="<?php echo $_SESSION['inputs']['company']['companyName'] ?? ""; ?>">
+                                <input type="text" class="form-control form-control-sm" id="companyName" name="companyName" value="">
                             </div>
                             <div class="mb-3">
                                 <label for="companyAddress" class="form-label fw-bold">Address</label>
-                                <input type="text" class="form-control form-control-sm" id="companyAddress" name="companyAddress" value="<?php echo $_SESSION['inputs']['company']['companyAddress'] ?? ""; ?>">
+                                <input type="text" class="form-control form-control-sm" id="companyAddress" name="companyAddress" value="">
                             </div>
                             <div class="mb-3">
                                 <label for="companyCity" class="form-label fw-bold">City</label>
-                                <input type="text" class="form-control form-control-sm" id="companyCity" name="companyCity" value="<?php echo $_SESSION['inputs']['company']['companyCity'] ?? ""; ?>">
+                                <input type="text" class="form-control form-control-sm" id="companyCity" name="companyCity" value="">
                             </div>
                             <div class="mb-3">
                                 <label for="companyState" class="form-label fw-bold">State</label>
-                                <input type="text" class="form-control form-control-sm" id="companyState" name="companyState" value="<?php echo $_SESSION['inputs']['company']['companyState'] ?? ""; ?>">
+                                <input type="text" class="form-control form-control-sm" id="companyState" name="companyState" value="">
                             </div>
                             <div class="mb-3">
                                 <label for="companyZip" class="form-label fw-bold">Zip</label>
-                                <input type="text" class="form-control form-control-sm" id="companyZip" name="companyZip" value="<?php echo $_SESSION['inputs']['company']['companyZip'] ?? ""; ?>">
+                                <input type="text" class="form-control form-control-sm" id="companyZip" name="companyZip" value="">
                             </div>
                             <div class="mb-3">
                                 <label for="companyPhone" class="form-label fw-bold">Phone</label>
-                                <input type="text" class="form-control form-control-sm" id="companyPhone" name="companyPhone" value="<?php echo $_SESSION['inputs']['company']['companyPhone'] ?? ""; ?>">
+                                <input type="text" class="form-control form-control-sm" id="companyPhone" name="companyPhone" value="">
                             </div>
                             <div class="">
                                 <label for="companyEmail" class="form-label fw-bold">Email</label>
-                                <input type="text" class="form-control form-control-sm" id="companyEmail" name="companyEmail" value="<?php echo $_SESSION['inputs']['company']['companyEmail'] ?? ""; ?>">
+                                <input type="text" class="form-control form-control-sm" id="companyEmail" name="companyEmail" value="">
                             </div>
                             <!-- Company type -->
                             <input type="hidden" name="company-type" id="company-type" value="existing">

@@ -12,29 +12,23 @@
                         <?php
                         $categoryArray = $data['categories'];
                         foreach ($categoryArray as $cat) {
-                            if ($cat['categoryID'] == ($_SESSION['inputs']['categoryID'] ?? "")) {
-                                $selected = "selected";
-                            } else {
-                                $selected = "";
-                            }
-                            echo "<option value='{$cat['categoryID']}' $selected>{$cat['categoryName']}</option>";
+                            echo "<option value='{$cat['categoryID']}'>{$cat['categoryName']}</option>";
                         }
                         ?>
                     </select>
                 </div>
                 <!-- <div class="mb-3">
                     <label for="fileName" class="form-label fw-bold">File Name</label>
-                    <input type="text" class="form-control" id="fileName" name="fileName" placeholder="File Name" value="<?php echo $_SESSION['inputs']['fileName'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="fileName" name="fileName" placeholder="File Name" value="">
                 </div>
                 <div class="mb-3">
                     <label for="fileType" class="form-label fw-bold">File Type</label>
-                    <input type="text" class="form-control" id="fileType" name="fileType" placeholder="File Type" value="<?php echo $_SESSION['inputs']['fileType'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="fileType" name="fileType" placeholder="File Type" value="">
                 </div> -->
                 <!-- File Link -> Upload -->
                 <div class="mb-3">
                     <label for="fileLink" class="form-label fw-bold">Choose File</label>
                     <input class="form-control" type="file" name="fileLink" id="fileLink">
-                    <!-- <input class="form-control" type="file" name="fileLink[]" id="fileLink" multiple> -->
                     <div class="mt-2">
                         <div id="preview_image"></div>
                         <div id="mySpinner" class="d-none">Loading...</div>

@@ -45,8 +45,8 @@ class SettingsController extends Controller
     public function update(int $id): void
     //------------------------------------------------------------
     {
-        // Require CSRF_TOKEN
-        Sessions::requireCSRF(htmlspecialchars($_POST['csrf_token']));
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF(htmlspecialchars($_POST['csrf_token'] ?? ''));
 
         if (isset($_POST['update_setting'])) {
             $postArray = [

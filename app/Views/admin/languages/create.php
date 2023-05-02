@@ -7,11 +7,11 @@
             <form id="formLanguages" action="<?php echo ADMURL . '/languages/insert'; ?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="languageName" class="form-label fw-bold">Language Name</label>
-                    <input type="text" class="form-control" id="languageName" name="languageName" placeholder="Language Name" value="<?php echo $_SESSION['inputs']['languageName'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="languageName" name="languageName" placeholder="Language Name" value="">
                 </div>
                 <div class="mb-3">
                     <label for="languageCode" class="form-label fw-bold">Language Code</label>
-                    <input type="text" class="form-control" id="languageCode" name="languageCode" placeholder="Language Code" value="<?php echo $_SESSION['inputs']['languageCode'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="languageCode" name="languageCode" placeholder="Language Code" value="">
                 </div>
                 <!-- Language Flag -->
                 <div class="mb-3">

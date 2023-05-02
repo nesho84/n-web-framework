@@ -334,16 +334,15 @@ class UsersController extends Controller
         // Get existing setting from the SettingsModel
         $setting = $this->settingsModel->getSettingsByUserId($id);
 
-        $validated = true;
-        $error = '';
+        // Validate inputs
+        $validator = new DataValidator();
 
         // 'admin' can not be deleted Validation
         if ($user['userName'] == 'admin') {
-            $validated = false;
-            $error .= 'Admin can not be deleted!<br>';
+            $validator->addError('userName', 'Admin can not be deleted!<br>')->setValidated(false);
         }
 
-        if ($validated === true) {
+        if ($validator->isValidated()) {
             try {
                 // Delete User in Database
                 $this->usersModel->deleteUser($id);
@@ -354,7 +353,7 @@ class UsersController extends Controller
                 setAlert('error', $e->getMessage());
             }
         } else {
-            setAlert('error', $error);
+            setAlert('error', $validator->getErrors());
             redirect(ADMURL . '/users');
         }
 

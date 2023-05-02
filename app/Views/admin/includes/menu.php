@@ -11,16 +11,16 @@ $userPicHtml = $userPic ? '<img width="25" height="25" src="' . $userPic . '" cl
     <hr id="hr-divider">
     <ul class="navbar-nav ms-auto pt-lg-3">
         <li class="nav-item">
-            <a class="nav-link <?= activePage(['admin', 'admin/']) ?>" href="<?php echo APPURL; ?>/admin">HOME</a>
+            <a class="nav-link <?php echo activePage(['admin', 'admin/']); ?>" href="<?php echo APPURL; ?>/admin">HOME</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link <?= activePage(['admin/categories', 'admin/categories/create', 'admin/categories/edit/{id}']) ?>" href="<?php echo APPURL; ?>/admin/categories">CATEGORIES</a>
+            <a class="nav-link <?php echo activePage(['admin/categories', 'admin/categories/create', 'admin/categories/edit/{id}']); ?>" href="<?php echo APPURL; ?>/admin/categories">CATEGORIES</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link <?= activePage(['admin/pages', 'admin/pages/create', 'admin/pages/edit/{id}']); ?>" href="<?php echo APPURL; ?>/admin/pages">PAGES</a>
+            <a class="nav-link <?php echo activePage(['admin/pages', 'admin/pages/create', 'admin/pages/edit/{id}']); ?>" href="<?php echo APPURL; ?>/admin/pages">PAGES</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link <?= activePage(['admin/users', 'admin/users/create', 'admin/users/edit/{id}', 'admin/users/profile']) ?>" href="<?php echo APPURL; ?>/admin/users">USERS</a>
+            <a class="nav-link <?php echo activePage(['admin/users', 'admin/users/create', 'admin/users/edit/{id}', 'admin/users/profile']); ?>" href="<?php echo APPURL; ?>/admin/users">USERS</a>
         </li>
         <li class="nav-item">
             <div class="dropdown mt-2 mt-lg-0">

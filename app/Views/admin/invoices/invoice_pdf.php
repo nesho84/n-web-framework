@@ -27,70 +27,57 @@ if (isset($invoice) && is_array($invoice) && (count($invoice) > 0)) {
         font-family: Arial, sans-serif;
         font-size: 14px;
     }
-
     h1 {
         text-align: center;
         font-size: 28px;
         padding-bottom: 20px;
         border-bottom: 1px solid #ddd;
     }
-
     table {
         width: 100%;
         border-collapse: collapse;
     }
-
     th, td {
         border: 1px solid #ddd;
         padding: 10px;
         text-align: left;
     }
-
     th {
         background-color: #f5f5f5;
         border-bottom: 3px solid #ddd;
         text-align: right;
     }
-
     td {
         vertical-align: top;
         text-align: right;
     }
-
     .invoice-info {
         clear: both; 
         position: relative;
         border-bottom: 1px solid #ddd;
         margin-bottom: 20px;
     }
-
     .invoice-info__left {
         position: absolute; 
         left: 0pt; 
     }
-
     .invoice-info__right {
         text-align: right;
     }
-
     .customer-info {
         margin-bottom: 20px;
     }
-
     .customer-info__heading {
         font-weight: bold;
         margin-bottom: 10px;
     }
-
     .total-row-wrapper {
         border: none;
     }
-
     .total-row {
         font-weight: bold;
         text-align: right;
-    }
-    
+    }    
     .footer {
         border-top: 1px solid #ddd;
         margin-top: 40px;
@@ -99,7 +86,7 @@ if (isset($invoice) && is_array($invoice) && (count($invoice) > 0)) {
         font-size: 16px;
         color: #777;
     }
-';
+    ';
     $HTML .= '</style>';
     $HTML .= '</head>';
     $HTML .= '<body>';
@@ -158,12 +145,13 @@ if (isset($invoice) && is_array($invoice) && (count($invoice) > 0)) {
         $total += $price_total;
     }
 
-    $HTML .= '<tr>';
+    $HTML .= '</tbody>';
+
+    $HTML .= '<tfoot>';
     $HTML .= '<td colspan="3" class="total-row-wrapper">';
     $HTML .= '<td class="total-row">Total: $' . $total . '</td>';
-    $HTML .= '</tr>';
+    $HTML .= '</tfoot>';
 
-    $HTML .= '</tbody>';
     $HTML .= '</table>';
 
     // Add footer

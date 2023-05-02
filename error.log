@@ -1,0 +1,13 @@
+[01-May-2023 19:48:01 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\files\create.php on line 15
+[01-May-2023 19:48:25 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\files\create.php on line 14
+[01-May-2023 19:48:29 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\files\create.php on line 14
+[01-May-2023 19:48:37 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\files\create.php on line 15
+[01-May-2023 19:49:26 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\files\create.php on line 15
+[01-May-2023 19:50:35 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\files\create.php on line 15
+[01-May-2023 19:50:48 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 116
+[01-May-2023 19:51:04 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 116
+[01-May-2023 19:54:46 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 116
+[01-May-2023 19:54:51 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 116
+[01-May-2023 19:57:09 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 26
+[01-May-2023 19:57:18 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 26
+[01-May-2023 19:57:35 Europe/Berlin] PHP Warning:  Undefined variable $selected in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\create.php on line 26

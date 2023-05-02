@@ -8,13 +8,20 @@
  * $btnLink (optional) header button link,
  * $btnText (optional) header button text,
  * $btnClass (optional) header button bootstrap color
+ * $btnDataAttributes (optional) The data-* attribute of the button
  */
 //------------------------------------------------------------
 function displayHeader(array $options = []): void
 //------------------------------------------------------------
 {
-    $allowed_keys = array('title' => '', 'title2' => '', 'btnLink' => '', 'btnText' => '', 'btnClass' => '');
-
+    $allowed_keys = array(
+        'title' => '',
+        'title2' => '',
+        'btnLink' => '',
+        'btnText' => '',
+        'btnClass' => '',
+        'btnDataAttributes' => '',
+    );
 
     if ($options) {
         extract($options);
@@ -31,7 +38,7 @@ function displayHeader(array $options = []): void
         if ($keyExists == true) {
             $btnOrTitle2 = "";
             if (isset($btnText)) {
-                $btnOrTitle2 .= '<a href="' . (isset($btnLink) ? $btnLink : "") . '" class="btn btn-' . (isset($btnClass) ? $btnClass : "") . '">' . (isset($btnText) ? $btnText : "") . '</a>';
+                $btnOrTitle2 .= '<a href="' . (isset($btnLink) ? $btnLink : "") . '" class="btn btn-' . (isset($btnClass) ? $btnClass : "success") . '" ' . ($btnDataAttributes ?? "") . '>' . (isset($btnText) ? $btnText : "") . '</a>';
             }
             if (isset($title2)) {
                 $btnOrTitle2 .= '<p class="m-0">' . $title2 . '</p>';

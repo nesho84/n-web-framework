@@ -61,7 +61,7 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                     <hr>
                     <!-- Page Status-->
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="pageStatus" name="pageStatus" <?php echo $pageStatus == 1 ? " checked" : "" ?>>
+                        <input type="checkbox" class="form-check-input" id="pageStatus" name="pageStatus" <?php echo $pageStatus == 1 ? " checked" : ""; ?>>
                         <label class="form-check-label fw-bold" for="pageStatus">Page Status <?php echo $pageStatus == 1 ? '<span class="badge bg-success fw-normal">active</span>' : '<span class="badge bg-danger">inactive</span>'; ?></label>
                     </div>
                     <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">

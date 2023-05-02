@@ -43,23 +43,23 @@
                 $isModal = false;
             }
             if ($d['Name'] == 'pages') {
-                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                $icon = '<i class="fas fa-newspaper fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
             if ($d['Name'] == 'languages') {
-                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                $icon = '<i class="fas fa-globe fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
             if ($d['Name'] == 'settings') {
-                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                $icon = '<i class="fas fa-cogs fa-3x mt-3"></i>';
                 $isDisabled = false;
                 // $isModal = true;
                 // $modalParams = ' d-modal="true" data-submit="true" data-title="Settings"';
             }
             if ($d['Name'] == 'translations') {
-                $icon = '<i class="fas fa-archive fa-3x mt-3"></i>';
+                $icon = '<i class="fas fa-language fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
@@ -69,23 +69,18 @@
                 $isModal = false;
             }
             if ($d['Name'] == 'files') {
-                $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
+                $icon = '<i class="fas fa-folder-open fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
             if ($d['Name'] == 'invoices') {
-                $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
+                $icon = '<i class="fas fa-file-invoice fa-3x mt-3"></i>';
                 $isDisabled = false;
                 $isModal = false;
             }
-            if ($d['Name'] == 'companies') {
-                $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
-                $isDisabled = true;
-                $isModal = false;
-            }
-            if ($d['Name'] == 'services') {
-                $icon = '<i class="fas fa-id-card-alt fa-3x mt-3"></i>';
-                $isDisabled = true;
+            if ($d['Name'] == 'events') {
+                $icon = '<i class="fas fa-calendar-alt fa-3x mt-3"></i>';
+                $isDisabled = false;
                 $isModal = false;
             }
 

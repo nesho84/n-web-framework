@@ -7,11 +7,11 @@
             <form id="formUsers" action="<?php echo ADMURL . '/users/insert'; ?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="userName" class="form-label fw-bold">Username</label>
-                    <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" value="<?php echo $_SESSION['inputs']['userName'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" value="">
                 </div>
                 <div class="mb-3">
                     <label for="userEmail" class="form-label fw-bold">Email</label>
-                    <input type="text" class="form-control" id="userEmail" name="userEmail" placeholder="Email" value="<?php echo $_SESSION['inputs']['userEmail'] ?? ""; ?>">
+                    <input type="text" class="form-control" id="userEmail" name="userEmail" placeholder="Email" value="">
                 </div>
                 <div class="mb-3">
                     <label for="userPassword" class="form-label fw-bold">Password</label>
@@ -32,10 +32,7 @@
                 </div>
                 <!-- User Role -->
                 <div class="form-check mb-3">
-                    <?php
-                    $checked = (isset($_SESSION['inputs']['userRole']) && $_SESSION['inputs']['userRole'] === "admin") ? " checked" : "";
-                    ?>
-                    <input type="checkbox" class="form-check-input" id="userRole" name="userRole" <?php echo $checked; ?>>
+                    <input type="checkbox" class="form-check-input" id="userRole" name="userRole">
                     <label class="form-check-label fw-bold" for="userRole">Admin (unchecked is default)</label>
                 </div>
                 <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">

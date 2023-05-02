@@ -10,7 +10,7 @@ displayHeader([
 
 <div class="container-lg">
     <div class="table-responsive border-top mt-3">
-        <table class="table table-<?= $data['theme'] ?? 'light' ?> table-hover">
+        <table class="table table-<?php echo $data['theme'] ?? 'light'; ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -37,9 +37,9 @@ displayHeader([
                                     <a class="d-modal-file btn btn-link" href="' . ADMURL . '/invoices/pdf_output?id=' . $d['invoiceID'] . '" data-title="Customer: ' . $d['companyName'] . '">
                                         <i class="far fa-file-pdf"></i>
                                     </a>
-                                    <a class="btn btn-link" href="' . ADMURL . '/invoices/edit/' . $d['invoiceID'] . '">
+                                    <!-- <a class="btn btn-link" href="' . ADMURL . '/invoices/edit/' . $d['invoiceID'] . '">
                                         <i class="far fa-edit"></i>
-                                    </a>
+                                    </a> -->
                                     <a class="btn btn-link btn-delete" href="' . ADMURL . '/invoices/delete/' . $d['invoiceID'] . '">
                                         <i class="far fa-trash-alt"></i>
                                     </a>
