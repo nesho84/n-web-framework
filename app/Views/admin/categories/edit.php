@@ -31,9 +31,9 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                         <label for="categoryDescription" class="form-label fw-bold">Category Description (optional)</label>
                         <textarea class="form-control" rows="5" id="categoryDescription" name="categoryDescription" placeholder="Category Description"><?php echo $categoryDescription; ?></textarea>
                     </div>
-                    <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
+                    <div class="d-grid gap-2 d-md-block text-end border-top border-2 pt-2">
                         <button type="submit" id="update_category" name="update_category" class="btn btn-primary btn-lg me-1">Save</button>
-                        <a href="<?php echo ADMURL . "/categories"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
+                        <a href="<?php echo ADMURL . "/categories"; ?>" class="btn btn-secondary btn-lg">Cancel</a>
                     </div>
                 </form>
             </div>

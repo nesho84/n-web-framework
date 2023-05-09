@@ -25,9 +25,48 @@ class FilesController extends Controller
     {
         $data['title'] = 'Files';
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
-        $data['rows'] = $this->filesModel->getFiles();
 
-        $this->renderAdminView('/admin/files/files', $data);
+        // Search files using ajax GET method
+        $searchTerm = isset($_GET['s']) ? trim($_GET['s']) : '';
+        if (isset($_GET['s']) && $_GET['s'] == '') {
+            // Return all rows
+            $data['rows'] = $this->filesModel->getFiles();
+            echo json_encode([
+                "status" => "success",
+                'rows' => $data['rows'],
+            ]);
+            exit();
+        } else if (!empty($searchTerm)) {
+            // Sanitize the search term
+            $searchTerm = filter_var($searchTerm, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+            // Perform the search query
+            try {
+                $data['rows'] = $this->filesModel->searchFiles($searchTerm);
+                // $_SESSION['searchTerm'] = $searchTerm;
+                echo json_encode([
+                    "status" => "success",
+                    'rows' => $data['rows'],
+                ]);
+                exit();
+            } catch (Exception $e) {
+                // setAlert('error', $e->getMessage());
+                // http_response_code(422);
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $e->getMessage()
+                ]);
+                exit();
+            }
+        } else {
+            // Retrieve all files on page Refresh
+            try {
+                $data['rows'] = $this->filesModel->getFiles();
+                $this->renderAdminView('/admin/files/files', $data);
+            } catch (Exception $e) {
+                setAlert('error', $e->getMessage());
+            }
+        }
     }
 
     //------------------------------------------------------------
@@ -50,8 +89,6 @@ class FilesController extends Controller
         $postArray = [
             'userID' => $_SESSION['user']['id'],
             'categoryID' => htmlspecialchars($_POST['categoryID'] ?? ""),
-            // 'fileName' => htmlspecialchars(trim($_POST['fileName'])),
-            // 'fileType' => htmlspecialchars(trim($_POST['fileType'])),
             'fileLink' => $_FILES['fileLink'] ?? null,
         ];
 
@@ -81,10 +118,10 @@ class FilesController extends Controller
             try {
                 // Insert in Database
                 $this->filesModel->insertFile($postArray);
-                // setAlert('success', 'File created successfully');
+                // setAlert('success', 'File added successfully');
                 echo json_encode([
                     "status" => "success",
-                    'message' => 'File created successfully',
+                    'message' => 'File added successfully',
                 ]);
             } catch (Exception $e) {
                 http_response_code(500);

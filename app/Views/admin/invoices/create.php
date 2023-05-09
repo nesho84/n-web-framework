@@ -109,9 +109,9 @@
                 </div>
 
                 <!-- Buttons -->
-                <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
+                <div class="d-grid gap-2 d-md-block text-end border-top border-2 pt-2">
                     <button type="submit" id="insert_invoice" name="insert_invoice" class="btn btn-primary btn-lg me-1">Save</button>
-                    <a href="<?php echo ADMURL . "/invoices"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
+                    <a href="<?php echo ADMURL . "/invoices"; ?>" class="btn btn-secondary btn-lg">Cancel</a>
                 </div>
             </form>
         </div>
@@ -152,6 +152,16 @@
                 await handleFormSubmit(event);
             });
         }
+
+        // Select with search option (dselect library)
+        const selectBox = document.getElementById("companyID");
+        dselect(selectBox, {
+            search: true, // Toggle search feature. Default: false
+            creatable: false, // Creatable selection. Default: false
+            clearable: false, // Clearable selection. Default: false
+            maxHeight: '360px', // Max height for showing scrollbar. Default: 360px
+            size: 'sm', // Can be "sm" or "lg". Default ''
+        });
     });
 
     function addCompany() {

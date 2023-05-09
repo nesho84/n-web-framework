@@ -27,9 +27,9 @@
  *           'password' => 'password',
  *           'from' => 'from@example.com',
  *           'fromName' => 'John Doe',
- *           'to' => 'to@example.com',
- *           'cc' => 'cc@example.com,cc2@example.com',
- *           'bcc' => 'bcc@example.com',
+ *           'to' => [to@example.com],
+ *           'cc' => [cc@example.com,cc2@example.com],
+ *           'bcc' => [bcc@example.com],
  *           'subject' => 'Test email',
  *           'body' => 'This is a test email',
  *           'isHtml' => true,
@@ -71,9 +71,9 @@ class EmailService
         $default_options = [
             'from' => '',
             'from_name' => '',
-            'to' => '',
-            'cc' => '',
-            'bcc' => '',
+            'to' => [],
+            'cc' => [],
+            'bcc' => [],
             'subject' => '',
             'body' => '',
             'attachments' => [],
@@ -102,13 +102,17 @@ class EmailService
 
             // Recipients
             $mail->setFrom($options['from'], $options['from_name']);
-            $mail->addAddress($options['to']);
 
-            if (!empty($options['cc'])) {
-                $mail->addCC($options['cc']);
+            foreach ($options['to'] as $to) {
+                $mail->addAddress($to);
             }
-            if (!empty($options['bcc'])) {
-                $mail->addBCC($options['bcc']);
+
+            foreach ($options['cc'] as $cc) {
+                $mail->addCC($cc);
+            }
+
+            foreach ($options['bcc'] as $bcc) {
+                $mail->addBCC($bcc);
             }
 
             /** @var array $options Attachments */

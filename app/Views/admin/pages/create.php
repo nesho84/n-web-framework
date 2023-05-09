@@ -43,9 +43,9 @@
                     <label for="pageContent" class="form-label fw-bold">Content <small>(optional)</small></label>
                     <textarea class="form-control" rows="10" id="pageContent" name="pageContent" placeholder="Content"></textarea>
                 </div>
-                <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
+                <div class="d-grid gap-2 d-md-block text-end border-top border-2 pt-2">
                     <button type="submit" id="insert_page" name="insert_page" class="btn btn-primary btn-lg me-1">Save</button>
-                    <a href="<?php echo ADMURL . "/pages"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
+                    <a href="<?php echo ADMURL . "/pages"; ?>" class="btn btn-secondary btn-lg">Cancel</a>
                 </div>
             </form>
         </div>
@@ -78,5 +78,15 @@
                 await handleFormSubmit(event);
             });
         }
+
+        // Select with search option (dselect library)
+        const selectBox = document.getElementById("languageID");
+        dselect(selectBox, {
+            search: true, // Toggle search feature. Default: false
+            creatable: false, // Creatable selection. Default: false
+            clearable: false, // Clearable selection. Default: false
+            maxHeight: '360px', // Max height for showing scrollbar. Default: 360px
+            size: '', // Can be "sm" or "lg". Default ''
+        });
     });
 </script>

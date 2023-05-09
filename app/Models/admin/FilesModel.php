@@ -51,6 +51,29 @@ class FilesModel extends Model
     }
 
     //------------------------------------------------------------
+    public function searchFiles(string $searchTerm): array
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare(
+                "SELECT * FROM files 
+                WHERE `fileName` LIKE :searchFileName
+                OR fileType LIKE :searchFileType 
+                ORDER BY fileDateCreated DESC"
+            );
+
+            $this->bindValues($stmt, [
+                'searchFileName' => '%' . $searchTerm . '%',
+                'searchFileType' => '%' . $searchTerm . '%',
+            ]);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    //------------------------------------------------------------
     public function deleteFile(int $id): bool
     //------------------------------------------------------------
     {

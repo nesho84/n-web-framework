@@ -147,31 +147,31 @@ class PublicController extends Controller
                         'password' => 'password',
                         'from' => $from,
                         'fromName' => $fromName,
-                        'to' => CONTACT_FORM_EMAIL,
-                        'cc' => '',
-                        'bcc' => '',
+                        'to' => [CONTACT_FORM_EMAIL, 'recipient1@example.com', 'recipient2@example.com', 'recipient3@example.com'],
+                        'cc' => ['ccrecipient1@example.com', 'ccrecipient2@example.com'],
+                        'bcc' => ['bccrecipient1@example.com', 'bccrecipient2@example.com'],
                         'subject' => $subject,
                         'body' => $body,
                         'isHtml' => true,
-                        // 'attachments' => [
-                        //     [
-                        //         'path' => '/path/to/attachment1.pdf',
-                        //         'name' => 'attachment1.pdf',
-                        //         'encoding' => 'base64',
-                        //         'type' => 'application/pdf'
-                        //     ],
-                        //     [
-                        //         'path' => '/path/to/attachment2.txt',
-                        //         'name' => 'attachment2.txt',
-                        //         'encoding' => 'base64',
-                        //         'type' => 'text/plain'
-                        //     ]
-                        // ],
+                        'attachments' => [
+                            // [
+                            //     'path' => '/path/to/attachment1.pdf',
+                            //     'name' => 'attachment1.pdf',
+                            //     'encoding' => 'base64',
+                            //     'type' => 'application/pdf'
+                            // ],
+                            // [
+                            //     'path' => '/path/to/attachment2.txt',
+                            //     'name' => 'attachment2.txt',
+                            //     'encoding' => 'base64',
+                            //     'type' => 'text/plain'
+                            // ]
+                        ],
                     ]);
                     // echo 'Email sent successfully.';
                     $output .= 'success';
                 } catch (Exception $e) {
-                    $output = 'Email could not be sent. Error: ' . $e->getMessage();
+                    $output = $e->getMessage();
                 }
                 //############ Email Send END ###########################
             }

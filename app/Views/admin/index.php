@@ -84,9 +84,9 @@
                 $isModal = false;
             }
 
-            echo '<div class="col-md-6 col-lg-4 col-sm-6 mx-0">
+            echo '<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 mx-0">
                     <a href="' . APPURL . '/admin/' . strtolower($d['Name']) . '" class="text-decoration-none" ' . ($isDisabled ? $disabledStyle : "") . ($isModal ? $modalParams : "") . '>
-                        <div class="card shadow-sm">
+                        <div class="card h-100 shadow-sm">
                             <div class="card-body position-relative pb-5">
                                 <p class="display-3">' . $d['Rows'] . '</p>
                                 <span class="badge bg-light text-muted m-2 position-absolute top-0 end-0">' . convertBytes($d['Data_length'], "KB") . '</span>

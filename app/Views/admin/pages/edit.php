@@ -64,9 +64,9 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                         <input type="checkbox" class="form-check-input" id="pageStatus" name="pageStatus" <?php echo $pageStatus == 1 ? " checked" : ""; ?>>
                         <label class="form-check-label fw-bold" for="pageStatus">Page Status <?php echo $pageStatus == 1 ? '<span class="badge bg-success fw-normal">active</span>' : '<span class="badge bg-danger">inactive</span>'; ?></label>
                     </div>
-                    <div class="d-grid gap-2 d-md-block text-end border-top border-2 py-2">
+                    <div class="d-grid gap-2 d-md-block text-end border-top border-2 pt-2">
                         <button type="submit" id="update_page" name="update_page" class="btn btn-primary btn-lg me-1">Save</button>
-                        <a href="<?php echo ADMURL . "/pages"; ?>" type="button" class="btn btn-secondary btn-lg">Cancel</a>
+                        <a href="<?php echo ADMURL . "/pages"; ?>" class="btn btn-secondary btn-lg">Cancel</a>
                     </div>
                 </form>
             </div>
@@ -99,6 +99,16 @@ if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
                     await handleFormSubmit(event);
                 });
             }
+
+            // Select with search option (dselect library)
+            const selectBox = document.getElementById("languageID");
+            dselect(selectBox, {
+                search: true, // Toggle search feature. Default: false
+                creatable: false, // Creatable selection. Default: false
+                clearable: false, // Clearable selection. Default: false
+                maxHeight: '360px', // Max height for showing scrollbar. Default: 360px
+                size: '', // Can be "sm" or "lg". Default ''
+            });
         });
     </script>
 

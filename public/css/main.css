@@ -141,6 +141,11 @@ a:hover {
   }
 }
 
+/* Force Select dropdown inputs text to the left */
+.form-select {
+  text-align: start !important;
+}
+
 /*---- CUSTOMIZE THE CAROUSEL ------------ */
 .carousel {
   /* margin-bottom: 4rem; */

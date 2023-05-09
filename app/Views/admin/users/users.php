@@ -61,26 +61,31 @@ displayHeader([
 </div>
 
 <script>
-    // Confirm Delete
-    document.querySelectorAll(".btn-delete").forEach((link) => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            // Show Confirm Dialog
-            Swal.fire({
-                title: "Are you sure?",
-                text: "You won't be able to revert this!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#d33",
-                cancelButtonColor: "#3085d6",
-                confirmButtonText: "Yes",
-            }).then(async (result) => {
-                // console.log(result)
-                if (result.isConfirmed) {
-                    // Proccess delete
-                    window.location.href = link.href;
-                }
+    'use strict';
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Confirm Delete
+        document.querySelectorAll(".btn-delete").forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Show Confirm Dialog
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Yes",
+                }).then(async (result) => {
+                    // console.log(result)
+                    if (result.isConfirmed) {
+                        // Proccess delete
+                        window.location.href = link.href;
+                    }
+                });
             });
         });
     });

@@ -2,7 +2,7 @@
 
 // Function to handle both GET and POST requests
 //------------------------------------------------------------
-async function handleRequest(url, method, data = null)
+async function ajaxRequest(url, method, data = null)
 //------------------------------------------------------------
 {
     try {
@@ -30,7 +30,7 @@ async function handleRequest(url, method, data = null)
     }
 }
 
-// Function to handle form submission
+// Function to handle 'POST' form submission
 //------------------------------------------------------------
 async function handleFormSubmit(event)
 //------------------------------------------------------------
@@ -47,7 +47,7 @@ async function handleFormSubmit(event)
         // Disable submit button
         submitButton.disabled = true;
 
-        const result = await handleRequest(url, method, formData);
+        const result = await ajaxRequest(url, method, formData);
 
         if (result.status === "success") {
             if (result.message) {
