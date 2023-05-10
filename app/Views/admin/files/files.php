@@ -74,79 +74,60 @@ displayHeader([
     'use strict';
 
     document.addEventListener("DOMContentLoaded", function() {
-        // Confirm Delete
+        // sweetalert2 Confirm Delete Dialog
         document.querySelectorAll(".btn-delete").forEach((link) => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-
-                // Show Confirm Dialog
-                Swal.fire({
-                    title: "Are you sure?",
-                    text: "You won't be able to revert this!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#d33",
-                    cancelButtonColor: "#3085d6",
-                    confirmButtonText: "Yes",
-                }).then(async (result) => {
-                    // console.log(result)
-                    if (result.isConfirmed) {
-                        // Proccess delete
-                        window.location.href = link.href;
-                    }
-                });
-            });
+            link.addEventListener("click", confirmDeleteDialog);
         });
 
-        // Handle search form
+        // Attach the submit event handler to the form
         const form = document.querySelector("#formSearchFiles");
         if (form) {
-            form.addEventListener("submit", async (event) => {
-                event.preventDefault();
-
-                const form = event.target;
-                const submitButton = form.querySelector('button[type="submit"]');
-                const url = form.action;
-                const method = form.method;
-                const formData = new FormData(form);
-
-                try {
-                    // Disable submit button
-                    submitButton.disabled = true;
-
-                    // Convert the form data to an object
-                    const data = Object.fromEntries(formData);
-                    // Append the form data to the URL as query parameters
-                    const queryString = new URLSearchParams(data).toString();
-                    const requestUrl = `${url}?${queryString}`;
-                    // Fetch data using ajax Request
-                    const result = await ajaxRequest(requestUrl, method);
-
-                    if (result.status === "success") {
-                        if (result.rows && result.rows.length > 0) {
-                            // Render result
-                            renderAjaxResults(result.rows);
-                        }
-                    } else if (result.status === "error") {
-                        if (result.message) {
-                            showAlert("bg-danger", result.message);
-                        }
-                    } else {
-                        showAlert("bg-danger", "An error occurred. Please try again.");
-                        console.log(result);
-                    }
-                } catch (error) {
-                    // Show error message
-                    showAlert("bg-danger", error);
-                    console.error(error);
-                } finally {
-                    // Enable submit button
-                    submitButton.disabled = false;
-                }
-            });
+            form.addEventListener("submit", handleSearchForm);
         }
     });
+
+    async function handleSearchForm(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const url = form.action;
+        const method = form.method;
+        const formData = new FormData(form);
+
+        try {
+            // Disable submit button
+            submitButton.disabled = true;
+            // Convert the form data to an object
+            const data = Object.fromEntries(formData);
+            // Append the form data to the URL as query parameters
+            const queryString = new URLSearchParams(data).toString();
+            const requestUrl = `${url}?${queryString}`;
+            // Fetch data using ajax Request
+            const result = await ajaxRequest(requestUrl, method);
+
+            if (result.status === "success") {
+                if (result.rows && result.rows.length > 0) {
+                    // Render result
+                    renderAjaxResults(result.rows);
+                }
+            } else if (result.status === "error") {
+                if (result.message) {
+                    showAlert("bg-danger", result.message);
+                }
+            } else {
+                showAlert("bg-danger", "An error occurred. Please try again.");
+                console.log(result);
+            }
+        } catch (error) {
+            // Show error message
+            showAlert("bg-danger", error);
+            console.error(error);
+        } finally {
+            // Enable submit button
+            submitButton.disabled = false;
+        }
+    }
 
     function renderAjaxResults(data) {
         const filesContainer = document.getElementById('filesContainer');
@@ -154,6 +135,7 @@ displayHeader([
         let icon = '';
 
         data.forEach(el => {
+            // Set icons for the files card
             if (el.fileType == 'jpg') {
                 icon = '<i class="far fa-file-image fa-3x mt-3"></i>';
             } else if (el.fileType == 'png') {

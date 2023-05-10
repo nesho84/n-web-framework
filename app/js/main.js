@@ -71,3 +71,29 @@ function previewUploadedImages(fileInputId, previewId, spinnerId)
         reader.readAsDataURL(files[0]);
     });
 }
+
+//------------------------------------------------------------
+function confirmDeleteDialog(event)
+//------------------------------------------------------------
+{
+    event.preventDefault();
+    event.stopPropagation();
+
+    const link = event.currentTarget;
+
+    // Show Confirm Dialog
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Yes",
+    }).then(async (result) => {
+        if (result.isConfirmed) {
+            // Proccess delete
+            window.location.href = link.href;
+        }
+    });
+}
