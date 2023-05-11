@@ -85,7 +85,7 @@ class LanguagesController extends Controller
             try {
                 // Insert in Database
                 $this->languagesModel->insertLanguage($postArray);
-                // setAlert('success', 'Language created successfully');
+                // setSessionAlert('success', 'Language created successfully');
                 echo json_encode([
                     "status" => "success",
                     'message' => 'Language created successfully',
@@ -181,7 +181,7 @@ class LanguagesController extends Controller
                 try {
                     // Update in Database
                     $this->languagesModel->updateLanguage($postArray);
-                    // setAlert('success', 'Language Updated successfully');
+                    // setSessionAlert('success', 'Language Updated successfully');
                     echo json_encode([
                         "status" => "success",
                         'message' => 'Language updated successfully',
@@ -195,7 +195,7 @@ class LanguagesController extends Controller
                     exit();
                 }
             } else {
-                // setAlert('warning', 'No fields were changed');
+                // setSessionAlert('warning', 'No fields were changed');
                 echo json_encode([
                     "status" => "warning",
                     "message" => 'No fields were changed'
@@ -219,9 +219,9 @@ class LanguagesController extends Controller
         try {
             // Delete in Database
             $this->languagesModel->deleteLanguage($id);
-            setAlert('success', 'Language with the ID: <strong>' . $id . '</strong> deleted successfully.');
+            setSessionAlert('success', 'Language with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setAlert('error', $e->getMessage());
+            setSessionAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

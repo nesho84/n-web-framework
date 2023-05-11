@@ -53,30 +53,30 @@ async function handleFormSubmit(event)
             if (result.message) {
                 // Hide toast message or refresh the page after 5 seconds
                 reloadWithTimeout(submitButton);
-                showAlert("bg-success", result.message);
+                showSwalAlert("bg-success", result.message);
             }
         } else if (result.status === "error") {
             if (result.message) {
-                showAlert("bg-danger", result.message);
+                showSwalAlert("bg-danger", result.message);
             }
             // Enable submit button
             submitButton.disabled = false;
         } else if (result.status === "warning") {
             if (result.message) {
-                showAlert("bg-warning", result.message);
+                showSwalAlert("bg-warning", result.message);
                 // Hide toast message after 5 seconds
                 setTimeout(() => hideAlert(), 5000);
             }
             // Enable submit button
             submitButton.disabled = false;
         } else {
-            showAlert("bg-danger", "An error occurred. Please try again.");
+            showSwalAlert("bg-danger", "An error occurred. Please try again.");
             // Enable submit button
             submitButton.disabled = false;
         }
     } catch (error) {
         // Show error message
-        showAlert("bg-danger", error);
+        showSwalAlert("bg-danger", error);
         console.error(error);
         // Enable submit button
         submitButton.disabled = false;
@@ -85,7 +85,7 @@ async function handleFormSubmit(event)
 
 // Function to show response message in a sweetalert2 toast element
 //------------------------------------------------------------
-function showAlert(bgClass, message)
+function showSwalAlert(bgClass, message)
 //------------------------------------------------------------
 {
     let status = bgClass.split('-')[1];
@@ -131,7 +131,7 @@ function showAlert(bgClass, message)
 
 // // Function to show response message in a bootstrap toast element
 // //------------------------------------------------------------
-// function showAlert(bgClass, message)
+// function showSwalAlert(bgClass, message)
 // //------------------------------------------------------------
 // {
 //     let msg = "";

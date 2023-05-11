@@ -119,7 +119,7 @@ class InvoicesController extends Controller
             try {
                 // Insert in Database
                 $this->invoicesModel->insertInvoice($postArray);
-                // setAlert('success', 'Invoice created successfully');
+                // setSessionAlert('success', 'Invoice created successfully');
                 echo json_encode([
                     "status" => "success",
                     'message' => 'Invoice created successfully',
@@ -186,14 +186,14 @@ class InvoicesController extends Controller
     //             try {
     //                 // Update in Database
     //                 $this->invoicesModel->updateCategory($postArray);
-    //                 setAlert('success', 'Update completed successfully');
+    //                 setSessionAlert('success', 'Update completed successfully');
     //                 redirect(ADMURL . '/categories');
     //             } catch (Exception $e) {
-    //                 setAlert('error', $e->getMessage());
+    //                 setSessionAlert('error', $e->getMessage());
     //                 redirect(ADMURL . '/categories/edit/' . $id);
     //             }
     //         } else {
-    //             setAlert('error', $error);
+    //             setSessionAlert('error', $error);
     //             redirect(ADMURL . '/categories/edit/' . $id);
     //         }
     //     }
@@ -206,9 +206,9 @@ class InvoicesController extends Controller
         try {
             // Delete in Database
             $this->invoicesModel->deleteInvoice($id);
-            setAlert('success', 'Invoice with the ID: <strong>' . $id . '</strong> and it\'s services deleted successfully.');
+            setSessionAlert('success', 'Invoice with the ID: <strong>' . $id . '</strong> and it\'s services deleted successfully.');
         } catch (Exception $e) {
-            setAlert('error', $e->getMessage());
+            setSessionAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

@@ -80,7 +80,7 @@ class PagesController extends Controller
             try {
                 // Insert in Database
                 $this->pagesModel->insertPage($postArray);
-                // setAlert('success', 'Page created successfully.');
+                // setSessionAlert('success', 'Page created successfully.');
                 echo json_encode([
                     "status" => "success",
                     'message' => 'Page created successfully',
@@ -168,7 +168,7 @@ class PagesController extends Controller
                 try {
                     // Update in Database
                     $this->pagesModel->updatePage($postArray);
-                    // setAlert('success', 'Update completed successfully');
+                    // setSessionAlert('success', 'Update completed successfully');
                     echo json_encode([
                         "status" => "success",
                         'message' => 'Page updated successfully',
@@ -182,7 +182,7 @@ class PagesController extends Controller
                     exit();
                 }
             } else {
-                // setAlert('warning', 'No fields were changed');
+                // setSessionAlert('warning', 'No fields were changed');
                 echo json_encode([
                     "status" => "warning",
                     "message" => 'No fields were changed'
@@ -206,9 +206,9 @@ class PagesController extends Controller
         try {
             // Delete in Database
             $this->pagesModel->deletePage($id);
-            setAlert('success', 'Page with the ID: <strong>' . $id . '</strong> deleted successfully.');
+            setSessionAlert('success', 'Page with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setAlert('error', $e->getMessage());
+            setSessionAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

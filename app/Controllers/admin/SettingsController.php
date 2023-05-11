@@ -91,18 +91,18 @@ class SettingsController extends Controller
                         if ($postArray['settingID'] === $_SESSION['settings']['settingID']) {
                             $this->updateSessions($postArray);
                         }
-                        setAlert('success', 'Settings updated successfully');
+                        setSessionAlert('success', 'Settings updated successfully');
                         redirect(ADMURL . '/settings');
                     } catch (Exception $e) {
-                        setAlert('error', $e->getMessage());
+                        setSessionAlert('error', $e->getMessage());
                         redirect(ADMURL . '/settings');
                     }
                 } else {
-                    setAlert('warning', 'No fields were changed');
+                    setSessionAlert('warning', 'No fields were changed');
                     redirect(ADMURL . '/settings');
                 }
             } else {
-                setAlert('error', $validator->getErrors());
+                setSessionAlert('error', $validator->getErrors());
                 redirect(ADMURL . '/settings');
             }
         }
@@ -127,7 +127,7 @@ class SettingsController extends Controller
         try {
             // Insert in Database
             $this->settingsModel->backupDatabase(DB_BACKUPS_PATH);
-            // setAlert('success', 'Backup completed successfully');
+            // setSessionAlert('success', 'Backup completed successfully');
             echo json_encode([
                 "status" => "success",
                 'message' => 'Backup completed successfully'
@@ -154,7 +154,7 @@ class SettingsController extends Controller
             $directory = DB_BACKUPS_PATH . "/";
             $data['rows'] = FileHandler::get_files_in_directory($directory);
         } catch (Exception $e) {
-            setAlert('error', $e->getMessage());
+            setSessionAlert('error', $e->getMessage());
         }
 
         $this->renderSimpleView('/admin/settings/dbbackups_modal', $data);
@@ -172,9 +172,9 @@ class SettingsController extends Controller
         try {
             // Delete the existing files
             FileHandler::remove_files_from_directory($directory, $file);
-            setAlert('success', 'File: <strong>' . $file . '</strong> deleted successfully.');
+            setSessionAlert('success', 'File: <strong>' . $file . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setAlert('error', $e->getMessage());
+            setSessionAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

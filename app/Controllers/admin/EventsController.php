@@ -71,7 +71,7 @@ class EventsController extends Controller
     //         try {
     //             // Insert in Database
     //             $this->eventsModel->insertCategory($postArray);
-    //             // setAlert('success', 'Insert completed successfully.');
+    //             // setSessionAlert('success', 'Insert completed successfully.');
     //             echo json_encode([
     //                 "status" => "success",
     //                 'message' => 'Category created successfully',
@@ -143,7 +143,7 @@ class EventsController extends Controller
     //             try {
     //                 // Update in Database
     //                 $this->eventsModel->updateCategory($postArray);
-    //                 // setAlert('success', 'Update completed successfully');
+    //                 // setSessionAlert('success', 'Update completed successfully');
     //                 echo json_encode([
     //                     "status" => "success",
     //                     'message' => 'Category updated successfully',
@@ -157,7 +157,7 @@ class EventsController extends Controller
     //                 exit();
     //             }
     //         } else {
-    //             // setAlert('warning', 'No fields were changed');
+    //             // setSessionAlert('warning', 'No fields were changed');
     //             echo json_encode([
     //                 "status" => "warning",
     //                 "message" => 'No fields were changed'
@@ -181,9 +181,9 @@ class EventsController extends Controller
     //     try {
     //         // Delete in Database
     //         $this->eventsModel->deleteCategory($id);
-    //         setAlert('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
+    //         setSessionAlert('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
     //     } catch (Exception $e) {
-    //         setAlert('error', $e->getMessage());
+    //         setSessionAlert('error', $e->getMessage());
     //     }
 
     //     // Allways redirect back

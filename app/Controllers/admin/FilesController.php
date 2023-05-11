@@ -50,7 +50,7 @@ class FilesController extends Controller
                 ]);
                 exit();
             } catch (Exception $e) {
-                // setAlert('error', $e->getMessage());
+                // setSessionAlert('error', $e->getMessage());
                 // http_response_code(422);
                 echo json_encode([
                     "status" => "error",
@@ -64,7 +64,7 @@ class FilesController extends Controller
                 $data['rows'] = $this->filesModel->getFiles();
                 $this->renderAdminView('/admin/files/files', $data);
             } catch (Exception $e) {
-                setAlert('error', $e->getMessage());
+                setSessionAlert('error', $e->getMessage());
             }
         }
     }
@@ -118,7 +118,7 @@ class FilesController extends Controller
             try {
                 // Insert in Database
                 $this->filesModel->insertFile($postArray);
-                // setAlert('success', 'File added successfully');
+                // setSessionAlert('success', 'File added successfully');
                 echo json_encode([
                     "status" => "success",
                     'message' => 'File added successfully',
@@ -155,9 +155,9 @@ class FilesController extends Controller
             $this->filesModel->deleteFile($id);
             // Delete the existing files
             FileHandler::removeUploadedFiles(strtolower($cat['categoryName']), $file['fileName']);
-            setAlert('success', 'File with the ID: <strong>' . $id . '</strong> deleted successfully.');
+            setSessionAlert('success', 'File with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setAlert('error', $e->getMessage());
+            setSessionAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

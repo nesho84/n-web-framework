@@ -81,7 +81,7 @@ class TranslationsController extends Controller
             try {
                 // Insert in Database
                 $this->translationsModel->insertTranslation($postArray);
-                // setAlert('success', 'Translation created successfully.');
+                // setSessionAlert('success', 'Translation created successfully.');
                 echo json_encode([
                     "status" => "success",
                     'message' => 'Translation created successfully',
@@ -163,7 +163,7 @@ class TranslationsController extends Controller
                 try {
                     // Update in Database
                     $this->translationsModel->updateTranslation($postArray);
-                    // setAlert('success', 'Translation updated successfully');
+                    // setSessionAlert('success', 'Translation updated successfully');
                     echo json_encode([
                         "status" => "success",
                         'message' => 'Translation updated successfully',
@@ -200,9 +200,9 @@ class TranslationsController extends Controller
         try {
             // Delete in Database
             $this->translationsModel->deleteTranslation($id);
-            setAlert('success', 'Translation with the ID: <strong>' . $id . '</strong> deleted successfully.');
+            setSessionAlert('success', 'Translation with the ID: <strong>' . $id . '</strong> deleted successfully.');
         } catch (Exception $e) {
-            setAlert('error', $e->getMessage());
+            setSessionAlert('error', $e->getMessage());
         }
 
         // Allways redirect back

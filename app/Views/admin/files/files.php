@@ -113,15 +113,15 @@ displayHeader([
                 }
             } else if (result.status === "error") {
                 if (result.message) {
-                    showAlert("bg-danger", result.message);
+                    showSwalAlert("bg-danger", result.message);
                 }
             } else {
-                showAlert("bg-danger", "An error occurred. Please try again.");
+                showSwalAlert("bg-danger", "An error occurred. Please try again.");
                 console.log(result);
             }
         } catch (error) {
             // Show error message
-            showAlert("bg-danger", error);
+            showSwalAlert("bg-danger", error);
             console.error(error);
         } finally {
             // Enable submit button

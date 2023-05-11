@@ -134,7 +134,7 @@ class UsersController extends Controller
                     'languageID' => 2,
                     'settingTheme' => 'light'
                 ]);
-                // setAlert('success', 'User created successfully.');
+                // setSessionAlert('success', 'User created successfully.');
                 echo json_encode([
                     "status" => "success",
                     'message' => 'User created successfully',
@@ -294,7 +294,7 @@ class UsersController extends Controller
                 try {
                     // Update in Database
                     $this->usersModel->updateUser($postArray);
-                    // setAlert('success', 'User Updated successfully');
+                    // setSessionAlert('success', 'User Updated successfully');
                     echo json_encode([
                         "status" => "success",
                         'message' => 'User updated successfully',
@@ -308,7 +308,7 @@ class UsersController extends Controller
                     exit();
                 }
             } else {
-                // setAlert('warning', 'No fields were changed');
+                // setSessionAlert('warning', 'No fields were changed');
                 echo json_encode([
                     "status" => "warning",
                     "message" => 'No fields were changed'
@@ -348,12 +348,12 @@ class UsersController extends Controller
                 $this->usersModel->deleteUser($id);
                 // Delete User Settings in Database
                 $this->settingsModel->deleteSetting($setting['settingID']);
-                setAlert('success', 'User with the ID: <strong>' . $id . '</strong> and settings deleted successfully.');
+                setSessionAlert('success', 'User with the ID: <strong>' . $id . '</strong> and settings deleted successfully.');
             } catch (Exception $e) {
-                setAlert('error', $e->getMessage());
+                setSessionAlert('error', $e->getMessage());
             }
         } else {
-            setAlert('error', $validator->getErrors());
+            setSessionAlert('error', $validator->getErrors());
             redirect(ADMURL . '/users');
         }
 
