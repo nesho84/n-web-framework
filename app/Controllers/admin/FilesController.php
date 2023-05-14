@@ -26,29 +26,28 @@ class FilesController extends Controller
         $data['title'] = 'Files';
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
 
+        // Sanitize query
+        $s = isset($_GET['s']) ? trim($_GET['s']) : '';
+        $searchTerm = filter_var($s, FILTER_SANITIZE_SPECIAL_CHARS);
+
         // Search files using ajax GET method
-        $searchTerm = isset($_GET['s']) ? trim($_GET['s']) : '';
-        if (isset($_GET['s']) && $_GET['s'] == '') {
+        if (isset($_GET['s']) && trim($_GET['s']) == '') {
             // Return all rows
             $data['rows'] = $this->filesModel->getFiles();
             echo json_encode([
                 "status" => "success",
                 'rows' => $data['rows'],
             ]);
-            exit();
+            exit;
         } else if (!empty($searchTerm)) {
-            // Sanitize the search term
-            $searchTerm = filter_var($searchTerm, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-
             // Perform the search query
             try {
                 $data['rows'] = $this->filesModel->searchFiles($searchTerm);
-                // $_SESSION['searchTerm'] = $searchTerm;
                 echo json_encode([
                     "status" => "success",
                     'rows' => $data['rows'],
                 ]);
-                exit();
+                exit;
             } catch (Exception $e) {
                 // setSessionAlert('error', $e->getMessage());
                 // http_response_code(422);
@@ -56,7 +55,7 @@ class FilesController extends Controller
                     "status" => "error",
                     "message" => $e->getMessage()
                 ]);
-                exit();
+                exit;
             }
         } else {
             // Retrieve all files on page Refresh
@@ -129,7 +128,7 @@ class FilesController extends Controller
                     "status" => "error",
                     "message" => $e->getMessage()
                 ]);
-                exit();
+                exit;
             }
         } else {
             // http_response_code(422);
@@ -137,7 +136,7 @@ class FilesController extends Controller
                 "status" => "error",
                 "message" => $validator->getErrors()
             ]);
-            exit();
+            exit;
         }
     }
 

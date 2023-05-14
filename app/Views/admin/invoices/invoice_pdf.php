@@ -180,14 +180,14 @@ if (isset($invoice) && is_array($invoice) && (count($invoice) > 0)) {
     ob_end_clean();
     $pdfFileName = 'Invoice: ' . $companyName . '_' . date('d.m.Y', strtotime($invoiceDateCreated));
     $dompdf->stream("$pdfFileName.pdf", array("Attachment" => 0));
-    exit();
+    exit;
 
     // or
 
     // // Output the PDF as a base64-encoded data URI
     // $pdfContent = $dompdf->output();
     // $pdfDataUri = 'data:application/pdf;base64,' . base64_encode($pdfContent);
-    // exit();
+    // exit;
 } else {
     displayNoDataBox("No data found", ADMURL . "/invoices");
 }

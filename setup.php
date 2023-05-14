@@ -62,7 +62,7 @@ try {
     // This means life is good :) -> // Redirect to Login
     if ($ok === true) {
         header('Location:' . APPURL . '/login');
-        exit();
+        exit;
     }
 }
 

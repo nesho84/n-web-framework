@@ -6,9 +6,9 @@ $footerTheme = $_SESSION['settings']['settingTheme'] ?? "dark";
 $textTheme = $footerTheme === "dark" ? "light" : "dark";
 ?>
 
-<footer class="bg-<?php echo $footerTheme; ?> text-<?php echo $textTheme; ?> border-top mt-3">
+<footer class="bg-<?php echo $footerTheme; ?> text-<?php echo $textTheme; ?> border-top">
     <!-- App Version -->
-    <p class="mt-3">Version <strong><?php echo APP_VERSION; ?></strong></p>
+    <p class="my-2">Version <strong><?php echo APP_VERSION; ?></strong></p>
 </footer>
 
 </div> <!-- wrapper end -->

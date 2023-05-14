@@ -200,7 +200,7 @@ class Sessions
                     "status" => "error",
                     'message' => 'Invalid or missing CSRF token'
                 ]);
-                exit();
+                exit;
             }
         } else {
             $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
@@ -210,7 +210,7 @@ class Sessions
                     "status" => "error",
                     'message' => 'Invalid or missing CSRF token'
                 ]);
-                exit();
+                exit;
             }
         }
 

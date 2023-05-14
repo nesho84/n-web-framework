@@ -130,7 +130,7 @@ class InvoicesController extends Controller
                     "status" => "error",
                     "message" => $e->getMessage()
                 ]);
-                exit();
+                exit;
             }
         } else {
             // http_response_code(422);
@@ -138,7 +138,7 @@ class InvoicesController extends Controller
                 "status" => "error",
                 "message" => $validator->getErrors()
             ]);
-            exit();
+            exit;
         }
     }
 

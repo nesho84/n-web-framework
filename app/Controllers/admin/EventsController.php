@@ -21,9 +21,25 @@ class EventsController extends Controller
     {
         $data['title'] = 'Events';
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
-        $data['rows'] = $this->eventsModel->getEvents();
+        $data['rows'] = $this->eventsModel->getEvents('');
 
         $this->renderAdminView('/admin/events/events', $data);
+    }
+
+    //------------------------------------------------------------
+    public function fetchEvents(): void
+    //------------------------------------------------------------
+    {
+        $where_sql = '';
+        $start = isset($_GET['start']) ? filter_var(trim($_GET['start']), FILTER_SANITIZE_SPECIAL_CHARS) : '';
+        $end = isset($_GET['end']) ? filter_var(trim($_GET['end']), FILTER_SANITIZE_SPECIAL_CHARS) : '';
+        if (!empty($start) && !empty($end)) {
+            $where_sql .= " WHERE start BETWEEN '" . $start . "' AND '" . $end . "' ";
+        }
+
+        $data = $this->eventsModel->getEvents($where_sql);
+
+        echo json_encode($data);
     }
 
     //------------------------------------------------------------
@@ -35,158 +51,222 @@ class EventsController extends Controller
         $this->renderSimpleView('/admin/events/create_modal', $data);
     }
 
-    // //------------------------------------------------------------
-    // public function insert(): void
-    // //------------------------------------------------------------
-    // {
-    //     // Set Security Headers and Require CSRF_TOKEN
-    //     Sessions::setHeaders()->requireCSRF();
+    //------------------------------------------------------------
+    public function insert(): void
+    //------------------------------------------------------------
+    {
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF(htmlspecialchars($_POST['csrf_token'] ?? ''));
 
-    //     $postArray = [
-    //         'userID' => $_SESSION['user']['id'],
-    //         'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
-    //         'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
-    //         'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-    //         'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
-    //     ];
+        if (isset($_POST['create_event'])) {
+            $postArray = [
+                'userID' => $_SESSION['user']['id'],
+                'title' => htmlspecialchars(trim($_POST['title'])),
+                'start' => htmlspecialchars(date('Y-m-d', strtotime($_POST['start']))),
+                'end' => htmlspecialchars(date('Y-m-d', strtotime($_POST['end']))),
+                'description' => htmlspecialchars(trim($_POST['description'])),
+                'url' => htmlspecialchars(trim($_POST['url'])),
+            ];
 
-    // **
-    // Example for formating dates for the mySQL date fields
-    // **
-    // // Get the input dates from the form
-    // $start_date = $_POST['eventStart'];
-    // $end_date = $_POST['endStart'];
-    // // Format the dates for MySQL
-    // $formatted_start_date = date('Y-m-d', strtotime($start_date));
-    // $formatted_end_date = date('Y-m-d', strtotime($end_date));
+            // Validate inputs
+            $validator = new DataValidator();
 
+            $validator('title', $postArray['title'])->required()->min(3)->max(20);
+            $validator('start', $postArray['start'])->required();
+            $validator('end', $postArray['end'])->required();
 
-    //     // Validate inputs
-    //     $validator = new DataValidator();
+            if ($validator->isValidated()) {
+                try {
+                    // Insert in Database
+                    $this->eventsModel->insertEvent($postArray);
+                    setSessionAlert('success', 'Event created successfully');
+                    redirect(ADMURL . '/events');
+                } catch (Exception $e) {
+                    setSessionAlert('error', $e->getMessage());
+                    redirect(ADMURL . '/events');
+                }
+            } else {
+                setSessionAlert('error', $validator->getErrors());
+                redirect(ADMURL . '/events');
+            }
+        }
+    }
 
-    //     $validator('Category Name', $postArray['categoryName'])->required()->min(3)->max(20);
-    //     $validator('Category Type', $postArray['categoryType'])->required()->min(3)->max(20);
+    //------------------------------------------------------------
+    public function insertJson(): void
+    //------------------------------------------------------------
+    {
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
-    //     if ($validator->isValidated()) {
-    //         try {
-    //             // Insert in Database
-    //             $this->eventsModel->insertCategory($postArray);
-    //             // setSessionAlert('success', 'Insert completed successfully.');
-    //             echo json_encode([
-    //                 "status" => "success",
-    //                 'message' => 'Category created successfully',
-    //             ]);
-    //         } catch (Exception $e) {
-    //             http_response_code(500);
-    //             echo json_encode([
-    //                 "status" => "error",
-    //                 "message" => $e->getMessage()
-    //             ]);
-    //             exit();
-    //         }
-    //     } else {
-    //         // http_response_code(422);
-    //         echo json_encode([
-    //             "status" => "error",
-    //             "message" => $validator->getErrors()
-    //         ]);
-    //         exit();
-    //     }
-    // }
+        // Retrieve JSON from POST body 
+        $jsonStr = file_get_contents('php://input');
+        $jsonObj = json_decode($jsonStr);
 
-    // //------------------------------------------------------------
-    // public function edit(int $id): void
-    // //------------------------------------------------------------
-    // {
-    //     $data['title'] = 'Category Edit - ' . $id;
-    //     $data['rows'] = $this->eventsModel->getCategoryById($id);
+        if ($jsonObj->request_type == 'addEvent') {
+            $start = $jsonObj->start;
+            $end = $jsonObj->end;
+            $event_data = $jsonObj->event_data;
+            $eventTitle = !empty($event_data[0]) ? $event_data[0] : '';
+            $eventDesc = !empty($event_data[1]) ? $event_data[1] : '';
+            $eventURL = !empty($event_data[2]) ? $event_data[2] : '';
 
-    //     $this->renderAdminView('/admin/categories/edit', $data);
-    // }
+            $postArray = [
+                'userID' => $_SESSION['user']['id'],
+                'start' => htmlspecialchars($start),
+                'end' => htmlspecialchars($end),
+                'title' => htmlspecialchars($eventTitle),
+                'description' => htmlspecialchars($eventDesc),
+                'url' => htmlspecialchars($eventURL),
+            ];
 
-    // //------------------------------------------------------------
-    // public function update(int $id): void
-    // //------------------------------------------------------------
-    // {
-    //     // Set Security Headers and Require CSRF_TOKEN
-    //     Sessions::setHeaders()->requireCSRF();
+            // Validate inputs
+            $validator = new DataValidator();
 
-    //     $postArray = [
-    //         'categoryID' => $id,
-    //         'userID' => $_SESSION['user']['id'],
-    //         'categoryName' => htmlspecialchars(trim($_POST['categoryName'])),
-    //         'categoryType' => htmlspecialchars(trim($_POST['categoryType'])),
-    //         'categoryLink' => htmlspecialchars(trim($_POST['categoryLink'])),
-    //         'categoryDescription' => htmlspecialchars(trim($_POST['categoryDescription'])),
-    //     ];
+            $validator('Title', $postArray['title'])->required()->min(3)->max(20);
+            $validator('Start', $postArray['start'])->required();
+            $validator('End', $postArray['end'])->required();
 
-    //     // Get existing category from the Model
-    //     $category = $this->eventsModel->getCategoryById($id);
+            if ($validator->isValidated()) {
+                try {
+                    // Insert in Database
+                    $this->eventsModel->insertEvent($postArray);
+                    echo json_encode([
+                        "status" => "success",
+                        'message' => 'Event created successfully',
+                    ]);
+                } catch (Exception $e) {
+                    http_response_code(500);
+                    echo json_encode([
+                        "status" => "error",
+                        "message" => $e->getMessage()
+                    ]);
+                    exit;
+                }
+            } else {
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $validator->getErrors()
+                ]);
+                exit;
+            }
+        }
+    }
 
-    //     // Validate inputs
-    //     $validator = new DataValidator();
+    //------------------------------------------------------------
+    public function deleteJson(int $id): void
+    //------------------------------------------------------------
+    {
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
-    //     $validator('Category Name', $postArray['categoryName'])->required()->min(3)->max(20);
-    //     $validator('Category Type', $postArray['categoryType'])->required()->min(3)->max(20);
+        // Retrieve JSON from POST body 
+        $jsonStr = file_get_contents('php://input');
+        $jsonObj = json_decode($jsonStr);
 
-    //     if ($validator->isValidated()) {
-    //         // Remove unchanged postArray keys but keep the 'id'
-    //         foreach ($postArray as $key => $value) {
-    //             if (isset($postArray[$key]) && $category[$key] == $value && $key !== 'categoryID') {
-    //                 unset($postArray[$key]);
-    //             }
-    //         }
-    //         // remove empty keys
-    //         $postArray = array_filter($postArray, 'strlen');
+        if ($jsonObj->request_type == 'deleteEvent') {
+            $id = htmlspecialchars($jsonObj->event_id);
 
-    //         if (count($postArray) > 1) {
-    //             try {
-    //                 // Update in Database
-    //                 $this->eventsModel->updateCategory($postArray);
-    //                 // setSessionAlert('success', 'Update completed successfully');
-    //                 echo json_encode([
-    //                     "status" => "success",
-    //                     'message' => 'Category updated successfully',
-    //                 ]);
-    //             } catch (Exception $e) {
-    //                 http_response_code(500);
-    //                 echo json_encode([
-    //                     "status" => "error",
-    //                     "message" => $e->getMessage()
-    //                 ]);
-    //                 exit();
-    //             }
-    //         } else {
-    //             // setSessionAlert('warning', 'No fields were changed');
-    //             echo json_encode([
-    //                 "status" => "warning",
-    //                 "message" => 'No fields were changed'
-    //             ]);
-    //             exit();
-    //         }
-    //     } else {
-    //         // http_response_code(422);
-    //         echo json_encode([
-    //             "status" => "error",
-    //             "message" => $validator->getErrors()
-    //         ]);
-    //         exit();
-    //     }
-    // }
+            try {
+                // Delete in Database
+                $this->eventsModel->deleteEvent($id);
+                echo json_encode([
+                    "status" => "success",
+                    'message' => 'Event deleted successfully',
+                ]);
+            } catch (Exception $e) {
+                http_response_code(500);
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $e->getMessage()
+                ]);
+                exit;
+            }
+        }
+    }
 
-    // //------------------------------------------------------------
-    // public function delete(int $id): void
-    // //------------------------------------------------------------
-    // {
-    //     try {
-    //         // Delete in Database
-    //         $this->eventsModel->deleteCategory($id);
-    //         setSessionAlert('success', 'Category with the ID: <strong>' . $id . '</strong> deleted successfully.');
-    //     } catch (Exception $e) {
-    //         setSessionAlert('error', $e->getMessage());
-    //     }
+    //------------------------------------------------------------
+    public function updateJson(int $id): void
+    //------------------------------------------------------------
+    {
+        // Set Security Headers and Require CSRF_TOKEN
+        Sessions::setHeaders()->requireCSRF();
 
-    //     // Allways redirect back
-    //     redirect(ADMURL . '/categories');
-    // }
+        // Retrieve JSON from POST body 
+        $jsonStr = file_get_contents('php://input');
+        $jsonObj = json_decode($jsonStr);
+
+        if ($jsonObj->request_type == 'editEvent') {
+            $event_id = $jsonObj->event_id;
+            $start = $jsonObj->start;
+            $end = $jsonObj->end;
+
+            $event_data = $jsonObj->event_data;
+            $eventTitle = !empty($event_data[0]) ? $event_data[0] : '';
+            $eventDesc = !empty($event_data[1]) ? $event_data[1] : '';
+            $eventURL = !empty($event_data[2]) ? $event_data[2] : '';
+
+            $postArray = [
+                'userID' => $_SESSION['user']['id'],
+                'id' => htmlspecialchars($event_id),
+                'start' => htmlspecialchars($start),
+                'end' => htmlspecialchars($end),
+                'title' => htmlspecialchars($eventTitle),
+                'description' => htmlspecialchars($eventDesc),
+                'url' => htmlspecialchars($eventURL),
+            ];
+
+            // Get existing event from the Model
+            $event = $this->eventsModel->getEventById($id);
+
+            // Validate inputs
+            $validator = new DataValidator();
+
+            $validator('Title', $postArray['title'])->required()->min(3)->max(20);
+            $validator('Start', $postArray['start'])->required();
+            $validator('End', $postArray['end'])->required();
+
+            if ($validator->isValidated()) {
+                // Remove unchanged postArray keys but keep the 'id'
+                foreach ($postArray as $key => $value) {
+                    if (isset($postArray[$key]) && $event[$key] == $value && $key !== 'id') {
+                        unset($postArray[$key]);
+                    }
+                }
+                // remove empty keys
+                $postArray = array_filter($postArray, 'strlen');
+
+                if (count($postArray) > 1) {
+                    try {
+                        // Update in Database
+                        $this->eventsModel->updateEvent($postArray);
+                        echo json_encode([
+                            "status" => "success",
+                            'message' => 'Event updated successfully',
+                        ]);
+                    } catch (Exception $e) {
+                        http_response_code(500);
+                        echo json_encode([
+                            "status" => "error",
+                            "message" => $e->getMessage()
+                        ]);
+                        exit;
+                    }
+                } else {
+                    echo json_encode([
+                        "status" => "warning",
+                        "message" => 'No fields were changed'
+                    ]);
+                    exit;
+                }
+            } else {
+                // http_response_code(422);
+                echo json_encode([
+                    "status" => "error",
+                    "message" => $validator->getErrors()
+                ]);
+                exit;
+            }
+        }
+    }
 }

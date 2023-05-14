@@ -92,7 +92,7 @@ class TranslationsController extends Controller
                     "status" => "error",
                     "message" => $e->getMessage()
                 ]);
-                exit();
+                exit;
             }
         } else {
             // http_response_code(422);
@@ -100,7 +100,7 @@ class TranslationsController extends Controller
                 "status" => "error",
                 "message" => $validator->getErrors()
             ]);
-            exit();
+            exit;
         }
     }
 
@@ -174,14 +174,14 @@ class TranslationsController extends Controller
                         "status" => "error",
                         "message" => $e->getMessage()
                     ]);
-                    exit();
+                    exit;
                 }
             } else {
                 echo json_encode([
                     "status" => "warning",
                     "message" => 'No fields were changed'
                 ]);
-                exit();
+                exit;
             }
         } else {
             // http_response_code(422);
@@ -189,7 +189,7 @@ class TranslationsController extends Controller
                 "status" => "error",
                 "message" => $validator->getErrors()
             ]);
-            exit();
+            exit;
         }
     }
 

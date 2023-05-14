@@ -93,7 +93,7 @@ class LoginController extends Controller
         }
 
         echo json_encode(["message" => $output]);
-        exit();
+        exit;
     }
 
     //------------------------------------------------------------

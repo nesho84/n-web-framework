@@ -96,7 +96,7 @@ class LanguagesController extends Controller
                     "status" => "error",
                     "message" => $e->getMessage()
                 ]);
-                exit();
+                exit;
             }
         } else {
             // http_response_code(422);
@@ -104,7 +104,7 @@ class LanguagesController extends Controller
                 "status" => "error",
                 "message" => $validator->getErrors()
             ]);
-            exit();
+            exit;
         }
     }
 
@@ -192,7 +192,7 @@ class LanguagesController extends Controller
                         "status" => "error",
                         "message" => $e->getMessage()
                     ]);
-                    exit();
+                    exit;
                 }
             } else {
                 // setSessionAlert('warning', 'No fields were changed');
@@ -200,7 +200,7 @@ class LanguagesController extends Controller
                     "status" => "warning",
                     "message" => 'No fields were changed'
                 ]);
-                exit();
+                exit;
             }
         } else {
             // http_response_code(422);
@@ -208,7 +208,7 @@ class LanguagesController extends Controller
                 "status" => "error",
                 "message" => $validator->getErrors()
             ]);
-            exit();
+            exit;
         }
     }
 

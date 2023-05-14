@@ -76,7 +76,7 @@ class Router
                 http_response_code(405);
                 header('Allow: ' . $mt);
                 echo json_encode(["message" => "Request method '" . $_SERVER['REQUEST_METHOD'] . "' not supported"]);
-                exit();
+                exit;
             }
             // Load Controller
             $ct = $validRoute['controller'] ?? null;

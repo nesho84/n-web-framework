@@ -1,0 +1,84 @@
+[13-May-2023 10:16:34 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function EventsModel::getEvents(), 0 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 24 and exactly 1 expected in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php:6
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php(24): EventsModel->getEvents()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): EventsController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php on line 6
+[13-May-2023 10:24:03 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php(32): EventsModel->getEvents(' WHERE start BE...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): EventsController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php on line 14
+[13-May-2023 10:28:31 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, string given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\events\events.php on line 10 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\events\events.php(10): dd('[]')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(66): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php(34): Controller->renderAdminView('/admin/events/e...', Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): EventsController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 8
+[13-May-2023 10:35:54 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\events\events.php on line 23
+[13-May-2023 10:36:01 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Views\admin\events\events.php on line 23
+[13-May-2023 10:58:44 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'eventStart' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php(40): EventsModel->getEvents(' WHERE eventSta...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): EventsController->fetchEvents()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php on line 14
+[13-May-2023 10:58:49 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'eventStart' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php(40): EventsModel->getEvents(' WHERE eventSta...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): EventsController->fetchEvents()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php on line 14
+[13-May-2023 10:58:55 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'eventStart' in 'where clause' in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php(40): EventsModel->getEvents(' WHERE eventSta...')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): EventsController->fetchEvents()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php on line 14
+[14-May-2023 13:10:29 Europe/Berlin] PHP Warning:  Undefined variable $postArrayz in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 133
+[14-May-2023 13:10:29 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: EventsModel::insertEvent(): Argument #1 ($postArray) must be of type array, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 133 and defined in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php:61
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php(133): EventsModel->insertEvent(NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): EventsController->insertJson()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php on line 61
+[14-May-2023 13:10:38 Europe/Berlin] PHP Warning:  Undefined variable $postArrayz in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 133
+[14-May-2023 13:10:38 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: EventsModel::insertEvent(): Argument #1 ($postArray) must be of type array, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 133 and defined in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php:61
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php(133): EventsModel->insertEvent(NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): EventsController->insertJson()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\EventsModel.php on line 61
+[14-May-2023 18:10:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method EventsModel::deleteCategory() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php:172
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): EventsController->deleteJson('5')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 172
+[14-May-2023 18:10:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method EventsModel::deleteCategory() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php:172
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): EventsController->deleteJson('5')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 172
