@@ -15,14 +15,12 @@ displayHeader([
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
+        const calendarEl = document.getElementById('calendar');
 
-        var calendar = new FullCalendar.Calendar(calendarEl, {
+        const calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             height: "auto",
             events: "<?php echo ADMURL . '/events/fetchEvents'; ?>",
-
-            // --- Add Event START --- //
             selectable: true,
             select: async function(start, end, allDay) {
                 const {
@@ -45,35 +43,10 @@ displayHeader([
                     }
                 });
                 if (formValues) {
-                    fetch("<?php echo ADMURL . '/events/insertJson'; ?>", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json",
-                                "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                            },
-                            body: JSON.stringify({
-                                request_type: 'addEvent',
-                                start: start.startStr,
-                                end: start.endStr,
-                                event_data: formValues
-                            }),
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.status === "success") {
-                                Swal.fire(data.message, '', 'success');
-                            } else {
-                                Swal.fire(data.message, '', 'error');
-                            }
-
-                            // Refetch events from all sources and rerender
-                            calendar.refetchEvents();
-                        })
-                        .catch(console.error);
+                    // Add Event
+                    addEvent(calendar, start, end, formValues);
                 }
-            }, // --- Add Event END --- //
-
-            // --- Show/Edit/Delete Event START --- //
+            },
             eventClick: function(info) {
                 info.jsEvent.preventDefault();
                 info.el.style.borderColor = 'red';
@@ -91,88 +64,133 @@ displayHeader([
                     denyButtonColor: '#3085d6',
                     html: `<p>${info.event.extendedProps.description}</p><a href="${info.event.url}">Visit event page</a>`,
                 }).then((result) => {
-                    // Delete event
                     if (result.isConfirmed) {
-                        fetch(`<?php echo ADMURL . '/events/deleteJson'; ?>/${info.event.id}`, {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                                },
-                                body: JSON.stringify({
-                                    request_type: 'deleteEvent',
-                                    event_id: info.event.id
-                                }),
-                            })
-                            .then(response => response.json())
-                            .then(data => {
-                                if (data.status === "success") {
-                                    Swal.fire(data.message, '', 'success');
-                                } else {
-                                    Swal.fire(data.message, '', 'error');
-                                }
-                                // Refetch events from all sources and rerender
-                                calendar.refetchEvents();
-                            })
-                            .catch(console.error);
-                    }
-                    // Edit and update event
-                    else if (result.isDenied) {
-                        Swal.fire({
-                            title: 'Edit Event',
-                            confirmButtonText: 'Save',
-                            showCloseButton: true,
-                            showCancelButton: true,
-                            focusConfirm: true,
-                            html: `<input id="swalEvtTitle_edit" class="form-control mb-3" placeholder="Enter Title" value="${info.event.title}">
-                            <textarea id="swalEvtDesc_edit" class="form-control mb-3" placeholder="Enter Description">${info.event.extendedProps.description}</textarea>
-                            <input id="swalEvtURL_edit" class="form-control mb-3" placeholder="Enter URL" value="${info.event.url}">`,
-                            preConfirm: () => {
-                                return [
-                                    document.getElementById('swalEvtTitle_edit').value,
-                                    document.getElementById('swalEvtDesc_edit').value,
-                                    document.getElementById('swalEvtURL_edit').value
-                                ]
-                            }
-                        }).then((result) => {
-                            if (result.value) {
-                                fetch(`<?php echo ADMURL . '/events/updateJson'; ?>/${info.event.id}`, {
-                                        method: "POST",
-                                        headers: {
-                                            "Content-Type": "application/json",
-                                            "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                                        },
-                                        body: JSON.stringify({
-                                            request_type: 'editEvent',
-                                            event_id: info.event.id,
-                                            start: info.event.startStr,
-                                            end: info.event.endStr,
-                                            event_data: result.value
-                                        }),
-                                    })
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        if (data.status === "success") {
-                                            Swal.fire(data.message, '', 'success');
-                                        } else if (data.status === "warning") {
-                                            Swal.fire(data.message, '', 'warning');
-                                        } else {
-                                            Swal.fire(data.message, '', 'error');
-                                        }
-                                        // Refetch events from all sources and rerender
-                                        calendar.refetchEvents();
-                                    })
-                                    .catch(console.error);
-                            }
-                        });
+                        // Delete event
+                        deleteEvent(calendar, info.event.id);
+                    } else if (result.isDenied) {
+                        // Edit and update event
+                        editEvent(calendar, info.event);
                     } else {
                         Swal.close();
                     }
                 });
-            }, // --- Show/Edit/Delete Event END --- //
+            },
         });
 
         // Show Full Calendar
         calendar.render();
     });
+
+    //------------------------------------------------------------
+    function fetchRequest(url, method, body)
+    //------------------------------------------------------------
+    {
+        const baseUrl = "<?php echo ADMURL; ?>";
+        return fetch(baseUrl + url, {
+                method: method,
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify(body),
+            })
+            .then(response => response.json())
+            .catch(error => {
+                console.error(error);
+                throw error;
+            });
+    }
+
+    //------------------------------------------------------------
+    function addEvent(calendar, start, end, eventData)
+    //------------------------------------------------------------
+    {
+        const requestUrl = '/events/insertJson';
+        const requestBody = {
+            request_type: 'addEvent',
+            start: start.startStr,
+            end: start.endStr,
+            event_data: eventData
+        };
+        fetchRequest(requestUrl, 'POST', requestBody)
+            .then(data => {
+                if (data.status === "success") {
+                    Swal.fire(data.message, '', 'success');
+                } else {
+                    Swal.fire(data.message, '', 'error');
+                }
+                // Refetch events from all sources and rerender
+                calendar.refetchEvents();
+            })
+            .catch(console.error);
+    }
+
+    //------------------------------------------------------------
+    function deleteEvent(calendar, eventId)
+    //------------------------------------------------------------
+    {
+        const requestUrl = `/events/deleteJson/${eventId}`;
+        const requestBody = {
+            request_type: 'deleteEvent',
+            event_id: eventId
+        };
+        fetchRequest(requestUrl, 'POST', requestBody)
+            .then(data => {
+                if (data.status === "success") {
+                    Swal.fire(data.message, '', 'success');
+                } else {
+                    Swal.fire(data.message, '', 'error');
+                }
+                // Refetch events from all sources and rerender
+                calendar.refetchEvents();
+            })
+            .catch(console.error);
+    }
+
+    //------------------------------------------------------------
+    function editEvent(calendar, event)
+    //------------------------------------------------------------
+    {
+        Swal.fire({
+            title: 'Edit Event',
+            confirmButtonText: 'Save',
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: true,
+            html: `<input id="swalEvtTitle_edit" class="form-control mb-3" placeholder="Enter Title" value="${event.title}">
+           <textarea id="swalEvtDesc_edit" class="form-control mb-3" placeholder="Enter Description">${event.extendedProps.description}</textarea>
+           <input id="swalEvtURL_edit" class="form-control mb-3" placeholder="Enter URL" value="${event.url}">`,
+            preConfirm: () => {
+                return [
+                    document.getElementById('swalEvtTitle_edit').value,
+                    document.getElementById('swalEvtDesc_edit').value,
+                    document.getElementById('swalEvtURL_edit').value
+                ];
+            }
+        }).then((result) => {
+            if (result.value) {
+                const requestUrl = `/events/updateJson/${event.id}`;
+                const requestBody = {
+                    request_type: 'editEvent',
+                    event_id: event.id,
+                    start: event.startStr,
+                    end: event.endStr,
+                    event_data: result.value
+                };
+                fetchRequest(requestUrl, 'POST', requestBody)
+                    .then(data => {
+                        if (data.status === "success") {
+                            Swal.fire(data.message, '', 'success');
+                        } else if (data.status === "warning") {
+                            Swal.fire(data.message, '', 'warning');
+                        } else {
+                            Swal.fire(data.message, '', 'error');
+                        }
+                        // Refetch events from all sources and rerender
+                        calendar.refetchEvents();
+                    })
+                    .catch(console.error);
+            }
+        });
+    }
 </script>
