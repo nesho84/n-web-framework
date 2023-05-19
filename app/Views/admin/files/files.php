@@ -30,7 +30,7 @@ displayHeader([
         unset($_SESSION['searchTerm']);
 
         $rows = $data['rows'] ?? [];
-        if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
+        if (count($rows) > 0) {
             $icon = "";
 
             foreach ($rows as $d) {

@@ -15,7 +15,6 @@
                 } else {
                     echo '<small>Welcome back</small>';
                 }
-                // echo "<p class='mt-2'><strong>Session token:</strong> " . $_SESSION['user']['session_token'] . '</p>';
                 ?>
             </h6>
         </div>
@@ -24,8 +23,8 @@
     <hr class="mb-2">
 
     <?php
-    $rows = $data['rows'];
-    if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
+    $rows = $data['rows'] ?? [];
+    if (count($rows) > 0) {
         echo '<div class="row text-center g-3">';
 
         $icon = "";

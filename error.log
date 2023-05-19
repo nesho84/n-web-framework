@@ -82,3 +82,5 @@ Stack trace:
 #2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
 #3 {main}
   thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 172
+[19-May-2023 10:43:41 Europe/Berlin] PHP Warning:  Undefined array key "rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 27
+[19-May-2023 10:59:42 Europe/Berlin] PHP Warning:  Undefined array key "rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 25

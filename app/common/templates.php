@@ -43,21 +43,25 @@ function displayHeader(array $options = []): void
             if (isset($title2)) {
                 $btnOrTitle2 .= '<p class="m-0">' . $title2 . '</p>';
             }
-            echo '<div class="container-lg pt-4">
-                    <div class="bg-light border-top border-bottom rounded-1 p-2 mb-3">
-                        <div class="d-flex flex-wrap align-items-center justify-content-between">
-                            <h3 class="mb-0 me-2 text-muted">' . (isset($title) ? $title : "") . '</h3>
-                            ' . $btnOrTitle2 . '
-                        </div>
-                    </div>
-                </div>';
+            echo "\n";
+            echo '<div class="container-lg pt-4">';
+            echo '<div class="bg-light border-top border-bottom rounded-1 p-2 mb-3">';
+            echo '<div class="d-flex flex-wrap align-items-center justify-content-between">';
+            echo '<h3 class="mb-0 me-2 text-muted">' . (isset($title) ? $title : "") . '</h3>';
+            echo $btnOrTitle2;
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
         }
     } else {
-        echo '<div class="bg-light border-top border-bottom p-1 mb-3">
-                <div class="d-flex flex-wrap align-items-center justify-content-center">
-                    <p class="mb-0 me-2 text-danger">Heading params not set!</p>
-                </div>
-            </div>';
+        echo "\n";
+        echo '<div class="container-lg pt-4">';
+        echo '<div class="bg-light border-top border-bottom rounded-1 p-2 mb-3">';
+        echo '<div class="d-flex flex-wrap align-items-center justify-content-center">';
+        echo '<p class="mb-0 me-2 text-danger">Dynamic Header options are not set!</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
     }
 }
 
@@ -72,20 +76,20 @@ function displayNoDataBox(string $text, string $backBtnUrl = ""): void
 //------------------------------------------------------------
 {
     $btn = '<a href="' . $backBtnUrl . '" class="btn btn-secondary btn-bloc mt-4 mb-2"">
-            <i class="fas fa-angle-double-left ml-1"></i> Go Back
-        </a>';
+                <i class="fas fa-angle-double-left ml-1"></i> Go Back
+            </a>';
 
-    echo '<div class="container-lg pt-4">
-            <div class="card text-center border-2 text-muted">
-                <div class="card-body bg-light h-100">
-                    <h2 class="card-title">
-                        <i class="fas fa-info-circle fa-2x"></i>
-                    </h2>
-                    <div class="card-text text-black-50 mt-3">
-                        <h2>' . $text . '</h2>
-                    </div>
-                    ' . ($backBtnUrl !== "" ? $btn : "") . '
-                </div>
-            </div>
-        </div>';
+    echo '<div class="container-lg pt-4">';
+    echo '<div class="card text-center border-2 text-muted">';
+    echo '<div class="card-body bg-light h-100">';
+    echo '<h2 class="card-title">';
+    echo '<i class="fas fa-info-circle fa-2x"></i>';
+    echo '</h2>';
+    echo '<div class="card-text text-black-50 mt-3">';
+    echo '<h2>' . $text . '</h2>';
+    echo '</div>';
+    echo $backBtnUrl !== "" ? $btn : "";
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
 }

@@ -21,8 +21,8 @@ displayHeader([
             </thead>
             <tbody>
                 <?php
-                $rows = $data['rows'];
-                if (isset($rows) && is_array($rows) && (count($rows) > 0)) {
+                $rows = $data['rows'] ?? [];
+                if (count($rows) > 0) {
                     $counter = 0;
                     foreach ($rows as $d) {
                         $counter += 1;

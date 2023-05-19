@@ -27,22 +27,6 @@ class EventsController extends Controller
     }
 
     //------------------------------------------------------------
-    public function fetchEvents(): void
-    //------------------------------------------------------------
-    {
-        $where_sql = '';
-        $start = isset($_GET['start']) ? filter_var(trim($_GET['start']), FILTER_SANITIZE_SPECIAL_CHARS) : '';
-        $end = isset($_GET['end']) ? filter_var(trim($_GET['end']), FILTER_SANITIZE_SPECIAL_CHARS) : '';
-        if (!empty($start) && !empty($end)) {
-            $where_sql .= " WHERE start BETWEEN '" . $start . "' AND '" . $end . "' ";
-        }
-
-        $data = $this->eventsModel->getEvents($where_sql);
-
-        echo json_encode($data);
-    }
-
-    //------------------------------------------------------------
     public function create_modal(): void
     //------------------------------------------------------------
     {
@@ -90,6 +74,22 @@ class EventsController extends Controller
                 redirect(ADMURL . '/events');
             }
         }
+    }
+
+    //------------------------------------------------------------
+    public function eventsJson(): void
+    //------------------------------------------------------------
+    {
+        $where_sql = '';
+        $start = isset($_GET['start']) ? filter_var(trim($_GET['start']), FILTER_SANITIZE_SPECIAL_CHARS) : '';
+        $end = isset($_GET['end']) ? filter_var(trim($_GET['end']), FILTER_SANITIZE_SPECIAL_CHARS) : '';
+        if (!empty($start) && !empty($end)) {
+            $where_sql .= " WHERE start BETWEEN '" . $start . "' AND '" . $end . "' ";
+        }
+
+        $data = $this->eventsModel->getEvents($where_sql);
+
+        echo json_encode($data);
     }
 
     //------------------------------------------------------------

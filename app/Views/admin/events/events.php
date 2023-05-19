@@ -20,12 +20,10 @@ displayHeader([
         const calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             height: "auto",
-            events: "<?php echo ADMURL . '/events/fetchEvents'; ?>",
+            events: "<?php echo ADMURL . '/events/eventsJson'; ?>",
             selectable: true,
             select: async function(start, end, allDay) {
-                const {
-                    value: formValues
-                } = await Swal.fire({
+                const { value: formValues } = await Swal.fire({
                     title: 'Add Event',
                     confirmButtonText: 'Save',
                     showCloseButton: true,

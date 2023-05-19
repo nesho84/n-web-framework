@@ -68,9 +68,9 @@ Router::get('/admin/invoices/pdf_output', 'admin/InvoicesController@invoice_pdf'
 
 // --- Events --- //
 Router::get('/admin/events', 'admin/EventsController@index');
-Router::get('/admin/events/fetchEvents', 'admin/EventsController@fetchEvents');
 Router::get('/admin/events/create_modal', 'admin/EventsController@create_modal');
 Router::post('/admin/events/insert', 'admin/EventsController@insert');
+Router::get('/admin/events/eventsJson', 'admin/EventsController@eventsJson');
 Router::post('/admin/events/insertJson', 'admin/EventsController@insertJson');
 Router::post('/admin/events/updateJson/{id}', 'admin/EventsController@updateJson');
 Router::post('/admin/events/deleteJson/{id}', 'admin/EventsController@deleteJson');
