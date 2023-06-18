@@ -28,7 +28,8 @@ class PublicModel extends Model
             if ($stmt->rowCount() > 0) {
                 return [
                     'pageTitle' => $row['pageTitle'],
-                    'pageContent' => isset($_SESSION["languageID"]) ? $pageContentTranslated : $row['pageContent'],
+                    // 'pageContent' => isset($_SESSION["languageID"]) ? $pageContentTranslated : $row['pageContent'],
+                    'pageContent' => $row['pageContent'],
                     'PageMetaTitle' => $row['PageMetaTitle'],
                     'PageMetaDescription' => $row['PageMetaDescription'],
                     'PageMetaKeywords' => $row['PageMetaKeywords'],

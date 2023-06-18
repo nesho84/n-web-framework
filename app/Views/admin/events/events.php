@@ -14,16 +14,19 @@ displayHeader([
 </div>
 
 <script>
+    let calendar = null;
+
     document.addEventListener('DOMContentLoaded', function() {
         const calendarEl = document.getElementById('calendar');
-
-        const calendar = new FullCalendar.Calendar(calendarEl, {
+        calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             height: "auto",
             events: "<?php echo ADMURL . '/events/eventsJson'; ?>",
             selectable: true,
             select: async function(start, end, allDay) {
-                const { value: formValues } = await Swal.fire({
+                const {
+                    value: formValues
+                } = await Swal.fire({
                     title: 'Add Event',
                     confirmButtonText: 'Save',
                     showCloseButton: true,
@@ -42,7 +45,7 @@ displayHeader([
                 });
                 if (formValues) {
                     // Add Event
-                    addEvent(calendar, start, end, formValues);
+                    addEvent(start, end, formValues);
                 }
             },
             eventClick: function(info) {
@@ -64,10 +67,10 @@ displayHeader([
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // Delete event
-                        deleteEvent(calendar, info.event.id);
+                        deleteEvent(info.event.id);
                     } else if (result.isDenied) {
                         // Edit and update event
-                        editEvent(calendar, info.event);
+                        editEvent(info.event);
                     } else {
                         Swal.close();
                     }
@@ -100,7 +103,7 @@ displayHeader([
     }
 
     //------------------------------------------------------------
-    function addEvent(calendar, start, end, eventData)
+    function addEvent(start, end, eventData)
     //------------------------------------------------------------
     {
         const requestUrl = '/events/insertJson';
@@ -124,7 +127,7 @@ displayHeader([
     }
 
     //------------------------------------------------------------
-    function deleteEvent(calendar, eventId)
+    function deleteEvent(eventId)
     //------------------------------------------------------------
     {
         const requestUrl = `/events/deleteJson/${eventId}`;
@@ -146,7 +149,7 @@ displayHeader([
     }
 
     //------------------------------------------------------------
-    function editEvent(calendar, event)
+    function editEvent(event)
     //------------------------------------------------------------
     {
         Swal.fire({
