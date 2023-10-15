@@ -195,3 +195,10 @@ displayHeader([
         });
     }
 </script>
+
+<?php
+// Additional scripts to include in the footer
+$additionalScripts = [
+    APPURL . '/app/js/events.js',
+];
+?>

@@ -1,6 +1,6 @@
 <?php
 $rows = $data['rows'] ?? [];
-if (count($rows) > 0) {
+if ($rows && count($rows) > 0) {
     // Convert array keys into variables
     extract($rows);
 

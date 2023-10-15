@@ -1,6 +1,6 @@
 <?php
 $rows = $data['rows'] ?? [];
-if (count($rows) > 0) {
+if ($rows && count($rows) > 0) {
     // Convert array keys into variables
     extract($rows);
 
@@ -40,21 +40,11 @@ if (count($rows) > 0) {
         </div>
     </div>
 
-    <script>
-        'use strict';
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Attach the submit event handler to the form (ajax.js)
-            const form = document.querySelector("#formCategories");
-            if (form) {
-                form.addEventListener("submit", async (event) => {
-                    await handleFormSubmit(event);
-                });
-            }
-        });
-    </script>
-
 <?php
+    // Additional scripts to include in the footer
+    $additionalScripts = [
+        APPURL . '/app/js/categories.js',
+    ];
 } else {
     displayNoDataBox("No data found", ADMURL . "/categories");
 }

@@ -26,6 +26,14 @@ $textTheme = $footerTheme === "dark" ? "light" : "dark";
 <script src="<?php echo APPURL; ?>/app/js/main.js"></script>
 <script src="<?php echo APPURL; ?>/app/js/modal.js"></script>
 <script src="<?php echo APPURL; ?>/app/js/modal_files.js"></script>
+<!-- Additional scripts -->
+<?php
+if (isset($additionalScripts) && is_array($additionalScripts)) {
+    foreach ($additionalScripts as $script) {
+        echo '<script src="' . $script . '"></script>' . "\n";
+    }
+}
+?>
 
 </body>
 

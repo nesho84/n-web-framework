@@ -84,3 +84,101 @@ Stack trace:
   thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 172
 [19-May-2023 10:43:41 Europe/Berlin] PHP Warning:  Undefined array key "rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\index.php on line 27
 [19-May-2023 10:59:42 Europe/Berlin] PHP Warning:  Undefined array key "rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 25
+[04-Sep-2023 20:57:01 Europe/Berlin] PHP Warning:  Undefined array key "g-recaptcha-response" in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php on line 110
+[04-Sep-2023 20:57:08 Europe/Berlin] PHP Warning:  Undefined array key "g-recaptcha-response" in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php on line 110
+[04-Sep-2023 20:57:19 Europe/Berlin] PHP Warning:  Undefined array key "g-recaptcha-response" in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php on line 110
+[04-Sep-2023 21:02:46 Europe/Berlin] PHP Warning:  Undefined array key "g-recaptcha-response" in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php on line 116
+[04-Sep-2023 21:05:02 Europe/Berlin] PHP Warning:  Undefined variable $additionalScripts in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 26
+[04-Sep-2023 21:05:02 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 26
+[04-Sep-2023 21:05:04 Europe/Berlin] PHP Warning:  Undefined variable $additionalScripts in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 26
+[04-Sep-2023 21:05:04 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 26
+[04-Sep-2023 21:40:49 Europe/Berlin] PHP Warning:  Undefined array key "additionalScripts" in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 25
+[04-Sep-2023 21:40:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 25
+[04-Sep-2023 21:41:01 Europe/Berlin] PHP Warning:  Undefined array key "additionalScripts" in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 25
+[04-Sep-2023 21:41:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 25
+[04-Sep-2023 21:41:21 Europe/Berlin] PHP Warning:  Undefined array key "additionalScripts" in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 25
+[04-Sep-2023 21:41:21 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 25
+[04-Sep-2023 21:41:22 Europe/Berlin] PHP Warning:  Undefined array key "additionalScripts" in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 25
+[04-Sep-2023 21:41:22 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Views\public\includes\footer.php on line 25
+[04-Sep-2023 22:05:00 Europe/Berlin] PHP Warning:  Undefined variable $additionalScripts in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31
+[04-Sep-2023 22:05:02 Europe/Berlin] PHP Warning:  Undefined variable $additionalScripts in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31
+[04-Sep-2023 22:05:14 Europe/Berlin] PHP Warning:  Undefined variable $additionalScripts in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31
+[04-Sep-2023 22:05:14 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, null given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php(31): dd(NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(72): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php(30): Controller->renderAdminView('/admin/pages/pa...', Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PagesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 8
+[04-Sep-2023 22:06:18 Europe/Berlin] PHP Warning:  Undefined variable $additionalScripts in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31
+[04-Sep-2023 22:06:18 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, null given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php(31): dd(NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(72): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php(38): Controller->renderAdminView('/admin/index', Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): AdminController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 8
+[04-Sep-2023 22:08:15 Europe/Berlin] PHP Warning:  Undefined variable $additionalScripts in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31
+[04-Sep-2023 22:08:15 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, null given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php(31): dd(NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(72): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php(30): Controller->renderAdminView('/admin/pages/pa...', Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(155): PagesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 8
+[04-Sep-2023 22:08:28 Europe/Berlin] PHP Warning:  Undefined variable $additionalScripts in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 31
+[15-Oct-2023 21:31:18 Europe/Berlin] PHP Warning:  Undefined variable $baseUrl in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 21
+[15-Oct-2023 21:46:00 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, bool given in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(93): Controller->renderAdminView('/admin/categori...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): CategoriesController->edit(65)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 3
+[15-Oct-2023 21:48:22 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, bool given in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(93): Controller->renderAdminView('/admin/categori...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): CategoriesController->edit(65)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 3
+[15-Oct-2023 21:49:07 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, bool given in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(93): Controller->renderAdminView('/admin/categori...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): CategoriesController->edit(926)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\edit.php on line 3
+[15-Oct-2023 21:50:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, bool given in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php(114): Controller->renderAdminView('/admin/pages/ed...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): PagesController->edit(222)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\edit.php on line 3
+[15-Oct-2023 21:51:24 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, bool given in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\edit.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php(167): Controller->renderAdminView('/admin/users/ed...', Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): UsersController->edit(143)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\edit.php on line 3

@@ -5,10 +5,20 @@
             <div class="col-12 col-sm-6">
                 <p class="lead">
                     <?php
-                    if (isset($data['page']['pageContent'])) {
-                        echo $data['page']['pageContent'];
-                    }
+                    // if (isset($data['page']['pageContent'])) {
+                    //     echo $data['page']['pageContent'];
+                    // }
                     ?>
+
+                    <span><i class="fas fa-map-marker-alt"></i></span><br />
+                    <span>company</span><br />
+                    <span>address,</span> <br />
+                    <span>postalcode city</span> <br />
+                    <span>Country</span> <br /><br />
+
+                    <i class="fas fa-phone-square-alt"></i><strong class="pl-1">Tel: </strong><a href="tel:+00 000 00 00 00">+00 000 00 00 00</a><br />
+                    <i class="fas fa-phone-square-alt"></i><strong class="pl-1">Tel: </strong><a href="tel:+00 000 00 00 00">+00 000 00 00 00</a><br />
+                    <i class="fas fa-envelope"></i><small class="pl-1"><strong>E-Mail:</strong> <a href="mailto:office@company.com">office@company.com</a></small>
                 </p>
             </div>
             <div class="col-12 col-sm-6">

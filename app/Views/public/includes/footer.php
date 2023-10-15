@@ -19,6 +19,14 @@
 <script src="<?php echo APPURL; ?>/public/js/libs/bootstrap.bundle.min.js"></script>
 <!-- Custom Scripts -->
 <script src="<?php echo APPURL; ?>/public/js/main.js"></script>
+<!-- Additional scripts -->
+<?php
+if (isset($additionalScripts) && is_array($additionalScripts)) {
+    foreach ($additionalScripts as $script) {
+        echo '<script src="' . $script . '"></script>' . "\n";
+    }
+}
+?>
 
 </body>
 

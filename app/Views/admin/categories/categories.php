@@ -22,7 +22,7 @@ displayHeader([
             <tbody>
                 <?php
                 $rows = $data['rows'] ?? [];
-                if (count($rows) > 0) {
+                if ($rows && count($rows) > 0) {
                     $counter = 0;
                     foreach ($rows as $d) {
                         $counter += 1;
@@ -51,15 +51,9 @@ displayHeader([
     </div>
 </div>
 
-<script src="categories.js"></script>
-
-<script>
-    'use strict';
-
-    document.addEventListener("DOMContentLoaded", function() {
-        // sweetalert2 Confirm Delete Dialog
-        document.querySelectorAll(".btn-delete").forEach((link) => {
-            link.addEventListener("click", confirmDeleteDialog);
-        });
-    });
-</script>
+<?php
+// Additional scripts to include in the footer
+$additionalScripts = [
+    APPURL . '/app/js/categories.js',
+];
+?>

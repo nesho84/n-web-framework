@@ -99,7 +99,7 @@ class EventsController extends Controller
         // Set Security Headers and Require CSRF_TOKEN
         Sessions::setHeaders()->requireCSRF();
 
-        // Retrieve JSON from POST body 
+        // Retrieve JSON from POST body
         $jsonStr = file_get_contents('php://input');
         $jsonObj = json_decode($jsonStr);
 
@@ -160,7 +160,7 @@ class EventsController extends Controller
         // Set Security Headers and Require CSRF_TOKEN
         Sessions::setHeaders()->requireCSRF();
 
-        // Retrieve JSON from POST body 
+        // Retrieve JSON from POST body
         $jsonStr = file_get_contents('php://input');
         $jsonObj = json_decode($jsonStr);
 
@@ -192,7 +192,7 @@ class EventsController extends Controller
         // Set Security Headers and Require CSRF_TOKEN
         Sessions::setHeaders()->requireCSRF();
 
-        // Retrieve JSON from POST body 
+        // Retrieve JSON from POST body
         $jsonStr = file_get_contents('php://input');
         $jsonObj = json_decode($jsonStr);
 

@@ -124,7 +124,7 @@ class PublicController extends Controller
             // if ($captcha_success->success == false) {
             //     $validated = false;
             //     $output .= "&bull; Bitte zeigen Sie, dass Sie kein Roboter sind, oder aktualisieren Sie die Seite und versuchen Sie es erneut! <br>";
-            // } 
+            // }
 
             // else if ($captcha_success->success == true) { This user is verified by recaptcha }
             //############ Google reCAPTCHA request END #####################

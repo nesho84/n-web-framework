@@ -24,7 +24,7 @@
 
     <?php
     $rows = $data['rows'] ?? [];
-    if (count($rows) > 0) {
+    if ($rows && count($rows) > 0) {
         echo '<div class="row text-center g-3">';
 
         $icon = "";

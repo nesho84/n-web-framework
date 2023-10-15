@@ -33,7 +33,7 @@ displayHeader([
             <tbody>
                 <?php
                 $rows = $data['rows'] ?? [];
-                if (count($rows) > 0) {
+                if ($rows && count($rows) > 0) {
                     $counter = 0;
                     foreach ($rows as $d) {
                         $counter += 1;

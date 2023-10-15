@@ -63,7 +63,10 @@
     </div>
 </div>
 
-<!-- Contact Form Handler -->
-<script src="<?php echo APPURL ?>/public/js/contact.js"></script>
-<!-- Google reCAPTCHA API -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<?php
+// Additional scripts to include in the footer
+$additionalScripts = [
+    APPURL . '/public/js/contact.js',
+    'https://www.google.com/recaptcha/api.js'
+]
+?>
