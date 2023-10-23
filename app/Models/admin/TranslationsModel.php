@@ -59,7 +59,6 @@ class TranslationsModel extends Model
     public function updateTranslation(array $postArray): bool
     //------------------------------------------------------------
     {
-
         try {
             // Starts a database transaction
             $this->beginTransaction();

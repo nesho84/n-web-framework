@@ -4,7 +4,7 @@ class Model extends Database
 {
     /**
      * Binds the array keys with values
-     * * Example: 
+     * * Example:
      * * $model = new Model();
      * * $params = ['id' => $id];
      * * $model->bindValues($stmt, ['id' => $id]);

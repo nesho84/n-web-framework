@@ -49,31 +49,11 @@ if ($rows && count($rows) > 0) {
         </div>
     </div>
 
-    <script>
-        'use strict';
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Attach the submit event handler to the form (ajax.js)
-            const form = document.querySelector("#formTranslations");
-            if (form) {
-                form.addEventListener("submit", async (event) => {
-                    await handleFormSubmit(event);
-                });
-            }
-
-            // Select with search option (dselect library)
-            const selectBox = document.getElementById("languageID");
-            dselect(selectBox, {
-                search: true, // Toggle search feature. Default: false
-                creatable: false, // Creatable selection. Default: false
-                clearable: false, // Clearable selection. Default: false
-                maxHeight: '360px', // Max height for showing scrollbar. Default: 360px
-                size: '', // Can be "sm" or "lg". Default ''
-            });
-        });
-    </script>
-
 <?php
+    // Additional scripts to include in the footer
+    $additionalScripts = [
+        APPURL . '/app/js/translations.js',
+    ];
 } else {
     displayNoDataBox("No data found", ADMURL . "/translations");
 }

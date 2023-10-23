@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", confirmDeleteDialog);
     });
 
+    // Preview Uploaded Images (function in main.js)
+    previewUploadedImages("fileLink", "preview_image", "mySpinner");
+
     // Attach the submit event handler to the form
     const formSearch = document.querySelector("#formSearchFiles");
     if (formSearch) {
         formSearch.addEventListener("submit", handleSearchForm);
     }
-
-    // Preview Uploaded Images (function in main.js)
-    previewUploadedImages("fileLink", "preview_image", "mySpinner");
 
     // Attach the submit event handler to the form (ajax.js)
     const formUpload = document.querySelector("#formFiles");
@@ -38,7 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-async function handleSearchForm(event) {
+//------------------------------------------------------------
+async function handleSearchForm(event)
+//------------------------------------------------------------
+{
     event.preventDefault();
 
     const form = event.target;
@@ -81,7 +84,10 @@ async function handleSearchForm(event) {
     }
 }
 
-function renderAjaxResults(data) {
+//------------------------------------------------------------
+function renderAjaxResults(data)
+//------------------------------------------------------------
+{
     const filesContainer = document.getElementById('filesContainer');
     filesContainer.innerHTML = '';
     let icon = '';

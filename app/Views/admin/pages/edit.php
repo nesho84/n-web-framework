@@ -73,46 +73,13 @@ if ($rows && count($rows) > 0) {
         </div>
     </div>
 
-    <!-- ckeditor 4 -->
-    <script src="<?php echo APPURL; ?>/app/Library/ckeditor/ckeditor.js"></script>
-    <script>
-        // Initialize CKEditor
-        CKEDITOR.replace('pageContent', {
-            height: "350px",
-            cloudServices_tokenUrl: '<?php echo APPURL; ?>',
-            exportPdf_tokenUrl: '<?php echo APPURL; ?>',
-            uploadUrl: '<?php echo APPURL; ?>/public/uploads',
-        });
-        // Update PageContent before submit (because ckEditor dosen't fire change event itself)
-        async function updateCKEDITOR() {
-            for (instance in CKEDITOR.instances) {
-                CKEDITOR.instances[instance].updateElement();
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Attach the submit event handler to the form (ajax.js)
-            const form = document.querySelector("#formPages");
-            if (form) {
-                form.addEventListener("submit", async (event) => {
-                    await updateCKEDITOR();
-                    await handleFormSubmit(event);
-                });
-            }
-
-            // Select with search option (dselect library)
-            const selectBox = document.getElementById("languageID");
-            dselect(selectBox, {
-                search: true, // Toggle search feature. Default: false
-                creatable: false, // Creatable selection. Default: false
-                clearable: false, // Clearable selection. Default: false
-                maxHeight: '360px', // Max height for showing scrollbar. Default: 360px
-                size: '', // Can be "sm" or "lg". Default ''
-            });
-        });
-    </script>
-
 <?php
+    // Additional scripts to include in the footer
+    $additionalScripts = [
+        // ckeditor 4
+        APPURL . '/app/Library/ckeditor/ckeditor.js',
+        APPURL . '/app/js/pages.js'
+    ];
 } else {
     displayNoDataBox("No data found", ADMURL . "/pages");
 }

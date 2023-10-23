@@ -54,13 +54,9 @@ displayHeader([
     </div>
 </div>
 
-<script>
-    'use strict';
-
-    document.addEventListener("DOMContentLoaded", function() {
-        // sweetalert2 Confirm Delete Dialog
-        document.querySelectorAll(".btn-delete").forEach((link) => {
-            link.addEventListener("click", confirmDeleteDialog);
-        });
-    });
-</script>
+<?php
+// Additional scripts to include in the footer
+$additionalScripts = [
+    APPURL . '/app/js/translations.js',
+];
+?>

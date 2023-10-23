@@ -44,19 +44,9 @@
     </div>
 </div>
 
-<script>
-    'use strict';
-
-    // Preview Uploaded Images (function in main.js)
-    document.addEventListener("DOMContentLoaded", () => {
-        previewUploadedImages("userPicture", "preview_image", "mySpinner");
-
-        // Attach the submit event handler to the form (ajax.js)
-        const form = document.querySelector("#formUsers");
-        if (form) {
-            form.addEventListener("submit", async (event) => {
-                await handleFormSubmit(event);
-            });
-        }
-    });
-</script>
+<?php
+// Additional scripts to include in the footer
+$additionalScripts = [
+    APPURL . '/app/js/users.js',
+];
+?>
