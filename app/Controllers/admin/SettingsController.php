@@ -38,7 +38,11 @@ class SettingsController extends Controller
         $data['languages'] = $this->languagesModel->getLanguages();
         $data['rows'] = $this->settingsModel->getSettingById($id);
 
-        $this->renderSimpleView('/admin/settings/edit_modal', $data);
+        if ($data['rows'] && count($data['rows']) > 0) {
+            $this->renderSimpleView('/admin/settings/edit_modal', $data);
+        } else {
+            http_response_code(404);
+        }
     }
 
     //------------------------------------------------------------

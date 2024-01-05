@@ -47,12 +47,7 @@ class LoginController extends Controller
     public function login_validate(): void
     //------------------------------------------------------------
     {
-        header("Content-Type: application/json");
-        header("X-Content-Type-Options: nosniff");
-        header("X-Frame-Options: DENY");
-        header("X-XSS-Protection: 1; mode=block");
-        header("Referrer-Policy: same-origin");
-        header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
+        Sessions::setHeaders();
 
         $postArray = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
@@ -69,7 +64,7 @@ class LoginController extends Controller
         }
 
         $user = $this->loginModel->findUserByEmail($postArray['email']);
-        // We check for array because: the $stmt->fetch() method is used to retrieve a single row(array assoc) from the result set, otherwise will return false, If a PDO query doesn't find any results 
+        // We check for array because: the $stmt->fetch() method is used to retrieve a single row(array assoc) from the result set, otherwise will return false, If a PDO query doesn't find any results
         if (is_array($user) && count($user) > 0) {
             // Validate Password
             if (password_verify($postArray["password"], $user["userPassword"])) {

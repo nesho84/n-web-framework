@@ -115,7 +115,12 @@ class LanguagesController extends Controller
         $data['title'] = 'Language Edit - ' . $id;
         $data['rows'] = $this->languagesModel->getLanguageById($id);
 
-        $this->renderAdminView('/admin/languages/edit', $data);
+        if ($data['rows'] && count($data['rows']) > 0) {
+            $this->renderAdminView('/admin/languages/edit', $data);
+        } else {
+            http_response_code(404);
+            $this->renderAdminView('/errors/404a.php', $data);
+        }
     }
 
     //------------------------------------------------------------

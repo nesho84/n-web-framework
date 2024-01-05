@@ -38,7 +38,11 @@ class InvoicesController extends Controller
         $data['invoice'] = $this->invoicesModel->getInvoiceById((int)$data['id']);
         $data['services'] = $this->invoicesModel->getServicesByInvoiceId((int)$data['id']);
 
-        $this->renderSimpleView('/admin/invoices/invoice_pdf', $data);
+        if ($data['invoice'] && count($data['invoice']) > 0) {
+            $this->renderSimpleView('/admin/invoices/invoice_pdf', $data);
+        } else {
+            http_response_code(404);
+        }
     }
 
     //------------------------------------------------------------

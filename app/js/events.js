@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 confirmButtonColor: '#d33',
                 denyButtonText: 'Edit',
                 denyButtonColor: '#3085d6',
-                html: `<p>${info.event.extendedProps.description}</p><a href="${info.event.url}">Visit event page</a>`,
+                html: `<p>${info.event.extendedProps.description}</p><a href="http://${info.event.url}">Visit event page</a>`,
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Delete event
@@ -72,22 +72,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //------------------------------------------------------------
-function fetchRequest(url, method, body)
+async function fetchRequest(url, method, body)
 //------------------------------------------------------------
 {
-    return fetch(eventsUrl + url, {
-        method: method,
-        headers: {
-            "Content-Type": "application/json",
-            "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-        },
-        body: JSON.stringify(body),
-    })
-        .then(response => response.json())
-        .catch(error => {
-            console.error(error);
-            throw error;
+    try {
+        const response = await fetch(eventsUrl + url, {
+            method: method,
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify(body),
         });
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
 }
 
 //------------------------------------------------------------

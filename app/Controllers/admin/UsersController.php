@@ -164,7 +164,12 @@ class UsersController extends Controller
         $data['title'] = 'User Edit - ' . $id;
         $data['rows'] = $this->usersModel->getUserById($id);
 
-        $this->renderAdminView('/admin/users/edit', $data);
+        if ($data['rows'] && count($data['rows']) > 0) {
+            $this->renderAdminView('/admin/users/edit', $data);
+        } else {
+            http_response_code(404);
+            $this->renderAdminView('/errors/404a.php', $data);
+        }
     }
 
     //------------------------------------------------------------

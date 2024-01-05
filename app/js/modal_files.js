@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Get all elements with the class 'd-modal-file' 
+    // Get all elements with the class 'd-modal-file'
     document.querySelectorAll('.d-modal-file').forEach(link => {
         // Add click event listener to each element
         link.addEventListener('click', (event) => {
@@ -18,30 +18,34 @@ function showFilesModal(element)
 //------------------------------------------------------------
 {
     const modalEl = createFileModal();
-    const pdfUrl = getPdfUrl(element);
+    const fileUrl = getFileUrl(element);
 
     // Get modalHTML elements
     const modalBody = modalEl.querySelector('.modal-body');
     const modalTitle = modalEl.querySelector('.modal-title');
-    const pdfObject = document.getElementById('file-object');
+    const fileObject = document.getElementById('file-object');
 
     // Add an event listener to the modal instance
     modalEl.addEventListener('show.bs.modal', async function (event) {
         // Show a loading spinner
         isLoading(true);
 
-        // Load the PDF content
+        // Load the FILE content
         try {
-            pdfObject.setAttribute('data', pdfUrl);
+            fileObject.setAttribute('data', fileUrl);
             // Set the modal's title
             modalTitle.textContent = element.getAttribute('data-title');
         } catch (error) {
             console.error(error);
-            modalBody.innerHTML = '<p>Failed to load content.</p>';
         }
 
-        // Remove loading spinner when PDF has finished loading
-        pdfObject.addEventListener('load', () => {
+        // if FILE does not exist or failed loading
+        fileObject.onerror = () => {
+            modalBody.innerHTML = '<p style="padding:20px;">Failed to load the FILE.</p>';
+        }
+
+        // Remove loading spinner when FILE has finished loading
+        fileObject.addEventListener('load', () => {
             isLoading(false);
         });
 
@@ -67,11 +71,11 @@ function createFileModal()
 //------------------------------------------------------------
 {
     let modalHTML = `
-    <div class="modal fade" id="pdf-modal" tabindex="-1" aria-labelledby="pdf-modal-label" aria-hidden="true">
+    <div class="modal fade" id="file-modal" tabindex="-1" aria-labelledby="file-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="pdf-modal-label"></h5>
+                    <h5 class="modal-title" id="file-modal-label"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body align-items-center justify-content-center p-0">
@@ -83,11 +87,11 @@ function createFileModal()
         </div>
     </div>`;
     document.body.insertAdjacentHTML("afterbegin", modalHTML);
-    return document.getElementById("pdf-modal");
+    return document.getElementById("file-modal");
 }
 
 //------------------------------------------------------------
-function getPdfUrl(element)
+function getFileUrl(element)
 //------------------------------------------------------------
 {
     if (element.tagName === 'A') {

@@ -59,6 +59,14 @@ class EventsController extends Controller
             $validator('start', $postArray['start'])->required();
             $validator('end', $postArray['end'])->required();
 
+            // ensure that the endDate is greater than the startDate
+            $startDateTime = new DateTime($postArray['start']);
+            $endDateTime = new DateTime($postArray['end']);
+            if ($endDateTime <= $startDateTime) {
+                $validator->addError("end", "End date must greater than start date.")
+                    ->setValidated(false);
+            }
+
             if ($validator->isValidated()) {
                 try {
                     // Insert in Database

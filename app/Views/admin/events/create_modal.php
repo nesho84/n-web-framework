@@ -10,7 +10,7 @@
                     <label for="start" class="form-label fw-bold">Start</label>
                     <input type="date" class="form-control" id="start" name="start" placeholder="Start Date" value="">
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6  mt-3 mt-sm-0">
                     <label for="end" class="form-label fw-bold">End</label>
                     <input type="date" class="form-control" id="end" name="end" placeholder="End Date" value="">
                 </div>

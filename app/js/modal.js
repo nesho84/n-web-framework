@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Get all elements with the class 'd-modal' 
+    // Get all elements with the class 'd-modal'
     document.querySelectorAll('.d-modal').forEach(element => {
         // Add click event listener to each element
         element.addEventListener('click', (event) => {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Get all elements with the attribute 'd-modal="true"' 
+    // Get all elements with the attribute 'd-modal="true"'
     document.querySelectorAll("[d-modal='true']").forEach(element => {
         // Add click event listener to each element
         element.addEventListener('click', (event) => {
@@ -43,6 +43,7 @@ function showDynamicModal(element)
 
         // Use fetch to load the content of the page
         try {
+            console.log(actionUrl);
             let response = await fetch(actionUrl);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -84,7 +85,7 @@ function showDynamicModal(element)
         } catch (error) {
             console.error(error);
             // Show an error message to the user
-            modalBody.innerHTML = '<p>Failed to load content.</p>';
+            modalBody.innerHTML = '<p style="padding:20px;">Failed to load content.</p>';
         }
     });
 
