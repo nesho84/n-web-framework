@@ -73,24 +73,27 @@ class UsersController extends Controller
         // Username exist Validation
         foreach ($users as $u) {
             if ($u['userName'] == $postArray['userName']) {
-                $validator->addError('Username', 'Username already exists!')->setValidated(false);
+                $validator->addError('Username', 'Username already exists!');
             }
         }
 
-        if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
-            $validator->addError('userEmail', 'The email you entered was not valid!')->setValidated(false);
-        } else {
+        // E-mail validation
+        $validator('Email', $postArray['userEmail'])->required();
+        if (!empty($postArray['userEmail'])) {
+            if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
+                $validator->addError('userEmail', 'The email you entered was not valid!');
+            }
             // Email exist Validation
             foreach ($users as $u) {
                 if ($u['userEmail'] == $postArray['userEmail']) {
-                    $validator->addError('userEmail', 'Email already exists!')->setValidated(false);
+                    $validator->addError('userEmail', 'Email already exists!');
                 }
             }
         }
 
         $validator('Password', $postArray['userPassword'])->required()->min(6)->max(20);
         if ($postArray['userPassword'] !== $_POST['userPassword2']) {
-            $validator->addError('userPassword', 'Passwords do not match!')->setValidated(false);
+            $validator->addError('userPassword', 'Passwords do not match!');
         } else {
             // Hash the password
             $options = ['cost' => 10];
@@ -106,13 +109,13 @@ class UsersController extends Controller
             // Get the width and height of the image
             [$width, $height] = getimagesize($file);
             if ($width > 150 || $height > 150) {
-                $validator->addError('userPicture', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
+                $validator->addError('userPicture', 'Only images with max. 150x150 pixels are allowed.');
             }
             // Make sure `file.name` matches our extensions criteria
             $allowed_extensions = array("jpg", "jpeg", "png", "gif");
             $extension = pathinfo($postArray['userPicture']['name'], PATHINFO_EXTENSION);
             if (!in_array($extension, $allowed_extensions)) {
-                $validator->addError('userPicture', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
+                $validator->addError('userPicture', 'Only jpeg, png, and gif images are allowed.');
             }
             // Set Image only if validation passed
             if ($validator->isValidated()) {
@@ -200,17 +203,17 @@ class UsersController extends Controller
         // Username exist Validation
         foreach ($users as $u) {
             if ($u['userName'] == $postArray['userName']) {
-                $validator->addError('Username', 'Username already exists!')->setValidated(false);
+                $validator->addError('Username', 'Username already exists!');
             }
         }
 
         if (filter_var($postArray['userEmail'], FILTER_VALIDATE_EMAIL) === false) {
-            $validator->addError('userEmail', 'The email you entered was not valid!')->setValidated(false);
+            $validator->addError('userEmail', 'The email you entered was not valid!');
         } else {
             // Email exist Validation
             foreach ($users as $u) {
                 if ($u['userEmail'] == $postArray['userEmail']) {
-                    $validator->addError('userEmail', 'Email already exists!')->setValidated(false);
+                    $validator->addError('userEmail', 'Email already exists!');
                 }
             }
         }
@@ -219,20 +222,20 @@ class UsersController extends Controller
         if ($user['userName'] == 'admin') {
             // 'admin' Username can not be changed Validation
             if ($postArray['userName'] != $user['userName']) {
-                $validator->addError('userName', 'Admin Username can not be changed!')->setValidated(false);
+                $validator->addError('userName', 'Admin Username can not be changed!');
             }
             // 'admin' Role can not be changed Validation
             if ($postArray['userRole'] == 'default' && isset($_POST['userRoleHidden'])) {
                 $postArray['userRole'] = htmlspecialchars($_POST['userRoleHidden']);
                 if ($postArray['userRole'] != $user['userRole']) {
-                    $validator->addError('userRole', 'Admin Role can not be changed!')->setValidated(false);
+                    $validator->addError('userRole', 'Admin Role can not be changed!');
                 }
             }
             // 'admin' Status can not be changed Validation
             if ($postArray['userStatus'] == 0 && isset($_POST['userStatusHidden'])) {
                 $postArray['userStatus'] = (int) $_POST['userStatusHidden'];
                 if ($postArray['userStatus'] != $user['userStatus']) {
-                    $validator->addError('userStatus', 'Admin Status can not be changed!')->setValidated(false);
+                    $validator->addError('userStatus', 'Admin Status can not be changed!');
                 }
             }
         }
@@ -240,11 +243,11 @@ class UsersController extends Controller
         // Password change Validation - If the new password is set
         if ($_POST['userOldPassword'] !== "" || $_POST['userNewPassword'] !== "" || $_POST['userNewPassword2'] !== "") {
             if (!password_verify($_POST['userOldPassword'], $user["userPassword"])) {
-                $validator->addError('userOldPassword', 'The old Password is wrong!')->setValidated(false);
+                $validator->addError('userOldPassword', 'The old Password is wrong!');
             } else {
                 $validator('New Password', $_POST['userNewPassword'])->required()->min(6)->max(20);
                 if ($_POST['userNewPassword'] !== $_POST['userNewPassword2']) {
-                    $validator->addError('userOldPassword', 'New Passwords do not match!')->setValidated(false);
+                    $validator->addError('userOldPassword', 'New Passwords do not match!');
                 } else {
                     // Hash the password
                     $options = ['cost' => 10];
@@ -265,13 +268,13 @@ class UsersController extends Controller
             // Get the width and height of the image
             [$width, $height] = getimagesize($file);
             if ($width > 150 || $height > 150) {
-                $validator->addError('userPicture', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
+                $validator->addError('userPicture', 'Only images with max. 150x150 pixels are allowed.');
             }
             // Make sure `file.name` matches our extensions criteria
             $allowed_extensions = array("jpg", "jpeg", "png", "gif");
             $extension = pathinfo($postArray['userPicture']['name'], PATHINFO_EXTENSION);
             if (!in_array($extension, $allowed_extensions)) {
-                $validator->addError('userPicture', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
+                $validator->addError('userPicture', 'Only jpeg, png, and gif images are allowed.');
             }
             // Set Image only if validation passed
             if ($validator->isValidated()) {
@@ -293,7 +296,8 @@ class UsersController extends Controller
                 }
             }
             // remove empty keys
-            $postArray = array_filter($postArray, 'strlen');
+            // $postArray = array_filter($postArray, 'strlen'); => Deprecated
+            $postArray = array_filter($postArray ?? [], 'filterNotEmptyOrNull');
 
             if (count($postArray) > 1) {
                 try {
@@ -344,7 +348,7 @@ class UsersController extends Controller
 
         // 'admin' can not be deleted Validation
         if ($user['userName'] == 'admin') {
-            $validator->addError('userName', 'Admin can not be deleted!<br>')->setValidated(false);
+            $validator->addError('userName', 'Admin can not be deleted!<br>');
         }
 
         if ($validator->isValidated()) {

@@ -65,13 +65,13 @@ class LanguagesController extends Controller
             // Get the width and height of the image
             [$width, $height] = getimagesize($file);
             if ($width > 150 || $height > 150) {
-                $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
+                $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.');
             }
             // Make sure `file.name` matches our extensions criteria
             $allowed_extensions = array("jpg", "jpeg", "png", "gif");
             $extension = pathinfo($postArray['languageFlag']['name'], PATHINFO_EXTENSION);
             if (!in_array($extension, $allowed_extensions)) {
-                $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
+                $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.');
             }
             // Set Image only if validation passed
             if ($validator->isValidated()) {
@@ -156,13 +156,13 @@ class LanguagesController extends Controller
             // Get the width and height of the image
             [$width, $height] = getimagesize($file);
             if ($width > 150 || $height > 150) {
-                $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.')->setValidated(false);
+                $validator->addError('LanguageFlag', 'Only images with max. 150x150 pixels are allowed.');
             }
             // Make sure `file.name` matches our extensions criteria
             $allowed_extensions = array("jpg", "jpeg", "png", "gif");
             $extension = pathinfo($postArray['languageFlag']['name'], PATHINFO_EXTENSION);
             if (!in_array($extension, $allowed_extensions)) {
-                $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.')->setValidated(false);
+                $validator->addError('LanguageFlag', 'Only jpeg, png, and gif images are allowed.');
             }
             // Set Image only if validation passed
             if ($validator->isValidated()) {
@@ -180,7 +180,8 @@ class LanguagesController extends Controller
                 }
             }
             // remove empty keys
-            $postArray = array_filter($postArray, 'strlen');
+            // $postArray = array_filter($postArray, 'strlen'); => Deprecated
+            $postArray = array_filter($postArray ?? [], 'filterNotEmptyOrNull');
 
             if (count($postArray) > 1) {
                 try {

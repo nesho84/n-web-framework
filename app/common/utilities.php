@@ -64,7 +64,7 @@ function forceRedirect(string $url): void
 function activePage(array $url): void
 //------------------------------------------------------------
 {
-    // Get page url 
+    // Get page url
     $page = isset($_GET['url']) ? $_GET['url'] : '/';
     $page = filter_var($page, FILTER_SANITIZE_URL);
 
@@ -88,6 +88,19 @@ function activePage(array $url): void
             echo 'active';
         }
     }
+}
+
+/**
+ * Custom function to filter out empty and null values
+ *
+ * @param [type] $value
+ * @return void
+ */
+//------------------------------------------------------------
+function filterNotEmptyOrNull($value)
+//------------------------------------------------------------
+{
+    return $value !== null && $value !== '';
 }
 
 //------------------------------------------------------------

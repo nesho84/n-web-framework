@@ -104,7 +104,7 @@ class FilesController extends Controller
             [$uploadError, $targetPath] = FileHandler::upload($postArray['fileLink'], $folder);
             // First Check if there was an error
             if ($uploadError !== "") {
-                $validator->addError('Upload', $uploadError)->setValidated(false);
+                $validator->addError('Upload', $uploadError);
             } else {
                 $postArray['fileName'] = pathinfo($targetPath, PATHINFO_BASENAME);
                 $postArray['fileType'] = pathinfo($targetPath, PATHINFO_EXTENSION);

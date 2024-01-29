@@ -801,3 +801,28 @@ Stack trace:
 #3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
 #4 {main}
   thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php on line 47
+[29-Jan-2024 10:27:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method DataValidator::setValidated() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php:81
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(147): UsersController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 81
+[29-Jan-2024 11:58:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method DataValidator::setValidated() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php:76
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(147): InvoicesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 76
+[29-Jan-2024 11:58:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method DataValidator::setValidated() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php:107
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(147): InvoicesController->insert()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 107
+[29-Jan-2024 12:01:27 Europe/Berlin] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 183
+[29-Jan-2024 12:06:11 Europe/Berlin] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 183
+[29-Jan-2024 12:07:11 Europe/Berlin] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 183
+[29-Jan-2024 12:09:47 Europe/Berlin] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 183

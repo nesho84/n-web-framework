@@ -72,9 +72,9 @@ class SettingsController extends Controller
             $validator = new DataValidator();
             $validator('Theme', $postArray['settingTheme'])->required();
             if (empty($postArray['languageID'])) {
-                $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+                $validator->addError('languageID', 'Please choose a Language');
             } elseif (!in_array($postArray['languageID'], $valid_ids)) {
-                $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
+                $validator->addError('languageID', 'Please select a valid language');
             }
 
             if ($validator->isValidated()) {
@@ -85,7 +85,8 @@ class SettingsController extends Controller
                     }
                 }
                 // remove empty keys
-                $postArray = array_filter($postArray, 'strlen');
+                // $postArray = array_filter($postArray, 'strlen'); => Deprecated
+                $postArray = array_filter($postArray ?? [], 'filterNotEmptyOrNull');
 
                 if (count($postArray) > 1) {
                     try {

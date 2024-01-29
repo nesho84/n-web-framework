@@ -131,7 +131,8 @@ class CategoriesController extends Controller
                 }
             }
             // remove empty keys
-            $postArray = array_filter($postArray, 'strlen');
+            // $postArray = array_filter($postArray, 'strlen'); => Deprecated
+            $postArray = array_filter($postArray ?? [], 'filterNotEmptyOrNull');
 
             if (count($postArray) > 1) {
                 try {

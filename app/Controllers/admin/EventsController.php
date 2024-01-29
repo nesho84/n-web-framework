@@ -63,8 +63,7 @@ class EventsController extends Controller
             $startDateTime = new DateTime($postArray['start']);
             $endDateTime = new DateTime($postArray['end']);
             if ($endDateTime <= $startDateTime) {
-                $validator->addError("end", "End date must greater than start date.")
-                    ->setValidated(false);
+                $validator->addError("end", "End date must greater than start date.");
             }
 
             if ($validator->isValidated()) {
@@ -242,7 +241,8 @@ class EventsController extends Controller
                     }
                 }
                 // remove empty keys
-                $postArray = array_filter($postArray, 'strlen');
+                // $postArray = array_filter($postArray, 'strlen'); => Deprecated
+                $postArray = array_filter($postArray ?? [], 'filterNotEmptyOrNull');
 
                 if (count($postArray) > 1) {
                     try {

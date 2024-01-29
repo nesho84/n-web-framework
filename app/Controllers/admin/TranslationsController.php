@@ -71,9 +71,9 @@ class TranslationsController extends Controller
         $validator = new DataValidator();
         $validator('Translation Code', $postArray['translationCode'])->required()->number();
         if (empty($postArray['languageID'])) {
-            $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+            $validator->addError('languageID', 'Please choose a Language');
         } elseif (!in_array($postArray['languageID'], $valid_ids)) {
-            $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
+            $validator->addError('languageID', 'Please select a valid language');
         }
         $validator('Translation Text', $postArray['translationText'])->required()->min(3)->max(50);
 
@@ -148,9 +148,9 @@ class TranslationsController extends Controller
         $validator = new DataValidator();
         $validator('Translation Code', $postArray['translationCode'])->required()->number();
         if (empty($postArray['languageID'])) {
-            $validator->addError('languageID', 'Please choose a Language')->setValidated(false);
+            $validator->addError('languageID', 'Please choose a Language');
         } elseif (!in_array($postArray['languageID'], $valid_ids)) {
-            $validator->addError('languageID', 'Please select a valid language')->setValidated(false);
+            $validator->addError('languageID', 'Please select a valid language');
         }
         $validator('Translation Text', $postArray['translationText'])->required()->min(3)->max(50);
 
@@ -162,7 +162,8 @@ class TranslationsController extends Controller
                 }
             }
             // remove empty keys
-            $postArray = array_filter($postArray, 'strlen');
+            // $postArray = array_filter($postArray, 'strlen'); => Deprecated
+            $postArray = array_filter($postArray ?? [], 'filterNotEmptyOrNull');
 
             if (count($postArray) > 1) {
                 try {

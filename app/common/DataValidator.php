@@ -19,12 +19,19 @@ class DataValidator
   }
 
   //------------------------------------------------------------
+  public function isValidated(): bool
+  //------------------------------------------------------------
+  {
+    return $this->validated;
+  }
+
+  //------------------------------------------------------------
   public function required(): self
   //------------------------------------------------------------
   {
     if (empty($this->inputValue)) {
-      $this->setError("{$this->inputName} is required.");
-      $this->setValidated(false);
+      $this->errors[$this->inputName][] = "{$this->inputName} is required.";
+      $this->validated = false;
     }
     return $this;
   }
@@ -34,8 +41,8 @@ class DataValidator
   //------------------------------------------------------------
   {
     if (strlen($this->inputValue) < $length) {
-      $this->setError("{$this->inputName} must be at least {$length} characters long.");
-      $this->setValidated(false);
+      $this->errors[$this->inputName][] = "{$this->inputName} must be at least {$length} characters long.";
+      $this->validated = false;
     }
     return $this;
   }
@@ -45,8 +52,8 @@ class DataValidator
   //------------------------------------------------------------
   {
     if (strlen($this->inputValue) > $length) {
-      $this->setError("{$this->inputName} must be no more than {$length} characters long.");
-      $this->setValidated(false);
+      $this->errors[$this->inputName][] = "{$this->inputName} must be no more than {$length} characters long.";
+      $this->validated = false;
     }
     return $this;
   }
@@ -56,33 +63,10 @@ class DataValidator
   //------------------------------------------------------------
   {
     if (!is_numeric($this->inputValue)) {
-      $this->setError("{$this->inputName} must be a number.");
-      $this->setValidated(false);
+      $this->errors[$this->inputName][] = "{$this->inputName} must be a number.";
+      $this->validated = false;
     }
     return $this;
-  }
-
-  //------------------------------------------------------------
-  public function isValidated(): bool
-  //------------------------------------------------------------
-  {
-    return $this->validated;
-  }
-
-  //------------------------------------------------------------
-  public function setValidated(bool $v): self
-  //------------------------------------------------------------
-  {
-    $this->validated = $v;
-
-    return $this;
-  }
-
-  //------------------------------------------------------------
-  private function setError(string $error): void
-  //------------------------------------------------------------
-  {
-    $this->errors[$this->inputName][] = $error;
   }
 
   //------------------------------------------------------------
@@ -90,6 +74,7 @@ class DataValidator
   //------------------------------------------------------------
   {
     $this->errors[$field][] = $error;
+    $this->validated = false;
 
     return $this;
   }

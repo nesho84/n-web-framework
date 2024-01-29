@@ -72,8 +72,7 @@ class InvoicesController extends Controller
         if ($companyType === 'existing') {
             $companyID = isset($_POST['companyID']) ? htmlspecialchars(trim($_POST['companyID'])) : "";
             if (empty($companyID)) {
-                $validator->addError('Company', 'Please choose Company or create a new')
-                    ->setValidated(false);
+                $validator->addError('Company', 'Please choose Company or create a new');
             }
         }
         if ($companyType === 'new') {
@@ -105,7 +104,7 @@ class InvoicesController extends Controller
             }
         }
         if ($errorServices > 0) {
-            $validator->addError('Services', 'Service fields can not be empty')->setValidated(false);
+            $validator->addError('Services', 'Service fields can not be empty');
         }
 
         $postArray = [
