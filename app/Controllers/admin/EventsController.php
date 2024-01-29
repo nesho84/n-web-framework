@@ -162,7 +162,7 @@ class EventsController extends Controller
     }
 
     //------------------------------------------------------------
-    public function deleteJson(int $id): void
+    public function deleteJson(string $id): void
     //------------------------------------------------------------
     {
         // Set Security Headers and Require CSRF_TOKEN
@@ -194,7 +194,7 @@ class EventsController extends Controller
     }
 
     //------------------------------------------------------------
-    public function updateJson(int $id): void
+    public function updateJson(string $id): void
     //------------------------------------------------------------
     {
         // Set Security Headers and Require CSRF_TOKEN

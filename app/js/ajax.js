@@ -112,7 +112,7 @@ function showSwalAlert(bgClass, message)
         toast: true,
         position: 'top',
         showConfirmButton: false,
-        timer: status === 'error' ? 0 : 3000,
+        timer: status === 'error' ? 0 : 1500,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -191,12 +191,12 @@ function reloadWithTimeout(btn)
 {
     // Save the original button text
     const originalText = btn.textContent;
-    // Set the countdown to 5 seconds
-    let countdown = 3;
+    // Set the countdown to seconds
+    let countdown = 1;
 
     const x = setInterval(function () {
         // Update the button text with the remaining time
-        btn.textContent = originalText + " (" + countdown + ")";
+        // btn.textContent = originalText + " (" + countdown + ")";
 
         // Decrement the countdown
         countdown--;

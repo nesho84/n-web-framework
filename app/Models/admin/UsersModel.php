@@ -16,7 +16,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getUserById(int $id): array|bool
+    public function getUserById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -30,7 +30,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getUsersExceptThis(int $id): array
+    public function getUsersExceptThis(string $id): array
     //------------------------------------------------------------
     {
         try {
@@ -90,7 +90,7 @@ class UsersModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteUser(int $id): bool
+    public function deleteUser(string $id): bool
     //------------------------------------------------------------
     {
         try {

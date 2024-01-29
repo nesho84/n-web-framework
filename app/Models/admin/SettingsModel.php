@@ -21,7 +21,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getSettingById(int $id): array|bool
+    public function getSettingById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -35,7 +35,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getSettingsByUserId(int $id): array|bool
+    public function getSettingsByUserId(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -93,7 +93,7 @@ class SettingsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteSetting(int $id): bool
+    public function deleteSetting(string $id): bool
     //------------------------------------------------------------
     {
         try {

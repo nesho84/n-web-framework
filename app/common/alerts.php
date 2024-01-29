@@ -78,7 +78,7 @@ function showSessionAlert(): void
                     toast: true,
                     position: "top",
                     showConfirmButton: false,
-                    timer: status === "error" ? 0 : 3000,
+                    timer: status === "error" ? 0 : 2000,
                     timerProgressBar: true,
                     didOpen: (toast) => {
                         toast.addEventListener("mouseenter", Swal.stopTimer)

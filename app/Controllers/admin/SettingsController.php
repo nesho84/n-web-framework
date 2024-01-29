@@ -30,7 +30,7 @@ class SettingsController extends Controller
     }
 
     //------------------------------------------------------------
-    public function edit_modal(int $id): void
+    public function edit_modal(string $id): void
     //------------------------------------------------------------
     {
         $data['title'] = 'Settings';
@@ -46,7 +46,7 @@ class SettingsController extends Controller
     }
 
     //------------------------------------------------------------
-    public function update(int $id): void
+    public function update(string $id): void
     //------------------------------------------------------------
     {
         // Set Security Headers and Require CSRF_TOKEN

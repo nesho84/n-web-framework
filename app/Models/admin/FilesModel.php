@@ -16,7 +16,7 @@ class FilesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getFileById(int $id): array|bool
+    public function getFileById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -56,9 +56,9 @@ class FilesModel extends Model
     {
         try {
             $stmt = $this->prepare(
-                "SELECT * FROM files 
+                "SELECT * FROM files
                 WHERE `fileName` LIKE :searchFileName
-                OR fileType LIKE :searchFileType 
+                OR fileType LIKE :searchFileType
                 ORDER BY fileDateCreated DESC"
             );
 
@@ -74,7 +74,7 @@ class FilesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteFile(int $id): bool
+    public function deleteFile(string $id): bool
     //------------------------------------------------------------
     {
         try {

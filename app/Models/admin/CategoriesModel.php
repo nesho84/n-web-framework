@@ -44,7 +44,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getCategoryById(int $id): array|bool
+    public function getCategoryById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -66,12 +66,12 @@ class CategoriesModel extends Model
             $this->beginTransaction();
 
             // $stmt = $this->prepare(
-            //     "INSERT INTO categories (userID, categoryType, categoryLink, categoryName,categoryDescription) 
+            //     "INSERT INTO categories (userID, categoryType, categoryLink, categoryName,categoryDescription)
             //     VALUES (
-            //     :userID, 
-            //     :categoryType, 
-            //     :categoryLink, 
-            //     :categoryName,  
+            //     :userID,
+            //     :categoryType,
+            //     :categoryLink,
+            //     :categoryName,
             //     :categoryDescription)"
             // );
 
@@ -97,7 +97,7 @@ class CategoriesModel extends Model
             $this->beginTransaction();
 
             // $stmt = $this->prepare(
-            //     "UPDATE categories 
+            //     "UPDATE categories
             //     SET userID = :userID,
             //         categoryType = :categoryType,
             //         categoryLink = :categoryLink,
@@ -120,7 +120,7 @@ class CategoriesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteCategory(int $id): bool
+    public function deleteCategory(string $id): bool
     //------------------------------------------------------------
     {
         try {

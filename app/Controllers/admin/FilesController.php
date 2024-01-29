@@ -141,7 +141,7 @@ class FilesController extends Controller
     }
 
     //------------------------------------------------------------
-    public function delete(int $id): void
+    public function delete(string $id): void
     //------------------------------------------------------------
     {
         // Get existing file from Model

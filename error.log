@@ -275,3 +275,529 @@ Stack trace:
 #5 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
 #6 {main}
   thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoice_pdf.php on line 10
+[28-Jan-2024 11:05:25 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 119
+[28-Jan-2024 11:05:38 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 119
+[28-Jan-2024 11:05:48 Europe/Berlin] PHP Warning:  Undefined array key 1 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 119
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:08:41 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 20 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 20 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:09:51 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 20 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[28-Jan-2024 11:10:55 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "return", expecting "function" or "const" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 154
+[28-Jan-2024 11:24:55 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 168 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(168): CategoriesController->edit('xvxcv')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:51:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 18 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:26 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 18 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:30 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 18 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 18 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 18 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:53:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:55:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 08:56:15 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:01:49 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 20 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 111
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:02:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 20 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:04 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 21 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:27 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 21 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 117
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:05:37 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 21 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 120
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:06:29 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: missing closing parenthesis at offset 21 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 25 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 34 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:07:06 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 21 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 123
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:20:46 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 20 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 109
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 24 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 27 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:27:42 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 18 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:28:13 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "if" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:28:14 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "if" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:28:42 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "if" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 110
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:24 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 20 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 30 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 32 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 26 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 35 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 28 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 29 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 31 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 33 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:32:25 Europe/Berlin] PHP Warning:  preg_match(): Compilation failed: unmatched closing parenthesis at offset 20 in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 112
+[29-Jan-2024 09:38:09 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('92/2')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:38:27 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('sdfs')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:41:52 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('/admin/categori...', 'sdfs')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:41:52 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('/admin/categori...', 'sdfs')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:41:55 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('/admin/categori...', '92')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:41:56 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('/admin/categori...', '92')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:42:19 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('/admin/categori...', '92')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:42:25 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('/admin/categori...', '92')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:42:25 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 183 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(183): CategoriesController->edit('/admin/categori...', '92')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:46:08 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 187 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(187): CategoriesController->edit('68dsf')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:49:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesController::edit(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 168 and defined in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:87
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(168): CategoriesController->edit('aaaaa')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 87
+[29-Jan-2024 09:50:20 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CategoriesModel::getCategoryById(): Argument #1 ($id) must be of type int, string given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 91 and defined in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php:47
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(91): CategoriesModel->getCategoryById('aaaaa')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(168): CategoriesController->edit('aaaaa')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(87): Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php on line 47

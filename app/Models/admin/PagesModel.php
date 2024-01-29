@@ -9,7 +9,7 @@ class PagesModel extends Model
         try {
             $stmt = $this->prepare(
                 "SELECT * FROM pages AS p
-                INNER JOIN (SELECT userID, userName FROM users) as u 
+                INNER JOIN (SELECT userID, userName FROM users) as u
                 ON u.userID = p.userID
                 INNER JOIN languages as l
                 ON l.languageID = p.languageID
@@ -23,7 +23,7 @@ class PagesModel extends Model
         }
     }
     //------------------------------------------------------------
-    public function getPageById(int $id): array|bool
+    public function getPageById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -79,7 +79,7 @@ class PagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deletePage(int $id): bool
+    public function deletePage(string $id): bool
     //------------------------------------------------------------
     {
         try {

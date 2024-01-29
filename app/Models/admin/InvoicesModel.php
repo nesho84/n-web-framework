@@ -34,7 +34,7 @@ class InvoicesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getInvoiceById(int $id): array|bool
+    public function getInvoiceById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -52,7 +52,7 @@ class InvoicesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getServicesByInvoiceId(int $id): array
+    public function getServicesByInvoiceId(string $id): array
     //------------------------------------------------------------
     {
         try {
@@ -73,7 +73,7 @@ class InvoicesModel extends Model
     //------------------------------------------------------------
     {
         try {
-            // start database transaction 
+            // start database transaction
             $this->beginTransaction();
 
             // If companyArray is not empty Insert data into company table
@@ -82,7 +82,7 @@ class InvoicesModel extends Model
                 $stmt = $this->prepareInsert('companies', $postArray['company']);
                 $this->bindValues($stmt, $postArray['company']);
                 $stmt->execute();
-                // Get the last inserted ID from the invoices table                
+                // Get the last inserted ID from the invoices table
                 $companyId = $this->lastInsertId();
 
                 $postArray['invoice']['companyID'] = $companyId;
@@ -105,10 +105,10 @@ class InvoicesModel extends Model
                 $stmt->execute();
             }
 
-            // Commits the transaction and returns true to indicate success 
+            // Commits the transaction and returns true to indicate success
             return $this->commit();
         } catch (PDOException $e) {
-            // rollback database transaction 
+            // rollback database transaction
             $this->rollback();
             throw new Exception($e->getMessage());
         }
@@ -136,7 +136,7 @@ class InvoicesModel extends Model
     // }
 
     //------------------------------------------------------------
-    public function deleteInvoice(int $id): bool
+    public function deleteInvoice(string $id): bool
     //------------------------------------------------------------
     {
         try {

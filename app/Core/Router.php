@@ -101,25 +101,17 @@ class Router
     private function validate(string $uri): array|bool
     //------------------------------------------------------------
     {
-        // Advanced solution 2 (supports {id} -> number and {slug} -> ex. this-is-text)
-        foreach (self::$routes as $rt) {
-            $route_pattern = preg_quote($rt['route'], '#');
-            if (preg_match('#^' . str_replace('\{id\}', '(\d+)', $route_pattern) . '$#', $uri, $matches)) {
-                // {id} musst be a number
+        // New Aproach 2024
+        foreach (self::$routes as $route) {
+            $route_pattern = preg_quote($route['route'], '#');
+            $route_pattern = preg_replace('#\\\{(.+?)\\\}#', '(.+)', $route_pattern);
+
+            if (preg_match('#^' . $route_pattern . '$#', $uri, $matches)) {
                 if (isset($matches[1])) {
-                    // Because $matches[0] is the route and $matches[1] is the param
-                    // Example: function edit($id) or edit($id1, $id2)
+                    // $matches[0] is the route and $matches[1] is the param
                     array_push($this->params, $matches[1]);
                 }
-                return $rt;
-            } elseif (preg_match('#^' . str_replace('\{slug\}', '([\w-]+)', $route_pattern) . '$#', $uri, $matches)) {
-                // {slug} a string with '-'
-                if (isset($matches[1])) {
-                    // Because $matches[0] is the route and $matches[1] is the param
-                    // Example: function edit($slug) or edit($slug1, $slug2)
-                    array_push($this->params, $matches[1]);
-                }
-                return $rt;
+                return $route;
             }
         }
 
@@ -146,7 +138,7 @@ class Router
                 // Call controller functions with or without params
                 if ($this->params) {
                     // Example: post/1 or post/edit/2
-                    // Where 1 or 2 is the param 
+                    // Where 1 or 2 is the param
                     // Example: function edit($param1){} or edit($param1, $param2){}
                     call_user_func_array([$controller_object, $this->action], $this->params);
                 } else {

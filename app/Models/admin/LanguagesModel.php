@@ -29,7 +29,7 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getLanguageById(int $id): array|bool
+    public function getLanguageById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -85,7 +85,7 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteLanguage(int $id): bool
+    public function deleteLanguage(string $id): bool
     //------------------------------------------------------------
     {
         try {

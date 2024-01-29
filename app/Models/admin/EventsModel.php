@@ -37,7 +37,7 @@ class EventsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteEvent(int $id): bool
+    public function deleteEvent(string $id): bool
     //------------------------------------------------------------
     {
         try {
@@ -79,7 +79,7 @@ class EventsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getEventById(int $id): array|bool
+    public function getEventById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {

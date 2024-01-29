@@ -21,7 +21,7 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getTranslationById(int $id): array|bool
+    public function getTranslationById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
@@ -77,7 +77,7 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteTranslation(int $id): bool
+    public function deleteTranslation(string $id): bool
     //------------------------------------------------------------
     {
         try {

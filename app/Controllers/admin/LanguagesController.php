@@ -109,7 +109,7 @@ class LanguagesController extends Controller
     }
 
     //------------------------------------------------------------
-    public function edit(int $id): void
+    public function edit(string $id): void
     //------------------------------------------------------------
     {
         $data['title'] = 'Language Edit - ' . $id;
@@ -124,7 +124,7 @@ class LanguagesController extends Controller
     }
 
     //------------------------------------------------------------
-    public function update(int $id): void
+    public function update(string $id): void
     //------------------------------------------------------------
     {
         // Set Security Headers and Require CSRF_TOKEN
@@ -218,7 +218,7 @@ class LanguagesController extends Controller
     }
 
     //------------------------------------------------------------
-    public function delete(int $id): void
+    public function delete(string $id): void
     //------------------------------------------------------------
     {
         try {

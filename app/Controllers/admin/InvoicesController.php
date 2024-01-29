@@ -147,7 +147,7 @@ class InvoicesController extends Controller
     }
 
     // //------------------------------------------------------------
-    // public function edit(int $id): void
+    // public function edit(string $id): void
     // //------------------------------------------------------------
     // {
     //     $data['title'] = 'Category Edit - ' . $id;
@@ -157,7 +157,7 @@ class InvoicesController extends Controller
     // }
 
     // //------------------------------------------------------------
-    // public function update(int $id): void
+    // public function update(string $id): void
     // //------------------------------------------------------------
     // {
     //     if (isset($_POST['update_category'])) {
@@ -204,7 +204,7 @@ class InvoicesController extends Controller
     // }
 
     //------------------------------------------------------------
-    public function delete(int $id): void
+    public function delete(string $id): void
     //------------------------------------------------------------
     {
         try {

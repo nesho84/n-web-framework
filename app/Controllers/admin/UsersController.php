@@ -31,7 +31,7 @@ class UsersController extends Controller
     }
 
     //------------------------------------------------------------
-    public function profile(int $id): void
+    public function profile(string $id): void
     //------------------------------------------------------------
     {
         $data['title'] = 'User Profile - ' . $id;
@@ -158,7 +158,7 @@ class UsersController extends Controller
     }
 
     //------------------------------------------------------------
-    public function edit(int $id): void
+    public function edit(string $id): void
     //------------------------------------------------------------
     {
         $data['title'] = 'User Edit - ' . $id;
@@ -173,7 +173,7 @@ class UsersController extends Controller
     }
 
     //------------------------------------------------------------
-    public function update(int $id): void
+    public function update(string $id): void
     //------------------------------------------------------------
     {
         // Set Security Headers and Require CSRF_TOKEN
@@ -331,7 +331,7 @@ class UsersController extends Controller
     }
 
     //------------------------------------------------------------
-    public function delete(int $id): void
+    public function delete(string $id): void
     //------------------------------------------------------------
     {
         // Get existing user from the Model
