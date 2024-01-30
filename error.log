@@ -826,3 +826,192 @@ Stack trace:
 [29-Jan-2024 12:06:11 Europe/Berlin] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 183
 [29-Jan-2024 12:07:11 Europe/Berlin] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 183
 [29-Jan-2024 12:09:47 Europe/Berlin] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 183
+[29-Jan-2024 14:37:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::middleware() in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(64): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[29-Jan-2024 14:40:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Router::middleware() in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(64): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[29-Jan-2024 14:44:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Non-static method Router::add() cannot be called statically in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:16
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php(3): Router::get('/admin', 'admin/AdminCont...', Array)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\index.php(30): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 16
+[29-Jan-2024 15:17:15 Europe/Berlin] PHP Fatal error:  A void function must not return a value in D:\xampp\htdocs\n-web-framework\app\Middleware\Authorize.php on line 16
+[29-Jan-2024 15:17:40 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Authorize::handle(): Argument #1 ($role) must be of type string, array given, called in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72 and defined in D:\xampp\htdocs\n-web-framework\app\Middleware\Authorize.php:12
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(72): Authorize->handle(Array)
+#1 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Middleware\Authorize.php on line 12
+[29-Jan-2024 15:19:11 Europe/Berlin] PHP Warning:  Array to string conversion in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[29-Jan-2024 15:19:11 Europe/Berlin] PHP Warning:  Undefined variable $Array in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[29-Jan-2024 15:19:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[29-Jan-2024 15:19:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[29-Jan-2024 15:20:12 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Authorize::handle(): Return value must be of type mixed, none returned in D:\xampp\htdocs\n-web-framework\app\Middleware\Authorize.php:20
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(73): Authorize->handle('auth')
+#1 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Middleware\Authorize.php on line 20
+[29-Jan-2024 15:20:30 Europe/Berlin] PHP Fatal error:  A void function must not return a value in D:\xampp\htdocs\n-web-framework\app\Middleware\Authorize.php on line 16
+[29-Jan-2024 15:33:13 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Middleware/Authorize.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\index.php on line 29
+[29-Jan-2024 15:33:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Middleware/Authorize.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\index.php:29
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 29
+[29-Jan-2024 15:34:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Authorize" not found in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:73
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 73
+[29-Jan-2024 15:58:17 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 14
+[29-Jan-2024 15:58:40 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:22
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 22
+[29-Jan-2024 15:58:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:22
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(62): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 22
+[30-Jan-2024 09:13:42 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:13:42 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:17 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:17 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:17 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:17 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:28 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:28 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:28 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:28 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:43 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:43 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:44 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:48 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:14:48 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:15:09 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:15:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:15:15 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:15:15 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:15:15 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:15:15 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:15:57 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:15:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:16:37 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:16:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:16:50 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:16:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:16:55 Europe/Berlin] PHP Warning:  Undefined array key "middleware" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:16:55 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 72
+[30-Jan-2024 09:34:13 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "elseif" in D:\xampp\htdocs\n-web-framework\app\Middleware\Auth.php on line 15
+[30-Jan-2024 09:39:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): PagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 13
+[30-Jan-2024 09:42:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): PagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 13
+[30-Jan-2024 09:42:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): PagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 13
+[30-Jan-2024 09:51:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): PagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 13
+[30-Jan-2024 09:56:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): PagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 13
+[30-Jan-2024 10:02:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): PagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 13
+[30-Jan-2024 10:04:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): PagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\PagesController.php on line 13
+[30-Jan-2024 10:04:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): UsersController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\UsersController.php on line 13
+[30-Jan-2024 10:17:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php:12
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): EventsController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\EventsController.php on line 12
+[30-Jan-2024 10:18:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): FilesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\FilesController.php on line 13
+[30-Jan-2024 10:19:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php:12
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): InvoicesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\InvoicesController.php on line 12
+[30-Jan-2024 10:19:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php:12
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): LanguagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\LanguagesController.php on line 12
+[30-Jan-2024 10:20:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Sessions::requireLogin() in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php:13
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): SettingsController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 13

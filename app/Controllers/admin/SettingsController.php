@@ -9,9 +9,6 @@ class SettingsController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->settingsModel = $this->loadModel("/admin/SettingsModel");
 

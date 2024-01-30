@@ -52,7 +52,7 @@ define('A_USER_ROLE', 'admin');
 define('A_USER_PASSWORD', '010203');
 
 //------------------------------------------------------------
-// App 
+// App
 //------------------------------------------------------------
 define('SITE_NAME', 'n-web-framework');
 define('APPURL', 'http://localhost/n-web-framework');
@@ -70,6 +70,7 @@ define('VIEWS_PATH', APPROOT . '/app/Views');
 define('CONTROLLERS_PATH', APPROOT . '/app/Controllers');
 define('CORE_PATH', APPROOT . '/app/Core');
 define('COMMON_PATH', APPROOT . '/app/common');
+define('MIDDLEWARE_PATH', APPROOT . '/app/Middleware');
 define('LIBRARY_PATH', APPROOT . '/app/library');
 define('SCRIPTS_PATH', APPROOT . '/app/js');
 define('SCRIPTS_URL', APPURL . '/app/js');

@@ -18,9 +18,6 @@ class LoginController extends Controller
     public function login(): void
     //------------------------------------------------------------
     {
-        // Redirect if logged in
-        Sessions::requireLogin(true);
-
         $data = [
             'title' => 'Login',
             'email' => '',

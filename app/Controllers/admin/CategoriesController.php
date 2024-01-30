@@ -8,9 +8,6 @@ class CategoriesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->categoriesModel = $this->loadModel("/admin/CategoriesModel");
     }

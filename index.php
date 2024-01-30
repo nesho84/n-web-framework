@@ -25,6 +25,10 @@ require_once CORE_PATH . "/Controller.php";
 // Base Model
 require_once CORE_PATH . "/Model.php";
 
+// Middlewares
+require_once MIDDLEWARE_PATH . "/Auth.php";
+
 // Initialize Router
 $router = new Router;
 $router->run();
+// (new Router)->run();

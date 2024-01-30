@@ -37,6 +37,7 @@ function redirect(string $url): void
 //------------------------------------------------------------
 {
     header("Location: $url");
+    exit;
 }
 
 /**
@@ -52,6 +53,7 @@ function forceRedirect(string $url): void
         echo ("<script>location.href='$url'</script>");
     } else {
         header("Location: $url");
+        exit;
     }
 }
 

@@ -8,9 +8,6 @@ class InvoicesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->invoicesModel = $this->loadModel("/admin/InvoicesModel");
     }

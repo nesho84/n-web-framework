@@ -8,9 +8,6 @@ class EventsController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->eventsModel = $this->loadModel("/admin/EventsModel");
     }

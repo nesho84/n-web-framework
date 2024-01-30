@@ -8,9 +8,6 @@ class AdminController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->adminModel = $this->loadModel("/admin/AdminModel");
     }

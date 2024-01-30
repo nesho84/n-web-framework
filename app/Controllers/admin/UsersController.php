@@ -9,9 +9,6 @@ class UsersController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->usersModel = $this->loadModel("/admin/UsersModel");
 

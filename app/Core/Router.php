@@ -10,40 +10,39 @@ class Router
     private string $action;
 
     //------------------------------------------------------------
-    public static function get(string $route, callable|string $callback): self
+    public static function get(string $route, callable|string $callback, array $middleware = []): void
     //------------------------------------------------------------
     {
-        self::add('GET', $route, $callback);
-        return new self;
+        self::add('GET', $route, $callback, $middleware);
     }
 
     //------------------------------------------------------------
-    public static function post($route, callable|string $callback): self
+    public static function post($route, callable|string $callback, array $middleware = []): void
     //------------------------------------------------------------
     {
-        self::add('POST', $route, $callback);
-        return new self;
+        self::add('POST', $route, $callback, $middleware);
     }
 
     //------------------------------------------------------------
-    private static function add(string $method, string $route, callable|string $callback): void
+    private static function add(string $method, string $route, callable|string $callback, array $middleware = []): void
     //------------------------------------------------------------
     {
         if (is_string($callback)) {
             if (strpos($callback, '@')) {
                 $exp = explode('@', $callback);
                 self::$routes[] = [
-                    "method" => $method,
-                    "route" => $route,
-                    "controller" => $exp[0],
-                    "action" => $exp[1],
+                    'method' => $method,
+                    'route' => $route,
+                    'controller' => $exp[0],
+                    'action' => $exp[1],
+                    'middleware' => $middleware,
                 ];
             }
         } else {
             self::$routes[] = [
-                "method" => $method,
-                "route" => $route,
-                "callback" => $callback,
+                'method' => $method,
+                'route' => $route,
+                'callback' => $callback,
             ];
         }
     }
@@ -69,6 +68,13 @@ class Router
         // Validate Routes
         $validRoute = $this->validate($this->url);
         if ($validRoute) {
+            // Call any stored middlewares
+            if (isset($validRoute['middleware'])) {
+                foreach ($validRoute['middleware'] as $middleware) {
+                    (new Auth)->handle($middleware);
+                }
+            }
+
             // First check server request method
             $mt = $validRoute['method'] ?? null;
             if ($_SERVER['REQUEST_METHOD'] !== $mt) {
@@ -89,9 +95,7 @@ class Router
                 call_user_func($validRoute['callback'], $this->url, $validRoute);
             }
         } else {
-            // die("'Route' not found '" . $this->url . "'");
             header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found", true, 404);
-            //Include custom message page.
             require_once VIEWS_PATH . '/errors/404.php';
             exit;
         }

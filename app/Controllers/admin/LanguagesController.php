@@ -8,9 +8,6 @@ class LanguagesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->languagesModel = $this->loadModel("/admin/LanguagesModel");
     }

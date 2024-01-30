@@ -9,9 +9,6 @@ class PagesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->pagesModel = $this->loadModel("/admin/PagesModel");
 

@@ -9,9 +9,6 @@ class TranslationsController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->translationsModel = $this->loadModel("/admin/TranslationsModel");
 

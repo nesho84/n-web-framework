@@ -20,41 +20,22 @@ class Sessions
     }
 
     /**
-     * Redirects to Login Page, if User is not Logged In! 
-     * @param bool $isLoginPage redirect from login page if already logged in
-     * @return void
+     * Check if user is authenticated
+     * @return bool
      */
     //------------------------------------------------------------
-    public static function requireLogin(bool $isLoginPage = false): void
+    public static function isLoggedIn(): bool
     //------------------------------------------------------------
     {
-        // TODO: Check this user id session against the database to ensure that the user is still valid and exist, this will ensure a secure way of handling sessions and user validation.
-
-        if (!isset($_SESSION['user']["id"]) || empty($_SESSION['user']["id"])) {
-            if ($isLoginPage === false) {
-                // User is not logged in, redirect to login page
-                redirect(APPURL . "/login");
-                exit;
-            }
-        }
-
-        // Login Page: if User is logged in, redirect to Admin page
         if (isset($_SESSION['user']["id"]) || !empty($_SESSION['user']["id"])) {
-            if ($isLoginPage === true) {
-                redirect(APPURL . "/admin");
-                exit;
-            }
+            return true;
         }
 
-        // Session expire 
-        self::sessionExpire();
-
-        // // Set last visited page
-        // self::getLastPage();
+        return false;
     }
 
     //------------------------------------------------------------
-    private static function sessionExpire(): void
+    public static function sessionExpire(): void
     //------------------------------------------------------------
     {
         if (isset($_SESSION['user']['loggedin_time'])) {
@@ -122,7 +103,7 @@ class Sessions
     public static function getLastPage(): string|null
     //------------------------------------------------------------
     {
-        // Get page url 
+        // Get page url
         $page = self::getPage();
 
         // Check if the user is logged in
@@ -158,7 +139,7 @@ class Sessions
     public static function setLastPageCookie(): void
     //------------------------------------------------------------
     {
-        // Get page url 
+        // Get page url
         $page = self::getPage();
 
         setcookie('last_page', htmlspecialchars($page, ENT_QUOTES, 'UTF-8'), time() + COOKIE_DURATION, '/');

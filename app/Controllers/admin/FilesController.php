@@ -9,9 +9,6 @@ class FilesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Require Login
-        Sessions::requireLogin();
-
         // Load Model
         $this->filesModel = $this->loadModel("/admin/FilesModel");
 
