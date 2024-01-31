@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Sessions
 {
     // The static instance variable stores a reference to the single instance of the class.
@@ -19,10 +21,14 @@ class Sessions
         return self::$instance;
     }
 
-    /**
-     * Check if user is authenticated
-     * @return bool
-     */
+    //------------------------------------------------------------
+    public static function get(string $key): string|array
+    //------------------------------------------------------------
+    {
+        $sessionExists = isset($_SESSION[$key]) || !empty($_SESSION[$key]);
+        return $sessionExists ? $_SESSION[$key] : null;
+    }
+
     //------------------------------------------------------------
     public static function isLoggedIn(): bool
     //------------------------------------------------------------

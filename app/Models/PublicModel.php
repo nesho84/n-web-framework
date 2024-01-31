@@ -1,5 +1,11 @@
 <?php
 
+namespace App\Models;
+
+use App\Core\Model;
+use PDOException;
+use Exception;
+
 class PublicModel extends Model
 {
     //------------------------------------------------------------
@@ -13,7 +19,7 @@ class PublicModel extends Model
 
         try {
             $stmt = $this->prepare(
-                "SELECT * FROM pages 
+                "SELECT * FROM pages
                 WHERE pageName = :pageName
                 AND pageStatus = 1"
             );
@@ -59,7 +65,7 @@ class PublicModel extends Model
     {
         try {
             $stmt = $this->prepare(
-                "SELECT * FROM translations 
+                "SELECT * FROM translations
                 WHERE languageID = :languageID
                 AND translationCode = :translationCode"
             );

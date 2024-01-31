@@ -1,19 +1,26 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use App\Common\FileHandler;
+use App\Core\Controller;
+use App\Models\FilesModel;
+use App\Models\CategoriesModel;
+use App\Core\Sessions;
+use App\Common\DataValidator;
+
 class FilesController extends Controller
 {
-    private FIlesModel $filesModel;
+    private FilesModel $filesModel;
     private CategoriesModel $categoriesModel;
 
     //------------------------------------------------------------
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->filesModel = $this->loadModel("/admin/FilesModel");
-
-        // Load CategoriesModel
-        $this->categoriesModel = $this->loadModel("/admin/CategoriesModel");
+        $this->filesModel = new FilesModel();
+        $this->categoriesModel = new CategoriesModel();
     }
 
     //------------------------------------------------------------

@@ -1,5 +1,14 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use App\Core\Controller;
+use App\Models\TranslationsModel;
+use App\Models\LanguagesModel;
+use App\Core\Sessions;
+use App\Common\DataValidator;
+
 class TranslationsController extends Controller
 {
     private TranslationsModel $translationsModel;
@@ -9,11 +18,8 @@ class TranslationsController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->translationsModel = $this->loadModel("/admin/TranslationsModel");
-
-        // Load LanguagesModel
-        $this->languagesModel = $this->loadModel("/admin/LanguagesModel");
+        $this->translationsModel = new TranslationsModel();
+        $this->languagesModel = new LanguagesModel();
     }
 
     //------------------------------------------------------------

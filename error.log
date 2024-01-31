@@ -1015,3 +1015,1024 @@ Stack trace:
 #2 D:\xampp\htdocs\n-web-framework\index.php(33): Router->run()
 #3 {main}
   thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\SettingsController.php on line 13
+[30-Jan-2024 11:07:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(27): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:08:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(27): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:09:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(27): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:11:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(27): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:12:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(27): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:12:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(29): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:12:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(29): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:12:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(29): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:12:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(29): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:12:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Database" not found in D:\xampp\htdocs\n-web-framework\app\Core\Model.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(29): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Model.php on line 3
+[30-Jan-2024 11:13:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Model" not found in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(18): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php(12): Controller->loadModel('/admin/Categori...')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): CategoriesController->__construct()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(36): Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\admin\CategoriesModel.php on line 3
+[30-Jan-2024 11:19:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property CategoriesController::$categoriesModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:21
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(151): CategoriesController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(36): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 21
+[30-Jan-2024 11:20:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(130): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(36): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 3
+[30-Jan-2024 11:20:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(130): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(93): Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(36): Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 3
+[30-Jan-2024 11:22:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\index.php:35
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 35
+[30-Jan-2024 11:23:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\index.php:35
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 35
+[30-Jan-2024 11:23:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\index.php:35
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 35
+[30-Jan-2024 11:24:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\index.php:35
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 35
+[30-Jan-2024 11:24:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\index.php:35
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 35
+[30-Jan-2024 11:25:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\index.php:37
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 37
+[30-Jan-2024 11:26:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\index.php:37
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\index.php on line 37
+[30-Jan-2024 11:26:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:27:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:28:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:29:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:30:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:30:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:30:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:31:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:31:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:31:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:32:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class", expecting "{" in D:\xampp\htdocs\n-web-framework\app\common\Sessions.php on line 5
+[30-Jan-2024 11:33:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:33:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:33:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:34:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Routes\admin_routes.php on line 3
+[30-Jan-2024 11:34:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php on line 3
+[30-Jan-2024 11:34:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php on line 3
+[30-Jan-2024 11:35:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php on line 3
+[30-Jan-2024 11:35:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php on line 3
+[30-Jan-2024 11:36:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php on line 3
+[30-Jan-2024 11:36:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\admin_routes.php on line 3
+[30-Jan-2024 11:39:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\login_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\login_routes.php on line 3
+[30-Jan-2024 11:39:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\login_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\login_routes.php on line 3
+[30-Jan-2024 11:40:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\public_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\public_routes.php on line 3
+[30-Jan-2024 11:40:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Router" not found in D:\xampp\htdocs\n-web-framework\app\routes\test_routes.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(66): require_once()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\routes\test_routes.php on line 3
+[30-Jan-2024 11:57:12 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 141
+[30-Jan-2024 11:57:21 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";" in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 141
+[30-Jan-2024 11:57:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "CategoriesController" not found in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:141
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#1 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 141
+[30-Jan-2024 11:59:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\CategoriesController::$categoriesModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php:29
+Stack trace:
+#0 [internal function]: App\Controllers\CategoriesController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\CategoriesController.php on line 29
+[30-Jan-2024 11:59:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 3
+[30-Jan-2024 11:59:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 3
+[30-Jan-2024 11:59:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 3
+[30-Jan-2024 11:59:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\admin\AdminController.php on line 3
+[30-Jan-2024 11:59:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 3
+[30-Jan-2024 12:37:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 3
+[30-Jan-2024 12:39:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 3
+[30-Jan-2024 12:39:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 3
+[30-Jan-2024 12:40:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(134): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 3
+[30-Jan-2024 12:44:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:46:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:46:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:46:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:46:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:46:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:46:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:46:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:47:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:47:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:47:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:47:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:47:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:47:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:49:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:49:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:49:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:49:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:50:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:51:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:52:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:52:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:53:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:54:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 12:55:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\LoginController::$loginModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\LoginController->login_validate()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(157): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LoginController.php on line 70
+[30-Jan-2024 13:07:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php:16
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(142): App\Controllers\AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php on line 16
+[30-Jan-2024 13:09:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php:16
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(142): App\Controllers\AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php on line 16
+[30-Jan-2024 13:09:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php:16
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(142): App\Controllers\AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php on line 16
+[30-Jan-2024 13:09:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php:16
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(142): App\Controllers\AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php on line 16
+[30-Jan-2024 13:10:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php:16
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(142): App\Controllers\AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php on line 16
+[30-Jan-2024 13:10:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "AdminModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php:16
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(142): App\Controllers\AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php on line 16
+[30-Jan-2024 13:12:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(38): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php on line 3
+[30-Jan-2024 13:23:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php(58): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(57): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(30): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 14
+[30-Jan-2024 13:23:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php(58): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(57): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(30): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 14
+[30-Jan-2024 13:23:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php(58): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(57): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(30): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 14
+[30-Jan-2024 13:23:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php(58): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(57): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(30): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 14
+[30-Jan-2024 13:31:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class App\Common\Sessions could not be converted to string in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php:18
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(139): App\Controllers\AdminController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php on line 18
+[30-Jan-2024 13:40:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(137): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 3
+[30-Jan-2024 13:57:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(137): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 3
+[30-Jan-2024 14:01:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 3
+[30-Jan-2024 14:01:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 3
+[30-Jan-2024 14:01:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 3
+[30-Jan-2024 14:04:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\Common\Sessions" not found in D:\xampp\htdocs\n-web-framework\app\Middleware\Auth.php:20
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(78): App\Middleware\Auth->handle('auth')
+#1 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Middleware\Auth.php on line 20
+[30-Jan-2024 14:04:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\Common\Sessions" not found in D:\xampp\htdocs\n-web-framework\app\Middleware\Auth.php:20
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(78): App\Middleware\Auth->handle('auth')
+#1 D:\xampp\htdocs\n-web-framework\index.php(26): App\Core\Router->run()
+#2 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Middleware\Auth.php on line 20
+[30-Jan-2024 14:06:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\EventsController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(136): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(97): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(25): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\EventsController.php on line 3
+[31-Jan-2024 09:23:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php:14
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php(58): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(31): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(30): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(25): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 14
+[31-Jan-2024 09:25:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 3
+[31-Jan-2024 09:31:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 3
+[31-Jan-2024 09:31:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 3
+[31-Jan-2024 09:32:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\UsersController::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php:20
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): App\Controllers\UsersController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 20
+[31-Jan-2024 09:33:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\EventsController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\EventsController.php on line 3
+[31-Jan-2024 09:34:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\EventsController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\EventsController.php on line 3
+[31-Jan-2024 09:35:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\FilesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\FilesController.php on line 3
+[31-Jan-2024 09:36:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\FilesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\FilesController.php on line 3
+[31-Jan-2024 09:36:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\FilesController::loadModel() in D:\xampp\htdocs\n-web-framework\app\Controllers\FilesController.php:22
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): App\Controllers\FilesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\FilesController.php on line 22
+[31-Jan-2024 09:39:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\InvoicesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\InvoicesController.php on line 3
+[31-Jan-2024 09:46:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\InvoicesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\InvoicesController.php on line 3
+[31-Jan-2024 09:46:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\LanguagesController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\LanguagesController.php on line 3
+[31-Jan-2024 09:47:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\SettingsController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\SettingsController.php on line 3
+[31-Jan-2024 09:50:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\TranslationsController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\TranslationsController.php on line 3
+[31-Jan-2024 09:50:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\TranslationsController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\TranslationsController.php on line 3
+[31-Jan-2024 09:51:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php on line 3
+[31-Jan-2024 09:51:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Controller" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php:3
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(571): include()
+#1 D:\xampp\htdocs\n-web-framework\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('D:\\xampp\\htdocs...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(141): class_exists('App\\Controllers...')
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PublicController.php on line 3
+[31-Jan-2024 10:17:16 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\SettingsController.php on line 125
+[31-Jan-2024 10:19:05 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\SettingsController.php on line 125
+[31-Jan-2024 11:07:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\Middleware\Auth" not found in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:83
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 83
+[31-Jan-2024 11:08:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\Middleware\Auth" not found in D:\xampp\htdocs\n-web-framework\app\Core\Router.php:83
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#1 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Router.php on line 83
+[31-Jan-2024 11:41:44 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd_print(): Argument #1 ($var) must be of type array, int given, called in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:22
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php(15): dd_print(55)
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(100): App\Auth\UserPermissions::isOwner(55)
+#2 [internal function]: App\Controllers\CategoriesController->edit('93')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 22
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 34
+[31-Jan-2024 13:42:10 Europe/Berlin] PHP Warning:  Undefined array key "companyName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\invoices\invoices.php on line 37
+[31-Jan-2024 13:46:57 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.userID' in 'on clause' in D:\xampp\htdocs\n-web-framework\app\Models\InvoicesModel.php:26
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\InvoicesController.php(28): App\Models\InvoicesModel->getInvoices()
+#1 [internal function]: App\Controllers\InvoicesController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\InvoicesModel.php on line 26
+[31-Jan-2024 14:14:24 Europe/Berlin] PHP Warning:  Undefined array key "userID" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 31
+[31-Jan-2024 14:14:24 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::isOwner(): Argument #1 ($ownerId) must be of type int, null given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 31 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(31): App\Auth\UserPermissions::isOwner(NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(42): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(31): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 10
+[31-Jan-2024 14:14:45 Europe/Berlin] PHP Warning:  Undefined array key "rows" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 31
+[31-Jan-2024 14:14:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 31
+[31-Jan-2024 14:14:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::isOwner(): Argument #1 ($ownerId) must be of type int, null given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 31 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(31): App\Auth\UserPermissions::isOwner(NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(42): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(31): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 10
+[31-Jan-2024 14:59:32 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM pages AS p
+                INNER JOIN users AS u ON u.userID = p.userID...' at line 1 in D:\xampp\htdocs\n-web-framework\app\Models\PagesModel.php:26
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(31): App\Models\PagesModel->getPages()
+#1 [internal function]: App\Controllers\PagesController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PagesModel.php on line 26
+[31-Jan-2024 14:59:45 Europe/Berlin] PHP Warning:  Undefined array key "languageName" in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php on line 53
+[31-Jan-2024 15:02:47 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, bool given, called in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php on line 43 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php(43): dd(false)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(42): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(33): App\Core\Controller->renderAdminView('/admin/pages/pa...', Array)
+#3 [internal function]: App\Controllers\PagesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 8
+[31-Jan-2024 15:04:00 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.userID' in 'on clause' in D:\xampp\htdocs\n-web-framework\app\Models\PagesModel.php:26
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(31): App\Models\PagesModel->getPages()
+#1 [internal function]: App\Controllers\PagesController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PagesModel.php on line 26
+[31-Jan-2024 15:16:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 132
+[31-Jan-2024 15:16:36 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::isOwner(): Argument #1 ($ownerId) must be of type int, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 132 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(132): App\Auth\UserPermissions::isOwner(NULL)
+#1 [internal function]: App\Controllers\CategoriesController->update('76')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 10
+[31-Jan-2024 15:17:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 132
+[31-Jan-2024 15:17:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::isOwner(): Argument #1 ($ownerId) must be of type int, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 132 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(132): App\Auth\UserPermissions::isOwner(NULL)
+#1 [internal function]: App\Controllers\CategoriesController->update('76')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 10
+[31-Jan-2024 15:20:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 132
+[31-Jan-2024 15:20:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::isOwner(): Argument #1 ($ownerId) must be of type int, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 132 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:10
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(132): App\Auth\UserPermissions::isOwner(NULL)
+#1 [internal function]: App\Controllers\CategoriesController->update('76')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 10
+[31-Jan-2024 15:31:14 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 34

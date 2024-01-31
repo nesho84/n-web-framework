@@ -1,31 +1,44 @@
 <?php
 
-class TranslationsModel extends Model
+namespace App\Models;
+
+use App\Core\Model;
+use PDOException;
+use Exception;
+
+class PagesModel extends Model
 {
     //------------------------------------------------------------
-    public function getTranslations(): array
+    public function getPages(): array
     //------------------------------------------------------------
     {
         try {
             $stmt = $this->prepare(
-                "SELECT * FROM translations as t
-                INNER JOIN languages as l
-                ON l.languageID = t.languageID
-                ORDER BY translationCode DESC"
+                "SELECT p.*, u.userName, l.languageName FROM pages AS p
+                INNER JOIN users AS u ON u.userID = p.userID
+                INNER JOIN languages AS l ON l.languageID = p.languageID
+                WHERE p.pageID IS NOT NULL
+                ORDER BY p.pageName ASC"
             );
+            // $stmt = $this->prepare(
+            //     "SELECT * FROM pages AS p
+            //     INNER JOIN (SELECT userID, userName FROM users) AS u ON u.userID = p.userID
+            //     RIGHT JOIN (SELECT languageID, languageName FROM languages) AS l ON l.languageID = p.languageID
+            //     WHERE p.pageID IS NOT NULL
+            //     ORDER BY p.pageName ASC"
+            // );
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
             throw new Exception($e->getMessage());
         }
     }
-
     //------------------------------------------------------------
-    public function getTranslationById(string $id): array|bool
+    public function getPageById(string $id): array|bool
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM translations WHERE translationID = :id");
+            $stmt = $this->prepare("SELECT * FROM pages WHERE pageID = :id");
             $this->bindValues($stmt, ['id' => $id]);
             $stmt->execute();
             return $stmt->fetch();
@@ -35,14 +48,14 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertTranslation(array $postArray): bool
+    public function insertPage(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepareInsert('translations', $postArray);
+            $stmt = $this->prepareInsert('pages', $postArray);
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 
@@ -56,14 +69,14 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updateTranslation(array $postArray): bool
+    public function updatePage(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepareUpdate('translations', 'translationID', $postArray);
+            $stmt = $this->prepareUpdate('pages', 'pageID', $postArray);
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 
@@ -77,15 +90,15 @@ class TranslationsModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteTranslation(string $id): bool
+    public function deletePage(string $id): bool
     //------------------------------------------------------------
     {
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepare("DELETE FROM translations WHERE translationID = :id");
-            $this->bindValues($stmt, ['id' => $id]);
+            $stmt = $this->prepare("DELETE FROM pages WHERE pageID = :id");
+            $this->bindValues($stmt, [':id' => $id]);
             $stmt->execute();
 
             // Commits the transaction and returns true to indicate success

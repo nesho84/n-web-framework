@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\Controller;
+use App\Models\AdminModel;
+
 class AdminController extends Controller
 {
     private AdminModel $adminModel;
@@ -8,8 +13,7 @@ class AdminController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->adminModel = $this->loadModel("/admin/AdminModel");
+        $this->adminModel = new AdminModel();
     }
 
     //------------------------------------------------------------
@@ -29,8 +33,6 @@ class AdminController extends Controller
             "users",
             "events",
         ]);
-
-        // dd($data['rows']);
 
         $this->renderAdminView("/admin/index", $data);
     }

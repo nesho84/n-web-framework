@@ -1,5 +1,11 @@
 <?php
 
+namespace App\Models;
+
+use App\Core\Model;
+use PDOException;
+use Exception;
+
 class SettingsModel extends Model
 {
     //------------------------------------------------------------

@@ -1,5 +1,11 @@
 <?php
 
+namespace App\Common;
+
+use Exception;
+use InvalidArgumentException;
+use finfo;
+
 class FileHandler
 {
     public const ALLOWED_TYPES = [

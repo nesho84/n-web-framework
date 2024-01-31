@@ -1,4 +1,7 @@
 <?php
+
+use App\Core\Router;
+
 // --- Home --- //
 Router::get('/', 'PublicController@index');
 

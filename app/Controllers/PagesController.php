@@ -1,5 +1,15 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use App\Core\Controller;
+use App\Models\PagesModel;
+use App\Models\LanguagesModel;
+use App\Core\Sessions;
+use App\Common\DataValidator;
+use App\Auth\UserPermissions;
+
 class PagesController extends Controller
 {
     private PagesModel $pagesModel;
@@ -9,11 +19,8 @@ class PagesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->pagesModel = $this->loadModel("/admin/PagesModel");
-
-        // Load LanguagesModel
-        $this->languagesModel = $this->loadModel("/admin/LanguagesModel");
+        $this->pagesModel = new PagesModel();
+        $this->languagesModel = new LanguagesModel();
     }
 
     //------------------------------------------------------------
@@ -109,6 +116,12 @@ class PagesController extends Controller
         $data['languages'] = $this->languagesModel->getLanguages();
 
         if ($data['rows'] && count($data['rows']) > 0) {
+            // Authorization
+            if (!UserPermissions::isOwner($data['rows']['userID'])) {
+                setSessionAlert('warning', 'You are not authoirzed to edit this Page!');
+                redirect(ADMURL . '/pages');
+            }
+
             $this->renderAdminView('/admin/pages/edit', $data);
         } else {
             http_response_code(404);
@@ -138,6 +151,16 @@ class PagesController extends Controller
 
         // Get existing page from the Model
         $page = $this->pagesModel->getPageById($id);
+
+        // Authorization
+        if (!UserPermissions::isOwner($page['userID'])) {
+            echo json_encode([
+                "status" => "warning",
+                "message" => 'You are not authoirzed to update this Page!'
+            ]);
+            exit;
+        }
+
         // Get all existing language ids from the Model
         $languages = $this->languagesModel->getLanguages();
         $valid_ids = array();
@@ -206,6 +229,13 @@ class PagesController extends Controller
     public function delete(string $id): void
     //------------------------------------------------------------
     {
+        // Authorization
+        $page = $this->pagesModel->getPageById($id);
+        if (!UserPermissions::isOwner($page['userID'])) {
+            setSessionAlert('warning', 'You are not authoirzed to delete this Page!');
+            redirect(ADMURL . '/pages');
+        }
+
         try {
             // Delete in Database
             $this->pagesModel->deletePage($id);

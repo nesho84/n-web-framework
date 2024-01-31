@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Prints a page header 
- * @param array $options assotiative array with elements: 
+ * Prints a page header
+ * @param array $options assotiative array with elements:
  * $title header title,
  * $title2 (optional) header title2,
  * $btnLink (optional) header button link,

@@ -5,7 +5,7 @@ $title = $data['title'] ?? "";
 $baseTheme = $_SESSION['settings']['settingTheme'] ?? "dark";
 $navbarTheme = $baseTheme == "dark" ? "dark" : "light";
 $menuSpanTheme = $baseTheme == "dark" ? "light" : "dark";
-$bodyTheme = $baseTheme == "dark" ? "dark" : "white";
+$bodyTheme = $baseTheme === "dark" ? "dark" : "white";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,6 @@ $bodyTheme = $baseTheme == "dark" ? "dark" : "white";
 </head>
 
 <body class="bg-<?php echo $bodyTheme; ?>">
-
 
     <div class="wrapper">
 

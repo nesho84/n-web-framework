@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Common;
+
 class DataValidator
 {
   private string $inputName = "";

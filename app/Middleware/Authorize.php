@@ -1,6 +1,10 @@
 <?php
 
-class Auth
+namespace App\Middleware;
+
+use App\Core\Sessions;
+
+class Authorize
 {
     /**
      * Middleware: Handle user authentication and session checks

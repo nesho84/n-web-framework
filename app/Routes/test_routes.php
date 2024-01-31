@@ -1,4 +1,7 @@
 <?php
+
+use App\Core\Router;
+
 // --- ajax test --- //
 Router::get('/ajax_test', 'PublicController@ajax_test');
 

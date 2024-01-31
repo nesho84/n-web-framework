@@ -1,5 +1,14 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use App\Core\Controller;
+use App\Models\CategoriesModel;
+use App\Core\Sessions;
+use App\Common\DataValidator;
+use App\Auth\UserPermissions;
+
 class CategoriesController extends Controller
 {
     private CategoriesModel $categoriesModel;
@@ -8,8 +17,7 @@ class CategoriesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->categoriesModel = $this->loadModel("/admin/CategoriesModel");
+        $this->categoriesModel = new CategoriesModel();
     }
 
     //------------------------------------------------------------
@@ -88,6 +96,12 @@ class CategoriesController extends Controller
         $data['rows'] = $this->categoriesModel->getCategoryById($id);
 
         if ($data['rows'] && count($data['rows']) > 0) {
+            // Authorization
+            if (!UserPermissions::isOwner($data['rows']['userID'])) {
+                setSessionAlert('warning', 'You are not authoirzed to edit this Category!');
+                redirect(ADMURL . '/categories');
+            }
+
             $this->renderAdminView('/admin/categories/edit', $data);
         } else {
             http_response_code(404);
@@ -113,6 +127,15 @@ class CategoriesController extends Controller
 
         // Get existing category from the Model
         $category = $this->categoriesModel->getCategoryById($id);
+
+        // Authorization
+        if (!UserPermissions::isOwner($category['userID'])) {
+            echo json_encode([
+                "status" => "warning",
+                "message" => 'You are not authoirzed to update this Category!'
+            ]);
+            exit;
+        }
 
         // Validate inputs
         $validator = new DataValidator();
@@ -170,6 +193,13 @@ class CategoriesController extends Controller
     public function delete(string $id): void
     //------------------------------------------------------------
     {
+        // Authorization
+        $category = $this->categoriesModel->getCategoryById($id);
+        if (!UserPermissions::isOwner($category['userID'])) {
+            setSessionAlert('warning', 'You are not authoirzed to delete this Category!');
+            redirect(ADMURL . '/categories');
+        }
+
         try {
             // Delete in Database
             $this->categoriesModel->deleteCategory($id);

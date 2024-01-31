@@ -1,5 +1,12 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use App\Core\Controller;
+use App\Models\PublicModel;
+use App\Common\EmailService;
+
 class PublicController extends Controller
 {
     private PublicModel $publicModel;
@@ -8,8 +15,7 @@ class PublicController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->publicModel = $this->loadModel("/PublicModel");
+        $this->publicModel = new PublicModel();
     }
 
     //------------------------------------------------------------

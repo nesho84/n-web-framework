@@ -1,5 +1,12 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\Controller;
+use App\Models\LoginModel;
+use App\Models\SettingsModel;
+use App\Core\Sessions;
+
 class LoginController extends Controller
 {
     private LoginModel $loginModel;
@@ -7,11 +14,8 @@ class LoginController extends Controller
 
     public function __construct()
     {
-        // Load Model
-        $this->loginModel = $this->loadModel("/LoginModel.php");
-
-        // Load SettingsModel
-        $this->settingsModel = $this->loadModel("/admin/SettingsModel");
+        $this->loginModel = new LoginModel();
+        $this->settingsModel = new SettingsModel();
     }
 
     //------------------------------------------------------------

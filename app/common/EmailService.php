@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Common;
+
 /**
  * EmailService class - used for sending emails using PHPMailer.
  *

@@ -1,5 +1,13 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use App\Core\Controller;
+use App\Models\InvoicesModel;
+use App\Core\Sessions;
+use App\Common\DataValidator;
+
 class InvoicesController extends Controller
 {
     private InvoicesModel $invoicesModel;
@@ -8,8 +16,7 @@ class InvoicesController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->invoicesModel = $this->loadModel("/admin/InvoicesModel");
+        $this->invoicesModel = new InvoicesModel();
     }
 
     //------------------------------------------------------------

@@ -1,5 +1,15 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use App\Core\Controller;
+use App\Models\SettingsModel;
+use App\Models\LanguagesModel;
+use App\Core\Sessions;
+use App\Common\DataValidator;
+use App\Common\FileHandler;
+
 class SettingsController extends Controller
 {
     private SettingsModel $settingsModel;
@@ -9,11 +19,8 @@ class SettingsController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->settingsModel = $this->loadModel("/admin/SettingsModel");
-
-        // Load LanguagesModel
-        $this->languagesModel = $this->loadModel("/admin/LanguagesModel");
+        $this->settingsModel = new SettingsModel();
+        $this->languagesModel = new LanguagesModel();
     }
 
     //------------------------------------------------------------
@@ -90,7 +97,7 @@ class SettingsController extends Controller
                         // Update in Database
                         $this->settingsModel->updateSetting($postArray);
                         // Update Settings Session (only for logged in User)
-                        if ($postArray['settingID'] === $_SESSION['settings']['settingID']) {
+                        if ($postArray['settingID'] == $_SESSION['settings']['settingID']) {
                             $this->updateSessions($postArray);
                         }
                         setSessionAlert('success', 'Settings updated successfully');

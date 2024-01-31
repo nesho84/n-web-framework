@@ -112,7 +112,7 @@ function showSwalAlert(bgClass, message)
         toast: true,
         position: 'top',
         showConfirmButton: false,
-        timer: status === 'error' ? 0 : 1500,
+        timer: status === 'error' ? 0 : 2000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)

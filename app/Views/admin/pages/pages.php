@@ -26,6 +26,7 @@ displayHeader([
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Language</th>
+                    <th scope="col">User</th>
                     <th scope="col" class='text-center'>Status</th>
                     <th scope="col" class='text-center'>Action</th>
                 </tr>
@@ -37,20 +38,24 @@ displayHeader([
                     $counter = 0;
                     foreach ($rows as $d) {
                         $counter += 1;
+
+                        $isOwner = App\Auth\UserPermissions::isOwner($d['userID']);
+
                         $pageStatus = $d['pageStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
+
+                        $editIcon = $isOwner ? '<a class="btn btn-link" href="' . ADMURL . '/pages/edit/' . $d['pageID'] . '"><i class="far fa-edit"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></i></button>';
+
+                        $deleteIcon = $isOwner ? '<a class="btn btn-link btn-delete" href="' . ADMURL . '/pages/delete/' . $d['pageID'] . '"><i class="far fa-trash-alt"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>';
 
                         echo '<tr>
                             <th scope="row">' . $counter . '</th>
                             <td>' . $d['pageName'] . '</td>
                             <td>' . $d['languageName'] . '</td>
+                            <td>' . $d['userName'] . '</td>
                             <td class="text-center">' . $pageStatus . '</td>
                             <td class="text-center">
-                                <a class="btn btn-link" href="' . ADMURL . '/pages/edit/' . $d['pageID'] . '">
-                                    <i class="far fa-edit"></i>
-                                </a>
-                                <a class="btn btn-link btn-delete" href="' . ADMURL . '/pages/delete/' . $d['pageID'] . '">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
+                                ' . $editIcon . '
+                                ' . $deleteIcon . '
                             </td>
                         </tr>';
                     }

@@ -1,5 +1,14 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use DateTime;
+use App\Core\Controller;
+use App\Models\EventsModel;
+use App\Core\Sessions;
+use App\Common\DataValidator;
+
 class EventsController extends Controller
 {
     private EventsModel $eventsModel;
@@ -8,8 +17,7 @@ class EventsController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->eventsModel = $this->loadModel("/admin/EventsModel");
+        $this->eventsModel = new EventsModel();
     }
 
     //------------------------------------------------------------

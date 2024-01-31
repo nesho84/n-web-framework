@@ -1,5 +1,11 @@
 <?php
 
+namespace App\Models;
+
+use App\Core\Model;
+use PDOException;
+use Exception;
+
 class AdminModel extends Model
 {
     //------------------------------------------------------------
@@ -12,7 +18,7 @@ class AdminModel extends Model
 
         try {
             $stmt = $this->prepare(
-                "SHOW TABLE STATUS FROM $db_name 
+                "SHOW TABLE STATUS FROM $db_name
                 WHERE Name IN ($placeholders)"
             );
             $this->bindValues($stmt, $tables);

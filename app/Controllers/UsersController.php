@@ -1,5 +1,15 @@
 <?php
 
+namespace App\Controllers;
+
+use Exception;
+use App\Core\Controller;
+use App\Models\UsersModel;
+use App\Models\SettingsModel;
+use App\Core\Sessions;
+use App\Common\DataValidator;
+use App\Auth\UserPermissions;
+
 class UsersController extends Controller
 {
     private UsersModel $usersModel;
@@ -9,11 +19,8 @@ class UsersController extends Controller
     public function __construct()
     //------------------------------------------------------------
     {
-        // Load Model
-        $this->usersModel = $this->loadModel("/admin/UsersModel");
-
-        // Load SettingsModel
-        $this->settingsModel = $this->loadModel("/admin/SettingsModel");
+        $this->usersModel = new UsersModel();
+        $this->settingsModel = new SettingsModel();
     }
 
     //------------------------------------------------------------
@@ -165,6 +172,12 @@ class UsersController extends Controller
         $data['rows'] = $this->usersModel->getUserById($id);
 
         if ($data['rows'] && count($data['rows']) > 0) {
+            // Authorization
+            if (!UserPermissions::isOwner($data['rows']['userID'])) {
+                setSessionAlert('warning', 'You are not authoirzed to edit this User!');
+                redirect(ADMURL . '/users');
+            }
+
             $this->renderAdminView('/admin/users/edit', $data);
         } else {
             http_response_code(404);

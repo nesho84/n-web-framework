@@ -16,6 +16,7 @@ displayHeader([
                     <th scope="col">#</th>
                     <th scope="col">Category Name</th>
                     <th scope="col">Type</th>
+                    <th scope="col">User</th>
                     <th scope="col" class='text-center'>Action</th>
                 </tr>
             </thead>
@@ -26,17 +27,21 @@ displayHeader([
                     $counter = 0;
                     foreach ($rows as $d) {
                         $counter += 1;
+
+                        $isOwner = App\Auth\UserPermissions::isOwner($d['userID']);
+
+                        $editIcon = $isOwner ? '<a class="btn btn-link" href="' . ADMURL . '/categories/edit/' . $d['categoryID'] . '"><i class="far fa-edit"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></i></button>';
+
+                        $deleteIcon = $isOwner ? '<a class="btn btn-link btn-delete" href="' . ADMURL . '/categories/delete/' . $d['categoryID'] . '"><i class="far fa-trash-alt"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>';
+
                         echo '<tr>
                                 <th scope="row">' . $counter . '</th>
                                 <td>' . $d['categoryName'] . '</td>
                                 <td>' . $d['categoryType'] . '</td>
+                                <td>' . $d['userName'] . '</td>
                                 <td class="text-center">
-                                    <a class="btn btn-link" href="' . ADMURL . '/categories/edit/' . $d['categoryID'] . '">
-                                        <i class="far fa-edit"></i>
-                                    </a>
-                                    <a class="btn btn-link btn-delete" href="' . ADMURL . '/categories/delete/' . $d['categoryID'] . '">
-                                        <i class="far fa-trash-alt"></i>
-                                    </a>
+                                    ' . $editIcon . '
+                                    ' . $deleteIcon . '
                                 </td>
                             </tr>';
                     }

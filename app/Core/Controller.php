@@ -1,33 +1,9 @@
 <?php
 
+namespace App\Core;
+
 class Controller
 {
-    //------------------------------------------------------------
-    protected function loadModel(string $model_path): ?object
-    //------------------------------------------------------------
-    {
-        // Set full Model path
-        $model = MODELS_PATH . $model_path;
-
-        // Set .php extenstion, if is not set
-        if (pathinfo($model_path, PATHINFO_EXTENSION) === "") {
-            $model = MODELS_PATH . $model_path . ".php";
-        }
-
-        if (file_exists($model)) {
-            require_once $model;
-
-            $model_class = basename($model_path, '.php');
-            if (class_exists($model_class)) {
-                return new $model_class();
-            } else {
-                die("Model class $model_class not found");
-            }
-        } else {
-            die("'Model' file not found '" . $model . "'");
-        }
-    }
-
     //------------------------------------------------------------
     protected function renderSimpleView(string|array $view_path, array $data = []): void
     //------------------------------------------------------------

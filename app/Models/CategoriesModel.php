@@ -1,13 +1,23 @@
 <?php
 
-class LanguagesModel extends Model
+namespace App\Models;
+
+use App\Core\Model;
+use PDOException;
+use Exception;
+
+class CategoriesModel extends Model
 {
     //------------------------------------------------------------
-    public function getLanguages(): array
+    public function getCategories(): array
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM languages ORDER BY languageCode ASC");
+            $stmt = $this->prepare(
+                "SELECT c.*, u.userName FROM categories AS c
+                INNER JOIN users AS u ON u.userID = c.userID
+                ORDER BY c.categoryDateCreated DESC"
+            );
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
@@ -16,24 +26,39 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function getLanguageNames(): array
+    public function getCategoriesByType(string $ctype): array
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT languageName FROM languages");
+            $stmt = $this->prepare("SELECT * FROM categories WHERE categoryType = :ctype");
+            $this->bindValues($stmt, ['ctype' => $ctype]);
             $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_COLUMN);
+            return $stmt->fetchAll();
         } catch (PDOException $e) {
             throw new Exception($e->getMessage());
         }
     }
 
     //------------------------------------------------------------
-    public function getLanguageById(string $id): array|bool
+    public function getCategoriesByName(string $cname): array
     //------------------------------------------------------------
     {
         try {
-            $stmt = $this->prepare("SELECT * FROM languages WHERE languageID = :id");
+            $stmt = $this->prepare("SELECT * FROM categories WHERE categoryName = :cname");
+            $this->bindValues($stmt, ['cname' => $cname]);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    //------------------------------------------------------------
+    public function getCategoryById(string $id): array|bool
+    //------------------------------------------------------------
+    {
+        try {
+            $stmt = $this->prepare("SELECT * FROM categories WHERE categoryID = :id");
             $this->bindValues($stmt, ['id' => $id]);
             $stmt->execute();
             return $stmt->fetch();
@@ -43,14 +68,24 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function insertLanguage(array $postArray): bool
+    public function insertCategory(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepareInsert('languages', $postArray);
+            // $stmt = $this->prepare(
+            //     "INSERT INTO categories (userID, categoryType, categoryLink, categoryName,categoryDescription)
+            //     VALUES (
+            //     :userID,
+            //     :categoryType,
+            //     :categoryLink,
+            //     :categoryName,
+            //     :categoryDescription)"
+            // );
+
+            $stmt = $this->prepareInsert('categories', $postArray);
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 
@@ -64,14 +99,24 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function updateLanguage(array $postArray): bool
+    public function updateCategory(array $postArray): bool
     //------------------------------------------------------------
     {
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepareUpdate('languages', 'languageID', $postArray);
+            // $stmt = $this->prepare(
+            //     "UPDATE categories
+            //     SET userID = :userID,
+            //         categoryType = :categoryType,
+            //         categoryLink = :categoryLink,
+            //         categoryName = :categoryName,
+            //         categoryDescription = :categoryDescription
+            //     WHERE categoryID = :categoryID"
+            // );
+
+            $stmt = $this->prepareUpdate('categories', 'categoryID', $postArray);
             $this->bindValues($stmt, $postArray);
             $stmt->execute();
 
@@ -85,14 +130,14 @@ class LanguagesModel extends Model
     }
 
     //------------------------------------------------------------
-    public function deleteLanguage(string $id): bool
+    public function deleteCategory(string $id): bool
     //------------------------------------------------------------
     {
         try {
             // Starts a database transaction
             $this->beginTransaction();
 
-            $stmt = $this->prepare("DELETE FROM languages WHERE languageID = :id");
+            $stmt = $this->prepare("DELETE FROM categories WHERE categoryID = :id");
             $this->bindValues($stmt, ['id' => $id]);
             $stmt->execute();
 

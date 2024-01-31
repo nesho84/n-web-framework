@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Core;
+
+use App\Middleware\Authorize;
+
 class Router
 {
     private string $url;
@@ -13,7 +17,12 @@ class Router
     public static function get(string $route, callable|string $callback, array $middleware = []): void
     //------------------------------------------------------------
     {
-        self::add('GET', $route, $callback, $middleware);
+        self::add(
+            method: 'GET',
+            route: $route,
+            callback: $callback,
+            middleware: $middleware
+        );
     }
 
     //------------------------------------------------------------
@@ -71,7 +80,7 @@ class Router
             // Call any stored middlewares
             if (isset($validRoute['middleware'])) {
                 foreach ($validRoute['middleware'] as $middleware) {
-                    (new Auth)->handle($middleware);
+                    (new Authorize)->handle($middleware);
                 }
             }
 
@@ -88,7 +97,7 @@ class Router
             $ct = $validRoute['controller'] ?? null;
             if (isset($ct)) {
                 $this->controller_path = CONTROLLERS_PATH . "/" . $ct . ".php";
-                $this->controller_class = basename($this->controller_path, '.php');
+                $this->controller_class = 'App\\Controllers\\' . $ct;
                 $this->action = $validRoute['action'];
                 $this->loadController();
             } else {
@@ -127,8 +136,6 @@ class Router
     //------------------------------------------------------------
     {
         if (file_exists($this->controller_path)) {
-            require_once $this->controller_path;
-
             $controller_object = null;
 
             if (class_exists($this->controller_class)) {

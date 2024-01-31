@@ -1,5 +1,11 @@
 <?php
 
+namespace App\Models;
+
+use App\Core\Model;
+use PDOException;
+use Exception;
+
 class InvoicesModel extends Model
 {
     //------------------------------------------------------------
@@ -9,8 +15,9 @@ class InvoicesModel extends Model
         try {
             $stmt = $this->prepare(
                 "SELECT * FROM invoices AS i
-                INNER JOIN users as u ON u.userID = i.userID
-                INNER JOIN companies as co ON co.companyID = i.companyID
+                INNER JOIN (SELECT userID, userName FROM users) AS u
+                ON u.userID = i.userID
+                INNER JOIN companies AS co ON co.companyID = i.companyID
                 ORDER BY i.invoiceDateCreated DESC"
             );
             $stmt->execute();

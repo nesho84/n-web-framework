@@ -29,9 +29,13 @@ displayHeader([
                     foreach ($rows as $d) {
                         $counter += 1;
 
+                        $isOwner = App\Auth\UserPermissions::isOwner($d['userID']);
+
                         $userStatus = $d['userStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
 
-                        $deleteIcon = $d['userName'] === 'admin' ? '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>' : '<a class="btn btn-link btn-delete" href="' . ADMURL . '/users/delete/' . $d['userID'] . '"><i class="far fa-trash-alt"></i></a>';
+                        $editIcon = $isOwner ? '<a class="btn btn-link" href="' . ADMURL . '/users/edit/' . $d['userID'] . '"><i class="far fa-edit"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></i></button>';
+
+                        $deleteIcon = $isOwner && $d['userName'] !== 'admin' ? '<a class="btn btn-link btn-delete" href="' . ADMURL . '/users/delete/' . $d['userID'] . '"><i class="far fa-trash-alt"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>';
 
                         $pic = !empty($d['userPicture']) ? '<img width="60" height="60" src="' . $d['userPicture'] . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 
@@ -42,9 +46,7 @@ displayHeader([
                                 <td>' . $d['userRole'] . '</td>
                                 <td class="text-center">' . $userStatus . '</td>
                                 <td class="text-center">
-                                    <a class="btn btn-link" href="' . ADMURL . '/users/edit/' . $d['userID'] . '">
-                                        <i class="far fa-edit"></i>
-                                    </a>
+                                    ' . $editIcon . '
                                     ' . $deleteIcon . '
                                 </td>
                             </tr>';
