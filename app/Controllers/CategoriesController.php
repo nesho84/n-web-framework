@@ -27,6 +27,9 @@ class CategoriesController extends Controller
         $data['title'] = 'Categories';
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->categoriesModel->getCategories();
+        $data['isOwnerFunc'] = function ($userID) {
+            return UserPermissions::isOwner($userID);
+        };
 
         $this->renderAdminView('/admin/categories/categories', $data);
     }

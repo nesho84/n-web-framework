@@ -29,7 +29,7 @@ displayHeader([
                     foreach ($rows as $d) {
                         $counter += 1;
 
-                        $isOwner = App\Auth\UserPermissions::isOwner($d['userID']);
+                        $isOwner = $data['isOwnerFunc']($d['userID']);
 
                         $userStatus = $d['userStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
 

@@ -3,6 +3,7 @@ $userId = $_SESSION['user']['id'] ?? null;
 $userName = $_SESSION['user']['name'] ?? null;
 $settingId = $_SESSION['settings']['settingID'] ?? null;
 $userPic = $_SESSION['user']['pic'] ?? null;
+$hasViewAccess = $_SESSION['user']['role'] === 'admin';
 
 $userPicHtml = $userPic ? '<img width="25" height="25" src="' . $userPic . '" class="rounded-circle" alt="...">' : '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 ?>
@@ -20,7 +21,11 @@ $userPicHtml = $userPic ? '<img width="25" height="25" src="' . $userPic . '" cl
             <a class="nav-link <?php echo activePage(['admin/pages', 'admin/pages/create', 'admin/pages/edit/{id}']); ?>" href="<?php echo APPURL; ?>/admin/pages">PAGES</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link <?php echo activePage(['admin/users', 'admin/users/create', 'admin/users/edit/{id}', 'admin/users/profile']); ?>" href="<?php echo APPURL; ?>/admin/users">USERS</a>
+            <?php if ($hasViewAccess) : ?>
+                <a class="nav-link <?php echo activePage(['admin/users', 'admin/users/create', 'admin/users/edit/{id}', 'admin/users/profile']); ?>" href="<?php echo APPURL; ?>/admin/users">USERS</a>
+            <?php else : ?>
+                <button type="button" class="btn nav-link text-muted" disabled>USERS</button>
+            <?php endif; ?>
         </li>
         <li class="nav-item">
             <div class="dropdown mt-2 mt-lg-0">

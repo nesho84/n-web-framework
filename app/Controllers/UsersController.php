@@ -30,6 +30,14 @@ class UsersController extends Controller
         $data['title'] = 'Users';
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->usersModel->getUsers();
+        $data['isOwnerFunc'] = function ($userID) {
+            return UserPermissions::isOwner($userID);
+        };
+
+        if (!UserPermissions::hasViewAccess()) {
+            setSessionAlert('warning', 'You are not authoirzed to view this Page!');
+            redirect(ADMURL . '/');
+        }
 
         $this->renderAdminView('/admin/users/users', $data);
     }

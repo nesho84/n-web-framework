@@ -28,7 +28,7 @@ displayHeader([
                     foreach ($rows as $d) {
                         $counter += 1;
 
-                        $isOwner = App\Auth\UserPermissions::isOwner($d['userID']);
+                        $isOwner = $data['isOwnerFunc']($d['userID']);
 
                         $editIcon = $isOwner ? '<a class="btn btn-link" href="' . ADMURL . '/categories/edit/' . $d['categoryID'] . '"><i class="far fa-edit"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></i></button>';
 

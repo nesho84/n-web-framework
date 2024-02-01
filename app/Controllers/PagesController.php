@@ -30,6 +30,9 @@ class PagesController extends Controller
         $data['title'] = 'Pages';
         $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->pagesModel->getPages();
+        $data['isOwnerFunc'] = function ($userID) {
+            return UserPermissions::isOwner($userID);
+        };
 
         $this->renderAdminView('/admin/pages/pages', $data);
     }

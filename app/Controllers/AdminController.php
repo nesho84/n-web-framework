@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Models\AdminModel;
+use App\Auth\UserPermissions;
 
 class AdminController extends Controller
 {

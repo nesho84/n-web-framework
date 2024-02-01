@@ -55,7 +55,7 @@ define('A_USER_PASSWORD', '010203');
 // App
 //------------------------------------------------------------
 define('SITE_NAME', 'n-web-framework');
-define('APPURL', 'http://localhost/n-web-framework');
+define('APPURL', 'http://localhost:8080/n-web-framework');
 define('APPROOT', dirname(__DIR__));
 define('ADMURL', APPURL . '/admin');
 define('CONTACT_FORM_EMAIL', 'office@n-web-framework.com');
