@@ -6,23 +6,61 @@ use App\Core\Sessions;
 
 class UserPermissions
 {
+    private const SUPER_ADMIN = 'super_admin';
+    private const ADMIN = 'admin';
+    private const DEFAULT = 'default';
+
+    private static array $user;
+    private static string $userRole;
+
     //------------------------------------------------------------
-    public static function isOwner(int $ownerId): bool | null
+    public function __construct()
     //------------------------------------------------------------
     {
-        // @TODO: musst be also checked the user in the database
+        $this->initialize();
+    }
 
-        $sessionUser = Sessions::get('user');
-        $sessionUserRole = $sessionUser['role'];
+    //------------------------------------------------------------
+    private static function initialize(): void
+    //------------------------------------------------------------
+    {
+        if (empty(self::$user)) {
+            self::$user = Sessions::get('user') ?? [];
+            self::$userRole = self::$user['role'] ?? '';
+        }
+    }
 
-        // Role 'admin' has all permissions
-        if ($sessionUserRole === 'admin') {
+    //------------------------------------------------------------
+    public static function canView(): bool
+    //------------------------------------------------------------
+    {
+        self::initialize();
+
+        return self::$userRole === self::SUPER_ADMIN ||
+            self::$userRole === self::ADMIN;
+    }
+
+    //------------------------------------------------------------
+    public static function canEdit(int $targeId, string $targetRole = ''): bool
+    //------------------------------------------------------------
+    {
+        self::initialize();
+
+        // Super admin
+        if (self::$userRole === self::SUPER_ADMIN) {
             return true;
         }
 
-        // Other roles ('default')
-        if ($sessionUser !== null && isset($sessionUser['id'])) {
-            if ((int)$sessionUser['id'] === $ownerId) {
+        // User with 'admin' role
+        if (self::$userRole === self::ADMIN) {
+            if ((int)self::$user['id'] === $targeId || $targetRole === self::DEFAULT) {
+                return true;
+            }
+        }
+
+        // Default users
+        if (self::$userRole === self::DEFAULT) {
+            if ((int)self::$user['id'] === $targeId) {
                 return true;
             }
         }
@@ -31,13 +69,32 @@ class UserPermissions
     }
 
     //------------------------------------------------------------
-    public static function hasViewAccess(): bool
+    public static function canDelete(int $targeId, string $targetRole = ''): bool
     //------------------------------------------------------------
     {
-        $sessionUserRole = Sessions::get('user')['role'];
+        self::initialize();
 
-        if ($sessionUserRole === 'admin')
+        // Super admin
+        if (self::$userRole === self::SUPER_ADMIN) {
+            // if ($targetRole === self::SUPER_ADMIN) {
+            //     return false;
+            // }
             return true;
+        }
+
+        // User with 'admin' role
+        if (self::$userRole === self::ADMIN) {
+            if ((int)self::$user['id'] === $targeId || $targetRole === self::DEFAULT) {
+                return true;
+            }
+        }
+
+        // Default users
+        if (self::$userRole === self::DEFAULT) {
+            if ((int)self::$user['id'] === $targeId) {
+                return true;
+            }
+        }
 
         return false;
     }

@@ -28,6 +28,9 @@ class Controller
     protected function renderAdminView(string|array $view_path, array $data = []): void
     //------------------------------------------------------------
     {
+        // Global Session Data
+        $data['sessions'] = Sessions::getSessionData();
+
         require_once VIEWS_PATH . "/admin/includes/header.php";
 
         $view_paths = is_array($view_path) ? $view_path : [$view_path];

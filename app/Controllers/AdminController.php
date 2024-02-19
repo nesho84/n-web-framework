@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Models\AdminModel;
-use App\Auth\UserPermissions;
+use App\Core\Sessions;
 
 class AdminController extends Controller
 {
@@ -21,8 +21,8 @@ class AdminController extends Controller
     public function index(): void
     //------------------------------------------------------------
     {
+        // dd($_SESSION);
         $data["title"] = "Home";
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->adminModel->getTables(DB_NAME, [
             "categories",
             "files",

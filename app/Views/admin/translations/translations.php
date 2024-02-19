@@ -10,7 +10,7 @@ displayHeader([
 
 <div class="container-lg">
     <div class="table-responsive border-top mt-3">
-        <table class="table table-<?php echo $data['theme'] ?? 'light'; ?> table-hover">
+        <table class="table table-<?php echo $data['sessions']['theme'] ?? 'light'; ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>

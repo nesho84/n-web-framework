@@ -25,7 +25,6 @@ class EventsController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Events';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->eventsModel->getEvents('');
 
         $this->renderAdminView('/admin/events/events', $data);

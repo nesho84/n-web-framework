@@ -1,5 +1,5 @@
 <div class="table-responsive border-top">
-    <table class="table table-<?php echo $data['theme'] ?? 'light'; ?> table-hover">
+    <table class="table table-<?php echo $data['sessions']['theme'] ?? 'light'; ?> table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>

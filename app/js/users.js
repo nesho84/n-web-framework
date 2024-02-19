@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Checkbox userRole change
     const userRoleCheckbox = document.querySelector('input[name="userRole"]');
     const userRoleHiddenInput = document.querySelector('#userRoleHidden');
-    if (userRoleCheckbox) {
+    if (userRoleCheckbox && userRoleHiddenInput) {
         userRoleCheckbox.addEventListener('change', (event) => {
             if (event.target.checked) {
                 userRoleHiddenInput.value = 'admin';

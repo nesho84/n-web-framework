@@ -14,7 +14,7 @@ class PagesModel extends Model
     {
         try {
             $stmt = $this->prepare(
-                "SELECT p.*, u.userName, l.languageName FROM pages AS p
+                "SELECT p.*, u.userName, u.userRole, l.languageName FROM pages AS p
                 INNER JOIN users AS u ON u.userID = p.userID
                 INNER JOIN languages AS l ON l.languageID = p.languageID
                 WHERE p.pageID IS NOT NULL

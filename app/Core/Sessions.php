@@ -21,6 +21,39 @@ class Sessions
         return self::$instance;
     }
 
+    public static function getSessionData(): array
+    {
+        // Base Session
+        $user = $_SESSION['user'];
+        $settings = $_SESSION['settings'];
+        // Header Theme
+        $baseTheme = $settings['settingTheme'] ?? "dark";
+        $navbarTheme = $baseTheme == "dark" ? "dark" : "light";
+        $menuSpanTheme = $baseTheme == "dark" ? "light" : "dark";
+        $bodyTheme = $baseTheme === "dark" ? "dark" : "white";
+        // Footer Theme
+        $footerTheme = $settings['settingTheme'] ?? "dark";
+        $footerTextTheme = $footerTheme === "dark" ? "light" : "dark";
+
+        return [
+            'userId' => $user['id'] ?? null,
+            'userName' => $user['name'] ?? null,
+            'userEmail' => $user['email'],
+            'userPic' => $user['pic'] ?? null,
+            'userRole' => $user['role'],
+            'userLastLogin' => $user['last_login'],
+            'settingId' => $settings['settingID'] ?? null,
+            'theme' => $baseTheme,
+            'navbarTheme' => $navbarTheme,
+            'menuSpanTheme' => $menuSpanTheme,
+            'bodyTheme' => $bodyTheme,
+            'footerTheme' => $footerTheme,
+            'footerTextTheme' => $footerTextTheme,
+            'csrf_token' => $_SESSION['csrf_token'],
+            'canView' => $user['role'] === 'super_admin' || $user['role'] === 'admin',
+        ];
+    }
+
     //------------------------------------------------------------
     public static function get(string $key): string|array
     //------------------------------------------------------------
@@ -33,11 +66,7 @@ class Sessions
     public static function isLoggedIn(): bool
     //------------------------------------------------------------
     {
-        if (isset($_SESSION['user']["id"]) || !empty($_SESSION['user']["id"])) {
-            return true;
-        }
-
-        return false;
+        return isset($_SESSION['user']["id"]) && !empty($_SESSION['user']["id"]);
     }
 
     //------------------------------------------------------------

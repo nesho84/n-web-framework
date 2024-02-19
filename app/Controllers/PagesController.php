@@ -9,10 +9,12 @@ use App\Models\LanguagesModel;
 use App\Core\Sessions;
 use App\Common\DataValidator;
 use App\Auth\UserPermissions;
+use App\Models\UsersModel;
 
 class PagesController extends Controller
 {
     private PagesModel $pagesModel;
+    private UsersModel $usersModel;
     private LanguagesModel $languagesModel;
 
     //------------------------------------------------------------
@@ -20,6 +22,7 @@ class PagesController extends Controller
     //------------------------------------------------------------
     {
         $this->pagesModel = new PagesModel();
+        $this->usersModel = new UsersModel();
         $this->languagesModel = new LanguagesModel();
     }
 
@@ -28,11 +31,15 @@ class PagesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Pages';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->pagesModel->getPages();
-        $data['isOwnerFunc'] = function ($userID) {
-            return UserPermissions::isOwner($userID);
-        };
+        $data['permissions'] = [
+            'canEdit' => function ($userID, $userRole) {
+                return UserPermissions::canEdit($userID, $userRole);
+            },
+            'canDelete' => function ($userID, $userRole) {
+                return UserPermissions::canDelete($userID, $userRole);
+            },
+        ];
 
         $this->renderAdminView('/admin/pages/pages', $data);
     }
@@ -120,8 +127,10 @@ class PagesController extends Controller
 
         if ($data['rows'] && count($data['rows']) > 0) {
             // Authorization
-            if (!UserPermissions::isOwner($data['rows']['userID'])) {
-                setSessionAlert('warning', 'You are not authoirzed to edit this Page!');
+            $userId = $data['rows']['userID'];
+            $user = $this->usersModel->getUserById($userId);
+            if (!UserPermissions::canEdit($userId, $user['userRole'])) {
+                setSessionAlert('warning', 'You are not authorized to edit this Page!');
                 redirect(ADMURL . '/pages');
             }
 
@@ -156,10 +165,12 @@ class PagesController extends Controller
         $page = $this->pagesModel->getPageById($id);
 
         // Authorization
-        if (!UserPermissions::isOwner($page['userID'])) {
+        $userId = $page['userID'];
+        $user = $this->usersModel->getUserById($userId);
+        if (!UserPermissions::canEdit($userId, $user['userRole'])) {
             echo json_encode([
                 "status" => "warning",
-                "message" => 'You are not authoirzed to update this Page!'
+                "message" => 'You are not authorized to update this Page!'
             ]);
             exit;
         }
@@ -234,8 +245,10 @@ class PagesController extends Controller
     {
         // Authorization
         $page = $this->pagesModel->getPageById($id);
-        if (!UserPermissions::isOwner($page['userID'])) {
-            setSessionAlert('warning', 'You are not authoirzed to delete this Page!');
+        $userId = $page['userID'];
+        $user = $this->usersModel->getUserById($userId);
+        if (!UserPermissions::canDelete($userId, $user['userRole'])) {
+            setSessionAlert('warning', 'You are not authorized to delete this Page!');
             redirect(ADMURL . '/pages');
         }
 

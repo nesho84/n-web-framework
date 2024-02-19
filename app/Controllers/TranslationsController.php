@@ -27,7 +27,6 @@ class TranslationsController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Translations';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->translationsModel->getTranslations();
 
         $this->renderAdminView('/admin/translations/translations', $data);

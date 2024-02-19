@@ -28,7 +28,6 @@ class FilesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Files';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
 
         // Sanitize query
         $s = isset($_GET['s']) ? trim($_GET['s']) : '';

@@ -1,11 +1,7 @@
 <?php
-$userId = $_SESSION['user']['id'] ?? null;
-$userName = $_SESSION['user']['name'] ?? null;
-$settingId = $_SESSION['settings']['settingID'] ?? null;
-$userPic = $_SESSION['user']['pic'] ?? null;
-$hasViewAccess = $_SESSION['user']['role'] === 'admin';
-
-$userPicHtml = $userPic ? '<img width="25" height="25" src="' . $userPic . '" class="rounded-circle" alt="...">' : '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
+$userPicHtml = $data['sessions']['userPic'] ?
+    '<img width="25" height="25" src="' . $data['sessions']['userPic'] . '" class="rounded-circle" alt="...">' :
+    '<img width="25" height="25" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 ?>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -21,7 +17,7 @@ $userPicHtml = $userPic ? '<img width="25" height="25" src="' . $userPic . '" cl
             <a class="nav-link <?php echo activePage(['admin/pages', 'admin/pages/create', 'admin/pages/edit/{id}']); ?>" href="<?php echo APPURL; ?>/admin/pages">PAGES</a>
         </li>
         <li class="nav-item">
-            <?php if ($hasViewAccess) : ?>
+            <?php if ($data['sessions']['canView']) : ?>
                 <a class="nav-link <?php echo activePage(['admin/users', 'admin/users/create', 'admin/users/edit/{id}', 'admin/users/profile']); ?>" href="<?php echo APPURL; ?>/admin/users">USERS</a>
             <?php else : ?>
                 <button type="button" class="btn nav-link text-muted" disabled>USERS</button>
@@ -35,11 +31,11 @@ $userPicHtml = $userPic ? '<img width="25" height="25" src="' . $userPic . '" cl
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuLink">
                     <li>
                         <!-- Modal -->
-                        <a href="<?php echo APPURL . '/admin/users/profile/' . $userId; ?>" class="d-modal dropdown-item" data-title="User Profile">Profile</a>
+                        <a href="<?php echo APPURL . '/admin/users/profile/' . $data['sessions']['userId']; ?>" class="d-modal dropdown-item" data-title="User Profile">Profile</a>
                     </li>
                     <li>
                         <!-- Modal -->
-                        <button type="button" class="d-modal dropdown-item" data-title="Settings - <?php echo $userName; ?>" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings/edit_modal/' . $settingId); ?>" data-submit="true">
+                        <button type="button" class="d-modal dropdown-item" data-title="Settings - <?php echo $data['sessions']['userName']; ?>" data-link="<?php echo htmlspecialchars(APPURL . '/admin/settings/edit_modal/' . $data['sessions']['settingId']); ?>" data-submit="true">
                             Settings
                         </button>
                     </li>

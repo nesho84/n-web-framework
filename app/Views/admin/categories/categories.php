@@ -10,7 +10,7 @@ displayHeader([
 
 <div class="container-lg">
     <div class="table-responsive border-top mt-3">
-        <table class="table table-<?php echo $data['theme'] ?? 'light'; ?> table-hover">
+        <table class="table table-<?php echo $data['sessions']['theme'] ?? 'light'; ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -28,11 +28,13 @@ displayHeader([
                     foreach ($rows as $d) {
                         $counter += 1;
 
-                        $isOwner = $data['isOwnerFunc']($d['userID']);
+                        // User Permissions
+                        $canEdit = $data['permissions']['canEdit']($d['userID'], $d['userRole']);
+                        $canDelete = $data['permissions']['canDelete']($d['userID'], $d['userRole']);
 
-                        $editIcon = $isOwner ? '<a class="btn btn-link" href="' . ADMURL . '/categories/edit/' . $d['categoryID'] . '"><i class="far fa-edit"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></i></button>';
+                        $editIcon = $canEdit ? '<a class="btn btn-link" href="' . ADMURL . '/categories/edit/' . $d['categoryID'] . '"><i class="far fa-edit"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></i></button>';
 
-                        $deleteIcon = $isOwner ? '<a class="btn btn-link btn-delete" href="' . ADMURL . '/categories/delete/' . $d['categoryID'] . '"><i class="far fa-trash-alt"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>';
+                        $deleteIcon = $canDelete ? '<a class="btn btn-link btn-delete" href="' . ADMURL . '/categories/delete/' . $d['categoryID'] . '"><i class="far fa-trash-alt"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>';
 
                         echo '<tr>
                                 <th scope="row">' . $counter . '</th>

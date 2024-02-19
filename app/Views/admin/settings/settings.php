@@ -33,7 +33,7 @@
                 </a>
             </div>
             <div class="table-responsive border-top mt-3">
-                <table class="table table-<?php echo $data['theme'] ?? 'light'; ?> table-hover">
+                <table class="table table-light table-hover">
                     <thead>
                         <tr>
                             <th scope="col">#</th>

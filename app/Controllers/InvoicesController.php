@@ -24,7 +24,6 @@ class InvoicesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Invoices';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->invoicesModel->getInvoices();
 
         $this->renderAdminView('/admin/invoices/invoices', $data);
@@ -35,7 +34,6 @@ class InvoicesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'PDF Invoice';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
 
         // Get the customer ID from the URL query string
         $data['id'] = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);

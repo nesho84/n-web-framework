@@ -28,16 +28,15 @@ class UsersController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Users';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->usersModel->getUsers();
-        $data['isOwnerFunc'] = function ($userID) {
-            return UserPermissions::isOwner($userID);
-        };
-
-        if (!UserPermissions::hasViewAccess()) {
-            setSessionAlert('warning', 'You are not authoirzed to view this Page!');
-            redirect(ADMURL . '/');
-        }
+        $data['permissions'] = [
+            'canEdit' => function ($userID, $userRole) {
+                return UserPermissions::canEdit($userID, $userRole);
+            },
+            'canDelete' => function ($userID, $userRole) {
+                return UserPermissions::canDelete($userID, $userRole);
+            },
+        ];
 
         $this->renderAdminView('/admin/users/users', $data);
     }
@@ -49,7 +48,20 @@ class UsersController extends Controller
         $data['title'] = 'User Profile - ' . $id;
         $data['rows'] = $this->usersModel->getUserById($id);
 
-        $this->renderSimpleView('/admin/users/profile', $data);
+        if ($data['rows'] && count($data['rows']) > 0) {
+            // Authorization
+            $userId = $data['rows']['userID'];
+            $userRole = $data['rows']['userRole'];
+            if (!UserPermissions::canEdit($userId, $userRole)) {
+                echo 'You are not authorized to view this User!';
+                exit;
+            }
+
+            $this->renderSimpleView('/admin/users/profile', $data);
+        } else {
+            http_response_code(404);
+            $this->renderAdminView('/errors/404a.php', $data);
+        }
     }
 
     //------------------------------------------------------------
@@ -181,8 +193,8 @@ class UsersController extends Controller
 
         if ($data['rows'] && count($data['rows']) > 0) {
             // Authorization
-            if (!UserPermissions::isOwner($data['rows']['userID'])) {
-                setSessionAlert('warning', 'You are not authoirzed to edit this User!');
+            if (!UserPermissions::canEdit($id, $data['rows']['userRole'])) {
+                setSessionAlert('warning', 'You are not authorized to edit this User!');
                 redirect(ADMURL . '/users');
             }
 
@@ -214,6 +226,16 @@ class UsersController extends Controller
         $users = $this->usersModel->getUsersExceptThis($id);
         // Get existing user from the Model
         $user = $this->usersModel->getUserById($id);
+
+        // Authorization
+        $userId = $user['userID'];
+        if (!UserPermissions::canEdit($userId, $user['userRole'])) {
+            echo json_encode([
+                "status" => "warning",
+                "message" => 'You are not authorized to update this User!'
+            ]);
+            exit;
+        }
 
         // Validate inputs
         $validator = new DataValidator();
@@ -361,12 +383,18 @@ class UsersController extends Controller
         // Get existing setting from the SettingsModel
         $setting = $this->settingsModel->getSettingsByUserId($id);
 
+        // Authorization
+        if (!UserPermissions::canDelete($user['userID'], $user['userRole'])) {
+            setSessionAlert('warning', 'You are not authorized to delete this User!');
+            redirect(ADMURL . '/users');
+        }
+
         // Validate inputs
         $validator = new DataValidator();
 
-        // 'admin' can not be deleted Validation
+        // 'super_admin' can not be deleted Validation
         if ($user['userName'] == 'admin') {
-            $validator->addError('userName', 'Admin can not be deleted!<br>');
+            $validator->addError('userName', 'super_admin can not be deleted!<br>');
         }
 
         if ($validator->isValidated()) {

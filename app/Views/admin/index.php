@@ -3,15 +3,15 @@
     <div class="card">
         <div class="card-body">
             <h3 class="card-title mb-1">
-                Welcome back <strong><?php echo $_SESSION['user']['name'] ?? ""; ?></strong>
+                Welcome back <strong><?php echo $data['sessions']['userName'] ?? ""; ?></strong>
             </h3>
             <hr class="mb-3 mt-2">
-            <h5 class="card-text text-muted"><strong>Logged in as:</strong> <?php echo $_SESSION['user']['email'] ?? ''; ?></h5>
+            <h5 class="card-text text-muted"><strong>Logged in as:</strong> <?php echo $data['sessions']['userEmail'] ?? ''; ?></h5>
             <h6 class="card-text">
                 <!-- Show the last user visit -->
                 <?php
-                if (isset($_SESSION['user']['last_login'])) {
-                    echo '<small><strong>Last login:</strong> ' . date('d/m/Y H:i:s', $_SESSION['user']['last_login']) . '</small>';
+                if (isset($data['sessions']['userLastLogin'])) {
+                    echo '<small><strong>Last login:</strong> ' . date('d/m/Y H:i:s', $data['sessions']['userLastLogin']) . '</small>';
                 } else {
                     echo '<small>Welcome back</small>';
                 }

@@ -10,7 +10,7 @@ displayHeader([
 
 <div class="container-lg">
     <div class="table-responsive border-top mt-3">
-        <table class="table table-<?php echo $data['theme'] ?? 'light'; ?> table-hover">
+        <table class="table table-<?php echo $data['sessions']['theme'] ?? 'light'; ?> table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -27,15 +27,22 @@ displayHeader([
                 if ($rows && count($rows) > 0) {
                     $counter = 0;
                     foreach ($rows as $d) {
+                        // Ignore the super Admin
+                        if ($d['userName'] === 'admin' && $data['sessions']['userName'] !== 'admin') {
+                            continue;
+                        }
+
                         $counter += 1;
 
-                        $isOwner = $data['isOwnerFunc']($d['userID']);
+                        // User Permissions
+                        $canEdit = $data['permissions']['canEdit']($d['userID'], $d['userRole']);
+                        $canDelete = $data['permissions']['canDelete']($d['userID'], $d['userRole']);
 
                         $userStatus = $d['userStatus'] == 1 ? '<span style="color:#00E676;font-size:1.3em;"><i class="fas fa-circle"></i></span>' : '<span style="color:#dc3545;font-size:1.3em;"><i class="fas fa-circle"></i></span>';
 
-                        $editIcon = $isOwner ? '<a class="btn btn-link" href="' . ADMURL . '/users/edit/' . $d['userID'] . '"><i class="far fa-edit"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></i></button>';
+                        $editIcon = $canEdit ? '<a class="btn btn-link" href="' . ADMURL . '/users/edit/' . $d['userID'] . '"><i class="far fa-edit"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-edit"></i></i></button>';
 
-                        $deleteIcon = $isOwner && $d['userName'] !== 'admin' ? '<a class="btn btn-link btn-delete" href="' . ADMURL . '/users/delete/' . $d['userID'] . '"><i class="far fa-trash-alt"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>';
+                        $deleteIcon = $canDelete && $d['userRole'] !== 'super_admin' ? '<a class="btn btn-link btn-delete" href="' . ADMURL . '/users/delete/' . $d['userID'] . '"><i class="far fa-trash-alt"></i></a>' : '<button type="button" class="btn btn-link" disabled><i class="far fa-trash-alt btn-delete"></i></button>';
 
                         $pic = !empty($d['userPicture']) ? '<img width="60" height="60" src="' . $d['userPicture'] . '" class="rounded-circle" alt="...">' : '<img width="60" height="60" src="' . APPURL . '/public/images/no_pic.png" class="img-fluid" alt="...">';
 

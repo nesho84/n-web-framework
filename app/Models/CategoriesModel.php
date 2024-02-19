@@ -14,7 +14,7 @@ class CategoriesModel extends Model
     {
         try {
             $stmt = $this->prepare(
-                "SELECT c.*, u.userName FROM categories AS c
+                "SELECT c.*, u.userName, u.userRole FROM categories AS c
                 INNER JOIN users AS u ON u.userID = c.userID
                 ORDER BY c.categoryDateCreated DESC"
             );

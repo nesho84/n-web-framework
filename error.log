@@ -84,3 +84,1012 @@ Stack trace:
 [01-Feb-2024 09:53:19 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccessFunc in C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 24
 [01-Feb-2024 09:53:29 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccessFunc in C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 24
 [01-Feb-2024 09:55:13 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccessFunc in C:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 24
+[04-Feb-2024 00:42:29 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 00:42:29 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 00:42:29 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 00:42:29 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 00:42:29 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 00:42:32 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 00:42:32 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 00:42:32 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 00:42:32 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 00:42:32 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 00:54:42 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:38:25 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:38:33 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:38:39 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:39:37 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:41:43 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:44:07 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:44:11 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:44:21 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:44:53 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:46:14 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:46:35 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:47:57 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:48:01 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:48:21 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:51:39 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:51:49 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:51:55 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:52:50 Europe/Berlin] PHP Warning:  Undefined array key "userEmail" in D:\xampp\htdocs\n-web-framework\app\Core\Sessions.php on line 41
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $navbarTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 41
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 36
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 52
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 53
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $menuSpanTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 54
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:57:25 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:58:19 Europe/Berlin] PHP Warning:  Undefined variable $bodyTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\header.php on line 33
+[04-Feb-2024 01:58:19 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:58:19 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:58:19 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:58:19 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:58:19 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:58:19 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:58:19 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:59:19 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 01:59:19 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 01:59:19 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 01:59:19 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:59:19 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 01:59:19 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 01:59:19 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:22 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:00:22 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:00:22 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:00:22 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:22 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:22 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:22 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:23 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:00:23 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:00:23 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:00:23 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:23 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:23 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:23 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:29 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:00:29 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:00:29 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:00:29 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:29 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:29 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:29 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:48 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:00:48 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:00:48 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:00:48 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:48 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:48 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:48 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:50 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:00:50 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:00:50 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:00:50 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:50 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:00:50 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:00:50 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:01:10 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:01:10 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:01:10 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:01:10 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:01:10 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:01:10 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:01:10 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:01:12 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:01:12 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:01:12 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:01:12 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:01:12 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:01:12 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:01:12 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:01:15 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:01:15 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:01:15 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:01:15 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:01:15 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:01:15 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:01:15 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:02:08 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:02:08 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:02:08 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:02:08 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:02:08 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:02:08 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:02:08 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:02:16 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:02:16 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:02:16 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:02:16 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:02:16 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:02:16 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:02:16 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:02:31 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:02:31 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:02:31 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:02:31 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:02:31 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:02:31 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:02:31 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:02:39 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:02:39 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:02:39 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:02:39 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:02:39 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:02:39 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:02:39 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:06:57 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:06:57 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:06:57 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:06:57 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:06:57 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:06:57 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:06:57 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:07:39 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:07:39 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:07:39 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:07:39 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:07:39 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:07:39 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:07:39 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:07:55 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:07:55 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:07:55 Europe/Berlin] PHP Warning:  Undefined variable $userId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:07:55 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:07:55 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:07:55 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:07:55 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:08:28 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:08:28 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:08:28 Europe/Berlin] PHP Warning:  Undefined variable $userName in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:08:28 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:08:28 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:08:28 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:09:06 Europe/Berlin] PHP Warning:  Undefined variable $userPic in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 8
+[04-Feb-2024 02:09:06 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 26
+[04-Feb-2024 02:09:06 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 44
+[04-Feb-2024 02:09:06 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:09:06 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:09:54 Europe/Berlin] PHP Warning:  Undefined variable $hasViewAccess in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 25
+[04-Feb-2024 02:09:54 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 43
+[04-Feb-2024 02:09:54 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:09:54 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:11:16 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:11:16 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:11:16 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:11:46 Europe/Berlin] PHP Warning:  Undefined variable $settingId in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\menu.php on line 40
+[04-Feb-2024 02:11:46 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:11:46 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:12:26 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:12:26 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:12:38 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\SettingsController.php on line 125
+[04-Feb-2024 02:12:38 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:12:38 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:12:50 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\SettingsController.php on line 125
+[04-Feb-2024 02:12:50 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:12:50 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:13:07 Europe/Berlin] PHP Warning:  Undefined variable $footerTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:13:07 Europe/Berlin] PHP Warning:  Undefined variable $footerTextTheme in D:\xampp\htdocs\n-web-framework\app\Views\admin\includes\footer.php on line 9
+[04-Feb-2024 02:20:38 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, string given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 28 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(28): dd('data')
+#1 [internal function]: App\Controllers\CategoriesController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 8
+[04-Feb-2024 02:21:30 Europe/Berlin] PHP Warning:  Undefined variable $data in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 27
+[04-Feb-2024 02:21:30 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 27 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(27): dd(NULL)
+#1 [internal function]: App\Controllers\CategoriesController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 8
+[04-Feb-2024 11:36:27 Europe/Berlin] PHP Warning:  require_once(D:\xampp\htdocs\n-web-framework/app/Views/admin/includes/header.php): Failed to open stream: No such file or directory in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 34
+[04-Feb-2024 11:36:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\xampp\htdocs\n-web-framework/app/Views/admin/includes/header.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(41): App\Core\Controller->renderAdminView('/admin/users/us...', Array)
+#1 [internal function]: App\Controllers\UsersController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Core\Controller.php on line 34
+[04-Feb-2024 11:54:02 Europe/Berlin] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 26
+[04-Feb-2024 11:54:49 Europe/Berlin] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 24
+[04-Feb-2024 11:54:51 Europe/Berlin] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 24
+[10-Feb-2024 12:04:56 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 43
+[10-Feb-2024 12:15:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Sessions" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php:23
+Stack trace:
+#0 [internal function]: App\Controllers\AdminController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\AdminController.php on line 23
+[17-Feb-2024 09:58:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::isOwner() in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php:30
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(31): App\Controllers\CategoriesController->App\Controllers\{closure}(67)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(33): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 30
+[17-Feb-2024 10:00:32 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "canView", expecting "(" in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 33
+[17-Feb-2024 10:02:49 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "]" in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 37
+[17-Feb-2024 10:04:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::isOwner() in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php:30
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(31): App\Controllers\CategoriesController->App\Controllers\{closure}(67)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(44): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#3 [internal function]: App\Controllers\CategoriesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 30
+[17-Feb-2024 10:04:25 Europe/Berlin] PHP Warning:  Undefined array key "isOwnerFunc" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 31
+[17-Feb-2024 10:04:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Value of type null is not callable in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php:31
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#2 [internal function]: App\Controllers\CategoriesController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 31
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 35
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 37
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 35
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 37
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 35
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 37
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 35
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 37
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 35
+[17-Feb-2024 10:06:53 Europe/Berlin] PHP Warning:  Undefined variable $isOwner in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 37
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:07:08 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 33
+[17-Feb-2024 10:08:51 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php on line 32
+[17-Feb-2024 10:08:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::canEdit(): Argument #2 ($userRole) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 34 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:33
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, NULL)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 33
+[17-Feb-2024 10:13:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::hasViewAccess() in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php:36
+Stack trace:
+#0 [internal function]: App\Controllers\UsersController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 36
+[17-Feb-2024 10:14:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::isOwner() in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php:110
+Stack trace:
+#0 [internal function]: App\Controllers\CategoriesController->edit('96')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 110
+[17-Feb-2024 10:17:40 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 32
+[17-Feb-2024 10:20:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::hasViewAccess() in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php:36
+Stack trace:
+#0 [internal function]: App\Controllers\UsersController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 36
+[17-Feb-2024 10:25:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::hasViewAccess() in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php:36
+Stack trace:
+#0 [internal function]: App\Controllers\UsersController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 36
+[17-Feb-2024 10:27:34 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Auth\UserPermissions::canEdit(), 1 passed in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 34 and exactly 2 expected in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:36
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67)
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 36
+[17-Feb-2024 10:41:25 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ")" in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 51
+[17-Feb-2024 10:45:31 Europe/Berlin] PHP Warning:  Undefined variable $userRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 78
+[17-Feb-2024 22:43:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::isOwner() in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php:183
+Stack trace:
+#0 [internal function]: App\Controllers\UsersController->edit('1')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 183
+[17-Feb-2024 22:43:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::hasViewAccess() in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php:36
+Stack trace:
+#0 [internal function]: App\Controllers\UsersController->index()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 36
+[17-Feb-2024 23:01:13 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15
+[17-Feb-2024 23:01:23 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15
+[17-Feb-2024 23:01:39 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "function", expecting variable in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 19
+[17-Feb-2024 23:01:55 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "function", expecting variable in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 19
+[17-Feb-2024 23:02:11 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15
+[17-Feb-2024 23:04:19 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$user" in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15
+[17-Feb-2024 23:06:03 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "USERROLE", expecting variable in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 28
+[17-Feb-2024 23:08:27 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15
+[17-Feb-2024 23:08:46 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15
+[17-Feb-2024 23:09:42 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15
+[17-Feb-2024 23:09:45 Europe/Berlin] PHP Fatal error:  Constant expression contains invalid operations in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 15
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 39
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 46
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 39
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 46
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 39
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 46
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 39
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 46
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 39
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 46
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 39
+[17-Feb-2024 23:25:56 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 46
+[17-Feb-2024 23:26:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed static property App\Auth\UserPermissions::$user must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:27:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed static property App\Auth\UserPermissions::$user must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:27:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed static property App\Auth\UserPermissions::$user must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:27:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed static property App\Auth\UserPermissions::$user must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[17-Feb-2024 23:28:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed static property App\Auth\UserPermissions::$userRole must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[18-Feb-2024 00:23:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property App\Auth\UserPermissions::$userRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:38
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 38
+[18-Feb-2024 00:25:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property App\Auth\UserPermissions::$userRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:38
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 38
+[18-Feb-2024 01:02:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property App\Auth\UserPermissions::$userRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:46
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 46
+[18-Feb-2024 01:02:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property App\Auth\UserPermissions::$user in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:27
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php(47): App\Auth\UserPermissions::initialize()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#5 [internal function]: App\Controllers\CategoriesController->index()
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#7 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#8 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#9 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 27
+[18-Feb-2024 01:03:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property App\Auth\UserPermissions::$user in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php(48): App\Auth\UserPermissions::initialize()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#5 [internal function]: App\Controllers\CategoriesController->index()
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#7 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#8 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#9 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 28
+[18-Feb-2024 01:05:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Non-static method App\Auth\UserPermissions::initialize() cannot be called statically in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:48
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 48
+[18-Feb-2024 01:06:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Non-static method App\Auth\UserPermissions::initialize() cannot be called statically in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:48
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 48
+[18-Feb-2024 01:07:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Non-static method App\Auth\UserPermissions::initialize() cannot be called statically in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:48
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#4 [internal function]: App\Controllers\CategoriesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 48
+[18-Feb-2024 01:07:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property App\Auth\UserPermissions::$user in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:28
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php(48): App\Auth\UserPermissions::initialize()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(34): App\Auth\UserPermissions::canEdit(67, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Views\admin\categories\categories.php(32): App\Controllers\CategoriesController->App\Controllers\{closure}(67, 'default')
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(41): App\Core\Controller->renderAdminView('/admin/categori...', Array)
+#5 [internal function]: App\Controllers\CategoriesController->index()
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#7 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#8 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#9 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 28
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:11 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUser in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 79
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 84
+[18-Feb-2024 01:08:15 Europe/Berlin] PHP Warning:  Undefined variable $sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 91
+[18-Feb-2024 01:22:31 Europe/Berlin] PHP Warning:  Undefined array key "userId" in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 32
+[18-Feb-2024 01:22:31 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::canView(): Argument #1 ($targetUserId) must be of type int, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 32 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(32): App\Auth\UserPermissions::canView(NULL)
+#1 [internal function]: App\Controllers\UsersController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[18-Feb-2024 01:23:45 Europe/Berlin] PHP Warning:  Undefined array key "userID" in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 32
+[18-Feb-2024 01:23:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::canView(): Argument #1 ($targetUserId) must be of type int, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 32 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:34
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(32): App\Auth\UserPermissions::canView(NULL)
+#1 [internal function]: App\Controllers\UsersController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 34
+[18-Feb-2024 01:24:22 Europe/Berlin] PHP Warning:  Undefined array key "userID" in D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php on line 32
+[18-Feb-2024 01:24:22 Europe/Berlin] PHP Warning:  Undefined array key "isOwnerFunc" in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 37
+[18-Feb-2024 01:24:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Value of type null is not callable in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php:37
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(37): App\Core\Controller->renderAdminView('/admin/users/us...', Array)
+#2 [internal function]: App\Controllers\UsersController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 37
+[18-Feb-2024 01:24:35 Europe/Berlin] PHP Warning:  Undefined array key "isOwnerFunc" in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 37
+[18-Feb-2024 01:24:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Value of type null is not callable in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php:37
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(37): App\Core\Controller->renderAdminView('/admin/users/us...', Array)
+#2 [internal function]: App\Controllers\UsersController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 37
+[18-Feb-2024 01:25:48 Europe/Berlin] PHP Warning:  Undefined array key "permissions" in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 38
+[18-Feb-2024 01:25:48 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 38
+[18-Feb-2024 01:25:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Value of type null is not callable in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php:38
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(37): App\Core\Controller->renderAdminView('/admin/users/us...', Array)
+#2 [internal function]: App\Controllers\UsersController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 38
+[18-Feb-2024 01:26:00 Europe/Berlin] PHP Warning:  Undefined array key "permissions" in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 38
+[18-Feb-2024 01:26:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 38
+[18-Feb-2024 01:26:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Value of type null is not callable in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php:38
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(37): App\Core\Controller->renderAdminView('/admin/users/us...', Array)
+#2 [internal function]: App\Controllers\UsersController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php on line 38
+[18-Feb-2024 01:47:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::isOwner() in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:33
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php(42): App\Controllers\PagesController->App\Controllers\{closure}(1)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(36): App\Core\Controller->renderAdminView('/admin/pages/pa...', Array)
+#3 [internal function]: App\Controllers\PagesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 33
+[18-Feb-2024 01:47:27 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 41
+[18-Feb-2024 01:47:39 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 41
+[18-Feb-2024 01:53:47 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";" in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 108
+[19-Feb-2024 10:40:20 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 41
+[19-Feb-2024 10:42:15 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 41
+[19-Feb-2024 10:42:22 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 41
+[19-Feb-2024 10:42:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Access to undeclared static property App\Auth\UserPermissions::$sessionUserRole in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:56
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(34): App\Auth\UserPermissions::canEdit(33, 'default')
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\users\users.php(38): App\Controllers\UsersController->App\Controllers\{closure}(33, 'default')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\UsersController.php(46): App\Core\Controller->renderAdminView('/admin/users/us...', Array)
+#4 [internal function]: App\Controllers\UsersController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 56
+[19-Feb-2024 12:18:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Typed property App\Controllers\CategoriesController::$usersModel must not be accessed before initialization in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php:109
+Stack trace:
+#0 [internal function]: App\Controllers\CategoriesController->edit('97')
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#3 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#4 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 109
+[19-Feb-2024 12:18:46 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 111
+[19-Feb-2024 12:18:46 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::canEdit(): Argument #2 ($targetUserRole) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 111 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:44
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(111): App\Auth\UserPermissions::canEdit(97, NULL)
+#1 [internal function]: App\Controllers\CategoriesController->edit('97')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 44
+[19-Feb-2024 12:19:40 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: dd(): Argument #1 ($var) must be of type array, bool given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php on line 111 and defined in D:\xampp\htdocs\n-web-framework\app\common\utilities.php:8
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\CategoriesController.php(111): dd(false)
+#1 [internal function]: App\Controllers\CategoriesController->edit('97')
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(154): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\common\utilities.php on line 8
+[19-Feb-2024 14:25:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::isOwner() in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:33
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php(42): App\Controllers\PagesController->App\Controllers\{closure}(1)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(36): App\Core\Controller->renderAdminView('/admin/pages/pa...', Array)
+#3 [internal function]: App\Controllers\PagesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 33
+[19-Feb-2024 14:25:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::isOwner() in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:33
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php(42): App\Controllers\PagesController->App\Controllers\{closure}(1)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(36): App\Core\Controller->renderAdminView('/admin/pages/pa...', Array)
+#3 [internal function]: App\Controllers\PagesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 33
+[19-Feb-2024 15:10:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method App\Auth\UserPermissions::isOwner() in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:33
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php(42): App\Controllers\PagesController->App\Controllers\{closure}(1)
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(36): App\Core\Controller->renderAdminView('/admin/pages/pa...', Array)
+#3 [internal function]: App\Controllers\PagesController->index()
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#6 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#7 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 33
+[19-Feb-2024 15:12:25 Europe/Berlin] PHP Warning:  Undefined array key "isOwnerFunc" in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php on line 42
+[19-Feb-2024 15:12:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Value of type null is not callable in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(41): App\Core\Controller->renderAdminView('/admin/pages/pa...', Array)
+#2 [internal function]: App\Controllers\PagesController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php on line 42
+[19-Feb-2024 15:12:32 Europe/Berlin] PHP Warning:  Undefined array key "isOwnerFunc" in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php on line 42
+[19-Feb-2024 15:12:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Value of type null is not callable in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php:42
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once()
+#1 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(41): App\Core\Controller->renderAdminView('/admin/pages/pa...', Array)
+#2 [internal function]: App\Controllers\PagesController->index()
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#4 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#5 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#6 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php on line 42
+[19-Feb-2024 15:13:04 Europe/Berlin] PHP Warning:  Undefined array key "userRole" in D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php on line 43
+[19-Feb-2024 15:13:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: App\Auth\UserPermissions::canEdit(): Argument #2 ($targetRole) must be of type string, null given, called in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 34 and defined in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php:44
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(34): App\Auth\UserPermissions::canEdit(1, NULL)
+#1 D:\xampp\htdocs\n-web-framework\app\Views\admin\pages\pages.php(43): App\Controllers\PagesController->App\Controllers\{closure}(1, NULL)
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Controller.php(45): require_once('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(41): App\Core\Controller->renderAdminView('/admin/pages/pa...', Array)
+#4 [internal function]: App\Controllers\PagesController->index()
+#5 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#6 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#7 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#8 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Auth\UserPermissions.php on line 44
+[19-Feb-2024 15:13:49 Europe/Berlin] PHP Fatal error:  Uncaught Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.languageName FROM pages AS p
+                INNER JOIN users AS u ON u.use...' at line 1 in D:\xampp\htdocs\n-web-framework\app\Models\PagesModel.php:33
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php(31): App\Models\PagesModel->getPages()
+#1 [internal function]: App\Controllers\PagesController->index()
+#2 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(158): call_user_func(Array)
+#3 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#4 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#5 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Models\PagesModel.php on line 33
+[19-Feb-2024 15:15:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\Controllers\UsersModel" not found in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php:24
+Stack trace:
+#0 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(143): App\Controllers\PagesController->__construct()
+#1 D:\xampp\htdocs\n-web-framework\app\Core\Router.php(102): App\Core\Router->loadController()
+#2 D:\xampp\htdocs\n-web-framework\index.php(22): App\Core\Router->run()
+#3 {main}
+  thrown in D:\xampp\htdocs\n-web-framework\app\Controllers\PagesController.php on line 24
+[19-Feb-2024 15:40:32 Europe/Berlin] PHP Warning:  Undefined array key "languageID" in D:\xampp\htdocs\n-web-framework\app\Controllers\SettingsController.php on line 124

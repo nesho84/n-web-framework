@@ -1,12 +1,3 @@
-<?php
-// Set title
-$title = $data['title'] ?? "";
-// Set Theme
-$baseTheme = $_SESSION['settings']['settingTheme'] ?? "dark";
-$navbarTheme = $baseTheme == "dark" ? "dark" : "light";
-$menuSpanTheme = $baseTheme == "dark" ? "light" : "dark";
-$bodyTheme = $baseTheme === "dark" ? "dark" : "white";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +8,8 @@ $bodyTheme = $baseTheme === "dark" ? "dark" : "white";
     <noscript>
         <meta http-equiv="refresh" runat="server" id="mtaJSCheck" content="0; <?php echo APPURL; ?>/noscript">
     </noscript>
-    <meta name="csrf-token" content="<?php echo $_SESSION['csrf_token'] ?? ""; ?>">
-    <title><?php echo $title != "" ? $title : "undefined"; ?></title>
+    <meta name="csrf-token" content="<?php echo $data['sessions']['csrf_token'] ?? ""; ?>">
+    <title><?php echo $data['title'] ?? "undefined"; ?></title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="<?php echo APPURL; ?>/public/css/libs/bootstrap.min.css" />
     <!-- Font awesome icons -->
@@ -32,12 +23,12 @@ $bodyTheme = $baseTheme === "dark" ? "dark" : "white";
     <link rel="manifest" href="<?php echo APPURL; ?>/public/favicon/site.webmanifest">
 </head>
 
-<body class="bg-<?php echo $bodyTheme; ?>">
+<body class="bg-<?php echo $data['sessions']['bodyTheme']; ?>">
 
     <div class="wrapper">
 
         <header class="sticky-top border-bottom">
-            <nav class="navbar shadow-sm navbar-expand-lg navbar-<?php echo $navbarTheme; ?> bg-<?php echo $navbarTheme; ?> py-2">
+            <nav class="navbar shadow-sm navbar-expand-lg navbar-<?php echo $data['sessions']['navbarTheme']; ?> bg-<?php echo $data['sessions']['navbarTheme']; ?> py-2">
                 <div class="container-lg">
                     <div class="navbar-brand">
                         <!-- <a href="<?php echo ADMURL; ?>/">
@@ -48,9 +39,9 @@ $bodyTheme = $baseTheme === "dark" ? "dark" : "white";
                         </a>
                     </div>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar bg-<?php echo $menuSpanTheme; ?>"></span>
-                        <span class="icon-bar bg-<?php echo $menuSpanTheme; ?>"></span>
-                        <span class="icon-bar bg-<?php echo $menuSpanTheme; ?>"></span>
+                        <span class="icon-bar bg-<?php echo $data['sessions']['menuSpanTheme']; ?>"></span>
+                        <span class="icon-bar bg-<?php echo $data['sessions']['menuSpanTheme']; ?>"></span>
+                        <span class="icon-bar bg-<?php echo $data['sessions']['menuSpanTheme']; ?>"></span>
                     </button>
 
                     <!-- Navigation Menu Links -->

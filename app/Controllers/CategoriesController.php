@@ -8,16 +8,19 @@ use App\Models\CategoriesModel;
 use App\Core\Sessions;
 use App\Common\DataValidator;
 use App\Auth\UserPermissions;
+use App\Models\UsersModel;
 
 class CategoriesController extends Controller
 {
     private CategoriesModel $categoriesModel;
+    private UsersModel $usersModel;
 
     //------------------------------------------------------------
     public function __construct()
     //------------------------------------------------------------
     {
         $this->categoriesModel = new CategoriesModel();
+        $this->usersModel = new UsersModel();
     }
 
     //------------------------------------------------------------
@@ -25,11 +28,15 @@ class CategoriesController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Categories';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['rows'] = $this->categoriesModel->getCategories();
-        $data['isOwnerFunc'] = function ($userID) {
-            return UserPermissions::isOwner($userID);
-        };
+        $data['permissions'] = [
+            'canEdit' => function ($userID, $userRole) {
+                return UserPermissions::canEdit($userID, $userRole);
+            },
+            'canDelete' => function ($userID, $userRole) {
+                return UserPermissions::canDelete($userID, $userRole);
+            },
+        ];
 
         $this->renderAdminView('/admin/categories/categories', $data);
     }
@@ -100,8 +107,10 @@ class CategoriesController extends Controller
 
         if ($data['rows'] && count($data['rows']) > 0) {
             // Authorization
-            if (!UserPermissions::isOwner($data['rows']['userID'])) {
-                setSessionAlert('warning', 'You are not authoirzed to edit this Category!');
+            $userId = $data['rows']['userID'];
+            $user = $this->usersModel->getUserById($userId);
+            if (!UserPermissions::canEdit($userId, $user['userRole'])) {
+                setSessionAlert('warning', 'You are not authorized to edit this Category!');
                 redirect(ADMURL . '/categories');
             }
 
@@ -132,10 +141,12 @@ class CategoriesController extends Controller
         $category = $this->categoriesModel->getCategoryById($id);
 
         // Authorization
-        if (!UserPermissions::isOwner($category['userID'])) {
+        $userId = $category['userID'];
+        $user = $this->usersModel->getUserById($userId);
+        if (!UserPermissions::canEdit($userId, $user['userRole'])) {
             echo json_encode([
                 "status" => "warning",
-                "message" => 'You are not authoirzed to update this Category!'
+                "message" => 'You are not authorized to update this Category!'
             ]);
             exit;
         }
@@ -198,8 +209,10 @@ class CategoriesController extends Controller
     {
         // Authorization
         $category = $this->categoriesModel->getCategoryById($id);
-        if (!UserPermissions::isOwner($category['userID'])) {
-            setSessionAlert('warning', 'You are not authoirzed to delete this Category!');
+        $userId = $category['userID'];
+        $user = $this->usersModel->getUserById($userId);
+        if (!UserPermissions::canDelete($userId, $user['userRole'])) {
+            setSessionAlert('warning', 'You are not authorized to delete this Category!');
             redirect(ADMURL . '/categories');
         }
 

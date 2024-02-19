@@ -49,7 +49,7 @@ $pic = !empty($userPicture) ? '<img width="60" height="60" src="' . $userPicture
                 <hr>
                 <!-- User Role -->
                 <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input" id="userRole" name="userRole" <?php echo $userRole == "admin" ? " checked" : ""; ?> <?php echo $userName == 'admin' ? ' disabled' : ''; ?>>
+                    <input type="checkbox" class="form-check-input" id="userRole" name="userRole" <?php echo ($userRole == "admin" || $userRole == "super_admin") ? " checked" : ""; ?> <?php echo $userName == 'admin' ? ' disabled' : ''; ?>>
                     <input type="hidden" name="userRoleHidden" id="userRoleHidden" value="<?php echo $userRole; ?>">
                     <label class="form-check-label fw-bold" for="userRole">Admin (unchecked is default)</label>
                 </div>

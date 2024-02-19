@@ -38,7 +38,6 @@ class SettingsController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Settings';
-        $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
         $data['languages'] = $this->languagesModel->getLanguages();
         $data['rows'] = $this->settingsModel->getSettingById($id);
 
@@ -157,7 +156,6 @@ class SettingsController extends Controller
     //------------------------------------------------------------
     {
         $data['title'] = 'Database Backups';
-        // $data['theme'] = $_SESSION['settings']['settingTheme'] ?? "light";
 
         try {
             $directory = DB_BACKUPS_PATH . "/";
