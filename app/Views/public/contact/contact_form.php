@@ -15,7 +15,7 @@
             </div>
         </div>
         <hr />
-        <small class="text-muted mb-2 mx-auto">Bitte füllen Sie alle Pflichtfelder (*) aus.</small>
+        <small class="text-muted mb-2 mx-auto">Please complete all required (*) fields.</small>
 
         <form id="contactForm" action="<?php echo APPURL . '/contact/validate'; ?>" method="POST">
             <div class="mb-3">
@@ -23,27 +23,27 @@
                 <input type="text" name="name" class="form-control form-control-lg" />
             </div>
             <div class="mb-3">
-                <label for="company">Unternehmen: <sup>*</sup></label>
+                <label for="company">Company: <sup>*</sup></label>
                 <input type="text" name="company" class="form-control form-control-lg" />
             </div>
             <div class="mb-3">
-                <label for="telefon">Telefon: </label>
+                <label for="telefon">Phone: </label>
                 <input type="tel" name="telefon" class="form-control form-control-lg" pattern="[0-9]+" />
             </div>
             <div class="mb-3">
                 <label for="email">Email: <sup>*</sup></label>
                 <input type="email" name="email" class="form-control form-control-lg" />
-                <small id="emailHelp" class="form-text text-muted">Wir werden Ihre E-Mail-Adresse niemals an Dritte weitergeben.</small>
+                <small id="emailHelp" class="form-text text-muted">We will never pass on your email address to third parties.</small>
             </div>
             <div class="mb-3">
-                <label for="subject">Betreff: <sup>*</sup></label>
+                <label for="subject">Subject: <sup>*</sup></label>
                 <textarea name="subject" class="form-control form-control-lg" rows="3"></textarea>
             </div>
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" name="policy" value="ok">
                 <label class="form-check-label" for="policy">
-                    Sie erklären sich damit einverstanden, dass Ihre Daten zur Bearbeitung Ihres Anliegens verwendet werden. Weitere Informationen und Widerrufshinweise finden Sie in der
-                    <a href="https://en.wikipedia.org/wiki/Privacy_policy" target="_blank" class="text-info">Datenschutz-Bestimmungen. </a><sup>*</sup>
+                    You agree that your data will be used to process your request. Further information and cancellation instructions can be found in the
+                    <a href="https://en.wikipedia.org/wiki/Privacy_policy" target="_blank" class="text-info">Privacy-Policy. </a><sup>*</sup>
                 </label>
             </div>
             <div class="mb-3 mt-4">

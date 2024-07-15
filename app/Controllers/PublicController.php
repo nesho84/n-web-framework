@@ -82,30 +82,30 @@ class PublicController extends Controller
             $telefon = htmlspecialchars(strip_tags($_POST['telefon']));
             $from = $_POST['email'];
             $body = htmlspecialchars(strip_tags($_POST['subject']));
-            $subject = 'Neue Nachricht von ' . SITE_NAME . '';
+            $subject = 'New message from ' . SITE_NAME . '';
 
             // Validation START
             if (strlen($fromName) < 1) {
                 $validated = false;
-                $output .= "&bull; Name darf nicht leer sein! <br>";
+                $output .= "&bull; Name can not be empty! <br>";
             }
             if (strlen($company) < 1) {
                 $validated = false;
-                $output .= "&bull; Unternehmen darf nicht leer sein!<br>";
+                $output .= "&bull; Company cannot be empty!<br>";
             }
             if (filter_var($from, FILTER_VALIDATE_EMAIL) === false) {
                 $validated = false;
-                $output .= "&bull; E-mail ist nicht gültig! <br>";
+                $output .= "&bull; Email is not valid! <br>";
             }
             if (strlen($body) < 1) {
                 $validated = false;
-                $output .= "&bull; Betreff darf nicht leer sein! <br>";
+                $output .= "&bull; Subject cannot be empty! <br>";
             }
             if (isset($_POST["policy"]) && $_POST["policy"] == "ok") {
                 $policy = $_POST["policy"];
             } else {
                 $validated = false;
-                $output .= "&bull; Bitte akzeptiere unseren datenschutzhinweis.<br>";
+                $output .= "&bull; Please accept our data privacy policy.<br>";
             }
             // Validation END
 
@@ -140,10 +140,10 @@ class PublicController extends Controller
                 $body = "<h3>Neue Nachricht von " . SITE_NAME . "</h3>
                 <hr><br>
                 <strong>Name:</strong> $fromName <br><br>
-                <strong>Firma:</strong> $company <br><br>
-                <strong>Telefon:</strong> $telefon <br><br>
+                <strong>Company:</strong> $company <br><br>
+                <strong>Phone:</strong> $telefon <br><br>
                 <strong>Email:</strong> $from <br><br>
-                <strong>Betreff:</strong> $body";
+                <strong>Subject:</strong> $body";
 
                 try {
                     EmailService::send([

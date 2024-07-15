@@ -9,13 +9,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "App\\Core\\": "app/Core/",
-            "App\\Controllers\\": "app/Controllers/",
-            "App\\Models\\": "app/Models/",
-            "App\\Middleware\\": "app/Middleware/",
-            "App\\Auth\\": "app/Auth/",
-            "App\\Common\\": "app/common/"
+            "App\\": "App/",
+            "App\\Core\\": "App/Core/",
+            "App\\Controllers\\": "App/Controllers/",
+            "App\\Models\\": "App/Models/",
+            "App\\Middleware\\": "App/Middleware/",
+            "App\\Common\\": "App/common/",
+            "PHPMailer\\PHPMailer\\": "App/library/PHPMailer/src/"
         }
     }
 }

@@ -27,7 +27,6 @@ class Database
 
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            // $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_COLUMN);
             $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
             // Define DB constant as Global
@@ -37,7 +36,7 @@ class Database
                 <ul>
                     <li>The PHP MySQL module is installed and enabled.</li>
                     <li>The database is running.</li>
-                    <li>The credentials in config.php are valid.</li>
+                    <li>The credentials in config are valid.</li>
                 </ul>");
         }
 

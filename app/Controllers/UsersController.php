@@ -8,7 +8,7 @@ use App\Models\UsersModel;
 use App\Models\SettingsModel;
 use App\Core\Sessions;
 use App\Common\DataValidator;
-use App\Auth\UserPermissions;
+use App\Middleware\UserPermissions;
 
 class UsersController extends Controller
 {

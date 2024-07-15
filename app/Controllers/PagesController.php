@@ -8,7 +8,7 @@ use App\Models\PagesModel;
 use App\Models\LanguagesModel;
 use App\Core\Sessions;
 use App\Common\DataValidator;
-use App\Auth\UserPermissions;
+use App\Middleware\UserPermissions;
 use App\Models\UsersModel;
 
 class PagesController extends Controller

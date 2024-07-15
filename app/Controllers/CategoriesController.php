@@ -7,7 +7,7 @@ use App\Core\Controller;
 use App\Models\CategoriesModel;
 use App\Core\Sessions;
 use App\Common\DataValidator;
-use App\Auth\UserPermissions;
+use App\Middleware\UserPermissions;
 use App\Models\UsersModel;
 
 class CategoriesController extends Controller

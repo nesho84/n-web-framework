@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Common;
-
 /**
  * EmailService class - used for sending emails using PHPMailer.
  *
@@ -56,6 +54,8 @@ namespace App\Common;
  *   }
  */
 
+namespace App\Common;
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -66,10 +66,6 @@ class EmailService
     public static function send(array $options): void
     //------------------------------------------------------------
     {
-        require LIBRARY_PATH . '/PHPMailer/src/PHPMailer.php';
-        require LIBRARY_PATH . '/PHPMailer/src/SMTP.php';
-        require LIBRARY_PATH . '/PHPMailer/src/Exception.php';
-
         $default_options = [
             'from' => '',
             'from_name' => '',
