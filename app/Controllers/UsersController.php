@@ -38,6 +38,12 @@ class UsersController extends Controller
             },
         ];
 
+        // Authorization
+        if (UserPermissions::canView() == false) {
+            setSessionAlert('warning', 'You are not authorized to view Users!');
+            redirect(ADMURL . '/');
+        }
+
         $this->renderAdminView('/admin/users/users', $data);
     }
 
@@ -190,6 +196,9 @@ class UsersController extends Controller
     {
         $data['title'] = 'User Edit - ' . $id;
         $data['rows'] = $this->usersModel->getUserById($id);
+        $data['permissions'] = [
+            'canView' =>  UserPermissions::canView(),
+        ];
 
         if ($data['rows'] && count($data['rows']) > 0) {
             // Authorization

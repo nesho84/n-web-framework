@@ -36,8 +36,7 @@ class UserPermissions
     {
         self::initialize();
 
-        return self::$userRole === self::SUPER_ADMIN ||
-            self::$userRole === self::ADMIN;
+        return self::$userRole === self::SUPER_ADMIN || self::$userRole === self::ADMIN;
     }
 
     //------------------------------------------------------------
