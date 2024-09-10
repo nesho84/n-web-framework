@@ -14,10 +14,10 @@ class SettingsModel extends Model
     {
         try {
             $stmt = $this->prepare(
-                "SELECT * FROM settings as s
-                INNER JOIN users as u ON u.userID = s.userID
-                INNER JOIN languages as l ON l.languageID = s.languageID
-                ORDER BY settingID ASC"
+                "SELECT s.*, u.userName, u.userRole, l.languageName FROM settings AS s
+                INNER JOIN users AS u ON u.userID = s.userID
+                INNER JOIN languages AS l ON l.languageID = s.languageID
+                ORDER BY s.settingID ASC"
             );
             $stmt->execute();
             return $stmt->fetchAll();

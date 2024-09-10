@@ -8,12 +8,15 @@ use App\Models\SettingsModel;
 use App\Models\LanguagesModel;
 use App\Core\Sessions;
 use App\Common\DataValidator;
+use App\Middleware\UserPermissions;
+use App\Models\UsersModel;
 use App\Common\FileHandler;
 
 class SettingsController extends Controller
 {
     private SettingsModel $settingsModel;
     private LanguagesModel $languagesModel;
+    private UsersModel $usersModel;
 
     //------------------------------------------------------------
     public function __construct()
@@ -21,6 +24,7 @@ class SettingsController extends Controller
     {
         $this->settingsModel = new SettingsModel();
         $this->languagesModel = new LanguagesModel();
+        $this->usersModel = new UsersModel();
     }
 
     //------------------------------------------------------------
@@ -29,6 +33,14 @@ class SettingsController extends Controller
     {
         $data['title'] = 'Settings';
         $data['rows'] = $this->settingsModel->getSettings();
+        $data['permissions'] = [
+            'canEdit' => function ($userID, $userRole) {
+                return UserPermissions::canEdit($userID, $userRole);
+            },
+            'canDelete' => function ($userID, $userRole) {
+                return UserPermissions::canDelete($userID, $userRole);
+            },
+        ];
 
         $this->renderAdminView('/admin/settings/settings', $data);
     }
@@ -42,9 +54,18 @@ class SettingsController extends Controller
         $data['rows'] = $this->settingsModel->getSettingById($id);
 
         if ($data['rows'] && count($data['rows']) > 0) {
+            // Authorization
+            $userId = $data['rows']['userID'];
+            $user = $this->usersModel->getUserById($userId);
+            if (!UserPermissions::canEdit($userId, $user['userRole'])) {
+                echo 'You are not authorized to edit this Setting!';
+                exit;
+            }
+
             $this->renderSimpleView('/admin/settings/edit_modal', $data);
         } else {
             http_response_code(404);
+            $this->renderAdminView('/errors/404a.php', $data);
         }
     }
 
@@ -69,6 +90,17 @@ class SettingsController extends Controller
             $valid_ids = array();
             foreach ($languages as $lang) {
                 $valid_ids[] = $lang['languageID'];
+            }
+
+            // Authorization
+            $userId = $setting['userID'];
+            $user = $this->usersModel->getUserById($userId);
+            if (!UserPermissions::canEdit($userId, $user['userRole'])) {
+                echo json_encode([
+                    "status" => "warning",
+                    "message" => 'You are not authorized to update this Setting!'
+                ]);
+                exit;
             }
 
             // Validate inputs

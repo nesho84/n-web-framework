@@ -76,6 +76,12 @@ class UsersController extends Controller
     {
         $data['title'] = 'Users Create';
 
+        // Authorization
+        if (UserPermissions::canView() == false) {
+            setSessionAlert('warning', 'You are not authorized to create Users!');
+            redirect(ADMURL . '/');
+        }
+
         $this->renderAdminView('/admin/users/create', $data);
     }
 

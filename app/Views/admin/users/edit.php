@@ -46,7 +46,10 @@ $pic = !empty($userPicture) ? '<img width="60" height="60" src="' . $userPicture
                         <div id="mySpinner" class="d-none">Loading...</div>
                     </div>
                 </div>
-
+                <!--
+                @TODO: this feature has a problem when updating for defualt users.
+                        if default user, it should take the default values because like this it changes the values automatically (see controller)
+                -->
                 <?php if ($data['permissions']['canView']) : ?>
                     <hr>
                     <!-- User Role -->
